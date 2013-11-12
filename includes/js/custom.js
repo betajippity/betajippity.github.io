@@ -8,11 +8,9 @@ $(document).ready(function(){
 		if($(window).scrollTop()<=65){
 			$('.blog-author').css("opacity",titleFade);
 			$('.blog-title').css("opacity",titleFade);	
-			$('.blog-nav').css("top",navdrop+"px");
 			if($(window).scrollTop()>=54){
 				var navdrop = 67 + ($(window).scrollTop()-54);
 				$('.blog-nav').css("top",navdrop+"px");
-				console.log(navdrop);
 			}
 		}else{
 			var nameFade = ($window.scrollTop()-65)/20;

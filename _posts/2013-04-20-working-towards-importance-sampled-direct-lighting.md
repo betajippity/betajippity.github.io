@@ -3,7 +3,7 @@ layout: post
 title: Working Towards Importance Sampled Direct Lighting
 tags: [Coding, Pathtracer]
 author: Yining Karl Li
-date: 2013-04-20 02:00:00
+date: 2013-04-20 01:00:00
 ---
 
 I haven't made a post in a few weeks now since I've been working on a number of different things all of which aren't quite done yet. Since its been a few weeks, here's a writeup of one of the things I'm working on and where I am with that.

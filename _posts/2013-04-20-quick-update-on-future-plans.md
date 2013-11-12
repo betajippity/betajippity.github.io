@@ -3,6 +3,7 @@ layout: post
 title: Quick Update on Future Plans
 tags: [Announcements]
 author: Yining Karl Li
+date: 2013-04-20 02:00:00
 ---
 
 Just a super quick update on my future plans:

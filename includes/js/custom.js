@@ -9,8 +9,9 @@ $(document).ready(function(){
 			$('.blog-author').css("opacity",titleFade);
 			$('.blog-title').css("opacity",titleFade);	
 			if($(window).scrollTop()>=54){
-				var navdrop = 67 + ($(window).scrollTop()-54);
+				var navdrop = Math.min(77,69 + ($(window).scrollTop()-54));
 				$('.blog-nav').css("top",navdrop+"px");
+				// console.log(navdrop);
 			}
 		}else{
 			var nameFade = ($window.scrollTop()-65)/20;
@@ -23,7 +24,7 @@ $(document).ready(function(){
 		  
 //Pin navbar
 $(window).scroll(function(){
-	if($(window).scrollTop()>=65){
+	if($(window).scrollTop()>65){
 		$('.blog-title-wrap').css("height","45px");
 		$('#site-head').css("position","fixed");
 		$('div.navbar-padding').css("height","130px");

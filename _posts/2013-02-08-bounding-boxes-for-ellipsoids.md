@@ -5,7 +5,7 @@ tags: [Coding, Math, Pathtracer]
 author: Yining Karl Li
 ---
 
-Warning: this post is going to be pretty math-heavy.
+Warning\: this post is going to be pretty math-heavy.
 
 Let's talk about spheres, or more generally, ellipsoids. Specifically, let's talk about calculating axis aligned bounding boxes for arbitrarily transformed ellipsoids, which is a bit of an interesting problem I recently stumbled upon while working on Takua Rev 3. I'm making this post because finding a solution took a lot of searching and I didn't find any single collected source of information on this problem, so I figured I'd post it for both my own reference and for anyone else who may find this useful.
 
@@ -38,7 +38,7 @@ We begin by noting our transformation matrix, which we'll call M. We'll also nee
 
 where r is the radius of the sphere. So for a unit diameter sphere, r = .5. Once we have built S, we'll take its inverse, which we'll call SI.
 
-We now calculate a new 4x4 matrix R = M*SI*MT. R should be symmetric when we're done, such that R = transpose(R). We'll assign R's indices the following names:
+We now calculate a new 4x4 matrix R = M\*SI\*MT. R should be symmetric when we're done, such that R = transpose(R). We'll assign R's indices the following names:
 
 	R = [ r11 r12 r13 r14 ] 
       [ r12 r22 r23 r24 ] 

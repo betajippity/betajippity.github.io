@@ -5,7 +5,7 @@ tags: [Coding, Pathtracer]
 author: Yining Karl Li
 ---
 
-A few weeks back I started work on another piece of super low-hanging fruit: texture mapping! Before I delve into the details, here's a test render showing three texture mapped spheres with varying degrees of glossiness in a glossy-walled Cornell box. I was also playing with logos for Takua render and put a test logo idea on the back wall for fun:
+A few weeks back I started work on another piece of super low-hanging fruit\: texture mapping! Before I delve into the details, here's a test render showing three texture mapped spheres with varying degrees of glossiness in a glossy-walled Cornell box. I was also playing with logos for Takua render and put a test logo idea on the back wall for fun:
 
 [![](/content/images/2012/Dec/texture3.png)](/content/images/2012/Dec/texture3.png)
 

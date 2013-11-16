@@ -55,7 +55,7 @@ Here are some more images rendered with my raytracer:
 
 [![]({{site.url}}/content/images/2011/Dec/render_test1.png)]({{site.url}}/content/images/2011/Dec/render_test1.png)
 
-In conclusion, the raytracer was a fun final project. I don't think my raytracer is even remotely suitable for actual production use, and I don't plan on using it for any future projects (unlike my [volumetric renderer](http://yiningkarlli.blogspot.com/2011/10/volumetric-renderer-for-rendering.html), which I think I will definitely be using in the future). However, I will definitely be using stuff I learned from the raytracer in my future GI renderer project, such as the KD-tree stuff and the iterative raytracing method. I will probably have to give my KD-tree a total rewrite, since it is really really far from optimal here, so that is something I'll be starting over winter break! Next stop, GI renderer, CIS563, and CIS565!
+In conclusion, the raytracer was a fun final project. I don't think my raytracer is even remotely suitable for actual production use, and I don't plan on using it for any future projects (unlike my [volumetric renderer](http://blog.yiningkarlli.com/2011/10/a-volumetric-renderer-for-rendering-volumes.html), which I think I will definitely be using in the future). However, I will definitely be using stuff I learned from the raytracer in my future GI renderer project, such as the KD-tree stuff and the iterative raytracing method. I will probably have to give my KD-tree a total rewrite, since it is really really far from optimal here, so that is something I'll be starting over winter break! Next stop, GI renderer, CIS563, and CIS565!
 
 As an amusing parting note, here is the first proper image I ever got out of my raytracer. Awww yeeeaaahhhhhh:
 

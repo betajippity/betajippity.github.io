@@ -5,7 +5,7 @@ tags: [Coding, Pathtracer]
 author: Yining Karl Li
 ---
 
-I have a working, reasonably optimized, speedy GPU stackless kd-tree traversal implementation! Over the past few days, I implemented the history flag-esque approach I outlined in [this post](http://yiningkarlli.blogspot.com/2012/09/thoughts-on-stackless-kd-tree-traversal.html), and it works quite well!
+I have a working, reasonably optimized, speedy GPU stackless kd-tree traversal implementation! Over the past few days, I implemented the history flag-esque approach I outlined in [this post](http://blog.yiningkarlli.com/2012/09/thoughts-on-stackless-kd-tree-traversal.html), and it works quite well!
 
 The following image is a heatmap of a kd-tree built for the Stanford Dragon, showing the cost of tracing a ray through each pixel in the image. Brighter values mean more node traversals and intersection tests had to be done for that particular ray. The image was rendered entirely using Takua Render's CUDA pathtracing engine, and took roughly 100 milliseconds to complete:
 

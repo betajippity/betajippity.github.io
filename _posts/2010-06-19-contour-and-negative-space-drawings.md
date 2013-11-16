@@ -5,7 +5,7 @@ tags: [Pencil/Pen/Charcoal/Paper, Drawing Class]
 author: Yining Karl Li
 ---
 
-During the second week of Drawing class, we moved on from [gesture drawings](http://omjii.com/blog/karu/2010/05/27/gesture_drawings/) to contour drawings and negative space drawings.
+During the second week of Drawing class, we moved on from [gesture drawings](http://blog.yiningkarlli.com/2010/05/gesture-drawings.html) to contour drawings and negative space drawings.
 
 The idea behind contour drawings is to draw an object as a single unbroken line to create a sort of outline drawing. This series of exercises was supposed to help us better understand forms. Everything we did for contour was pencil on paper or pencil on newsprint.
 

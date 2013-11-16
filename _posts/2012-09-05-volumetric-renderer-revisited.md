@@ -5,7 +5,7 @@ tags: [Coding]
 author: Yining Karl Li
 ---
 
-I've been meaning to add animation support to my [volume renderer](http://yiningkarlli.blogspot.com/2011/10/volumetric-renderer-for-rendering.html) for demoreel purposes for a while now, so I did that this week! Here's a rotating cloud animation: 
+I've been meaning to add animation support to my [volume renderer](http://blog.yiningkarlli.com/2011/10/a-volumetric-renderer-for-rendering-volumes.html) for demoreel purposes for a while now, so I did that this week! Here's a rotating cloud animation: 
 
 <div class='embed-container'><iframe src='https://player.vimeo.com/video/53634239' frameborder='0'>Animated Cloud Render Test</iframe></div>
 

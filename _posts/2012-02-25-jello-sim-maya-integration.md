@@ -5,7 +5,7 @@ tags: [CIS563, Coding, JelloSim]
 author: Yining Karl Li
 ---
 
-I ported my [jello simulation](http://yiningkarlli.blogspot.com/2012/02/multijello-simulation.html) to Maya!
+I ported my [jello simulation](http://blog.yiningkarlli.com/2012/02/multijello-simulation.html) to Maya!
 
 Well, sort of.
 

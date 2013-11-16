@@ -44,7 +44,7 @@ I haven't actually gotten around to implementing this idea yet (as of September 
 
 Again, if you, the reader, knows of this idea from a pre-existing place, please let me know! Also, if you see a gaping hole in my logic, please let me know too!
 
-Since this has been a very text heavy post, I'll close with some pictures of a KD-tree representing the scene from the [Takua-RT post](http://yiningkarlli.blogspot.com/2012/09/takuaavohkii-render.html). They don't really have much to do with the traverse method presented in this post, but they are KD-tree related!
+Since this has been a very text heavy post, I'll close with some pictures of a KD-tree representing the scene from the [Takua-RT post](http://blog.yiningkarlli.com/2012/09/takuaavohkii-render.html). They don't really have much to do with the traverse method presented in this post, but they are KD-tree related!
 
 <div class='embed-container'><iframe src='https://player.vimeo.com/video/53735317' frameborder='0'>"Orbital" KD-Tree</iframe></div>
 

@@ -25,7 +25,7 @@ Instead, a much better approach is to accumulate colors just like before, but no
 
 Sampling by light source is the trickier part of this technique. The idea is to generate a ray that we know will hit a light source, and then weight the contribution from that ray by the probability of generating that ray to remove the bias introduced by artificially choosing a ray direction. There's a few good ways to do this: one way is to generate an evenly distributed random point on a light source as the target for the direct lighting ray, and then weight the result using the probability distribution function with respect to surface area, transformed into a PDF with respect to solid angle.
 
-Takua Render at the moment uses a slightly different approach, for the sake of simplicity. The approach I'm using is similar to the one described in my [earlier post on the topic](http://yiningkarlli.blogspot.com/2013/04/working-towards-importance-sampled.html), but with a disk instead of a sphere. The approach works like this:
+Takua Render at the moment uses a slightly different approach, for the sake of simplicity. The approach I'm using is similar to the one described in my [earlier post on the topic](http://blog.yiningkarlli.com/2013/04/working-towards-importance-sampled-direct-lighting.html), but with a disk instead of a sphere. The approach works like this:
 
 1. Figure out a bounding sphere for the light source
 2. Construct a ray from the point to be lit to the center of the bounding sphere. Let's call the direction of this ray D.

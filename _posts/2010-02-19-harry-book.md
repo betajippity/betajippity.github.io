@@ -5,7 +5,7 @@ tags: [Art, Adventures, Photos, APOD, Friends]
 author: Yining Karl Li
 ---
 
-Over winter break, my friends and I did a Secret Santa gift exchange, and my assignment was [Harry](http://omjii.com/blog/karu/2009/11/13/surprising-harrando-part-1/). I found this crazy book for him called [The Man's Manual](http://www.amazon.com/Mans-Manual-Secrets-Waitress-Hypnosis/dp/1602392412). But of course just giving him the book straight up isn't much fun, so I decided to disguise the book as a thoroughly dull sounding Biology or Chemistry book. The disguise would also have the added bonus of allowing the Man's Manual to blend in with Harry's textbooks. Here's what I cooked up:
+Over winter break, my friends and I did a Secret Santa gift exchange, and my assignment was [Harry](http://blog.yiningkarlli.com/2009/11/surprising-harrando.html). I found this crazy book for him called [The Man's Manual](http://www.amazon.com/Mans-Manual-Secrets-Waitress-Hypnosis/dp/1602392412). But of course just giving him the book straight up isn't much fun, so I decided to disguise the book as a thoroughly dull sounding Biology or Chemistry book. The disguise would also have the added bonus of allowing the Man's Manual to blend in with Harry's textbooks. Here's what I cooked up:
 
 [![]({{site.url}}/content/images/2010/Feb/cover.png)]({{site.url}}/content/images/2010/Feb/cover.png)
 

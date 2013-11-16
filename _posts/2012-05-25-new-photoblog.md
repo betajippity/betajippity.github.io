@@ -13,7 +13,7 @@ Why start a photoblog when I already have this blog? Well, I originally started 
 
 I'm going to keep my [backup archive](http://omjii.com/blog/karu/) ([explanation here](http://yiningkarlli.blogspot.com/2011/03/mirror-mirror-on-wall.html)) unified, but from now on, for my public facing stuff, "Code and Visuals" is for computer graphics projects and occasional doodles and art projects, and "Karl Has A Camera" is for photos and adventuring.
 
-[My first post on "Karl Has A Camera" is about East Nanjing Road in Shanghai!](http://karlhasacamera.blogspot.com/2012/05/nanjing-road-east-at-night.html)
+[My first post on "Karl Has A Camera" is about East Nanjing Road in Shanghai!](http://camera.yiningkarlli.com/2012/05/nanjing-road-east-at-night.html)
 
 Actually, this reminds me: I am currently also working on redesigning yiningkarlli.com and Likimmun, and also working on the waaaayyyy overdue Omjii relaunch. Those will all be coming soon!
 

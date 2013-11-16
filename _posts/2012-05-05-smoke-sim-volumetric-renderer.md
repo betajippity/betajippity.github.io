@@ -6,7 +6,7 @@ author: Yining Karl Li
 date: 2012-05-05 01:00:00
 ---
 
-Something I've had on my list of things to do for a few weeks now is mashing up my [volumetric renderer](http://yiningkarlli.blogspot.com/2011/10/volumetric-renderer-for-rendering.html) from CIS460 with my [smoke simulator](http://yiningkarlli.blogspot.com/2012/03/smoke-sim-preconditioning-and-huge.html) from CIS563.
+Something I've had on my list of things to do for a few weeks now is mashing up my [volumetric renderer](http://blog.yiningkarlli.com/2011/10/a-volumetric-renderer-for-rendering-volumes.html) from CIS460 with my [smoke simulator](http://blog.yiningkarlli.com/2012/03/smoke-sim-preconditioning-and-huge.html) from CIS563.
 
 Now I can cross that off of my list! Here is a 100x100x100 grid smoke simulation rendered out with pseudo Monte-Carlo black body lighting (described in my volumetric renderer post):
 

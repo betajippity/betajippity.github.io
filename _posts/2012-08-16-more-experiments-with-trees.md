@@ -5,7 +5,7 @@ tags: [3d Modeling, Art]
 author: Yining Karl Li
 ---
 
-Every once in a while, I [return](http://yiningkarlli.blogspot.com/2011/03/autumn-tree.html) to [trying](http://yiningkarlli.blogspot.com/2011/03/vray-tree.html) to make a good looking tree. Here's a frame from my latest attempt\:
+Every once in a while, I [return](http://blog.yiningkarlli.com/2011/03/autumn-tree.html) to [trying](http://blog.yiningkarlli.com/2011/03/vray-tree.html) to make a good looking tree. Here's a frame from my latest attempt\:
 
 [![]({{site.url}}/content/images/2012/Aug/leaves.png)]({{site.url}}/content/images/2012/Aug/leaves.png)
 

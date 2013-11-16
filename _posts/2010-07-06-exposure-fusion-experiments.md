@@ -11,36 +11,36 @@ These were taken through the course of the week throughout the University City a
 
 The Penn Bookstore:
 
-[![](/content/images/2010/Jul/IMG_0070_1_2_3_4_5_2.jpg)](/content/images/2010/Jul/IMG_0070_1_2_3_4_5_2.jpg)
+[![]({{site.url}}/content/images/2010/Jul/IMG_0070_1_2_3_4_5_2.jpg)]({{site.url}}/content/images/2010/Jul/IMG_0070_1_2_3_4_5_2.jpg)
 
 Waiting for the R5 at 30th Street Station:
 
-[![](/content/images/2010/Jul/IMG_0079_80_81.jpg)](/content/images/2010/Jul/IMG_0079_80_81.jpg)
+[![]({{site.url}}/content/images/2010/Jul/IMG_0079_80_81.jpg)]({{site.url}}/content/images/2010/Jul/IMG_0079_80_81.jpg)
 
-[![](/content/images/2010/Jul/IMG_0083_4_5_6_.jpg)](/content/images/2010/Jul/IMG_0083_4_5_6_.jpg)
+[![]({{site.url}}/content/images/2010/Jul/IMG_0083_4_5_6_.jpg)]({{site.url}}/content/images/2010/Jul/IMG_0083_4_5_6_.jpg)
 
-[![](/content/images/2010/Jul/IMG_0087_8.jpg)](/content/images/2010/Jul/IMG_0087_8.jpg)
+[![]({{site.url}}/content/images/2010/Jul/IMG_0087_8.jpg)]({{site.url}}/content/images/2010/Jul/IMG_0087_8.jpg)
 
 North Broad Station:
 
-[![](/content/images/2010/Jul/IMG_0103_4_5.jpg)](/content/images/2010/Jul/IMG_0103_4_5.jpg)
+[![]({{site.url}}/content/images/2010/Jul/IMG_0103_4_5.jpg)]({{site.url}}/content/images/2010/Jul/IMG_0103_4_5.jpg)
 
 Pennlyn Station:
 
-[![](/content/images/2010/Jul/IMG_0112_3.jpg)](/content/images/2010/Jul/IMG_0112_3.jpg)
+[![]({{site.url}}/content/images/2010/Jul/IMG_0112_3.jpg)]({{site.url}}/content/images/2010/Jul/IMG_0112_3.jpg)
 
 That bank on North Wales Road near Assi:
 
-[![](/content/images/2010/Jul/IMG_0115_6.jpg)](/content/images/2010/Jul/IMG_0115_6.jpg)
+[![]({{site.url}}/content/images/2010/Jul/IMG_0115_6.jpg)]({{site.url}}/content/images/2010/Jul/IMG_0115_6.jpg)
 
 Some random bushes. Check the geotagged GPS coordinates in the EXIF data (all of these photos are- and all of my photos from now on will be- geotagged) if you care to know where this was taken.
 
-[![](/content/images/2010/Jul/IMG_0117_8.jpg)](/content/images/2010/Jul/IMG_0117_8.jpg)
+[![]({{site.url}}/content/images/2010/Jul/IMG_0117_8.jpg)]({{site.url}}/content/images/2010/Jul/IMG_0117_8.jpg)
 
 An orchid of some sort. With these shots I added an exposure with flash to the mix of exposures that went into the fusion process.
 
-[![](/content/images/2010/Jul/DSC_0135_6.jpg)](/content/images/2010/Jul/DSC_0135_6.jpg)
+[![]({{site.url}}/content/images/2010/Jul/DSC_0135_6.jpg)]({{site.url}}/content/images/2010/Jul/DSC_0135_6.jpg)
 
-[![](/content/images/2010/Jul/DSC_0126_7.jpg)](/content/images/2010/Jul/DSC_0126_7.jpg)
+[![]({{site.url}}/content/images/2010/Jul/DSC_0126_7.jpg)]({{site.url}}/content/images/2010/Jul/DSC_0126_7.jpg)
 
-[![](/content/images/2010/Jul/DSC_0130_1.jpg)](/content/images/2010/Jul/DSC_0130_1.jpg)
+[![]({{site.url}}/content/images/2010/Jul/DSC_0130_1.jpg)]({{site.url}}/content/images/2010/Jul/DSC_0130_1.jpg)

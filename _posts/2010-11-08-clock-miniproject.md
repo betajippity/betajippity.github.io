@@ -7,7 +7,7 @@ author: Yining Karl Li
 
 Over the weekend I decided to do a little mini-project to try out some new tricks I've learned with rendering. I decided to try to make as photorealistic of an image as possible of a clock. Here's what I came up with:
 
-[![](/content/images/2010/Nov/testrender_composite.jpg)](/content/images/2010/Nov/testrender_composite.jpg)
+[![]({{site.url}}/content/images/2010/Nov/testrender_composite.jpg)]({{site.url}}/content/images/2010/Nov/testrender_composite.jpg)
 
 The clock face is noticeably pixelated; I'm not entirely sure why that is. For some reason Mental Ray is not sampling the texture file at a very high frequency, I'll work on that next I suppose.
 

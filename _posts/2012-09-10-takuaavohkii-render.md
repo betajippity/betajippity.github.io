@@ -17,12 +17,12 @@ Another important lesson learned was that culling useless kernel launches is ext
 
 Anyhow, enough text. Takua-RT, even in its super-naive unoptimized CUDA-port state right now, is already so much faster than the CPU version that I can render frames with fairly high convergence in seconds to minutes. That means the renderer is now fast enough for use on rendering animations, such as the one at the top of this post. No post-processing whatsoever was applied, aside from my name watermark in the lower right hand corner. The following images are raw output frames from Takua-RT, this time straight from the renderer, without even watermarking:
 
-[![](/content/images/2012/Sep/animTest.1.png)](/content/images/2012/Sep/animTest.1.png)
+[![]({{site.url}}/content/images/2012/Sep/animTest.1.png)]({{site.url}}/content/images/2012/Sep/animTest.1.png)
 
-[![](/content/images/2012/Sep/animTest.60.png)](/content/images/2012/Sep/animTest.60.png)
+[![]({{site.url}}/content/images/2012/Sep/animTest.60.png)]({{site.url}}/content/images/2012/Sep/animTest.60.png)
 
-[![](/content/images/2012/Sep/animTest.100.png)](/content/images/2012/Sep/animTest.100.png)
+[![]({{site.url}}/content/images/2012/Sep/animTest.100.png)]({{site.url}}/content/images/2012/Sep/animTest.100.png)
 
-[![](/content/images/2012/Sep/animTest.169.png)](/content/images/2012/Sep/animTest.169.png)
+[![]({{site.url}}/content/images/2012/Sep/animTest.169.png)]({{site.url}}/content/images/2012/Sep/animTest.169.png)
 
 Each of these frames represents 5000 iterations of convergence, and took about a minute to render on a NVIDIA Geforce GTX480. The flickering in the glass ball in animated version comes from having a low trace depth of 3 bounces, including for glass surfaces.

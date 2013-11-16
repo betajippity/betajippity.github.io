@@ -9,8 +9,8 @@ I'm still not good at sketching... which means I need to practice more.
 
 30th Street Station (as best as I can remember):
 
-[![](/content/images/2010/Oct/page05-061.jpg)](/content/images/2010/Oct/page05-061.jpg)
+[![]({{site.url}}/content/images/2010/Oct/page05-061.jpg)]({{site.url}}/content/images/2010/Oct/page05-061.jpg)
 
 Guy working on his MacBook:
 
-[![](/content/images/2010/Oct/page07-081.jpg)](/content/images/2010/Oct/page07-081.jpg)
+[![]({{site.url}}/content/images/2010/Oct/page07-081.jpg)]({{site.url}}/content/images/2010/Oct/page07-081.jpg)

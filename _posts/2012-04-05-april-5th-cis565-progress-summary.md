@@ -20,6 +20,6 @@ The posts for this update:
 
 A nice image from the last post:
 
-[![](/content/images/2012/Apr/GreenBallAntiAliasing.png)](/content/images/2012/Apr/GreenBallAntiAliasing.png)
+[![]({{site.url}}/content/images/2012/Apr/GreenBallAntiAliasing.png)]({{site.url}}/content/images/2012/Apr/GreenBallAntiAliasing.png)
 
 Check the posts for tons of details, images, and even some video!

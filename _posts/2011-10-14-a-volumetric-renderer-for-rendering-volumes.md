@@ -9,7 +9,7 @@ The first assignment of the semester for CIS460 was to write, from scratch in C+
 
 ...or you can make pretty clouds.
 
-[![](/content/images/2011/Oct/cloud07.png)](/content/images/2011/Oct/cloud07.png)
+[![]({{site.url}}/content/images/2011/Oct/cloud07.png)]({{site.url}}/content/images/2011/Oct/cloud07.png)
 
 One of the first things I ever tried to make when I first was introduced to Maya was a cloud. I quickly learned that there simply is no way to get a nice fluffy cloud using polygonal modeling techniques. Ever since then I've kept the idea of making clouds parked in the back of my head, so when we were assigned the task of writing a volumetric renderer that could produce clouds, obviously I was pretty excited. 
 
@@ -21,19 +21,19 @@ The way the volumetric renderer works is pretty simple. You start with a big ol'
 
 So obviously volumetric renderers are pretty good for rendering clouds, as one can simply represent a cloud as a bunch of discrete points where each point has some density value. However, discretizing the world has a distinct disadvantage: artifacting. In the above render, some pixel-y artifacting is visible because the voxel grid I used wasn't sufficiently high resolution enough to make each voxel indistinguishable. The problem is even more obvious in this render, where I stuck the camera right up into a cloud: 
 
-[![](/content/images/2011/Oct/newtest2_smooth.png)](/content/images/2011/Oct/newtest2_smooth.png)
+[![]({{site.url}}/content/images/2011/Oct/newtest2_smooth.png)]({{site.url}}/content/images/2011/Oct/newtest2_smooth.png)
 
 (sidenote for those reading out of interest in CIS460: I implemented multiple arbitrary light sources in my renderer, which is where those colors are coming from) 
 
 There are four ways to deal with the artifacting issue. The first is to simply move the camera further away. Once the camera is sufficiently far away, even a relatively low resolution grid will look pretty smooth: 
 
-[![](/content/images/2011/Oct/newtest_withnoise.png)](/content/images/2011/Oct/newtest_withnoise.png)
+[![]({{site.url}}/content/images/2011/Oct/newtest_withnoise.png)]({{site.url}}/content/images/2011/Oct/newtest_withnoise.png)
 
 A second way is to simply dramatically increase the resolution of the voxel mesh. This technique can be very very very memory expensive though. Imagine a 100x100x100 voxel grid where each voxel requires 4 bytes of memory... the total memory required is about 3.8 MB, which isn't bad at all. But lets say we want a grid 5 times higher in resolution... a 500^3 grid needs 476 MB! Furthermore, a 1000x1000x1000 grid requires 3.72 GB! Of course, we could try to save memory by only storing non-empty voxels through the use of a hashmap or something, but that is more computationally expensive and gives no benefit in the worst case scenario of every voxel having some density. 
 
 A third alternative is to use trilinear interpolation or some other interpolation scheme to smooth out the voxel grid as its being sampled. This technique can lead to some fairly nice results: 
 
-[![](/content/images/2011/Oct/cloud10.png)](/content/images/2011/Oct/cloud10.png)
+[![]({{site.url}}/content/images/2011/Oct/cloud10.png)]({{site.url}}/content/images/2011/Oct/cloud10.png)
 
 At least in the case of my renderer, there is a fourth way to deal with the artifacting: instead of preloading the voxel buffer with values from Perlin noise, why not just get rid of the notion of a discretized voxel buffer altogether and directly sample the Perlin noise function when raymarching? The result would indeed be a perfectly smooth, artifact free render, but the computational cost is extraordinarily high compared to using a voxel buffer.
 
@@ -41,10 +41,10 @@ Of course, one could just box blur the render afterwards as well. But doing so i
 
 I also played with trying to get my clouds to self illuminate, with the hope of possibly eventually making explosion type things. Ideally I would have done this by properly implementing a physically accurate black body system, but I did not have much time before the finished assignment was due to implement such a system. So instead, my friend Stewart Hills and I came up with a fake black body system where the emmitance of each voxel was simply determined by how far the voxel is from the outside of the cloud. For each voxel, simply raycast in several random directions until each raymarch hits zero density, pick the shortest distance, and plug that distance into some exponential falloff curve to get the voxel's emittance. Here's a self-glowing cloud: 
 
-[![](/content/images/2011/Oct/blackbody_tril.png)](/content/images/2011/Oct/blackbody_tril.png)
+[![]({{site.url}}/content/images/2011/Oct/blackbody_tril.png)]({{site.url}}/content/images/2011/Oct/blackbody_tril.png)
 
 ...not even close to physically accurate, but pretty good looking for a hack that was cooked up in a few hours! A closeup shot: 
 
-[![](/content/images/2011/Oct/blackbody18.png)](/content/images/2011/Oct/blackbody18.png)
+[![]({{site.url}}/content/images/2011/Oct/blackbody18.png)]({{site.url}}/content/images/2011/Oct/blackbody18.png)
 
 So! The volumetric renderer was definitely a fun assignment, and now I've got a cool way to make clouds! Hopefully I'll be able to integrate this renderer into some future projects!

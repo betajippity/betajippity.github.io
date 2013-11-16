@@ -9,9 +9,9 @@ I spent the Fourth of July weekend with my aunt and uncle and little cousin. :) 
 
 Here are some crappy doodles I made at the beach:
 
-[![](/content/images/2011/Jul/beachdoodle1s.jpg)](/content/images/2011/Jul/beachdoodle1s.jpg)
+[![]({{site.url}}/content/images/2011/Jul/beachdoodle1s.jpg)]({{site.url}}/content/images/2011/Jul/beachdoodle1s.jpg)
 
-[![](/content/images/2011/Jul/beachdoodle2s.jpg)](/content/images/2011/Jul/beachdoodle2s.jpg)
+[![]({{site.url}}/content/images/2011/Jul/beachdoodle2s.jpg)]({{site.url}}/content/images/2011/Jul/beachdoodle2s.jpg)
 
 Yup. I am not good at drawing.
 

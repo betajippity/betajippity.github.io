@@ -11,8 +11,8 @@ I'm thinking about trying Mudbox for texturing this thing. The UVs on the shell 
 
 More later.
 
-[![](/content/images/2010/Oct/crabprogress1.png)](/content/images/2010/Oct/crabprogress1.png)
+[![]({{site.url}}/content/images/2010/Oct/crabprogress1.png)]({{site.url}}/content/images/2010/Oct/crabprogress1.png)
 
-[![](/content/images/2010/Oct/crabprogress2.png)](/content/images/2010/Oct/crabprogress2.png)
+[![]({{site.url}}/content/images/2010/Oct/crabprogress2.png)]({{site.url}}/content/images/2010/Oct/crabprogress2.png)
 
-[![](/content/images/2010/Oct/crabprogress3.png)](/content/images/2010/Oct/crabprogress3.png)
+[![]({{site.url}}/content/images/2010/Oct/crabprogress3.png)]({{site.url}}/content/images/2010/Oct/crabprogress3.png)

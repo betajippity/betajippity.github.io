@@ -19,44 +19,44 @@ Implementing the KD-Tree for the first time took me the better part of two weeks
 
 The KD-Tree meant I could render meshes in a reasonable amount of time, so I rendered an airplane:
 
-[![](/content/images/2011/Dec/2.png)](/content/images/2011/Dec/2.png)
+[![]({{site.url}}/content/images/2011/Dec/2.png)]({{site.url}}/content/images/2011/Dec/2.png)
 
 The airplane took about a minute or so to render, which got me wondering how well my raytracer would work if I threw the full 500000+ poly [Stanford Dragon](http://en.wikipedia.org/wiki/Stanford_Dragon) at it. This render took about five or six minutes to finish (without the KD-Tree in place, this same image takes about 30 minutes to render):
 
-[![](/content/images/2011/Dec/5.png)](/content/images/2011/Dec/5.png)
+[![]({{site.url}}/content/images/2011/Dec/5.png)]({{site.url}}/content/images/2011/Dec/5.png)
 
 Of course, the natural place to go after one dragon is three dragons. Three dragons took about 15 minutes to render, which is pretty much exactly a three-fold increase over one dragon. That means my renderer's performance scales more or less linearly, which is good.
 
-[![](/content/images/2011/Dec/4.png)](/content/images/2011/Dec/4.png)
+[![]({{site.url}}/content/images/2011/Dec/4.png)]({{site.url}}/content/images/2011/Dec/4.png)
 
 For fun, and because I like space shuttles, here is a space shuttle. Because the space shuttle has a really low poly count, this image took under a minute to render:
 
-[![](/content/images/2011/Dec/6.png)](/content/images/2011/Dec/6.png)
+[![]({{site.url}}/content/images/2011/Dec/6.png)]({{site.url}}/content/images/2011/Dec/6.png)
 
 For reflections, I took a slightly different approach from the typical recursive method. The normal recursive approach to a raytracer is to begin with one ray, and trace that ray completely through recursion to its recursion depth limit before moving onto the next pixel and ray. However, such an approach might not actually be idea in a GI renderer. For example, from what I understand, in pathtracing a better raytracing approach is to actually trace everything iteratively; that is, trace the first bounce for all rays and store where the rays are, then trace the second bounce for all rays, then the third, and so on and so forth. Basically, such an approach allows one to set an unlimited trace depth and just let the renderer trace and trace and trace until one stops the renderer, but the corresponding cost of such a system is slightly higher memory usage, since ray positions need to be stored for the previous iteration.
 
 Adding reflections did impact my render times pretty dramatically. I have a suspicion that both my intersection code and my KD-Tree are actually far from ideal, but I'll have to look at that later. Here's a test with reflections with the airplane:
 
-[![](/content/images/2011/Dec/0.png)](/content/images/2011/Dec/0.png)
+[![]({{site.url}}/content/images/2011/Dec/0.png)]({{site.url}}/content/images/2011/Dec/0.png)
 
 ...and here is a test with three reflective dragons. This image took foooorrreeevvveeeerrrr to render.... I actually do not know how long, as I let it run overnight:
 
-[![](/content/images/2011/Dec/render_test.png)](/content/images/2011/Dec/render_test.png)
+[![]({{site.url}}/content/images/2011/Dec/render_test.png)]({{site.url}}/content/images/2011/Dec/render_test.png)
 
 I also added support for multiple lights with varying color support:
 
-[![](/content/images/2011/Dec/1.png)](/content/images/2011/Dec/1.png)
+[![]({{site.url}}/content/images/2011/Dec/1.png)]({{site.url}}/content/images/2011/Dec/1.png)
 
 Here are some more images rendered with my raytracer:
 
-[![](/content/images/2011/Dec/7.png)](/content/images/2011/Dec/7.png)
+[![]({{site.url}}/content/images/2011/Dec/7.png)]({{site.url}}/content/images/2011/Dec/7.png)
 
-[![](/content/images/2011/Dec/3.png)](/content/images/2011/Dec/3.png)
+[![]({{site.url}}/content/images/2011/Dec/3.png)]({{site.url}}/content/images/2011/Dec/3.png)
 
-[![](/content/images/2011/Dec/render_test1.png)](/content/images/2011/Dec/render_test1.png)
+[![]({{site.url}}/content/images/2011/Dec/render_test1.png)]({{site.url}}/content/images/2011/Dec/render_test1.png)
 
 In conclusion, the raytracer was a fun final project. I don't think my raytracer is even remotely suitable for actual production use, and I don't plan on using it for any future projects (unlike my [volumetric renderer](http://yiningkarlli.blogspot.com/2011/10/volumetric-renderer-for-rendering.html), which I think I will definitely be using in the future). However, I will definitely be using stuff I learned from the raytracer in my future GI renderer project, such as the KD-tree stuff and the iterative raytracing method. I will probably have to give my KD-tree a total rewrite, since it is really really far from optimal here, so that is something I'll be starting over winter break! Next stop, GI renderer, CIS563, and CIS565!
 
 As an amusing parting note, here is the first proper image I ever got out of my raytracer. Awww yeeeaaahhhhhh:
 
-[![](/content/images/2011/Dec/supersweet_raytraced_image.png)](/content/images/2011/Dec/supersweet_raytraced_image.png)
+[![]({{site.url}}/content/images/2011/Dec/supersweet_raytraced_image.png)]({{site.url}}/content/images/2011/Dec/supersweet_raytraced_image.png)

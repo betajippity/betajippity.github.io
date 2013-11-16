@@ -11,14 +11,14 @@ I'm still in the earliest stages of this rewrite, but I have some test images! E
 
 Approximately 100000 face Stanford Dragon:
 
-[![](/content/images/2013/Mar/dragon.png)](/content/images/2013/Mar/dragon.png)
+[![]({{site.url}}/content/images/2013/Mar/dragon.png)]({{site.url}}/content/images/2013/Mar/dragon.png)
 
 Approximately 150000 face Deloreon model:
 
-[![](/content/images/2013/Mar/deloreon.png)](/content/images/2013/Mar/deloreon.png)
+[![]({{site.url}}/content/images/2013/Mar/deloreon.png)]({{site.url}}/content/images/2013/Mar/deloreon.png)
 
 Approximately 250000 face Lamborghini Aventador model:
 
-[![](/content/images/2013/Mar/lambo_back.png)](/content/images/2013/Mar/lambo_back.png)
+[![]({{site.url}}/content/images/2013/Mar/lambo_back.png)]({{site.url}}/content/images/2013/Mar/lambo_back.png)
 
-[![](/content/images/2013/Mar/lambo_front.png)](/content/images/2013/Mar/lambo_front.png)
+[![]({{site.url}}/content/images/2013/Mar/lambo_front.png)]({{site.url}}/content/images/2013/Mar/lambo_front.png)

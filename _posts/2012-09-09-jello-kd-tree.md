@@ -11,10 +11,10 @@ I've started an effort to clean up, rewrite, and enhance my ObjCore library, and
 
 I've adopted a new standard grey background for OpenGL tests, since I've found that the higher amount of contrast this darker grey provides plays nicer with Vimeo's compression for a clearer result. But of course I'll still post stills too.
 
-[![](/content/images/2012/Sep/kd_jello0.png)](/content/images/2012/Sep/kd_jello0.png)
+[![]({{site.url}}/content/images/2012/Sep/kd_jello0.png)]({{site.url}}/content/images/2012/Sep/kd_jello0.png)
 
-[![](/content/images/2012/Sep/kd_jello1.png)](/content/images/2012/Sep/kd_jello1.png)
+[![]({{site.url}}/content/images/2012/Sep/kd_jello1.png)]({{site.url}}/content/images/2012/Sep/kd_jello1.png)
 
-[![](/content/images/2012/Sep/kd_jello2.png)](/content/images/2012/Sep/kd_jello2.png)
+[![]({{site.url}}/content/images/2012/Sep/kd_jello2.png)]({{site.url}}/content/images/2012/Sep/kd_jello2.png)
 
 Hopefully at the end of this clean up process, I'll have ObjCore in a solid enough of a state to post to Github.

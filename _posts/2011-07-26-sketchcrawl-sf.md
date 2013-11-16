@@ -9,17 +9,17 @@ Last weekend I went to [Sketchcrawl 32](http://www.sketchcrawl.com/) with fellow
 
 Some of my sketches:
 
-[![](/content/images/2011/Jul/105c.jpg)](/content/images/2011/Jul/105c.jpg)
+[![]({{site.url}}/content/images/2011/Jul/105c.jpg)]({{site.url}}/content/images/2011/Jul/105c.jpg)
 
-[![](/content/images/2011/Jul/106c.jpg)](/content/images/2011/Jul/106c.jpg)
+[![]({{site.url}}/content/images/2011/Jul/106c.jpg)]({{site.url}}/content/images/2011/Jul/106c.jpg)
 
-[![](/content/images/2011/Jul/107c.jpg)](/content/images/2011/Jul/107c.jpg)
+[![]({{site.url}}/content/images/2011/Jul/107c.jpg)]({{site.url}}/content/images/2011/Jul/107c.jpg)
 
-[![](/content/images/2011/Jul/108c.jpg)](/content/images/2011/Jul/108c.jpg)
+[![]({{site.url}}/content/images/2011/Jul/108c.jpg)]({{site.url}}/content/images/2011/Jul/108c.jpg)
 
-[![](/content/images/2011/Jul/109c.jpg)](/content/images/2011/Jul/109c.jpg)
+[![]({{site.url}}/content/images/2011/Jul/109c.jpg)]({{site.url}}/content/images/2011/Jul/109c.jpg)
 
-[![](/content/images/2011/Jul/110c.jpg)](/content/images/2011/Jul/110c.jpg)
+[![]({{site.url}}/content/images/2011/Jul/110c.jpg)]({{site.url}}/content/images/2011/Jul/110c.jpg)
 
 I'm still not a very good drawer and I still have massive difficulties drawing people. :p But I think I'm improving.... more practice!
 

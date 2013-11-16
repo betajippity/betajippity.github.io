@@ -7,13 +7,13 @@ author: Yining Karl Li
 
 Behold, the very first image produced using my pathtracer!
 
-[![](/content/images/2012/Mar/frame_3.png)](/content/images/2012/Mar/frame_3.png)
+[![]({{site.url}}/content/images/2012/Mar/frame_3.png)]({{site.url}}/content/images/2012/Mar/frame_3.png)
 
 Granted, the actual image is not terribly interesting- just a cube inside of a standard [Cornell box](http://en.wikipedia.org/wiki/Cornell_Box) type setup, but it was rendered entirely using my own pathtracer! Aside from being converted from a BMP file to a PNG, this render has not been modified in any way whatsoever outside of my renderer (I have yet to name it). This render is the result of a thousand iterations. Here are some comparisons of the variance in the render at various iteration levels (click through to the full size versions to get an actual sense of the variance levels):
 
-[![Upper Left: 1 iteration. Upper Right: 5 iterations. Lower Left: 10 iterations. Lower Right: 15 iterations.](/content/images/2012/Mar/pass0-15.png)](/content/images/2012/Mar/pass0-15.png)
+[![Upper Left: 1 iteration. Upper Right: 5 iterations. Lower Left: 10 iterations. Lower Right: 15 iterations.]({{site.url}}/content/images/2012/Mar/pass0-15.png)]({{site.url}}/content/images/2012/Mar/pass0-15.png)
 
-[![Upper Left: 1 iteration. Upper Right: 250 iterations. Lower Left: 500 iterations. Lower Right: 750 iterations.](/content/images/2012/Mar/pass0-750.png)](/content/images/2012/Mar/pass0-750.png)
+[![Upper Left: 1 iteration. Upper Right: 250 iterations. Lower Left: 500 iterations. Lower Right: 750 iterations.]({{site.url}}/content/images/2012/Mar/pass0-750.png)]({{site.url}}/content/images/2012/Mar/pass0-750.png)
 
 Each iteration took about 15 seconds to finish.
 
@@ -27,6 +27,6 @@ Something that is fairly high on my list of things to do right now is redesign t
 
 One cool thing that storing the initial ray cast allows me to do is to generate a z-depth version of the render for "free":
 
-[![](/content/images/2012/Mar/frame_3z.png)](/content/images/2012/Mar/frame_3z.png)
+[![]({{site.url}}/content/images/2012/Mar/frame_3z.png)]({{site.url}}/content/images/2012/Mar/frame_3z.png)
 
 Okay, hopefully by my next post I'll have the KD-tree rewrite done!

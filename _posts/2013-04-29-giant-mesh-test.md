@@ -9,13 +9,13 @@ My friend/schoolmate [Zia Zhu](https://vimeo.com/user10815579) is an amazing mod
 
 Here are some nice, pretty test renders I did. As usual, everything was rendered with Takua Render, and there has been absolutely zero post-processing:
 
-[![](/content/images/2013/Apr/venus1.png)](/content/images/2013/Apr/venus1.png)
+[![]({{site.url}}/content/images/2013/Apr/venus1.png)]({{site.url}}/content/images/2013/Apr/venus1.png)
 
-[![](/content/images/2013/Apr/venus21.png)](/content/images/2013/Apr/venus21.png)
+[![]({{site.url}}/content/images/2013/Apr/venus21.png)]({{site.url}}/content/images/2013/Apr/venus21.png)
 
-[![](/content/images/2013/Apr/venus31.png)](/content/images/2013/Apr/venus31.png)
+[![]({{site.url}}/content/images/2013/Apr/venus31.png)]({{site.url}}/content/images/2013/Apr/venus31.png)
 
-[![](/content/images/2013/Apr/venus41.png)](/content/images/2013/Apr/venus41.png)
+[![]({{site.url}}/content/images/2013/Apr/venus41.png)]({{site.url}}/content/images/2013/Apr/venus41.png)
 
 Each one of these renders was lit using a single, large area light (with importance sampled direct lighting, of course). The material on the model is just standard lambert diffuse white; I'll do another set of test renders once I've finished rewriting my subsurface scatter system. Each render was set to 2800 samples per pixels and took about 20 minutes to render on a single GTX480. In other words, not spectacular, but not bad either.
 
@@ -25,6 +25,6 @@ On a happier note, KD-tree construction performed well! The KD-tree for the Venu
 
 Here's a bonus image of what the sculpt looks like in the GL preview mode:
 
-[![](/content/images/2013/Apr/venus_gl.png)](/content/images/2013/Apr/venus_gl.png)
+[![]({{site.url}}/content/images/2013/Apr/venus_gl.png)]({{site.url}}/content/images/2013/Apr/venus_gl.png)
 
 Again, all credit for the actual model goes to the incredibly talented [Zia Zhu](https://vimeo.com/user10815579)!

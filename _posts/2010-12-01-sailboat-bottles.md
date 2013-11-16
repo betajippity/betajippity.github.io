@@ -9,8 +9,8 @@ Today\: two shading/value exercises from over the summer! I'm not terribly good 
 
 I have this big wooden model of a sailboat back home:
 
-[![](/content/images/2010/Dec/sailboat.jpg)](/content/images/2010/Dec/sailboat_full.jpg)
+[![]({{site.url}}/content/images/2010/Dec/sailboat.jpg)]({{site.url}}/content/images/2010/Dec/sailboat_full.jpg)
 
 This one is from the standard painted-white objects exercises that seem to be part of every drawing class ever:
 
-[![](/content/images/2010/Dec/bottle.jpg)](/content/images/2010/Dec/bottle_full.jpg)
+[![]({{site.url}}/content/images/2010/Dec/bottle.jpg)]({{site.url}}/content/images/2010/Dec/bottle_full.jpg)

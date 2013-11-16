@@ -9,7 +9,7 @@ I'm done with my character model! Until I can think of a better name, I'm just c
 
 Here's a still:
 
-[![](/content/images/2010/Dec/character.png)](/content/images/2010/Dec/character.png)
+[![]({{site.url}}/content/images/2010/Dec/character.png)]({{site.url}}/content/images/2010/Dec/character.png)
 
 Getting the hair and cloth sims to work right took aaaggggeeesssss. Thank goodness [Marissa Krupen](http://www.marissakrupen.blogspot.com/) knows so much and helped me out a lot.
 

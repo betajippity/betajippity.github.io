@@ -9,7 +9,7 @@ I implemented subsurface scattering in my renderer!
 
 Here's a Stanford Dragon in a totally empty environment with just one light source providing illumination. The dragon is made up of a translucent purple jelly-like material, showing off the subsurface scattering effect:
 
-[![](/content/images/2012/May/dragonsss_bright.png)](/content/images/2012/May/dragonsss_bright.png)
+[![]({{site.url}}/content/images/2012/May/dragonsss_bright.png)]({{site.url}}/content/images/2012/May/dragonsss_bright.png)
 
 [Subsurface scattering](http://en.wikipedia.org/wiki/Subsurface_scattering) is an important behavior that light exhibits upon hitting some translucent materials; normal transmissive materials will simply transport light through the material and out the other side, but subsurface scattering materials will attenuate and scatter light before releasing the light somewhere not necessarily along a line from the entry point. This is what gives skin and translucent fruit and marble and a whole host of other materials their distinctive look.
 
@@ -19,6 +19,6 @@ At some point in the future I might try out a faster approximation method, but f
 
 Here's the same subsurface scattering dragon from above, but now in the Cornell Box. Note the cool colored soft shadows beneath the dragon:
 
-[![](/content/images/2012/May/subsurfacetest.png)](/content/images/2012/May/subsurfacetest.png)
+[![]({{site.url}}/content/images/2012/May/subsurfacetest.png)]({{site.url}}/content/images/2012/May/subsurfacetest.png)
 
 Also, I've finally settled on a name for my renderer project: Takua Render! So, that is what I shall be calling my renderer from now on!

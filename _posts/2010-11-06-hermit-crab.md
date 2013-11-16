@@ -15,11 +15,11 @@ I'm perfectly aware that no hermit crab would ever actually live in a conch shel
 
 Some stills from some different angles...
 
-[![](/content/images/2010/Nov/1.png)](/content/images/2010/Nov/1.png)
+[![]({{site.url}}/content/images/2010/Nov/1.png)]({{site.url}}/content/images/2010/Nov/1.png)
 
-[![](/content/images/2010/Nov/2.png)](/content/images/2010/Nov/2.png)
+[![]({{site.url}}/content/images/2010/Nov/2.png)]({{site.url}}/content/images/2010/Nov/2.png)
 
-[![](/content/images/2010/Nov/3.png)](/content/images/2010/Nov/3.png)
+[![]({{site.url}}/content/images/2010/Nov/3.png)]({{site.url}}/content/images/2010/Nov/3.png)
 
 As the title "redux" suggests, the crab above is actually the second version of the hermit crab I've made. I originally finished about a week earlier with a different version, but then after getting some suggestions from Professor Scott White, my 3D modeling professor, I decided to redesign the conch shell. Here's what Hermit Crab Mark I looked like:
 

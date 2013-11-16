@@ -16,14 +16,14 @@ This video is making use of my Vray white-backdrop studio setup! The pitcher was
 
 ...and of course, some stills:
 
-[![](/content/images/2012/May/jello_01.png)](/content/images/2012/May/jello_01.png)
+[![]({{site.url}}/content/images/2012/May/jello_01.png)]({{site.url}}/content/images/2012/May/jello_01.png)
 
-[![](/content/images/2012/May/jello_02.png)](/content/images/2012/May/jello_02.png)
+[![]({{site.url}}/content/images/2012/May/jello_02.png)]({{site.url}}/content/images/2012/May/jello_02.png)
 
-[![](/content/images/2012/May/jello_03.png)](/content/images/2012/May/jello_03.png)
+[![]({{site.url}}/content/images/2012/May/jello_03.png)]({{site.url}}/content/images/2012/May/jello_03.png)
 
-[![](/content/images/2012/May/jello_04.png)](/content/images/2012/May/jello_04.png)
+[![]({{site.url}}/content/images/2012/May/jello_04.png)]({{site.url}}/content/images/2012/May/jello_04.png)
 
-[![](/content/images/2012/May/jello_05.png)](/content/images/2012/May/jello_05.png)
+[![]({{site.url}}/content/images/2012/May/jello_05.png)]({{site.url}}/content/images/2012/May/jello_05.png)
 
-[![](/content/images/2012/May/jello_06.png)](/content/images/2012/May/jello_06.png)
+[![]({{site.url}}/content/images/2012/May/jello_06.png)]({{site.url}}/content/images/2012/May/jello_06.png)

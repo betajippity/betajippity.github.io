@@ -19,4 +19,4 @@ Here are the posts for this update:
 
 Here's an image from our very first working render! More soon!
 
-[![](/content/images/2012/Apr/First.png)](/content/images/2012/Apr/First.png)
+[![]({{site.url}}/content/images/2012/Apr/First.png)]({{site.url}}/content/images/2012/Apr/First.png)

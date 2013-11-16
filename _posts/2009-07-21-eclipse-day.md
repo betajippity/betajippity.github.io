@@ -14,33 +14,33 @@ We met with Kevin and Justin at Century Park, this big park near the internation
 
 CLOUDS:
 
-[![](/content/images/2009/Jul/DSC_0201.jpg)](/content/images/2009/Jul/DSC_0201.jpg)
+[![]({{site.url}}/content/images/2009/Jul/DSC_0201.jpg)]({{site.url}}/content/images/2009/Jul/DSC_0201.jpg)
 
 Problem: the sun was only visible for brief seconds through the cloud layer:
 
 Even bigger problem: I didn't have a tripod. Which meant I had to prop up my camera on a rock and try to aim it at the sun. We had found this rocky outcropping that jutted out into the lake, so we set up there.
 
-[![](/content/images/2009/Jul/DSC_0212.jpg)](/content/images/2009/Jul/DSC_0212.jpg)
+[![]({{site.url}}/content/images/2009/Jul/DSC_0212.jpg)]({{site.url}}/content/images/2009/Jul/DSC_0212.jpg)
 
 Here's Kevin and Justin chilling on the outcropping:
 
-[![](/content/images/2009/Jul/DSC_0222.jpg)](/content/images/2009/Jul/DSC_0222.jpg)
+[![]({{site.url}}/content/images/2009/Jul/DSC_0222.jpg)]({{site.url}}/content/images/2009/Jul/DSC_0222.jpg)
 
 I found a rock that worked pretty well as a tripod (Ryan agreed, he set up his video camera on the same rock). I figured that using the viewfinder of my camera to aim the camera at the sun would be okay if I did so during a moment when the sun was behind the clouds. So that's exactly what I did.... but the sun decided to come out right as I was in the middle of aiming. Needless to say, that hurt my eyes. Ouch.
 
 But it was worth it! I got some pretty cool pictures:
 
-[![](/content/images/2009/Jul/DSC_0206.jpg)](/content/images/2009/Jul/DSC_0206.jpg)
+[![]({{site.url}}/content/images/2009/Jul/DSC_0206.jpg)]({{site.url}}/content/images/2009/Jul/DSC_0206.jpg)
 
-[![](/content/images/2009/Jul/DSC_0207.jpg)](/content/images/2009/Jul/DSC_0207.jpg)
+[![]({{site.url}}/content/images/2009/Jul/DSC_0207.jpg)]({{site.url}}/content/images/2009/Jul/DSC_0207.jpg)
 
-[![](/content/images/2009/Jul/DSC_0209.jpg)](/content/images/2009/Jul/DSC_0209.jpg)
+[![]({{site.url}}/content/images/2009/Jul/DSC_0209.jpg)]({{site.url}}/content/images/2009/Jul/DSC_0209.jpg)
 
-[![](/content/images/2009/Jul/DSC_0210.jpg)](/content/images/2009/Jul/DSC_0210.jpg)
+[![]({{site.url}}/content/images/2009/Jul/DSC_0210.jpg)]({{site.url}}/content/images/2009/Jul/DSC_0210.jpg)
 
 And then the rain started... ten minutes before totality. Much scrambling to get laptops and cameras and other equipment under this rock cave thing ensued (Justin and I had laptops because we were going to work right after the eclipse). Here's Ryan sitting under a rock:
 
-[![](/content/images/2009/Jul/DSC_0223.jpg)](/content/images/2009/Jul/DSC_0223.jpg)
+[![]({{site.url}}/content/images/2009/Jul/DSC_0223.jpg)]({{site.url}}/content/images/2009/Jul/DSC_0223.jpg)
 
 Totality hit pretty suddenly. The plan was for me to shoot pictures and Kevin and Ryan to shoot video, but totality hit us a little earlier than expected. Scrambling occurred again to get the video camera into Kevin's hands and the DSLR camera out from under the rocky cave:
 
@@ -52,13 +52,13 @@ Unfortunately, the cloud cover and rain meant that we didn't actually see totali
 
 Justin in the rain during totality making his way out onto the outcropping:
 
-[![](/content/images/2009/Jul/DSC_0218.jpg)](/content/images/2009/Jul/DSC_0218.jpg)
+[![]({{site.url}}/content/images/2009/Jul/DSC_0218.jpg)]({{site.url}}/content/images/2009/Jul/DSC_0218.jpg)
 
 I had to use flash because everything got so dark.
 
 Justin and Kevin on the outcropping:
 
-[![](/content/images/2009/Jul/DSC_0220.jpg)](/content/images/2009/Jul/DSC_0220.jpg)
+[![]({{site.url}}/content/images/2009/Jul/DSC_0220.jpg)]({{site.url}}/content/images/2009/Jul/DSC_0220.jpg)
 
 Later, when we were leaving Century Park, something amazingly hilarious happened...
 
@@ -70,7 +70,7 @@ This went on for like, 10 minutes. Eventually Justin gave up and we left the bal
 
 Later, we also found this:
 
-[![](/content/images/2009/Jul/DSC_0226.jpg)](/content/images/2009/Jul/DSC_0226.jpg)
+[![]({{site.url}}/content/images/2009/Jul/DSC_0226.jpg)]({{site.url}}/content/images/2009/Jul/DSC_0226.jpg)
 
 A "Caution: Wet Floor" sign in the middle of a rainstorm. The sign is kind of stating the obvious, isn't it?
 

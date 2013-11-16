@@ -12,17 +12,17 @@ One of the major features I've been working towards for the past few weeks is fu
 
 So first off, some ground truth tests. All ground truth tests are rendered using brute force pathtracing with hundreds of thousands of iterations per pixel. Here is the test scene I've been using lately, with all surfaces reduced to lambert diffuse for the sake of simplification:
 
-[![Ground truth global illumination render, representing 512000 samples per pixel. All lights sampled by BRDF only.](/content/images/2013/Apr/groundtruth.png)](/content/images/2013/Apr/groundtruth.png)
+[![Ground truth global illumination render, representing 512000 samples per pixel. All lights sampled by BRDF only.]({{site.url}}/content/images/2013/Apr/groundtruth.png)]({{site.url}}/content/images/2013/Apr/groundtruth.png)
 
-[![Ground truth for direct lighting contribution only, with all lights sampled by BRDF only.](/content/images/2013/Apr/direct_montecarlo.png)](/content/images/2013/Apr/direct_montecarlo.png)
+[![Ground truth for direct lighting contribution only, with all lights sampled by BRDF only.]({{site.url}}/content/images/2013/Apr/direct_montecarlo.png)]({{site.url}}/content/images/2013/Apr/direct_montecarlo.png)
 
-[![Ground truth for indirect lighting contribution only.](/content/images/2013/Apr/indirect_only.png)](/content/images/2013/Apr/indirect_only.png)
+[![Ground truth for indirect lighting contribution only.]({{site.url}}/content/images/2013/Apr/indirect_only.png)]({{site.url}}/content/images/2013/Apr/indirect_only.png)
 
 The motivation behind importance sampling lights by directly sampling objects with emissive materials comes from the difficulty of finding useful samples from the BRDF only; for example, for the lambert diffuse case, since sampling from only the BRDF produces outgoing rays in totally random (or, slightly better, cosine weighted random) directions, the probability of any ray coming from a diffuse surface actually hitting a light is relatively low, meaning that the contribution of each sample is likely to be low as well. As a result, finding the direct lighting contribution via just BRDF sampling.
 
 For example, here's the direct lighting contribution only, after 64 samples per pixel with only BRDF sampling:
 
-[![Direct lighting contribution only, all lights sampled by BRDF only, 64 samples per pixel.](/content/images/2013/Apr/direct_test.2.png)](/content/images/2013/Apr/direct_test.2.png)
+[![Direct lighting contribution only, all lights sampled by BRDF only, 64 samples per pixel.]({{site.url}}/content/images/2013/Apr/direct_test.2.png)]({{site.url}}/content/images/2013/Apr/direct_test.2.png)
 
 Instead of sampling direct lighting contribution by shooting a ray off in a random direction and hoping that maybe it will hit a light, a much better strategy would be to... shoot the ray towards the light source. This way, the contribution from the sample is guaranteed to be useful. There's one hitch though: the weighting for a sample chosen using the BRDF is relatively simple to determine. For example, in the lambert diffuse case, since the probability of any particular random sample within a hemisphere is the same as any other sample, the weighting per sample is even with all other samples. Once we selectively choose the ray direction specifically towards the light though, the weighting per sample is no longer even. Instead, we must weight each sample by the probability of a ray going in that particular direction towards the light, which we can calculate by the solid angle subtended by the light source divided by the total solid angle of the hemisphere.
 
@@ -36,7 +36,7 @@ As a result, we brainstormed some ideas for potential shortcuts. One shortcut id
 
 I went ahead and tried out this idea, and produced the following image:
 
-[![Direct lighting contribution only, all lights sampled by direct sampling weighted by subtended solid angle, 64 samples per pixel.](/content/images/2013/Apr/direct_test.3.png)](/content/images/2013/Apr/direct_test.3.png)
+[![Direct lighting contribution only, all lights sampled by direct sampling weighted by subtended solid angle, 64 samples per pixel.]({{site.url}}/content/images/2013/Apr/direct_test.3.png)]({{site.url}}/content/images/2013/Apr/direct_test.3.png)
 
 First off, for the most part, it works! The resulting direct illumination matches the ground truth and the BRDF-sampling render, but is significantly more converged than the BRDF-sampling render for the same number of samples. BUT, there is a critical flaw: note the black circle around the light source on the ceiling. That black circle happens to fall exactly within the bounding sphere for the light source, and results from a very simple mathematical fact: calculating the solid angle subtended by the bounding sphere for a point INSIDE of the bounding sphere is undefined. In other words, this shortcut approach will fail for any points that are too close to a light source.
 

@@ -5,7 +5,7 @@ tags: [CIS563, CIS565, Coding, Collaborations, Pathtracer, Fluid Simulation]
 author: Yining Karl Li
 ---
 
-[![](/content/images/2012/Mar/octocat.png)](/content/images/2012/Mar/octocat.png)
+[![]({{site.url}}/content/images/2012/Mar/octocat.png)]({{site.url}}/content/images/2012/Mar/octocat.png)
 
 For both [MultiFluids](http://chocolatefudgesyrup.blogspot.com/) and the [GPU Pathtracer](http://gpupathtracer.blogspot.com/), we will be making our source code accessibly to all on Github!
 

@@ -18,6 +18,6 @@ Here are the posts for this update:
 
 A frame from one of our test videos:
 
-[![](/content/images/2012/Apr/sphereinbox.png)](/content/images/2012/Apr/sphereinbox.png)
+[![]({{site.url}}/content/images/2012/Apr/sphereinbox.png)]({{site.url}}/content/images/2012/Apr/sphereinbox.png)
 
 Check the posts for details and videos!

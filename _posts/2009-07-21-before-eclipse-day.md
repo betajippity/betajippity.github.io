@@ -12,7 +12,7 @@ My friend Ryan Lin from high school arrived at my place tonight. He's in Shangha
 
 Ryan's a cool guy. He brought us eclipse glasses.
 
-[![](/content/images/2009/Jul/DSC_0199.jpg)](/content/images/2009/Jul/DSC_0199.jpg)
+[![]({{site.url}}/content/images/2009/Jul/DSC_0199.jpg)]({{site.url}}/content/images/2009/Jul/DSC_0199.jpg)
 
 Quick science lesson: looking at a solar eclipse with your naked eyeballs is really dangerous. Normally when we look at the sun, the brightness of the sun forces us to turn away almost immediately, minimizing the risk for permanent eye damage in the process. During an eclipse though, the sun does not appear as bright, which means when we can stare at the sun longer without averting our eyes. Which is really really bad for us. During a solar eclipse, the part of the sun that shoots our UV that fries our eyeballs is just as active as ever even though the sun's overall brightness appears to drop. Because of this, viewing the sun during a solar eclipse must be done with special eclipse glasses with filter lenses to avoid permanent eye damage. The only exception to this rule is during totality.
 
@@ -20,7 +20,7 @@ So these glasses things are REALLY good at blocking out light, which makes sense
 
 The glasses have all these warnings and instructions on the inside. Cool stuff.
 
-[![](/content/images/2009/Jul/DSC_0198.jpg)](/content/images/2009/Jul/DSC_0198.jpg)
+[![]({{site.url}}/content/images/2009/Jul/DSC_0198.jpg)]({{site.url}}/content/images/2009/Jul/DSC_0198.jpg)
 
 Eventually I did manage to see something through the glasses... although not exactly in a good way. I figured "Hey, my Nikon D60 has a really powerful flash unit, so if anything in this apartment is going to be able to push light through these glasses, the flash unit is a good bet." So I proceeded to fire off the flash unit about an inch away from the glasses' filter lenses.
 

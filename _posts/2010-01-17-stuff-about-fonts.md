@@ -9,7 +9,7 @@ Just a quick note:
 
 Today we've added a nifty little addition to Omjii's Switcheroo tool- Typesetting options!
 
-[![](/content/images/2010/Jan/switcherootypeset.png)](/content/images/2010/Jan/switcherootypeset.png)
+[![]({{site.url}}/content/images/2010/Jan/switcherootypeset.png)]({{site.url}}/content/images/2010/Jan/switcherootypeset.png)
 
 Up to now, the site has been typeset exclusively with Omjii's custom YiningStyle Mark II font (download link [here](http://www.omjii.com/css/fonts/YiningStyleMarkII.ttf)). We've been accomplishing custom typesetting through the use of the @font-face rules that are in CSS3, meaning all HTML5/CSS3 compliant browsers (Firefox 3.5 and up, Safari 4 and up, Chrome 2 and up, etc) have been displaying Omjii with our custom font. Internet Explorer users see the site typeset in Arial since IE has really bizarre support for @font-face (don't worry, we're working on a workaround).
 
@@ -21,10 +21,10 @@ On a related note, if you're on a PC and have noticed that the Omjii font (and a
 
 A visual example might be the best way to explain the difference between font-smoothing and sans font-smoothing. Here's Omjii's font sans font-smoothing:
 
-![/content/images/2010/Jan/fontwrong.png](/content/images/2010/Jan/fontwrong.png)
+![{{site.url}}/content/images/2010/Jan/fontwrong.png]({{site.url}}/content/images/2010/Jan/fontwrong.png)
 
 ...and here with font-smoothing:
 
-![/content/images/2010/Jan/fontright.png](/content/images/2010/Jan/fontright.png)
+![{{site.url}}/content/images/2010/Jan/fontright.png]({{site.url}}/content/images/2010/Jan/fontright.png)
 
 Clearly, font-smoothing looks much nicer!

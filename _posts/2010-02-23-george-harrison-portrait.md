@@ -9,10 +9,10 @@ For Digital Design Foundations, our latest project was to do a portrait of a fam
 
 I decided to do George Harrison from the Beatles:
 
-[![](/content/images/2010/Feb/HarrisonFinalv2.png)](/content/images/2010/Feb/HarrisonFinalv2_full.png)
+[![]({{site.url}}/content/images/2010/Feb/HarrisonFinalv2.png)]({{site.url}}/content/images/2010/Feb/HarrisonFinalv2_full.png)
 
 The background pattern is influenced by the psychedelic pattern on the inner sleeve of Sgt. Pepper's Lonely Hearts Club Band.
 
 Here are some studies that show the progression of the portrait and some of the variations his mustache went though:
 
-[![](/content/images/2010/Feb/HarrisonStudiesv2.png)](/content/images/2010/Feb/HarrisonStudiesv2_full.png)
+[![]({{site.url}}/content/images/2010/Feb/HarrisonStudiesv2.png)]({{site.url}}/content/images/2010/Feb/HarrisonStudiesv2_full.png)

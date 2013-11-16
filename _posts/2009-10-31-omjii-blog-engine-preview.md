@@ -15,9 +15,9 @@ So! What does this engine entail for Omjii.com? Well, we'll be offering Omjii Bl
 
 The introduction of Omjii Blogs is naturally going to mean some revisions to the main site design. Here's some concept doodles of what it's going to look like:
 
-![](/content/images/2009/Oct/plan1.jpg)
+![]({{site.url}}/content/images/2009/Oct/plan1.jpg)
 
-![](/content/images/2009/Oct/plan2.jpg)
+![]({{site.url}}/content/images/2009/Oct/plan2.jpg)
 
 The first doodle shows two headers. The top header is the standard Omjii header that flies over the main site. The second header, however, is new. When you go from the main comic site to, say, the Emma Blog, the header of the site will magically change into the second, blog oriented header.
 
@@ -25,6 +25,6 @@ The second doodle shows an updated design for the second, blog oriented header.
 
 Finally, the updated new main header is actually completed and ready to go live. We're just waiting on a few things before releasing it into the wild. It looks like this:
 
-![](/content/images/2009/Oct/headerpreview.png)
+![]({{site.url}}/content/images/2009/Oct/headerpreview.png)
 
 So those are some cool new things to expect in the coming weeks!

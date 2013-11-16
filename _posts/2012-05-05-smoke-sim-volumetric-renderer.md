@@ -16,6 +16,6 @@ The actual approach I took to integrating the two was to simply pipeline them in
 
 I'm actually not entirely happy with the render... I don't think I picked very good settings for the pseudo-black body, so a lot of the render is overexposed and too bright. I'll probably tinker with that some later and re-render the whole thing, but before I do that I want to move the volumetric renderer onto the GPU with CUDA. Even with multithreading via OpenMP, the rendertimes per frame are still too high for my liking... Anyway, here are some stills!
  
-[![](/content/images/2012/May/smoke_vr1.png)](/content/images/2012/May/smoke_vr1.png)
+[![]({{site.url}}/content/images/2012/May/smoke_vr1.png)]({{site.url}}/content/images/2012/May/smoke_vr1.png)
 
-[![](/content/images/2012/May/smoke_vr2.png)](/content/images/2012/May/smoke_vr2.png)
+[![]({{site.url}}/content/images/2012/May/smoke_vr2.png)]({{site.url}}/content/images/2012/May/smoke_vr2.png)

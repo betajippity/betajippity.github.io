@@ -15,9 +15,9 @@ The new while-while traversal is significantly faster than the history flag appr
 
 In order to validate that the entire kd traversal system works, I did a quick and dirty port of the old Rev 2 pathtracing integrator to run on top of the new Rev 3 framework. The following test images contain about 20000 faces and objects, and clocked in at about 6 samples per pixel per second with a tree depth of 15. Each image was rendered to 1024 samples per pixel:
 
-[![](/content/images/2013/Mar/greencow.png)](/content/images/2013/Mar/greencow.png)
+[![]({{site.url}}/content/images/2013/Mar/greencow.png)]({{site.url}}/content/images/2013/Mar/greencow.png)
 
-[![](/content/images/2013/Mar/glasscow.png)](/content/images/2013/Mar/glasscow.png)
+[![]({{site.url}}/content/images/2013/Mar/glasscow.png)]({{site.url}}/content/images/2013/Mar/glasscow.png)
 
 I also attempted to render these images without any kd-tree acceleration as a control. Without kd-tree acceleration, each sample per pixel took upwards of 5 seconds, and I wound up terminating the renders before they got even close to completion.
 

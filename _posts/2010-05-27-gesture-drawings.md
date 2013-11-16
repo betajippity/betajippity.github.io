@@ -15,38 +15,38 @@ Our professor had us start with timed gesture drawings on Tuesday. The point was
 
 We started with a bike. This one was done in 15 seconds:
 
-[![](/content/images/2010/May/DSC_0054.jpg)](/content/images/2010/May/DSC_0054.jpg)
+[![]({{site.url}}/content/images/2010/May/DSC_0054.jpg)]({{site.url}}/content/images/2010/May/DSC_0054.jpg)
 
 For this one, we did one gesture drawing in 15 seconds, then our professor had us rub out the drawing and do another one in 15 seconds.
 
-[![](/content/images/2010/May/DSC_0053.jpg)](/content/images/2010/May/DSC_0053.jpg)
+[![]({{site.url}}/content/images/2010/May/DSC_0053.jpg)]({{site.url}}/content/images/2010/May/DSC_0053.jpg)
 
 We had 20 seconds for this one:
 
-[![](/content/images/2010/May/DSC_0052.jpg)](/content/images/2010/May/DSC_0052.jpg)
+[![]({{site.url}}/content/images/2010/May/DSC_0052.jpg)]({{site.url}}/content/images/2010/May/DSC_0052.jpg)
 
 Then we drew a bear, again in 15 seconds:
 
-[![](/content/images/2010/May/DSC_0049.jpg)](/content/images/2010/May/DSC_0049.jpg)
+[![]({{site.url}}/content/images/2010/May/DSC_0049.jpg)]({{site.url}}/content/images/2010/May/DSC_0049.jpg)
 
 Then we drew the bear again, rubbed it out, and redrew a third time, now in 30 seconds:
 
-[![](/content/images/2010/May/DSC_0051.jpg)](/content/images/2010/May/DSC_0051.jpg)
+[![]({{site.url}}/content/images/2010/May/DSC_0051.jpg)]({{site.url}}/content/images/2010/May/DSC_0051.jpg)
 
 Things started getting interesting when we moved onto a more complex still life with a potted plant, an old rotary telephone, and a jar. We started with one minute:
 
-[![](/content/images/2010/May/DSC_0042.jpg)](/content/images/2010/May/DSC_0042.jpg)
+[![]({{site.url}}/content/images/2010/May/DSC_0042.jpg)]({{site.url}}/content/images/2010/May/DSC_0042.jpg)
 
 Then we had two minutes:
 
-[![](/content/images/2010/May/DSC_0047.jpg)](/content/images/2010/May/DSC_0047.jpg)
+[![]({{site.url}}/content/images/2010/May/DSC_0047.jpg)]({{site.url}}/content/images/2010/May/DSC_0047.jpg)
 
 ...and finally we had three minutes:
 
-[![](/content/images/2010/May/DSC_0046.jpg)](/content/images/2010/May/DSC_0046.jpg)
+[![]({{site.url}}/content/images/2010/May/DSC_0046.jpg)]({{site.url}}/content/images/2010/May/DSC_0046.jpg)
 
 Finally, we moved on to this gigantic still life with a ton of random stuff in the middle of the room on a platform. We had about ten minutes for this one:
 
-[![](/content/images/2010/May/DSC_0044.jpg)](/content/images/2010/May/DSC_0044.jpg)
+[![]({{site.url}}/content/images/2010/May/DSC_0044.jpg)]({{site.url}}/content/images/2010/May/DSC_0044.jpg)
 
 Overall, that was a pretty hard exercise. We were working in charcoal, which is way harder to use than I thought it would be, and the time limits made getting everything onto the paper pretty tough. That was interesting.

@@ -15,14 +15,14 @@ In the renders in the above video, stratified sampling is being used to choose n
 
 Here's the Lamborghini model from last post at 256 samples per pixel with stratified (256 strata) and uniform sampling, to demonstrate how much less perceptible noise there is with the stratified sampler. From a distance, the uniform sampler renders may seem slightly darker side by side due to the higher percentage of noise, but if you compare them using the lightbox, you can see that the lighting and brightness is the same.
 
-[![Stratified sampling, 256 strata, 256 samples per pixel](/content/images/2013/Mar/lambo_strat.png)](/content/images/2013/Mar/lambo_strat.png)
+[![Stratified sampling, 256 strata, 256 samples per pixel]({{site.url}}/content/images/2013/Mar/lambo_strat.png)]({{site.url}}/content/images/2013/Mar/lambo_strat.png)
 
-[![Uniform sampling, 256 samples per pixel](/content/images/2013/Mar/uniform.png)](/content/images/2013/Mar/uniform.png)
+[![Uniform sampling, 256 samples per pixel]({{site.url}}/content/images/2013/Mar/uniform.png)]({{site.url}}/content/images/2013/Mar/uniform.png)
 
 ...and up-close crops with 400% zoom:
  
-[![Stratified sampling, 256 strata, 256 samples per pixel, 400% crop](/content/images/2013/Mar/lambo_strat_crop.png)](/content/images/2013/Mar/lambo_strat_crop.png)
+[![Stratified sampling, 256 strata, 256 samples per pixel, 400% crop]({{site.url}}/content/images/2013/Mar/lambo_strat_crop.png)]({{site.url}}/content/images/2013/Mar/lambo_strat_crop.png)
 
-[![Uniform sampling, 256 samples per pixel, 400% crop](/content/images/2013/Mar/uniform_zoom.png)](/content/images/2013/Mar/uniform_zoom.png)
+[![Uniform sampling, 256 samples per pixel, 400% crop]({{site.url}}/content/images/2013/Mar/uniform_zoom.png)]({{site.url}}/content/images/2013/Mar/uniform_zoom.png)
 
 At some point soon I will also be implementing Halton sequence sampling and \[0,2\]-sequence sampling, but for the time being, stratified sampling is already providing a huge visual boost over uniform! In fact, I have a small secret to confess: all of the renders in the last post were rendered with the stratified sampler!

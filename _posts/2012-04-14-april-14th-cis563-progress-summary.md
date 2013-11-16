@@ -11,7 +11,7 @@ The past week for Dan and me has been all about meshes: mesh loading, mesh inter
 
 Here is a really cool render from this week:
 
-[![](/content/images/2012/Apr/reddragon.png)](/content/images/2012/Apr/reddragon.png)
+[![]({{site.url}}/content/images/2012/Apr/reddragon.png)]({{site.url}}/content/images/2012/Apr/reddragon.png)
 
 The posts for this week are:
 

@@ -7,12 +7,12 @@ author: Yining Karl Li
 
 I'm working on a character model right now loosely based on [this sketch](http://omjii.com/blog/karu/2010/10/24/puddle-redux/). Here's how the cloth simulation stuff is looking right now:
 
-[![](/content/images/2010/Dec/cloth_test_4.jpeg)](/content/images/2010/Dec/cloth_test_4.jpeg)
+[![]({{site.url}}/content/images/2010/Dec/cloth_test_4.jpeg)]({{site.url}}/content/images/2010/Dec/cloth_test_4.jpeg)
 
-[![](/content/images/2010/Dec/cloth_test_3.jpeg)](/content/images/2010/Dec/cloth_test_3.jpeg)
+[![]({{site.url}}/content/images/2010/Dec/cloth_test_3.jpeg)]({{site.url}}/content/images/2010/Dec/cloth_test_3.jpeg)
 
-[![](/content/images/2010/Dec/cloth_test_2.jpeg)](/content/images/2010/Dec/cloth_test_2.jpeg)
+[![]({{site.url}}/content/images/2010/Dec/cloth_test_2.jpeg)]({{site.url}}/content/images/2010/Dec/cloth_test_2.jpeg)
 
-[![](/content/images/2010/Dec/cloth_test_1.jpeg)](/content/images/2010/Dec/cloth_test_1.jpeg)
+[![]({{site.url}}/content/images/2010/Dec/cloth_test_1.jpeg)]({{site.url}}/content/images/2010/Dec/cloth_test_1.jpeg)
 
 There is still much work to be done.

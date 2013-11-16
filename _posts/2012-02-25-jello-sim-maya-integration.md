@@ -19,10 +19,10 @@ The rendering process I'm using isn't perfect yet... the fact that the jello cub
 
 But for now, here are some pretty still frames:
 
-[![](/content/images/2012/Feb/jello_kitchen_01.png)](/content/images/2012/Feb/jello_kitchen_01.png)
+[![]({{site.url}}/content/images/2012/Feb/jello_kitchen_01.png)]({{site.url}}/content/images/2012/Feb/jello_kitchen_01.png)
 
-[![](/content/images/2012/Feb/jello_kitchen_021.png)](/content/images/2012/Feb/jello_kitchen_021.png)
+[![]({{site.url}}/content/images/2012/Feb/jello_kitchen_021.png)]({{site.url}}/content/images/2012/Feb/jello_kitchen_021.png)
 
-[![](/content/images/2012/Feb/jello_kitchen_03.png)](/content/images/2012/Feb/jello_kitchen_03.png)
+[![]({{site.url}}/content/images/2012/Feb/jello_kitchen_03.png)]({{site.url}}/content/images/2012/Feb/jello_kitchen_03.png)
 
-[![](/content/images/2012/Feb/jello_kitchen_04.png)](/content/images/2012/Feb/jello_kitchen_04.png)
+[![]({{site.url}}/content/images/2012/Feb/jello_kitchen_04.png)]({{site.url}}/content/images/2012/Feb/jello_kitchen_04.png)

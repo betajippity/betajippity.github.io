@@ -15,20 +15,20 @@ I'm not terribly happy with the sound. That needs some reworking probably...
 
 Here's a few stills breaking down how the entire thing was composited:
 
-[![](/content/images/2011/Feb/breakdown1.png)](/content/images/2011/Feb/breakdown1.png)
+[![]({{site.url}}/content/images/2011/Feb/breakdown1.png)]({{site.url}}/content/images/2011/Feb/breakdown1.png)
 
-[![](/content/images/2011/Feb/breakdown2.png)](/content/images/2011/Feb/breakdown2.png)
+[![]({{site.url}}/content/images/2011/Feb/breakdown2.png)]({{site.url}}/content/images/2011/Feb/breakdown2.png)
 
-[![](/content/images/2011/Feb/breakdown3.png)](/content/images/2011/Feb/breakdown3.png)
+[![]({{site.url}}/content/images/2011/Feb/breakdown3.png)]({{site.url}}/content/images/2011/Feb/breakdown3.png)
 
-[![](/content/images/2011/Feb/breakdown4.png)](/content/images/2011/Feb/breakdown4.png)
+[![]({{site.url}}/content/images/2011/Feb/breakdown4.png)]({{site.url}}/content/images/2011/Feb/breakdown4.png)
 
 ...and here's some random stills:
 
-[![](/content/images/2011/Feb/shot1.png)](/content/images/2011/Feb/shot1.png)
+[![]({{site.url}}/content/images/2011/Feb/shot1.png)]({{site.url}}/content/images/2011/Feb/shot1.png)
 
-[![](/content/images/2011/Feb/shot2.png)](/content/images/2011/Feb/shot2.png)
+[![]({{site.url}}/content/images/2011/Feb/shot2.png)]({{site.url}}/content/images/2011/Feb/shot2.png)
 
-[![](/content/images/2011/Feb/shot3.png)](/content/images/2011/Feb/shot3.png)
+[![]({{site.url}}/content/images/2011/Feb/shot3.png)]({{site.url}}/content/images/2011/Feb/shot3.png)
 
-[![](/content/images/2011/Feb/shot4.png)](/content/images/2011/Feb/shot4.png)
+[![]({{site.url}}/content/images/2011/Feb/shot4.png)]({{site.url}}/content/images/2011/Feb/shot4.png)

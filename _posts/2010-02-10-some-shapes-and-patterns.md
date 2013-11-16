@@ -9,19 +9,19 @@ For our Digital Design Foundations class's first project, we've been doing some 
 
 The first thing we had to do was make a shape and use three of that shape to make a bigger shape. I made my little shape interlock with itself:
 
-[![](/content/images/2010/Feb/Project1Shape1.png)](/content/images/2010/Feb/Project1Shape1.png)
+[![]({{site.url}}/content/images/2010/Feb/Project1Shape1.png)]({{site.url}}/content/images/2010/Feb/Project1Shape1.png)
 
-[![](/content/images/2010/Feb/Project1Shape2.png)](/content/images/2010/Feb/Project1Shape2.png)
+[![]({{site.url}}/content/images/2010/Feb/Project1Shape2.png)]({{site.url}}/content/images/2010/Feb/Project1Shape2.png)
 
 Then we had to cut out a little square or piece from the shapes and use that square or piece to make some black and white patterns. Here's a whole bunch:
 
-[![](/content/images/2010/Feb/Project1Studies1.png)](/content/images/2010/Feb/Project1Studies1.png)
+[![]({{site.url}}/content/images/2010/Feb/Project1Studies1.png)]({{site.url}}/content/images/2010/Feb/Project1Studies1.png)
 
-[![](/content/images/2010/Feb/Project1Studies2.png)](/content/images/2010/Feb/Project1Studies2.png)
+[![]({{site.url}}/content/images/2010/Feb/Project1Studies2.png)]({{site.url}}/content/images/2010/Feb/Project1Studies2.png)
 
 The final step of the project was to take some of the patterns we made, add a color, and make a gigantic pattern thing:
 
-[![](/content/images/2010/Feb/Project1Final.png)](/content/images/2010/Feb/Project1Final_full.png)
+[![]({{site.url}}/content/images/2010/Feb/Project1Final.png)]({{site.url}}/content/images/2010/Feb/Project1Final_full.png)
 
 We got to print our final pattern things on gigantic HP Designjet plotters. So now I have a gigantic 6 foot by 6 foot poster of this pattern. Sweet!
 

@@ -23,13 +23,13 @@ However, in those 8 months, the test blogs that started on the Omjii Blog System
 
 Here are some examples of themes, demonstrated with the [Emma Blog](http://www.omjii.com/emma). The Omjii Blog System look is on the left, WordPress themes are displayed to the right:
 
-[![](/content/images/2010/Jun/wordpress_screen1.jpg)](/content/images/2010/Jun/wordpress_screen1.jpg)
+[![]({{site.url}}/content/images/2010/Jun/wordpress_screen1.jpg)]({{site.url}}/content/images/2010/Jun/wordpress_screen1.jpg)
 
-[![](/content/images/2010/Jun/wordpress_screen2.jpg)](/content/images/2010/Jun/wordpress_screen2.jpg)
+[![]({{site.url}}/content/images/2010/Jun/wordpress_screen2.jpg)]({{site.url}}/content/images/2010/Jun/wordpress_screen2.jpg)
 
-[![](/content/images/2010/Jun/wordpress_screen3.jpg)](/content/images/2010/Jun/wordpress_screen3.jpg)
+[![]({{site.url}}/content/images/2010/Jun/wordpress_screen3.jpg)]({{site.url}}/content/images/2010/Jun/wordpress_screen3.jpg)
 
-[![](/content/images/2010/Jun/wordpress_screen4.jpg)](/content/images/2010/Jun/wordpress_screen4.jpg)
+[![]({{site.url}}/content/images/2010/Jun/wordpress_screen4.jpg)]({{site.url}}/content/images/2010/Jun/wordpress_screen4.jpg)
 
 Applying a new theme doesn't require any coding or messy work at all. All you have to do is click a button. The new themes functionality brought to Omjii Blogs by the adoption of WordPress MU is really really cool.
 

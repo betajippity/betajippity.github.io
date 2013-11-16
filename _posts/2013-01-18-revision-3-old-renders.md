@@ -15,6 +15,6 @@ Again, I'll go into a more detailed explanation once this process is complete.
 
 I'll leave this post with a slightly orthogonal note; whilst in the process of merging code, I found some images from Takua Revision 1 that I never posted for some reason. Here's a particularly cool pair of images from when I was implementing depth of field. The first image depicts a glass Stanford dragon without any depth of field, and the second image depicts the same exact scene with some crazy shallow aperture (I don't remember the exact settings). You can tell these are from the days of Takua Revision 1 by the ceiling; I often made the entire ceiling a light source to speed up renders back then, until Revision 2's huge performance increases rendered cheats like that unnecessary.
 
-[![Glass Stanford dragon without depth of field](/content/images/2013/Jan/glassdragon.png)](/content/images/2013/Jan/glassdragon.png)
+[![Glass Stanford dragon without depth of field]({{site.url}}/content/images/2013/Jan/glassdragon.png)]({{site.url}}/content/images/2013/Jan/glassdragon.png)
 
-[![Glass Stanford dragon with depth of field](/content/images/2013/Jan/glassdragon_dof.png)](/content/images/2013/Jan/glassdragon_dof.png)
+[![Glass Stanford dragon with depth of field]({{site.url}}/content/images/2013/Jan/glassdragon_dof.png)]({{site.url}}/content/images/2013/Jan/glassdragon_dof.png)

@@ -7,7 +7,7 @@ author: Yining Karl Li
 
 Edit\: [Erwin Coumans](http://yiningkarlli.blogspot.com/2012/09/thoughts-on-stackless-kd-tree-traversal.html?showComment=1353951085399#c9086262641390319736) in the comments section has pointed me to a [GDC 2009 talk by Takahiro Harada](http://twvideo01.ubm-us.net/o1/vault/gdc09/slides/takahiroGDC09s_1.pdf) proposing something called Tree Traversal using History Flags, which is essentially the same as the idea proposed in this post, with the small exception that Harada's technique uses a bit field to track previously visited nodes on the up traverse. I think that Harada's technique is actually better than the pointer check I wrote about in this post, since keeping a bit field would allow for tracking the previously visited node without having to go back to global memory to do a node check. In other words, the bit field method allows for less thrashing of global memory, which I should think allows for a nice performance edge. So, much as I suspected, the idea in this post in one that folks smarter than me have arrived upon previously, and my knowledge of the literature on this topic is indeed incomplete. Much thanks to Erwin for pointing me to the Harada talk! The original post is preserved below, in case anyone still has an interest in reading it.
 
-[![](/content/images/2012/Sep/orbital_kd_05.png)](/content/images/2012/Sep/orbital_kd_05.png)
+[![]({{site.url}}/content/images/2012/Sep/orbital_kd_05.png)]({{site.url}}/content/images/2012/Sep/orbital_kd_05.png)
 
 Of course, one of the biggest challenges to implementing a CUDA pathtracer is the lack of recursion on pre-Fermi GPUs. Since I intend for Takua-RT to be able to run on any CUDA enabled CPU, I necessarily have to work with the assumption that I won't have recursion support. Getting around this problem in the core pathtracer is not actually a significant issue, as building raytracing systems that operate in an iterative fashion as opposed to in a recursive fashion is a well-covered topic.
 
@@ -50,8 +50,8 @@ Since this has been a very text heavy post, I'll close with some pictures of a K
 
 Vimeo's compression really does not like thin narrow lines, so here are some stills:
 
-[![](/content/images/2012/Sep/orbital_kd_02.png)](/content/images/2012/Sep/orbital_kd_02.png)
+[![]({{site.url}}/content/images/2012/Sep/orbital_kd_02.png)]({{site.url}}/content/images/2012/Sep/orbital_kd_02.png)
 
-[![](/content/images/2012/Sep/orbital_kd_03.png)](/content/images/2012/Sep/orbital_kd_03.png)
+[![]({{site.url}}/content/images/2012/Sep/orbital_kd_03.png)]({{site.url}}/content/images/2012/Sep/orbital_kd_03.png)
 
-[![](/content/images/2012/Sep/orbital_kd_04.png)](/content/images/2012/Sep/orbital_kd_04.png)
+[![]({{site.url}}/content/images/2012/Sep/orbital_kd_04.png)]({{site.url}}/content/images/2012/Sep/orbital_kd_04.png)

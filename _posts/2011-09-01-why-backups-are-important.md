@@ -17,24 +17,24 @@ What follows are some random in-progress renders that survived through being in 
 
 Here are a series of small in-progress renders showing shading and lighting tests:
  
-[![](/content/images/2011/Sep/GHHouse01.png)](/content/images/2011/Sep/GHHouse01.png)
+[![]({{site.url}}/content/images/2011/Sep/GHHouse01.png)]({{site.url}}/content/images/2011/Sep/GHHouse01.png)
 
-[![](/content/images/2011/Sep/GHHouse02.png)](/content/images/2011/Sep/GHHouse02.png)
+[![]({{site.url}}/content/images/2011/Sep/GHHouse02.png)]({{site.url}}/content/images/2011/Sep/GHHouse02.png)
 
-[![](/content/images/2011/Sep/GHHouse03.png)](/content/images/2011/Sep/GHHouse03.png)
+[![]({{site.url}}/content/images/2011/Sep/GHHouse03.png)]({{site.url}}/content/images/2011/Sep/GHHouse03.png)
 
 I also started playing with some ideas for the interior:
  
-[![](/content/images/2011/Sep/5.jpg)](/content/images/2011/Sep/5.jpg)
+[![]({{site.url}}/content/images/2011/Sep/5.jpg)]({{site.url}}/content/images/2011/Sep/5.jpg)
 
 ...and finally, some larger in-progress renders. These renders represent where the project was when I lost all of the data:
  
-[![](/content/images/2011/Sep/1.jpg)](/content/images/2011/Sep/1.jpg)
+[![]({{site.url}}/content/images/2011/Sep/1.jpg)]({{site.url}}/content/images/2011/Sep/1.jpg)
 
-[![](/content/images/2011/Sep/2.jpg)](/content/images/2011/Sep/2.jpg)
+[![]({{site.url}}/content/images/2011/Sep/2.jpg)]({{site.url}}/content/images/2011/Sep/2.jpg)
 
-[![](/content/images/2011/Sep/3.jpg)](/content/images/2011/Sep/3.jpg)
+[![]({{site.url}}/content/images/2011/Sep/3.jpg)]({{site.url}}/content/images/2011/Sep/3.jpg)
 
-[![](/content/images/2011/Sep/4.jpg)](/content/images/2011/Sep/4.jpg)
+[![]({{site.url}}/content/images/2011/Sep/4.jpg)]({{site.url}}/content/images/2011/Sep/4.jpg)
 
 In the end, the fact that I lost the project isn't as important as the fact that I learned quite a lot from tinkering with this project. However, losing all of the data for this project was definitely a major bummer. But, lesson learned: BACK UP ALL THE TIME.

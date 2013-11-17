@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Throwback&#58 Holiday Card 2011
-tags: [3d Modeling, Art, Vray]
+tags: [Throwback, 3d Modeling, Art, Vray]
 author: Yining Karl Li
 ---
 

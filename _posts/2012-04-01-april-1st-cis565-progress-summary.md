@@ -1,6 +1,6 @@
 ---
 layout: post
-title: April 1st CIS565 Progress Summary&#58 Camera and Pathtracing
+title: April 1st CIS565 Progress Summary- Camera and Pathtracing
 tags: [CIS565, Coding, Collaborations, Pathtracer]
 author: Yining Karl Li
 date: 2012-04-01 01:00:00

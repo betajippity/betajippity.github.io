@@ -1,6 +1,6 @@
 ---
 layout: post
-title: April 5th CIS565 Progress Summary&#58 Interactivity, Alpha Review, Fresnel Reflections, Antialiasing
+title: April 5th CIS565 Progress Summary- Interactivity, Alpha Review, Fresnel Reflections, Antialiasing
 tags: [CIS565, Coding, Collaborations, Pathtracer]
 author: Yining Karl Li
 ---

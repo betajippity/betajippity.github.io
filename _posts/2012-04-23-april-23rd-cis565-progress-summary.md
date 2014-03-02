@@ -1,6 +1,6 @@
 ---
 layout: post
-title: April 23rd CIS565 Progress Summary&#58 Speed and Refraction
+title: April 23rd CIS565 Progress Summary- Speed and Refraction
 tags: [CIS565, Coding, Collaborations, Pathtracer]
 author: Yining Karl Li
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: April 1st CIS563 Progress Summary&#58 Framework Improvements and Bounding Volumes
+title: April 1st CIS563 Progress Summary- Framework Improvements and Bounding Volumes
 tags: [CIS563, Coding, Collaborations, Fluid Sim]
 author: Yining Karl Li
 date: 2012-04-01 02:00:00

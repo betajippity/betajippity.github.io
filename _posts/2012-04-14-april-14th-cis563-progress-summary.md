@@ -1,6 +1,6 @@
 ---
 layout: post
-title: April 14th CIS563 Progress Summary&#58 Meshes and Meshes and Meshes
+title: April 14th CIS563 Progress Summary- Meshes and Meshes and Meshes
 tags: [CIS563, Coding, Collaborations, Fluid Simulation]
 author: Yining Karl Li
 ---

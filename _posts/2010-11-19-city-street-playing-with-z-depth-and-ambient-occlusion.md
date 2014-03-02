@@ -1,6 +1,6 @@
 ---
 layout: post
-title: City Street&#58 Playing with Z-Depth and Ambient Occlusion
+title: City Street- Playing with Z-Depth and Ambient Occlusion
 tags: [3d Modeling, Art]
 author: Yining Karl Li
 ---

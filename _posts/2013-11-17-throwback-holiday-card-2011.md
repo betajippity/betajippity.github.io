@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Throwback&#58 Holiday Card 2011
+title: Throwback- Holiday Card 2011
 tags: [Throwback, 3d Modeling, Art, Vray]
 author: Yining Karl Li
 ---
 
-Two years ago, I was asked to create [CG@Penn](http://cg.cis.upenn.edu/)'s [2011 Holiday Card](http://cg.cis.upenn.edu/HappyHolidays2011.htm). Shortly after finishing that particular project, I started writing a breakdown post but for some reason never finished/posted it. While going through old content for the [move to Github Pages](http://blog.yiningkarlli.com/2013/11/code-and-visuals-version-4.html), I found some of my old unfinished posts, and I've decided to finish up some of them and post them over time as sort of a series of throwback posts. 
+Two years ago, I was asked to create [CG@Penn](http://cg.cis.upenn.edu/)'s [2011 Holiday Card](http://cg.cis.upenn.edu/HappyHolidays2011.htm). Shortly after finishing that particular project, I started writing a breakdown post but for some reason never finished/posted it. While going through old content for the [move to Github Pages](http://blog.yiningkarlli.com/2013/11/code-and-visuals-version-4.html), I found some of my old unfinished posts, and I've decided to finish up some of them and post them over time as sort of a series of throwback posts.
 
 This project is particularly interesting because almost every approach I took two years ago to finish this project, I would not bother using today. But its still interesting to look back on!
 
@@ -45,7 +45,7 @@ The next step was to compose a shot, make a very quick, simple lighting setup, a
 
 [![](/content/images/2013/Nov/test4.png)](/content/images/2013/Nov/test4.png)
 
-The base render is very blueish since the lighting setup was a simple, grey-blueish dome light over the whole scene. The shadows are blotchy since I turned Vray's irradiance cache settings all the way down for faster rendertimes; I decided that I would rather deal with the blotchy shadows in post and have a shot at making the deadline rather than wait for a very long rendertime. I wound up going with the thinner snow at the time since I wanted the trees to be more recognizable as trees, but in retrospect, that choice was probably a mistake. 
+The base render is very blueish since the lighting setup was a simple, grey-blueish dome light over the whole scene. The shadows are blotchy since I turned Vray's irradiance cache settings all the way down for faster rendertimes; I decided that I would rather deal with the blotchy shadows in post and have a shot at making the deadline rather than wait for a very long rendertime. I wound up going with the thinner snow at the time since I wanted the trees to be more recognizable as trees, but in retrospect, that choice was probably a mistake.
 
 The final step was some basic compositing. In After Effects, I applied post-processed DOF using a z-depth layer and Frischluft, color corrected the image, cranked up the exposure, and added vignetting to get the final result:
 
@@ -54,4 +54,3 @@ The final step was some basic compositing. In After Effects, I applied post-proc
 Looking back on this project two years later, I don't think the final result looks really great. The image looks okay for two days of rushed work, but there is enormous room for improvement. If I could go back and change one thing, I would have chosen to use the much heavier snow cover version of the trees for the final composition. Also, today I would approach this project very very differently; instead of ping-ponging between multiple programs for each component, I would favor a almost pure-Houdini pipeline. The trees could be modeled as L-systems in Houdini, perhaps with some base work done in Maya. The snow could absolutely be simmed in Houdini. For rendering and lighting, I would use either my own Takua Render or some other fast physically based renderer (Octane, or perhaps Renderman 18's iterative pathtracing mode) to iterate extremely quickly without having to compromise on quality.
 
 So that's the throwback breakdown of the CG@Penn Holiday 2011 card! I learned a lot from this project, and looking back and comparing how I worked two years ago to how I work today is always a good thing to do.
-

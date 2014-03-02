@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Smoke Sim&#58 Preconditioning and Huge Grids
+title: Smoke Sim- Preconditioning and Huge Grids
 tags: [CIS563, Coding, Fluid Simulation]
 author: Yining Karl Li
 ---

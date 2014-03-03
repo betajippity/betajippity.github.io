@@ -25,6 +25,10 @@ My simulator uses OpenVDB's mesh-to-levelset toolkit for constructing the initia
 
 [![]({{site.url}}/content/images/2014/Jan/longgrid.0430.png)]({{site.url}}/content/images/2014/Jan/longgrid.0430.png)
 
-In the above video and stills, blue indicates higher density/lower velocity, white indicate lower density/higher velocity.
+Here's a video of another test scene, this time patterned after a "waterfall" type scenario. This test was done earlier in the development process, so it doesn't have the wireframe outlines of the solid boundaries:
+
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/88078336' frameborder='0'>PIC/FLIP Simulator Waterfall Test- Ariel View</iframe></div>
+
+In the above videos and stills, blue indicates higher density/lower velocity, white indicate lower density/higher velocity.
 
 Writing the core PIC/FLIP solver actually turned out to be pretty straightforward, and I'm fairly certain that my implementation is correct since it closely matches the result I get out of Houdini's FLIP solver for a similar scene with similar parameters (although not exactly, since there's bound to be some differences in how I handle certain details, such as slightly jittering particle positions to prevent artifacting between steps). Figuring out a good meshing and rendering pipeline turned out to be more difficult; I'll write about that in my next post.

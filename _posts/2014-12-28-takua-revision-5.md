@@ -50,3 +50,4 @@ The blue metallic XYZRGB dragon image is a render that was produced using only T
 
 More interesting non-Cornell Box renders coming in later posts!
 
+Edit: Since making this post, I found a weighting bug that was causing a lot of energy to be lost in indirect diffuse bounces. I've since fixed the bug and updated this post with re-rendered versions of all of the images.

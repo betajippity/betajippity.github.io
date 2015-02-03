@@ -21,6 +21,6 @@ Fortunately, there was a paper by Alexander Reshetov, Alexei Soupikov, and Willi
 
 I implemented a slightly modified version of the algorithm presented on page 5 of the paper. The modification I made is simply to account for rays hitting polygons from below the tangent plane, as in the case of internal refraction. Now interpolated normals at grazing angles no longer produce firefly artifacts:
 
-[![Polygon sphere with consistent normal interpolation. Note the lack of firefly artifacts.]({{site.url}}/content/images/2015/Jan/consistentnormals.png)]({{site.url}}/content/images/2015/Jan/badnormals.1.png)
+[![Polygon sphere with consistent normal interpolation. Note the lack of firefly artifacts.]({{site.url}}/content/images/2015/Jan/consistentnormals.png)]({{site.url}}/content/images/2015/Jan/consistentnormals.png)
 
 I'm working on writing up a lot of stuff, so more soon! Stay tuned!

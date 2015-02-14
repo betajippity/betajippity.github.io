@@ -35,8 +35,6 @@ BDPT inherently does not necessarily have an improved convergence rate over vani
 
 [![Cornell Box with scratched glossy back wall. Rendered using BDPT with MIS.]({{site.url}}/content/images/2015/Feb/gloss_groundtruth.png)]({{site.url}}/content/images/2015/Feb/gloss_groundtruth.png)
 
-[![BDPT with MIS, 16 iterations.]({{site.url}}/content/images/2015/Feb/gloss_groundtruth.png)]({{site.url}}/content/images/2015/Feb/gloss_groundtruth.png)
-
 [![BDPT with MIS, 16 iterations.]({{site.url}}/content/images/2015/Feb/gloss_mis.bdpt.png)]({{site.url}}/content/images/2015/Feb/gloss_mis.bdpt.png)
 
 [![BDPT without MIS, 16 iterations.]({{site.url}}/content/images/2015/Feb/gloss_nomis.bdpt.png)]({{site.url}}/content/images/2015/Feb/gloss_nomis.bdpt.png)

@@ -7,7 +7,7 @@ author: Yining Karl Li
 
 Adaptive sampling is a relatively small and simple but very powerful feature, so I thought I'd write briefly about how adaptive sampling works in Takua a0.5. Before diving into the details though, I'll start with a picture. The scene I'll be using for comparisons in this post is a globe of the Earth, made of a polished ground glass with reflective metal insets for the landmasses and with a rough scratched metal stand. The globe is on a white backdrop and is lit by two off-camera area lights. The following render is the fully converged reference baseline for everything else in the post, rendered using VCM:
 
-[![Fully converged reference baseline. Rendered in Takua a0.5 using VCM.]({{site.url}}/content/images/2015/Mar/adaptive_globe_baseline_vcm.png)]({{site.url}}/content/images/2015/Mar/adaptive_globe_baseline_vcm.png)
+[![Fully converged reference baseline. Rendered in Takua a0.5 using VCM.]({{site.url}}/content/images/2015/Mar/preview/adaptive_globe_baseline_vcm.jpg)]({{site.url}}/content/images/2015/Mar/adaptive_globe_baseline_vcm.png)
 
 As [mentioned before](http://blog.yiningkarlli.com/2015/02/bidirectional-pathtracing-integrator.html), in pathtracing based renderers, we solve the path integral through Monte Carlo sampling, which gives us an estimate of the total integral per sample thrown. As we throw more and more samples at the scene, we get a better and better estimate of the total integral, which explains why pathtracing based integrators start out producing a noisy image but eventually converge to a nice, smooth image if enough rays are traced per pixel.
 
@@ -15,7 +15,7 @@ In a naive renderer, the number of samples traced per pixel is usually just a fi
 
 The following image is the same globe scene as above, but limited to 5120 samples per pixel using bidirectional pathtracing and a fixed sampler. Note that most of the image is reasonable converged, but there is still noise visible in the caustics:
 
-[![Fixed sampling, 5120 samples per pixel, BDPT.]({{site.url}}/content/images/2015/Mar/fixed_globe_bdpt.png)]({{site.url}}/content/images/2015/Mar/fixed_globe_bdpt.png)
+[![Fixed sampling, 5120 samples per pixel, BDPT.]({{site.url}}/content/images/2015/Mar/preview/fixed_globe_bdpt.jpg)]({{site.url}}/content/images/2015/Mar/fixed_globe_bdpt.png)
 
 Since it may be difficult to see the difference between this image and the baseline image on smaller screens, here is a close-up crop of the same caustic area between the two images:
 
@@ -29,15 +29,15 @@ My first attempt at a global approach (the test scene in this post is a globe, b
 
 Using this strategy, I got the following image, which was set to run for a maximum of 5120 samples per pixel but wound up averaging 4500 samples per pixel, or about a 12.1% reduction in samples needed:
 
-[![Adaptive sampling per pixel, average 4500 samples per pixel, BDPT.]({{site.url}}/content/images/2015/Mar/adaptive_perpixel_globe_bdpt.png)]({{site.url}}/content/images/2015/Mar/adaptive_perpixel_globe_bdpt.png)
+[![Adaptive sampling per pixel, average 4500 samples per pixel, BDPT.]({{site.url}}/content/images/2015/Mar/preview/adaptive_perpixel_globe_bdpt.jpg)]({{site.url}}/content/images/2015/Mar/adaptive_perpixel_globe_bdpt.png)
 
 At an initial glance, this looks pretty good! However, as soon as I examined where the actual samples went, I realized that this strategy doesn't work. The following image is a heatmap showing where samples were driven, with brighter areas indicating more samples per pixel:
 
-[![Sampling heatmap for adaptive sampling per pixel. Brighter areas indicate more samples.]({{site.url}}/content/images/2015/Mar/adaptive_perpixel.png)]({{site.url}}/content/images/2015/Mar/adaptive_perpixel.png)
+[![Sampling heatmap for adaptive sampling per pixel. Brighter areas indicate more samples.]({{site.url}}/content/images/2015/Mar/preview/adaptive_perpixel.jpg)]({{site.url}}/content/images/2015/Mar/adaptive_perpixel.png)
 
 Generally, my per-pixel adaptive sampler did correctly identify the caustic areas as needing more samples, but a problem becomes apparent in the backdrop areas: the per-pixel adaptive sampler drove samples at clustered "chunks" evenly, but not evenly *across* different clusters. This behavior happens because while the per-pixel sampler is now taking into account variance across neighbours, it still doesn't have any sort of global sense across the entire image! Instead, the sampler is finding localized pockets where variance seems even across pixels, but those pockets can be quite disconnected from further out areas. While the resultant render looks okay at a glance, clustered variance patterns becomes apparent if the image contrast is increased:
 
-[![Adaptive sampling per pixel, with enhanced contrast. Note the local clustering artifacts.]({{site.url}}/content/images/2015/Mar/adaptive_perpixel_globe_bdpt_highcontrast.png)]({{site.url}}/content/images/2015/Mar/adaptive_perpixel_globe_bdpt_highcontrast.png)
+[![Adaptive sampling per pixel, with enhanced contrast. Note the local clustering artifacts.]({{site.url}}/content/images/2015/Mar/preview/adaptive_perpixel_globe_bdpt_highcontrast.jpg)]({{site.url}}/content/images/2015/Mar/adaptive_perpixel_globe_bdpt_highcontrast.png)
 
 Interestingly, these artifacts are reminiscent of the artifacts that show up in not-fully-converged Metropolis Light Transport renders. This similarity makes sense, since in both cases they arise from uneven localized convergence.
 
@@ -49,7 +49,7 @@ I made a single modification to the paper's algorithm: I added a lower bound to 
 
 Using this per-block adaptive sampler, I got the following image, which again is superficially extremely similar to the fixed sampler result. This render was also set to run for a maximum of 5120 samples, but wound up averaging just 2920 samples per pixel, or about a 42.9% reduction in samples needed:
 
-[![Adaptive sampling per block, average 2920 samples per pixel, BDPT.]({{site.url}}/content/images/2015/Mar/adaptive_perblock_globe_bdpt.png)]({{site.url}}/content/images/2015/Mar/adaptive_perblock_globe_bdpt.png)
+[![Adaptive sampling per block, average 2920 samples per pixel, BDPT.]({{site.url}}/content/images/2015/Mar/preview/adaptive_perblock_globe_bdpt.jpg)]({{site.url}}/content/images/2015/Mar/adaptive_perblock_globe_bdpt.png)
 
 The sample heatmap looks good too! The heatmap shows that the sampler correctly identified the caustic and highlight areas as needing more samples, and doesn't have clustering issues in areas that needed fewer samples:
 
@@ -57,7 +57,7 @@ The sample heatmap looks good too! The heatmap shows that the sampler correctly 
 
 Boosting the image contrast shows that the image is free of local clustering artifacts and noise is even across the entire image, which is what we would expect:
 
-[![Adaptive sampling per block, with enhanced contrast. Note the even noise spread and lack of local clustering artifacts.]({{site.url}}/content/images/2015/Mar/adaptive_perblock_globe_bdpt_highcontrast.png)]({{site.url}}/content/images/2015/Mar/adaptive_perblock_globe_bdpt_highcontrast.png)
+[![Adaptive sampling per block, with enhanced contrast. Note the even noise spread and lack of local clustering artifacts.]({{site.url}}/content/images/2015/Mar/preview/adaptive_perblock_globe_bdpt_highcontrast.jpg)]({{site.url}}/content/images/2015/Mar/adaptive_perblock_globe_bdpt_highcontrast.png)
 
 Looking at the same 500% crop area as earlier, the adaptive per-block and fixed sampling renders are indistinguishable:
 

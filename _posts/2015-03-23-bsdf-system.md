@@ -9,7 +9,7 @@ Takua a0.5's BSDF system was particularly interesting to build, especially becau
 
 First, here's a still-life sort of render showcasing a number of models with a number of interesting materials, all using Takua a0.5's BSDF system and rendered using my VCM integrator. All of the renders in this post are rendered either using my BDPT integrator or my VCM integrator.
 
-[![Still-life scene with a number of interesting, complex materials created using Takua a0.5's BSDF system. The chess pieces and notebooks make use of instancing. Rendered in Takua a0.5 using VCM.]({{site.url}}/content/images/2015/Mar/still_life.png)]({{site.url}}/content/images/2015/Mar/still_life.png)
+[![Still-life scene with a number of interesting, complex materials created using Takua a0.5's BSDF system. The chess pieces and notebooks make use of instancing. Rendered in Takua a0.5 using VCM.]({{site.url}}/content/images/2015/Mar/preview/still_life.jpg)]({{site.url}}/content/images/2015/Mar/still_life.png)
 
 BSDFs in Takua a0.5 are designed to support bidirectional evaluation and importance sampling natively. Basically, this means that all BSDFs need to implement five basic functions. These five basic functions are:
 
@@ -25,7 +25,7 @@ Small note: I wrote that these five functions all take in a normal, which is tec
 
 One of the test props I made is the [PBRT book](http://www.pbrt.org/), since I thought rendering the Physically Based Rendering book with a physically based renderer and physically based shading would be amusing. The base diffuse color is driven by a texture map, and the interesting rippled and variation in the glossiness of the book cover comes from driving additional gloss and specular properties with more texture maps.
 
-[![Physically Based Rendering book, rendered with my physically based renderer. Note the texture-driven gloss and specular properties. Rendered using BDPT.]({{site.url}}/content/images/2015/Mar/pbrt.png)]({{site.url}}/content/images/2015/Mar/pbrt.png)
+[![Physically Based Rendering book, rendered with my physically based renderer. Note the texture-driven gloss and specular properties. Rendered using BDPT.]({{site.url}}/content/images/2015/Mar/preview/pbrt.jpg)]({{site.url}}/content/images/2015/Mar/pbrt.png)
 
 In order to be physically correct, BSDFs should also fulfill the following three properties:
 
@@ -37,25 +37,25 @@ At the moment, my base BSDFs are not actually the best physically based BSDFs in
 
 Another one of my test props is a glass chessboard, where half of the pieces and board squares are using frosted glass. Needless to say, this scene is very difficult to render using unidirectional pathtracing. I only have one model of each chess piece type, and all of the pieces on the board are instances with varying materials per instance.
 
-[![Chessboard with ground glass squares and clear glass squares. Rendered using BDPT.]({{site.url}}/content/images/2015/Mar/chessboard_0.png)]({{site.url}}/content/images/2015/Mar/chessboard_0.png)
+[![Chessboard with ground glass squares and clear glass squares. Rendered using BDPT.]({{site.url}}/content/images/2015/Mar/preview/chessboard_0.jpg)]({{site.url}}/content/images/2015/Mar/chessboard_0.png)
 
-[![Chessboard with ground glass and clear glass pieces. Rendered using BDPT.]({{site.url}}/content/images/2015/Mar/chessboard_1.png)]({{site.url}}/content/images/2015/Mar/chessboard_1.png)
+[![Chessboard with ground glass and clear glass pieces. Rendered using BDPT.]({{site.url}}/content/images/2015/Mar/preview/chessboard_1.jpg)]({{site.url}}/content/images/2015/Mar/chessboard_1.png)
 
 Another interesting use of modular BSDFs and embedding BSDFs inside of other BSDFs is in implementing bump mapping. Takua a0.5 implements bump mapping as a simple BSDF wrapper that calculates the bump mapped normal and passes that normal into whatever the underlying BSDF is. This approach allows for any BSDF to have a bump map, and even allows for applying multiple bump maps to the same piece of geometry. In addition to specifying bump maps as wrapper BSDFs, Takua a0.5 also allows attaching bump maps to individual geometry so that the same BSDF can be reused with a number of different bump maps attached to a number of different geometries, but under the hood this system works exactly the same as the BSDF wrapper bump map.
 
 This notebook prop's leathery surface detail comes entirely from a BSDF wrapper bump map:
 
-[![Notebook with a leathery surface. All surface detail comes from bump mapping. Rendered using BDPT.]({{site.url}}/content/images/2015/Mar/notebook.png)]({{site.url}}/content/images/2015/Mar/notebook.png)
+[![Notebook with a leathery surface. All surface detail comes from bump mapping. Rendered using BDPT.]({{site.url}}/content/images/2015/Mar/preview/notebook.jpg)]({{site.url}}/content/images/2015/Mar/notebook.png)
 
 Finally, one of the most useful and interesting features of Takua a0.5's BSDF system is the layered BSDF. The layered BSDF is a special BSDF that allows arbitrary combining, layering, and mixing between different BSDFs, much like Vray's BlendMtl or Renderman 19/RIS's LM shader system. Any BSDF can be used as a layer in a layered BSDF, including entire other layered BSDF networks. The Takua layered BSDF consists of a base substrate BSDF, and an arbitrary number of coat layers on top of the substrate. Each coat is given a texture-drive weight which determines how much of the final output BSDF is from the current coat layer versus from all of the layers and substrate below the current coat layer. Since the weight for each coat layer must be between 0 and 1, the result layered BSDF maintains physical correctness as long as all of the component BSDFs are also physically correct. Practically, the layered BSDF is implemented so that with each iteration, only one of the component BSDFs is evaluated and sampled, with the particular component BSDF per iteration chosen randomly based on each component BSDF's weighting.
 
 The layered BSDF system is what allows the creation of truly interesting and complex materials, since objects in reality often have complex materials consisting of a number of different scattering event types. For example, a real object may have a diffuse base with a glossy clear coat, but there may also be dust and fingerprints on top of the clear coat contributing to the final appearance. The globe model seen in my adaptive sampling post uses a complex layered BSDF; the base BSDF is ground glass, with the continents layered on top as a perfectly specular mirror BSDF, and then an additional dirt and fingerprints layer on top made up of diffuse and varying glossy BSDFs:
 
-[![Glass globe using Takua's layered BSDF system. The globe has a base ground glass layer, a mirror layer for continents, and a dirt/fingerprints layer for additional detail. Rendered using VCM.]({{site.url}}/content/images/2015/Mar/globe_0.png)]({{site.url}}/content/images/2015/Mar/globe_0.png)
+[![Glass globe using Takua's layered BSDF system. The globe has a base ground glass layer, a mirror layer for continents, and a dirt/fingerprints layer for additional detail. Rendered using VCM.]({{site.url}}/content/images/2015/Mar/preview/globe_0.jpg)]({{site.url}}/content/images/2015/Mar/globe_0.png)
 
 Here's an additional close-up render of the globe that better shows off some of the complex surface detail:
 
-[![Close-up of the globe. Rendered using VCM.]({{site.url}}/content/images/2015/Mar/globe_1.png)]({{site.url}}/content/images/2015/Mar/globe_1.png)
+[![Close-up of the globe. Rendered using VCM.]({{site.url}}/content/images/2015/Mar/preview/globe_1.jpg)]({{site.url}}/content/images/2015/Mar/globe_1.png)
 
 Going forward, I'm planning on adding a number of better BSDFs to Takua a0.5 (as mentioned before). Since the BSDF system is so modular and extensible, adding new BSDFs should be relatively simple and should require little to no additional work to integrate into the renderer. Because of how I designed BSDF wrappers, any new BSDF I add will automatically work with the bump map BSDF wrapper and the layered BSDF system. I'm also planning on adding interesting effects to the refractive/transmission BSDF, such as absorption based on Beer's law and spectral diffraction.
 

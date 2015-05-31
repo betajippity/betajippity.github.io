@@ -9,13 +9,13 @@ A key tool introduced by Veach as part of his bidirectional pathtracing formulat
 
 The following image is a recreation of the test scene used in the Veach thesis to demonstrate MIS. The scene consists of four glossy bars going from less glossy at the top to more glossy at the bottom, and four sphere lights of increasing size. The smallest sphere light has the highest emission intensity, and the largest sphere light has the lowest emission. I modified the scene to add in a large rectangular area light off camera on each side of the scene, and I added an additional bar to the bottom of the scene with gloss driven by a texture map:
 
-[![Recreation of the Veach MIS test scene. Rendered in Takua a0.5 using BDPT.]({{site.url}}/content/images/2015/Feb/veach.bdpt.png)]({{site.url}}/content/images/2015/Feb/veach.bdpt.png)
+[![Recreation of the Veach MIS test scene. Rendered in Takua a0.5 using BDPT.]({{site.url}}/content/images/2015/Feb/preview/veach.bdpt.jpg)]({{site.url}}/content/images/2015/Feb/veach.bdpt.png)
 
 The above scene is difficult to render using any single path sampling technique because of the various combinations of surface glossiness and emitter size/intensity. For large emitter/low gloss combinations, importance sampling by the BSDF tends to result in lower variance. In the case, the reason is that a given random ray direction is more likely to hit the large light than it is to fall within a narrow BSDF lobe, so matching the sample distribution to the BSDF lobe is more efficient. However, for small emitter/high gloss combinations, the reverse is true. If we take the standard Veach scene and sample by only BSDF and then only by light source, we can see how each strategy fails in different cases. Both of these renders would eventually converge if left to render for long enough, but the rate of convergence in difficult areas would be extremely slow:
 
-[![BSDF sampling only, 64 iterations.]({{site.url}}/content/images/2015/Feb/veach_bsdfsample.bdpt.png)]({{site.url}}/content/images/2015/Feb/veach_bsdfsample.bdpt.png)
+[![BSDF sampling only, 64 iterations.]({{site.url}}/content/images/2015/Feb/preview/veach_bsdfsample.bdpt.jpg)]({{site.url}}/content/images/2015/Feb/veach_bsdfsample.bdpt.png)
 
-[![Light sampling only, 64 iterations.]({{site.url}}/content/images/2015/Feb/veach_lightsample.bdpt.png)]({{site.url}}/content/images/2015/Feb/veach_lightsample.bdpt.png)
+[![Light sampling only, 64 iterations.]({{site.url}}/content/images/2015/Feb/preview/veach_lightsample.bdpt.jpg)]({{site.url}}/content/images/2015/Feb/veach_lightsample.bdpt.png)
 
 MIS allows us to combine *m* different sampling strategies to produce a single unbiased estimator by weighting each sampling strategy by its probability distribution function (pdf). Mathematically, this is expressed as:
 
@@ -29,16 +29,16 @@ The power heuristic states that the weight for a given sampling technique should
 
 For the standard Veach MIS demo scene, the best result is obtained by using MIS to combine BSDF and light sampling. The following image is the Veach scene again, this time rendered using MIS with 64 iterations. Note that all highlights are now roughly equally converged and the entire image matches the reference render above, apart from noise:
 
-[![Light and BSDF sampling combined using MIS, 64 iterations.]({{site.url}}/content/images/2015/Feb/veach_bothsample.bdpt.png)]({{site.url}}/content/images/2015/Feb/veach_bothsample.bdpt.png)
+[![Light and BSDF sampling combined using MIS, 64 iterations.]({{site.url}}/content/images/2015/Feb/preview/veach_bothsample.bdpt.jpg)]({{site.url}}/content/images/2015/Feb/veach_bothsample.bdpt.png)
 
 BDPT inherently does not necessarily have an improved convergence rate over vanilla unidirectional pathtracing; BDPT gains its significant edge in convergence rate only once MIS is applied since BDPT's efficiency comes from being able to extract a large number of path sampling techniques out of a single bidirectional path. To demonstrate the impact of MIS on BDPT, I rendered the following images using BDPT with and without MIS. The scene is a standard Cornell Box, but I replaced the back wall with a more complex scratched, glossy surface. The first image is the fully converged ground truth render, followed by with and without MIS:
 
-[![Cornell Box with scratched glossy back wall. Rendered using BDPT with MIS.]({{site.url}}/content/images/2015/Feb/gloss_groundtruth.png)]({{site.url}}/content/images/2015/Feb/gloss_groundtruth.png)
+[![Cornell Box with scratched glossy back wall. Rendered using BDPT with MIS.]({{site.url}}/content/images/2015/Feb/preview/gloss_groundtruth.jpg)]({{site.url}}/content/images/2015/Feb/gloss_groundtruth.png)
 
-[![BDPT with MIS, 16 iterations.]({{site.url}}/content/images/2015/Feb/gloss_mis.bdpt.png)]({{site.url}}/content/images/2015/Feb/gloss_mis.bdpt.png)
+[![BDPT with MIS, 16 iterations.]({{site.url}}/content/images/2015/Feb/preview/gloss_mis.bdpt.jpg)]({{site.url}}/content/images/2015/Feb/gloss_mis.bdpt.png)
 
-[![BDPT without MIS, 16 iterations.]({{site.url}}/content/images/2015/Feb/gloss_nomis.bdpt.png)]({{site.url}}/content/images/2015/Feb/gloss_nomis.bdpt.png)
+[![BDPT without MIS, 16 iterations.]({{site.url}}/content/images/2015/Feb/preview/gloss_nomis.bdpt.jpg)]({{site.url}}/content/images/2015/Feb/gloss_nomis.bdpt.png)
 
-As seen above, the version of BDPT without MIS is significantly less converged. BDPT without MIS will still converge to the correct solution, but in practice can often be only as good as, or worse than unidirectional pathtracing. 
+As seen above, the version of BDPT without MIS is significantly less converged. BDPT without MIS will still converge to the correct solution, but in practice can often be only as good as, or worse than unidirectional pathtracing.
 
 Later on, we'll discuss MIS beyond bidirectional pathtracing. In fact, MIS is the critical component to making VCM possible!

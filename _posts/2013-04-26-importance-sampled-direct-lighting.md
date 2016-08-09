@@ -34,7 +34,7 @@ Takua Render at the moment uses a slightly different approach, for the sake of s
 5. Treat the great circle as a disk and generate uniformly distributed random points on the disk to shoot rays towards.
 6. Weight light samples by the projected solid angle of the disk on the point being lit.
 
-Alternatively, the weighting can simply be based on the normal solid angle instead of the projected solid angle is the random points are chosen with a cosine weighted distribution.
+Alternatively, the weighting can simply be based on the normal solid angle instead of the projected solid angle, since the random points are chosen with a cosine weighted distribution.
 
 The nice thing about this approach is that it allows for importance sampled direct lighting even for shapes that are difficult to sample random points on; effectively, the problem of sampling light sources is abstracted away, at the cost of a slight loss in efficiency since some percentage of rays fired at the disk have to miss the light in order for the weighting to remain unbiased.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Minecraft in Renderman/RIS
+title: Rendering Minecraft in Renderman/RIS
 tags: [Art]
 author: Yining Karl Li
 ---

@@ -10,3 +10,4 @@ permalink: /:year/:month/:title.html
 author: Yining Karl Li
 authorurl: http://www.yiningkarlli.com
 name: Code &#38; Visuals
+markdown: kramdown

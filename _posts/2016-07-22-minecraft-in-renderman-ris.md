@@ -1,10 +1,10 @@
-<!-- ---
+---
 layout: post
 title: Rendering Minecraft in Renderman/RIS
 tags: [Art]
 author: Yining Karl Li
 ---
- -->
+
 The vast majority of my computer graphics time is spent developing renderers (Disney's Hyperion renderer as a professional, Takua Render as a hobbyist). However, I think having experience using renderers as an artist is an important part of knowing what to focus on as a renderer developer. I also think that knowing how a variety of different renderers work and how they are used is important; a lot of artists are used to using several different renderers, and each renderer has its own vocabulary and tried and true workflows and whatnot. Finally, there are a lot of really smart people working on all of the major production renderers out there, and seeing the cool things everyone is doing is fun and interesting! Because of all of these reasons, I like putting some time aside every once in a while to tinker with other renderers. I usually don't write about my art projects that much anymore, but this project was particularly fun and produced some nice looking images, so I thought I'd write it up. As usual, before we dive into the post, here is the final image I made, rendered using Pixar's Photorealistic Renderman 20 in RIS mode:
 
 [![A Minecraft town from the pve.nerd.nu Minecraft server, rendered in Renderman 20/RIS.]({{site.url}}/content/images/2016/Jul/preview/aerial_shot_final_comp.jpg)]({{site.url}}/content/images/2016/Jul/aerial_shot_final_comp.jpg)
@@ -73,10 +73,11 @@ Also, here's a shameless plug for the [Nerd.nu](http://nerd.nu) Minecraft server
 
 A final note on the (lack of) activity on my blog recently: we've been extremely busy at Walt Disney Animation Studios for the past year trying to release both Zootopia and Moana in the same year. Now that we're closing in on the release of Moana, hopefully I'll find time to post more. I have a lot of cool posts about Takua Render in various states of drafting; look for them soon!
 
-[^1]: After publishing this post, Eric Haines wrote to me telling me about a way to get complete volume meshes from Mineways using the [color schemes feature](http://www.realtimerendering.com/erich/minecraft/public/mineways/mineways.html#schemes). Serves me right for not reading the documentation completely before starting! The color schemes feature allows assigning a color and alpha value to each block type; the key part of this feature for my use case is that Mineways will delete blocks with a zero alpha value when exporting. Setting all blocks except for water to have an alpha of zero allows for exporting water as a complete enclosed mesh; the same trick applies for glass or really any other block type.
+[^1]:
+    After publishing this post, Eric Haines wrote to me telling me about a way to get complete volume meshes from Mineways using the [color schemes feature](http://www.realtimerendering.com/erich/minecraft/public/mineways/mineways.html#schemes). Serves me right for not reading the documentation completely before starting! The color schemes feature allows assigning a color and alpha value to each block type; the key part of this feature for my use case is that Mineways will delete blocks with a zero alpha value when exporting. Setting all blocks except for water to have an alpha of zero allows for exporting water as a complete enclosed mesh; the same trick applies for glass or really any other block type.
 
-One of the neat things about this feature is that the Mineways UI draws the map respecting assigned alpha values from the color scheme being used. As a result, setting everything except for water to have a zero alpha produces a cool view that shows only all of the water on the map:
+    One of the neat things about this feature is that the Mineways UI draws the map respecting assigned alpha values from the color scheme being used. As a result, setting everything except for water to have a zero alpha produces a cool view that shows only all of the water on the map:
 
-[![Mineways map view showing only water blocks. This image shows the same exact area of the map as the other Mineways screenshot earlier in the post.]({{site.url}}/content/images/2016/Jul/preview/mineways_water_only.jpg)]({{site.url}}/content/images/2016/Jul/mineways_water_only.jpg)
+    [![Mineways map view showing only water blocks. This image shows the same exact area of the map as the other Mineways screenshot earlier in the post.]({{site.url}}/content/images/2016/Jul/preview/mineways_water_only.jpg)]({{site.url}}/content/images/2016/Jul/mineways_water_only.jpg)
 
-Going forward, I'll definitely be adopting this technique to get water meshes instead of having to use jmc2obj. Being able to handle all of the mesh exporting work in a single program makes for a nicer, more streamlined pipeline. Of course both jmc2obj and Mineways are excellent pieces of software, but in my testing Mineways handles large map sections much better, and I also think that Mineways produces better water meshes compared to jmc2obj, so my pipeline is now entirely centered around Mineways.
+    Going forward, I'll definitely be adopting this technique to get water meshes instead of having to use jmc2obj. Being able to handle all of the mesh exporting work in a single program makes for a nicer, more streamlined pipeline. Of course both jmc2obj and Mineways are excellent pieces of software, but in my testing Mineways handles large map sections much better, and I also think that Mineways produces better water meshes compared to jmc2obj, so my pipeline is now entirely centered around Mineways.

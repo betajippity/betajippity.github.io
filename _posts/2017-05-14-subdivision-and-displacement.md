@@ -46,7 +46,7 @@ This de-duplication even works for instances (I should write a separate post abo
 Once Takua has put together a list of all meshes that require subdivision, meshes are subdivided in parallel.
 For Catmull-Clark subdivision, I rely on [OpenSubdiv](https://graphics.pixar.com/opensubdiv/docs/intro.html) for calculating subdivision [stencil tables](https://graphics.pixar.com/opensubdiv/docs/far_overview.html#far-stenciltable), evaluating the stencils, and final tessellation.
 As far as I can tell, stencil calculation in OpenSubdiv is single threaded, so it can get fairly slow on really heavy meshes.
-Stencil evaluation and final tessellation is super fast though, since OpenSubdiv provides a number of [parallel evaluators](https://graphics.pixar.com/opensubdiv/docs/osd_overview.html#limit-stencil-evaluation) that can run using a variety of backends ranging from TBB on the CPU to CUDA or OpenGl compute shaders on the GPU.
+Stencil evaluation and final tessellation is super fast though, since OpenSubdiv provides a number of [parallel evaluators](https://graphics.pixar.com/opensubdiv/docs/osd_overview.html#limit-stencil-evaluation) that can run using a variety of backends ranging from TBB on the CPU to CUDA or OpenGL compute shaders on the GPU.
 Takua currently relies on OpenSubdiv's TBB evaluator.
 One really neat thing about the stencil implementation in OpenSubdiv is that the stencil calculation is dependent on only the topology of the mesh and not individual primvars, so a single stencil calculation can then be reused multiple times to interpolate many different primvars, such as positions, normals, uvs, and more.
 Currently Takua doesn't support creases; I'm planning on adding crease support later.

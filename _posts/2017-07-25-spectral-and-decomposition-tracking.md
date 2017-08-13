@@ -6,7 +6,7 @@ author: Yining Karl Li
 ---
 
 Some recent work I was part of at Walt Disney Animation Studios has been published in the July 2017 issue of ACM Transactions on Graphics as part of SIGGRAPH 2017!
-The paper is titled "[Spectral and Decomposition Tracking for Rendering Heterogeneous Volumes](http://dl.acm.org/citation.cfm?id=3073665)", and the project was a collaboration between the Hyperion development team at [Walt Disney Animation Studios](http://disneyanimation.com) (WDAS) and the rendering group at [Disney Research Zürich](http://www.disneyresearch.com/research-labs/disney-research-zurich)] (DRZ).
+The paper is titled "[Spectral and Decomposition Tracking for Rendering Heterogeneous Volumes](http://dl.acm.org/citation.cfm?id=3073665)", and the project was a collaboration between the Hyperion development team at [Walt Disney Animation Studios](http://disneyanimation.com) (WDAS) and the rendering group at [Disney Research Zürich](http://www.disneyresearch.com/research-labs/disney-research-zurich) (DRZ).
 From the WDAS side, the authors are [Peter Kutz](http://peterkutz.com) (who was at Penn at the same time as me), [Ralf Habel](https://www.linkedin.com/in/ralf-habel-6a74bb2/), and myself.
 On the DRZ side, our collaborator was [Jan Novák](http://drz.disneyresearch.com/~jnovak/), the head of DRZ's rendering research group.
 

@@ -92,7 +92,7 @@ We were honored to learn that the color explosion figure was chosen to be one of
 
 At one point we also remembered that brute force path-traced subsurface scattering is just volume rendering inside of a bounded surface, which led to the translucent heterogeneous Stanford dragon used in Figure 15 of the paper:
 
-[![Image from paper Figure 15: a subsurface scattering Stanford dragon rendered using spectral and decomposition tracking.]({{site.url}}/content/images/2017/Jul/preview/single_cloud.jpg)]({{site.url}}/content/images/2017/Jul/single_cloud.png)
+[![Image from paper Figure 15: a subsurface scattering heterogeneous Stanford dragon rendered using spectral and decomposition tracking.]({{site.url}}/content/images/2017/Jul/preview/sss_dragon.jpg)]({{site.url}}/content/images/2017/Jul/sss_dragon.png)
 
 We owe an enormous amount of thanks to fellow Hyperion teammate Patrick Kelly, who played an instrumental role in designing and implementing our overall new volume rendering system, and who discussed with us extensively throughout the project.
 Hyperion teammate David Adler also helped out a lot in profiling and instrumenting our code.

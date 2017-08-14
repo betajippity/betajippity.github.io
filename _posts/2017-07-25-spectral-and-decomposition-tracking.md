@@ -104,7 +104,7 @@ Here are a couple of cool stills from the fast forward video:
 
 [![An orange-purple color explosion from our SIGGRAPH Fast Forward video.]({{site.url}}/content/images/2017/Jul/preview/fastforward_02.jpg)]({{site.url}}/content/images/2017/Jul/fastforward_02.png)
 
-[![A blue-yellow color explosion from our SIGGRAPH Fast Forward video.]({{site.url}}/content/images/2017/Jul/preview/fastforward_03.jpg)]({{site.url}}/content/images/2017/Jul/fastforward_03.png)
+[![A green-yellow color explosion from our SIGGRAPH Fast Forward video.]({{site.url}}/content/images/2017/Jul/preview/fastforward_03.jpg)]({{site.url}}/content/images/2017/Jul/fastforward_03.png)
 
 We owe an enormous amount of thanks to fellow Hyperion teammate Patrick Kelly, who played an instrumental role in designing and implementing our overall new volume rendering system, and who discussed with us extensively throughout the project.
 Hyperion teammate David Adler also helped out a lot in profiling and instrumenting our code.

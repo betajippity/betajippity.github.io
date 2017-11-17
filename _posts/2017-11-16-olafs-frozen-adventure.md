@@ -12,7 +12,7 @@ Olaf's Frozen Adventure is a fun little holiday story set in the world of Frozen
 I got an official credit as part of a handful of engineers that did some specific, interesting technology development for Olaf's Frozen Adventure.
 
 Olaf's Frozen Adventure is really really funny; because Olaf is the main character, the entire story takes on much more of a self-aware, at times somewhat absurdist tone.
-The featurette also has a bunch of new songs~ there are six new songs in total, which is somehow pretty close to the original film's count of eight songs, but in a third of the runtime.
+The featurette also has a bunch of new songs- there are six new songs in total, which is somehow pretty close to the original film's count of eight songs, but in a third of the runtime.
 Olaf's Frozen Adventure was originally announced as a TV special, but the wider Walt Disney Company was so happy with the result that they decided to give us a theatrical release instead!
 
 Something I personally find fascinating about Olaf's Frozen Adventure is comparing it visually with the original Frozen.

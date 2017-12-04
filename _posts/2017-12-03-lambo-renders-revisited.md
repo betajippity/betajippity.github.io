@@ -26,6 +26,7 @@ For conductors, the final Fresnel index of refraction for each wavelength of lig
 For the base metallic lobe, most of the color wound up coming from the _k_ component.
 The dielectric lobe is meant to simulate paint on top of a car's metal body; the dielectric lobe is where most of the orange-red color comes from.
 The dielectric lobe is again a GGX microfacet Brdf, but with a dielectric Fresnel model, which has a much simpler index of refraction calculation than the metallic Fresnel model does.
+I should note that Takua's current standard material implementation actually only supports a single primary specular lobe and an additional single clear-coat lobe, so for shaders authored with both a metallic and dielectric component, Takua takes a blend weight between the two components and for each shading evaluation stochastically selects between the two lobes according to the blend weight.
 The clear-coat layer on top has just a slightly amount of extinction to provide just a bit more of the final orange look, but is mostly just clear.
 
 All of the window glass in the render is tinted slightly dark through extinction instead of through a fixed refraction color.

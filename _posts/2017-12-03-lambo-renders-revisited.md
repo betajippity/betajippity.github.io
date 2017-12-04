@@ -87,7 +87,12 @@ The topology of the meshes are pretty strange, since the car model came as a tri
 
 [![Figure 4: Procedural wireframe texture.]({{site.url}}/content/images/2017/Dec/preview/lambo_wireframe.jpg)]({{site.url}}/content/images/2017/Dec/lambo_wireframe.png)
 
+The material in the wireframe render only uses the lambertian diffuse lobe in Takua's standard material; as such, the adaptive sampling heatmap for the wireframe render is interesting to compare to Figure 2.
+Overall the sample distribution is much more even, and areas where diffuse inter-reflections are present got more samples:
+
+[![Figure 5: Adaptive sampling heatmap for Figure 4. Brighter areas indicate more samples. Compare with Figure 2.]({{site.url}}/content/images/2017/Dec/preview/lambo_wireframe_sampleMask.jpg)]({{site.url}}/content/images/2017/Dec/lambo_wireframe_sampleMask.png)
+
 Takua's shading model supports layering different materials through parameter blending, similar to how the [Disney Brdf](https://disney-animation.s3.amazonaws.com/library/s2012_pbs_disney_brdf_notes_v2.pdf) (and, at this point, [most](http://blog.selfshadow.com/publications/s2017-shading-course/walster/s2017_pbs_volumetric_notes.pdf) [other](http://blog.selfshadow.com/publications/s2017-shading-course/dreamworks/s2017_pbs_dreamworks_notes.pdf) [shading](http://blog.selfshadow.com/publications/s2017-shading-course/pixar/s2017_pbs_pixar_notes.pdf) [systems](http://blog.selfshadow.com/publications/s2017-shading-course/imageworks/s2017_pbs_imageworks_slides.pdf)) handles material layering.
 I wanted to make an even more outrageous looking version of the Aventador than the orange-red version, so I used the procedural wireframe texture as a layer mask to drive parameter blending between a black paint and a metallic gold paint:
 
-[![Figure 5: An outrageous Aventador paint scheme using a procedural wireframe texture to blend between black and metallic gold car paint.]({{site.url}}/content/images/2017/Dec/preview/lambo_gold.jpg)]({{site.url}}/content/images/2017/Dec/lambo_gold.png)
+[![Figure 6: An outrageous Aventador paint scheme using a procedural wireframe texture to blend between black and metallic gold car paint.]({{site.url}}/content/images/2017/Dec/preview/lambo_gold.jpg)]({{site.url}}/content/images/2017/Dec/lambo_gold.png)

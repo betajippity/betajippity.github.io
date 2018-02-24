@@ -7,11 +7,11 @@ author: Yining Karl Li
 
 Almost three years ago, I rendered a small [room interior scene](https://blog.yiningkarlli.com/2015/05/complex-room-renders.html) to test an indoor, interior illumination scenario.
 Since then, a lot has changed in Takua, so I thought I'd revisit an interior illumination test with a much more complex, difficult scene.
-I don't have much time to model stuff anymore these days, so instead I bought [Evermotion's Archinteriors Volume 48](https://evermotion.org/shop/show_product/archinteriors-vol-48/14307) collection, which is labeled as Scandinavian interior room scenes and ported one of the scenes to Takua's scene format.
+I don't have much time to model stuff anymore these days, so instead I bought [Evermotion's Archinteriors Volume 48](https://evermotion.org/shop/show_product/archinteriors-vol-48/14307) collection, which is labeled as Scandinavian interior room scenes (I don't know what's particularly Scandinavian about these scenes, but that's what the label said) and ported one of the scenes to Takua's scene format.
 Instead of simply porting the scene as-is, I modified and added various things in the scene to make it feel a bit more customized.
 See if you can spot what they are:
 
-[![Figure 1: A Scandinavian room interior, rendered in Takua a0.8 using VCM.](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/preview/room.cam0.0.jpg)](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/room.cam0.0.png)
+[![Figure 1: A Scandinavian room interior, rendered in Takua a0.8 using VCM.]({{site.url}}/content/images/2018/Feb/preview/room.cam0.0.jpg)]({{site.url}}/content/images/2018/Feb/room.cam0.0.png)
 
 I had a lot of fun adding all of my customizations!
 I brought over some props from the old complex room scene, such as the purple flowers and vase, a few books, and Utah teapot tray, and also added a few new fun models, such as the MacBook Pro in the back and the copy of Physically Based Rendering 3rd Edition in the foreground.
@@ -41,13 +41,13 @@ Figure 3 uses power-weighted light selection with the same spp as Figure 2; the 
 Notably, Figure 3 also took a third of the time compared to Figure 2 for the same sample count; this is because in this scene, sending rays towards the lamp is significantly more expensive due to heavier geometry than sending rays towards the sun, even when rays towards the sun get occluded by the walls.
 Figure 4 uses power-weighted light selection again, but is equal-time to Figure 2 instead of equal-spp; note the significant noise reduction:
 
-[![Figure 2: The same frame from Figure 1, 128 spp using uniform random light selection. Average pixel RMSE compared to Figure 1: 0.30554.](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/preview/room.0.uniform.jpg)](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/room.0.uniform.png)
+[![Figure 2: The same frame from Figure 1, 128 spp using uniform random light selection. Average pixel RMSE compared to Figure 1: 0.30554.]({{site.url}}/content/images/2018/Feb/preview/room.0.uniform.jpg)]({{site.url}}/content/images/2018/Feb/room.0.uniform.png)
 
-[![Figure 3: Power-weighted light selection, with equal spp to Figure 2. Average pixel RMSE compared to Figure 1: 0.255183.](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/preview/room.0.power.equalsample.jpg)](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/room.0.power.equalsample.png)
+[![Figure 3: Power-weighted light selection, with equal spp to Figure 2. Average pixel RMSE compared to Figure 1: 0.255183.]({{site.url}}/content/images/2018/Feb/preview/room.0.power.equalsample.jpg)]({{site.url}}/content/images/2018/Feb/room.0.power.equalsample.png)
 
-[![Figure 4: Power-weighted light selection again, but this time with equal time instead of equal spp to Figure 2. Average pixel RMSE compared to Figure 1: 0.216459.](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/preview/room.0.power.equaltime.jpg)](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/room.0.power.equaltime.png)
+[![Figure 4: Power-weighted light selection again, but this time with equal time instead of equal spp to Figure 2. Average pixel RMSE compared to Figure 1: 0.216459.]({{site.url}}/content/images/2018/Feb/preview/room.0.power.equaltime.jpg)]({{site.url}}/content/images/2018/Feb/room.0.power.equaltime.png)
 
-[![Figure 5: Zoomed crops of Figures 2 through 4. From left to right: uniform random sampling, equal sample power-weighted sampling, and equal time power-weighted sampling.](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/room_sampling_crops.png)](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/room_sampling_crops.png)
+[![Figure 5: Zoomed crops of Figures 2 through 4. From left to right: uniform random sampling, equal sample power-weighted sampling, and equal time power-weighted sampling.]({{site.url}}/content/images/2018/Feb/room_sampling_crops.png)]({{site.url}}/content/images/2018/Feb/room_sampling_crops.png)
 
 However, power-weighted light selection still is not even close to being the most optimal technique possible; this technique completely ignores occlusion and distance, which are extremely important.
 Unfortunately, because occlusion and distance to each light varies for each point in space, creating a light selection strategy that takes occlusion and distance into account is extremely difficult and is a subject of continued research in the field.
@@ -60,17 +60,17 @@ Being able to interactively scout in the same renderer used to final rendering i
 Unfortunately some of the renders below are noisier than I would like, due to the previously mentioned light sampling difficulties.
 All of the following images are rendered using Takua a0.8 with VCM:
 
-[![Figure 6: A MacBook Pro running Takua Render to produce Figure 1.](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/preview/room.cam1.0.jpg)](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/room.cam1.0.png)
+[![Figure 6: A MacBook Pro running Takua Render to produce Figure 1.]({{site.url}}/content/images/2018/Feb/preview/room.cam1.0.jpg)]({{site.url}}/content/images/2018/Feb/room.cam1.0.png)
 
-[![Figure 7: Physically Based Rendering Third Edition sitting on the coffee table.](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/preview/room.cam2.0.jpg)](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/room.cam2.0.png)
+[![Figure 7: Physically Based Rendering Third Edition sitting on the coffee table.]({{site.url}}/content/images/2018/Feb/preview/room.cam2.0.jpg)]({{site.url}}/content/images/2018/Feb/room.cam2.0.png)
 
-[![Figure 8: Closeup of the same purple flowers from the old Complex Room scene.](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/preview/room.cam3.0.jpg)](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/room.cam3.0.png)
+[![Figure 8: Closeup of the same purple flowers from the old Complex Room scene.]({{site.url}}/content/images/2018/Feb/preview/room.cam3.0.jpg)]({{site.url}}/content/images/2018/Feb/room.cam3.0.png)
 
-[![Figure 9: Utah Teapot tea set on the coffee table.](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/preview/room.cam4.0.jpg)](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/room.cam4.0.png)
+[![Figure 9: Utah Teapot tea set on the coffee table.]({{site.url}}/content/images/2018/Feb/preview/room.cam4.0.jpg)]({{site.url}}/content/images/2018/Feb/room.cam4.0.png)
 
-[![Figure 10: A glass globe with mirror-polished metal continents, sitting in the sunlight from the window.](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/preview/room.cam5.0.jpg)](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/room.cam5.0.png)
+[![Figure 10: A glass globe with mirror-polished metal continents, sitting in the sunlight from the window.]({{site.url}}/content/images/2018/Feb/preview/room.cam5.0.jpg)]({{site.url}}/content/images/2018/Feb/room.cam5.0.png)
 
-[![Figure 11: Close-up of two glass and metal mugs filled with tea.](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/preview/room.cam6.0.jpg)](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/room.cam6.0.png)
+[![Figure 11: Close-up of two glass and metal mugs filled with tea.]({{site.url}}/content/images/2018/Feb/preview/room.cam6.0.jpg)]({{site.url}}/content/images/2018/Feb/room.cam6.0.png)
 
 Beyond difficult light sampling, generally complex and difficult light transport with lots of subtle caustics also wound up presenting major challenges in this scene.
 For example, note the subtle caustics on the wall in the upper right hand part of Figure 10; those caustics are actually visibly not fully converged, even though the sample count across Figure 10 was in the thousands of spp!
@@ -84,9 +84,9 @@ When enabled, firefly clamping mode produces two images for a single render: one
 I tried re-rendering Figure 10 using unidirectional pathtracing and a relatively low spp count to produce as many fireflies as I could, for a clearer comparison.
 For this test, I set the firefly threshold to be samples that are at least 250 times brighter than the estimated pixel value up to that sample.
 
-[![Figure 12: The same render as Figure 10, but rendered with a lower sample count and using unidirectional pathtracing instead of VCM to draw out more fireflies.](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/preview/room.cam5.fireflies.jpg)](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/room.cam5.fireflies.png)
+[![Figure 12: The same render as Figure 10, but rendered with a lower sample count and using unidirectional pathtracing instead of VCM to draw out more fireflies.]({{site.url}}/content/images/2018/Feb/preview/room.cam5.fireflies.jpg)]({{site.url}}/content/images/2018/Feb/room.cam5.fireflies.png)
 
-[![Figure 13: From the same run of Takua Render as Figure 12, but the firefly-clamped render output instead of the raw render.](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/preview/room.cam5.nofireflies.jpg)](/Users/karlli/Dropbox/Projects/CodeAndVisuals/betajippity.github.io/content/images/2018/Feb/room.cam5.nofireflies.png)
+[![Figure 13: From the same run of Takua Render as Figure 12, but the firefly-clamped render output instead of the raw render.]({{site.url}}/content/images/2018/Feb/preview/room.cam5.nofireflies.jpg)]({{site.url}}/content/images/2018/Feb/room.cam5.nofireflies.png)
 
 Note how Figure 13 appears to be completely firefly-free compared to Figure 12, and how Figure 13 doesn't have visible caustic noise on the walls compared to Figure 10.
 However, notice how Figure 13 is also missing significant illumination in some areas, such as in the corner of the walls near the floor behind the wooden step ladder, or in the deepest parts of the purple flower bunch.

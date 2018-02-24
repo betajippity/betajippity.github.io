@@ -24,7 +24,7 @@ The skydome is from the noncommercial version of [VizPeople's HDRi v1 collection
 Speaking of the skydome... the main source of illumination in this scene comes from the sun in the skydome, which presented a huge challenge for efficient light sampling.
 Takua has had domelight/environment map importance sampling using CDF inversion sampling for a long time now, which helps a lot, but the indoor nature of this scene still made sampling the sun difficult.
 Sampling the sun in an outdoor scene is fairly efficient since most rays will actually reach the sun, but in indoor scenes, importance sampling the sun becomes inefficient without taking occlusion into account since only rays that actually make it outdoors through windows can reach the sun.
-The best known method currently for handling domelight importance sampling through windows in an indoor scene is [Portal Masked Environment Map Sampling (PMEMS) by Benedikt et al](https://benedikt-bitterli.me/PMEMS.pdf).
+The best known method currently for handling domelight importance sampling through windows in an indoor scene is [Portal Masked Environment Map Sampling (PMEMS) by Bitterli et al](https://benedikt-bitterli.me/PMEMS.pdf).
 I haven't actually implemented PMEMS yet though, so the renders in this post all wound up requiring a huge number of samples per pixel to render; I intend on implementing PMEMS at some point in the near future.
 
 Apart from the skydome, this scene also contains several other practical light sources, such as the lamp's bulb, the MacBook Pro's screen, and the MacBook Pro's glowing Apple logo on the back of the screen (which isn't even visible to camera, but is still enabled since it provides a tiny amount of light against the back wall!).

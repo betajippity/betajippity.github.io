@@ -41,11 +41,11 @@ Figure 3 uses power-weighted light selection with the same spp as Figure 2; the 
 Notably, Figure 3 also took a third of the time compared to Figure 2 for the same sample count; this is because in this scene, sending rays towards the lamp is significantly more expensive due to heavier geometry than sending rays towards the sun, even when rays towards the sun get occluded by the walls.
 Figure 4 uses power-weighted light selection again, but is equal-time to Figure 2 instead of equal-spp; note the significant noise reduction:
 
-[![Figure 2: The same frame from Figure 1, 128 spp using uniform random light selection. Average pixel RMSE compared to Figure 1: 0.30554.]({{site.url}}/content/images/2018/Feb/preview/room.0.uniform.jpg)]({{site.url}}/content/images/2018/Feb/room.0.uniform.png)
+[![Figure 2: The same frame from Figure 1, 128 spp using uniform random light selection. Average pixel RMSE compared to Figure 1: 0.439952.]({{site.url}}/content/images/2018/Feb/preview/room.0.uniform.jpg)]({{site.url}}/content/images/2018/Feb/room.0.uniform.png)
 
-[![Figure 3: Power-weighted light selection, with equal spp to Figure 2. Average pixel RMSE compared to Figure 1: 0.255183.]({{site.url}}/content/images/2018/Feb/preview/room.0.power.equalsample.jpg)]({{site.url}}/content/images/2018/Feb/room.0.power.equalsample.png)
+[![Figure 3: Power-weighted light selection, with equal spp to Figure 2. Average pixel RMSE compared to Figure 1: 0.371441.]({{site.url}}/content/images/2018/Feb/preview/room.0.power.equalsample.jpg)]({{site.url}}/content/images/2018/Feb/room.0.power.equalsample.png)
 
-[![Figure 4: Power-weighted light selection again, but this time with equal time instead of equal spp to Figure 2. Average pixel RMSE compared to Figure 1: 0.216459.]({{site.url}}/content/images/2018/Feb/preview/room.0.power.equaltime.jpg)]({{site.url}}/content/images/2018/Feb/room.0.power.equaltime.png)
+[![Figure 4: Power-weighted light selection again, but this time with equal time instead of equal spp to Figure 2. Average pixel RMSE compared to Figure 1: 0.315465.]({{site.url}}/content/images/2018/Feb/preview/room.0.power.equaltime.jpg)]({{site.url}}/content/images/2018/Feb/room.0.power.equaltime.png)
 
 [![Figure 5: Zoomed crops of Figures 2 through 4. From left to right: uniform random sampling, equal sample power-weighted sampling, and equal time power-weighted sampling.]({{site.url}}/content/images/2018/Feb/room_sampling_crops.png)]({{site.url}}/content/images/2018/Feb/room_sampling_crops.png)
 

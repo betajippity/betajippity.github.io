@@ -37,7 +37,7 @@ I don't know how many times I've had conversations about how well new techniques
 We decided as a studio to answer Matt's appeal, and last year at SIGGRAPH 2017, we announced our intention to release both the Cloud and Moana Island data sets.
 It's taken us nearly a year from announcement to release because the process has been complex, and it was very important to the studio to make sure the release was done properly.
 
-One of the biggest challenges was getting all of the data our of production pipeline and our proprietary data formats into something that the research community can actually parse and make us of.
+One of the biggest challenges was getting all of the data our of production pipeline and our proprietary data formats into something that the research community can actually parse and make use of.
 Matt Pharr was extremely helpful here; over the past year, Matt has added support for [Ptex](http://ptex.us) textures and implemented the [Disney Bsdf](http://blog.selfshadow.com/publications/s2015-shading-course/burley/s2015_pbs_disney_bsdf_notes.pdf) in [PBRT v3](https://github.com/mmp/pbrt-v3).
 Having Ptex and the Disney Bsdf available in PBRT v3 made PBRT v3 the natural target for an initial port to a renderer other than Hyperion, since internally all of our shading uses the Disney Bsdf, and all of our texturing is done through Ptex.
 Our texturing also relies heavily on procedural [SeExpr](https://www.disneyanimation.com/technology/seexpr.html) expressions; all of the expression-drive texturing had to be baked down into Ptex for the final release.

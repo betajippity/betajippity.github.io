@@ -117,3 +117,6 @@ I highly recommend reading all of the documentation carefully if you plan on wor
 Personally, I'm very much looking forward to seeing what the rendering community (and the wider computer graphics community at large) does with these data sets!
 I'm especially excited to see what the realtime world will be able to do with this data; seeing the Moana Island Scene in its full glory in Unreal Engine 4 or Unity would be something indeed, and I think these data sets should provide a fantastic challenge to research into light transport and ray tracing speed as well.
 If you do interesting things with these data sets, please write to us at the email addresses in the provided README files!
+
+Also, Matt Pharr [has written on his blog](http://pharr.org/matt/blog/2018/07/08/moana-island-pbrt-1.html) about how the Moana Island Scene has further driven the development of PBRT v3.
+I highly recommend giving Matt's blog a read!

@@ -16,7 +16,7 @@ Building a tiled mipmapping system that works well with bidirectional path traci
 I'll also review the academic literature on ray differentials and mipmapping with path tracing, and I'll take a look at what several different production renderers do.
 The scene I'll use as an example in this post is a custom recreation of a forest scene from Evermotion's Archmodels 182, rendered entirely using Takua Render (of course):
 
-[![Figure 1: A forest scene in the morning, rendered using Takua Render. 6 GB of textures on disk accessed using a 1 GB in-memory texture cache.]({{site.url}}/content/images/2018/oct/preview/forest.cam0.0.jpg)]({{site.url}}/content/images/2018/oct/forest.cam0.0.jpg)
+[![Figure 1: A forest scene in the morning, rendered using Takua Render. 6 GB of textures on disk accessed using a 1 GB in-memory texture cache.]({{site.url}}/content/images/2018/Oct/preview/forest.cam0.0.jpg)]({{site.url}}/content/images/2018/Oct/forest.cam0.0.jpg)
 
 **Intro: Texture Caches and Mipmaps**
 
@@ -38,7 +38,7 @@ On the left side of Figure 2 is level 1 of this texture (I have omitted level 0 
 On the right side, going from the top on down, are levels 2 through 11 of the mipmap.
 I'll talk about the "tiled" part in a later post.
 
-[![Figure 2: A mipmapped texture. Level 1 of the mipmap is shown on the left, levels 2 through 11 are shown on the right. Level 0 is not shown here. A bit of terminology that is often confusing: the _lowest_ mipmap level is the _highest_ resolution level, while the _highest_ mipmap level is the _lowest_ resolution level.]({{site.url}}/content/images/2018/oct/preview/texture_miplevels.jpg)]({{site.url}}/content/images/2018/oct/texture_miplevels.jpg)
+[![Figure 2: A mipmapped texture. Level 1 of the mipmap is shown on the left, levels 2 through 11 are shown on the right. Level 0 is not shown here. A bit of terminology that is often confusing: the _lowest_ mipmap level is the _highest_ resolution level, while the _highest_ mipmap level is the _lowest_ resolution level.]({{site.url}}/content/images/2018/Oct/preview/texture_miplevels.jpg)]({{site.url}}/content/images/2018/Oct/texture_miplevels.jpg)
 
 Before diving into details, I need to make a major note: I'm not going to write too much about texture filtering for now, mainly because I haven't done much with texture filtering in Takua at all.
 Mipmapping was originally invented as an elegant solution to the problem of expensive texture filtering in rasterized rendering; when a texture had detail that was more high frequency than the distance between neighboring pixels in the framebuffer, aliasing would occur when the texture was sampled.
@@ -375,9 +375,9 @@ The following two images show accessed mipmap level at 1080p and 2160p (4K); not
 The pixel footprints in the higher resolution render are smaller when projected into world space since more pixels have to pack into the same field of view.
 The key below each image shows what mipmap level each color corresponds to:
 
-[![Figure 3: Mipmap levels accessed for the forest scene from Figure 1, rendered at 1920x1080 resolution.]({{site.url}}/content/images/2018/oct/preview/forest_texcache.1080.jpg)]({{site.url}}/content/images/2018/oct/forest_texcache.1080.png)
+[![Figure 3: Mipmap levels accessed for the forest scene from Figure 1, rendered at 1920x1080 resolution.]({{site.url}}/content/images/2018/Oct/preview/forest_texcache.1080.jpg)]({{site.url}}/content/images/2018/Oct/forest_texcache.1080.png)
 
-[![Figure 4: Mipmap levels accessed for the forest scene from Figure 2, rendered at 3840x2160 resolution. Note how since the render is higher resolution and therefore pixel footprints are smaller for the same field of view, lower mipmap levels are accessed more frequently compared to Figure 3.]({{site.url}}/content/images/2018/oct/preview/forest_texcache.4k.jpg)]({{site.url}}/content/images/2018/oct/forest_texcache.4k.png)
+[![Figure 4: Mipmap levels accessed for the forest scene from Figure 2, rendered at 3840x2160 resolution. Note how since the render is higher resolution and therefore pixel footprints are smaller for the same field of view, lower mipmap levels are accessed more frequently compared to Figure 3.]({{site.url}}/content/images/2018/Oct/preview/forest_texcache.4k.jpg)]({{site.url}}/content/images/2018/Oct/forest_texcache.4k.png)
 
 In general, everything looks as we would expect it to look in a working mipmapping system!
 Surface points farther away from the camera are generally accessing higher mipmap levels, and surface points closer to the camera are generally accessing lower mipmap levels.
@@ -390,7 +390,7 @@ In this mode, for a given texture, the renderer splats into an image the lowest 
 The result is sort of a heatmap that can be overlaid on the original texture's lowest mipmap level to see what parts of texture are sampled at what resolution.
 Figure 5 shows one of these heatmaps for the texture on the fallen log in the center of the frame:
 
-[![Figure 5: Mipmap level access patterns for the texture in Figure 2. Colors correspond to mipmap levels using the same key as in Figures 3 and 4. Dark grey indicates areas of the texture that were not sampled at all.]({{site.url}}/content/images/2018/oct/preview/texture_rawaccess.png)]({{site.url}}/content/images/2018/oct/texture_rawaccess.png)
+[![Figure 5: Mipmap level access patterns for the texture in Figure 2. Colors correspond to mipmap levels using the same key as in Figures 3 and 4. Dark grey indicates areas of the texture that were not sampled at all.]({{site.url}}/content/images/2018/Oct/preview/texture_rawaccess.png)]({{site.url}}/content/images/2018/Oct/texture_rawaccess.png)
 
 Just like in Figures 3 and 4, we can see that renders at higher resolutions will tend to access lower mipmap levels more frequently.
 Also, we can see that the vast majority of the texture is never sampled at all; with a tiled texture caching system where tiles are loaded on demand, this means there are a large number of texture tiles that we never bother to load at all.
@@ -407,13 +407,13 @@ Finally, since this has been a very text-heavy post, here are some bonus renders
 When I was setting up this scene for Takua, I tried a number of different lighting conditions and settled on the one in Figure 1 for the main render, but some of the alternatives were interesting too.
 In a future post, I'll show a bunch of interesting renders of this scene from different camera angles, but for now, here is the forest at different times of day:
 
-[![Figure 6: The forest early on an overcast morning.]({{site.url}}/content/images/2018/oct/preview/forest_overcast.0.jpg)]({{site.url}}/content/images/2018/oct/forest_overcast.0.jpg)
+[![Figure 6: The forest early on an overcast morning.]({{site.url}}/content/images/2018/Oct/preview/forest_overcast.0.jpg)]({{site.url}}/content/images/2018/Oct/forest_overcast.0.jpg)
 
-[![Figure 7: The forest later on a sunnier morning.]({{site.url}}/content/images/2018/oct/preview/forest_morning.0.jpg)]({{site.url}}/content/images/2018/oct/forest_morning.0.jpg)
+[![Figure 7: The forest later on a sunnier morning.]({{site.url}}/content/images/2018/Oct/preview/forest_morning.0.jpg)]({{site.url}}/content/images/2018/Oct/forest_morning.0.jpg)
 
-[![Figure 8: The forest at noon on a sunny blue sky day.]({{site.url}}/content/images/2018/oct/preview/forest_noon.0.jpg)]({{site.url}}/content/images/2018/oct/forest_noon.0.jpg)
+[![Figure 8: The forest at noon on a sunny blue sky day.]({{site.url}}/content/images/2018/Oct/preview/forest_noon.0.jpg)]({{site.url}}/content/images/2018/Oct/forest_noon.0.jpg)
 
-[![Figure 9: The forest at sunset.]({{site.url}}/content/images/2018/oct/preview/forest_sunset.0.jpg)]({{site.url}}/content/images/2018/oct/forest_sunset.0.jpg)
+[![Figure 9: The forest at sunset.]({{site.url}}/content/images/2018/Oct/preview/forest_sunset.0.jpg)]({{site.url}}/content/images/2018/Oct/forest_sunset.0.jpg)
 
 **References**
 

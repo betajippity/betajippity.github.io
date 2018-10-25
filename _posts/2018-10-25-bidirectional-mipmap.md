@@ -7,7 +7,7 @@ author: Yining Karl Li
 
 One major feature that differentiates production-capable renderers from hobby or research renderers is a texture caching system.
 A well-implemented texture caching system is what allows a production renderer to render scenes with potentially many TBs of textures, but in a reasonable footprint that fits in a few dozen or a hundred-ish GB of RAM.
-Pretty much very production renderer today has a robust texture caching system; Arnold famously derives a significant amount of performance from an extremely efficient texture cache implementation, and Vray/Corona/Renderman/Hyperion/etc. all have their own, similarly efficient systems.
+Pretty much every production renderer today has a robust texture caching system; Arnold famously derives a significant amount of performance from an extremely efficient texture cache implementation, and Vray/Corona/Renderman/Hyperion/etc. all have their own, similarly efficient systems.
 
 In this post and the next few posts, I'll write about how I implemented a tiled, mipmapped texture caching system in my hobby renderer, Takua Render.
 I'll also discuss some of the interesting challenges I ran into along the way.

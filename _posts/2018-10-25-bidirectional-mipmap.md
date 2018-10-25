@@ -38,7 +38,7 @@ On the left side of Figure 2 is level 1 of this texture (I have omitted level 0 
 On the right side, going from the top on down, are levels 2 through 11 of the mipmap.
 I'll talk about the "tiled" part in a later post.
 
-[![Figure 2: A mipmapped texture. Level 1 of the mipmap is shown on the left, levels 2 through 11 are shown on the right. Level 0 is not shown here. A bit of terminology that is often confusing: the _lowest_ mipmap level is the _highest_ resolution level, while the _highest_ mipmap level is the _lowest_ resolution level.]({{site.url}}/content/images/2018/Oct/preview/texture_miplevels.jpg)]({{site.url}}/content/images/2018/Oct/texture_miplevels.jpg)
+[![Figure 2: A mipmapped texture. Level 1 of the mipmap is shown on the left, levels 2 through 11 are shown on the right. Level 0 is not shown here. A bit of terminology that is often confusing: the lowest mipmap level is the highest resolution level, while the highest mipmap level is the lowest resolution level.]({{site.url}}/content/images/2018/Oct/preview/texture_miplevels.jpg)]({{site.url}}/content/images/2018/Oct/texture_miplevels.jpg)
 
 Before diving into details, I need to make a major note: I'm not going to write too much about texture filtering for now, mainly because I haven't done much with texture filtering in Takua at all.
 Mipmapping was originally invented as an elegant solution to the problem of expensive texture filtering in rasterized rendering; when a texture had detail that was more high frequency than the distance between neighboring pixels in the framebuffer, aliasing would occur when the texture was sampled.

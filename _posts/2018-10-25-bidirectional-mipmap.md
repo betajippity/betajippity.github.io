@@ -245,12 +245,14 @@ The covariance-tracing based approach differs from path differentials in two key
 While both approaches operate in path space, path differentials are much more expensive to compute than the covariance-tracing based technique; path differential complexity scales quadratically with path length, while covariance tracing only ever carries a single covariance matrix along a path for a given effect.
 Also, path differentials can only be generated starting from the camera, whereas covariance tracing works from the camera and the light; in the next section, we'll talk about why this difference is critically important.
 
-While covariance tracing based techniques have a lot of promise, unfortunately, covariance tracing currently has some drawbacks that makes practical implementation in a production rendering context difficult.
-The most important drawback is that covariance tracing has particular difficulty with handling high geometric complexity.
-Covariance tracing requires a voxelized version of the scene for storing local occlusion covariance information, and covariance estimates can degrade severely if the occlusion covariance grid is not high resolution enough to capture small geometric details.
-For huge production scale scenes, geometric complexity requirements quickly make covariance tracing either too slow due to huge occlusion grids, or too degraded in quality due to insufficiently large occlusion grids.
+Covariance tracing based techniques have a lot of promise, and are the best known approach to date for for selecting filter footprints along a path.
+The original covariance tracing paper had some difficulty with handling high geometric complexity; covariance tracing requires a voxelized version of the scene for storing local occlusion covariance information, and covariance estimates can degrade severely if the occlusion covariance grid is not high resolution enough to capture small geometric details.
+For huge production scale scenes, geometric complexity requirements can make covariance tracing either slow due to huge occlusion grids, or degraded in quality due to insufficiently large occlusion grids.
+However, the voxelization step is not as much of a barrier to practicality as it may initially seem.
+For covariance tracing based filtering, visibility can be neglected, so the entire scene voxelization step can be skipped; Belcour [(2017)](https://dl.acm.org/citation.cfm?id=2487239) demonstrates how.
+Since covariance tracing based filtering can be used with the same assumptions and data as ray differentials but is both superior in quality and more generalizable than ray differentials, I would not be surprised to see more renderers adopt this technique over time.
 
-Instead of using any of the above techniques, pretty much all production renderers today use various ad-hoc methods for tracking ray widths for secondary rays.
+As of present, however, instead of using any of the above techniques, pretty much all production renderers today use various ad-hoc methods for tracking ray widths for secondary rays.
 SPI Arnold tracks accumulated roughness values encountered by a ray: if a ray either encounters a diffuse event or reaches a sufficiently high accumulated roughness value, SPI Arnold automatically goes to basically the highest available MIP level [(Kulla et al. 2018)](https://dl.acm.org/citation.cfm?id=3180495).
 This scheme produces very aggressive texture filtering, but in turn provides excellent texture access patterns.
 Solid Angle Arnold similarly uses an ad-hoc microfacet-inspired heuristic for secondary rays [(Georgiev et al. 2018)](https://dl.acm.org/citation.cfm?id=3182160) .
@@ -398,6 +400,9 @@ In cases like Figure 5, not loading unused tiles provides enormous memory saving
 
 So far using a camera-based approach to mipmap level selection combined with just point sampling at each texture sample has held up very well in Takua!
 In fact, the [Scandinavian Room](https://blog.yiningkarlli.com/2018/02/scandinavian-room-scene.html) scene from earlier this year was rendered using the mipmap approach described in this post as well.
+Long term, I would like to spend more time looking in to (and perhaps implementing) a covariance tracing based approach.
+While Takua currently gets by with just point sampling, filtering becomes much more important for other effects, such as glinty microfacet materials, and covariance tracing based filtering seems to be the best currently known solution for these cases.
+
 In an upcoming post, I'm aiming to write about how Takua's texture caching system works in conjunction with the mipmapping system described in this post.
 As mentioned earlier, I'm also planning a (hopefully) short-ish post about supporting multiple uv sets, and how that impacts a mipmapping and texture caching system.
 

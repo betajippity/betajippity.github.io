@@ -407,6 +407,7 @@ I don't have anything implemented to handle this failure case right now.
 One possible solution I've thought about is to initially trace a set of rays from the camera using traditional ray differential propogation for specular objects, and cache the resultant mipmap levels in the scene.
 Then, during the actual renders, the renderer could compare the camera-based metric from the nearest N cached metrics to infer if a lower mipmap level is needed than what the camera-based metric produces.
 However, such a system would add significant cost to the mipmap level selection logic, and there are a number of implementation complications to consider.
+I do wonder how Manuka handles the "lens in front of a camera" case as well, since the shade-before-hit paradigm also fails on this scenario for the same reasons.
 
 Long term, I would like to spend more time looking in to (and perhaps implementing) a covariance tracing based approach.
 While Takua currently gets by with just point sampling, filtering becomes much more important for other effects, such as glinty microfacet materials, and covariance tracing based filtering seems to be the best currently known solution for these cases.

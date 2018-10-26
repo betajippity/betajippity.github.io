@@ -337,6 +337,7 @@ Takua uses the above approach for all path types, including light paths in the v
 Since the mip level selection is based entirely on distance-to-camera, as far as the light transport integrators are concerned, their view of the world is entirely consistent.
 As a result, Takua is able to sidestep the light path ray differential problem in much the same way that a shade-before-hit architecture is able to.
 There are some particular implementation details that are slightly complicated by Takua having support for multiple uv sets per mesh, but I'll write about multiple uv sets in a later post.
+Also, there is one notable failure scenario, which I'll discuss more in the results section.
 
 **Results**
 
@@ -400,6 +401,13 @@ In cases like Figure 5, not loading unused tiles provides enormous memory saving
 
 So far using a camera-based approach to mipmap level selection combined with just point sampling at each texture sample has held up very well in Takua!
 In fact, the [Scandinavian Room](https://blog.yiningkarlli.com/2018/02/scandinavian-room-scene.html) scene from earlier this year was rendered using the mipmap approach described in this post as well.
+There is, however, a relatively simple type of scene that Takua's camera-based approach fails badly at handling: refraction near the camera.
+If a lens is placed directly in front of the camera that significantly magnifies part of the scene, a purely world-space metric for filter footprints can result in choosing mipmap levels that are too high, which translates to visible texture blurring or pixelation.
+I don't have anything implemented to handle this failure case right now.
+One possible solution I've thought about is to initially trace a set of rays from the camera using traditional ray differential propogation for specular objects, and cache the resultant mipmap levels in the scene.
+Then, during the actual renders, the renderer could compare the camera-based metric from the nearest N cached metrics to infer if a lower mipmap level is needed than what the camera-based metric produces.
+However, such a system would add significant cost to the mipmap level selection logic, and there are a number of implementation complications to consider.
+
 Long term, I would like to spend more time looking in to (and perhaps implementing) a covariance tracing based approach.
 While Takua currently gets by with just point sampling, filtering becomes much more important for other effects, such as glinty microfacet materials, and covariance tracing based filtering seems to be the best currently known solution for these cases.
 

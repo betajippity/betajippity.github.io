@@ -216,7 +216,7 @@ The ray derivative approach to mipmap level selection is basically the standard 
 PBRT [(Pharr et al. 2016)](http://pbrt.org), Mitsuba [(Jakob 2010)](http://www.mitsuba-renderer.org/), and Solid Angle's version of Arnold [(Georgiev et al. 2018)](https://dl.acm.org/citation.cfm?id=3182160) all use ray differential systems based on this approach for camera rays.
 Renderman [(Christensen et al. 2018)](https://dl.acm.org/citation.cfm?id=3182162) uses a simplified version of ray differentials that only tracks two floats per ray, instead of the four vectors needed to represent a full ray differential.
 Renderman tracks a width at each ray's origin, and a spread value representing the linear rate of change of the ray width over a unit distance.
-This approach does not encode as much information as the full ray derivative approach, but nonetheless ends up heing sufficient since in a path tracer, every pixel essentially ends up being supersampled.
+This approach does not encode as much information as the full ray derivative approach, but nonetheless ends up being sufficient since in a path tracer, every pixel essentially ends up being supersampled.
 Hyperion [(Burley et al. 2018)](https://dl.acm.org/citation.cfm?id=3182159) uses a similarly simplified scheme.
 
 A brief side note: being able to calculate the differential for surface normals with respect to screen space is useful for bump mapping, among other things, and the calculation is directly analogous to the pseudocode above for calculateDifferentialSurfaceForTriangle() and calculateScreenSpaceDifferential(), just with surface normals substituted in for surface positions.
@@ -324,7 +324,7 @@ The approach I arrived at is to drive mip level selection based on only a world-
 This approach is... not even remotely novel; in a way, this approach is probably the most obvious solution of all, but it took me a long time and a circuitous path to arrive at for some reason.
 Here's the high-level overview of how I implemented a camera-based mip level selection technique:
 
-1. At render startup time, calculate a ray differential for each pixel in the camera's image plane. The goal is to find the narrowest differential in each screen space dimension x and y. Store this piece of informatino for later.
+1. At render startup time, calculate a ray differential for each pixel in the camera's image plane. The goal is to find the narrowest differential in each screen space dimension x and y. Store this piece of information for later.
 2. At each ray-surface intersection point, calculate the differential surface.
 3. Create a 'fake' ray going from the camera's origin position to the current intersection point, with a ray differential equal to the minimum differential in each direction found in step 1.
 4. Calculate dudx/dudy and dvdx/dvdy using the usual method presented above, but using the fake ray from step 3 instead of the actual ray.

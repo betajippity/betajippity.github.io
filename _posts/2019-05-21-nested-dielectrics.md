@@ -233,9 +233,9 @@ I also had to modify the scene so that the liquid overlaps the glass slightly; p
 One of the neat features of this scene are the cracks modeled _inside_ of the ice cubes; the cracks are non-manifold geometry.
 To render them correctly, I applied a shader with glossy refraction to the crack geometry but did not set a priority value for them; this works correctly because the cracks, being non-manifold, don't have a concept of inside or outside anyway, so they should not participate in any interior list considerations.
 
-[![Figure 7: Cranberry juice pouring into a glass with ice cubes, rendered using Takua's priority-based nested dielectrics. The scene is from [Benedikt Bitterli](https://benedikt-bitterli.me)'s rendering resources page [(Bitterli 2016)](https://benedikt-bitterli.me/resources/).]({{site.url}}/content/images/2019/May/waterpour.cam0.0.png)]({{site.url}}/content/images/2019/May/waterpour.cam0.0.jpg)
+[![Figure 7: Cranberry juice pouring into a glass with ice cubes, rendered using Takua's priority-based nested dielectrics. The scene is from Benedikt Bitterli's rendering resources page.]({{site.url}}/content/images/2019/May/waterpour.cam0.0.png)]({{site.url}}/content/images/2019/May/waterpour.cam0.0.jpg)
 
-[![Figure 8: A different camera angle of the scene from Figure 7. The scene is from [Benedikt Bitterli](https://benedikt-bitterli.me)'s rendering resources page [(Bitterli 2016)](https://benedikt-bitterli.me/resources/).]({{site.url}}/content/images/2019/May/waterpour.cam1.0.png)]({{site.url}}/content/images/2019/May/waterpour.cam1.0.jpg)
+[![Figure 8: A different camera angle of the scene from Figure 7. The scene is from Benedikt Bitterli's rendering resources page.]({{site.url}}/content/images/2019/May/waterpour.cam1.0.png)]({{site.url}}/content/images/2019/May/waterpour.cam1.0.jpg)
 
 **References**
 

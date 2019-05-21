@@ -9,7 +9,7 @@ A few years ago, I wrote [a post about attenuated transmission](https://blog.yin
 What I called "deep attenuation" in that post is, in its essence, just pure interface tracking using a stack.
 This post is meant as a revisit and update of that post; I'll talk about the problems with the ad-hoc pure interface tracking technique I came up with in that previous post and discuss the proper priority-based nested dielectric technique [(Schmidt and Budge 2002)](https://www.tandfonline.com/doi/abs/10.1080/10867651.2002.10487555) that Takua uses today.
 
-[![Figure 1: Ice cubes floating in tea inside of a glass teacup, rendered in Takua Render using priority-based nested dielectrics.]({{site.url}}/content/images/2019/May/nested_ice.0.png)]({{site.url}}/content/images/2019/May/nested_ice.0.jpg)
+[![Figure 1: Ice cubes floating in tea inside of a glass teacup, rendered in Takua Render using priority-based nested dielectrics.]({{site.url}}/content/images/2019/May/preview/nested_ice.0.jpg)]({{site.url}}/content/images/2019/May/nested_ice.0.png)
 
 In my 2015 post, I included a diagram showing the overlapping boundaries required to model ice cubes in a drink in a glass, but I didn't actually include a render of that scenario!
 In retrospect, the problems with the 2015 post would have become obvious to me more quickly if I had actually done a render like that diagram.
@@ -19,7 +19,7 @@ In Figure 2, the ice cubes don't properly refract the tea behind and underneath 
 Also, where the surface of the tea interfaces with the glass teacup, there is a odd bright ring.
 Conversely, Figure 1 shows a correct liquid-glass interface without a bright ring, shows proper refraction through the ice cubes, and correctly shows the ice cubes under the liquid surface. 
 
-[![Figure 2: The same scene as in Figure 1, rendered using Takua's old interface tracking system. A number of bizarre physically inaccurate problems are present.]({{site.url}}/content/images/2019/May/nested_ice_old.0.png)]({{site.url}}/content/images/2019/May/nested_ice_old.0.jpg)
+[![Figure 2: The same scene as in Figure 1, rendered using Takua's old interface tracking system. A number of bizarre physically inaccurate problems are present.]({{site.url}}/content/images/2019/May/preview/nested_ice_old.0.jpg)]({{site.url}}/content/images/2019/May/nested_ice_old.0.png)
 
 **Problems with only Interface Tracking**
 
@@ -40,7 +40,7 @@ Even if we could model perfectly coincident surfaces, rendering perfectly coinci
 Figure 3 shows a diagram of how a glass containing water and ice cubes is commonly modeled; in Figure 3, the ambiguous regions are where the water surface is inside of the glass and inside of the ice cube.
 When a ray enters this overlapping region, it is not clear whether we should treat the ray as being inside the water or inside if the glass (or ice)!
 
-[![Figure 3: A diagram of a path through a glass containing water and ice cubes, using only interface tracking without priorities.]({{site.url}}/content/images/2019/May/nested_diagram_old.png)]({{site.url}}/content/images/2019/May/nested_diagram_old.jpg)
+[![Figure 3: A diagram of a path through a glass containing water and ice cubes, using only interface tracking without priorities.]({{site.url}}/content/images/2019/May/nested_diagram_old.png)]({{site.url}}/content/images/2019/May/nested_diagram_old.png)
 
 Using the pure interface tracking algorithm from my old blog post, below is what happens at each path vertex along the path illustrated in Figure 3.
 In this example, we define the empty default to be air.
@@ -89,7 +89,7 @@ Figure 4 shows a simplified version of the tea cup example above, without ice cu
 Also note how when following the rules from my old blog post, event 10 becomes a nonsense event where the incident and transmit IOR are the same.
 The fix for this case is to modify the rules so that when a ray exits a surface, the transmit properties come from the first surface on the stack that isn't the same as the incident surface, but even with this fix, the reflection at event 10 is still physically impossible.
 
-[![Figure 4: Tea inside of a glass cup, rendered using Takua Render's old interface tracking system. Note the bright ring at the liquid-glass surface interface, produced by a physically incorrect double-refraction event.]({{site.url}}/content/images/2019/May/nested_old.0.png)]({{site.url}}/content/images/2019/May/nested_old.0.jpg)
+[![Figure 4: Tea inside of a glass cup, rendered using Takua Render's old interface tracking system. Note the bright ring at the liquid-glass surface interface, produced by a physically incorrect double-refraction event.]({{site.url}}/content/images/2019/May/preview/nested_old.0.jpg)]({{site.url}}/content/images/2019/May/nested_old.0.png)
 
 Really what we want is to model overlapping surfaces, but then in overlapping areas, be able to specify which surface a ray should think it is actually inside of.
 Essentially, this functionality would make overlapping surfaces behave like boolean operators; we would be able to specify that the ice cubes in Figure 3 "cut out" a space from the water they overlap with, and the glass cut out a space from the water as well.
@@ -127,7 +127,7 @@ This way, we can embed non-transmissive objects inside of transmissive objects a
 Figure 5 shows the same scenario as in Figure 3, but now with priority values assigned to each piece of geometry.
 The path depicted in Figure 5 uses the priority-based interior list; dotted lines indicate parts of a surface that produce false hits due to being embedded within a higher-priority surface:
 
-[![Figure 5: The same setup as in Figure 3, but now using priority values. The path is calculated using a priority-based interior list.]({{site.url}}/content/images/2019/May/nested_diagram_new.png)]({{site.url}}/content/images/2019/May/nested_diagram_new.jpg)
+[![Figure 5: The same setup as in Figure 3, but now using priority values. The path is calculated using a priority-based interior list.]({{site.url}}/content/images/2019/May/nested_diagram_new.png)]({{site.url}}/content/images/2019/May/nested_diagram_new.png)
 
 The empty default air surrounding everything is defined as having an infinitely high priority value, which means a lower priority than any surface in the scene.
 Using the priority-based interior list, here are the events that occur at each intersection along the path in Figure 5:
@@ -217,7 +217,7 @@ However, the downside to handling false hits in the traversal system is that it 
 I wound up choosing to implement priority-based nested dielectrics in the integration system in Takua, simply to avoid having to do complex, weird plumbing back into the traversal system.
 Takua uses priority-based nested dielectrics in all integrators, including unidirectional path tracing, BDPT, PPM, and VCM, and also uses the nested dielectrics system to handle transmittance along bidirectional connections through attenuating mediums.
 
-[![Figure 6: The same tea in a glass cup scene as in Figure 4, rendered correctly using Takua's priority-based nested dielectrics implementation.]({{site.url}}/content/images/2019/May/nested_new.0.png)]({{site.url}}/content/images/2019/May/nested_new.0.jpg)
+[![Figure 6: The same tea in a glass cup scene as in Figure 4, rendered correctly using Takua's priority-based nested dielectrics implementation.]({{site.url}}/content/images/2019/May/preview/nested_new.0.jpg)]({{site.url}}/content/images/2019/May/nested_new.0.png)
 
 Even though the technique has "nested _dielectrics_" in the title, this technique is not in principle limited to only dielectrics.
 In Takua, I now use this technique to handle all transmissive cases, including for both dielectric surfaces and for surfaces with diffuse transmission.
@@ -233,9 +233,9 @@ I also had to modify the scene so that the liquid overlaps the glass slightly; p
 One of the neat features of this scene are the cracks modeled _inside_ of the ice cubes; the cracks are non-manifold geometry.
 To render them correctly, I applied a shader with glossy refraction to the crack geometry but did not set a priority value for them; this works correctly because the cracks, being non-manifold, don't have a concept of inside or outside anyway, so they should not participate in any interior list considerations.
 
-[![Figure 7: Cranberry juice pouring into a glass with ice cubes, rendered using Takua's priority-based nested dielectrics. The scene is from Benedikt Bitterli's rendering resources page.]({{site.url}}/content/images/2019/May/waterpour.cam0.0.png)]({{site.url}}/content/images/2019/May/waterpour.cam0.0.jpg)
+[![Figure 7: Cranberry juice pouring into a glass with ice cubes, rendered using Takua's priority-based nested dielectrics. The scene is from Benedikt Bitterli's rendering resources page.]({{site.url}}/content/images/2019/May/preview/waterpour.cam0.0.jpg)]({{site.url}}/content/images/2019/May/waterpour.cam0.0.png)
 
-[![Figure 8: A different camera angle of the scene from Figure 7. The scene is from Benedikt Bitterli's rendering resources page.]({{site.url}}/content/images/2019/May/waterpour.cam1.0.png)]({{site.url}}/content/images/2019/May/waterpour.cam1.0.jpg)
+[![Figure 8: A different camera angle of the scene from Figure 7. The scene is from Benedikt Bitterli's rendering resources page.]({{site.url}}/content/images/2019/May/preview/waterpour.cam1.0.jpg)]({{site.url}}/content/images/2019/May/waterpour.cam1.0.png)
 
 **References**
 

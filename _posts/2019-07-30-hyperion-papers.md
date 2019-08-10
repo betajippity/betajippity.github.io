@@ -297,7 +297,7 @@ This post is meant to be a living document; I'll come back and update it down th
 
 ---
 
-[![Hyperion logo, modeled by Disney Animation artist [Chuck Tappan](https://www.linkedin.com/in/chuck-tappan-40762450/) and rendered in Disney's Hyperion Renderer.]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)
+[![Hyperion logo, modeled by Disney Animation artist Chuck Tappan and rendered in Disney's Hyperion Renderer.]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)
 
 Again, this post is meant to be a living document; any new publications with involvement from the Hyperion team will be added here.
 Of course, the Hyperion team is not the only team at Disney Animation that regularly publishes; for a full list of publications from Disney Animation, see the [official Disney Animation publications page](https://www.disneyanimation.com/technology/publications).

@@ -2,7 +2,7 @@
 layout: post
 title: Hyperion Publications
 tags: [Hyperion]
-author: [Yining Karl Li](https://www.yiningkarlli.com)
+author: Yining Karl Li
 ---
 
 Every year at SIGGRAPH (and sometimes at other points in the year!), members of the Hyperion team inevitably get asked if there is any publicly available information about [Disney's Hyperion Renderer](https://www.disneyanimation.com/technology/innovations/hyperion).

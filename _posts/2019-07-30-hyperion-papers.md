@@ -1,0 +1,318 @@
+---
+layout: post
+title: Hyperion Publications
+tags: [Hyperion]
+author: [Yining Karl Li](https://www.yiningkarlli.com)
+---
+
+Every year at SIGGRAPH (and sometimes at other points in the year!), members of the Hyperion team inevitably get asked if there is any publicly available information about [Disney's Hyperion Renderer](https://www.disneyanimation.com/technology/innovations/hyperion).
+The answer is: yes, there is actually a lot of publicly available information!
+One amazing aspect of working at Walt Disney Animation Studios is the huge amount of support and encouragement we get from our managers and the wider studio for publishing and sharing our work with the wider academic world and industry.
+As part of this sharing, the Hyperion team has had the opportunity to publish a number of papers over the years detailing various interesting techniques used in the renderer.
+
+I think it's very important to mention here that another one of my favorite aspects of working on the Hyperion team is the deep collaboration we get to engage in with our sister rendering team at [Disney Research Studios](https://studios.disneyresearch.com) (formerly known as Disney Research Zürich).
+The vast majority of the Hyperion team's publications are joint works with Disney Research Studios, and I personally think it's fair to say that all of Hyperion's most interesting advanced features are just as much the result of research and work from Disney Research Studios as they are the result of our team's own work.
+Without a doubt, Hyperion, and by extension, our movies, would not be what they are today without Disney Research Studios.
+Of course, we also collaborate closely with our sister rendering teams at [Pixar Animation Studios](https://www.pixar.com) and [Industrial Light & Magic](https://www.ilm.com) as well, and there are numerous examples where collaboration between all of these teams has advanced the state of the art in rendering for the whole industry.
+
+So without further ado, below are all of the papers that the Hyperion team has published or worked on or had involvement with over the years, either by ourselves or with our counterparts at Disney Research Studios, Pixar, ILM, and other research groups.
+For each paper, I'll link to a preprint version, link to the official publisher's version, and link any additional relevant resources for the paper.
+I'll also give the citation information, give a brief one-line description, list the teams involved, and note how the paper is relevant to Hyperion.
+This post is meant to be a living document; I'll come back and update it down the line with future publications. Publications are listed in chronological order.
+
+---
+
+1. **Ptex: Per-Face Texture Mapping for Production Rendering**
+    
+    [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/) and [Dylan Lacewell](https://www.linkedin.com/in/dylanlacewell/). Ptex: Per-face Texture Mapping for Production Rendering. *Computer Graphics Forum (Proceedings of Eurographics Symposium on Rendering 2008)*, 27(4), June 2008.
+
+    * [Preprint Version](https://drive.google.com/open?id=1EdMYHhs4h_ICcSgGfA4GzZoRNI_yVryA)
+    * [Official Publisher's Version](https://doi.org/10.1111/j.1467-8659.2008.01253.x)
+
+    Internal project from Disney Animation. This paper describes per-face textures, a UV-free way of texture mapping. Ptex is the texturing system used in Hyperion for all non-procedural texture maps. Every Disney Animation film made using Hyperion is textured entirely with Ptex.
+
+2. **Physically-Based Shading at Disney**
+
+    [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/). Physically Based Shading at Disney. In *ACM SIGGRAPH 2012 Course Notes: Practical Physically-Based Shading in Film and Game Production*, August 2012.
+
+    * [Preprint Version](https://drive.google.com/open?id=1SwEWQadyMPo5m49kIACoFq2R6q0bZJz7) (Updated compared to official version)
+    * [Official Publisher's Version](https://doi.org/10.1145/2343483.2343493)
+    * [Physically Based Shading SIGGRAPH 2012 Course](https://blog.selfshadow.com/publications/s2012-shading-course/)
+
+    Internal project from Disney Animation. This paper describes the Disney BRDF, a physically principled shading model with a artist-friendly parameterization and layering system. The Disney BRDF is the basis of Hyperion's entire shading system. The Disney BRDF has also gained widespread industry adoption the basis of a wide variety of physically based shading systems, and has influenced the design of shading systems in a number of other production renderers. Every Disney Animation film made using Hyperion is shaded using the Disney BSDF (an extended version of the Disney BRDF, described in a later paper).
+
+3. **Sorted Deferred Shading for Production Path Tracing**
+
+    [Christian Eisenacher](https://www.linkedin.com/in/christian-eisenacher-477ab983/), [Gregory Nichols](https://www.linkedin.com/in/gregory-nichols/), [Andrew Selle](http://www.andyselle.com), and [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/). Sorted Deferred Shading for Production Path Tracing. *Computer Graphics Forum (Proceedings of Eurographics Symposium on Rendering 2013)*, 32(4), June 2013.
+
+    * [Preprint Version](https://drive.google.com/open?id=1zha14cniwtvy8Xkn2Jv9jE5Y1T50VSJS)
+    * [Official Publisher's Version](https://doi.org/10.1111/cgf.12158)
+
+    Internal project from Disney Animation. Won the Best Paper Award at EGSR 2013! This paper describes the sorted deferred shading architecture that is at the very core of Hyperion. Along with the previous two papers in this list, this is one of the foundational papers for Hyperion; every film rendered using Hyperion is rendered using this architecture.
+
+4. **Residual Ratio Tracking for Estimating Attenuation in Participating Media**
+
+    [Jan Novák](http://drz.disneyresearch.com/~jnovak/), [Andrew Selle](http://www.andyselle.com), and [Wojciech Jarosz](https://cs.dartmouth.edu/~wjarosz/). Residual Ratio Tracking for Estimating Attenuation in Participating Media. *ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia 2014)*, 33(6), November 2014.
+
+    * [Preprint Version](https://drive.google.com/open?id=1b1RkW3eFAgM-i6IZ_m0jmQcPfr7cOLEz)
+    * [Official Publisher's Version](https://doi.org/10.1145/2661229.2661292)
+    * [Project Page](http://drz.disneyresearch.com/~jnovak/publications/RRTracking/)
+
+    Joint project between Disney Research Studios and Disney Animation. This paper described a pair of new, complementary techniques for evaluating transmittance in heterogeneous volumes. These two techniques made up the core of Hyperion's first and second generation volume rendering implementations, used from *Big Hero 6* up through *Moana*.
+
+5. **Path-space Motion Estimation and Decomposition for Robust Animation Filtering**
+
+    [Henning Zimmer](https://graphics.ethz.ch/~hzimmer/), [Fabrice Rousselle](https://research.nvidia.com/person/fabrice-rousselle), [Wenzel Jakob](http://rgl.epfl.ch/people/wjakob/), [Oliver Wang](http://zurich.disneyresearch.com/~owang/), [David Adler](https://www.linkedin.com/in/david-adler-5ab7b21/), [Wojciech Jarosz](https://cs.dartmouth.edu/~wjarosz/), [Olga Sorkine-Hornung](http://igl.ethz.ch/people/sorkine/), and [Alexander Sorkine-Hornung](http://www.ahornung.net/). Path-space Motion Estimation and Decomposition for Robust Animation Filtering. *Computer Graphics Forum (Proceedings of Eurographics Symposium on Rendering 2015)*, 34(4), June 2015.
+
+    * [Preprint Version](https://drive.google.com/open?id=19Me6xkA9jBIlydMMgEeC9Uor93MqBhtW)
+    * [Official Publisher's Version](http://doi.org/10.1111/cgf.12685)
+    * [Project Page](https://cs.dartmouth.edu/~wjarosz/publications/zimmer15path.html)
+
+    Joint project between Disney Research Studios, ETH Zürich, and Disney Animation. This paper describes a denoising technique suitable for animated sequences. Not directly used in Hyperion's denoiser, but both inspired by and influential towards Hyperion's first generation denoiser.
+
+6. **Portal-Masked Environment Map Sampling**
+
+    [Benedikt Bitterli](https://benedikt-bitterli.me), [Jan Novák](http://drz.disneyresearch.com/~jnovak/), and [Wojciech Jarosz](https://cs.dartmouth.edu/~wjarosz/). Portal-Masked Environment Map Sampling. *Computer Graphics Forum (Proceedings of Eurographics Symposium on Rendering 2015)*, 34(4), June 2015.
+
+    * [Preprint Version](https://drive.google.com/open?id=14zzjee1MAhUPsQ2vUzPQyZFo-J8Gud7b)
+    * [Official Publisher's Version](http://doi.org/10.1111/cgf.12674)
+    * [Project Page](https://benedikt-bitterli.me/pmems.html)
+
+    Joint project between Disney Research Studios and Disney Animation. This paper describes an efficient method for importance sampling environment maps. This paper was actually derived from the technique Hyperion uses for importance sampling lights with IES profiles, which has been used on all films rendered using Hyperion.
+
+7. **A Practical and Controllable Hair and Fur Model for Production Path Tracing**
+    
+    [Matt Jen-Yuan Chiang](http://dl.acm.org/author_page.cfm?id=99658729701&coll=DL&dl=ACM&trk=0), [Benedikt Bitterli](https://benedikt-bitterli.me), [Chuck Tappan](https://www.linkedin.com/in/chuck-tappan-40762450/), and [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/). A Practical and Controllable Hair and Fur Model for Production Path Tracing. In *ACM SIGGRAPH 2015 Talks*, August 2015.
+
+    * [Preprint Version](https://drive.google.com/open?id=19k6mnZMJXmgDSwy1Hcb7fFdMstALjTto)
+    * [Official Publisher's Version](http://doi.org/10.1145/2775280.2792559)
+
+    Joint project between Disney Research Studios and Disney Animation. This short paper gives an overview of Hyperion's fur and hair model, originally developed for use on Zootopia. A full paper was published later with more details. This fur/hair model is Hyperion's fur/hair model today, used on every film beginning with *Zootopia* to present. 
+
+8. **Extending the Disney BRDF to a BSDF with Integrated Subsurface Scattering**
+    
+    [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/). Extending the Disney BRDF to a BSDF with Integrated Subsurface Scattering. In *ACM SIGGRAPH 2015 Course Notes: Physically Based Shading in Theory and Practice*, August 2015.
+
+    * [Preprint Version](https://drive.google.com/open?id=1KJgmVRZqEI7rCdSSeT6_lZJerTTQ0AiH)
+    * [Official Publisher's Version](https://doi.org/10.1145/2776880.2787670)
+    * [Physically Based Shading SIGGRAPH 2015 Course](https://blog.selfshadow.com/publications/s2015-shading-course)
+
+    Internal project from Disney Animation. This paper describes the full Disney BSDF (sometimes referred to in the wider industry as Disney BRDF v2) used in Hyperion, and also describes a novel subsurface scattering technique called normalized diffusion subsurface scattering. The Disney BSDF is the shading model for everything ever rendered using Hyperion, and normalized diffusion was Hyperion's subsurface model from *Big Hero 6* up through *Moana*.
+
+9. **Approximate Reflectance Profiles for Efficient Subsurface Scattering**
+
+    [Per H Christensen](https://www.seanet.com/~myandper/per.htm) and [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/). Approximate Reflectance Profiles for Efficient Subsurface Scattering. *Pixar Technical Memo*, #15-04, August 2015.
+    
+    * [Preprint Version](https://drive.google.com/open?id=1kJfJId-I5DjhUnHH-Q6fgsrNc7ZW1MIq)
+    * [Official Pixar Research Version and Project Page](http://graphics.pixar.com/library/ApproxBSSRDF/)
+
+    Joint project between Pixar and Disney Animation. This paper presents several useful parameterizations for the normalized diffusion subsurface scattering model presented in the previous paper in this list. These parameterizations are used for the normalized diffusion implementation in [Pixar's RenderMan 21](https://rmanwiki.pixar.com/display/REN/PxrSurface) and later.
+
+10. **Big Hero 6: Into the Portal**
+    
+    [David Hutchins](https://www.linkedin.com/in/david-hutchins-21a9507/), [Olun Riley](https://www.linkedin.com/in/olun-riley/), [Jesse Erickson](https://www.linkedin.com/in/popsopdop/), [Alexey Stomakhin](http://alexey.stomakhin.com), [Ralf Habel](https://www.linkedin.com/in/ralf-habel-6a74bb2/), and [Michael Kaschalk](https://www.linkedin.com/in/michael-kaschalk-49b7683/). Big Hero 6: Into the Portal. In *ACM SIGGRAPH 2015 Talks*, August 2015.
+    
+    * [Preprint Version](https://drive.google.com/open?id=1cCDmWf6pKDaIarDRK0YkARhm5_kQlF4_)
+    * [Official Publisher's Version](https://doi.org/10.1145/2775280.2792521)    
+
+    Internal project from Disney Animation. This short paper describes some interesting volume rendering challenges that Hyperion faced during the production of *Big Hero 6*'s climax sequence, set in a volumetric fractal portal world.
+
+11. **A Practical and Controllable Hair and Fur Model for Production Path Tracing**
+    
+    [Matt Jen-Yuan Chiang](http://dl.acm.org/author_page.cfm?id=99658729701&coll=DL&dl=ACM&trk=0), [Benedikt Bitterli](https://benedikt-bitterli.me), [Chuck Tappan](https://www.linkedin.com/in/chuck-tappan-40762450/), and [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/). A Practical and Controllable Hair and Fur Model for Production Path Tracing. *Computer Graphics Forum (Proceedings of Eurographics 2016)*, 35(2), May 2016.
+    
+    * [Preprint Version](https://drive.google.com/open?id=1cVxBWddi2yClj_A_bca_emRduPJ6GN8Q)
+    * [Official Publisher's Version](https://doi.org/10.1111/cgf.12830)
+    * [Project Page](https://benedikt-bitterli.me/pchfm/)
+    * [Implementation Guide by Matt Pharr](https://www.pbrt.org/hair.pdf)  
+
+    Joint project between Disney Research Studios and Disney Animation. This paper gives an overview of Hyperion's fur and hair model, originally developed for use on *Zootopia*. This fur/hair model is Hyperion's fur/hair model today, used on every film beginning with *Zootopia* to present. This paper is now also implemented in the open source [PBRT v3](https://github.com/mmp/pbrt-v3/blob/master/src/materials/hair.h) renderer, and also serves as the basis of the hair/fur shader in Chaos Group's [V-Ray Next](https://www.chaosgroup.com/blog/v-ray-next-the-science-behind-the-new-hair-shader) renderer.
+
+12. **Subdivision Next-Event Estimation for Path-Traced Subsurface Scattering**
+
+    [David Koerner](https://www.linkedin.com/in/david-koerner-41233611), [Jan Novák](http://drz.disneyresearch.com/~jnovak/), [Peter Kutz](https://www.linkedin.com/in/peterkutz/), [Ralf Habel](https://www.linkedin.com/in/ralf-habel-6a74bb2/), and [Wojciech Jarosz](https://cs.dartmouth.edu/~wjarosz/). Subdivision Next-Event Estimation for Path-Traced Subsurface Scattering. In *Proceedings of EGSR 2016, Experimental Ideas & Implementations*, June 2016.
+    2016-06-24,
+
+    * [Preprint Version](https://drive.google.com/open?id=1iMwNqPr-l-_xTViWqxXYIuP8S_he7t8k)
+    * [Official Publisher's Version](https://doi.org/10.2312/sre.20161214)
+    * [Project Page](http://drz.disneyresearch.com/~jnovak/publications/SNEE/index.html)
+
+    Joint project between Disney Research Studios, University of Stuttgart, Dartmouth College, and Disney Animation. This paper describes a method for accelerating brute force path traced subsurface scattering; this technique was developed during early experimentation in making path traced subsurface scattering practical for production in Hyperion.
+
+13. **Nonlinearly Weighted First-Order Regression for Denoising Monte Carlo Renderings**
+    
+    [Benedikt Bitterli](https://benedikt-bitterli.me), [Fabrice Rousselle](https://research.nvidia.com/person/fabrice-rousselle), [Bochang Moon](http://sglab.kaist.ac.kr/~bcmoon/), [José A. Iglesias-Guitian](http://www.j4lley.com/), [David Adler](https://www.linkedin.com/in/david-adler-5ab7b21/), [Kenny Mitchell](http://www.disneyresearch.com/people/kenny-mitchel/), [Wojciech Jarosz](https://cs.dartmouth.edu/~wjarosz/), and [Jan Novák](http://drz.disneyresearch.com/~jnovak/). Nonlinearly Weighted First-Order Regression for Denoising Monte Carlo Renderings. *Computer Graphics Forum (Proceedings of Eurographics Symposium on Rendering 2016)*, 35(4), July 2016.
+
+    * [Preprint Version](https://drive.google.com/open?id=1cwtHef8gq5m-oKbc2yKDY3jwnbJB1iLQ)
+    * [Official Publisher's Version](https://doi.org/10.1111/cgf.12954)
+    * [Project Page](https://benedikt-bitterli.me/nfor/)
+
+    Joint project between Disney Research Studios, Edinburgh Napier University, Dartmouth College, and Disney Animation. This paper describes a high-quality, stable denoising technique based on a thorough analysis of previous technique. This technique was developed during a larger project to develop a state-of-the-art successor to Hyperion's first generation denoiser.
+
+14. **Practical and Controllable Subsurface Scattering for Production Path Tracing**
+
+    [Matt Jen-Yuan Chiang](http://dl.acm.org/author_page.cfm?id=99658729701&coll=DL&dl=ACM&trk=0), [Peter Kutz](https://www.linkedin.com/in/peterkutz/), and [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/). Practical and Controllable Subsurface Scattering for Production Path Tracing. In *ACM SIGGRAPH 2016 Talks*, July 2016.
+    
+    * [Preprint Version](https://drive.google.com/open?id=1YzdsAbG60dCUkq6xo_HH8nBseILfHfZW)
+    * [Official Publisher's Version](https://doi.org/10.1145/2897839.2927433)
+
+    Internal project from Disney Animation. This short paper describes the novel parameterization and multi-wavelength sampling strategy used to make path traced subsurface scattering practical for production. Both of these are implemented in Hyperion's path traced subsurface scattering system and have been in use on all shows beginning with *Olaf's Frozen Adventure* to present.
+
+15. **Efficient Rendering of Heterogeneous Polydisperse Granular Media**
+
+    [Thomas Müller](https://tom94.net), [Marios Papas](https://graphics.ethz.ch/~mpapas/), [Markus Gross](https://la.disneyresearch.com/people/markus-gross/), [Wojciech Jarosz](https://cs.dartmouth.edu/~wjarosz/), and [Jan Novák](http://drz.disneyresearch.com/~jnovak/). Efficient Rendering of Heterogeneous Polydisperse Granular Media. *ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia 2016)*, 35(6), November 2016.
+    
+    * [Preprint Version](https://drive.google.com/open?id=1qFwr6_JL29uextdtyNurOFQId0CahvVc)
+    * [Official Publisher's Version](https://doi.org/10.1145/2980179.2982429)
+    * [Project Page](https://cs.dartmouth.edu/~wjarosz/publications/muller16efficient.html)
+
+    External project from Disney Research Studios, ETH Zürich, and Dartmouth College, inspired in part by production problems encountered at Disney Animation related to rendering things like sand, snow, etc. This technique uses shell transport functions to accelerate path traced rendering of massive assemblies of grains. [Thomas Müller](https://tom94.net) implemented an experimental version of this technique in Hyperion, along with an interesting extension for applying the shell transport theory to volume rendering.
+
+16. **Practical Path Guiding for Efficient Light-Transport Simulation**
+
+    [Thomas Müller](https://tom94.net), [Markus Gross](https://la.disneyresearch.com/people/markus-gross/), and [Jan Novák](http://drz.disneyresearch.com/~jnovak/). Practical Path Guiding for Efficient Light-Transport Simulation. *Computer Graphics Forum (Proceedings of Eurographics Symposium on Rendering 2017)*, 36(4), July 2017.
+
+    * [Preprint Version](https://drive.google.com/open?id=1xJeK76y7BjWHMHpIL31o08f9eJzytGNU) (Updated compared to official version)
+    * [Official Publisher's Version](https://doi.org/10.1111/cgf.13227)
+    * [Project Page](http://drz.disneyresearch.com/~jnovak/publications/PathGuide/index.html)
+
+    External joint project between Disney Research Studios and ETH Zürich, inspired in part by challenges with handling complex light transport efficiently in Hyperion. Won the Best Paper Award at EGSR 2017! This paper describes a robust, unbiased technique for progressively learning complex indirect illumination in a scene during a render and intelligently guiding paths to better sample difficult indirect illumination effects. Implemented in Hyperion, along with a number of interesting improvements documented in a later paper. In use on *Frozen 2* and future films. 
+
+17. **Kernel-predicting Convolutional Networks for Denoising Monte Carlo Renderings**
+
+    [Steve Bako](http://www.ece.ucsb.edu/~sbako/), [Thijs Vogels](https://tvogels.nl/), [Brian McWilliams](https://www.inf.ethz.ch/personal/mcbrian/), [Mark Meyer](http://graphics.pixar.com/people/mmeyer/), [Jan Novák](http://drz.disneyresearch.com/~jnovak/), [Alex Harvill](https://graphics.pixar.com/library/indexAuthorAlex_Harvill.html), [Pradeep Sen](http://www.ece.ucsb.edu/~psen/), [Tony DeRose](http://graphics.pixar.com/people/derose/), and [Fabrice Rousselle](https://research.nvidia.com/person/fabrice-rousselle). Kernel-predicting Convolutional Networks for Denoising Monte Carlo Renderings. *ACM Transactions on Graphics (Proceedings of SIGGRAPH 2017)*, 36(4), July 2017.
+
+    * [Preprint Version](https://drive.google.com/open?id=18jrs2MPiZ5UUqNiSlrerzzb5JX1ba_zM)
+    * [Official Publisher's Version](https://doi.org/10.1145/3072959.3073708)
+    * [Project Page](http://drz.disneyresearch.com/~jnovak/publications/KPCN/index.html)
+
+    External joint project between University of California Santa Barbara, Disney Research Studios, ETH Zürich, and Pixar, developed as part of the larger effort to develop a successor to Hyperion's first generation denoiser. This paper describes a supervised learning approach for denoising filter kernels using deep convolutional neural networks. This technique is the basis of the modern Disney-Research-developed second generation deep-learning denoiser in use by the rendering teams at Pixar and ILM, and by the Hyperion iteam at Disney Animation.
+
+18. **Production Volume Rendering**
+
+    [Julian Fong](https://www.linkedin.com/in/jfong), [Magnus Wrenninge](http://magnuswrenninge.com), [Christopher Kulla](https://fpsunflower.github.io/ckulla/), and [Ralf Habel](https://www.linkedin.com/in/ralf-habel-6a74bb2/). Production Volume Rendering. In *ACM SIGGRAPH 2017 Courses*, July 2017.
+    
+    * [Preprint Version](https://drive.google.com/file/d/1eFr_4IKzt796Ns4Iv3OjR3ni0Y7QigP5/view?usp=drivesdk) (Updated compared to official version)
+    * [Official Publisher's Version](https://doi.org/10.1145/3084873.3084907)
+    * [Production Volume Rendering SIGGRAPH 2017 Course](https://graphics.pixar.com/library/ProductionVolumeRendering/index.html)
+    
+    Joint publication from Pixar, Sony Pictures Imageworks, and Disney Animation. This course covers volume rendering in modern path tracing renderers, from basic theory all the way to practice. The last chapter details the inner workings of Hyperion's first and second generation transmittance estimation based volume rendering system, used from *Big Hero 6* up through *Moana*.
+
+19. **Spectral and Decomposition Tracking for Rendering Heterogeneous Volumes**
+    
+    [Peter Kutz](https://www.linkedin.com/in/peterkutz/), [Ralf Habel](https://www.linkedin.com/in/ralf-habel-6a74bb2/), [Yining Karl Li](https://www.yiningkarlli.com), and [Jan Novák](http://drz.disneyresearch.com/~jnovak/). Spectral and Decomposition Tracking for Rendering Heterogeneous Volumes. *ACM Transactions on Graphics (Proceedings of SIGGRAPH 2017)*, 36(4), July 2017.
+
+	* [Preprint Version](https://drive.google.com/file/d/198A1h93ZE7SuKEidx7FCwspJkAWqYG7e/view?usp=drivesdk)
+    * [Official Publisher's Version](https://doi.org/10.1145/3072959.3073665)
+    * [Project Page](https://www.yiningkarlli.com/projects/specdecomptracking.html)
+    
+    Joint project between Disney Research Studios and Disney Animation. This paper describes two complementary new null-collision tracking techniques: decomposition tracking and spectral tracking. The paper also introduces to computer graphics an extended integral formulation of null-collision algorithms, originally developed in the field of reactor physics. These two techniques are the basis of Hyperion's modern third generation null-collision tracking based volume rendering system, in use beginning on *Olaf's Frozen Adventure* to present.
+
+20. **The Ocean and Water Pipeline of Disney’s Moana**
+
+    [Sean Palmer](https://www.linkedin.com/in/seanpalmer/), [Jonathan Garcia](https://www.imdb.com/name/nm3376120/), [Sara Drakeley](https://www.linkedin.com/in/sara-drakeley-37290/), [Patrick Kelly](https://www.linkedin.com/in/patrick-kelly-1424b86/), and [Ralf Habel](https://www.linkedin.com/in/ralf-habel-6a74bb2/). The Ocean and Water Pipeline of Disney’s Moana. In *ACM SIGGRAPH 2017 Talks*, July 2017.
+    
+	* [Preprint Version](https://drive.google.com/file/d/1q4dum1dBhKTBK6fDqiIX-Bm9JrppAamm/view?usp=drivesdk)
+    * [Official Publisher's Version](https://doi.org/10.1145/3084363.3085067)
+    
+    Internal project from Disney Animation. This short paper describes the water pipeline developed for *Moana*, including the level set compositing and rendering system that was implemented in Hyperion. This system has since found additional usage on shows since *Moana*.
+
+21. **Recent Advancements in Disney’s Hyperion Renderer**
+
+    [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/), [David Adler](https://www.linkedin.com/in/david-adler-5ab7b21/), [Matt Jen-Yuan Chiang](http://dl.acm.org/author_page.cfm?id=99658729701&coll=DL&dl=ACM&trk=0), [Ralf Habel](https://www.linkedin.com/in/ralf-habel-6a74bb2/), [Patrick Kelly](https://www.linkedin.com/in/patrick-kelly-1424b86/), [Peter Kutz](https://www.linkedin.com/in/peterkutz/), [Yining Karl Li](https://www.yiningkarlli.com), and [Daniel Teece](https://www.linkedin.com/in/daniel-teece-2650358/). Recent Advancements in Disney’s Hyperion Renderer. In *ACM SIGGRAPH 2017 Course Notes: Path Tracing in Production Part 1*, August 2017.
+    
+    * [Preprint Version](https://drive.google.com/file/d/1kFpp_7I8vH8LHsf1Si94pqMkHxwinMSU/view?usp=drivesdk) (Updated compared to official version)
+    * [Official Publisher's Version](https://doi.org/10.1145/3084873.3084904)
+    * [Path Tracing in Production SIGGRAPH 2017 Course](https://jo.dreggn.org/path-tracing-in-production/2017/index.html)
+    
+    Publication from Disney Animation. This paper describes various advancements in Hyperion since *Big Hero 6* up through *Moana*, with a particular focus towards replacing multiple scattering approximations with true, brute-force path-traced solutions for both better artist workflows and improved visual quality.
+
+22. **Denoising with Kernel Prediction and Asymmetric Loss Functions**
+
+    [Thijs Vogels](https://tvogels.nl/), [Fabrice Rousselle](https://research.nvidia.com/person/fabrice-rousselle), [Brian McWilliams](https://www.inf.ethz.ch/personal/mcbrian/), [Gerhard Rothlin](https://la.disneyresearch.com/people/gerhard-rothlin/), [Alex Harvill](https://graphics.pixar.com/library/indexAuthorAlex_Harvill.html), [David Adler](https://www.linkedin.com/in/david-adler-5ab7b21/), [Mark Meyer](http://graphics.pixar.com/people/mmeyer/), and [Jan Novák](http://drz.disneyresearch.com/~jnovak/). Denoising with Kernel Prediction and Asymmetric Loss Functions. *ACM Transactions on Graphics (Proceedings of SIGGRAPH 2018)*, 37(4), August 2017.
+    
+    * [Preprint Version](https://drive.google.com/open?id=1qAu5DTDfxPPCFyGGzyoG4ggnz7877BEB)
+    * [Official Publisher's Version](https://doi.org/10.1145/3197517.3201388)
+    * [Project Page](http://drz.disneyresearch.com/~jnovak/publications/KPAL/index.html)
+
+    Joint project between Disney Research Studios, Pixar, and Disney Animation. This paper describes a variety of improvements and extensions made to the 2017 *Kernel-predicting Convolutional Networks for Denoising Monte Carlo Renderings* paper; collectively, these improvements comprise the modern Disney-Research-developed second generation deep-learning denoiser in use in production at Pixar, ILM, and Disney Animation. At Disney Animation, used experimentally on *Ralph Breaks the Internet* and in full production beginning with *Frozen 2*.
+
+23. **Plausible Iris Caustics and Limbal Arc Rendering**
+
+    [Matt Jen-Yuan Chiang](http://dl.acm.org/author_page.cfm?id=99658729701&coll=DL&dl=ACM&trk=0) and [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/). Plausible Iris Caustics and Limbal Arc Rendering. *ACM SIGGRAPH 2018 Talks*, August 2018.
+
+	* [Preprint Version](https://drive.google.com/open?id=1Wibzqi9JIb4-DvXUyYKVfrbfrhu1bpQs)
+    * [Official Publisher's Version](https://doi.org/10.1145/3214745.3214751)
+
+    Internal project from Disney Animation. This paper describes a technique for rendering realistic, physically based eye caustics using manifold next-event estimation combined with a plausible procedural geometric eye model. This realistic eye model is implemented in Hyperion for use in future unannounced projects.
+
+24. **The Design and Evolution of Disney’s Hyperion Renderer**
+
+    [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/), [David Adler](https://www.linkedin.com/in/david-adler-5ab7b21/), [Matt Jen-Yuan Chiang](http://dl.acm.org/author_page.cfm?id=99658729701&coll=DL&dl=ACM&trk=0), [Hank Driskill](https://www.linkedin.com/in/hank-driskill-1a7140165/), [Ralf Habel](https://www.linkedin.com/in/ralf-habel-6a74bb2/), [Patrick Kelly](https://www.linkedin.com/in/patrick-kelly-1424b86/), [Peter Kutz](https://www.linkedin.com/in/peterkutz/), [Yining Karl Li](https://www.yiningkarlli.com), and [Daniel Teece](https://www.linkedin.com/in/daniel-teece-2650358/). The Design and Evolution of Disney’s Hyperion Renderer. *ACM Transactions on Graphics*, 37(3), August 2018.
+    
+    * [Preprint Version](https://drive.google.com/open?id=1RbRr_rMJ1CIpcGsGWO4iuZKZ76utgMcd)
+    * [Official Publisher's Version](https://doi.org/10.1145/3182159)
+    * [Project Page](https://www.yiningkarlli.com/projects/hyperiondesign.html)
+
+    Publication from Disney Animation. This paper is a systems architecture paper for the entirety of Hyperion. The paper describes the history of Disney's Hyperion Renderer, the internal architecture, various systems such as shading, volumes, many-light sampling, emissive geometry, path simplification, fur rendering, photon-mapped caustics, subsurface scattering, and more. The paper also describes various challenges that had to be overcome for practical production use and artistic controllability. This paper covers everything in Hyperion beginning from *Big Hero 6* up through *Ralph Breaks the Internet*.
+
+25. **Denoising Deep Monte Carlo Renderings**
+
+    [Delio Vicini](https://rgl.epfl.ch/people/dvicini), [David Adler](https://www.linkedin.com/in/david-adler-5ab7b21/), [Jan Novák](http://drz.disneyresearch.com/~jnovak/), [Fabrice Rousselle](https://research.nvidia.com/person/fabrice-rousselle), and [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/). Denoising Deep Monte Carlo Renderings. *Computer Graphics Forum*, 38(1), February 2019.
+
+    * [Preprint Version](https://drive.google.com/file/d/1n904HlzXQx_ahiRruyCh9KTQjCLZ9lDM/view?usp=sharing)
+    * [Official Publisher's Version](https://doi.org/10.1111/cgf.13533)
+    * [Project Page](http://drz.disneyresearch.com/~jnovak/publications/DeepZDenoising/index.html)
+
+    Joint project between Disney Research Studios and Disney Animation. This paper presents a technique for denoising deep (meaning images with multiple depth bins per pixel) renders, for use with deep-compositing workflows. This technique was developed as part of general denoising research from Disney Research Studios and the Hyperion team.
+
+26. **Practical Path Guiding in Production**
+
+    [Thomas Müller](https://tom94.net). Practical Path Guiding in Production. In *ACM SIGGRAPH 2019 Course Notes: Path Guiding in Production*, July 2019.
+    
+    * [Preprint Version](https://drive.google.com/open?id=1Dxa2Wm4j2Hv40KIUK3K_yg_v-acOU9rt)
+    * [Official Publisher's Version](https://doi.org/10.1145/3305366.3328091)
+    * [Path Guiding in Production SIGGRAPH 2019 Course](https://jo.dreggn.org/path-tracing-in-production/2019/index.html)
+
+    Joint project between Disney Research Studios and Disney Animation. This paper presents a number of improvements and extensions made to *Practical Path Guiding* developed by in Hyperion by [Thomas Müller](https://tom94.net) and the Hyperion team. In use in production on *Frozen 2*.
+
+27. **Machine-Learning Denoising in Feature Film Production**
+
+    [Henrik Dahlberg](https://henrikdahlberg.github.io), [David Adler](https://www.linkedin.com/in/david-adler-5ab7b21/), and [Jeremy Newlin](https://www.linkedin.com/in/jeremy-newlin-07a87946/). Machine-Learning Denoising in Feature Film Production. In *ACM SIGGRAPH 2019 Talks*, July 2019.
+    
+    * [Preprint Version](https://drive.google.com/open?id=1CdUC9caWNSShHNvIj4kge7BWQczXWr79)
+    * [Official Publisher's Version](https://doi.org/10.1145/3306307.3328150)
+
+    Joint publication from Pixar, Industrial Light & Magic, and Disney Animation. Describes how the modern Disney-Research-developed second generation deep-learning denoiser was deployed into production at Pixar, ILM, and Disney Animation.
+
+28. **Taming the Shadow Terminator**
+
+    [Matt Jen-Yuan Chiang](http://dl.acm.org/author_page.cfm?id=99658729701&coll=DL&dl=ACM&trk=0), [Yining Karl Li](https://www.yiningkarlli.com), and [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/). Taming the Shadow Terminator. In *ACM SIGGRAPH 2019 Talks*, August 2019.
+    
+    * [Preprint Version](https://drive.google.com/open?id=1Yb6GUP3pIuNiH9Xgq2P0L99V3JAQ7emM) (Updated compared to official version)
+    * [Official Publisher's Version](https://doi.org/10.1145/3306307.3328172)
+    * [Project Page](https://www.yiningkarlli.com/projects/shadowterminator.html)
+
+    Internal project from Disney Animation. This short paper describes a solution to the long-standing "shadow terminator" problem associated with using shading normals. The technique in this paper is implemented in Hyperion and is in use in production on *Frozen 2*.
+
+---
+
+[![Hyperion logo, modeled by Disney Animation artist [Chuck Tappan](https://www.linkedin.com/in/chuck-tappan-40762450/) and rendered in Disney's Hyperion Renderer.]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)
+
+Again, this post is meant to be a living document; any new publications with involvement from the Hyperion team will be added here.
+Of course, the Hyperion team is not the only team at Disney Animation that regularly publishes; for a full list of publications from Disney Animation, see the [official Disney Animation publications page](https://www.disneyanimation.com/technology/publications).
+The [Disney Animation Technology website](https://www.technology.disneyanimation.com) is also worth keeping an eye on if you want to keep up on what our engineers and TDs are working on!
+
+A large number of people have contributed directly to Hyperion's development since the beginning of the project, in a variety of capacities ranging from core developers to support staff and all the way to notable interns. In no particular order, including both present and past: Brent Burley, Daniel Teece, David Adler, Matt Jen-Yuan Chen, Yining Karl Li, Mark Lee, Wei-Feng Wayne Huang, Joe Schutte, Andrew Gartner, Jennifer Yu, Peter Kutz, Ralf Habel, Patrick Kelly, Gregory Nichols, Andrew Selle, Christian Eisenacher, Jan Novák, Ben Spencer, Doug Lesan, Lisa Young, Tami Valdez, Andrew Fisher, Noah Kagan, Benedikt Bitterli, Thomas Müller, Tizian Zeltner, Mathijs Molenaar, Laura Lediav, Guillaume Loubet, David Koerner, Simon Kallweit, Gabor Liktor, Ulrich Muller, and Serge Sretschinsky. Our closest research partners at Disney Research Studios and elsewhere include (in no particular order): Marios Papas, Per Christensen, Julian Fong, Christophe Hery, Wojciech Jarosz, Fabrice Rouselle, Rasmus Tamstorf, Ryusuke Villemin, and Magnus Wrenninge. Invaluable support from studio leadership over the years has been provided by (again, in no particular order): Nick Cannon, Golriz Fanai, Rajesh Sharma, Chuck Tappan, Sean Jenkins, Darren Robinson, Hank Driskill, Kyle Odermatt, Ernie Petti, Bettina Martin, Collin Larkins, Andy Hendrickson, and Dan Candela. Of course, beyond this enormous list, there is an even more enormous list of countless artists, technical directors, production supervisors, and other technology development teams at Disney Animation who motivated Hyperion, participated in its development, and contributed to its success.
+
+Finally, here is a list of all publicly released projects to date made using Disney's Hyperion Renderer:
+
+**Feature Films**: [Big Hero 6](https://www.disneyanimation.com/projects/bighero6) (2014), [Zootopia](https://www.disneyanimation.com/projects/zootopia) (2016), [Moana](https://www.disneyanimation.com/projects/moana) (2016), [Ralph Breaks the Internet](https://www.disneyanimation.com/projects/ralphbreakstheinternet2) (2018), [Frozen 2](https://www.disneyanimation.com/projects/frozen2) (2019)
+
+**Shorts and Featurettes**: [Feast](https://www.disneyanimation.com/projects/feast) (2014), [Frozen Fever](https://www.imdb.com/title/tt4007502/?ref_=fn_al_tt_1) (2015), [Inner Workings](https://www.disneyanimation.com/projects/innerworkings) (2016), [Gone Fishing](https://www.imdb.com/title/tt6467284/) (2017), [Olaf's Frozen Adventure](https://www.disneyanimation.com/projects/olafsfrozenadventure) (2017)
+
+**Short Circuit Shorts**: (To Be Announced)
+
+**Intern Shorts**: [Ventana](https://ohmy.disney.com/insider/2017/10/19/you-must-watch-this-beautiful-short-created-by-walt-disney-animation-interns/) (2017), [Voilà](https://ohmy.disney.com/news/2018/12/05/voila-walt-disney-animation-studios-interns/) (2018)
+
+**Filmmaker Co-op Shorts**: [Weeds](https://www.imdb.com/title/tt7592274/) (2017)

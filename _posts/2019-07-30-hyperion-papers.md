@@ -29,8 +29,9 @@ This post is meant to be a living document; I'll come back and update it down th
 
     * [Preprint Version](https://drive.google.com/open?id=1EdMYHhs4h_ICcSgGfA4GzZoRNI_yVryA)
     * [Official Publisher's Version](https://doi.org/10.1111/j.1467-8659.2008.01253.x)
+    * [Open Source Project](http://ptex.us)
 
-    Internal project from Disney Animation. This paper describes per-face textures, a UV-free way of texture mapping. Ptex is the texturing system used in Hyperion for all non-procedural texture maps. Every Disney Animation film made using Hyperion is textured entirely with Ptex.
+    Internal project from Disney Animation. This paper describes per-face textures, a UV-free way of texture mapping. Ptex is the texturing system used in Hyperion for all non-procedural texture maps. Every Disney Animation film made using Hyperion is textured entirely with Ptex. Ptex is also available in many commercial renderers, such as [Pixar's RenderMan](https://renderman.pixar.com)!
 
 2. **Physically-Based Shading at Disney**
 
@@ -98,7 +99,7 @@ This post is meant to be a living document; I'll come back and update it down th
     * [Official Publisher's Version](https://doi.org/10.1145/2776880.2787670)
     * [Physically Based Shading SIGGRAPH 2015 Course](https://blog.selfshadow.com/publications/s2015-shading-course)
 
-    Internal project from Disney Animation. This paper describes the full Disney BSDF (sometimes referred to in the wider industry as Disney BRDF v2) used in Hyperion, and also describes a novel subsurface scattering technique called normalized diffusion subsurface scattering. The Disney BSDF is the shading model for everything ever rendered using Hyperion, and normalized diffusion was Hyperion's subsurface model from *Big Hero 6* up through *Moana*.
+    Internal project from Disney Animation. This paper describes the full Disney BSDF (sometimes referred to in the wider industry as Disney BRDF v2) used in Hyperion, and also describes a novel subsurface scattering technique called normalized diffusion subsurface scattering. The Disney BSDF is the shading model for everything ever rendered using Hyperion, and normalized diffusion was Hyperion's subsurface model from *Big Hero 6* up through *Moana*. For a public open-source implementation of the Disney BSDF, check out [PBRT v3](https://github.com/mmp/pbrt-v3)'s implementation. Also, check out [Pixar's RenderMan](https://renderman.pixar.com) for an implementation in a commercial renderer!
 
 9. **Approximate Reflectance Profiles for Efficient Subsurface Scattering**
 

@@ -7,7 +7,7 @@ author: Yining Karl Li
 Every year at SIGGRAPH (and sometimes at other points in the year), members of the Hyperion team inevitably get asked if there is any publicly available information about [Disney's Hyperion Renderer](https://www.disneyanimation.com/technology/innovations/hyperion).
 The answer is: yes, there is actually a lot of publicly available information!
 
-[![Figure 1: Previews of the first page of every Hyperion-related publication from Disney Animation, Disney Research Studios, and other research partners.]({{site.url}}/content/images/2019/Jul/FirstPages_prev.png)]({{site.url}}/content/images/2019/Jul/FirstPages.png)
+[![Figure 1: Previews of the first page of every Hyperion-related publication from Disney Animation, Disney Research Studios, and other research partners.]({{site.url}}/content/images/2019/Jul/FirstPagesv2_prev.png)]({{site.url}}/content/images/2019/Jul/FirstPagesv2.png)
 
 One amazing aspect of working at Walt Disney Animation Studios is the huge amount of support and encouragement we get from our managers and the wider studio for publishing and sharing our work with the wider academic world and industry.
 As part of this sharing, the Hyperion team has had the opportunity to publish a number of papers over the years detailing various interesting techniques used in the renderer.
@@ -18,7 +18,7 @@ Without a doubt, Hyperion, and by extension, our movies, would not be what they 
 Of course, we also collaborate closely with our sister rendering teams at [Pixar Animation Studios](https://www.pixar.com) and [Industrial Light & Magic](https://www.ilm.com) as well, and there are numerous examples where collaboration between all of these teams has advanced the state of the art in rendering for the whole industry.
 
 So without further ado, below are all of the papers that the Hyperion team has published or worked on or had involvement with over the years, either by ourselves or with our counterparts at Disney Research Studios, Pixar, ILM, and other research groups.
-If you've ever been curious to learn more about Disney's Hyperion Renderer, here are 28 papers with a combined 361 pages of material!
+If you've ever been curious to learn more about Disney's Hyperion Renderer, here are 31 publications with a combined 364 pages of material!
 For each paper, I'll link to a preprint version, link to the official publisher's version, and link any additional relevant resources for the paper.
 I'll also give the citation information, give a brief one-line description, list the teams involved, and note how the paper is relevant to Hyperion.
 This post is meant to be a living document; I'll come back and update it down the line with future publications. Publications are listed in chronological order.
@@ -258,7 +258,26 @@ This post is meant to be a living document; I'll come back and update it down th
 
     Publication from Disney Animation. This paper is a systems architecture paper for the entirety of Hyperion. The paper describes the history of Disney's Hyperion Renderer, the internal architecture, various systems such as shading, volumes, many-light sampling, emissive geometry, path simplification, fur rendering, photon-mapped caustics, subsurface scattering, and more. The paper also describes various challenges that had to be overcome for practical production use and artistic controllability. This paper covers everything in Hyperion beginning from *Big Hero 6* up through *Ralph Breaks the Internet*.
 
-25. **Denoising Deep Monte Carlo Renderings**
+25. **Clouds Data Set**
+
+    [Walt Disney Animation Studios](disneyanimation.com). Clouds Data Set, August 2018.
+
+    * [Official Page](https://www.technology.disneyanimation.com/clouds)
+    * [License](https://disney-animation.s3.amazonaws.com/uploads/production/data_set_asset/6/asset/License_Cloud.pdf)
+
+    Publicly released data set for rendering research, by Disney Animation. This data set was produced by our production artists as part of the development process for Hyperion's modern third generation null-collision tracking based volume rendering system.
+
+26. ***Moana* Island Scene Data Set**
+
+    [Walt Disney Animation Studios](disneyanimation.com). *Moana* Island Scene Data Set, August 2018.
+
+    * [Official Page](https://www.technology.disneyanimation.com/islandscene)
+    * [License](https://disney-animation.s3.amazonaws.com/uploads/production/data_set_asset/4/asset/License_Moana.pdf)
+
+    Publicly released data set for rendering research, by Disney Animation.
+    This data set is an actual production scene from *Moana*, originally rendered using Hyperion and ported to PBRT v3 for the public release. This data set gives a sense of the typical scene complexity and rendering challenges that Hyperion handles every day in production.
+
+27. **Denoising Deep Monte Carlo Renderings**
 
     [Delio Vicini](https://rgl.epfl.ch/people/dvicini), [David Adler](https://www.linkedin.com/in/david-adler-5ab7b21/), [Jan Novák](http://drz.disneyresearch.com/~jnovak/), [Fabrice Rousselle](https://research.nvidia.com/person/fabrice-rousselle), and [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/). Denoising Deep Monte Carlo Renderings. *Computer Graphics Forum*, 38(1), February 2019.
 
@@ -268,7 +287,16 @@ This post is meant to be a living document; I'll come back and update it down th
 
     Joint project between Disney Research Studios and Disney Animation. This paper presents a technique for denoising deep (meaning images with multiple depth bins per pixel) renders, for use with deep-compositing workflows. This technique was developed as part of general denoising research from Disney Research Studios and the Hyperion team.
 
-26. **Practical Path Guiding in Production**
+28. **The Challenges of Releasing the *Moana* Island Scene**
+
+    [Rasmus Tamstorf](https://www.linkedin.com/in/rasmus-tamstorf-22835a1/) and [Heather Pritchett](https://www.linkedin.com/in/heather-pritchett-8067592/). The Challenges of Releasing the *Moana* Island Scene. In *Proceedings of EGSR 2019, Industry Track*, July 2019.
+
+    * [Preprint Version](https://drive.google.com/open?id=18jLb3XNqXCvi2R7Yyb2E2aCdJ26zBBF7)
+    * [Official Publisher's Version](https://doi.org/10.2312/sr.20191223)
+
+    Short paper from Disney Animation's research department, discussing some of the challenges involved in preparing a production Hyperion scene for public release. The Hyperion team provided various support and advice to the larger studio effort to release the *Moana* Island Scene.
+
+29. **Practical Path Guiding in Production**
 
     [Thomas Müller](https://tom94.net). Practical Path Guiding in Production. In *ACM SIGGRAPH 2019 Course Notes: Path Guiding in Production*, July 2019.
     
@@ -278,7 +306,7 @@ This post is meant to be a living document; I'll come back and update it down th
 
     Joint project between Disney Research Studios and Disney Animation. This paper presents a number of improvements and extensions made to *Practical Path Guiding* developed by in Hyperion by [Thomas Müller](https://tom94.net) and the Hyperion team. In use in production on *Frozen 2*.
 
-27. **Machine-Learning Denoising in Feature Film Production**
+30. **Machine-Learning Denoising in Feature Film Production**
 
     [Henrik Dahlberg](https://henrikdahlberg.github.io), [David Adler](https://www.linkedin.com/in/david-adler-5ab7b21/), and [Jeremy Newlin](https://www.linkedin.com/in/jeremy-newlin-07a87946/). Machine-Learning Denoising in Feature Film Production. In *ACM SIGGRAPH 2019 Talks*, July 2019.
     
@@ -287,7 +315,7 @@ This post is meant to be a living document; I'll come back and update it down th
 
     Joint publication from Pixar, Industrial Light & Magic, and Disney Animation. Describes how the modern Disney-Research-developed second generation deep-learning denoiser was deployed into production at Pixar, ILM, and Disney Animation.
 
-28. **Taming the Shadow Terminator**
+31. **Taming the Shadow Terminator**
 
     [Matt Jen-Yuan Chiang](http://dl.acm.org/author_page.cfm?id=99658729701&coll=DL&dl=ACM&trk=0), [Yining Karl Li](https://www.yiningkarlli.com), and [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/). Taming the Shadow Terminator. In *ACM SIGGRAPH 2019 Talks*, August 2019.
     

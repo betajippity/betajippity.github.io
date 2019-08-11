@@ -260,7 +260,7 @@ This post is meant to be a living document; I'll come back and update it down th
 
 25. **Clouds Data Set**
 
-    [Walt Disney Animation Studios](disneyanimation.com). Clouds Data Set, August 2018.
+    [Walt Disney Animation Studios](https://www.disneyanimation.com). Clouds Data Set, August 2018.
 
     * [Official Page](https://www.technology.disneyanimation.com/clouds)
     * [License](https://disney-animation.s3.amazonaws.com/uploads/production/data_set_asset/6/asset/License_Cloud.pdf)
@@ -269,7 +269,7 @@ This post is meant to be a living document; I'll come back and update it down th
 
 26. ***Moana* Island Scene Data Set**
 
-    [Walt Disney Animation Studios](disneyanimation.com). *Moana* Island Scene Data Set, August 2018.
+    [Walt Disney Animation Studios](https://www.disneyanimation.com). *Moana* Island Scene Data Set, August 2018.
 
     * [Official Page](https://www.technology.disneyanimation.com/islandscene)
     * [License](https://disney-animation.s3.amazonaws.com/uploads/production/data_set_asset/4/asset/License_Moana.pdf)

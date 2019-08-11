@@ -4,9 +4,11 @@ title: Hyperion Publications
 tags: [Hyperion]
 author: Yining Karl Li
 ---
-
-Every year at SIGGRAPH (and sometimes at other points in the year!), members of the Hyperion team inevitably get asked if there is any publicly available information about [Disney's Hyperion Renderer](https://www.disneyanimation.com/technology/innovations/hyperion).
+Every year at SIGGRAPH (and sometimes at other points in the year), members of the Hyperion team inevitably get asked if there is any publicly available information about [Disney's Hyperion Renderer](https://www.disneyanimation.com/technology/innovations/hyperion).
 The answer is: yes, there is actually a lot of publicly available information!
+
+[![Figure 1: Previews of the first page of every Hyperion-related publication from Disney Animation, Disney Research Studios, and other research partners.]({{site.url}}/content/images/2019/Jul/FirstPages_prev.png)]({{site.url}}/content/images/2019/Jul/FirstPages.png)
+
 One amazing aspect of working at Walt Disney Animation Studios is the huge amount of support and encouragement we get from our managers and the wider studio for publishing and sharing our work with the wider academic world and industry.
 As part of this sharing, the Hyperion team has had the opportunity to publish a number of papers over the years detailing various interesting techniques used in the renderer.
 
@@ -16,11 +18,10 @@ Without a doubt, Hyperion, and by extension, our movies, would not be what they 
 Of course, we also collaborate closely with our sister rendering teams at [Pixar Animation Studios](https://www.pixar.com) and [Industrial Light & Magic](https://www.ilm.com) as well, and there are numerous examples where collaboration between all of these teams has advanced the state of the art in rendering for the whole industry.
 
 So without further ado, below are all of the papers that the Hyperion team has published or worked on or had involvement with over the years, either by ourselves or with our counterparts at Disney Research Studios, Pixar, ILM, and other research groups.
+If you've ever been curious to learn more about Disney's Hyperion Renderer, here are 28 papers with a combined 361 pages of material!
 For each paper, I'll link to a preprint version, link to the official publisher's version, and link any additional relevant resources for the paper.
 I'll also give the citation information, give a brief one-line description, list the teams involved, and note how the paper is relevant to Hyperion.
 This post is meant to be a living document; I'll come back and update it down the line with future publications. Publications are listed in chronological order.
-
----
 
 1. **Ptex: Per-Face Texture Mapping for Production Rendering**
     
@@ -295,9 +296,7 @@ This post is meant to be a living document; I'll come back and update it down th
 
     Internal project from Disney Animation. This short paper describes a solution to the long-standing "shadow terminator" problem associated with using shading normals. The technique in this paper is implemented in Hyperion and is in use in production on *Frozen 2*.
 
----
-
-[![Hyperion logo, modeled by Disney Animation artist Chuck Tappan and rendered in Disney's Hyperion Renderer.]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)
+[![Figure 2: Hyperion logo, modeled by Disney Animation artist Chuck Tappan and rendered in Disney's Hyperion Renderer.]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)
 
 Again, this post is meant to be a living document; any new publications with involvement from the Hyperion team will be added here.
 Of course, the Hyperion team is not the only team at Disney Animation that regularly publishes; for a full list of publications from Disney Animation, see the [official Disney Animation publications page](https://www.disneyanimation.com/technology/publications).

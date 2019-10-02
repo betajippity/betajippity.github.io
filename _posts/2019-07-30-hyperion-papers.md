@@ -353,7 +353,7 @@ Finally, here is a list of all publicly released and announced projects to date 
 
 **Shorts and Featurettes**: [Feast](https://www.disneyanimation.com/projects/feast) (2014), [Frozen Fever](https://www.imdb.com/title/tt4007502/?ref_=fn_al_tt_1) (2015), [Inner Workings](https://www.disneyanimation.com/projects/innerworkings) (2016), [Gone Fishing](https://www.imdb.com/title/tt6467284/) (2017), [Olaf's Frozen Adventure](https://www.disneyanimation.com/projects/olafsfrozenadventure) (2017)
 
-**Short Circuit Shorts**: [Exchange Student](http://www.disneyplus.com/) (2020), [Just a Thought](http://www.disneyplus.com/) (2020), [Jing Hua](http://www.disneyplus.com/) (2020), [Elephant in the Room](http://www.disneyplus.com/) (2020), [Puddles](http://www.disneyplus.com/) (2020), [Lightning in a Bottle](http://www.disneyplus.com/) (2020), [Zenith](http://www.disneyplus.com/) (2020)
+**Short Circuit Shorts**: [Exchange Student](http://www.disneyplus.com/) (2020), [Just a Thought](http://www.disneyplus.com/) (2020), [Jing Hua](http://www.disneyplus.com/) (2020), [Elephant in the Room](http://www.disneyplus.com/) (2020), [Puddles](http://www.disneyplus.com/) (2020), [Lightning in a Bottle](http://www.disneyplus.com/) (2020), [Zenith](http://www.disneyplus.com/) (2020), [Drop](http://www.disneyplus.com/) (2020), [Fetch](http://www.disneyplus.com/) (2020)
 
 **Intern Shorts**: [Ventana](https://ohmy.disney.com/insider/2017/10/19/you-must-watch-this-beautiful-short-created-by-walt-disney-animation-interns/) (2017), [Voilà](https://ohmy.disney.com/news/2018/12/05/voila-walt-disney-animation-studios-interns/) (2018), [Maestro](https://ohmy.disney.com/movies/2019/09/19/watch-maestro-a-beautiful-short-from-this-years-walt-disney-animation-studios-interns/) (2019)
 

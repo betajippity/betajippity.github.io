@@ -323,7 +323,16 @@ This post is meant to be a living document; I'll come back and update it down th
     * [Official Publisher's Version](https://doi.org/10.1145/3306307.3328172)
     * [Project Page](https://www.yiningkarlli.com/projects/shadowterminator.html)
 
-    Internal project from Disney Animation. This short paper describes a solution to the long-standing "shadow terminator" problem associated with using shading normals. The technique in this paper is implemented in Hyperion and is in use in production on *Frozen 2*.
+    Internal project from Disney Animation. This short paper describes a solution to the long-standing "shadow terminator" problem associated with using shading normals. The technique in this paper is implemented in Hyperion and has been in use in production starting on *Frozen 2* through present.
+
+32. **On Histogram-Preserving Blending for Randomized Texture Tiling**
+
+    [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/). On Histogram-Preserving Blending for Randomized Texture Tiling. *Journal of Computer Graphics Techniques*, 8(4), November 2019.
+
+    * [Preprint Version](https://drive.google.com/open?id=1kiMQUCcX_tEyQXWtsAPWZLVZTQt6OL_i)
+    * [Official Publisher's Version](http://www.jcgt.org/published/0008/04/02/)
+
+    Internal project from Disney Animation. This paper describes some modiciations to the histogram-preserving hex-tiling algorithm of Heitz and Neyret; these modifications make implementing the Heitz and Neyret technique easier and more efficient. This paper describes Hyperion's implementation of the technique, in use in production starting on *Frozen 2* through present.
 
 [![Figure 2: Hyperion logo, modeled by Disney Animation artist Chuck Tappan and rendered in Disney's Hyperion Renderer.]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)
 

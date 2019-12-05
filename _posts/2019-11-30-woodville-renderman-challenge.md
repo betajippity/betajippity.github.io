@@ -82,7 +82,13 @@ Through this process, I was able to get bark to flow with the curves of each log
 Then, in RenderMan for Maya, I took all of the textures from Substance Painter and used them to drive the base layer of a PxrLayeredSurface shader. All of the textures were painted to be basically greyscale or highly desaturated, and then in Maya I used PxrColorCorrect and PxrVary nodes to add in color. This way, I was able to iteratively play with and dial in colors in RenderMan's IPR mode without having to roundtrip back to Substance Painter too much.
 Since the camera in my frame is relatively close to the treehouse, having lots of detail was really important.
 I put high-res displacement and normal maps on almost everything, which I found helpful for getting that extra detail in.
-I found that setting microPolygon length to be greater than 1 polygon per pixel was useful for getting extra detail in with displacement, at the cost of a bit more memory usage (which was perfectly tolerable in my case).
+I found that setting micropolygon length to be greater than 1 polygon per pixel was useful for getting extra detail in with displacement, at the cost of a bit more memory usage (which was perfectly tolerable in my case).
+
+One of the unfortunate things about how I chose to UV-unwrap the tree trunks is that UV seams cut across parts of the tree trunks that are visible to the camera; as a result, if you zoom into the final 4K renders, you can see tiny line artifacts in the displacement where UV seams meet.
+These artifacts arise from displacement values not interpolating smoothly across UV seams when texture filtering is in play; this problem can sometimes be avoided by very carefully hiding UV seams, but sometimes there is no way.
+The problem in my case is somewhat reduced by expanding displacement values beyond the boundaries of each UV shell in the displacement textures (most applications like Substance Painter can do this natively), but again, this doesn't completely solve the problem, since expanding values beyond boundaries can only go so far until you run into another nearby UV shell and since texture filtering widths can be variable.
+This problem is one of the major reasons why we use Ptex so heavily at Disney Animation; Ptex's robust cross-face filtering functionality sidesteps this problem entirely.
+I really wish Substance Painter could output Ptex!
 
 For dialing in the colors of the base wood shaders, I created versions of the wood shader base color textures that looked like newer wood and older sun-bleached wood, and then I used a PxrBlend node in each wood shader to blend between the newer and older looking wood, along with procedural wear to make sure that the blend wasn't totally uniform.
 Across all of the various wood shaders in the scene, I tied all of the blend values to a single PxrToFloat node, so that I could control how aged all wood across the entire scene looks with a single value.

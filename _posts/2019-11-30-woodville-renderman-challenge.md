@@ -9,7 +9,7 @@ Every once in a while, I make a [point of spending some significant personal tim
 A few times each year, Pixar's RenderMan group holds an art challenge contest where Pixar provides a un-shaded un-uv'd base model and contestants are responsible for layout, texturing, shading, lighting, additional modeling of supporting elements and surrounding environment, and producing a final image.
 I thought the [most recent RenderMan art challenge, "Woodville"](https://renderman.pixar.com/news/renderman-woodville-art-challenge), would make a great excuse for playing with RenderMan 22 for Maya; here's the final image I came up with:
 
-[![Figure 1: My entry to Pixar's RenderMan Woodville Art Challenge. Base treehouse model is from Pixar; all shading, lighting, additional modeling, and environments are mine. Concept by Vasylina Holod. Model by Alex Shilt © Disney / Pixar - RenderMan "Woodville" Art Challenge.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/preview/woodville_full.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/woodville_full_4k.jpg)
+[![Figure 1: My entry to Pixar's RenderMan Woodville Art Challenge. Base treehouse model is from Pixar; all shading, lighting, additional modeling, and environments are mine. Concept by Vasylina Holod. Model by Alex Shilt © Disney / Pixar - RenderMan "Woodville" Art Challenge.]({{site.url}}/content/images/2019/Nov/woodville/preview/woodville_full.jpg)]({{site.url}}/content/images/2019/Nov/woodville/woodville_full_4k.jpg)
 
 One big lesson I have learned since entering the rendering world is that there is no such thing as the absolute best overall renderer- there are only renderers that are the best suited for particular workflows, tasks, environments, people, etc.
 Every in-house renderer is the best renderer in the world for the particular studio that built that renderer, and every commercial renderer is the best renderer in the world for the set of artists that have chosen that renderer as their tool of choice.
@@ -27,7 +27,7 @@ For this art challenge, Pixar [supplied a base model](https://renderman.pixar.co
 The model is by Alex Shilt, based on a concept by Vasylina Holod.
 Here is a simple render showing what is provided out of the box:
 
-[![Figure 2: Base model provided by Pixar, rendered against a white cyclorama background using a basic skydome.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/woodville_base_wide.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville_base_wide.jpg)
+[![Figure 2: Base model provided by Pixar, rendered against a white cyclorama background using a basic skydome.]({{site.url}}/content/images/2019/Nov/woodville/woodville_base_wide.jpg)]({{site.url}}/content/images/2019/Nov/woodville_base_wide.jpg)
 
 I started with just scouting for some good camera angles.
 Since I really wanted to focus on high-detail shading for this project, I decided from close to the beginning to pick a close-up camera angle that would allow for showcasing shading detail, at the trade-off of not depicting the entire treehouse.
@@ -36,13 +36,13 @@ Instead of scouting using just the GL viewport in Maya, I tried using RenderMan 
 This mode wound up being super useful for scouting; being able to interactively play with depth of field settings and see even basic skydome lighting helped a lot in getting a feel for each candidate camera angle.
 Here are a couple of different white clay test renders I did while trying to find a good camera position and framing:
 
-[![Figure 3: Candidate camera angle with a close-up focus on the entire top of the treehouse.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/candidate_camera_02.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/candidate_camera_02.jpg)
+[![Figure 3: Candidate camera angle with a close-up focus on the entire top of the treehouse.]({{site.url}}/content/images/2019/Nov/woodville/candidate_camera_02.jpg)]({{site.url}}/content/images/2019/Nov/woodville/candidate_camera_02.jpg)
 
-[![Figure 4: Candidate camera angle with a close-up focus on a specific triangular A-frame treehouse cabin.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/candidate_camera_04.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/candidate_camera_04.jpg)
+[![Figure 4: Candidate camera angle with a close-up focus on a specific triangular A-frame treehouse cabin.]({{site.url}}/content/images/2019/Nov/woodville/candidate_camera_04.jpg)]({{site.url}}/content/images/2019/Nov/woodville/candidate_camera_04.jpg)
 
-[![Figure 5: Candidate camera angle looking down from the top of the treehouse.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/candidate_camera_03.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/candidate_camera_03.jpg)
+[![Figure 5: Candidate camera angle looking down from the top of the treehouse.]({{site.url}}/content/images/2019/Nov/woodville/candidate_camera_03.jpg)]({{site.url}}/content/images/2019/Nov/woodville/candidate_camera_03.jpg)
 
-[![Figure 6: Candidate camera angle with a close-up focus on the lower set of treehouse cabins.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/candidate_camera_01.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/candidate_camera_01.jpg)
+[![Figure 6: Candidate camera angle with a close-up focus on the lower set of treehouse cabins.]({{site.url}}/content/images/2019/Nov/woodville/candidate_camera_01.jpg)]({{site.url}}/content/images/2019/Nov/woodville/candidate_camera_01.jpg)
 
 I wound up deciding to go with the camera angle and framing in Figure 6 for several reasons.
 First off, there are just a lot of bits that looked fun to shade, such as the round tower cabin on the left side of the treehouse.
@@ -56,7 +56,7 @@ I retoplogized the mesh in ZBrush and exported it lower res than the original me
 The reasoning here was that a lower resolution mesh would be easier to UV unwrap and that displacement later would restore missing detail.
 Figure 7 shows the wireframe of the original mesh on the left, and the wireframe of my retopologized mesh on the right:
 
-[![Figure 7: Original mesh wireframe on the left, my retopologized version on the right.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/trunk_wireframe.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/trunk_wireframe.jpg)
+[![Figure 7: Original mesh wireframe on the left, my retopologized version on the right.]({{site.url}}/content/images/2019/Nov/woodville/trunk_wireframe.jpg)]({{site.url}}/content/images/2019/Nov/woodville/trunk_wireframe.jpg)
 
 In previous projects, I've found a lot of success in using [Wenzel Jakob's Instance Meshes](https://github.com/wjakob/instant-meshes) application to retopologize messy geometry, but this time around I used [ZBrush's ZRemesher tool](http://docs.pixologic.com/user-guide/3d-modeling/topology/zremesher/) since I wanted as perfect a quad grid as possible (at the expense of losing some mesh fidelity) to make UV unwrapping easier.
 I UV-unwrapped the remeshed tree trunks by hand; the general approach I took was to slice the tree trunks into a series of stacked cylinders and then unroll each cylinder into as rectangular of a UV shell as I could.
@@ -64,7 +64,7 @@ For texturing, I started with some photographs of redwood bark I found online, t
 I then took the tileable textures into Substance Painter and painted the tree trunks using a combination of triplanar projections and manual painting.
 At this point, I has also blocked in a temporary forest in the background made from just instancing two or three tree models all over the place, which I found useful for being able to help get a sense of how the shading on the treehouse was working in context:
 
-[![Figure 8: In-progress test render with shaded tree trunks and temporary background forest blocked in.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/progress016.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/progress016.jpg)
+[![Figure 8: In-progress test render with shaded tree trunks and temporary background forest blocked in.]({{site.url}}/content/images/2019/Nov/woodville/progress016.jpg)]({{site.url}}/content/images/2019/Nov/woodville/progress016.jpg)
 
 Next up, I worked on getting base shading done for the cabins and various bits and bobs on the treehouse.
 The general approach I took for the entire treehouse was to do base texturing and shading in Substance Painter, and then add wear and tear, aging, and moss in RenderMan through procedural[PxrLayerSurface](https://rmanwiki.pixar.com/display/REN22/PxrLayerSurface) layers driven by a combination of procedural [PxrRoundCube](https://rmanwiki.pixar.com/display/REN22/PxrRoundCube) and [PxrDirt](https://rmanwiki.pixar.com/display/REN22/PxrDirt) nodes and hand-painted dirt and wear masks.
@@ -75,7 +75,7 @@ For each cabin, I grouped surfaces that were going to have a similar material in
 This entire process was... not really fun... it took a lot of time and was basically just busy-work.
 I vastly prefer being able to paint Ptex instead of having to UV-unwrap and lay out UDIM tiles, but since I was using Substance Painter, Ptex wasn't an option on this project.
 
-[![Figure 9: Example of one of the cabins run through Houdini's Auto UV SOP. The cabin is on the left; the output UVs are on the right.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/houdini-auto-uv.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/houdini-auto-uv.jpg)
+[![Figure 9: Example of one of the cabins run through Houdini's Auto UV SOP. The cabin is on the left; the output UVs are on the right.]({{site.url}}/content/images/2019/Nov/woodville/houdini-auto-uv.jpg)]({{site.url}}/content/images/2019/Nov/woodville/houdini-auto-uv.jpg)
 
 In Substance Painter, the general workflow I used was to start with multiple triplanar projections of (heavily edited) Quixel Megascans surfaces masked and oriented to different sections of a surface, and then paint on top.
 Through this process, I was able to get bark to flow with the curves of each log and whatnot.
@@ -94,7 +94,7 @@ I also did some additional manual mask painting in Substance Painter to get moss
 Finally, the overall amount of moss across all of the cabins is modulated by another single PxrToFloat node, allowing me to control the overall amount of moss using another single value.
 Figure 10 shows how I could vary the age of the wood on the cabins, along with the amount of moss.
 
-[![Figure 10: Example of age and moss controllability on one of the cabins. The top row shows, going from left to right, 0% aged, 50% aged, and 100% aged. The bottom row shows, going from left to right, 0% moss, 50% moss, and 100% moss. The final values used were close to 60% for both age and moss.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/cabin_shading_progress.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/cabin_shading_progress.jpg)
+[![Figure 10: Example of age and moss controllability on one of the cabins. The top row shows, going from left to right, 0% aged, 50% aged, and 100% aged. The bottom row shows, going from left to right, 0% moss, 50% moss, and 100% moss. The final values used were close to 60% for both age and moss.]({{site.url}}/content/images/2019/Nov/woodville/cabin_shading_progress.jpg)]({{site.url}}/content/images/2019/Nov/woodville/cabin_shading_progress.jpg)
 
 The spiral staircase initially made me really worried; I originally thought I was going to have to UV unwrap the whole thing, and stuff like the railings are really not easy to unwrap.
 But then, after a bit of thinking, I realized that the spiral staircase is likely a fire escape staircase, and so it could be wrought iron or something.
@@ -104,7 +104,7 @@ This idea informed how I handled that long skinny window above the front door; I
 So, I put a simple box inside the tree behind that window, with a light at the top.
 That way, a hint of inner space would be visible through the window:
 
-[![Figure 11: Simple box inside the tree behind the lower window, to give a hint of inner space.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/lower_window_maya.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/lower_window_maya.jpg)
+[![Figure 11: Simple box inside the tree behind the lower window, to give a hint of inner space.]({{site.url}}/content/images/2019/Nov/woodville/lower_window_maya.jpg)]({{site.url}}/content/images/2019/Nov/woodville/lower_window_maya.jpg)
 
 In addition to shading everything, I also had to make some modifications to the provided treehouse geometry.
 I that in the provided model, the satellite dish floats above its support pole without any actual connecting geometry, so I modeled a little connecting bit for the satellite dish.
@@ -113,7 +113,7 @@ Once I made the walls into plate glass, I realized that I needed to make a plaus
 Since the only way into the round cabin must be through a staircase in the main tree trunk, I modeled a new door in the back of the round cabin. 
 With everything shaded and the geometric modifications in place, here is how everything looked at this point:
 
-[![Figure 12: In-progress test render with initial fully shaded treehouse, along with geoemtric modifications. Click for 4K version.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/preview/progress085.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/progress085_4k.jpg)
+[![Figure 12: In-progress test render with initial fully shaded treehouse, along with geoemtric modifications. Click for 4K version.]({{site.url}}/content/images/2019/Nov/woodville/preview/progress085.jpg)]({{site.url}}/content/images/2019/Nov/woodville/progress085_4k.jpg)
 
 The next major step was adding some story elements.
 I wanted the treehouse to feel lived in, like the treehouse is just somebody's house (a very unusual house, but a house nonetheless).
@@ -134,9 +134,9 @@ I also added a clothesline with some hanging drying laundry, along with a bunch 
 For the plants and several of the furniture pieces that I knew I would want to tweak later, I built in controls to their shading graphs using PxrColorCorrect nodes to allow me to adjust hue and saturation later.
 Many of the furniture, plant and prop models are highly modified, kitbashed, re-textured versions of assets from Evermotion and CGAxis, although some of them (notable the Eames Lounge Chair) are entirely my own.
 
-[![Figure 13: In-progress test render closeup crop of the lower main cabin, with furniture and plants and props.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/preview/progress096_crop1.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/progress096_crop1.jpg)
+[![Figure 13: In-progress test render closeup crop of the lower main cabin, with furniture and plants and props.]({{site.url}}/content/images/2019/Nov/woodville/preview/progress096_crop1.jpg)]({{site.url}}/content/images/2019/Nov/woodville/progress096_crop1.jpg)
 
-[![Figure 14: In-progress test render closeup crop of the glass round cabin and the upper smaller cabin, with furniture and plants and props.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/preview/progress096_crop2.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/progress096_crop2.jpg)
+[![Figure 14: In-progress test render closeup crop of the glass round cabin and the upper smaller cabin, with furniture and plants and props.]({{site.url}}/content/images/2019/Nov/woodville/preview/progress096_crop2.jpg)]({{site.url}}/content/images/2019/Nov/woodville/progress096_crop2.jpg)
 
 The last step before final lighting was to build a more proper background forest, as a replacement for the temporary forest I had used up until this point for blocking purposes.
 For this step, I relied heavily on Maya's MASH toolset, which I found to provide a great combination of power and ease-of-use; for use cases involving tons of instanced geometry, I certainly found it much easier than Maya's older Xgen toolset.
@@ -148,13 +148,13 @@ I also threw in some rocks from Quixel Megascans, just to add a bit of variety.
 I then laid down some low-level ground vegetation, which was meant to peek through the larger trees in various areas.
 The base vegetation was made up of various ferns, shrubs, and small sapling-ish young conifers placed using Maya's MASH Placer node:
 
-[![Figure 15: In-progress test render of the forest floor and under-canopy vegetation.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/preview/forest_progress029.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/forest_progress029.jpg)
+[![Figure 15: In-progress test render of the forest floor and under-canopy vegetation.]({{site.url}}/content/images/2019/Nov/woodville/preview/forest_progress029.jpg)]({{site.url}}/content/images/2019/Nov/woodville/forest_progress029.jpg)
 
 In the old temporary background forest, the entire forest is made up of only three different types of trees, and it really shows; there was a distinct lack of color variation or tree diversity.
 So, for the new forest, I decided to use a lot more types of trees.
 Here is a rough lineup (not necessarily to scale with each other) of how all of the new tree species looked:
 
-[![Figure 16: Test render of a lineup of the trees used in the final forest.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/preview/trees_lineup.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/trees_lineup.jpg)
+[![Figure 16: Test render of a lineup of the trees used in the final forest.]({{site.url}}/content/images/2019/Nov/woodville/preview/trees_lineup.jpg)]({{site.url}}/content/images/2019/Nov/woodville/trees_lineup.jpg)
 
 For the main forest, I hand-placed trees onto the mountain slope as instanced.
 One cool thing I built in to the forest was PxrColorCorrect nodes in all of the tree shading graphs, with all controls wired up to single master controls for hue/saturation/value so that I could shift the entire forest's colors easily if necessary.
@@ -162,18 +162,18 @@ This tool proved to be very useful for tuning the overall vegetation colors late
 I also intentionally left gaps in the forest around the rock formations to give some additional visual variety.
 Building up the entire under-layer of shrubs and saplings and stuff also paid off, since a lot of that stuff wound up peeking through various gaps between the larger trees:
 
-[![Figure 17: In-progress test render of the background forest.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/preview/forest_progress050.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/forest_progress050.jpg)
+[![Figure 17: In-progress test render of the background forest.]({{site.url}}/content/images/2019/Nov/woodville/preview/forest_progress050.jpg)]({{site.url}}/content/images/2019/Nov/woodville/forest_progress050.jpg)
 
 The last step for the main forest was adding some mist and fog, which is common in Pacific Northwest type mountainous conifer forests in the morning.
 I didn't have extensive experience working with volumes in RenderMan before this, so there was definitely something of a learning curve for me, but overall it wasn't too hard to learn!
 I made the mist by just having a Maya Volume Noise node plug into the density field of a PxrVolume; this isn't anything fancy, but it provided a great start for the mist/fog:
 
-[![Figure 18: In-progress test render of the background forest with an initial version of mist and fog.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/preview/forest_progress051.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/forest_progress051.jpg)
+[![Figure 18: In-progress test render of the background forest with an initial version of mist and fog.]({{site.url}}/content/images/2019/Nov/woodville/preview/forest_progress051.jpg)]({{site.url}}/content/images/2019/Nov/woodville/forest_progress051.jpg)
 
 At this point, I think the entire image together was starting to look pretty good, although, without any final shot lighting, the overall vibe felt more like a spread out of an issue of National Geographic than a more cinematic still out of a film.
 Normally my instinct is to go with a more naturalistic look, but since part of the objective for this project was to learn to use RenderMan's lighting toolset for more cinematic applications, I wanted to push the overall look of the image beyond this point:
 
-[![Figure 19: In-progress test render with everything together, before final shot lighting.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/preview/progress099.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/progress099.jpg)
+[![Figure 19: In-progress test render with everything together, before final shot lighting.]({{site.url}}/content/images/2019/Nov/woodville/preview/progress099.jpg)]({{site.url}}/content/images/2019/Nov/woodville/progress099.jpg)
 
 From this point onwards, following [a tutorial made by Jeremy Heintz](https://www.youtube.com/watch?v=PWFU-QIljRI), I broke out the volumetric mist/fog into a separate layer and render pass in Maya, which allowed for adjusting the mist/fog in comp without having to re-render the entire scene.
 This strategy proved to be immensely useful and a huge time saver in final lighting.
@@ -193,17 +193,17 @@ I've conceptually known why artists like rods for some time now (especially sinc
 
 After much iteration, here is the final set of render passes I wound up with going into final compositing:
 
-[![Figure 19: Final render, sun (key) pass. Click for 4K version.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/preview/woodville_sun.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/woodville_sun_4k.jpg)
+[![Figure 19: Final render, sun (key) pass. Click for 4K version.]({{site.url}}/content/images/2019/Nov/woodville/preview/woodville_sun.jpg)]({{site.url}}/content/images/2019/Nov/woodville/woodville_sun_4k.jpg)
 
-[![Figure 20: Final render, sky (fill) pass. Click for 4K version.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/preview/woodville_sky.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/woodville_sky_4k.jpg)
+[![Figure 20: Final render, sky (fill) pass. Click for 4K version.]({{site.url}}/content/images/2019/Nov/woodville/preview/woodville_sky.jpg)]({{site.url}}/content/images/2019/Nov/woodville/woodville_sky_4k.jpg)
 
-[![Figure 21: Final render, practical lights pass. Click for 4K version.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/preview/woodville_practical.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/woodville_practical_4k.jpg)
+[![Figure 21: Final render, practical lights pass. Click for 4K version.]({{site.url}}/content/images/2019/Nov/woodville/preview/woodville_practical.jpg)]({{site.url}}/content/images/2019/Nov/woodville/woodville_practical_4k.jpg)
 
-[![Figure 22: Final render, mist/fog pass. Click for 4K version.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/preview/woodville_volumes.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/woodville_volumes_4k.jpg)
+[![Figure 22: Final render, mist/fog pass. Click for 4K version.]({{site.url}}/content/images/2019/Nov/woodville/preview/woodville_volumes.jpg)]({{site.url}}/content/images/2019/Nov/woodville/woodville_volumes_4k.jpg)
 
-[![Figure 23: Final render, atmospheric pass. Click for 4K version.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/preview/woodville_atmos.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/woodville_atmos_4k.jpg)
+[![Figure 23: Final render, atmospheric pass. Click for 4K version.]({{site.url}}/content/images/2019/Nov/woodville/preview/woodville_atmos.jpg)]({{site.url}}/content/images/2019/Nov/woodville/woodville_atmos_4k.jpg)
 
-[![Figure 24: Final render, spotlight pass. Click for 4K version.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/preview/woodville_spot.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/woodville_spot_4k.jpg)
+[![Figure 24: Final render, spotlight pass. Click for 4K version.]({{site.url}}/content/images/2019/Nov/woodville/preview/woodville_spot.jpg)]({{site.url}}/content/images/2019/Nov/woodville/woodville_spot_4k.jpg)
 
 In final compositing, since I had everything broken out into separate passes, I was able to quickly make a number of adjustments that otherwise would have been much slower to iterate on if I had done them in-render.
 I tinted the sun pass to be warmer (which is equivalent to changing the sun color in-render and re-rendering) and tweaked the exposures of the sun pass up and some of the volumetric passes down to balance out the overall image.
@@ -216,9 +216,9 @@ I also added in a small amount of bloom by just duplicating the sun pass, clippi
 Finally, I adjusted the gamma by 0.8 and exposed up by half a stop to give some additional contrast and saturation, which helped everything pop a bit more and feel a bit more moody and warm.
 Figure 25 shows what all of the lighting, comp, and color grading looks like applied to a 50% grey clay shaded version of the scene, and if you don't want to scroll all the way back to the top of this post to see the final image, I've included it again as Figure 26.
 
-[![Figure 25: Final lighting, comp, and color grading applied to a 50% grey clay shaded version. Click for 4K version.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/preview/woodville_grey.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/woodville_grey_4k.jpg)
+[![Figure 25: Final lighting, comp, and color grading applied to a 50% grey clay shaded version. Click for 4K version.]({{site.url}}/content/images/2019/Nov/woodville/preview/woodville_grey.jpg)]({{site.url}}/content/images/2019/Nov/woodville/woodville_grey_4k.jpg)
 
-[![Figure 26: Final image. Click for 4K version.](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/preview/woodville_full.jpg)](/Users/karlli/Dropbox/Karl/Projects/CodeAndVisuals/betajippity.github.io/content/images/2019/Nov/woodville/woodville_full_4k.jpg)
+[![Figure 26: Final image. Click for 4K version.]({{site.url}}/content/images/2019/Nov/woodville/preview/woodville_full.jpg)]({{site.url}}/content/images/2019/Nov/woodville/woodville_full_4k.jpg)
 
 Overall, I had a lot of fun on this project, and I learned an enormous amount!
 This project was probably the most complex and difficult art project I've ever done.

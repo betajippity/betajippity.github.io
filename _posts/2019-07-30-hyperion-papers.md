@@ -107,6 +107,7 @@ This post is meant to be a living document; I'll come back and update it down th
     
     * [Preprint Version](https://drive.google.com/open?id=1kJfJId-I5DjhUnHH-Q6fgsrNc7ZW1MIq)
     * [Official Pixar Research Version and Project Page](http://graphics.pixar.com/library/ApproxBSSRDF/)
+    * [Updates and Errata](https://www.seanet.com/~myandper/abstract/memo1504.htm)
 
     Joint project between Pixar and Disney Animation. This paper presents several useful parameterizations for the normalized diffusion subsurface scattering model presented in the previous paper in this list. These parameterizations are used for the normalized diffusion implementation in [Pixar's RenderMan 21](https://rmanwiki.pixar.com/display/REN/PxrSurface) and later.
 

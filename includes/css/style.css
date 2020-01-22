@@ -453,6 +453,10 @@ a.nav:active {
     color: #4183C4;;
 }
 
+.figcaption a:active {
+    color: #ff0000;;
+}
+
 main.content {
     margin-top: -2em;
 }

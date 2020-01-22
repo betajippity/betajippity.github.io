@@ -442,7 +442,15 @@ a.nav:active {
 }
 
 .figcaption a:link {
-    color: #ff0000;
+    color: #4183C4;;
+}
+
+.figcaption a:hover {
+    color: #ff0000;;
+}
+
+.figcaption a:visited {
+    color: #4183C4;;
 }
 
 main.content {

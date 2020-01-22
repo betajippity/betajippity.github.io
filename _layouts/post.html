@@ -8,11 +8,11 @@ page-template: post-template
 
             <h2 class="post-title">{{page.title}}</h2>
             <span class="post-meta">{{ page.date | date: "%B %d, %Y" }} 
-                {{#if page.tags}} | Tags: 
+                {{if page.tags}} | Tags: 
                     {% for tag in page.tags %} 
                         {{tag}}{% unless forloop.last %},{% endunless %}
                     {% endfor %}  
-                {{/if}}</span>
+                {{if}}</span>
 
             <section class="post-content">
                 {{content}}
@@ -20,11 +20,11 @@ page-template: post-template
 
             <footer class="post-footer">
 
-            {{#if page.author}}
+            {{if page.author}}
                 <section class="author">
                     <h4>by {{page.author}}</h4>
                 </section>
-            {{/if}}
+            {{if}}
 
         </footer>
     </article>

@@ -370,4 +370,5 @@ Finally, here is a list of all publicly released and announced projects to date 
 **Filmmaker Co-op Shorts**: [Weeds](https://www.imdb.com/title/tt7592274/) (2017)
 
 <sup>1</sup> VR project running on Unreal Engine, with shading and textures baked out of Disney's Hyperion Renderer.
+
 <sup>2</sup> VR project running on Unity, with shading and textures baked out of Disney's Hyperion Renderer.

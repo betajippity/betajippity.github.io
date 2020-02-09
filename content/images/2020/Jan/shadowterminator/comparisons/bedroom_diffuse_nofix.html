@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>No Normal Mapping vs. No Fix</title>
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+        <link rel="stylesheet" href="/includes/css/style.css">
+        <link rel="stylesheet" href="https://use.typekit.net/yap3ink.css">
+    </head>
+        
+    <body>
+        <link type="text/css" href="before-after.css" rel="stylesheet">
+
+        <div class="ba-slider" style="max-width:3840px; margin: auto;">
+            <img src="../bedroom.none.pt.0.jpg">
+            <div class="resize">
+                <img src="../bedroom.diffuse.pt.0.jpg">
+            </div>
+            <span class="handle"></span>
+        </div>
+
+        <div class="figcaption">Figure 4: The bedroom scene rendered in Takua Render using no normal mapping (left) and normal mapping with no harsh shadow terminator fix (right).</div>
+
+        <script type="text/javascript" src="/includes/js/jquery.min.js"></script>
+        <!-- <script type="text/javascript" src="before-after.min.js"></script> -->
+        <!-- CDN link if you prefer to use this one -->
+        <script type="text/javascript" src="before-after.js"></script>
+        <script type="text/javascript">
+            $('.ba-slider').beforeAfter();
+        </script>
+    </body>
+
+</html>

@@ -187,11 +187,14 @@ My implementation is just the sample implementation streamlined into a single fu
     }
 
 Finally, I have a handful of small implementation notes.
-First, to apply either Chiang 2019 or Estevez 2019 to your existing physically based shading model, just multiply the additional shadow terminator term with your diffuse lobe's contribution.
-If your Bsdf supports multiple shading normals for different specular lobes... admittedly I'm not entire sure how to handle that case, but my intuition is that applying the additional shadow terminator term for each separate lobe's shading normal is probably not the right answer, since it'll lead to over-darkening.
+First, to apply either Chiang 2019 or Estevez 2019 to your existing physically based shading model, just multiply the additional shadow terminator term with the contribution for each lobe that needs adjusting.
+Technically speaking G' is an adjustment to the G shadowing term in a standard microfacet model, but multiplying there versus multiplying with the overall lobe contribution works out to be the same thing.
+If your Bsdf supports multiple shading normals for different specular lobes, you'll need to calculate a separate shadow terminator term for each shading normal.
 Second, note that both Chiang 2019 and Estevez 2019 are described with respect to unidirectional path tracing from the camera.
 This frame of reference is very important; both techniques work specifically based on the outgoing direction being the direction towards a potential light source, meaning that this technique actually isn't reciprocal by default.
-In order to make both techniques compatible with bidirectional path tracing integrators, I add in a check for whether the incoming or outgoing direction is pointed at a light, and feed the appropriate direction into the shadow terminator function; this is similar to the check one has to carry out when applying adjoint Bsdf adjustments [(Veach 1996)](https://graphics.stanford.edu/papers/non-symmetric/) for shading normals and refraction.
+The Estevez 2019 paper found that the shadow terminator term can be made reciprocal by just applying the term to both incoming and outgoing directions, but they also found that this adjustment can make edges too dark.
+Instead, in order to make both techniques compatible with bidirectional path tracing integrators, I add in a check for whether the incoming or outgoing direction is pointed at a light, and feed the appropriate direction into the shadow terminator function.
+Doing this check is enough to make my bidirectional renders match my unidirectional ones; intuitively this approach is similar to the check one has to carry out when applying adjoint Bsdf adjustments [(Veach 1996)](https://graphics.stanford.edu/papers/non-symmetric/) for shading normals and refraction.
 
 That's pretty much it!
 If you want the details for how these two techniques are derived and why they work, I strongly encourage reading the Estevez 2019 chapter in Ray Tracing Gems and reading through both the short paper and the presentation slides / notes for the Chiang 2019 SIGGRAPH talk..

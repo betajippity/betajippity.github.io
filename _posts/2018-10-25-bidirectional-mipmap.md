@@ -429,8 +429,6 @@ In a future post, I'll show a bunch of interesting renders of this scene from di
 
 [![Figure 9: The forest at sunset.]({{site.url}}/content/images/2018/Oct/preview/forest_sunset.0.jpg)]({{site.url}}/content/images/2018/Oct/forest_sunset.0.jpg)
 
----
-
 **References**
 
 John Amanatides. 1984. [Ray Tracing with Cones](https://dl.acm.org/citation.cfm?id=808589). _Computer Graphics (Proceedings of SIGGRAPH)_ 18, 3 (1984), 129-135.

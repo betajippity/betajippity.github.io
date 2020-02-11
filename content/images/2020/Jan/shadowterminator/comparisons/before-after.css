@@ -25,10 +25,10 @@ SOFTWARE. */
 .ba-slider {
     position: relative;
     overflow: hidden;
-    margin-left: -10;
+    /* margin-left: -10;
     margin-right: -7.5;
     margin-top: -10;
-    margin-bottom: -7.5;
+    margin-bottom: -7.5; */
 }
  
 .ba-slider img {

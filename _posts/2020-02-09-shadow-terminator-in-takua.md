@@ -157,7 +157,7 @@ Let G' be the additional shadow terminator term that we will multiply the Bsdf r
         float NDotL = max(0.0f, dot(shadingNormal, outputDirection));
         float NGeomDotL = max(0.0f, dot(geometricNormal, outputDirection));
         float NGeomDotN = max(0.0f, dot(geometricNormal, shadingNormal));
-        if (abs(NDotL) < 0.0f || abs(NGeomDotL) < 0.0f || abs(NGeomDotN) < 0.0f) {
+        if (NDotL == 0.0f || NGeomDotL == 0.0f || NGeomDotN == 0.0f) {
             return 0.0f;
         } else {
             float G = NGeomDotL / (NDotL * NGeomDotN);
@@ -206,5 +206,9 @@ Matt Jen-Yuan Chiang, Yining Karl Li, and Brent Burley. 2019. [Taming the Shadow
 Alejandro Conty Estevez, Pascal Lecocq, and Clifford Stein. 2019. [A Microfacet-Based Shadowing Function to Solve the Bump Terminator Problem](https://link.springer.com/chapter/10.1007/978-1-4842-4427-2_12). _Ray Tracing Gems_ (2019), 149-158.
 
 Eric Veach. 1996. [Non-Symmetric Scattering in Light Transport Algorithms](https://graphics.stanford.edu/papers/non-symmetric/). In _Rendering Techniques 1996 (Proceedings of the 7th Eurographics Workshop on Rendering)_. 82-91.
+
+**Errata**
+
+Thanks to Matt Pharr for noticing and pointing out a minor bug in the calculateChiang2019ShadowTerminatorTerm() implementation; the code has been updated with a fix. 
 
 </div>

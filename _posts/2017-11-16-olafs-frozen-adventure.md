@@ -20,10 +20,11 @@ Olaf's Frozen Adventure is rendered entirely with Disney's [Hyperion Renderer](h
 While both films used our Disney BRDF [(Burley 2012)](https://doi.org/10.1145/2343483.2343493) and Ptex [(Burley and Lacewell 2008)](https://doi.org/10.1111/j.1467-8659.2008.01253.x), Olaf's Frozen Adventure benefits from all of the improvements and advancements that have been made during Big Hero 6, Zootopia, and Moana.
 The original Frozen used dipole subsurface scattering, radiosity caching, and generally had fairly low geometric complexity relative to Hyperion-era films.
 In comparison, Olaf's Frozen Adventure uses brute force subsurface scattering, uses path-traced global illumination, uses the full Disney BSDF (which is significantly extended from the Disney BRDF) [(Burley 2015)](https://doi.org/10.1145/2776880.2787670), uses our advanced fur/hair shader developed during Zootopia [Chiang et al. 2016](https://doi.org/10.1111/cgf.12830), and has much greater geometric complexity.
-Some shots even utilize an extended version of the photon mapped caustics we developed during Moana.
-Extensions to our photon mapping system is one of the things I worked on for Olaf's Frozen Adventure.
+A great example of the greater geometric complexity is the knitted scarf sequence [(Staub et al. 2018)](https://doi.org/10.1145/3214745.3214817), where 2D animation was brought into Hyperion as a texture map to drive the colors on a knitted scarf that was modeled and rendered down to the fiber level.
+Some shots even utilize an extended version of the photon mapped caustics we developed during Moana; the photon mapped caustics system on Moana only supported distant lights as a photon source, but for Olaf's Frozen Adventure, the photon mapping system was extended to support all of Hyperion's existing light types as photon sources.
+These extensions to our photon mapping system is one of the things I worked on for Olaf's Frozen Adventure, and was used for lighting the ice crystal tree that Elsa creates at the end of the film.
 Even the water in Arendelle Harbor looks way better than in Frozen, since the FX artists were able to make use of the incredible water systems developed for Moana [(Palmer et al. 2017)](https://doi.org/10.1145/3084363.3085067).
-All of these advancements are discussed in our SIGGRAPH 2017 Course Notes [(Burley et al. 2017)](http://www.yiningkarlli.com/projects/ptcourse2017.html).
+Many of these advancements are discussed in our SIGGRAPH 2017 Course Notes [(Burley et al. 2017)](http://www.yiningkarlli.com/projects/ptcourse2017.html).
 
 One of the huge advantages to working on an in-house production rendering team in a vertically integrated studio is being able to collaborate and partner closely with productions on executing long-term technical visions.
 Because of the show leadership's confidence in our long-term development efforts targeted at later shows, the artists on Olaf's Frozen Adventure were willing to take on and try out early versions of a number of new features in Hyperion that were originally targeted at later shows.
@@ -141,4 +142,6 @@ Peter Kutz, Ralf Habel, Yining Karl Li, and Jan Novák. 2017. [Spectral and Deco
 
 Jan Novák, Andrew Selle, and Wojciech Jarosz. 2014. [Residual Ratio Tracking for Estimating Attenuation in Participating Media](https://doi.org/10.1145/2661229.2661292). _ACM Transactions on Graphics_. 33, 6 (2014), 179:1-179:11.
 
-Sean Palmer, Jonathan Garcia, Sara Drakeley, Patrick Kelly, and Ralf Habel. 2017. [The Ocean and Water Pipeline of Disney’s Moana](https://dl.acm.org/citation.cfm?id=3085067). In _ACM SIGGRAPH 2017, Talks_. 29:1-29:2.
+Sean Palmer, Jonathan Garcia, Sara Drakeley, Patrick Kelly, and Ralf Habel. 2017. [The Ocean and Water Pipeline of Disney’s Moana](https://doi.org/10.1145/3084363.3085067). In _ACM SIGGRAPH 2017, Talks_. 29:1-29:2.
+
+Josh Staub, Alessandro Jacomini, Dan Lund. 2018. [The Handiwork Behind "Olaf's Frozen Adventure"](https://doi.org/10.1145/3214745.3214817). In _ACM SIGGRAPH 2018, Talks_. 26:1-26:2.

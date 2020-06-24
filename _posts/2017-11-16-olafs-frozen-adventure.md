@@ -53,7 +53,7 @@ We realized that this problem is essentially identical to the problem of renderi
 Since null-collision volume integration is specifically very efficient at handling high-order scattering, we gave the artists an early prototype version of Hyperion's new volume rendering system to experiment with rendering loose fluffy snow as a volume.
 The initial results looked great; I'm not sure if this approach wound up being used in the final film, but this experiment gave both us and the artists a lot of confidence in the new volume rendering system and provided valuable feedback.
 
-As usual with Disney Animation projects I get to work on, here are some stills in no particular order, pulled from marketing material.
+As usual with Disney Animation projects I get to work on, here are some stills in no particular order, from the film.
 Even though Olaf's Frozen Adventure was originally meant for TV, the whole studio still put the same level of effort into it that goes into full theatrical features, and I think it shows!
 
 [![]({{site.url}}/content/images/2017/Nov/preview/LOAF_01.jpg)]({{site.url}}/content/images/2017/Nov/LOAF_01.png)
@@ -110,11 +110,11 @@ Even though Olaf's Frozen Adventure was originally meant for TV, the whole studi
 
 [![]({{site.url}}/content/images/2017/Nov/preview/LOAF_16.jpg)]({{site.url}}/content/images/2017/Nov/LOAF_16.png)
 
-All images in this post are courtesy of and the property of Walt Disney Animation Studios.
-
 Here is a credits frame with my name! I wasn't actually expecting to get a credit on Olaf's Frozen Adventure, but because I had spent a lot of time supporting the show and working with artists on deploying experimental Hyperion features to solve particularly difficult shots, the show decided to give me a credit! I was very pleasantly surprised by that; my teammate Matt Chiang got a credit as well for similar reasons.
 
 [![]({{site.url}}/content/images/2017/Nov/preview/LOAF_credits.jpg)]({{site.url}}/content/images/2017/Nov/LOAF_credits.png)
+
+All images in this post are courtesy of and the property of Walt Disney Animation Studios.
 
 ---
 
@@ -132,7 +132,7 @@ Brent Burley and Dylan Lacewell. 2008. [Ptex: Per-face Texture Mapping for Produ
 
 Matt Jen-Yuan Chiang, Benedikt Bitterli, Chuck Tappan, and Brent Burley. 2016. [A Practical and Controllable Hair and Fur Model for Production Path Tracing](https://doi.org/10.1111/cgf.12830). _Computer Graphics Forum_. 35, 2 (2016), 275-283.
 
-Matt Jen-Yuan Chiang, Peter Kutz, and Brent Burley. 2016. [Practical and Controllable Subsurface Scattering for Production Path Tracing](https://doi.org/10.1145/2897839.2927433). In _ACM SIGGRAPH 2016 Talks_. 49:1-49:1.
+Matt Jen-Yuan Chiang, Peter Kutz, and Brent Burley. 2016. [Practical and Controllable Subsurface Scattering for Production Path Tracing](https://doi.org/10.1145/2897839.2927433). In _ACM SIGGRAPH 2016 Talks_. 49:1-49:2.
 
 Christian Eisenacher, Gregory Nichols, Andrew Selle, and Brent Burley. 2013. [Sorted Deferred Shading for Production Path Tracing](https://doi.org/10.1111/cgf.12158). _Computer Graphics Forum_. 32, 4 (2013), 125-132.
 

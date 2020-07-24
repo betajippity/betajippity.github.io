@@ -9,7 +9,7 @@ Every once in a while, I make a [point of spending some significant personal tim
 A few times each year, Pixar's RenderMan group holds an art challenge contest where Pixar provides a un-shaded un-uv'd base model and contestants are responsible for layout, texturing, shading, lighting, additional modeling of supporting elements and surrounding environment, and producing a final image.
 I thought the [most recent RenderMan art challenge, "Woodville"](https://renderman.pixar.com/news/renderman-woodville-art-challenge), would make a great excuse for playing with RenderMan 22 for Maya; here's the final image I came up with:
 
-[![Figure 1: My entry to Pixar's RenderMan Woodville Art Challenge. Base treehouse model is from Pixar; all shading, lighting, additional modeling, and environments are mine. Concept by Vasylina Holod. Model by Alex Shilt © Disney / Pixar - RenderMan "Woodville" Art Challenge.]({{site.url}}/content/images/2019/Nov/woodville/preview/woodville_full.jpg)]({{site.url}}/content/images/2019/Nov/woodville/woodville_full_4k.jpg)
+[![Figure 1: My entry to Pixar's RenderMan Woodville Art Challenge, titled "Morning Retreat". Base treehouse model is from Pixar; all shading, lighting, additional modeling, and environments are mine. Concept by Vasylina Holod. Model by Alex Shilt © Disney / Pixar - RenderMan "Woodville" Art Challenge.]({{site.url}}/content/images/2019/Nov/woodville/preview/woodville_full.jpg)]({{site.url}}/content/images/2019/Nov/woodville/woodville_full_4k.jpg)
 
 One big lesson I have learned since entering the rendering world is that there is no such thing as the absolute best overall renderer- there are only renderers that are the best suited for particular workflows, tasks, environments, people, etc.
 Every in-house renderer is the best renderer in the world for the particular studio that built that renderer, and every commercial renderer is the best renderer in the world for the set of artists that have chosen that renderer as their tool of choice.
@@ -22,6 +22,8 @@ All of these renderers are excellent, cutting edge tools, and when new artists j
 Therefore, knowing how these four renderers work and what vocabulary is associated with them tends to be useful when teaching new artists how to use our in-house renderer, and for providing a common frame of reference when we discuss potential improvements and changes to our in-house renderer.
 All of the above is the mindset I went into this project with, so this post is meant to be something of a breakdown of what I did, along with some thoughts and observations made along the way.
 This was a really fun exercise, and I learned a lot!
+
+**Layout and Framing**
 
 For this art challenge, Pixar [supplied a base model](https://renderman.pixar.com/woodville-pup-asset) without any sort texturing or shading or lighting or anything else.
 The model is by Alex Shilt, based on a concept by Vasylina Holod.
@@ -50,6 +52,8 @@ Second, I felt that this angle would allow me to limit how expansive of an envir
 I decided around this point to put the treehouse in a big mountainous mixed coniferous forest, with the reasoning being that tree trunks as large as the ones in the treehouse could only come from huge redwood trees, which only grow in mountainous coniferous forests.
 With this camera angle, I could make the background environment a single mountainside covered in trees and not have to build a wider vista.
 
+**UVs and Geometry**
+
 The next step that I took was to try to shade the main tree trunks, since the scale of the tree trunks worried me the most about the entire project.
 Before I could get to texturing and shading though, I first had to UV-map the tree trunks, and I quickly discovered that before I could even UV-map the tree trunks, I would have to retopologize the meshes themselves, since the tree trunk meshes came with some really messy topology that was basically un-UV-able.
 I retoplogized the mesh in ZBrush and exported it lower res than the original mesh, and then brought it back into Maya, where I used a shrink-wrap deformer to conform the lower res retopologized mesh back onto the original mesh.
@@ -62,12 +66,12 @@ In previous projects, I've found a lot of success in using [Wenzel Jakob's Insta
 I UV-unwrapped the remeshed tree trunks by hand; the general approach I took was to slice the tree trunks into a series of stacked cylinders and then unroll each cylinder into as rectangular of a UV shell as I could.
 For texturing, I started with some photographs of redwood bark I found online, turned them greyscale in Photoshop and adjusted levels and contrast to produce height maps, and then took the height maps and source photographs into Substance Designer, where I made the maps tile seamlessly and also generated normal maps.
 I then took the tileable textures into Substance Painter and painted the tree trunks using a combination of triplanar projections and manual painting.
-At this point, I has also blocked in a temporary forest in the background made from just instancing two or three tree models all over the place, which I found useful for being able to help get a sense of how the shading on the treehouse was working in context:
+At this point, I had also blocked in a temporary forest in the background made from just instancing two or three tree models all over the place, which I found useful for being able to help get a sense of how the shading on the treehouse was working in context:
 
 [![Figure 8: In-progress test render with shaded tree trunks and temporary background forest blocked in.]({{site.url}}/content/images/2019/Nov/woodville/progress016.jpg)]({{site.url}}/content/images/2019/Nov/woodville/progress016.jpg)
 
 Next up, I worked on getting base shading done for the cabins and various bits and bobs on the treehouse.
-The general approach I took for the entire treehouse was to do base texturing and shading in Substance Painter, and then add wear and tear, aging, and moss in RenderMan through procedural[PxrLayerSurface](https://rmanwiki.pixar.com/display/REN22/PxrLayerSurface) layers driven by a combination of procedural [PxrRoundCube](https://rmanwiki.pixar.com/display/REN22/PxrRoundCube) and [PxrDirt](https://rmanwiki.pixar.com/display/REN22/PxrDirt) nodes and hand-painted dirt and wear masks.
+The general approach I took for the entire treehouse was to do base texturing and shading in Substance Painter, and then add wear and tear, aging, and moss in RenderMan through procedural [PxrLayerSurface](https://rmanwiki.pixar.com/display/REN22/PxrLayerSurface) layers driven by a combination of procedural [PxrRoundCube](https://rmanwiki.pixar.com/display/REN22/PxrRoundCube) and [PxrDirt](https://rmanwiki.pixar.com/display/REN22/PxrDirt) nodes and hand-painted dirt and wear masks.
 First though, I had to UV-unwrap all of the cabins and stuff.
 I tried using [Houdini's Auto UV SOP](https://www.sidefx.com/tutorials/houdini-game-dev-tools-auto-uvs/) that comes with Houdini's Game Tools package... the result (for an example, see Figure 9) was really surprisingly good!
 In most cases I still had to do a lot of manual cleanup work, such as re-stitching some UV shells together and re-laying-out all of the shells, but the output from Houdini's Auto UV SOP provided a solid starting point.
@@ -76,6 +80,8 @@ This entire process was... not really fun... it took a lot of time and was basic
 I vastly prefer being able to paint Ptex instead of having to UV-unwrap and lay out UDIM tiles, but since I was using Substance Painter, Ptex wasn't an option on this project.
 
 [![Figure 9: Example of one of the cabins run through Houdini's Auto UV SOP. The cabin is on the left; the output UVs are on the right.]({{site.url}}/content/images/2019/Nov/woodville/houdini-auto-uv.jpg)]({{site.url}}/content/images/2019/Nov/woodville/houdini-auto-uv.jpg)
+
+**Texturing in Substance Painter and Shading**
 
 In Substance Painter, the general workflow I used was to start with multiple triplanar projections of (heavily edited) Quixel Megascans surfaces masked and oriented to different sections of a surface, and then paint on top.
 Through this process, I was able to get bark to flow with the curves of each log and whatnot.
@@ -121,6 +127,8 @@ With everything shaded and the geometric modifications in place, here is how eve
 
 [![Figure 12: In-progress test render with initial fully shaded treehouse, along with geoemtric modifications. Click for 4K version.]({{site.url}}/content/images/2019/Nov/woodville/preview/progress085.jpg)]({{site.url}}/content/images/2019/Nov/woodville/progress085_4k.jpg)
 
+**Set Dressing the Treehouse**
+
 The next major step was adding some story elements.
 I wanted the treehouse to feel lived in, like the treehouse is just somebody's house (a very unusual house, but a house nonetheless).
 To help convey that feeling, my plan was to rely heavily on set dressing to hint at the people living here.
@@ -143,6 +151,8 @@ Many of the furniture, plant and prop models are highly modified, kitbashed, re-
 [![Figure 13: In-progress test render closeup crop of the lower main cabin, with furniture and plants and props.]({{site.url}}/content/images/2019/Nov/woodville/preview/progress096_crop1.jpg)]({{site.url}}/content/images/2019/Nov/woodville/progress096_crop1.jpg)
 
 [![Figure 14: In-progress test render closeup crop of the glass round cabin and the upper smaller cabin, with furniture and plants and props.]({{site.url}}/content/images/2019/Nov/woodville/preview/progress096_crop2.jpg)]({{site.url}}/content/images/2019/Nov/woodville/progress096_crop2.jpg)
+
+**Building the Background Forest**
 
 The last step before final lighting was to build a more proper background forest, as a replacement for the temporary forest I had used up until this point for blocking purposes.
 For this step, I relied heavily on Maya's MASH toolset, which I found to provide a great combination of power and ease-of-use; for use cases involving tons of instanced geometry, I certainly found it much easier than Maya's older Xgen toolset.
@@ -175,6 +185,8 @@ I didn't have extensive experience working with volumes in RenderMan before this
 I made the mist by just having a Maya Volume Noise node plug into the density field of a PxrVolume; this isn't anything fancy, but it provided a great start for the mist/fog:
 
 [![Figure 18: In-progress test render of the background forest with an initial version of mist and fog.]({{site.url}}/content/images/2019/Nov/woodville/preview/forest_progress051.jpg)]({{site.url}}/content/images/2019/Nov/woodville/forest_progress051.jpg)
+
+**Lighting and Compositing**
 
 At this point, I think the entire image together was starting to look pretty good, although, without any final shot lighting, the overall vibe felt more like a spread out of an issue of National Geographic than a more cinematic still out of a film.
 Normally my instinct is to go with a more naturalistic look, but since part of the objective for this project was to learn to use RenderMan's lighting toolset for more cinematic applications, I wanted to push the overall look of the image beyond this point:
@@ -225,6 +237,8 @@ Figure 25 shows what all of the lighting, comp, and color grading looks like app
 [![Figure 25: Final lighting, comp, and color grading applied to a 50% grey clay shaded version. Click for 4K version.]({{site.url}}/content/images/2019/Nov/woodville/preview/woodville_grey.jpg)]({{site.url}}/content/images/2019/Nov/woodville/woodville_grey_4k.jpg)
 
 [![Figure 26: Final image. Click for 4K version.]({{site.url}}/content/images/2019/Nov/woodville/preview/woodville_full.jpg)]({{site.url}}/content/images/2019/Nov/woodville/woodville_full_4k.jpg)
+
+**Conclusion**
 
 Overall, I had a lot of fun on this project, and I learned an enormous amount!
 This project was probably the most complex and difficult art project I've ever done.

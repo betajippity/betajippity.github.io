@@ -12,7 +12,7 @@ We didn't show too many comparisons between the two techniques (which I'll refer
 For a recap of the harsh shadow terminator problem, please see either the Estevez paper or the slides from the Chiang talk, which both do excellent jobs of describing the problem and why it happens in detail.
 Here's a small scene that I made for this post, thrown together using some Evermotion assets that I had sitting around:
 
-[![Figure 1: A simple bedroom scene, rendered in Takua Render. This image was rendered using the Chiang 2019 shadow terminator solution.](/content/images/2020/Jan/shadowterminator/preview/bedroom.chiang.pt.0.jpg)](/content/images/2020/Jan/shadowterminator/bedroom.chiang.pt.0.jpg)
+[![Figure 1: A simple bedroom scene, rendered in Takua Render. This image was rendered using the Chiang 2019 shadow terminator solution.]({{site.url}}/content/images/2020/Jan/shadowterminator/preview/bedroom.chiang.pt.0.jpg)]({{site.url}}/content/images/2020/Jan/shadowterminator/bedroom.chiang.pt.0.jpg)
 
 In this scene, all of the blankets and sheets and pillows on the bed use a fabric material that uses extremely high-frequency, high-resolution normal maps to achieve the fabric-y fiber-y look.
 Because of these high-frequency normal maps, the bedding is susceptible to the harsh shadow terminator problem.

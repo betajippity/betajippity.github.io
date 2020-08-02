@@ -512,6 +512,9 @@ This approach allows for separating how the light itself looks versus what kind 
 The overall fill lighting and time of day is provided by the skydome, which is of an overcast sky at dusk.
 I waffled back and forth for a while between a more mid-day setting versus a dusk setting, but eventually settled on the dusk skydome since the overall darker time of day allows the practical lights to stand out more.
 I think allowing the background trees to fade almost completely to black actually helps a lot in keeping the focus of the image on the main story elements in the foreground.
+One feature of RenderMan 23 that really helped in quickly testing different lighting setups and iterating on ideas was RenderMan's IPR mode, which has come a long way since RendermMan first moved to path tracing.
+In fact, throughout this whole project, I used the IPR mode extensively for both shading tests and for the lighting process.
+I have a lot of thoughts about the huge, compelling improvements to artist workflows that will be brought by even better interactivity (RenderMan XPU is very exciting!), but writing all of those thoughts down is probably better material for a different blog post in the future.
 
 In total I had five lighting render layers: the key from the lampposts, the foreground rim and background fill from the floodlights, overall fill from the skydome, and two practicals layers for the visible-to-camera parts of all of the practical lights.
 Below are the my lighting render layers, although with the two practicals layers merged:

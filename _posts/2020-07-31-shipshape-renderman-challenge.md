@@ -622,7 +622,7 @@ Eric Heitz and Fabrice Neyret. 2018. [High-Performance By-Example Noise using a 
 
 Christophe Hery and Junyi Ling. 2017. [Pixar's Foundation for Materials: PxrSurface and PxrMarschnerHair](http://graphics.pixar.com/library/PxrMaterialsCourse2017/index.html). In [_ACM SIGGRAPH 2017 Course Notes: Physically Based Shading in Theory and Practice_](https://blog.selfshadow.com/publications/s2017-shading-course/).
 
-Christophe Hery, Ryusuke Villemin, and Florian Hecht. 2016. [Towards Bidirectional Path Tracing at Pixar](http://graphics.pixar.com/library/BiDir/). In [_ACM SIGGRAPH 2016 Course Notes: Physically Based Shading in Theory and Practice](https://blog.selfshadow.com/publications/s2016-shading-course/).
+Christophe Hery, Ryusuke Villemin, and Florian Hecht. 2016. [Towards Bidirectional Path Tracing at Pixar](http://graphics.pixar.com/library/BiDir/). In [_ACM SIGGRAPH 2016 Course Notes: Physically Based Shading in Theory and Practice_](https://blog.selfshadow.com/publications/s2016-shading-course/).
 
 Julian Fong, Magnus Wrenninge, Christopher Kulla, and Ralf Habel. 2017. [Production Volume Rendering](https://doi.org/10.1145/3084873.3084907). In _ACM SIGGRAPH 2017 Courses_.
 

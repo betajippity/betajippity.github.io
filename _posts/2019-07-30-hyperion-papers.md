@@ -18,7 +18,7 @@ Without a doubt, Hyperion, and by extension, our movies, would not be what they 
 Of course, we also collaborate closely with our sister rendering teams at [Pixar Animation Studios](https://www.pixar.com) and [Industrial Light & Magic](https://www.ilm.com) as well, and there are numerous examples where collaboration between all of these teams has advanced the state of the art in rendering for the whole industry.
 
 So without further ado, below are all of the papers that the Hyperion team has published or worked on or had involvement with over the years, either by ourselves or with our counterparts at Disney Research Studios, Pixar, ILM, and other research groups.
-If you've ever been curious to learn more about Disney's Hyperion Renderer, here are 33 publications with a combined 391 pages of material!
+If you've ever been curious to learn more about Disney's Hyperion Renderer, here are 34 publications with a combined 393 pages of material!
 For each paper, I'll link to a preprint version, link to the official publisher's version, and link any additional relevant resources for the paper.
 I'll also give the citation information, give a brief description, list the teams involved, and note how the paper is relevant to Hyperion.
 This post is meant to be a living document; I'll come back and update it down the line with future publications. Publications are listed in chronological order.
@@ -343,6 +343,15 @@ This post is meant to be a living document; I'll come back and update it down th
     * [Official Publisher's Version](http://www.jcgt.org/published/0008/04/02/)
 
     Internal project from Disney Animation. This paper describes some modiciations to the histogram-preserving hex-tiling algorithm of Heitz and Neyret; these modifications make implementing the Heitz and Neyret technique easier and more efficient. This paper describes Hyperion's implementation of the technique, in use in production starting on *Frozen 2* through present.
+
+34. **The Look and Lighting of "Show Yourself" in "Frozen 2"**
+
+    [Amol Sathe](https://dl.acm.org/author/Sathe,%20Amol), [Lance Summers](https://dl.acm.org/author/Summers,%20Lance), [Matt Jen-Yuan Chiang](http://dl.acm.org/author_page.cfm?id=99658729701&coll=DL&dl=ACM&trk=0), and [James Newland](https://dl.acm.org/author/Newland,%20James). The Look and Lighting of "Show Yourself" in "Frozen 2". In *ACM SIGGRAPH 2020 Talks*, August 2020.
+
+    * [Preprint Version](https://drive.google.com/file/d/1XVyhzCP_RDusyrfrsKlR8hIuq0fs_WJF/edit)
+    * [Official Publisher's Version](https://doi.org/10.1145/3388767.3407388)
+
+    Internal project from Disney Animation. This paper describes some of the unusual challenges encountered in lighting the glacier environment from Frozen 2 using Hyperion, and includes a description of a new tabulation-based approach to microfacet multiple scattering implemented in Hyperion.
 
 [![Figure 2: Hyperion logo, modeled by Disney Animation artist Chuck Tappan and rendered in Disney's Hyperion Renderer.]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)
 

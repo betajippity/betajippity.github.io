@@ -12,7 +12,7 @@ We didn't show too many comparisons between the two techniques (which I'll refer
 For a recap of the harsh shadow terminator problem, please see either the Estevez paper or the slides from the Chiang talk, which both do excellent jobs of describing the problem and why it happens in detail.
 Here's a small scene that I made for this post, thrown together using some Evermotion assets that I had sitting around:
 
-[![Figure 1: A simple bedroom scene, rendered in Takua Render. This image was rendered using the Chiang 2019 shadow terminator solution.]({{site.url}}/content/images/2020/Jan/shadowterminator/preview/bedroom.chiang.pt.0.jpg)]({{site.url}}/content/images/2020/Jan/shadowterminator/bedroom.chiang.pt.0.jpg)
+[![Figure 1: A simple bedroom scene, rendered in Takua Renderer. This image was rendered using the Chiang 2019 shadow terminator solution.]({{site.url}}/content/images/2020/Jan/shadowterminator/preview/bedroom.chiang.pt.0.jpg)]({{site.url}}/content/images/2020/Jan/shadowterminator/bedroom.chiang.pt.0.jpg)
 
 In this scene, all of the blankets and sheets and pillows on the bed use a fabric material that uses extremely high-frequency, high-resolution normal maps to achieve the fabric-y fiber-y look.
 Because of these high-frequency normal maps, the bedding is susceptible to the harsh shadow terminator problem.
@@ -25,15 +25,15 @@ Below are some interactive comparisons between renders using Chiang 2019, Esteve
 
 <div class='embed-container'>
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/bedroom_chiang_nofix_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
-<div class="figcaption">Figure 2: The bedroom scene rendered in Takua Render using Chiang 2019 (left) and no harsh shadow terminator fix (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bedroom_chiang_nofix.html">click here.</a></div>
+<div class="figcaption">Figure 2: The bedroom scene rendered in Takua Renderer using Chiang 2019 (left) and no harsh shadow terminator fix (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bedroom_chiang_nofix.html">click here.</a></div>
 <p>
 <div class='embed-container'>
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/bedroom_chiang_estevez_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
-<div class="figcaption">Figure 3: The bedroom scene rendered in Takua Render using Chiang 2019 (left) and Estevez 2019 (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bedroom_chiang_estevez.html">click here.</a></div>
+<div class="figcaption">Figure 3: The bedroom scene rendered in Takua Renderer using Chiang 2019 (left) and Estevez 2019 (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bedroom_chiang_estevez.html">click here.</a></div>
 <p>
 <div class='embed-container'>
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/bedroom_diffuse_nofix_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
-<div class="figcaption">Figure 4: The bedroom scene rendered in Takua Render using no normal mapping (left) and normal mapping with no harsh shadow terminator fix (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bedroom_diffuse_nofix.html">click here.</a></div>
+<div class="figcaption">Figure 4: The bedroom scene rendered in Takua Renderer using no normal mapping (left) and normal mapping with no harsh shadow terminator fix (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bedroom_diffuse_nofix.html">click here.</a></div>
 
 <div markdown="1">
 
@@ -50,15 +50,15 @@ Seeing how everything plays out in this type of a lighting setup is useful, sinc
 
 <div class='embed-container'>
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/bed_chiang_nofix_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
-<div class="figcaption">Figure 5: The bed in a studio lighting setup, rendered in Takua Render using Chiang 2019 (left) and no harsh shadow terminator fix (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bed_chiang_nofix.html">click here.</a></div>
+<div class="figcaption">Figure 5: The bed in a studio lighting setup, rendered in Takua Renderer using Chiang 2019 (left) and no harsh shadow terminator fix (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bed_chiang_nofix.html">click here.</a></div>
 <p>
 <div class='embed-container'>
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/bed_chiang_estevez_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
-<div class="figcaption">Figure 6: The bed in a studio lighting setup, rendered in Takua Render using Chiang 2019 (left) and Estevez 2019 (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bed_chiang_estevez.html">click here.</a></div>
+<div class="figcaption">Figure 6: The bed in a studio lighting setup, rendered in Takua Renderer using Chiang 2019 (left) and Estevez 2019 (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bed_chiang_estevez.html">click here.</a></div>
 <p>
 <div class='embed-container'>
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/bed_diffuse_nofix_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
-<div class="figcaption">Figure 7: The bed in a studio lighting setup, rendered in Takua Render using no normal mapping (left) and normal mapping with no harsh shadow terminator fix (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bed_diffuse_nofix.html">click here.</a></div>
+<div class="figcaption">Figure 7: The bed in a studio lighting setup, rendered in Takua Renderer using no normal mapping (left) and normal mapping with no harsh shadow terminator fix (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bed_diffuse_nofix.html">click here.</a></div>
 
 <div markdown="1">
 
@@ -100,15 +100,15 @@ In the comparisons below, the differences are most noticeable in the folds and o
 
 <div class='embed-container'>
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_chiang_nofix_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
-<div class="figcaption">Figure 11: The bed lit with a single very bright light, rendered in Takua Render using Chiang 2019 (left) and no harsh shadow terminator fix (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_chiang_nofix.html">click here.</a></div>
+<div class="figcaption">Figure 11: The bed lit with a single very bright light, rendered in Takua Renderer using Chiang 2019 (left) and no harsh shadow terminator fix (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_chiang_nofix.html">click here.</a></div>
 <p>
 <div class='embed-container'>
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_chiang_estevez_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
-<div class="figcaption">Figure 12: The bed lit with a single very bright light, rendered in Takua Render using Chiang 2019 (left) and Estevez 2019 (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_chiang_estevez.html">click here.</a></div>
+<div class="figcaption">Figure 12: The bed lit with a single very bright light, rendered in Takua Renderer using Chiang 2019 (left) and Estevez 2019 (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_chiang_estevez.html">click here.</a></div>
 <p>
 <div class='embed-container'>
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_diffuse_nofix_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
-<div class="figcaption">Figure 13: The bed lit with a single very bright light, rendered in Takua Render using no normal mapping (left) and normal mapping with no harsh shadow terminator fix (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_diffuse_nofix.html">click here.</a></div>
+<div class="figcaption">Figure 13: The bed lit with a single very bright light, rendered in Takua Renderer using no normal mapping (left) and normal mapping with no harsh shadow terminator fix (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_diffuse_nofix.html">click here.</a></div>
 
 <div markdown="1">
 
@@ -144,7 +144,7 @@ Our artists at Walt Disney Animation Studios generally prefer the look of Chiang
 Fortunately, both Chiang 2019 and Estevez 2019 are both really easy to implement!
 Both techniques can be implemented in a handful of lines of code, and are easy to apply to any modern physically based shading model.
 We didn't actually include source code in our SIGGRAPH talk, mostly because we figured that translating the math from our short paper into code should be very straightforward and thus, including source code that is basically a direct transcription of the math into C++ would almost be insulting to the intelligence of the reader.
-However, since then, I've gotten a surprising number of emails asking for source code, so here's the math and the corresponding C++ code from my implementation in Takua Render.
+However, since then, I've gotten a surprising number of emails asking for source code, so here's the math and the corresponding C++ code from my implementation in Takua Renderer.
 Let G' be the additional shadow terminator term that we will multiply the Bsdf result with: 
 
 <div>\[ G = \min\bigg[1, \frac{\langle\omega_g,\omega_i\rangle}{\langle\omega_s,\omega_i\rangle\langle\omega_g,\omega_s\rangle}\bigg] \]</div>

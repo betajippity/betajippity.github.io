@@ -7,7 +7,7 @@ author: Yining Karl Li
 
 <div markdown="1">
 
-Last year, I [participated in one of Pixar's RenderMan Art Challenges](https://blog.yiningkarlli.com/2019/11/woodville-renderman-challenge.html) as a way to learn more about RenderMan [(Christensen et al. 2018)](https://dl.acm.org/citation.cfm?id=3182162) and as a way to get some exposure to tools outside of my normal day-to-day toolset (Disney's Hyperion Renderer professionally, Takua Render as a hobby and learning exercise).
+Last year, I [participated in one of Pixar's RenderMan Art Challenges](https://blog.yiningkarlli.com/2019/11/woodville-renderman-challenge.html) as a way to learn more about RenderMan [(Christensen et al. 2018)](https://dl.acm.org/citation.cfm?id=3182162) and as a way to get some exposure to tools outside of my normal day-to-day toolset (Disney's Hyperion Renderer professionally, Takua Renderer as a hobby and learning exercise).
 I had a lot of fun, and wound up doing better in the "Woodville" art challenge contest than I expected to!
 Recently, I entered another one of [Pixar's RenderMan Art Challenges, "Shipshape"](https://renderman.pixar.com/news/renderman-shipshape-art-challenge).
 This time around I entered just for fun; since I had so much fun last time, I figured why not give it another shot!
@@ -314,7 +314,7 @@ There are only four input maps required for the entire wet effect: a greyscale r
 The rivulets maps are used for the sides of a PxrRoundCube projection node, while the droplets maps are used for the top of the PxrRoundCube projection node; this makes the wet effect look more like rain drop streaks the more vertical a surface is, and more like droplets splashing on a surface the more horizontal a surface is.
 Even though everything in my scene is UV mapped, I chose to use PxrRoundCube to project the wet effect on everything in order to make the wet effect as automatic as possible; to make sure that repetitions in the wet effect textures weren't very visible, I used a wide transition width for the PxrRoundCube node and made sure that the PxrRoundCube's projection was rotated around the Y-axis to not be aligned with any model in the scene.
 
-To actually create the maps, I used a combination of Photoshop and a custom tool that I originally wrote for Takua Render.
+To actually create the maps, I used a combination of Photoshop and a custom tool that I originally wrote for Takua Renderer.
 I started in Photoshop by kit-bashing together stuff I found online and hand-painting on top to produce a 1024 by 1024 pixel square example map with all of the characteristics I wanted.
 While in Photoshop, I didn't worry about making sure that the example map could tile; tiling comes in the next step.
 After initial work in Photoshop, this is what I came up with:

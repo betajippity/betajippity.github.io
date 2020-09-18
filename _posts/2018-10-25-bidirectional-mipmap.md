@@ -9,14 +9,14 @@ One major feature that differentiates production-capable renderers from hobby or
 A well-implemented texture caching system is what allows a production renderer to render scenes with potentially many TBs of textures, but in a reasonable footprint that fits in a few dozen or a hundred-ish GB of RAM.
 Pretty much every production renderer today has a robust texture caching system; Arnold famously derives a significant amount of performance from an extremely efficient texture cache implementation, and Vray/Corona/Renderman/Hyperion/etc. all have their own, similarly efficient systems.
 
-In this post and the next few posts, I'll write about how I implemented a tiled, mipmapped texture caching system in my hobby renderer, Takua Render.
+In this post and the next few posts, I'll write about how I implemented a tiled, mipmapped texture caching system in my hobby renderer, Takua Renderer.
 I'll also discuss some of the interesting challenges I ran into along the way.
 This post will focus on the mipmapping part of the system.
 Building a tiled mipmapping system that works well with bidirectional path tracing techniques was particularly difficult, for reasons I'll discuss later in this post.
 I'll also review the academic literature on ray differentials and mipmapping with path tracing, and I'll take a look at what several different production renderers do.
-The scene I'll use as an example in this post is a custom recreation of a forest scene from Evermotion's Archmodels 182, rendered entirely using Takua Render (of course):
+The scene I'll use as an example in this post is a custom recreation of a forest scene from Evermotion's Archmodels 182, rendered entirely using Takua Renderer (of course):
 
-[![Figure 1: A forest scene in the morning, rendered using Takua Render. 6 GB of textures on disk accessed using a 1 GB in-memory texture cache.]({{site.url}}/content/images/2018/Oct/preview/forest.cam0.0.jpg)]({{site.url}}/content/images/2018/Oct/forest.cam0.0.jpg)
+[![Figure 1: A forest scene in the morning, rendered using Takua Renderer. 6 GB of textures on disk accessed using a 1 GB in-memory texture cache.]({{site.url}}/content/images/2018/Oct/preview/forest.cam0.0.jpg)]({{site.url}}/content/images/2018/Oct/forest.cam0.0.jpg)
 
 **Intro: Texture Caches and Mipmaps**
 
@@ -209,7 +209,7 @@ The actual code might look something like this:
     }
 
 Now that we have dudx/dudy and dvdx/dvdy, getting the proper mipmap level works just like in the rasterization case.
-The above approach is exactly what I have implemented in Takua Render for camera rays.
+The above approach is exactly what I have implemented in Takua Renderer for camera rays.
 Similar to surface differentials, Takua caches dudx/dudy and dvdx/dvdy computations per shader invocation per hit point, so that multiple textures utilizing the same uv set dont't require multiple redundant calls to the above function.
 
 The ray derivative approach to mipmap level selection is basically the standard approach in modern production rendering today for camera rays.

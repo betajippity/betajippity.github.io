@@ -9,11 +9,11 @@ A few years ago, I wrote [a post about attenuated transmission](https://blog.yin
 What I called "deep attenuation" in that post is, in its essence, just pure interface tracking using a stack.
 This post is meant as a revisit and update of that post; I'll talk about the problems with the ad-hoc pure interface tracking technique I came up with in that previous post and discuss the proper priority-based nested dielectric technique [(Schmidt and Budge 2002)](https://www.tandfonline.com/doi/abs/10.1080/10867651.2002.10487555) that Takua uses today.
 
-[![Figure 1: Ice cubes floating in tea inside of a glass teacup, rendered in Takua Render using priority-based nested dielectrics.]({{site.url}}/content/images/2019/May/preview/nested_ice.0.jpg)]({{site.url}}/content/images/2019/May/nested_ice.0.png)
+[![Figure 1: Ice cubes floating in tea inside of a glass teacup, rendered in Takua Renderer using priority-based nested dielectrics.]({{site.url}}/content/images/2019/May/preview/nested_ice.0.jpg)]({{site.url}}/content/images/2019/May/nested_ice.0.png)
 
 In my 2015 post, I included a diagram showing the overlapping boundaries required to model ice cubes in a drink in a glass, but I didn't actually include a render of that scenario!
 In retrospect, the problems with the 2015 post would have become obvious to me more quickly if I had actually done a render like that diagram.
-Figure 1 shows an actual "ice cubes in a drink in a glass" scene, rendered correctly using Takua Render's implementation of priority-based nested dielectrics.
+Figure 1 shows an actual "ice cubes in a drink in a glass" scene, rendered correctly using Takua Renderer's implementation of priority-based nested dielectrics.
 For comparison, Figure 2 shows what Takua produces using the approach in the 2015 post; there are a number of obvious bizarre problems!
 In Figure 2, the ice cubes don't properly refract the tea behind and underneath them, and the ice cubes under the liquid surface aren't visible at all.
 Also, where the surface of the tea interfaces with the glass teacup, there is a odd bright ring.
@@ -89,7 +89,7 @@ Figure 4 shows a simplified version of the tea cup example above, without ice cu
 Also note how when following the rules from my old blog post, event 10 becomes a nonsense event where the incident and transmit IOR are the same.
 The fix for this case is to modify the rules so that when a ray exits a surface, the transmit properties come from the first surface on the stack that isn't the same as the incident surface, but even with this fix, the reflection at event 10 is still physically impossible.
 
-[![Figure 4: Tea inside of a glass cup, rendered using Takua Render's old interface tracking system. Note the bright ring at the liquid-glass surface interface, produced by a physically incorrect double-refraction event.]({{site.url}}/content/images/2019/May/preview/nested_old.0.jpg)]({{site.url}}/content/images/2019/May/nested_old.0.png)
+[![Figure 4: Tea inside of a glass cup, rendered using Takua Renderer's old interface tracking system. Note the bright ring at the liquid-glass surface interface, produced by a physically incorrect double-refraction event.]({{site.url}}/content/images/2019/May/preview/nested_old.0.jpg)]({{site.url}}/content/images/2019/May/nested_old.0.png)
 
 Really what we want is to model overlapping surfaces, but then in overlapping areas, be able to specify which surface a ray should think it is actually inside of.
 Essentially, this functionality would make overlapping surfaces behave like boolean operators; we would be able to specify that the ice cubes in Figure 3 "cut out" a space from the water they overlap with, and the glass cut out a space from the water as well.

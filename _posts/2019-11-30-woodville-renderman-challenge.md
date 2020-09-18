@@ -5,7 +5,7 @@ tags: [Art]
 author: Yining Karl Li
 ---
 
-Every once in a while, I make a [point of spending some significant personal time](https://blog.yiningkarlli.com/2016/07/minecraft-in-renderman-ris.html) working on a personal project that uses tools outside of the stuff I'm used to working on day-to-day (Disney's Hyperion renderer professionally, Takua Render as a hobby).
+Every once in a while, I make a [point of spending some significant personal time](https://blog.yiningkarlli.com/2016/07/minecraft-in-renderman-ris.html) working on a personal project that uses tools outside of the stuff I'm used to working on day-to-day (Disney's Hyperion renderer professionally, Takua Renderer as a hobby).
 A few times each year, Pixar's RenderMan group holds an art challenge contest where Pixar provides a un-shaded un-uv'd base model and contestants are responsible for layout, texturing, shading, lighting, additional modeling of supporting elements and surrounding environment, and producing a final image.
 I thought the [most recent RenderMan art challenge, "Woodville"](https://renderman.pixar.com/news/renderman-woodville-art-challenge), would make a great excuse for playing with RenderMan 22 for Maya; here's the final image I came up with:
 

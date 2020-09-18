@@ -60,7 +60,7 @@ Being able to interactively scout in the same renderer used to final rendering i
 Unfortunately some of the renders below are noisier than I would like, due to the previously mentioned light sampling difficulties.
 All of the following images are rendered using Takua a0.8 with VCM:
 
-[![Figure 6: A MacBook Pro running Takua Render to produce Figure 1.]({{site.url}}/content/images/2018/Feb/preview/room.cam1.0.jpg)]({{site.url}}/content/images/2018/Feb/room.cam1.0.png)
+[![Figure 6: A MacBook Pro running Takua Renderer to produce Figure 1.]({{site.url}}/content/images/2018/Feb/preview/room.cam1.0.jpg)]({{site.url}}/content/images/2018/Feb/room.cam1.0.png)
 
 [![Figure 7: Physically Based Rendering Third Edition sitting on the coffee table.]({{site.url}}/content/images/2018/Feb/preview/room.cam2.0.jpg)]({{site.url}}/content/images/2018/Feb/room.cam2.0.png)
 
@@ -86,7 +86,7 @@ For this test, I set the firefly threshold to be samples that are at least 250 t
 
 [![Figure 12: The same render as Figure 10, but rendered with a lower sample count and using unidirectional pathtracing instead of VCM to draw out more fireflies.]({{site.url}}/content/images/2018/Feb/preview/room.cam5.fireflies.jpg)]({{site.url}}/content/images/2018/Feb/room.cam5.fireflies.png)
 
-[![Figure 13: From the same run of Takua Render as Figure 12, but the firefly-clamped render output instead of the raw render.]({{site.url}}/content/images/2018/Feb/preview/room.cam5.nofireflies.jpg)]({{site.url}}/content/images/2018/Feb/room.cam5.nofireflies.png)
+[![Figure 13: From the same run of Takua Renderer as Figure 12, but the firefly-clamped render output instead of the raw render.]({{site.url}}/content/images/2018/Feb/preview/room.cam5.nofireflies.jpg)]({{site.url}}/content/images/2018/Feb/room.cam5.nofireflies.png)
 
 Note how Figure 13 appears to be completely firefly-free compared to Figure 12, and how Figure 13 doesn't have visible caustic noise on the walls compared to Figure 10.
 However, notice how Figure 13 is also missing significant illumination in some areas, such as in the corner of the walls near the floor behind the wooden step ladder, or in the deepest parts of the purple flower bunch.

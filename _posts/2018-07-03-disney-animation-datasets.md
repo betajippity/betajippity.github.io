@@ -6,7 +6,7 @@ author: Yining Karl Li
 ---
 
 Today at [EGSR 2018](https://cg.ivd.kit.edu/egsr18/), Walt Disney Animation Studios announced the release of two large, production quality/scale data sets for rendering research purposes.
-The data sets are available on a new [data sets page on the official Disney Animation website](https://disneyanimation.com/technology/datasets).
+The data sets are available on a new [data sets page on the official Disney Animation website](https://disneyanimation.com/data-sets/).
 The first data set is the Cloud Data Set, which contains a large and highly detailed volumetric cloud data set that we used for our "[Spectral and Decomposition Tracking for Rendering Heterogeneous Volumes](https://blog.yiningkarlli.com/2017/07/spectral-and-decomposition-tracking.html)" SIGGRAPH 2017 paper, and the second data set is the Moana Island Scene, which is a full production scene from [Moana](https://blog.yiningkarlli.com/2016/11/moana.html).
 
 [![Figure 1: The Moana Island Data Set, rendered using Disney's Hyperion Renderer.]({{site.url}}/content/images/2018/Jul/preview/shotCam_hyperion.jpg)]({{site.url}}/content/images/2018/Jul/shotCam_hyperion.png)

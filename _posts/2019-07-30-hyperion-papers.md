@@ -4,7 +4,7 @@ title: Hyperion Publications
 tags: [Hyperion]
 author: Yining Karl Li
 ---
-Every year at SIGGRAPH (and sometimes at other points in the year), members of the Hyperion team inevitably get asked if there is any publicly available information about [Disney's Hyperion Renderer](https://www.disneyanimation.com/technology/innovations/hyperion).
+Every year at SIGGRAPH (and sometimes at other points in the year), members of the Hyperion team inevitably get asked if there is any publicly available information about [Disney's Hyperion Renderer](https://www.disneyanimation.com/technology/hyperion/).
 The answer is: yes, there is actually a lot of publicly available information!
 
 [![Figure 1: Previews of the first page of every Hyperion-related publication from Disney Animation, Disney Research Studios, and other research partners.]({{site.url}}/content/images/2019/Jul/FirstPagesv3_prev.png)]({{site.url}}/content/images/2019/Jul/FirstPagesv3.png)
@@ -272,7 +272,7 @@ This post is meant to be a living document; I'll come back and update it down th
 
     [Walt Disney Animation Studios](https://www.disneyanimation.com). Clouds Data Set, August 2018.
 
-    * [Official Page](https://www.technology.disneyanimation.com/clouds)
+    * [Official Page](https://www.disneyanimation.com/resources/clouds/)
     * [License](https://disney-animation.s3.amazonaws.com/uploads/production/data_set_asset/6/asset/License_Cloud.pdf)
 
     Publicly released data set for rendering research, by Disney Animation. This data set was produced by our production artists as part of the development process for Hyperion's modern third generation null-collision tracking based volume rendering system.
@@ -281,7 +281,7 @@ This post is meant to be a living document; I'll come back and update it down th
 
     [Walt Disney Animation Studios](https://www.disneyanimation.com). *Moana* Island Scene Data Set, August 2018.
 
-    * [Official Page](https://www.technology.disneyanimation.com/islandscene)
+    * [Official Page](https://www.disneyanimation.com/resources/moana-island-scene/)
     * [License](https://disney-animation.s3.amazonaws.com/uploads/production/data_set_asset/4/asset/License_Moana.pdf)
 
     Publicly released data set for rendering research, by Disney Animation.
@@ -381,9 +381,9 @@ If anything in this post has caught your interest, keep an eye out for open posi
 
 Finally, here is a list of all publicly released and announced projects to date made using Disney's Hyperion Renderer:
 
-**Feature Films**: [Big Hero 6](https://www.disneyanimation.com/projects/bighero6) (2014), [Zootopia](https://www.disneyanimation.com/projects/zootopia) (2016), [Moana](https://www.disneyanimation.com/projects/moana) (2016), [Ralph Breaks the Internet](https://www.disneyanimation.com/projects/ralphbreakstheinternet2) (2018), [Frozen 2](https://www.disneyanimation.com/projects/frozen2) (2019), [Raya and the Last Dragon](https://www.disneyanimation.com/) (2021)
+**Feature Films**: [Big Hero 6](https://www.disneyanimation.com/films/big-hero-6/) (2014), [Zootopia](https://www.disneyanimation.com/films/zootopia/) (2016), [Moana](https://www.disneyanimation.com/films/moana/) (2016), [Ralph Breaks the Internet](https://www.disneyanimation.com/films/ralph-breaks-the-internet/) (2018), [Frozen 2](https://www.disneyanimation.com/films/frozen-2/) (2019), [Raya and the Last Dragon](https://www.disneyanimation.com/) (2021)
 
-**Shorts and Featurettes**: [Feast](https://www.disneyanimation.com/projects/feast) (2014), [Frozen Fever](https://www.imdb.com/title/tt4007502/?ref_=fn_al_tt_1) (2015), [Inner Workings](https://www.disneyanimation.com/projects/innerworkings) (2016), [Gone Fishing](https://www.imdb.com/title/tt6467284/) (2017), [Olaf's Frozen Adventure](https://www.disneyanimation.com/projects/olafsfrozenadventure) (2017), [Myth: A Frozen Tale](https://twitter.com/DisneyAnimation/status/1192517131188834304)<sup>1</sup> (2019)
+**Shorts and Featurettes**: [Feast](https://www.disneyanimation.com/shorts/feast/) (2014), [Frozen Fever](https://www.disneyanimation.com/shorts/frozen-fever/) (2015), [Inner Workings](https://www.disneyplus.com/movies/inner-workings/2am4tRzFOOXl) (2016), [Gone Fishing](https://www.imdb.com/title/tt6467284/) (2017), [Olaf's Frozen Adventure](https://www.disneyplus.com/movies/olafs-frozen-adventure/5zrFDkAANpLi) (2017), [Myth: A Frozen Tale](https://www.disneyanimation.com/shorts/myth/)<sup>1</sup> (2019), [Once Upon a Snowman](https://www.disneyplus.com/movies/once-upon-a-snowman/2tBSdZv6bB4L) (2020)
 
 **Animated Series**: [At Home With Olaf](https://www.youtube.com/playlist?list=PLxnVeUnlga-Eg3hSTyV2GXjiJYdjQl2nt) (2020)
 

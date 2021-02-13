@@ -116,8 +116,6 @@ Here is a credits frame with my name! I wasn't actually expecting to get a credi
 
 All images in this post are courtesy of and the property of Walt Disney Animation Studios.
 
----
-
 **References**
 
 Carsten Benthin, Sven Woop, Ingo Wald, and Attila T. Áfra. 2017. [Improved Two-Level BVHs using Partial Re-Braiding](https://doi.org/10.1145/3105762.3105776). In _HPG ‘17 (Proceedings of High Performance Graphics)_. 7:1-7:8.
@@ -142,6 +140,6 @@ Peter Kutz, Ralf Habel, Yining Karl Li, and Jan Novák. 2017. [Spectral and Deco
 
 Jan Novák, Andrew Selle, and Wojciech Jarosz. 2014. [Residual Ratio Tracking for Estimating Attenuation in Participating Media](https://doi.org/10.1145/2661229.2661292). _ACM Transactions on Graphics_. 33, 6 (2014), 179:1-179:11.
 
-Sean Palmer, Jonathan Garcia, Sara Drakeley, Patrick Kelly, and Ralf Habel. 2017. [The Ocean and Water Pipeline of Disney’s Moana](https://doi.org/10.1145/3084363.3085067). In _ACM SIGGRAPH 2017, Talks_. 29:1-29:2.
+Sean Palmer, Jonathan Garcia, Sara Drakeley, Patrick Kelly, and Ralf Habel. 2017. [The Ocean and Water Pipeline of Disney’s Moana](https://doi.org/10.1145/3084363.3085067). In _ACM SIGGRAPH 2017 Talks_. 29:1-29:2.
 
-Josh Staub, Alessandro Jacomini, Dan Lund. 2018. [The Handiwork Behind "Olaf's Frozen Adventure"](https://doi.org/10.1145/3214745.3214817). In _ACM SIGGRAPH 2018, Talks_. 26:1-26:2.
+Josh Staub, Alessandro Jacomini, Dan Lund. 2018. [The Handiwork Behind "Olaf's Frozen Adventure"](https://doi.org/10.1145/3214745.3214817). In _ACM SIGGRAPH 2018 Talks_. 26:1-26:2.

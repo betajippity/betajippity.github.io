@@ -7,7 +7,7 @@ author: Yining Karl Li
 
 A few years ago, I wrote [a post about attenuated transmission](https://blog.yiningkarlli.com/2015/06/attenuated-transmission.html) and what I called "deep attenuation" at the time- refraction and transmission through multiple mediums embedded inside of each other, a.k.a. what is usually called nested dielectrics.
 What I called "deep attenuation" in that post is, in its essence, just pure interface tracking using a stack.
-This post is meant as a revisit and update of that post; I'll talk about the problems with the ad-hoc pure interface tracking technique I came up with in that previous post and discuss the proper priority-based nested dielectric technique [(Schmidt and Budge 2002)](https://www.tandfonline.com/doi/abs/10.1080/10867651.2002.10487555) that Takua uses today.
+This post is meant as a revisit and update of that post; I'll talk about the problems with the ad-hoc pure interface tracking technique I came up with in that previous post and discuss the proper priority-based nested dielectric technique [[Schmidt and Budge 2002]](https://www.tandfonline.com/doi/abs/10.1080/10867651.2002.10487555) that Takua uses today.
 
 [![Figure 1: Ice cubes floating in tea inside of a glass teacup, rendered in Takua Renderer using priority-based nested dielectrics.]({{site.url}}/content/images/2019/May/preview/nested_ice.0.jpg)]({{site.url}}/content/images/2019/May/nested_ice.0.png)
 
@@ -96,13 +96,13 @@ Essentially, this functionality would make overlapping surfaces behave like bool
 This way, the double events never occur since rays wouldn't see the second event in each pair of double events.
 One solution that immediately comes to mind is to simply consider whatever surface is at the top of the interface tracking stack as being the surface we are currently inside, but this causes an even worse problem: the order of surfaces that a ray thinks it is in becomes dependent on what surfaces a ray encounters first, which depends on the direction and location of each ray!
 This produces an inconsistent view of the world across different rays.
-Instead, a better solution is provided by priority-based nested dielectrics [(Schmidt and Budge 2002)](https://www.tandfonline.com/doi/abs/10.1080/10867651.2002.10487555).
+Instead, a better solution is provided by priority-based nested dielectrics [[Schmidt and Budge 2002]](https://www.tandfonline.com/doi/abs/10.1080/10867651.2002.10487555).
 
 **Priority-Based Nested Dielectrics**
 
 Priority-based nested dielectrics work by assigning priority values to geometry, with the priority values determining which piece of geometry "wins" when a ray is in a region of space where multiple pieces of geometry overlap.
 A priority value is just a single number assigned as an attribute to a piece of geometry or to a shader; the convention established by the paper is that lower numbers indicate higher priority.
-The basic algorithm in [(Schmidt and Budge 2002)](https://www.tandfonline.com/doi/abs/10.1080/10867651.2002.10487555) works using an _interior list_, which is conceptually similar to an interface tracking stack.
+The basic algorithm in [[Schmidt and Budge 2002]](https://www.tandfonline.com/doi/abs/10.1080/10867651.2002.10487555) works using an _interior list_, which is conceptually similar to an interface tracking stack.
 The interior list is exactly what it sounds like: a list of all of the surfaces that a path has entered but not exited yet.
 Unlike the interface tracking stack though, the interior list doesn't necessarily have to be a stack or have any particular ordering, although implementing it as a list always sorted by priority may provide some minor practical advantages.
 When a ray hits a surface during traversal, the following rules apply:
@@ -224,11 +224,11 @@ In Takua, I now use this technique to handle all transmissive cases, including f
 Also, in addition to just determining the incident and transmit IORs, Takua uses this system to also determine things like what kind of participating medium a ray is currently inside of in order to calculate attenuation.
 This technique appears to be more or less the industry standard today; implementations are available for at least [Renderman](https://rmanwiki.pixar.com/display/REN/Nested+Dielectrics), [Arnold](https://github.com/Psyop/jf-nested-dielectric), [Mantra](https://www.sidefx.com/docs/houdini/render/nested.html), and [Maxwell Render](https://support.nextlimit.com/display/mxdocsv3/Nested+dielectrics).
 
-As a side note, during the course of this work, I also upgraded Takua's attenuation system to use ratio tracking [(Novák et al. 2014)](https://dl.acm.org/citation.cfm?id=2661292) instead of ray marching when doing volumetric lookups.
+As a side note, during the course of this work, I also upgraded Takua's attenuation system to use ratio tracking [[Novák et al. 2014]](https://dl.acm.org/citation.cfm?id=2661292) instead of ray marching when doing volumetric lookups.
 This change results in an important improvement to the attenuation system: ratio tracking provides an _unbiased_ estimate of transmittance, whereas ray marching is inherently biased due to being a quadrature-based technique.
 
 Figures 7 and 8 show a fancier scene of liquid pouring into a glass with some ice cubes and such.
-This scene is the Glass of Water scene from [Benedikt Bitterli](https://benedikt-bitterli.me)'s rendering resources page [(Bitterli 2016)](https://benedikt-bitterli.me/resources/), modified with brighter lighting on a white backdrop and with red liquid.
+This scene is the Glass of Water scene from [Benedikt Bitterli](https://benedikt-bitterli.me)'s rendering resources page [[Bitterli 2016]](https://benedikt-bitterli.me/resources/), modified with brighter lighting on a white backdrop and with red liquid.
 I also had to modify the scene so that the liquid overlaps the glass slightly; providing a clearer read for the liquid-glass interface is why I made the liquid red.
 One of the neat features of this scene are the cracks modeled _inside_ of the ice cubes; the cracks are non-manifold geometry.
 To render them correctly, I applied a shader with glossy refraction to the crack geometry but did not set a priority value for them; this works correctly because the cracks, being non-manifold, don't have a concept of inside or outside anyway, so they should not participate in any interior list considerations.

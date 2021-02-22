@@ -7,7 +7,7 @@ author: Yining Karl Li
 
 <div markdown="1">
 
-Last year, I [participated in one of Pixar's RenderMan Art Challenges](https://blog.yiningkarlli.com/2019/11/woodville-renderman-challenge.html) as a way to learn more about RenderMan [(Christensen et al. 2018)](https://dl.acm.org/citation.cfm?id=3182162) and as a way to get some exposure to tools outside of my normal day-to-day toolset (Disney's Hyperion Renderer professionally, Takua Renderer as a hobby and learning exercise).
+Last year, I [participated in one of Pixar's RenderMan Art Challenges](https://blog.yiningkarlli.com/2019/11/woodville-renderman-challenge.html) as a way to learn more about modern RenderMan [[Christensen et al. 2018]](https://dl.acm.org/citation.cfm?id=3182162) and as a way to get some exposure to tools outside of my normal day-to-day toolset (Disney's Hyperion Renderer professionally, Takua Renderer as a hobby and learning exercise).
 I had a lot of fun, and wound up doing better in the "Woodville" art challenge contest than I expected to!
 Recently, I entered another one of [Pixar's RenderMan Art Challenges, "Shipshape"](https://renderman.pixar.com/news/renderman-shipshape-art-challenge).
 This time around I entered just for fun; since I had so much fun last time, I figured why not give it another shot!
@@ -163,14 +163,14 @@ In some other cases, I added new edgeloops to the existing models just so I coul
 **Shading the Ship**
 
 For the previous Art Challenge, I used a combination of PxrDisney and PxrSurface shaders; this time around, in order to get a better understanding of how PxrSurface works, I opted to go all-in on using PxrSurface for everything in the scene.
-Also, for the rain streaks effect (discussed later in this post), I needed some features that are available in the extended Disney Bsdf model [(Burley 2015)](https://doi.org/10.1145/2776880.2787670) and in PxrSurface [(Hery and Ling 2017)](http://graphics.pixar.com/library/PxrMaterialsCourse2017/index.html), but RenderMan 23 only implements the base Disney Brdf [(Burley 2012)](https://doi.org/10.1145/2343483.2343493) without the extended Bsdf features; this basically meant I had to use PxrSuface.
+Also, for the rain streaks effect (discussed later in this post), I needed some features that are available in the extended Disney Bsdf model [[Burley 2015]](https://doi.org/10.1145/2776880.2787670) and in PxrSurface [[Hery and Ling 2017]](http://graphics.pixar.com/library/PxrMaterialsCourse2017/index.html), but RenderMan 23 only implements the base Disney Brdf [[Burley 2012]](https://doi.org/10.1145/2343483.2343493) without the extended Bsdf features; this basically meant I had to use PxrSuface.
 
 One of the biggest differences I had to adjust to was how metallic color is controlled in PxrSurface.
 The Disney Bsdf drives the diffuse color and metallic color using the same base color parameter and shifts energy between the diffuse/spec and metallic lobes using a "metallic" parameter, but PxrSurface separates the diffuse and metallic colors entirely.
-PxrSurface uses a "Specular Face Color" parameter to directly drive the metallic lobe and has a separate "Specular Edge Color" control; this parameterization reminds me a lot of Framestore's artist-friendly metallic fresnel parameterization [(Gulbrandsen 2014)](http://jcgt.org/published/0003/04/03/), but I don't know if this is actually what PxrSurface is doing under the hood.
+PxrSurface uses a "Specular Face Color" parameter to directly drive the metallic lobe and has a separate "Specular Edge Color" control; this parameterization reminds me a lot of Framestore's artist-friendly metallic fresnel parameterization [[Gulbrandsen 2014]](http://jcgt.org/published/0003/04/03/), but I don't know if this is actually what PxrSurface is doing under the hood.
 PxrSurface also has two different modes for its specular controls: an "artistic" mode and a "physical" mode; I only used the artistic mode.
 To be honest, while PxrSurface's extensive controls are extremely powerful and offer an enormous degree of artistic control, I found trying to understand what every control did and how they interacted with each other to be kind of overwhelming.
-I wound up paring back the set of controls I used back to a small subset that I could mentally map back to what the Disney Bsdf or VRayMtl or Autodesk Standard Surface [(Georgiev et al. 2019)](https://autodesk.github.io/standard-surface/) models do.
+I wound up paring back the set of controls I used back to a small subset that I could mentally map back to what the Disney Bsdf or VRayMtl or Autodesk Standard Surface [[Georgiev et al. 2019]](https://autodesk.github.io/standard-surface/) models do.
 
 Fortunately, converting from the Disney Bsdf's baseColor/metallic parameterization to PxrSurface's diffuse/specFaceColor is very easy:
 
@@ -179,7 +179,7 @@ Fortunately, converting from the Disney Bsdf's baseColor/metallic parameterizati
 The only gotcha to look out for is that everything needs to be in linear space first.
 Alternatively, Substance Painter already has a output template for PxrSurface as well.
 Once I had the maps in the right parameterization, for the most part all I had to do was plug the right maps into the right parameters in PxrSurface and then make minor manual adjustments to dial in the look.
-In addition to two different specular parameterization modes, PxrSurface also supports choosing from a few different microfacet models for the specular lobes; by default PxrSurface is set to use the Beckmann model [(Beckmann and Spizzichino 1963)](https://us.artechhouse.com/The-Scattering-of-Electromagnetic-Waves-from-Rough-Surfaces-P257.aspx), but I selected the GGX model [(Walter et al. 2007)](http://dx.doi.org/10.2312/EGWR/EGSR07/195-206) for everything in this scene since GGX is what I'm more used to.
+In addition to two different specular parameterization modes, PxrSurface also supports choosing from a few different microfacet models for the specular lobes; by default PxrSurface is set to use the Beckmann model [[Beckmann and Spizzichino 1963]](https://us.artechhouse.com/The-Scattering-of-Electromagnetic-Waves-from-Rough-Surfaces-P257.aspx), but I selected the GGX model [[Walter et al. 2007]](http://dx.doi.org/10.2312/EGWR/EGSR07/195-206) for everything in this scene since GGX is what I'm more used to.
 
 For the actual look of the ship, I didn't want to go with the dilapidated look that a lot of the other contestants went with.
 Instead, I wanted the ship to look like it was a well maintained working vehicle, but with all of the grime and scratches that build up over daily use.
@@ -308,7 +308,7 @@ The node labeled "mastercontrol" allows for disabling the entire wet effect by f
 Having to manually connect this graph into all of the clearcoat parameters in each PxrSurface shader I used was a bit of a pain.
 Ideally I would have preferred if I could have just plugged all of the clearcoat parameters into a PxrLayer, disabled all non-clearcoat lobes in the PxrLayer, and then plugged the PxrLayer into a PxrLayerSurface on top of underlying base layers.
 Basically, I wish PxrLayerSurface supported enabling/disabling layers on a per-lobe basis, but this ability currently doesn't exist in RenderMan 23.
-In Disney's Hyperion Renderer, we support this functionality for sparsely layering Disney Bsdf parameters [(Burley 2015)](https://doi.org/10.1145/2776880.2787670), and it's really really useful.
+In Disney's Hyperion Renderer, we support this functionality for sparsely layering Disney Bsdf parameters [[Burley 2015]](https://doi.org/10.1145/2776880.2787670), and it's really really useful.
 
 There are only four input maps required for the entire wet effect: a greyscale rain rivulets map, a corresponding rain rivulets normal map, a greyscale droplets map, and a corresponding droplets normal map.
 The rivulets maps are used for the sides of a PxrRoundCube projection node, while the droplets maps are used for the top of the PxrRoundCube projection node; this makes the wet effect look more like rain drop streaks the more vertical a surface is, and more like droplets splashing on a surface the more horizontal a surface is.
@@ -321,8 +321,8 @@ After initial work in Photoshop, this is what I came up with:
 
 [![Figure 26: Initial kit-bashed / hand-painted exemplars for streak and droplet wet maps.]({{site.url}}/content/images/2020/Jul/shipshape/painted_wetmask.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/painted_wetmask.jpg)
 
-Next, to make the maps repeatable and much larger, I used a custom tool I previously wrote that implements a practical form of histogram-blending hex tiling [(Burley 2019)](http://jcgt.org/published/0008/04/02/).
-Hex tiling with histogram preserving blending, originally introduced by [Heitz and Neyret (2018)](https://doi.org/10.1145/3233304), is one of the closest things to actual magic in recent computer graphics research; using hex tiling instead of normal rectilinear tiling basically completely hides obvious repetitions in the tiling from the human eye, and the histogram preserving blending makes sure that hex tile boundaries blend in a way that makes them completely invisible as well.
+Next, to make the maps repeatable and much larger, I used a custom tool I previously wrote that implements a practical form of histogram-blending hex tiling [[Burley 2019]](http://jcgt.org/published/0008/04/02/).
+Hex tiling with histogram preserving blending, originally introduced by [Heitz and Neyret [2018]](https://doi.org/10.1145/3233304), is one of the closest things to actual magic in recent computer graphics research; using hex tiling instead of normal rectilinear tiling basically completely hides obvious repetitions in the tiling from the human eye, and the histogram preserving blending makes sure that hex tile boundaries blend in a way that makes them completely invisible as well.
 I'll write more about hex tiling and make my implementation publicly available in a future post.
 What matters for this project is hex tiling allowed me to convert my exemplar map from Photoshop into a much larger 8K seamlessly repeatable texture map with no visible repetition patterns.
 Below is a cropped section from each 8K map:
@@ -345,8 +345,8 @@ Using the greyscale wet map, I modulated the layer thickness control according t
 
 Finally, after wiring everything together in Maya's HyperShade editor, everything just worked!
 I think the wet look my approach produces looks reasonable convincing, especially from the distances that everything is from the camera in my final piece.
-Up close the effect still holds up okay, but isn't as convincing as using real geometry for the water droplets with real refraction and caustics drive by manifold next event estimation [(Hanika et al. 2015)](http://dx.doi.org/10.1111/cgf.12681).
-In the future, if I need to do close up water droplets, I'll likely try an MNEE based approach instead; fortunately, RenderMan 23's PxrUnified integrator already comes with an MNEE implementation as an option, along with various other strategies for handling caustic cases [(Hery et al. 2016)](http://graphics.pixar.com/library/BiDir/). 
+Up close the effect still holds up okay, but isn't as convincing as using real geometry for the water droplets with real refraction and caustics drive by manifold next event estimation [[Hanika et al. 2015]](http://dx.doi.org/10.1111/cgf.12681).
+In the future, if I need to do close up water droplets, I'll likely try an MNEE based approach instead; fortunately, RenderMan 23's PxrUnified integrator already comes with an MNEE implementation as an option, along with various other strategies for handling caustic cases [[Hery et al. 2016]](http://graphics.pixar.com/library/BiDir/). 
 However, the approach I used for this project is far cheaper from a render time perspective compare to using geometry and MNEE, and from a mid to far distance, I'm pretty happy with how it turned out!
 
 Below are some comparisons of the ship and robot with and without the wet effect applied.
@@ -538,7 +538,7 @@ All of these volumes are heterogeneous volumes brought in as VDB files.
 
 One odd thing I found with volumes was some major differences in sampling behavior between RenderMan 23's PxrPathtracer and PxrUnified integrators.
 I found that by default, whenever I had a light that was embedded in a volume, areas in the volume near the light were extremely noisy when rendered using PxrUnified but rendered normally when using PxrPathtracer.
-I don't know enough about the details of how PxrUnified and PxrPathtracer's volume integration [(Fong et al. 2017)](https://doi.org/10.1145/3084873.3084907) approaches differ, but it almost looks to me like PxrPathtracer is correctly using RenderMan's equiangular sampling implementation [(Kulla and Fajardo 2012)](http://dx.doi.org/10.1111/j.1467-8659.2012.03148.x) in these areas and PxrUnified for some reason is not.
+I don't know enough about the details of how PxrUnified and PxrPathtracer's volume integration [[Fong et al. 2017]](https://doi.org/10.1145/3084873.3084907) approaches differ, but it almost looks to me like PxrPathtracer is correctly using RenderMan's equiangular sampling implementation [[Kulla and Fajardo 2012]](http://dx.doi.org/10.1111/j.1467-8659.2012.03148.x) in these areas and PxrUnified for some reason is not.
 As a result, for rendering all volume passes I relied on PxrPathtracer, which did a great job with quickly converging on all passes.
 
 An interesting unintended side effect of filling the scene with volumes was in how the volumes interacted with the orange thruster and exhaust vent lights.

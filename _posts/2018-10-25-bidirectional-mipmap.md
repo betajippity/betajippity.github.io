@@ -20,8 +20,8 @@ The scene I'll use as an example in this post is a custom recreation of a forest
 
 **Intro: Texture Caches and Mipmaps**
 
-Texture caching is typically coupled with some form of a tiled, mipmapped [(Williams 1983)](https://dl.acm.org/citation.cfm?id=801126) texture system; the texture cache holds specific tiles of an image that were accessed, as opposed to an entire texture.
-These tiles are typically lazy-loaded on demand into a cache [(Peachey 1990)](https://graphics.pixar.com/library/TOD/), which means the renderer only needs to pay the memory storage cost for only parts of a texture that the renderer actually accesses.
+Texture caching is typically coupled with some form of a tiled, mipmapped [[Williams 1983]](https://dl.acm.org/citation.cfm?id=801126) texture system; the texture cache holds specific tiles of an image that were accessed, as opposed to an entire texture.
+These tiles are typically lazy-loaded on demand into a cache [[Peachey 1990]](https://graphics.pixar.com/library/TOD/), which means the renderer only needs to pay the memory storage cost for only parts of a texture that the renderer actually accesses.
 
 The remainder of this section and the next section of this post are a recap of what mipmaps are, mipmap level selection, and ray differentials for the less experienced reader.
 I also discuss a bit about what techniques various production renderers are known to use today.
@@ -43,14 +43,14 @@ I'll talk about the "tiled" part in a later post.
 Before diving into details, I need to make a major note: I'm not going to write too much about texture filtering for now, mainly because I haven't done much with texture filtering in Takua at all.
 Mipmapping was originally invented as an elegant solution to the problem of expensive texture filtering in rasterized rendering; when a texture had detail that was more high frequency than the distance between neighboring pixels in the framebuffer, aliasing would occur when the texture was sampled.
 Mipmaps are typically generated with pre-computed filtering for mip levels above the original resolution, allowing for single texture samples to appear antialiased.
-For a comprehensive discussion of texture filtering, how it relates to mipmaps, and more advanced techniques, see [section 10.4.3 in Physically Based Rendering 3rd Edition](http://www.pbr-book.org/3ed-2018/Texture/Image_Texture.html#MIPMaps) [(Pharr et al. 2016)](http://www.pbr-book.org).
+For a comprehensive discussion of texture filtering, how it relates to mipmaps, and more advanced techniques, see [section 10.4.3 in Physically Based Rendering 3rd Edition](http://www.pbr-book.org/3ed-2018/Texture/Image_Texture.html#MIPMaps) [[Pharr et al. 2016]](http://www.pbr-book.org).
 
 For now, Takua just uses a point sampler for all texture filtering; my interest in mipmaps is mostly for memory efficiency and texture caching instead of filtering.
 My thinking is that in a path tracer that is going to generate hundreds or even thousands of paths for each framebuffer pixel, the need for single-sample antialiasing becomes somewhat lessened, since we're already basically supersampling.
 Good texture filtering is still ideal of course, but being lazy and just relying on supersampling to get rid of texture aliasing in primary visibility is... not necessarily the worst short-term solution in the world.
 Furthermore, relying on just point sampling means each texture sample only requires two texture lookups: one from the integer mip level and one from the integer mip level below the continuous float mip level at a sample point (see the next section for more on this).
 Using only two texture lookups per texture sample is highly efficient due to minimized memory access and minimized branching in the code.
-Interestingly, the Moonray team at Dreamworks Animation arrived at more or less the same conclusion [(Lee et al. 2017)](https://dl.acm.org/citation.cfm?doid=3105762.3105768); they point out in their paper that geometric complexity, for all intents and purposes, has an infinite frequency, whereas pre-filtered mipmapped textures are already band limited.
+Interestingly, the Moonray team at Dreamworks Animation arrived at more or less the same conclusion [[Lee et al. 2017]](https://dl.acm.org/citation.cfm?doid=3105762.3105768); they point out in their paper that geometric complexity, for all intents and purposes, has an infinite frequency, whereas pre-filtered mipmapped textures are already band limited.
 As a result, the number of samples required to resolve geometric aliasing should be more than enough to also resolve any texture aliasing.
 The Moonray team found that this approach works well enough to be their default mode in production.
 
@@ -86,8 +86,8 @@ This approach rapidly falls apart though, for the following reasons and more:
 * For secondary rays, we would need to trace secondary bounces not just for a given pixel's ray, but also its neighboring rays. Doing so would be necessary since, depending on the bsdf at a given surface, the distance between the main ray and its neighbor rays can change arbitrarily. Tracing this many additional rays quickly becomes prohibitively expensive; for example, if we are considering four neighbors per pixel, we are now tracing five times as many rays as before.
 * We would also have to continue to guarantee that neighbor secondary rays continue hitting the same surface as the main secondary ray, which will become arbitrarily difficult as bxdf lobes widen or narrow.
 
-A better solution to these problems is to use _ray differentials_ [(Igehy 1999)](https://graphics.stanford.edu/papers/trd/), which is more or less just a ray along with the partial derivative of the ray with respect to screen space.
-Thinking of a ray differential as essentially similar to a ray with a width or a cone, similar to beam tracing [(Heckbert and Hanrahan 1984)](https://dl.acm.org/citation.cfm?id=808588), pencil tracing [(Shinya et al. 1987)](https://dl.acm.org/citation.cfm?id=37408), or cone tracing [(Amanatides 1984)](https://dl.acm.org/citation.cfm?id=808589), is not entirely incorrect, but ray differentials are a bit more nuanced than any of the above.
+A better solution to these problems is to use _ray differentials_ [[Igehy 1999]](https://graphics.stanford.edu/papers/trd/), which is more or less just a ray along with the partial derivative of the ray with respect to screen space.
+Thinking of a ray differential as essentially similar to a ray with a width or a cone, similar to beam tracing [[Heckbert and Hanrahan 1984]](https://dl.acm.org/citation.cfm?id=808588), pencil tracing [[Shinya et al. 1987]](https://dl.acm.org/citation.cfm?id=37408), or cone tracing [[Amanatides 1984]](https://dl.acm.org/citation.cfm?id=808589), is not entirely incorrect, but ray differentials are a bit more nuanced than any of the above.
 With ray differentials, instead of tracing a bunch of independent neighbor rays with each camera ray, the idea is to reconstruct dudx/dvdy and dudy/dvdy at each hit point using simulated offset rays that are reconstructed using the ray's partial derivative.
 Ray differentials are generated alongside camera rays; when a ray is traced from the camera, offset rays are generated for a single neighboring pixel vertically and a single neighboring pixel horizontally in the image plane.
 Instead of tracing these offset rays independently, however, we always assume they are at some angular width from main ray.
@@ -131,11 +131,11 @@ In Takua, surface differentials are calculated on demand at texture lookup time 
 Takua also supports multiple uv sets per mesh, so the above function is parameterized by uv set ID, and the function is called once for each uv set that a texture specifies.
 Surface differentials are also cached within a shading operation per hit point, so if a shader does multiple texture lookups within a single invocation, the required surface differentials don't need to be redundantly calculated.
 
-Sony Imageworks' variant of Arnold (we'll refer to it as SPI Arnold to disambiguate from Solid Angle's Arnold) does something even more advanced [(Kulla et al. 2018)](https://dl.acm.org/citation.cfm?id=3180495).
-Instead of the above explicit surface differential calculation, SPI Arnold implements an automatic differentiation system utilizing dual arithmetic [(Piponi 2004)](https://www.tandfonline.com/doi/abs/10.1080/10867651.2004.10504901).
+Sony Imageworks' variant of Arnold (we'll refer to it as SPI Arnold to disambiguate from Solid Angle's Arnold) does something even more advanced [[Kulla et al. 2018]](https://dl.acm.org/citation.cfm?id=3180495).
+Instead of the above explicit surface differential calculation, SPI Arnold implements an automatic differentiation system utilizing dual arithmetic [[Piponi 2004]](https://www.tandfonline.com/doi/abs/10.1080/10867651.2004.10504901).
 SPI Arnold extensively utilizes OSL for shading; this means that they are able to trace at runtime what dependencies a particular shader execution path requires, and therefore when a shader needs any kind of derivative or differential information.
 The calls to the automatic differentiation system are then JITed into the shader's execution path, meaning shader authors never have to be aware of how derivatives are computed in the renderer.
-The SPI Arnold team's decision to use dual arithmetic based automatic differentiation is influenced by lessons they had previously learned with BMRT's finite differencing system, which required lots of extraneous shading computations for incoherent ray tracing [(Gritz and Hahn 1996)](https://www.tandfonline.com/doi/abs/10.1080/10867651.1996.10487462).
+The SPI Arnold team's decision to use dual arithmetic based automatic differentiation is influenced by lessons they had previously learned with BMRT's finite differencing system, which required lots of extraneous shading computations for incoherent ray tracing [[Gritz and Hahn 1996]](https://www.tandfonline.com/doi/abs/10.1080/10867651.1996.10487462).
 At least for my purposes, though. I've found that the simpler approach I have taken in Takua is sufficiently negligible in both final overhead and code complexity that I'll probably skip something like the SPI Arnold approach for now.
 
 Once we have the surface differential, we can then approximate the local surface geometry at the intersection point with a tangent plane, and intersect the offset rays with the tangent plane.
@@ -213,11 +213,11 @@ The above approach is exactly what I have implemented in Takua Renderer for came
 Similar to surface differentials, Takua caches dudx/dudy and dvdx/dvdy computations per shader invocation per hit point, so that multiple textures utilizing the same uv set dont't require multiple redundant calls to the above function.
 
 The ray derivative approach to mipmap level selection is basically the standard approach in modern production rendering today for camera rays.
-PBRT [(Pharr et al. 2016)](http://pbrt.org), Mitsuba [(Jakob 2010)](http://www.mitsuba-renderer.org/), and Solid Angle's version of Arnold [(Georgiev et al. 2018)](https://dl.acm.org/citation.cfm?id=3182160) all use ray differential systems based on this approach for camera rays.
-Renderman [(Christensen et al. 2018)](https://dl.acm.org/citation.cfm?id=3182162) uses a simplified version of ray differentials that only tracks two floats per ray, instead of the four vectors needed to represent a full ray differential.
+PBRT [[Pharr et al. 2016]](http://pbrt.org), Mitsuba [[Jakob 2010]](http://www.mitsuba-renderer.org/), and Solid Angle's version of Arnold [[Georgiev et al. 2018]](https://dl.acm.org/citation.cfm?id=3182160) all use ray differential systems based on this approach for camera rays.
+Renderman [[Christensen et al. 2018]](https://dl.acm.org/citation.cfm?id=3182162) uses a simplified version of ray differentials that only tracks two floats per ray, instead of the four vectors needed to represent a full ray differential.
 Renderman tracks a width at each ray's origin, and a spread value representing the linear rate of change of the ray width over a unit distance.
 This approach does not encode as much information as the full ray derivative approach, but nonetheless ends up being sufficient since in a path tracer, every pixel essentially ends up being supersampled.
-Hyperion [(Burley et al. 2018)](https://dl.acm.org/citation.cfm?id=3182159) uses a similarly simplified scheme.
+Hyperion [[Burley et al. 2018]](https://dl.acm.org/citation.cfm?id=3182159) uses a similarly simplified scheme.
 
 A brief side note: being able to calculate the differential for surface normals with respect to screen space is useful for bump mapping, among other things, and the calculation is directly analogous to the pseudocode above for calculateDifferentialSurfaceForTriangle() and calculateScreenSpaceDifferential(), just with surface normals substituted in for surface positions.
 
@@ -227,20 +227,20 @@ We now know how to calculate filter footprints using ray differentials for camer
 Without ray differentials for secondary rays, path tracing texture access behavior degrades severely, since secondary rays have to fall back to point sampling textures at the lowest mip level.
 A number of different schemes exist for calculating filter footprints and mipmap levels for secondary rays; here are a few that have been presented in literature and/or are known to be in use in modern production renderers:
 
-Igehy [(1999)](https://graphics.stanford.edu/papers/trd/) demonstrates how to propagate ray differentials through perfectly specular reflection and refraction events, which boil down to some simple extensions to the basic math for optical reflection and refraction.
+[Igehy [1999]](https://graphics.stanford.edu/papers/trd/) demonstrates how to propagate ray differentials through perfectly specular reflection and refraction events, which boil down to some simple extensions to the basic math for optical reflection and refraction.
 However, we still need a means for handling glossy (so really, non-zero surface roughness), which requires an extended version of ray differentials.
-_Path differentials_ [(Suykens and Willems 2001)](http://graphics.cs.kuleuven.be/publications/PATHDIFF/) consider more than just partial derivatives for each screen space pixel footprint; with path differentials, partial derivatives can also be taken at each scattering event along a number of dimensions.
+_Path differentials_ [[Suykens and Willems 2001]](http://graphics.cs.kuleuven.be/publications/PATHDIFF/) consider more than just partial derivatives for each screen space pixel footprint; with path differentials, partial derivatives can also be taken at each scattering event along a number of dimensions.
 As an example, for handling a arbitrarily shaped BSDF lobe, new partial derivatives can be calculated along some parameter of the lobe that describes the shape of the lobe, which takes the form of a bunch of additional scattering directions around the main ray's scattering direction.
 If we imagine looking down the main scattering direction and constructing a convex hull around the additional scattering directions, the result is a polygonal footprint describing the ray differential over the scattering event.
 This footprint can then be approximated by finding the major and minor axis of the polygonal footprint.
 While the method is general enough to handle arbitrary factors impacting ray directions, unfortunately it can be fairly complex and expensive to compute in practice, and differentials for some types of events can be very difficult to derive.
 For this reason, none of the major production renderers today actually use this approach.
-However, there is a useful observation that can be drawn from path differentials: generally, in most cases, primary rays have narrow widths and secondary rays have wider widths [(Christensen et al. 2003)](https://diglib.eg.org/handle/10.2312/8776); this observation is the basis of the ad-hoc techniques that most production renderers utilize.
+However, there is a useful observation that can be drawn from path differentials: generally, in most cases, primary rays have narrow widths and secondary rays have wider widths [[Christensen et al. 2003]](https://diglib.eg.org/handle/10.2312/8776); this observation is the basis of the ad-hoc techniques that most production renderers utilize.
 
-Recently, research has appeared that provides an entirely different, more principled approach to selecting filter footprints, based on _covariance tracing_ [(Belcour et al. 2013)](https://dl.acm.org/citation.cfm?id=2487239).
+Recently, research has appeared that provides an entirely different, more principled approach to selecting filter footprints, based on _covariance tracing_ [[Belcour et al. 2013]](https://dl.acm.org/citation.cfm?id=2487239).
 The high-level idea behind covariance tracing is that local light interaction effects such as transport, occlusion, roughness, etc. can all be encoded as 5D covariance matrices, which in turn can be used to determine ideal sampling rates.
-Covariance tracing builds an actual, implementable rendering algorithm on top of earlier, mostly theoretical work on light transport frequency analysis [(Durand et al. 2005)](https://dl.acm.org/citation.cfm?id=1073320).
-[(Belcour et al. 2017)](https://dl.acm.org/citation.cfm?id=2487239) presents an extension to covariance tracing for calculating filter footprints for arbitrary shading effects, including texture map filtering.
+Covariance tracing builds an actual, implementable rendering algorithm on top of earlier, mostly theoretical work on light transport frequency analysis [[Durand et al. 2005]](https://dl.acm.org/citation.cfm?id=1073320).
+[Belcour et al. [2017]](https://dl.acm.org/citation.cfm?id=2487239) presents an extension to covariance tracing for calculating filter footprints for arbitrary shading effects, including texture map filtering.
 The covariance-tracing based approach differs from path differentials in two key areas.
 While both approaches operate in path space, path differentials are much more expensive to compute than the covariance-tracing based technique; path differential complexity scales quadratically with path length, while covariance tracing only ever carries a single covariance matrix along a path for a given effect.
 Also, path differentials can only be generated starting from the camera, whereas covariance tracing works from the camera and the light; in the next section, we'll talk about why this difference is critically important.
@@ -249,19 +249,19 @@ Covariance tracing based techniques have a lot of promise, and are the best know
 The original covariance tracing paper had some difficulty with handling high geometric complexity; covariance tracing requires a voxelized version of the scene for storing local occlusion covariance information, and covariance estimates can degrade severely if the occlusion covariance grid is not high resolution enough to capture small geometric details.
 For huge production scale scenes, geometric complexity requirements can make covariance tracing either slow due to huge occlusion grids, or degraded in quality due to insufficiently large occlusion grids.
 However, the voxelization step is not as much of a barrier to practicality as it may initially seem.
-For covariance tracing based filtering, visibility can be neglected, so the entire scene voxelization step can be skipped; Belcour [(2017)](https://dl.acm.org/citation.cfm?id=2487239) demonstrates how.
+For covariance tracing based filtering, visibility can be neglected, so the entire scene voxelization step can be skipped; [Belcour et al. [2017]](https://dl.acm.org/citation.cfm?id=2487239) demonstrates how.
 Since covariance tracing based filtering can be used with the same assumptions and data as ray differentials but is both superior in quality and more generalizable than ray differentials, I would not be surprised to see more renderers adopt this technique over time.
 
 As of present, however, instead of using any of the above techniques, pretty much all production renderers today use various ad-hoc methods for tracking ray widths for secondary rays.
-SPI Arnold tracks accumulated roughness values encountered by a ray: if a ray either encounters a diffuse event or reaches a sufficiently high accumulated roughness value, SPI Arnold automatically goes to basically the highest available MIP level [(Kulla et al. 2018)](https://dl.acm.org/citation.cfm?id=3180495).
+SPI Arnold tracks accumulated roughness values encountered by a ray: if a ray either encounters a diffuse event or reaches a sufficiently high accumulated roughness value, SPI Arnold automatically goes to basically the highest available MIP level [[Kulla et al. 2018]](https://dl.acm.org/citation.cfm?id=3180495).
 This scheme produces very aggressive texture filtering, but in turn provides excellent texture access patterns.
-Solid Angle Arnold similarly uses an ad-hoc microfacet-inspired heuristic for secondary rays [(Georgiev et al. 2018)](https://dl.acm.org/citation.cfm?id=3182160) .
-Renderman handles reflection and refraction using something similar to Igehy [(1999)](https://graphics.stanford.edu/papers/trd/), but modified for the single-float-width ray differential representation that Renderman uses [(Christensen et al. 2018)](https://dl.acm.org/citation.cfm?id=3182162).
+Solid Angle Arnold similarly uses an ad-hoc microfacet-inspired heuristic for secondary rays [[Georgiev et al. 2018]](https://dl.acm.org/citation.cfm?id=3182160) .
+Renderman handles reflection and refraction using something similar to [Igehy [1999]](https://graphics.stanford.edu/papers/trd/), but modified for the single-float-width ray differential representation that Renderman uses [[Christensen et al. 2018]](https://dl.acm.org/citation.cfm?id=3182162).
 For glossy and diffuse events, Renderman uses an empirically determined heuristic where higher ray width spreads are driven by lower scattering direction pdfs.
-Weta's Manuka has a unified roughness estimation system built into the shading system, which uses a mean cosine estimate for figuring out ray differentials [(Fascione et al. 2018)](https://dl.acm.org/citation.cfm?id=3182161).
+Weta's Manuka has a unified roughness estimation system built into the shading system, which uses a mean cosine estimate for figuring out ray differentials [[Fascione et al. 2018]](https://dl.acm.org/citation.cfm?id=3182161).
 
 Generally, roughness driven heuristics seem to work reasonably well in production, and the actual heuristics don't actually have to be too complicated!
-In an experimental branch of PBRT, Matt Pharr found that a simple heuristic that uses a ray differential covering roughly 1/25th of the hemisphere for diffuse events and 1/100th of the hemisphere for glossy events generally worked reasonably well [(Pharr 2017)](https://www.pbrt.org/texcache.pdf).
+In an experimental branch of PBRT, Matt Pharr found that a simple heuristic that uses a ray differential covering roughly 1/25th of the hemisphere for diffuse events and 1/100th of the hemisphere for glossy events generally worked reasonably well [[Pharr 2017]](https://www.pbrt.org/texcache.pdf).
 
 **Ray Differentials and Bidirectional Techniques**
 
@@ -273,15 +273,15 @@ With light paths, we have something of a chicken-and-egg problem; there is no wa
 Furthermore, even if we did have a good way to calculate a starting ray differential from a light, the corresponding path differential can't become as wide as in the case of a camera path, since at any given moment the light path might scatter towards the camera and therefore needs to maintain a footprint no wider than a single screen space pixel.
 
 Some research work has gone into this question, but more work is needed on this topic.
-The previously discussed covariance tracing based technique [(Belcour et al. 2017)](https://dl.acm.org/citation.cfm?id=2487239) does allow for calculating an ideal texture filtering width and mip level once a light path is fully constructed, but again, the real problem is that footprints need to be available during path construction, not afterwards.
+The previously discussed covariance tracing based technique [[Belcour et al. 2017]](https://dl.acm.org/citation.cfm?id=2487239) does allow for calculating an ideal texture filtering width and mip level once a light path is fully constructed, but again, the real problem is that footprints need to be available during path construction, not afterwards.
 With bidirectional path tracing, things get even harder.
 In order to keep a bidirectional path unbiased, all connections between camera and light path vertices must be consistent in what mip level they sample; however, this is difficult since ray differentials depend on the scattering events at each path vertex.
-Belcour et al. [(2017)](https://dl.acm.org/citation.cfm?id=2487239) demonstrates how important
+[Belcour et al. [2017]](https://dl.acm.org/citation.cfm?id=2487239) demonstrates how important
 consistent texture filtering between two vertices is.
 
 Currently, only a handful of production renderers have extensive support for bidirectional techniques; of the ones that do, the most common solution to calculating ray differentials for bidirectional paths is... simply not to at all.
 Unfortunately, this means bidirectional techniques must rely on point sampling the lowest mip level, which defeats the whole point of mipmapping and destroys texture caching performance.
-The Manuka team alludes to using ray differentials for photon map gather widths in VCM and notes that these ray differentials are implemented as part of their manifold next event estimation system [(Fascione et al. 2018)](https://dl.acm.org/citation.cfm?id=3182161), but there isn't enough detail in their paper to be able to figure out how this actually works.
+The Manuka team alludes to using ray differentials for photon map gather widths in VCM and notes that these ray differentials are implemented as part of their manifold next event estimation system [[Fascione et al. 2018]](https://dl.acm.org/citation.cfm?id=3182161), but there isn't enough detail in their paper to be able to figure out how this actually works.
 
 **Camera-Based Mipmap Level Selection**
 
@@ -289,7 +289,7 @@ Takua has implementations of standard bidirectional path tracing, progressive ph
 I'm interested in using Takua to render scenes with very high complexity levels using advanced (often bidirectional) light transport algorithms, but reaching production levels of shading complexity without a mipmapped texture cache simply is not possible without crazy amounts of memory (where crazy is defined as in the range of dozens to hundreds of GB of textures or more).
 However, for the reasons described above, standard ray differential based techniques for calculating mip levels weren't going to work with Takua's bidirectional integrators.
 
-The lack of a ray differential solution for light paths left me stuck for some time, until late in 2017, when I got to read an early draft of what eventually became the Manuka paper [(Fascione et al. 2018)](https://dl.acm.org/citation.cfm?id=3182161) in the ACM Transactions on Graphics special issue on production rendering.
+The lack of a ray differential solution for light paths left me stuck for some time, until late in 2017, when I got to read an early draft of what eventually became the Manuka paper [[Fascione et al. 2018]](https://dl.acm.org/citation.cfm?id=3182161) in the ACM Transactions on Graphics special issue on production rendering.
 I highly recommend reading all five of the production renderer system papers in the ACM TOG special issue.
 However, if you're already generally familiar with how a modern PBRT-style renderer works and only have time to read one paper, I would recommend the Manuka paper simply because Manuka's architecture and the set of trade-offs and choices made by the Manuka team are so different from what every other modern PBRT-style production path tracer does.
 What I eventually implemented in Takua is directly inspired by Manuka, although it's not what Manuka actually does (I think).
@@ -304,7 +304,7 @@ However, no other production path tracer separates out _all_ of pattern generati
 At render startup, Manuka runs geometry processing, which dices all input geometry into micropolygon grids, and then runs pattern generation on all of the micropolygons.
 The result of pattern generation is a set of bsdf parameters that are baked into the micropolygon vertices.
 Manuka then builds a BVH and proceeds with normal path tracing, but at each path vertex, instead of having to evaluate shading graphs and do texture lookups to calculate bsdf parameters, the bsdf parameters are looked up directly from the pre-calculated cached values baked into the micropolygon vertices.
-Put another way, Manuka is a path tracer with a REYES-style shader execution model [(Cook et al. 1987)](https://dl.acm.org/citation.cfm?id=37414) instead of a PBRT-style shader execution model; Manuka preserves the grid-based shading coherence from REYES while also giving more flexibility to path sampling and light transport, which no longer have to worry about pattern generation making shading slow.
+Put another way, Manuka is a path tracer with a REYES-style shader execution model [[Cook et al. 1987]](https://dl.acm.org/citation.cfm?id=37414) instead of a PBRT-style shader execution model; Manuka preserves the grid-based shading coherence from REYES while also giving more flexibility to path sampling and light transport, which no longer have to worry about pattern generation making shading slow.
 
 So how does any of this relate to the bidirectional path tracing mip level selection problem?
 The answer is: in a shade-before-hit architecture, by the time the renderer is tracing light paths, there is no need for mip level selection because _there are no texture lookups required anymore during path sampling_.

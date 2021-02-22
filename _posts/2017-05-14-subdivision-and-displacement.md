@@ -16,17 +16,17 @@ The ocean surface is entirely displaced from just a single plane!
 [![Figure 1: An ocean surface modeled as a flat plane and rendered using vector displacement mapping.]({{site.url}}/content/images/2017/May/preview/displacement_ocean_0.jpg)]({{site.url}}/content/images/2017/May/displacement_ocean_0.jpg)
 
 Both subdivision and displacement originally came from the world of rasterization rendering, where on-the-fly geometry generation was historically both easier to implement and more practical/plausible to use.
-In rasterization, geometry is streamed to through the renderer and drawn to screen, so each individual piece of geometry could be subdivided, tessellated, displaced, splatted to the framebuffer, and then discarded to free up memory.
+In rasterization, geometry is streamed to through the renderer and drawn to screen, so each individual piece of geometry could be subdivided, tessellated, displaced, splatted to the framebuffer, and then discarded to free up memory. 
 Old REYES Renderman was famously efficient at rendering subdivision surfaces and displacement surfaces for precisely this reason.
-However, in naive raytracing, rays can intersect geometry at any moment in any order.
+However, in naive ray tracing, rays can intersect geometry at any moment in any order.
 Subdividing and displacing geometry on the fly for each ray and then discarding the geometry is insanely expensive compared to processing geometry once across an entire framebuffer.
-The simplest solution to this problem is to just subdivide and displace everything up front and keep it all around in memory during raytracing.
+The simplest solution to this problem is to just subdivide and displace everything up front and keep it all around in memory during ray tracing.
 Historically though, just caching everything was never a practical solution since computers simply didn't have enough memory to keep that much data around.
-As a result, past research work put significant effort into more intelligent raytracing architectures that made on-the-fly subdivision/displacement affordable again; notable papers include Matt Pharr's 1996 [geometry caching for raytracing paper](http://graphics.stanford.edu/papers/displace), Brian Smits et al.'s 2000 [direct raytracing of displacement mapped triangles paper](http://www.cs.utah.edu/~bes/papers/height/paper.html), Johannes Hanika et al.'s 2010 [reordered raytracing paper](https://jo.dreggn.org/home/2010_rayes.pdf), and Takahiro Harada's 2015 article on GPU raytraced vector displacement in [GPU Pro 6](https://www.crcpress.com/GPU-Pro-6-Advanced-Rendering-Techniques/Engel/p/book/9781482264616).
+As a result, past research work put significant effort into more intelligent ray tracing architectures that made on-the-fly subdivision/displacement affordable again; notable advancements include geometry caching for ray tracing [[Pharr and Hanrahan 1996]](http://graphics.stanford.edu/papers/displace), direct ray tracing of displacement mapped triangles [[Smits et al. 2000]](https://doi.org/10.1007/978-3-7091-6303-0_28), reordered ray tracing [[Hanika et al. 2010]](https://jo.dreggn.org/home/2010_rayes.pdf), and GPU ray traced vector displacement [[Harada 2015]](https://www.crcpress.com/GPU-Pro-6-Advanced-Rendering-Techniques/Engel/p/book/9781482264616).
 
-In the past five years or so though, the story on raytraced displacement has changed.
+In the past five years or so though, the story on ray traced displacement has changed.
 We now have machines with gobs and gobs of memory (at a number of studios, renderfarm nodes with 256 GB of memory or more is not unusual anymore).
-As a result, raytraced renderers don't need to be nearly as clever anymore about managing displaced geometry; a combination of camera-adaptive tessellation and a simple geometry cache with a least-recently-used eviction strategy is often enough to make raytraced displacement practical.
+As a result, ray traced renderers don't need to be nearly as clever anymore about managing displaced geometry; a combination of camera-adaptive tessellation and a simple geometry cache with a least-recently-used eviction strategy is often enough to make ray traced displacement practical.
 Heavy displacement is now common in the workflows for a number of production pathtracers, including Arnold, Renderman/RIS, Vray, Corona, Hyperion, Manuka, etc.
 With the above in mind, I tried to implement subdivision and displacement in Takua as simply as I possibly could.
 
@@ -44,7 +44,7 @@ During scene loading, Takua analyzes what subdivisions/displacements are require
 This de-duplication even works for instances (I should write a separate post about Takua's approach to instancing someday...).
 
 Once Takua has put together a list of all meshes that require subdivision, meshes are subdivided in parallel.
-For Catmull-Clark subdivision, I rely on [OpenSubdiv](https://graphics.pixar.com/opensubdiv/docs/intro.html) for calculating subdivision [stencil tables](https://graphics.pixar.com/opensubdiv/docs/far_overview.html#far-stenciltable), evaluating the stencils, and final tessellation.
+For Catmull-Clark subdivision [[Catmull and Clark 1978]](https://www.sciencedirect.com/science/article/abs/pii/0010448578901100), I rely on [OpenSubdiv](https://graphics.pixar.com/opensubdiv/docs/intro.html) for calculating subdivision [stencil tables](https://graphics.pixar.com/opensubdiv/docs/far_overview.html#far-stenciltable) [[Halstead et al. 1993]](https://dl.acm.org/doi/10.1145/166117.166121) for feature adaptive subdivision [[Nießner et al. 2012]](https://dl.acm.org/doi/10.1145/2077341.2077347), evaluating the stencils, and final tessellation.
 As far as I can tell, stencil calculation in OpenSubdiv is single threaded, so it can get fairly slow on really heavy meshes.
 Stencil evaluation and final tessellation is super fast though, since OpenSubdiv provides a number of [parallel evaluators](https://graphics.pixar.com/opensubdiv/docs/osd_overview.html#limit-stencil-evaluation) that can run using a variety of backends ranging from TBB on the CPU to CUDA or OpenGL compute shaders on the GPU.
 Takua currently relies on OpenSubdiv's TBB evaluator.
@@ -125,3 +125,19 @@ In closing, I rendered a few more shaderballs using various displacement maps fr
 [![Figure 7: A pebble sphere and a leafy sphere. Note the overhangs on the leafy sphere, which are only possible using vector displacement.]({{site.url}}/content/images/2017/May/preview/shaderspheres_0.jpg)]({{site.url}}/content/images/2017/May/shaderspheres_0.jpg)
 
 [![Figure 8: A compacted sand sphere and a stone sphere. Unfortunately, there is some noticeable texture stretching on the compacted sand sphere where crack removal occured.]({{site.url}}/content/images/2017/May/preview/shaderspheres_1.jpg)]({{site.url}}/content/images/2017/May/shaderspheres_1.jpg)
+
+**References**
+
+Edwin E. Catmull and James H. Clark. 1978. [Recursively Generated B-spline Surfaces on Arbitrary Topological Meshes](https://www.sciencedirect.com/science/article/abs/pii/0010448578901100). _Computer-Aided Design_. 10, 6 (1978), 350-355.
+
+Mark Halstead, Michael Kass, and Tony DeRose. 1993. [Efficient, Fair Interpolation using Catmull-Clark Surfaces](https://dl.acm.org/doi/10.1145/166117.166121). In _SIGGRAPH 1993: Proceedings of the 20th Annual Conference on Computer Graphics and Interactive Techniques_. 35-44.
+
+Johannes Hanika, Alexander Keller, and Hendrik P A Lensch. 2010. [Two-Level Ray Tracing with Reordering for Highly Complex Scenes](https://dl.acm.org/citation.cfm?id=1839241). In _GI 2010 (Proceedings of the 2010 Conference on Graphics Interfaces)_. 145-152.
+
+Takahiro Harada. 2015. [Rendering Vector Displacement Mapped Surfaces in a GPU Ray Tracer](https://www.crcpress.com/GPU-Pro-6-Advanced-Rendering-Techniques/Engel/p/book/9781482264616). In _GPU Pro 6_. 459-474.
+
+Matthias Nießner, Charles Loop, Mark Meyer, and Tony DeRose. 2012. [Feature Adaptive GPU Rendering of Catmull-Clark Subdivision Surfaces](https://dl.acm.org/doi/10.1145/2077341.2077347). _ACM Transactions on Graphics_. 31, 1 (2012), 6:1-6:11.
+
+Matt Pharr and Pat Hanrahan. 1996. [Geometry Caching for Ray-Tracing Displacement Maps](http://graphics.stanford.edu/papers/displace/). In _Rendering Techniques 1996 (Proceedings of the 7th Eurographics Workshop on Rendering)_. 31-40.
+
+Brian Smits, Peter Shirley, and Michael M. Stark. 2000. [Direct Ray Tracing of Displacement Mapped Triangles](https://doi.org/10.1007/978-3-7091-6303-0_28). In _Rendering Techniques 2000 (Proceedings of the 11th Eurographics Workshop on Rendering)_. 307-318.

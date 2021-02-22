@@ -7,7 +7,7 @@ author: Yining Karl Li
 
 <div markdown="1">
 
-I recently implemented two techniques in Takua for solving the harsh shadow terminator problem; I implemented both the [technique that Matt Jen-Yuan Chiang, Brent Burley, and I published at SIGGRAPH 2019](https://www.yiningkarlli.com/projects/shadowterminator.html) last year, and the [technique published by Alejandro Conty Estevez, Pascal Lecocq, and Clifford Stein](https://link.springer.com/chapter/10.1007/978-1-4842-4427-2_12) in Ray Tracing Gems.
+I recently implemented two techniques in Takua for solving the harsh shadow terminator problem; I implemented both the Disney Animation solution [[Chiang et al. 2019]]((https://www.yiningkarlli.com/projects/shadowterminator.html)) that we published at SIGGRAPH 2019, and the Sony Imageworks technique [[Estevez et al. 2019]](https://link.springer.com/chapter/10.1007/978-1-4842-4427-2_12) published in Ray Tracing Gems.
 We didn't show too many comparisons between the two techniques (which I'll refer to as the Chiang and Estevez approaches, respectively) in our SIGGRAPH 2019 presentation, and we didn't show comparisons on any actual "real-world" scenes, so I thought I'd do a couple of my own renders using Takua as a bit of a mini-followup and share a handful of practical implementation tips.
 For a recap of the harsh shadow terminator problem, please see either the Estevez paper or the slides from the Chiang talk, which both do excellent jobs of describing the problem and why it happens in detail.
 Here's a small scene that I made for this post, thrown together using some Evermotion assets that I had sitting around:
@@ -194,7 +194,7 @@ Second, note that both Chiang 2019 and Estevez 2019 are described with respect t
 This frame of reference is very important; both techniques work specifically based on the outgoing direction being the direction towards a potential light source, meaning that this technique actually isn't reciprocal by default.
 The Estevez 2019 paper found that the shadow terminator term can be made reciprocal by just applying the term to both incoming and outgoing directions, but they also found that this adjustment can make edges too dark.
 Instead, in order to make both techniques compatible with bidirectional path tracing integrators, I add in a check for whether the incoming or outgoing direction is pointed at a light, and feed the appropriate direction into the shadow terminator function.
-Doing this check is enough to make my bidirectional renders match my unidirectional ones; intuitively this approach is similar to the check one has to carry out when applying adjoint Bsdf adjustments [(Veach 1996)](https://graphics.stanford.edu/papers/non-symmetric/) for shading normals and refraction.
+Doing this check is enough to make my bidirectional renders match my unidirectional ones; intuitively this approach is similar to the check one has to carry out when applying adjoint Bsdf adjustments [[Veach 1996]](https://graphics.stanford.edu/papers/non-symmetric/) for shading normals and refraction.
 
 That's pretty much it!
 If you want the details for how these two techniques are derived and why they work, I strongly encourage reading the Estevez 2019 chapter in Ray Tracing Gems and reading through both the short paper and the presentation slides / notes for the Chiang 2019 SIGGRAPH talk.

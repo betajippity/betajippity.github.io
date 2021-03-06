@@ -81,6 +81,8 @@ To try to help avoid spoilers, the stills below are presented in no particular o
 
 [![]({{site.url}}/content/images/2021/Mar/raya/RAYA_107.jpg)]({{site.url}}/content/images/2021/Mar/raya/RAYA_107.jpg)
 
+[![]({{site.url}}/content/images/2021/Mar/raya/RAYA_016.jpg)]({{site.url}}/content/images/2021/Mar/raya/RAYA_016.jpg)
+
 [![]({{site.url}}/content/images/2021/Mar/raya/RAYA_038.jpg)]({{site.url}}/content/images/2021/Mar/raya/RAYA_038.jpg)
 
 [![]({{site.url}}/content/images/2021/Mar/raya/RAYA_113.jpg)]({{site.url}}/content/images/2021/Mar/raya/RAYA_113.jpg)
@@ -296,8 +298,6 @@ To try to help avoid spoilers, the stills below are presented in no particular o
 [![]({{site.url}}/content/images/2021/Mar/raya/RAYA_044.jpg)]({{site.url}}/content/images/2021/Mar/raya/RAYA_044.jpg)
 
 [![]({{site.url}}/content/images/2021/Mar/raya/RAYA_009.jpg)]({{site.url}}/content/images/2021/Mar/raya/RAYA_009.jpg)
-
-[![]({{site.url}}/content/images/2021/Mar/raya/RAYA_016.jpg)]({{site.url}}/content/images/2021/Mar/raya/RAYA_016.jpg)
 
 [![]({{site.url}}/content/images/2021/Mar/raya/RAYA_026.jpg)]({{site.url}}/content/images/2021/Mar/raya/RAYA_026.jpg)
 

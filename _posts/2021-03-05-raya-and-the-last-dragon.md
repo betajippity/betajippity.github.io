@@ -265,8 +265,6 @@ To try to help avoid spoilers, the stills below are presented in no particular o
 
 [![]({{site.url}}/content/images/2021/Mar/raya/RAYA_080.jpg)]({{site.url}}/content/images/2021/Mar/raya/RAYA_080.jpg)
 
-[![]({{site.url}}/content/images/2021/Mar/raya/RAYA_094.jpg)]({{site.url}}/content/images/2021/Mar/raya/RAYA_094.jpg)
-
 [![]({{site.url}}/content/images/2021/Mar/raya/RAYA_003.jpg)]({{site.url}}/content/images/2021/Mar/raya/RAYA_003.jpg)
 
 [![]({{site.url}}/content/images/2021/Mar/raya/RAYA_025.jpg)]({{site.url}}/content/images/2021/Mar/raya/RAYA_025.jpg)
@@ -314,6 +312,8 @@ To try to help avoid spoilers, the stills below are presented in no particular o
 [![]({{site.url}}/content/images/2021/Mar/raya/RAYA_108.jpg)]({{site.url}}/content/images/2021/Mar/raya/RAYA_108.jpg)
 
 [![]({{site.url}}/content/images/2021/Mar/raya/RAYA_111.jpg)]({{site.url}}/content/images/2021/Mar/raya/RAYA_111.jpg)
+
+[![]({{site.url}}/content/images/2021/Mar/raya/RAYA_094.jpg)]({{site.url}}/content/images/2021/Mar/raya/RAYA_094.jpg)
 
 Here is the credits frame for Disney Animation's rendering and visualization teams! The rendering and visualization teams are separate teams, but seeing them grouped together in the credits is very appropriate- we all are dedicated to making the best pixels possible for our films!
 

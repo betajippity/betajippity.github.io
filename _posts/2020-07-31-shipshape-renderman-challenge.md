@@ -614,7 +614,7 @@ Brent Burley. 2015. [Extending the Disney BRDF to a BSDF with Integrated Subsurf
 
 Brent Burley. 2019. [On Histogram-Preserving Blending for Randomized Texture Tiling](http://jcgt.org/published/0008/04/02/). _Journal of Computer Graphics Techniques_. 8, 4 (2019), 31-53.
 
-Per Christensen, Julian Fong, Jonathan Shade, Wayne Wooten, Brenden Schubert, Andrew Kensler, Stephen Friedman, Charlie Kilpatrick, Cliff Ramshaw, Marc Bannister, Brenton Rayner, Jonathan Brouillat, and Max Liani. 2018. [RenderMan: An Advanced Path-Tracing Architeture for Movie Rendering](https://dl.acm.org/citation.cfm?id=3182162). _ACM Transactions on Graphics_. 37, 3 (2018), 30:1–30:21.
+Per Christensen, Julian Fong, Jonathan Shade, Wayne Wooten, Brenden Schubert, Andrew Kensler, Stephen Friedman, Charlie Kilpatrick, Cliff Ramshaw, Marc Bannister, Brenton Rayner, Jonathan Brouillat, and Max Liani. 2018. [RenderMan: An Advanced Path-Tracing Architecture for Movie Rendering](https://dl.acm.org/citation.cfm?id=3182162). _ACM Transactions on Graphics_. 37, 3 (2018), 30:1–30:21.
 
 Johannes Hanika, Marc Droske, and Luca Fascione. 2015. [Manifold Next Event Estimation](http://dx.doi.org/10.1111/cgf.12681). _Computer Graphics Forum_. 34, 4 (2015), 87-97.
 

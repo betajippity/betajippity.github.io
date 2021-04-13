@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shirt No Fuzz/With Fuzz Comparison</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <link rel="stylesheet" href="/includes/css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yap3ink.css">
+</head>
+
+<body>
+    <link type="text/css" href="before-after.css" rel="stylesheet">
+
+    <div class="ba-slider" style="max-width:4096px; margin: auto;">
+        <img src="../character.004.jpg">
+        <div class="resize">
+            <img src="../character.003.jpg">
+        </div>
+        <span class="handle"></span>
+    </div>
+
+    <div class="figcaption">Figure 6: Character backlit without and with fuzz. The rim lighting effect is created entirely by backlighting scattering through XGen fuzz on the character and the outfit. Click <a href="../character.003.jpg">here</a> and <a href="../character.004.jpg">here</a> to see the full 4K renders by themselves.</div>
+
+    <script type="text/javascript" src="/includes/js/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="before-after.min.js"></script> -->
+    <!-- CDN link if you prefer to use this one -->
+    <script type="text/javascript" src="before-after.js"></script>
+    <script type="text/javascript">
+        $('.ba-slider').beforeAfter();
+    </script>
+</body>
+
+</html>

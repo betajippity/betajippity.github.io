@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shirt No Fuzz/With Fuzz Comparison</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <link rel="stylesheet" href="/includes/css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yap3ink.css">
+</head>
+
+<body>
+    <link type="text/css" href="before-after.css" rel="stylesheet">
+
+    <div class="ba-slider" style="max-width:3840px; margin: auto;">
+        <img src="../shirt_fuzz.png">
+        <div class="resize">
+            <img src="../shirt_nofuzz.png">
+        </div>
+        <span class="handle"></span>
+    </div>
+
+    <div class="figcaption">Figure 5: Shirt before (left) and after (right) XGen fuzz.</div>
+
+    <script type="text/javascript" src="/includes/js/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="before-after.min.js"></script> -->
+    <!-- CDN link if you prefer to use this one -->
+    <script type="text/javascript" src="before-after.js"></script>
+    <script type="text/javascript">
+        $('.ba-slider').beforeAfter();
+    </script>
+</body>
+
+</html>

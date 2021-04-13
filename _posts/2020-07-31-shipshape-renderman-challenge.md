@@ -575,7 +575,7 @@ Figure 51 shows what all of the lighting, comp, and color grading looks like app
 
 [![Figure 51: Final lighting, comp, and color grading applied to a 50% grey clay shaded version. Click for 4K version.]({{site.url}}/content/images/2020/Jul/shipshape/preview/clayrender_graded.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/clayrender_graded_4k.jpg)
 
-[![Figure 52: Final image. Click for 4K version]({{site.url}}/content/images/2020/Jul/shipshape/preview/shipshape_full.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/shipshape_full_4k.jpg)
+[![Figure 52: Final image. Click for 4K version.]({{site.url}}/content/images/2020/Jul/shipshape/preview/shipshape_full.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/shipshape_full_4k.jpg)
 
 **Conclusion**
 
@@ -585,7 +585,7 @@ I started this project mostly as an excuse to just have fun, but along the way I
 
 Here is a progression video I put together from all of the test and in-progress renders that I made throughout this entire project:
 
-<div class='embed-container'><iframe src="https://player.vimeo.com/video/433150588" frameborder="0">Shipshape Art Challenge Ship Turntable</iframe></div>
+<div class='embed-container'><iframe src="https://player.vimeo.com/video/433150588" frameborder="0">Shipshape Art Challenge Progression Reel</iframe></div>
 <div class="figcaption">Figure 53: Progression reel made from test and in-progress renders leading up to my final image.</div>
 
 My wife, Harmony Li, deserves an enormous amount of thanks on this project.
@@ -602,7 +602,7 @@ My backup plan in case I wasn't able to pull off the rainy look was to just go f
 Thankfully, the rainy look worked out and I didn't have to go to my backup plan!
 After the contest wrapped up, I went back and made a daylight version out of curiosity:
 
-[![Figure 54: Bonus image: daylight version. Click for 4K version]({{site.url}}/content/images/2020/Jul/shipshape/preview/daylight_comp.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/daylight_comp_4k.jpg)
+[![Figure 54: Bonus image: daylight version. Click for 4K version.]({{site.url}}/content/images/2020/Jul/shipshape/preview/daylight_comp.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/daylight_comp_4k.jpg)
 
 **References**
 

@@ -341,8 +341,8 @@ Julian Fong, Magnus Wrenninge, Christopher Kulla, and Ralf Habel. 2017. [Product
 
 Peter Kutz, Ralf Habel, Yining Karl Li, and Jan Novák. 2017. [Spectral and Decomposition Tracking for Rendering Heterogeneous Volumes](https://doi.org/10.1145/3072959.3073665). _ACM Transactions on Graphics_. 36, 4 (2017), 111:1-111:16.
 
-Jennifer Newfield and Josh Staub. 2020. [How Short Circuit Experiments: Experimental Filmmaking at Walt Disney Animation Studios](https://dl.acm.org/doi/10.1145/3388767.3409267). In _ACM SIGGRAPH 2020_, Talks. 72:1-72:2.
+Jennifer Newfield and Josh Staub. 2020. [How Short Circuit Experiments: Experimental Filmmaking at Walt Disney Animation Studios](https://dl.acm.org/doi/10.1145/3388767.3409267). In _ACM SIGGRAPH 2020_ Talks. 72:1-72:2.
 
-Sean Palmer, Jonathan Garcia, Sara Drakeley, Patrick Kelly, and Ralf Habel. 2017. [The Ocean and Water Pipeline of Disney’s Moana](https://dl.acm.org/citation.cfm?id=3085067). In _ACM SIGGRAPH 2017_, Talks. 29:1-29:2.
+Sean Palmer, Jonathan Garcia, Sara Drakeley, Patrick Kelly, and Ralf Habel. 2017. [The Ocean and Water Pipeline of Disney’s Moana](https://dl.acm.org/citation.cfm?id=3085067). In _ACM SIGGRAPH 2017_ Talks. 29:1-29:2.
 
 Thijs Vogels, Fabrice Rousselle, Brian McWilliams, Gerhard Röthlin, Alex Harvill, David Adler, Mark Meyer, and Jan Novák. 2018. [Denoising with Kernel Prediction and Asymmetric Loss Functions](https://doi.org/10.1145/3197517.3201388). _ACM Transactions on Graphics_. 37, 4 (2018), 124:1-124:15.

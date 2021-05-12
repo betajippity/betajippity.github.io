@@ -517,6 +517,15 @@ main.content {
     /*border-bottom: 1px solid #E5E5E5;*/
 }
 
+.blog-title-inner {
+
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    min-width: 480px;
+    margin: 0 auto;
+}
+
 .blog-description {
     margin: 0;
     font-size: 2.4rem;
@@ -911,64 +920,131 @@ main.content {
 }
 
 /* ==========================================================================
-   1. Media Queries - Smaller than 900px
+   1. Media Queries - Smaller than 800px
    ========================================================================== */
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 800px) {
 
-/*    blockquote {
-        margin-left: 0;
+    .navbar-padding {
+        height: 0;
     }
 
+    /* Big cover image on the home page */
     #site-head {
-        -webkit-box-sizing: border-box; 
-        -moz-box-sizing: border-box;
-        box-sizing: border-box; 
-        height: auto;
-        min-height: 240px;
-        padding: 15% 0;
+        position: relative;
+        display: table;
+        width: 100%;
+        margin-bottom: 6rem;
+        color: #333;
+        z-index: 800 ;
+    }
+
+    .blog-title-wrap {
+        margin-left: -4px;
+        color: white;
+        background-color: #3d3d3d ;
+        height: 72px ;
+        opacity: .9;
     }
 
     .blog-title {
-        font-size: 4rem;
-        letter-spacing: -1px;
+        position: absolute;
+        top:3px;
+        font-size: 42px;
+        display: inline;
+        font-weight: 500;
+        text-transform:uppercase;
+        z-index: 1100 ;
     }
 
-    .blog-description {
-        font-size: 1.7rem;
-        line-height: 1.5em;
+    .blog-author {
+        position: absolute;
+        top: 42px;
+        left: 65px;
+        font-size: 21px;
+        display: inline;
+        font-weight: 500;
+        text-transform:uppercase;
+        z-index: 1100 ;
     }
 
-    .post {
-        font-size: 0.9em;
-        line-height: 1.6em;
+    .blog-nav {
+        font-size: 16px;
+        font-weight: 300;
+        text-align: right ;
+        right: 0px;
+        top:45px;
+        position: absolute;
+    }
+}
+
+
+/* ==========================================================================
+   1. Media Queries - Smaller than 600px
+   ========================================================================== */
+
+@media only screen and (max-width: 600px) {
+
+    .navbar-padding {
+        height: 0;
     }
 
-    .post-template .post {
-        padding-bottom: 1rem;
+    /* Big cover image on the home page */
+    #site-head {
+        position: relative;
+        display: table;
+        width: 100%;
+        margin-bottom: 6rem;
+        color: #333;
+        z-index: 800 ;
     }
 
-    .post-template .post-header {
-        padding: 40px 0;
+    .blog-title-inner {
+
+        position: relative;
+        width: 50%;
+        max-width: 900px;
+        min-width: 300px;
+        margin: auto;
+        left: 1.1%;
     }
 
-    h1 {
-        font-size: 4.8rem;
-        text-indent: -2px;
+    .blog-title-wrap {
+        width: auto;
+        color: white;
+        background-color: #3d3d3d ;
+        height: 100px ;
+        opacity: .9;
     }
 
-    h2 {
-        font-size: 3.8rem;
+    .blog-title {
+        margin: auto;
+        position: relative;
+        font-size: 2.5em;
+        display: table;
+        font-weight: 500;
+        text-transform:uppercase;
+        z-index: 1100 ;
     }
 
-    h3 {
-        font-size: 3.3rem;
+    .blog-author {
+        margin: auto;
+        top: 42px;
+        font-size: 1.5em;
+        font-weight: 500;
+        text-transform:uppercase;
+        z-index: 1100 ;
+        left: 20%
     }
 
-    h4 {
-        font-size: 2.8rem;
-    }*/
-
+    .blog-nav {
+        margin: auto;
+        font-size: 1em;
+        font-weight: 300;
+        text-align: center ;
+        right: 37.5%;
+        top:75px;
+    }
 }
 
 /* ==========================================================================

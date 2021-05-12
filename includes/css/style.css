@@ -491,7 +491,7 @@ main.content {
 .blog-author {
     position: absolute;
     top:60px;
-    left: 100px;
+    left: 92px;
     font-size: 30px;
     display: inline;
     font-weight: 500;
@@ -934,6 +934,7 @@ main.content {
         position: relative;
         display: table;
         width: 100%;
+        /*height: 60%;*/
         margin-bottom: 6rem;
         color: #333;
         z-index: 800 ;
@@ -943,14 +944,14 @@ main.content {
         margin-left: -4px;
         color: white;
         background-color: #3d3d3d ;
-        height: 72px ;
+        height: 87px ;
         opacity: .9;
     }
 
     .blog-title {
         position: absolute;
         top:3px;
-        font-size: 42px;
+        font-size: 50px;
         display: inline;
         font-weight: 500;
         text-transform:uppercase;
@@ -959,9 +960,9 @@ main.content {
 
     .blog-author {
         position: absolute;
-        top: 42px;
-        left: 65px;
-        font-size: 21px;
+        top: 50px;
+        left: 78px;
+        font-size: 25px;
         display: inline;
         font-weight: 500;
         text-transform:uppercase;
@@ -973,7 +974,7 @@ main.content {
         font-weight: 300;
         text-align: right ;
         right: 0px;
-        top:45px;
+        top:58px;
         position: absolute;
     }
 }
@@ -1013,14 +1014,14 @@ main.content {
         width: auto;
         color: white;
         background-color: #3d3d3d ;
-        height: 100px ;
+        height: 110px ;
         opacity: .9;
     }
 
     .blog-title {
         margin: auto;
         position: relative;
-        font-size: 2.5em;
+        font-size: 2.75em;
         display: table;
         font-weight: 500;
         text-transform:uppercase;
@@ -1029,12 +1030,12 @@ main.content {
 
     .blog-author {
         margin: auto;
-        top: 42px;
-        font-size: 1.5em;
+        top: 45px;
+        font-size: 1.75em;
         font-weight: 500;
         text-transform:uppercase;
         z-index: 1100 ;
-        left: 20%
+        left: 16%
     }
 
     .blog-nav {
@@ -1043,7 +1044,7 @@ main.content {
         font-weight: 300;
         text-align: center ;
         right: 37.5%;
-        top:75px;
+        top:82px;
     }
 }
 

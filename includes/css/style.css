@@ -1015,7 +1015,7 @@ main.content {
         color: white;
         background-color: #3d3d3d ;
         height: 110px ;
-        opacity: .9;
+        /* opacity: .9; */
     }
 
     .blog-title {

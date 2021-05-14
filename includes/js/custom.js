@@ -48,7 +48,7 @@
 // 	}
 // });
 
-//Creates figure captions under images
+// Creates figure captions under images
 $(document).ready(function() {
 	// Every image referenced from a Markdown document
 	$(".post-content img").each(function() {
@@ -58,3 +58,20 @@ $(document).ready(function() {
 				.after('<div class="figcaption">'+$(this).attr("alt")+'</div>');
 		});
 });
+
+// Creates line numbers for code blocks
+var pres = document.getElementsByTagName('pre'), codeText, codeLines;
+for (var pl = pres.length, p = 0; p < pl; p++) {
+    if ( pres[p].children[0].tagName == 'CODE' ) {
+        
+        codeText = pres[p].children[0].innerHTML.trim(); // use trim to strip empty last line
+        pres[p].children[0].innerHTML = codeText.split("\n").map(function(line) {
+            return '<span class="code-line">' + line + '</span>';
+        }).join("\n");
+        
+        codeLines = pres[p].querySelectorAll('span.code-line');
+        for (var cl = codeLines.length, c = 0; c < cl; c++) {
+            codeLines[c].style.width = pres[p].scrollWidth + 'px';
+        }
+    }
+}

@@ -77,7 +77,7 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: "proxima-nova",Times,Helvetica,Arial,freesans,sans-serif;
+    font-family: "proxima-nova", sans-serif;
     font-weight: 300;
     font-size: 1.5rem;
     line-height: 1.3em;
@@ -182,9 +182,9 @@ blockquote {
     box-sizing: border-box;
     margin: 1.6em 0;
     padding: 0 0 0 1.6em;
-    border-left: #666666 0.4em solid;
+    border-left: #888 0.2em solid;
     color: #666666;
-    font-family: Georgia,Times,serif;
+    font-family: "proxima-nova", sans-serif;
     font-style: italic;
 }
 

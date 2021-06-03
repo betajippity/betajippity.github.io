@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>x86-64/arm64 Noise Comparison, Zoomed-in Crop</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <link rel="stylesheet" href="/includes/css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yap3ink.css">
+</head>
+
+<body>
+    <link type="text/css" href="before-after.css" rel="stylesheet">
+
+    <div class="ba-slider" style="max-width:3840px; margin: auto;">
+        <img src="../noise_arm64_crop.jpg">
+        <div class="resize">
+            <img src="../noise_x86-64_crop.jpg">
+        </div>
+        <span class="handle"></span>
+    </div>
+
+    <div class="figcaption">Figure 3: A zoomed-in crop of Figure 2 showing noise pattern differences between x86-64 (left) vs arm64 (right).</div>
+
+    <script type="text/javascript" src="/includes/js/jquery.min.js"></script>
+    <script type="text/javascript" src="before-after.js"></script>
+    <script type="text/javascript">
+        $('.ba-slider').beforeAfter();
+    </script>
+</body>
+
+</html>

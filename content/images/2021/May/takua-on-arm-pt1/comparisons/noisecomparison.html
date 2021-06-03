@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>x86-64/arm64 Noise Comparison</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <link rel="stylesheet" href="/includes/css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yap3ink.css">
+</head>
+
+<body>
+    <link type="text/css" href="before-after.css" rel="stylesheet">
+
+    <div class="ba-slider" style="max-width:3840px; margin: auto;">
+        <img src="../noise_arm64.jpg">
+        <div class="resize">
+            <img src="../noise_x86-64.jpg">
+        </div>
+        <span class="handle"></span>
+    </div>
+
+    <div class="figcaption">Figure 2: A single-spp render demonstrating noise pattern differences between x86-64 (left) vs arm64 (right). Differences are most noticeable on rim of the cup, especially on the left near the handle.</div>
+
+    <script type="text/javascript" src="/includes/js/jquery.min.js"></script>
+    <script type="text/javascript" src="before-after.js"></script>
+    <script type="text/javascript">
+        $('.ba-slider').beforeAfter();
+    </script>
+</body>
+
+</html>

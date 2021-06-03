@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>x86-64/arm64 Near-Converged Noise Comparison</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <link rel="stylesheet" href="/includes/css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yap3ink.css">
+</head>
+
+<body>
+    <link type="text/css" href="before-after.css" rel="stylesheet">
+
+    <div class="ba-slider" style="max-width:3840px; margin: auto;">
+        <img src="../nearconverged_difference_exp10.jpg">
+        <div class="resize">
+            <img src="../nearconverged_difference.jpg">
+        </div>
+        <span class="handle"></span>
+    </div>
+
+    <div class="figcaption">Figure 6: Left: Absolute difference between the x86-64 and arm64 renders from Figure 2. Right: Since the absolute difference image basically looks completely black to the eye, I've also included a version of the absolute difference exposed up 10 stops (made 1024 times brighter) to make the differences more visible.</div>
+
+    <script type="text/javascript" src="/includes/js/jquery.min.js"></script>
+    <script type="text/javascript" src="before-after.js"></script>
+    <script type="text/javascript">
+        $('.ba-slider').beforeAfter();
+    </script>
+</body>
+
+</html>

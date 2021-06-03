@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <link rel="stylesheet" href="/includes/css/style.css">
+    <link type="text/css" href="before-after.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="ba-slider" style="margin: auto;">
+        <img src="../preview/noise_arm64_crop.jpg">
+        <div class="resize">
+            <img src="../preview/noise_x86-64_crop.jpg">
+        </div>
+        <span class="handle"></span>
+    </div>
+
+    <script type="text/javascript" src="/includes/js/jquery.min.js"></script>
+    <script type="text/javascript" src="before-after.js"></script>
+    <script type="text/javascript">
+        $('.ba-slider').beforeAfter();
+    </script>
+</body>
+
+</html>

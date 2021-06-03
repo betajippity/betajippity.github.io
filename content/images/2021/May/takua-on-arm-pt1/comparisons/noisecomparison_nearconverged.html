@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>x86-64/arm64 Near-Converged Noise Comparison</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <link rel="stylesheet" href="/includes/css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yap3ink.css">
+</head>
+
+<body>
+    <link type="text/css" href="before-after.css" rel="stylesheet">
+
+    <div class="ba-slider" style="max-width:3840px; margin: auto;">
+        <img src="../nested_ice_nearconverged_arm64.jpg">
+        <div class="resize">
+            <img src="../nested_ice_nearconverged_x86-64.jpg">
+        </div>
+        <span class="handle"></span>
+    </div>
+
+    <div class="figcaption">Figure 5: The same cup scene from Figure 1, but now much closer to convergence (2048 spp), rendered using x86-64 (left) and arm64 (right). Note how differences between the x86-64 and arm64 renders are now basically imperceptible to the eye; these are in fact two different images!</div>
+
+    <script type="text/javascript" src="/includes/js/jquery.min.js"></script>
+    <script type="text/javascript" src="before-after.js"></script>
+    <script type="text/javascript">
+        $('.ba-slider').beforeAfter();
+    </script>
+</body>
+
+</html>

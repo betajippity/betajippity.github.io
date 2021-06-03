@@ -317,7 +317,7 @@ table td {
     border-top: 1px solid #efefef;
 }
 
-table th { color: #000; }
+table th { color: #666; }
 
 table caption + thead tr:first-child th,
 table caption + thead tr:first-child td,

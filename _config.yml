@@ -3,10 +3,10 @@
 paginate: 6 # pagination basted on number of posts
 exclude: ["Gemfile", "Gemfile.lock", "README.md", 'sass', 'watch.sh', 'style.scss', 'CNAME'] # files to exclude
 baseurl: /
-url: http://blog.yiningkarlli.com
+url: https://blog.yiningkarlli.com
 permalink: /:year/:month/:title.html
 author: Yining Karl Li
-authorurl: http://www.yiningkarlli.com
+authorurl: https://www.yiningkarlli.com
 name: Code &#38; Visuals
 title: Code &#38; Visuals
 markdown: kramdown

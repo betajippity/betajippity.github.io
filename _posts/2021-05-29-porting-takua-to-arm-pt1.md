@@ -805,8 +805,8 @@ Using this flag means that if a future Raspberry Pi 5 or something comes out hop
 
 So, now that I have Takua up and running on arm64 on Linux, how does it actually perform?
 Here are some comparisons, although there are some important caveats.
-First, at this stage in the porting process, the only arm64 hardware I had that could actually run reasonably sized scenes on was a Raspberry Pi 4 with 4 GB of memory.
-The Raspberry Pi 4's CPU is a Broadcom BCM2711, which has 4 Cortex-A72 cores; these cores aren't exactly fast, and even though the Raspberry Pi 4 came out in 2019, the Cortex-A72 core actually dates back to 2015.
+First, at this stage in the porting process, the only arm64 hardware I had that could actually run reasonably sized scenes on was a Raspberry Pi 4B with 4 GB of memory.
+The Raspberry Pi 4B's CPU is a Broadcom BCM2711, which has 4 Cortex-A72 cores; these cores aren't exactly fast, and even though the Raspberry Pi 4B came out in 2019, the Cortex-A72 core actually dates back to 2015.
 So, for the x86-64 comparison point, I'm using my early 2015 MacBook Air, which also has only 4 GB of memory and has an Intel Core i5-5250U CPU with 2 cores / 4 threads.
 Also, as an extremely unfair comparison point, I also ran the comparisons on my workstation, which has 128 GB of memory and dual Intel Xeon E5-2680 CPUs with 8 cores / 16 threads each, for 16 cores / 32 threads in total.
 The three scenes I used were the Cornell Box seen in Figure 1, the glass teacup seen in Figure 2, and the bedroom scene from my [shadow terminator blog post](http://blog.yiningkarlli.com/2020/02/shadow-terminator-in-takua.html); these scenes were chosen because they fit in under 4 GB of memory.
@@ -844,24 +844,24 @@ In the results above, "wall time" refers to how long the render took to complete
 Both values are separately tracked by the renderer; "wall time" is just a timer that starts when the renderer begins working on its first sample and stops when the very last sample is finished, while "core-seconds" is tracked by using a separate timer per thread and adding up how much time each thread has spent rendering.
 
 The results are interesting!
-The Raspberry Pi 4 and 2015 MacBook Air are both just completely outclassed by the dual-Xeon workstation in absolute wall time, but that should come as a surprise to absolutely nobody.
-What's more surprising is that the multiplier by which the dual-Xeon workstation is faster than the Raspberry Pi 4 in wall time is much higher than the multiplier in core-seconds.
-For the Cornell Box scene, the dual-Xeon is 12.033x faster than the Raspberry Pi 4 in wall time, but is only 1.546x faster in core-seconds.
-For the Tea Cup scene, the dual-Xeon is 12.61x faster than the Raspberry Pi 4 in wall time, but is only 1.577x faster in core-seconds.
-For the Bedroom scene, the dual-Xeon is 18.217x faster than the Raspberry Pi 4 in wall time, but is only 2.277x faster in core-seconds.
-This difference in wall time multiplier versus core-seconds multiplier indicates that the Raspberry Pi 4 and dual-Xeon workstation are shockingly close in _single-threaded_ performance; the dual-Xeon workstation only has such a crushing lead in wall clock time because it just has way more cores and threads available than the Raspberry Pi 4.
+The Raspberry Pi 4B and 2015 MacBook Air are both just completely outclassed by the dual-Xeon workstation in absolute wall time, but that should come as a surprise to absolutely nobody.
+What's more surprising is that the multiplier by which the dual-Xeon workstation is faster than the Raspberry Pi 4B in wall time is much higher than the multiplier in core-seconds.
+For the Cornell Box scene, the dual-Xeon is 12.033x faster than the Raspberry Pi 4B in wall time, but is only 1.546x faster in core-seconds.
+For the Tea Cup scene, the dual-Xeon is 12.61x faster than the Raspberry Pi 4B in wall time, but is only 1.577x faster in core-seconds.
+For the Bedroom scene, the dual-Xeon is 18.217x faster than the Raspberry Pi 4B in wall time, but is only 2.277x faster in core-seconds.
+This difference in wall time multiplier versus core-seconds multiplier indicates that the Raspberry Pi 4B and dual-Xeon workstation are shockingly close in _single-threaded_ performance; the dual-Xeon workstation only has such a crushing lead in wall clock time because it just has way more cores and threads available than the Raspberry Pi 4B.
 
-When we compare the Raspberry Pi 4 to the 2015 MacBook Air, the results are even more interesting.
-Between these two machines, the times are actually relatively close; for the Cornell Box and Bedroom scenes, the Raspberry Pi 4 is within striking distance of the 2015 MacBook Air, and for the Tea Cup scene, the Raspberry Pi 4 is _actually faster_ than the 2015 MacBook Air.
-The reason the Raspberry Pi 4 is likely faster than the 2014 MacBook Air at the Tea Cup scene is likely because the Tea Cup scene was rendered using VCM; VCM requires the construction of a photon map, and from previous profiling I know that Takua's photon map builder works better with more actual physical cores.
-The Raspberry Pi 4 has four physical cores, whereas the 2014 MacBook Air only has two physical cores and gets to four threads using hyperthreading; my photon map builder doesn't scale well with hyperthreading.
+When we compare the Raspberry Pi 4B to the 2015 MacBook Air, the results are even more interesting.
+Between these two machines, the times are actually relatively close; for the Cornell Box and Bedroom scenes, the Raspberry Pi 4B is within striking distance of the 2015 MacBook Air, and for the Tea Cup scene, the Raspberry Pi 4B is _actually faster_ than the 2015 MacBook Air.
+The reason the Raspberry Pi 4B is likely faster than the 2014 MacBook Air at the Tea Cup scene is likely because the Tea Cup scene was rendered using VCM; VCM requires the construction of a photon map, and from previous profiling I know that Takua's photon map builder works better with more actual physical cores.
+The Raspberry Pi 4B has four physical cores, whereas the 2014 MacBook Air only has two physical cores and gets to four threads using hyperthreading; my photon map builder doesn't scale well with hyperthreading.
 
-So, overall, the Raspberry Pi 4's arm64 processor intended for phones got handily beat by a dual-Xeon workstation but came very close to a 2015 MacBook Air.
-The thing here to remember though, is that the Raspberry Pi 4's arm64-based processor has a TDP of just 4 watts!
+So, overall, the Raspberry Pi 4B's arm64 processor intended for phones got handily beat by a dual-Xeon workstation but came very close to a 2015 MacBook Air.
+The thing here to remember though, is that the Raspberry Pi 4B's arm64-based processor has a TDP of just 4 watts!
 Contrast with the MacBook Air's Intel Core i5-5250U, which has a 15 watt TDP, and with the dual Xeon E5-2680 in my workstation, which have a 130 watt TDP each for a combined _260 watt TDP_.
 For this comparison, I think using the max TDP of each processor is a relatively fair thing to do, since Takua Renderer pushes each CPU to 100% utilization for sustained periods of time.
-So, the real story here from an energy perspective is that the Raspberry Pi 4 was between 12 to 18 times slower than the dual-Xeon workstation, but the Raspberry Pi 4 also has a TDP that is _65x lower_ than the dual-Xeon workstation.
-Similarly, the Raspberry Pi 4 nearly matches the 2015 MacBook Air, but with a TDP that is 3.75x lower!
+So, the real story here from an energy perspective is that the Raspberry Pi 4B was between 12 to 18 times slower than the dual-Xeon workstation, but the Raspberry Pi 4B also has a TDP that is _65x lower_ than the dual-Xeon workstation.
+Similarly, the Raspberry Pi 4B nearly matches the 2015 MacBook Air, but with a TDP that is 3.75x lower!
 
 When factoring in energy utilization, the numbers get even more interesting once we look at total energy used across the whole render.
 We can get the total energy used for each render by multiplying the wall clock render time with the TDP of each processor (again, we're assuming 100% processor utilization during each render); this gives us total energy used in watt-seconds, which we divide by 60 seconds per hour to get watt-hours:
@@ -890,12 +890,12 @@ We can get the total energy used for each render by multiplying the wall clock r
 | Intel Core i5-5250U:   | 15 W     | 1225.135 Wh        |
 | Intel Xeon E5-2680 x2: | 260 W    | 1344.850 Wh         |
 
-From the numbers above, we can see that even though the Raspberry Pi 4 is a lot slower than the dual-Xeon workstation in wall clock time, the Raspberry Pi 4 absolutely crushes both the 2015 MacBook Air and the dual-Xeon workstation in terms of energy efficiency.
-To render the same image, the Raspberry Pi 4 used between approximately 3.5x to 5.5x _less_ energy overall than the dual-Xeon workstation, and used between approximately 2.3x to 3.8x less energy than the 2015 MacBook Air.
+From the numbers above, we can see that even though the Raspberry Pi 4B is a lot slower than the dual-Xeon workstation in wall clock time, the Raspberry Pi 4B absolutely crushes both the 2015 MacBook Air and the dual-Xeon workstation in terms of energy efficiency.
+To render the same image, the Raspberry Pi 4B used between approximately 3.5x to 5.5x _less_ energy overall than the dual-Xeon workstation, and used between approximately 2.3x to 3.8x less energy than the 2015 MacBook Air.
 It's also worth noting that the 2015 MacBook Air cost $899 when it first launched (and the processor had a recommended price from Intel of $315), and the dual-Xeon workstation cost... I don't actually know.
 I bought the dual-Xeon workstation used for a pittance when my employer retired it, so I don't know how much it actually cost new.
 But, I do know that the processors in the dual-Xeon had a recommended price from Intel of $1723... _each_, for a total of $3446 when they were new.
-In comparison, the Raspberry Pi 4 with 4 GB of RAM costs about $55 for the entire computer, and the processor cost... well, the actual price for most ARM processors is not ever publicly disclosed, but since a baseline Raspberry Pi 4 costs only $35, the processor can't have cost more than a few dollars at most, possibly even under a dollar.
+In comparison, the Raspberry Pi 4B with 4 GB of RAM costs about $55 for the entire computer, and the processor cost... well, the actual price for most ARM processors is not ever publicly disclosed, but since a baseline Raspberry Pi 4B costs only $35, the processor can't have cost more than a few dollars at most, possibly even under a dollar.
 
 I think the main takeaway from these performance comparisons is that even back with 2015 technology, even though most arm64 processors were slower in absolute terms compared to their x86-64 counterparts, the single-threaded performance was already shockingly close, and arm64 energy usage per compute unit and price already were leaving x86-64 in the dust.
 Fast forward to the present day in 2021, where we have seen Apple's arm64-based M1 chip take the absolute performance crown in its category from all x86-64 competitors, at both a lower energy utilization level and a lower price.

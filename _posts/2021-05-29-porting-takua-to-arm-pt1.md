@@ -269,6 +269,8 @@ Implementing a work dispatcher that can still maintain a specific tile ordering 
 This atomic is where the memory-reordering bug comes in that led to Takua occasionally dropping a single spp for a single tile on arm64.
 Here's some pesudo-code for how threads are launched and how they ask the work dispatcher for tiles to render; this is highly simplified and condensed from how the actual code in Takua is written (specifically, I've inlined together code from both individual threads and from the work dispatcher and removed a bunch of other unrelated stuff), but preserves all of the important details necessary to illustrate the bug:
 
+<div id="listing1"></div>
+
     int nextTileIndex = 0;
     std::atomic<bool> nextTileSoftLock(false);
     tbb::parallel_for(int(0), numberOfTilesToRender, [&](int /*i*/) {
@@ -410,6 +412,8 @@ A standard `compare_and_exchange()` implementation compares some input value wit
 So, all we need to do is run `compare_exchange_weak()` on `f0` where the value we use for the comparison test is `oldval` and the replacement value is `oldval + f1`; if `compare_exchange_weak()` succeeds, we return `oldval`, otherwise, loop and repeat until `compare_exchange_weak()` succeeds.
 Here's an example implementation:
 
+<div id="listing2"></div>
+
     float addAtomicFloat(std::atomic<float>& f0, const float f1) {
         do {
             float oldval = f0.load();
@@ -428,6 +432,8 @@ We want each thread to reload the atomic float on each iteration because we neve
 Well, here's the implementation that has actually been in Takua's atomic framebuffer implementation for most of the past decade.
 This implementation is very similar to Listing 2, but compared with Listing 2, Lines 2 and 3 are swapped from where they should be; I likely swapped these two lines through a simple copy/paste error or something when I originally wrote it.
 This is the implementation that I suspected was a bug upon revisiting it during the arm64 porting process:
+
+<div id="listing3"></div>
 
     float addAtomicFloat(std::atomic<float>& f0, const float f1) {
         float oldval = f0.load();
@@ -462,6 +468,8 @@ However, after a bit more thought, I concluded that this optimization was very u
 Things got even more interesting when I tried adding in an additional bit of indirection around the atomic load of `f0` into `oldval`.
 Here is an actually incorrect implementation that I thought should be functionally equivalent to the implementation in Listing 3:
 
+<div id="listing4"></div>
+
     float addAtomicFloat(std::atomic<float>& f0, const float f1) {
         const float oldvaltemp = f0.load();
         do {
@@ -485,6 +493,8 @@ Then, we'll look at and compare the arm64 assembly, and we'll discuss some inter
 Here is the corresponding x86-64 assembly for the correct C++ implementation in Listing 2, compiled with Clang 10.0.0 using -O3.
 For readers who are not very used to reading assembly, I've included annotations as comments in the assembly code to describe what the assembly code is doing and how it corresponds back to the original C++ code:
 
+<div id="listing5"></div>
+
     addAtomicFloat(std::atomic<float>&, float):  # f0 is dword ptr [rdi], f1 is xmm0
     .LBB0_1:
             mov           eax, dword ptr [rdi]   # eax = *arg0 = f0.load()
@@ -503,6 +513,8 @@ For readers who are not very used to reading assembly, I've included annotations
 
 Here is the corresponding x86-64 assembly for the C++ implementation in Listing 3; again, this is the version that produces the same correct result as Listing 2.
 Just like with Listing 5, this was compiled using Clang 10.0.0 using -O3, and descriptive annotations are in the comments:
+
+<div id="listing6"></div>
 
     addAtomicFloat(std::atomic<float>&, float):  # f0 is dword ptr [rdi], f1 is xmm0
             mov           eax, dword ptr [rdi]   # eax = *arg0 = f0.load()
@@ -550,6 +562,8 @@ This arm64 assembly was also compiled with Clang 10.0.0 using -O3.
 I've included annotations here as well, although admittedly my arm64 assembly comprehension is not as good as my x86-64 assembly comprehension, since I'm relatively new to compiling for arm64.
 If you're well versed in arm64 assembly and see a mistake in my annotations, feel free to send me a correction!
 
+<div id="listing7"></div>
+
     addAtomicFloat(std::atomic<float>&, float):
             b       .LBB0_2              // goto .LBB0_2
     .LBB0_1:
@@ -586,6 +600,8 @@ x86-64's CISC nature calls for the ISA to have a large number of instructions ca
 Conversely, arm64's RISC nature means a design consisting of fewer, simpler operations [[Patterson and Ditzel 1980]](https://doi.org/10.1145/641914.641917); for example, the RISC design philosophy mandates that memory access be done through specific single-cycle instructions instead of as part of a more complex instruction such as compare-and-exchange.
 These differing design philosophies mean that in arm64 assembly, we will often see many instructions used to implement what would be a single instruction in x86_64; given this difference, compiling Listing 2 produces surprisingly structurally similarities in the output x86_64 (Listing 5) and arm64 (Listing 7) assembly.
 However, if we take the implementation of `addAtomicFloat()` in Listing 3 and compile it for arm64's ARMv8.0-A revision, structural differences between the x86-64 and arm64 output become far more apparent:
+
+<div id="listing8"></div>
 
     addAtomicFloat(std::atomic<float>&, float):
             ldar    w9, [x0]             // w9 = *arg0 = f0, non-atomically loaded
@@ -679,6 +695,8 @@ We can actually use these new ARMv8.1-A single-instruction atomic operations tod
 Actually, Clang's support might go back even earlier; Clang 9.0.0 was the furthest back I was able to test.
 Here's what Listing 2 compiles to using the `-march=armv8.1-a` flag to enable the `casal` instruction:
 
+<div id="listing9"></div>
+
     addAtomicFloat(std::atomic<float>&, float):
     .LBB0_1:
             ldar    w8, [x0]             // w8 = *arg0 = f0, non-atomically loaded
@@ -708,6 +726,8 @@ Interestingly, Listing 9 is now structurally very very similar to it's x86-64 co
 My guess is that if someone was familiar with x86-64 assembly but had never seen arm64 assembly before, and that person was given Listing 5 and Listing 9 to compare side-by-side, they'd be able to figure out almost immediately what each line in Listing 9 does.
 
 Now let's see what Listing 3 compiles to using the `-march=armv8.1-a` flag:
+
+<div id="listing10"></div>
 
     addAtomicFloat(std::atomic<float>&, float):
             ldar    w9, [x0]             // w9 = *arg0 = f0, non-atomically loaded
@@ -746,11 +766,11 @@ Now let's see what Listing 3 compiles to using the `-march=armv8.1-a` flag:
             mov     v0.16b, v1.16b       // return f0 value from ldar
             ret
 
-<div class="codecaption">Listing 20: arm64 revision ARMv8.1-A assembly corresponding to Listing 3, with my annotations in the comments. Compiled using arm64 Clang 10.0.0 using -O3 and also -march=armv8.1-a. <a href="https://godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:30,endLineNumber:4,positionColumn:30,positionLineNumber:4,selectionStartColumn:30,selectionStartLineNumber:4,startColumn:30,startLineNumber:4),source:'%23include+%3Catomic%3E%0A%0Afloat+addAtomicFloat(std::atomic%3Cfloat%3E%26+f0,+const+float+f1)+%7B%0A++++float+oldval+%3D+f0.load()%3B%0A++++do+%7B%0A++++++++float+newval+%3D+oldval+%2B+f1%3B%0A++++++++if+(f0.compare_exchange_weak(oldval,+newval))+%7B%0A++++++++++++return+oldval%3B%0A++++++++%7D%0A++++%7D+while+(true)%3B%0A%7D%0A'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:50.32967032967033,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:armv8-clang1000,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!(),options:'-O3+-march%3Darmv8.1-a',selection:(endColumn:1,endLineNumber:1,positionColumn:1,positionLineNumber:1,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:1),l:'5',n:'0',o:'armv8-a+clang+10.0.0+(Editor+%231,+Compiler+%231)+C%2B%2B',t:'0')),k:49.67032967032967,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4">See on Godbolt Compiler Explorer</a></div>
+<div class="codecaption">Listing 10: arm64 revision ARMv8.1-A assembly corresponding to Listing 3, with my annotations in the comments. Compiled using arm64 Clang 10.0.0 using -O3 and also -march=armv8.1-a. <a href="https://godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:30,endLineNumber:4,positionColumn:30,positionLineNumber:4,selectionStartColumn:30,selectionStartLineNumber:4,startColumn:30,startLineNumber:4),source:'%23include+%3Catomic%3E%0A%0Afloat+addAtomicFloat(std::atomic%3Cfloat%3E%26+f0,+const+float+f1)+%7B%0A++++float+oldval+%3D+f0.load()%3B%0A++++do+%7B%0A++++++++float+newval+%3D+oldval+%2B+f1%3B%0A++++++++if+(f0.compare_exchange_weak(oldval,+newval))+%7B%0A++++++++++++return+oldval%3B%0A++++++++%7D%0A++++%7D+while+(true)%3B%0A%7D%0A'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:50.32967032967033,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:armv8-clang1000,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!(),options:'-O3+-march%3Darmv8.1-a',selection:(endColumn:1,endLineNumber:1,positionColumn:1,positionLineNumber:1,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:1),l:'5',n:'0',o:'armv8-a+clang+10.0.0+(Editor+%231,+Compiler+%231)+C%2B%2B',t:'0')),k:49.67032967032967,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4">See on Godbolt Compiler Explorer</a></div>
 
 Here, the availability of the `casal` instruction makes a huge difference in the compactness of the output assembly!
-Listing 20 is nearly half the length of Listing 8, and more importantly, Listing 20 is also structurally much simpler than Listing 8.
-In Listing 20, the compiler still decided to unroll the first iteration of the loop, but the amount of setup and jumping around in between iterations of the loop is significantly reduced, which should make Listing 20 a bit more performant than Listing 8 even before we take into account the performance improvements from using `casal`.
+Listing 10 is nearly half the length of Listing 8, and more importantly, Listing 10 is also structurally much simpler than Listing 8.
+In Listing 10, the compiler still decided to unroll the first iteration of the loop, but the amount of setup and jumping around in between iterations of the loop is significantly reduced, which should make Listing 10 a bit more performant than Listing 8 even before we take into account the performance improvements from using `casal`.
 
 By the way, remember our discussion of weak versus strong memory models in the previous section?
 As you may have noticed, Takua's implementation of `addAtomicFloat()` uses `std::atomic<T>::compare_exchange_weak()` instead of `std::atomic<T>::compare_exchange_strong()`.
@@ -759,6 +779,8 @@ On x86-64, there is no difference between using the weak and strong versions of 
 However, on arm64, the weak version actually does report false negatives in practice.
 The reason I chose to use the weak version is because when the compare-and-exchange is attempted repeatedly in a loop, if the underlying processor actually has weak memory ordering, using the weak version is usually faster than the strong version.
 To see why, let's take a look at the arm64 ARMv8.0-A assembly corresponding to Listing 2, but with `std::atomic<T>::compare_exchange_strong()` swapped in instead of `std::atomic<T>::compare_exchange_weak()`:
+
+<div id="listing11"></div>
 
     addAtomicFloat(std::atomic<float>&, float):
     .LBB0_1:
@@ -785,11 +807,11 @@ To see why, let's take a look at the arm64 ARMv8.0-A assembly corresponding to L
             mov     v0.16b, v1.16b // return f0 value from ldaxr
             ret
 
-<div class="codecaption">Listing 21: arm64 revision ARMv8.0-A assembly corresponding to Listing 2 but using <br><code class="language-plaintext highlighter-rouge">std::atomic::compare_exchange_strong()</code> instead of <code class="language-plaintext highlighter-rouge">std::atomic::compare_exchange_weak()</code>, with my annotations in the comments. Compiled using arm64 Clang 10.0.0 using -O3 and also -march=armv8.1-a. <a href="https://godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:39,endLineNumber:7,positionColumn:39,positionLineNumber:7,selectionStartColumn:39,selectionStartLineNumber:7,startColumn:39,startLineNumber:7),source:'%23include+%3Catomic%3E%0A%0Afloat+addAtomicFloat(std::atomic%3Cfloat%3E%26+f0,+const+float+f1)+%7B%0A++++do+%7B%0A++++++++float+oldval+%3D+f0.load()%3B%0A++++++++float+newval+%3D+oldval+%2B+f1%3B%0A++++++++if+(f0.compare_exchange_strong(oldval,+newval))+%7B%0A++++++++++++return+oldval%3B%0A++++++++%7D%0A++++%7D+while+(true)%3B%0A%7D%0A'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:50.32967032967033,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:armv8-clang1000,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!(),options:'-O3+',selection:(endColumn:12,endLineNumber:19,positionColumn:12,positionLineNumber:19,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:1),l:'5',n:'0',o:'armv8-a+clang+10.0.0+(Editor+%231,+Compiler+%231)+C%2B%2B',t:'0')),k:49.67032967032967,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4">See on Godbolt Compiler Explorer</a></div>
+<div class="codecaption">Listing 11: arm64 revision ARMv8.0-A assembly corresponding to Listing 2 but using <br><code class="language-plaintext highlighter-rouge">std::atomic::compare_exchange_strong()</code> instead of <code class="language-plaintext highlighter-rouge">std::atomic::compare_exchange_weak()</code>, with my annotations in the comments. Compiled using arm64 Clang 10.0.0 using -O3 and also -march=armv8.1-a. <a href="https://godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:39,endLineNumber:7,positionColumn:39,positionLineNumber:7,selectionStartColumn:39,selectionStartLineNumber:7,startColumn:39,startLineNumber:7),source:'%23include+%3Catomic%3E%0A%0Afloat+addAtomicFloat(std::atomic%3Cfloat%3E%26+f0,+const+float+f1)+%7B%0A++++do+%7B%0A++++++++float+oldval+%3D+f0.load()%3B%0A++++++++float+newval+%3D+oldval+%2B+f1%3B%0A++++++++if+(f0.compare_exchange_strong(oldval,+newval))+%7B%0A++++++++++++return+oldval%3B%0A++++++++%7D%0A++++%7D+while+(true)%3B%0A%7D%0A'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:50.32967032967033,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:armv8-clang1000,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!(),options:'-O3+',selection:(endColumn:12,endLineNumber:19,positionColumn:12,positionLineNumber:19,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:1),l:'5',n:'0',o:'armv8-a+clang+10.0.0+(Editor+%231,+Compiler+%231)+C%2B%2B',t:'0')),k:49.67032967032967,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4">See on Godbolt Compiler Explorer</a></div>
 
-If we compare Listing 21 with Listing 7, we can see that just changing the compare and exchange to a strong version instead of a weak version causes a major restructuring of the arm64 assembly and the addition of a bunch more jumps.
+If we compare Listing 11 with Listing 7, we can see that just changing the compare and exchange to a strong version instead of a weak version causes a major restructuring of the arm64 assembly and the addition of a bunch more jumps.
 In Listing 7, loads from `[x0]` (corresponding to reads of `f0` in the C++ code) happen together at the top of the loop and the loaded values are reused through the rest of the loop.
-However, Listing 21 is restructured such that loads from `[x0]` happen immediately before the instruction that uses the loaded value from `[x0]` to do a comparison or other operation.
+However, Listing 11 is restructured such that loads from `[x0]` happen immediately before the instruction that uses the loaded value from `[x0]` to do a comparison or other operation.
 This change means that there is less time for another thread to change the value at `[x0]` while this thread is still doing stuff.
 Interestingly, if we compile using ARMv8.1-A, the availability of single-instruction atomic operations means that just like on x86-64, the difference between the strong and weak versions of the compare and exchange go away and end up compiling to the same arm64 assembly.
 

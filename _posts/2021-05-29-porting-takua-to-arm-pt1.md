@@ -886,31 +886,31 @@ So, the real story here from an energy perspective is that the Raspberry Pi 4B w
 Similarly, the Raspberry Pi 4B nearly matches the 2015 MacBook Air, but with a TDP that is 3.75x lower!
 
 When factoring in energy utilization, the numbers get even more interesting once we look at total energy used across the whole render.
-We can get the total energy used for each render by multiplying the wall clock render time with the TDP of each processor (again, we're assuming 100% processor utilization during each render); this gives us total energy used in watt-seconds, which we divide by 60 seconds per hour to get watt-hours:
+We can get the total energy used for each render by multiplying the wall clock render time with the TDP of each processor (again, we're assuming 100% processor utilization during each render); this gives us total energy used in watt-seconds, which we divide by 3600 seconds per hour to get watt-hours:
 
 |                        | CORNELL BOX
 |                        | 1024x1024, PT
 | Processor:             | Max TDP: | Total Energy Used: |
 | ----------------------:|:--------:|:-------------------|
-| Broadcom BCM2711:      | 4 W      | 29.375 Wh          |
-| Intel Core i5-5250U:   | 15 W     | 68.013 Wh          |
-| Intel Xeon E5-2680 x2: | 260 W    | 158.679 Wh         |
+| Broadcom BCM2711:      | 4 W      | 0.4895 Wh          |
+| Intel Core i5-5250U:   | 15 W     | 1.1336 Wh          |
+| Intel Xeon E5-2680 x2: | 260 W    | 2.6450 Wh          |
 
 |                        | TEA CUP
 |                        | 1920x1080, VCM
 | Processor:             | Max TDP: | Total Energy Used: |
 | ----------------------:|:--------:|:-------------------|
-| Broadcom BCM2711:      | 4 W      | 147.005 Wh         |
-| Intel Core i5-5250U:   | 15 W     | 559.284 Wh         |
-| Intel Xeon E5-2680 x2: | 260 W    | 757.779 Wh         |
+| Broadcom BCM2711:      | 4 W      | 2.4500 Wh          |
+| Intel Core i5-5250U:   | 15 W     | 9.3214 Wh          |
+| Intel Xeon E5-2680 x2: | 260 W    | 12.6297 Wh         |
 
 |                        | BEDROOM
 |                        | 1920x1080, PT
 | Processor:             | Max TDP: | Total Energy Used: |
 | ----------------------:|:--------:|:-------------------|
-| Broadcom BCM2711:      | 4 W      | 376.911 Wh         |
-| Intel Core i5-5250U:   | 15 W     | 1225.135 Wh        |
-| Intel Xeon E5-2680 x2: | 260 W    | 1344.850 Wh         |
+| Broadcom BCM2711:      | 4 W      | 6.2819 Wh          |
+| Intel Core i5-5250U:   | 15 W     | 20.4189 Wh         |
+| Intel Xeon E5-2680 x2: | 260 W    | 22.4142 Wh         |
 
 From the numbers above, we can see that even though the Raspberry Pi 4B is a lot slower than the dual-Xeon workstation in wall clock time, the Raspberry Pi 4B absolutely crushes both the 2015 MacBook Air and the dual-Xeon workstation in terms of energy efficiency.
 To render the same image, the Raspberry Pi 4B used between approximately 3.5x to 5.5x _less_ energy overall than the dual-Xeon workstation, and used between approximately 2.3x to 3.8x less energy than the 2015 MacBook Air.

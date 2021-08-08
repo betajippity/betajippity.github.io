@@ -319,7 +319,7 @@ This post is meant to be a living document; I'll come back and update it down th
 31. **Machine-Learning Denoising in Feature Film Production**
 
     [Henrik Dahlberg](https://henrikdahlberg.github.io), [David Adler](https://www.linkedin.com/in/david-adler-5ab7b21/), and [Jeremy Newlin](https://www.linkedin.com/in/jeremy-newlin-07a87946/). Machine-Learning Denoising in Feature Film Production. In *ACM SIGGRAPH 2019 Talks*, July 2019.
-    
+
     * [Preprint Version](https://drive.google.com/open?id=1CdUC9caWNSShHNvIj4kge7BWQczXWr79)
     * [Official Publisher's Version](https://doi.org/10.1145/3306307.3328150)
 
@@ -328,7 +328,7 @@ This post is meant to be a living document; I'll come back and update it down th
 32. **Taming the Shadow Terminator**
 
     [Matt Jen-Yuan Chiang](http://dl.acm.org/author_page.cfm?id=99658729701&coll=DL&dl=ACM&trk=0), [Yining Karl Li](https://www.yiningkarlli.com), and [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/). Taming the Shadow Terminator. In *ACM SIGGRAPH 2019 Talks*, August 2019.
-    
+
     * [Preprint Version](https://drive.google.com/open?id=1Yb6GUP3pIuNiH9Xgq2P0L99V3JAQ7emM) (Updated compared to official version)
     * [Official Publisher's Version](https://doi.org/10.1145/3306307.3328172)
     * [Project Page](https://www.yiningkarlli.com/projects/shadowterminator.html)
@@ -351,6 +351,8 @@ This post is meant to be a living document; I'll come back and update it down th
     * [Preprint Version](https://drive.google.com/file/d/1XVyhzCP_RDusyrfrsKlR8hIuq0fs_WJF)
     * [Official Publisher's Version](https://doi.org/10.1145/3388767.3407388)
 
+    Internal project from Disney Animation. This paper describes the process that went into achieving the final look and lighting of the "Show Yourself" sequence in *Frozen 2*, including a new tabulation-based approach implemented in Hyperion to maintain energy conservation in rough dielectric reflection and transmission.
+
 35. **Practical Hash-based Owen Scrambling**
 
     [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/). Practical Hash-based Owen Scrambling. *Journal of Computer Graphics Techniques*, 9(4), December 2020.
@@ -359,6 +361,24 @@ This post is meant to be a living document; I'll come back and update it down th
     * [Official Publisher's Version](http://www.jcgt.org/published/0009/04/01/)
 
     Internal project from Disney Animation. This paper describes a new version of Owen scrambling for the Sobol sequence that is both simple to implement, efficient to evaluate, and broadly applicable to various problems.
+
+36. **Unbiased Emission and Scattering Importance Sampling For Heterogeneous Volumes**
+
+    [Wei-Feng Wayne Huang](http://rendering-memo.blogspot.com/), [Peter Kutz](https://www.linkedin.com/in/peterkutz/), [Yining Karl Li](https://www.yiningkarlli.com), and [Matt Jen-Yuan Chiang](http://dl.acm.org/author_page.cfm?id=99658729701&coll=DL&dl=ACM&trk=0). Unbiased Emission and Scattering Importance Sampling For Heterogeneous Volumes. In *ACM SIGGRAPH 2021 Talks*, August 2021.
+
+    * [Preprint Version](https://drive.google.com/file/d/1YTBp11HBC-TbrRCu_Aoq42eiFVdxFaYy)
+    * [Official Publisher's Version](https://doi.org/10.1145/3450623.3464644)
+
+    Internal project from Disney Animation. This paper describes a pair of new unbiased distance-sampling methods for production volume path tracing, with a specific focus on sampling emission and scattering. First used on *Raya and the Last Dragon*.
+
+37. **The Atmosphere of Raya and the Last Dragon**
+
+    [Marc Bryant](https://dl.acm.org/author/Bryant,%20Marc), [Ryan DeYoung](https://dl.acm.org/author/DeYoung,%20Ryan), [Wei-Feng Wayne Huang](http://rendering-memo.blogspot.com/), [Joe Longson](https://dl.acm.org/author/Longson,%20Joe), and [Noel Villegas](https://dl.acm.org/author/Villegas,%20Noel). The Atmosphere of Raya and the Last Dragon. In *ACM SIGGRAPH 2021 Talks*, August 2021.
+
+    * [Preprint Version](https://drive.google.com/file/d/1ucK1j2mgJpoFf3hvt3-QyAiZyppkqf6p)
+    * [Official Publisher's Version](https://doi.org/10.1145/3450623.3464676)
+
+    Internal project from Disney Animation. This paper describes the various rendering and workflow improvements that went into rendering atmospheric volumes to produce the highly atmospheric lighting in *Raya and the Last Dragon*.
 
 [![Figure 2: Hyperion logo, modeled by Disney Animation artist Chuck Tappan and rendered in Disney's Hyperion Renderer.]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)
 

@@ -35,7 +35,7 @@ For the past 20 years, modern macOS (or Mac OS X as it was originally named) has
 This version number bump threw off a surprising number of libraries and packages!
 Takua's build system uses [CMake](https://cmake.org) and [Ninja](https://ninja-build.org), and on macOS I get CMake and Ninja through [MacPorts](https://www.macports.org).
 At the time, a lot of stuff in MacPorts wasn't expecting an 11.x version number, so a bunch of stuff wouldn't build, but fixing all of this just required manually patching build scripts and portfiles to expect an 11.x version number.
-All of this basically got fixed within weeks of DTKs shipping out (and Apple actually contributed a huge number of patches themselves to various projects and stuff), but I didn't want to wait at the time, so I just charged ahead.
+All of this pretty much got fixed within weeks of DTKs shipping out (and Apple actually contributed a huge number of patches themselves to various projects and stuff), but I didn't want to wait at the time, so I just charged ahead.
 
 Only three of Takua's dependencies needed some minor patching to get working on arm64 macOS: [TBB](https://github.com/oneapi-src/oneTBB), [OpenEXR](https://github.com/AcademySoftwareFoundation/openexr), and [Ptex](https://github.com/wdas/ptex).
 TBB's build script just had to be updated to detect arm64 as a valid architecture for macOS; I submitted a pull request for this fix to the TBB Github repo, but I guess Intel doesn't really take pull requests for TBB.
@@ -64,10 +64,10 @@ To understand why creating Universal 2 binaries can be so easy, we need to first
 There actually isn't much special about Universal 2 binaries per se, in the sense that multi-architecture support is actually an inherent feature of the Mach-O binary executable code file format that Apple's operating systems all use.
 A multi-architecture Mach-O binary begins with a header that declares the file as a multi-architecture file and declares how many architectures are present.
 The header is immediately followed by a list of architecture "slices"; each slice is a struct describing some basic information, such as what processor architecture the slice is for, the offset in the file that instructions begin at for the slice, and so on [[Oakley 2020]](https://eclecticlight.co/2020/07/28/universal-binaries-inside-fat-headers/).
-After the list of architecture slices, the rest of the Mach-O file is basically just like normal, except each architecture's segments are basically just concatenated after the previous architecture's segments.
+After the list of architecture slices, the rest of the Mach-O file is pretty much like normal, except each architecture's segments are concatenated after the previous architecture's segments.
 Also, Mach-O's multi-architecture support allows for sharing non-executable resources between architectures.
 
-So, because Universal 2 binaries are really just Mach-O multi-architecture binaries, and because Mach-O multi-architecture binaries don't do any kind of crazy fancy interleaving and instead just concatenate each architecture after the previous one, all one needs to do to make a Universal 2 binary out of separate arm64 and x86-64 binaries is to basically concatenate the separate binaries into a single Mach-O file and set up the multi-architecture header and slices correctly.
+So, because Universal 2 binaries are really just Mach-O multi-architecture binaries, and because Mach-O multi-architecture binaries don't do any kind of crazy fancy interleaving and instead just concatenate each architecture after the previous one, all one needs to do to make a Universal 2 binary out of separate arm64 and x86-64 binaries is to concatenate the separate binaries into a single Mach-O file and set up the multi-architecture header and slices correctly.
 Fortunately, [a lot of tooling exists](https://developer.apple.com/documentation/apple-silicon/building-a-universal-macos-binary) to do exactly the above!
 The version of clang that Apple ships with Xcode natively supports building Universal Binaries by just passing in multiple `-arch` flags; one for each architecture.
 The Xcode UI of course also supports building Universal 2 binaries by just adding x86-64 and arm64 to an Xcode project's architectures list in the project's settings.
@@ -93,7 +93,7 @@ In theory natively building as a Universal Binary should be able to produce a sl
 In fact, you can actually use the lipo tool to combine completely different programs into a single Universal Binary; after all, lipo has absolutely no way of knowing whether or not the arm64 and x86-64 code you want to combine is actually even from the same source code or implements the same functionality.
 Indeed, the native Universal Binary Takua is slightly smaller than the lipo-generated Universal Binary Takua.
 The size difference is tiny (basically negligible) though, likely because Takua's binary contains very few non-code resources.
-Figure 3 shows creating a Universal Binary by combining separate x86-64 and arm64 builds of Takua together using the lipo tool versus a Universal Binary built natively as a Universal Binary; the lipo version is just a bit over a kilobyte larger than the native version, which is basically negligible relative to the overall size of the files.
+Figure 3 shows creating a Universal Binary by combining separate x86-64 and arm64 builds of Takua together using the lipo tool versus a Universal Binary built natively as a Universal Binary; the lipo version is just a bit over a kilobyte larger than the native version, which is negligible relative to the overall size of the files.
 
 [![Figure 3: Examining the size of a Universal Binary created using the lipo tool versus the size of a Universal Binary built directly as a multi-architecture Mach-O.]({{site.url}}/content/images/2021/Jul/takua-on-arm-pt2/lipocomparison.png)]({{site.url}}/content/images/2021/Jul/takua-on-arm-pt2/lipocomparison.png)
 
@@ -107,7 +107,7 @@ I wanted to get a rough idea of how Rosetta 2 works, and much like many of the d
 
 For every processor architecture transition that the Mac had undertaken, Apple has provided some sort of mechanism to run binaries for the outgoing processor architecture on Macs based on the new architecture.
 During the 68000 to PowerPC transition, Apple's approach was to emulate an entire 68000 system at the lowest levels of the operating system on PowerPC; in fact, during this transition, PowerPC Macs even allowed 68000 and PowerPC code to call back and forth to each other and be interspersed within the same binary.
-During the PowerPC to x86 transition, Apple introduced Rosetta, which basically JIT-compiled blocks of PowerPC code into x86 on-the-fly at program runtime.
+During the PowerPC to x86 transition, Apple introduced Rosetta, which worked by JIT-compiling blocks of PowerPC code into x86 on-the-fly at program runtime.
 For the x86-64 to arm64 transition, Rosetta 2 follows in the same tradition as in the previous two architecture transitions.
 Rosetta 2 has two modes: the first is an ahead-of-time recompiler that converts an entire x86-64 binary to arm64 upon first run of an x86-64 binary and caches the translated binary for later reuse.
 The second mode Rosetta 2 has is a JIT translator, which is used for cases where the target program itself is also JIT-generating x86-64 code; obviously in these cases the target program's JIT output cannot be recompiled to arm64 through an ahead-of-time process.
@@ -305,7 +305,7 @@ The answer lies in how the Rosetta 2 runtime works, and in what makes a Rosetta 
 One key fundamental difference between Rosetta 2 AOT binaries and regular arm64 macOS binaries is that Rosetta 2 AOT binaries use _a completely different ABI_ from standard arm64 macOS.
 On Apple platforms, the ABI used for normal arm64 Mach-O binaries is largely based on the standard ARM-developed arm64 ABI [[ARM Holdings 2015]](https://developer.arm.com/documentation/den0024/a/The-ABI-for-ARM-64-bit-Architecture/Register-use-in-the-AArch64-Procedure-Call-Standard/Parameters-in-general-purpose-registers), with some small differences [[Apple 2020]](https://developer.apple.com/documentation/xcode/writing-arm64-code-for-apple-platforms) in function calling conventions and how some data types are implemented and aligned.
 However, Rosetta 2 AOT binaries use an arm64-ized version of the System V AMD64 ABI, with a direct mapping between x86_64 and arm64 registers [[Nakagawa 2021]](https://ffri.github.io/ProjectChampollion/part1/).
-This different ABI means that intermixing native arm64 code and Rosetta 2 arm64 code is basically not possible (or at least not at all practical), and this difference is also the explanation for why the Rosetta 2 assembly uses unusual registers for passing parameters into the function.
+This different ABI means that intermixing native arm64 code and Rosetta 2 arm64 code is not possible (or at least not at all practical), and this difference is also the explanation for why the Rosetta 2 assembly uses unusual registers for passing parameters into the function.
 In the standard arm64 ABI calling convention, registers `x0` through `x7` are used to pass function arguments 0 through 7, with the rest going on the stack.
 In the System V AMD64 ABI calling convention, function arguments are passed using registers `rdi`, `rsi`, `rdx`, `rcx`, `r8`, and `r9` for arguments 0 through 5 respectively, with everything else on the stack in reverse order.
 In the arm64-ized version of the System V AMD64 ABI that Rosetta 2 AOT uses, the x86-64 `rdi`, `rsi`, `rdx`, `rcx`, `r8`, and `r9` registers map to the arm64 `x7`, `x6`, `x2`, `x1`, `x8`, and `x9`, respectively [[Nakagawa 2021]](https://ffri.github.io/ProjectChampollion/part1/).
@@ -323,7 +323,7 @@ My guess is that the pointer arithmetic stuff happening in the end of Listing 4 
 Now that we have a better understanding of what Rosetta 2 is actually doing under the hood and how good the translated arm64 code is compared with natively compiled arm64 code, how does Rosetta 2 actually perform in the real world?
 I compared Takua Renderer running as native arm64 code versus as x86-64 code running through Rosetta 2 on four different scenes, and generally running through Rosetta 2 yielded about 65% to 70% of the performance of running as native arm64 code.
 The results section at the end of this post contains the detailed numbers and data.
-Generally, I'm very impressed with this amount of performance for emulating x86-64 code on an arm64 processor, especially when considering that with high-performance code like Takua Renderer, Rosetta 2 has basically zero opportunities to provide additional performance by calling into native system frameworks.
+Generally, I'm very impressed with this amount of performance for emulating x86-64 code on an arm64 processor, especially when considering that with high-performance code like Takua Renderer, Rosetta 2 has close to zero opportunities to provide additional performance by calling into native system frameworks.
 As can be seen in the [data in the results section](#perftesting), even more impressive is the fact that even running at 70% of native speed, x86-64 Takua Renderer running on the M1 chip through Rosetta 2 is often on-par with or _even faster_ than x86-64 Takua Renderer running natively on a contemporaneous current-generation 2019 16-inch MacBook Pro with a 6-core Intel Core i7-9750H processor!
 
 **TSO Memory Ordering on the M1 Processor**
@@ -465,7 +465,7 @@ The program reports that it is running through Rosetta 2 and reports that TSO is
 
 [![Figure 5: Building, examining, and running the test program to demonstrate hardware TSO mode disabled and then enabled.]({{site.url}}/content/images/2021/Jul/takua-on-arm-pt2/tsotest.png)]({{site.url}}/content/images/2021/Jul/takua-on-arm-pt2/tsotest.png)
 
-Of course, being able to disable hardware TSO mode from inside of Rosetta 2 is basically only a curiosity; I can't really think of any practical reason why anyone would ever want to do this.
+Of course, being able to disable hardware TSO mode from inside of Rosetta 2 is only a curiosity; I can't really think of any practical reason why anyone would ever want to do this.
 I guess one possible answer is to try to claw back some performance whilst running through Rosetta 2, since the hardware TSO mode does have a tangible performance impact, but this answer isn't actually valid, since there is no guarantee that x86-64 binaries running through Rosetta 2 will work correctly with hardware TSO mode enabled.
 The simple example here only works precisely because it is extremely simple; I also tried hacking disabling hardware TSO mode into the x86-64 version of Takua Renderer and running that through Rosetta 2.
 The result was that this hacked version of Takua Renderer would run for only a fraction of a second before running into a hard crash from somewhere inside of TBB.
@@ -492,9 +492,10 @@ However, for code written using inline assembly or architecture-specific vector 
 A huge proportion of the raw compute power in modern processors is actually located in vector [SIMD instruction set extensions](https://en.wikipedia.org/wiki/SIMD), such as the various SSE and AVX extensions found in modern x86-64 processors and the NEON and upcoming SVE extensions found in arm64.
 For workloads that can benefit from vectorization, using SIMD extensions means up to a 4x speed boost over scalar code when using SSE or NEON, and potentially even more using AVX or SVE.
 One way to utilize SIMD extensions is just to write scalar C++ code like normal and let the compiler auto-vectorize the code at compile-time.
-However, relying on auto-vectorization is basically not actually a useful way to leverage SIMD extensions in practice.
+However, relying on auto-vectorization to leverage SIMD extensions in practice can be surprisingly tricky.
 In order for compilers to be able to efficiently auto-vectorize code that was written to be scalar, compilers need to be able to deduce and infer an enormous amount of context and knowledge about what the code being compiled actually does, and doing this kind of work is extremely difficult and extremely prone to defeat by edge cases, complex scenarios, or even just straight up implementation bugs.
 The end result is that getting scalar C++ code to go through auto-vectorization well in practice ends up requiring a lot of deep knowledge about how the compiler's auto-vectorization implementation actually works under the hood, and small innocuous changes can often suddenly lead to the compiler falling back to generating completely scalar assembly.
+Without a robust performance test suite, these fallbacks can happen unbeknownst to the programmer; I like the term that my friend [Josh Filstrup](https://twitter.com/superfunc) uses for these scenarios: "real rugpull moments".
 Most high-performance applications that require good vectorization usually rely on at least one of several other options: write code directly in assembly utilizing SIMD instructions, write code using SIMD intrinsics, or write code for use with [ISPC: the Intel SPMD Program Compiler](https://ispc.github.io).
 
 Writing SIMD code directly in assembly is more or less just like writing regular assembly, just with different instructions and wider registers; SSE uses `XMM` registers and many SSE instructions end in either `SS` or `PS`, AVX uses `ZMM` registers, and NEON uses `D` and `Q` registers.
@@ -715,7 +716,7 @@ This result wouldn't be impressive if the comparison was between the M1 and some
 The comparison is with the Intel Core i7-9750H, which is a high-end, 45 W maximum TDP part that MSRPs for $395.
 In comparison, the M1 is estimated to cost about $50, and the entire M1 Mac Mini only has a 39 W TDP total at maximum load; the M1 itself is reported to have a 15 W maximum TDP.
 Where the comparison between the M1 and the Intel Core i7-9750H gets even more impressive is when looking at the M1's energy utilization running x86-64 code under Rosetta 2: the M1 is _still_ about 3 times more energy efficient than the Intel Core i7-9750H to do the same work.
-Put another way, the M1 is an arm64 processor that can run emulated non-native x86-64 code _faster than a modern native x86-64 processor that cost 5x more and uses 3x more energy can_.
+Put another way, the M1 is an arm64 processor that can run emulated x86-64 code _faster than a modern native x86-64 processor that cost 5x more and uses 3x more energy can_.
 
 Another interesting observation is that the for the same work, the M1 is actually more energy efficient than the Raspberry Pi 4B as well!
 In the case of the Raspberry Pi 4B comparison, while the M1's maximum TDP is 3.75x higher than the Broadcom BCM2711's maximum TDP, the M1 is also around 20x faster to complete each render; the M1's massive performance uplift more than offsets the higher maximum TDP.
@@ -772,7 +773,7 @@ In the above table, WT speedup is how many times faster that given test was than
 The closer WT speedup is to the number of threads, the better the multithreading scaling efficiency; with perfect multithreading scaling efficiency, we'd expect the WT speedup number to be exactly the same as the number of threads.
 The CS Multiplier value is another way to measure multithreading scaling efficiency; the closer the CS Multiplier number is to exactly 1.0, the closer each test is to achieving perfect multithreading scaling efficiency.
 
-Since this test ran Takua Renderer in unidirectional path tracing mode, and depth-first unidirectional path tracing is basically trivially parallelizable using a simple parallel_for (okay, it's not so simple once things like texture caching and things like learned path guiding data structures come into play, but close enough for now), my expectation for Takua Renderer is that on a system with homogeneous cores, multithreading scaling should be very close to perfect.
+Since this test ran Takua Renderer in unidirectional path tracing mode, and depth-first unidirectional path tracing is largely trivially parallelizable using a simple parallel_for (okay, it's not so simple once things like texture caching and things like learned path guiding data structures come into play, but close enough for now), my expectation for Takua Renderer is that on a system with homogeneous cores, multithreading scaling should be very close to perfect (assuming a fair scheduler in the underlying operating system).
 Looking at the first four threads, which are all using the M1's high-performance "big" Firestorm cores, close-to-perfect multithreading scaling efficiency is exactly what we see.
 Adding the next four threads though, which use the M1's low-performance energy-efficient "LITTLE" Icestorm cores, the multithreading scaling efficiency drops dramatically.
 This drop in multithreading scaling efficiency is expected, since the Icestorm cores are far less performant than the Firestorm cores, but the _amount_ that multithreading scaling efficiency drops by is what is interesting here, since that drop gives us a good estimate of just how less performant the Icestorm cores are.
@@ -781,7 +782,7 @@ However, according to Apple, the Icestorm cores only use a tenth of the energy t
 
 **Conclusion to Part 2**
 
-There's really no way to understate what a colossal achievement Apple's M1 processor; compared with almost every modern x86-64 processor in its class, it achieves significantly more performance for much less cost and much less energy.
+There's really no way to understate what a colossal achievement Apple's M1 processor is; compared with almost every modern x86-64 processor in its class, it achieves significantly more performance for much less cost and much less energy.
 The even more amazing thing to think about is that the M1 is Apple's _low end_ Mac processor and likely will be the slowest arm64 chip to ever power a shipping Mac (the A12Z powering the DTK is slower, but the DTK is not a shipping consumer device); future Apple Silicon chips will only be even faster.
 Combined with other extremely impressive high-performance arm64 chips such as Fujistu's A64FX supercomputer CPU, NVIDIA's upcoming Grace GPU, Ampere's monster 80-core Altra CPU, and Amazon's Graviton2 CPU used in AWS, I think the future for high-end arm64 looks very bright.
 
@@ -793,6 +794,13 @@ Intel is not sitting still either, with ambitious plans to fight AMD for the x86
 We are currently in a very exciting period of enormous advances in modern processor technology, with multiple large, well funded, very serious players competing to outdo each other.
 For the end user, no matter who comes out on top and what happens, the end result is ultimately a win- faster chips using less energy for lower prices.
 Now that I have Takua Renderer fully working with parity on both x86-64 and arm64, I'm ready to take advantage of each new advancement!
+
+**Acknowledgements**
+
+For both the last post and this post, I owe [Josh Filstrup](https://twitter.com/superfunc) an enormous debt of gratitude for proofreading, giving plenty of constructive and useful feedback and suggestions, and for being a great discussion partner over the past year on many of the topics covered in this miniseries.
+Also an enormous thanks to my wife, [Harmony Li](http://harmonymli.com/), who was patient with me while I took ages with the porting work and then was patient again with me as I took even longer to get these posts written.
+Harmony also helped me brainstorm through various topics and provided many useful suggestions along the way.
+Finally, thanks to you, the reader, for sticking with me through these two giant blog posts!
 
 **References**
 

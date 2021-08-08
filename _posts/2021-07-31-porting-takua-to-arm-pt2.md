@@ -5,7 +5,7 @@ tags: [Coding, Renderer]
 author: Yining Karl Li
 ---
 
-This post is the second half of my two-part series about how I ported my hobby renderer to 64-bit ARM and what I learned from the process.
+This post is the second half of my two-part series about how I ported my hobby renderer (Takua Renderer) to 64-bit ARM and what I learned from the process.
 In the [first part](https://blog.yiningkarlli.com/2021/05/porting-takua-to-arm-pt1.html), I wrote about my motivation for undertaking a port to arm64 in the first place and described the process I took to get Takua Renderer up and running on an arm64-based Raspberry Pi 4B.
 I also did a deep dive into several topics that I ran into along the way, which included floating point reproducibility across different processor architectures, a comparison of arm64 and x86-64's memory reordering models, and a comparison of how the same example atomic code compiles down to assembly in arm64 versus in x86-64.
 In this second part, I'll write about developments and lessons learned after I got my initial arm64 port working correctly on Linux.

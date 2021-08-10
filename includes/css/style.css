@@ -416,6 +416,22 @@ video {
     height: 100%; 
 }
 
+.embed-container-cinema { 
+    position: relative; 
+    padding-bottom: 41.875%; 
+    height: 0; overflow: hidden; 
+    max-width: 100%; 
+    height: auto; 
+}
+
+.embed-container-cinema iframe, .embed-container-cinema object, .embed-container-cinema embed { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+}
+
 .navbar-padding {
     height: 0;
 }

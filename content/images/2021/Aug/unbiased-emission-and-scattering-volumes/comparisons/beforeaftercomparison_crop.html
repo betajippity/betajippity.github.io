@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>x86-64/arm64 Noise Comparison, Zoomed-in Crop</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <link rel="stylesheet" href="/includes/css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yap3ink.css">
+</head>
+
+<body>
+    <link type="text/css" href="before-after.css" rel="stylesheet">
+
+    <div class="ba-slider" style="max-width:3840px; margin: auto;">
+        <img src="../after.png">
+        <div class="resize">
+            <img src="../before.png">
+        </div>
+        <span class="handle"></span>
+    </div>
+
+    <div class="figcaption">A frame from Raya and the Last Dragon without our techniques (left), and with both our scattering and emission sampling applied (right). Both images are rendered using 32 spp per volume pass; surface passes are denoised and composited with non-denoised volume passes to isolate noise from volumes. A video version of this comparison is included in our talk's supplementary materials.</div>
+
+    <script type="text/javascript" src="/includes/js/jquery.min.js"></script>
+    <script type="text/javascript" src="before-after.js"></script>
+    <script type="text/javascript">
+        $('.ba-slider').beforeAfter();
+    </script>
+</body>
+
+</html>

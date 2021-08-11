@@ -14,7 +14,7 @@ Just as production was getting into the swing of things last year, the Covid-19 
 As a result, Raya and the Last Dragon is the first Disney Animation film made entirely from our homes instead of from the famous "hat building".
 
 In the end though, all of the trials and tribulations this production saw were more than worthwhile; Raya and the Last Dragon is the most beautiful film we've ever made, and the movie has a message and story about trust that is deeply relevant for the present time.
-The Druun as a concept and villain in Raya and the Last Dragon actually long predate the Covid-19 pandemic; they've been a part of every version of the movie going back years, but the Druun's role in the movie's plot meant that the onset of the pandemic suddenly lent extra weight to this movie's core message. 
+The Druun as a concept and villain in Raya and the Last Dragon actually long predate the Covid-19 pandemic; they've been a part of every version of the movie going back years, but the Druun's role in the movie's plot meant that the onset of the pandemic suddenly lent extra weight to this movie's core message.
 Also, as someone of Asian descent, I'm so so proud that Raya and the Last Dragon's basis is found in diverse Southeast Asian cultures.
 Early in the movie's conceptualization, before the movie even had a title or a main character, the movie's producers and directors and story team reached out to all of the people in the studio of Asian descent and engaged us in discussing how the Asian cultures we came from shaped our lives and our families.
 These discussions continued for years throughout the production process, and throughlines from those discussions can be seen everywhere from the movie, from major thematic elements like the importance of food and sharing meals in the world of Kumandra, all the way down to tiny details like young Raya taking off her shoes when entering the Dragon Gem chamber.
@@ -39,7 +39,8 @@ The new system first saw wide deployment on Ralph Breaks the Internet, but all t
 Frozen 2 was really the show where we got a second chance at tackling the ocean foam and spray and dense white clouds cases that we had first encounted on Moana, and new challenges on Frozen 2 with thin volumes gave my teammate Wayne Huang the opportunity to make the new volume rendering system even better.
 Raya and the Last Dragon is the movie where I feel like all of the past few years of development on our modern volume rendering system came together- this movie threw every single imaginable type of volume rendering problem at us, often in complex combinations with each other.
 On top of that, Raya and the Last Dragon has volumes in basically every single shot; the highly atmospheric, naturalistic cinematography on this film demanded more volumes than we've ever had on any past movie.
-Wayne really was our MVP in the volume rendering arena; Wayne introduced a swath of powerful new tools to give artists unprecedented control and artistic flexibility in our modern volume rendering system, and Wayne also made huge improvements in the volume rendering system's overall performance and efficiency.
+Wayne really was our MVP in the volume rendering arena; Wayne worked with our lighters to introduce a swath of powerful new tools to give artists unprecedented control and artistic flexibility in our modern volume rendering system [[Bryant et al. 2021]](https://doi.org/10.1145/3450623.3464676), and Wayne also made huge improvements in the volume rendering system's overall performance and efficiency [[Huang et al. 2021]](https://doi.org/10.1145/3450623.3464644).
+We now have a single unified volume integrator that can robustly handle basically every volume you can think of: fog, thin atmospherics, fire, smoke, thick white clouds, sea foam, and even highly stylized effects such as the dragon magic [[Navarro & Rice 2021]](https://doi.org/10.1145/3450623.3464652) and the chaotic Druun characters [[Rice 2021]](https://doi.org/10.1145/3450623.3464647) in Raya and the Last Dragon.
 
 A small fun new thing I got to do for this movie was to add support for arbitrarily custom texture-driven camera aperture shapes.
 Raya and the Last Dragon's cinematography makes extensive use of shallow depth-of-field, and one idea the film's art directors had early on was to stylize bokeh shapes to resemble the Dragon Gem.
@@ -48,9 +49,10 @@ The texture-driven camera aperture feature I added to Hyperion is not necessaril
 There were also a bunch of fun nifty little details to solve, such as making sure that importance sampling ray directions based on a arbitrary textured aperture didn't mess up stratified sampling and Sobol distributions; repurposing hierarchical sample warping [[Clarberg et al. 2005]](https://dl.acm.org/doi/10.1145/1073204.1073328) wound up being super useful here.
 
 There are a ton more really cool technical advancements that were made for Raya and the Last Dragon, and there were also several really ambitious, inspiring, and potentially revolutionary projects that just barely missed being deployed in time for this movie.
-I can't talk about them here, but pay attention to SIGGRAPH this year, where I'm sure Disney Animation will be presenting a lot of cool stuff!
-That being said though, one extremely important point I want to highlight is that, as cool as all of the tech that we develop at Disney Animation is, at the end of the day our tech and tools are only as good as the artists that use them every day to handcraft our films.
+One extremely important point I want to highlight is that, as cool as all of the tech that we develop at Disney Animation is, at the end of the day our tech and tools are only as good as the artists that use them every day to handcraft our films.
 Hyperion only renders amazing films because the artists using Hyperion are some of the best in the world; I count myself as super lucky to be able to work with my teammates and with our artists every day.
+At SIGGRAPH 2021, most of the talks about Raya and the Last Dragon are actually from our artists, not our engineers!
+Our artists had to come up with new crowd simulation techniques for handling the huge crowds seen in the movie [\[Nghiem 2021](https://doi.org/10.1145/3450623.3464650), [Luceño Ros et al. 2021\]](https://doi.org/10.1145/3450623.3464648), new cloth simulation techniques for all of the beautiful, super complex outfits worn by all of the characters [\[Kaur et al. 2021](https://doi.org/10.1145/3450623.3464660), [Kaur & Coetzee 2021\]](https://doi.org/10.1145/3450623.3464659), and even new effects techniques to simulate cooking delicious Southeast Asia-inspired food [[Wang & Mayeda 2021]](https://doi.org/10.1145/3450623.3464651).
 
 Finally, here are a bunch of stills from the movie, 100% rendered using Hyperion.
 Normally I post somewhere between 40 to 70 stills per film, but I had so many favorite images from Raya and the Last Dragon that for this post, there are considerably more.
@@ -59,9 +61,7 @@ The actual renders are super clean thanks to Wayne's volumes work and David Adle
 
 I've pulled these from marketing materials, trailers, and Disney+; as usual, I'll try to update this post with higher quality stills once the film is out on Bluray.
 Of course, the stills here are just a few of my favorites, and represent just a tiny fraction of the incredible imagery in this film.
-If you like what you see here, I'd strongly encourage seeing the film on Disney+ through Premiere Access or in theaters (if you are fortunate enough to be vaccinated and/or in a place where health conditions have improved enough to allow for theaters to safely reopen).
-Alternatively, if you'd rather wait until Raya and the Last Dragon is free on Disney+ in the summer, that's cool too, but you'll be missing out on a beautiful film until then.
-Whichever way, I suggest watching on the biggest screen you have available to you!
+If you like what you see here, I'd strongly encourage seeing the film on Disney+ or on Blu-Ray; whichever way, I suggest watching on the biggest screen you have available to you!
 
 To try to help avoid spoilers, the stills below are presented in no particular order; however, if you want to avoid spoilers entirely, then please go watch the movie first and then come back here to be able to appreciate each still on its own!
 
@@ -329,6 +329,8 @@ I'll probably dedicate a separate post to Us Again once it's out on Disney+.
 
 Brent Burley, David Adler, Matt Jen-Yuan Chiang, Hank Driskill, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2018. [The Design and Evolution of Disney’s Hyperion Renderer](https://dl.acm.org/citation.cfm?id=3182159). _ACM Transactions on Graphics_. 37, 3 (2018), 33:1-33:22.
 
+Marc Bryant, Ryan DeYoung, Wei-Feng Wayne Huang, Joe Longson, and Noel Villegas. 2021. [The Atmosphere of Raya and the Last Dragon](https://doi.org/10.1145/3450623.3464676). In _ACM SIGGRAPH 2021 Talks_. 51:1-51:2.
+
 Matt Jen-Yuan Chiang, Benedikt Bitterli, Chuck Tappan, and Brent Burley. 2016. [A Practical and Controllable Hair and Fur Model for Production Path Tracing](https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.12830). _Computer Graphics Forum_. 35, 2 (2016), 275-283.
 
 Matt Jen-Yuan Chiang, Peter Kutz, and Brent Burley. 2016. [Practical and Controllable Subsurface Scattering for Production Path Tracing](https://doi.org/10.1145/2897839.2927433). In _ACM SIGGRAPH 2016 Talks_. 49:1-49:2.
@@ -339,10 +341,26 @@ Henrik Dahlberg, David Adler, and Jeremy Newlin. 2019. [Machine-Learning Denoisi
 
 Julian Fong, Magnus Wrenninge, Christopher Kulla, and Ralf Habel. 2017. [Production Volume Rendering](https://doi.org/10.1145/3084873.3084907). In _ACM SIGGRAPH 2017 Courses_.
 
+Wei-Feng Wayne Huang, Peter Kutz, Yining Karl Li, and Matt Jen-Yuan Chiang. 2021. [Unbiased Emission and Scattering Importance Sampling for Heterogeneous Volumes](https://doi.org/10.1145/3450623.3464644). In _ACM SIGGRAPH 2021 Talks_. 3:1-3:2.
+
+Avneet Kaur and Johann Francois Coetzee. 2021. [Wrapped Clothing on Disney’s Raya and the Last Dragon](https://doi.org/10.1145/3450623.3464659). In _ACM SIGGRAPH 2021 Talks_. 28:1-28:2.
+
+Avneet Kaur, Erik Eulen, and Johann Francois Coetzee. 2021. [Creating Diversity and Variety in the People of Kumandra for Disney's Raya and the Last Dragon](https://doi.org/10.1145/3450623.3464660). In _ACM SIGGRAPH 2021 Talks_. 58:1-58:2.
+
 Peter Kutz, Ralf Habel, Yining Karl Li, and Jan Novák. 2017. [Spectral and Decomposition Tracking for Rendering Heterogeneous Volumes](https://doi.org/10.1145/3072959.3073665). _ACM Transactions on Graphics_. 36, 4 (2017), 111:1-111:16.
 
-Jennifer Newfield and Josh Staub. 2020. [How Short Circuit Experiments: Experimental Filmmaking at Walt Disney Animation Studios](https://dl.acm.org/doi/10.1145/3388767.3409267). In _ACM SIGGRAPH 2020_ Talks. 72:1-72:2.
+Alberto Luceño Ros, Kristin Chow, Jack Geckler, Norman Moses Joseph, and Nicolas Nghiem. 2021. [Populating the World of Kumandra: Animation at Scale for Disney's Raya and the Last Dragon](https://doi.org/10.1145/3450623.3464648). In _ACM SIGGRAPH 2021 Talks_. 39:1-39:2.
 
-Sean Palmer, Jonathan Garcia, Sara Drakeley, Patrick Kelly, and Ralf Habel. 2017. [The Ocean and Water Pipeline of Disney’s Moana](https://dl.acm.org/citation.cfm?id=3085067). In _ACM SIGGRAPH 2017_ Talks. 29:1-29:2.
+Mike Navarro and Jacob Rice. 2021. [Stylizing Volumes with Neural Networks](https://doi.org/10.1145/3450623.3464652). In _ACM SIGGRAPH 2021 Talks_. 54:1-54:2.
+
+Jennifer Newfield and Josh Staub. 2020. [How Short Circuit Experiments: Experimental Filmmaking at Walt Disney Animation Studios](https://dl.acm.org/doi/10.1145/3388767.3409267). In _ACM SIGGRAPH 2020 Talks_. 72:1-72:2.
+
+Nicolas Nghiem. 2021. [Mathematical Tricks for Scalable and Appealing Crowds in Walt Disney Animation Studios' Raya and the Last Dragon](https://doi.org/10.1145/3450623.3464650). In _ACM SIGGRAPH 2021 Talks_. 38:1-38:2.
+
+Sean Palmer, Jonathan Garcia, Sara Drakeley, Patrick Kelly, and Ralf Habel. 2017. [The Ocean and Water Pipeline of Disney’s Moana](https://dl.acm.org/citation.cfm?id=3085067). In _ACM SIGGRAPH 2017 Talks_. 29:1-29:2.
+
+Jacob Rice. 2021. [Weaving the Druun's Webbing](https://doi.org/10.1145/3450623.3464647). In _ACM SIGGRAPH 2021 Talks_. 32:1-32:2.
 
 Thijs Vogels, Fabrice Rousselle, Brian McWilliams, Gerhard Röthlin, Alex Harvill, David Adler, Mark Meyer, and Jan Novák. 2018. [Denoising with Kernel Prediction and Asymmetric Loss Functions](https://doi.org/10.1145/3197517.3201388). _ACM Transactions on Graphics_. 37, 4 (2018), 124:1-124:15.
+
+Cong Wang and Dale Mayeda. 2021. [Cooking Southeast Asia-Inspired Soup in Animated Film](https://doi.org/10.1145/3450623.3464651). In _ACM SIGGRAPH 2021 Talks_. 35:1-35:2.

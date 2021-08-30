@@ -828,10 +828,6 @@ Saagar Jha. 2020. [TSOEnabler](https://github.com/saagarjha/TSOEnabler). Retriev
 
 Dougall Johnson. 2020. [AMX: Apple Matrix Coprocessor](https://gist.github.com/dougallj/7a75a3be1ec69ca550e7c36dc75e0d6f). Retrieved July 23, 2021.
 
-Matt Pharr. 2018. [The Story of ISPC](https://pharr.org/matt/blog/2018/04/30/ispc-all). In _Matt Pharr's Blog_. Retrieved July 18, 2021.
-
-Matt Pharr and William R. Mark. 2012. [ispc: A SPMD compiler for high-performance CPU programming](https://doi.org/10.1109/InPar.2012.6339601). In _2012 Innovative Parallel Computing (InPar)_.
-
 LLVM Project. 2021. [llvm-lipo - LLVM Tool for Manipulating Universal Binaries](https://llvm.org/docs/CommandGuide/llvm-lipo.html). Retrieved June 22, 2021.
 
 LLVM Project. 2021. [llvm-objdump - LLVM's object file dumper](https://llvm.org/docs/CommandGuide/llvm-objdump.html). Retrieved June 22, 2021.
@@ -845,6 +841,10 @@ Howard Oakley. 2020. [Universal Binaries: Inside Fat Headers](https://eclecticli
 Howard Oakley. 2021. [Code in ARM Assembly Series](https://eclecticlight.co/2021/07/27/code-in-arm-assembly-rounding-and-arithmetic/). In _The Eclectic Light Company_. Retrieved July 19, 2021.
 
 OSDev. 2018. [System V ABI](https://wiki.osdev.org/System_V_ABI). Retrieved June 26, 2021.
+
+Matt Pharr. 2018. [The Story of ISPC](https://pharr.org/matt/blog/2018/04/30/ispc-all). In _Matt Pharr's Blog_. Retrieved July 18, 2021.
+
+Matt Pharr and William R. Mark. 2012. [ispc: A SPMD compiler for high-performance CPU programming](https://doi.org/10.1109/InPar.2012.6339601). In _2012 Innovative Parallel Computing (InPar)_.
 
 Jeff Preshing. 2012. [This Is Why They Call It a Weakly-Ordered CPU](https://preshing.com/20121019/this-is-why-they-call-it-a-weakly-ordered-cpu/). In _Preshing on Programming_. Retrieved March 20, 2021.
 

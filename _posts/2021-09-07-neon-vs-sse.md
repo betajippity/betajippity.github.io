@@ -472,6 +472,7 @@ Neon includes a little over a hundred instructions, which is less than half the 
 Neon has all of the basics that one would expect, such as arithmetic operations and various comparison operations, but Neon doesn't have more complex high-level instructions like the fancy shuffle instructions we used in our SSE implementation.
 
 Much like how Intel has a searchable SSE intrinsics guide, ARM provides a helpful [searchable intrinsics guide](https://developer.arm.com/architectures/instruction-sets/intrinsics/).
+Howard Oakley's [recent blog series](https://eclecticlight.co/2021/07/27/code-in-arm-assembly-rounding-and-arithmetic/) on writing arm64 assembly also includes a great [introduction to using Neon](https://eclecticlight.co/2021/08/23/code-in-arm-assembly-lanes-and-loads-in-neon/).
 Note that even though there are fewer Neon instructions in total than there are SSE instructions, the ARM intrinsics guide lists several _thousand_ functions; this is because of one of the chief differences between SSE and Neon.
 SSE's `__m128` is just a generic 128-bit container that doesn't actually specify what type or how many lanes it contains; what type a `__m128` value is or how many lanes a `__m128` value contains interpreted as is entirely up to each SSE instruction.
 Contrast with Neon, which has explicit separate types for floats and integers, and also defines separate types based on width. 
@@ -911,6 +912,8 @@ Alexander Majercik, Cyril Crassin, Peter Shirley, and Morgan McGuire. 2018. [A R
 Daniel Meister, Shinji Ogaki, Carsten Benthin, Michael J. Doyle, Michael Guthe, and Jiri Bittner. 2021. [A Survey on Bounding Volume Hierarchies for Ray Tracing](https://doi.org/10.1111/cgf.142662). _Computer Graphics Forum_. 40, 2 (2021), 683-712.
 
 NVIDIA. 2021. [NVIDIA OptiX 7.3 Programming Guide](https://raytracing-docs.nvidia.com/optix7/guide/index.html). Retrieved August 30, 2021.
+
+Howard Oakley. 2021. [Code in ARM Assembly: Lanes and loads in NEON](https://eclecticlight.co/2021/08/23/code-in-arm-assembly-lanes-and-loads-in-neon/). In _The Eclectic Light Company_. Retrieved September 7, 2021.
 
 Matt Pharr. 2018. [The Story of ISPC](https://pharr.org/matt/blog/2018/04/30/ispc-all). In _Matt Pharr's Blog_. Retrieved July 18, 2021.
 

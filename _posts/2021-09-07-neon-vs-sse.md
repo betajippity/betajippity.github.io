@@ -871,6 +871,14 @@ As with any programming task, understanding your problem domain is crucial for u
 Hopefully this post has served as a useful examination of several different approaches to vectorization!
 Again, I have put all of the code in this post in [an open Github repository](https://github.com/betajippity/sseneoncompare); feel free to play around with it yourself (or if you are feeling especially ambitious, feel free to use it as a starting point for a full vectorized BVH implementation)!
 
+**Addendum**
+
+After I published this post, [Romain Guy](https://twitter.com/romainguy) wrote in with a suggestion to use `-ffast-math` to improve the auto-vectorization results.
+I gave the suggestion a try, and the result was indeed markedly improved!
+Across the board, using `-ffast-math` cut the auto-vectorization timings by about half, corresponding to around a doubling of performance.
+Using `ffast-math`, the auto-vectorized implementation still trails behind the hand-vectorized and ISPC implementations, but by a much narrower margin than before, and overall is much much better than the compact scalar baseline.
+Romain previously presented [a talk in 2019](https://www.youtube.com/watch?v=Lcq_fzet9Iw) about Google's Filament real-time rendering engine, which includes many additional tips for making auto-vectorization work better.
+
 **References**
 
 Mike Acton. 2014. [Data-Oriented Design and C++](https://www.youtube.com/watch?v=rX0ItVEVjHc). In _CppCon 2014_.
@@ -888,6 +896,8 @@ Holger Dammertz, Johannes Hanika, and Alexander Keller. 2008. [Shallow Bounding 
 Manfred Ernst and Günther Greiner. 2008. [Multi Bounding Volume Hierarchies](https://doi.org/10.1109/RT.2008.4634618). In _RT 2008: Proceedings of the 2008 IEEE Symposium on Interactive Ray Tracing_. 35-40.
 
 Luca Fascione, Johannes Hanika, Mark Leone, Marc Droske, Jorge Schwarzhaupt, Tomáš Davidovič, Andrea Weidlich, and Johannes Meng. 2018. [Manuka: A Batch-Shading Architecture for Spectral Path Tracing in Movie Production](https://doi.org/10.1145/3182161). _ACM Transactions on Graphics_. 37, 3 (2018), 31:1-31:18.
+
+Romain Guy and Mathias Agopian. 2019. [High Performance (Graphics) Programming](https://www.youtube.com/watch?v=Lcq_fzet9Iw). In _Android Dev Summit '19_. Retrieved September 7, 2021.
 
 Intel Corporation. 2021. [Intel Intrinsics Guide](https://software.intel.com/sites/landingpage/IntrinsicsGuide/). Retrieved August 30, 2021.
 

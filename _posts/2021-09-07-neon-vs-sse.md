@@ -43,7 +43,7 @@ For scenes with lots of objects and for objects made up of lots of primitives, l
 From roughly the late 90s through to the early 2010s, a number of different groups across the graphics field put an enormous amount of research and effort into establishing the best possible acceleration structures.
 Early on, the broad general consensus was that KD-trees were the most efficient acceleration structure for ray intersection performance, while BVHs were known to be faster to build than KD-trees but less performant at actual ray intersection.
 However, advancements over time improved BVH ray intersection performance [[Stich et al. 2009]](https://doi.org/10.1145/1572769.1572771) to the point where today, BVHs are now the dominant acceleration structure used in pretty much every production ray tracing solution.
-For a history and detailed survey of BVH research over the past twenty-odd years, please refer to [[Meister et al.]](https://doi.org/10.1111/cgf.142662) 2021.
+For a history and detailed survey of BVH research over the past twenty-odd years, please refer to Meister et al. [[2021]]((https://doi.org/10.1111/cgf.142662)).
 One interesting thing to note when looking through the past twenty years of ray tracing acceleration research are the author names; many of these authors are the same people that went on to create the modern underpinnings of Embree, Optix, and the ray acceleration hardware found in NVIDIA's RTX GPUs.
 
 A BVH is a tree structure where bounding boxes are placed over all of the objects that need to be intersected, and then these bounding boxes are grouped into (hopefully) spatially local groups.
@@ -70,7 +70,7 @@ While not explicitly disclosed, as of writing, we can reasonable guess based off
 
 Since the most common splitting factor in production CPU cases in a 4-wide split, and since SSE and Neon are both 4-wide vector instruction sets, I think the core simultaneous single-ray-4-box intersection test is a perfect example case to look at!
 To start off, we need an efficient intersection test between a single ray and a single axis-aligned bounding box.
-I'll be using the commonly utilized solution by [[Williams et al.]](https://doi.org/10.1080/2151237X.2005.10129188) 2005; improved techniques with better precision [[Ize 2013]](http://jcgt.org/published/0002/02/02/) and more generalized flexibility [[Majercik 2018]](http://jcgt.org/published/0007/03/04/) do exist, but I'll stick with the original Williams approach in this post to keep things simple. 
+I'll be using the commonly utilized solution by Williams et al. [[2005]](https://doi.org/10.1080/2151237X.2005.10129188); improved techniques with better precision [[Ize 2013]](http://jcgt.org/published/0002/02/02/) and more generalized flexibility [[Majercik 2018]](http://jcgt.org/published/0007/03/04/) do exist, but I'll stick with the original Williams approach in this post to keep things simple. 
 
 **Test Program Setup**
 

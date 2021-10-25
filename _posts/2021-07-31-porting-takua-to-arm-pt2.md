@@ -780,6 +780,8 @@ This drop in multithreading scaling efficiency is expected, since the Icestorm c
 The answer is that the Icestorm cores are roughly a quarter as performant as the high-performance Firestorm cores.
 However, according to Apple, the Icestorm cores only use a tenth of the energy that the Firestorm cores do; a 4x performance drop for a 10x drop in energy usage is very impressive.
 
+<div id="conclusion"></div>
+
 **Conclusion to Part 2**
 
 There's really no way to understate what a colossal achievement Apple's M1 processor is; compared with almost every modern x86-64 processor in its class, it achieves significantly more performance for much less cost and much less energy.

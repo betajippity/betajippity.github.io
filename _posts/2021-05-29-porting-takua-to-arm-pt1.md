@@ -16,6 +16,8 @@ In this first part, I'll write about motivation and the initial port I undertook
 I'll also write about how arm64 and x86-64's memory ordering guarantees differ and what that means for lock-free code, and I'll also do some deeper dives into topics such as floating point differences between different processors and a case study examining how code compiles to x86-64 versus to arm64.
 In the second part, I'll write about porting to arm64-based Apple Silicon Macs and I'll also write about getting Embree up and running on ARM, creating Universal Binaries, and some other miscellaneous topics.
 
+<div id="motivation"></div>
+
 **Motivation**
 
 So first, a bit of a preamble: why port to arm64 at all?

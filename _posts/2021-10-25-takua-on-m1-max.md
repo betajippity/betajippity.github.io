@@ -112,7 +112,7 @@ Of course, I have no way of knowing if the above theory for why the M1 Max seems
 In terms of whether the M1 Pro or the M1 Max is better for CPU rendering, I only have the M1 Max to test, but my guess is that there shouldn't actually be too large of a difference as long as the scene fits in memory.
 However, the above guess comes with a major caveat revolving around memory bandwidth.
 Where the M1 Pro and M1 Max differ is in the maximum number of GPU cores and maximum amount of unified memory configurable; the M1 Pro can go up to 16 GPU cores and 32 GB of RAM, while the M1 Max can go up to 32 GPU cores and 64 GB of RAM.
-Outside of the GPU and maximum amount of memory, the M1 Pro and M1 Max chips actually share identical CPU configurations: both of them have a 10-core arm64 CPU with 8 high-performance cores and 2 high performance cores, implementing a custom in-house Apple-designed microarchitecture.
+Outside of the GPU and maximum amount of memory, the M1 Pro and M1 Max chips actually share identical CPU configurations: both of them have a 10-core arm64 CPU with 8 high-performance cores and 2 energy-efficient cores, implementing a custom in-house Apple-designed microarchitecture.
 However, for some workloads, I would not be surprised if the M1 Max is actually slightly faster since the M1 Max also has twice the memory bandwidth over the M1 Pro (400 GB/s on M1 Max versus 200 GB/s M1 Pro); this difference comes from the M1 Max having twice the number of memory controllers.
 While consumer systems such as game consoles and desktop GPUs often do ship with memory bandwidth numbers comparable or even better than the M1 Max's 400 GB/s, seeing these levels of memory bandwidth in even workstation CPUs is relatively unheard of.
 For example, AMD's monster flagship Ryzen Threadripper 3990X is currently the most powerful high-end desktop CPU on the planet (outside of server processors), but the 3990X's maximum memory bandwidth tops out at 95.37 GiB/s, or 165.944 GB/s; seeing the M1 Max MacBook Pro ship with over twice the memory bandwidth compared to the Threadripper 3990X is pretty wild.
@@ -282,4 +282,4 @@ I think that kind of encapsulates the M1 Pro and M1 Max MacBook Pros in a nutshe
 [![Figure 7: Sunlight transmitting through pine leaves in the forest canopy. Rendered using Takua Renderer on a M1 Max 14-inch MacBook Pro. Click through for full 4K version.]({{site.url}}/content/images/2021/Oct/takua-on-m1-max/preview/forest.cam5.0.jpg)]({{site.url}}/content/images/2021/Oct/takua-on-m1-max/forest.cam5.0.jpg)
 
 A huge thanks to everyone at Apple that made this post possible!
-
+Also a big thanks to Rajesh Sharma and Mark Lee for catching typos and making some good suggestions.

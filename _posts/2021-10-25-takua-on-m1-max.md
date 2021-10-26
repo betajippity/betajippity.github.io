@@ -34,7 +34,7 @@ Now that a year has passed since the first Apple Silicon arm64 Macs were release
 The reason I've stuck to smaller scenes is because high-end workstation-class arm64 processors so far just have not existed; while large server-class arm64 processors with large core counts and tons of memory do exist, these server-class processors are mostly found in huge server farms and supercomputers and are not readily available for general use.
 For general use, the only arm64 options so far have been low-power single-board computers like the Raspberry Pi 4 that are nowhere near capable of running large rendering workloads, or phones and tablets that don't have software or operating systems or interfaces suitable for professional 3D applications, or M1-based Macs.
 I have been using an M1 Mac Mini for the past year, but while the M1 performance-wise punches way above what a 15 watt TDP typically would suggest, the M1 only supports up to 16 GB of RAM and only represents Apple's _entry_ into Apple Silicon based Macs.
-The M1 Pro and M1 Max, however, are are Apple's first high powered arm64-based chips targetted at professional workloads, meant for things like high-end rendering and many other creative workloads; by extension, the M1 Pro and M1 Max are also the first arm64 chips of their class in the world with wide general availability.
+The M1 Pro and M1 Max, however, are are Apple's first high powered arm64-based chips targeted at professional workloads, meant for things like high-end rendering and many other creative workloads; by extension, the M1 Pro and M1 Max are also the first arm64 chips of their class in the world with wide general availability.
 So, in this post, answering the question "how well do high-end rendering workloads run on workstation-class arm64" really means examining how well the M1 Pro and M1 Max can do rendering.
 
 Spoiler: the answer is _extremely well_; all of the renders in the post were rendered on the 14-inch MacBook Pro with an M1 Max chip.
@@ -155,7 +155,7 @@ I wanted to verify this claim for myself!
 
 In the results below, I present three tests using the forest scene.
 The first test measures how long Takua Renderer takes to run subdivision, tessellation, and displacement, which has to happen before any pixels can actually be rendered.
-The subdivision/tesselation/displacement process has an interesting performance profile that looks very different from the performance profile of the main path tracing process.
+The subdivision/tessellation/displacement process has an interesting performance profile that looks very different from the performance profile of the main path tracing process.
 Subdivision within a single mesh is not easily parallelizable, and even with a parallel implementation, scales very poorly beyond just a few threads.
 Takua Renderer attempts to scale subdivision widely by running subdivision on multiple meshes in parallel, with each mesh's subdivision task only receiving an allocation of at most four threads.
 As a result, the subdivision step actually benefits slightly more from single-threaded performance over a larger number of cores and greater multi-threaded performance.
@@ -213,7 +213,7 @@ The M1 Max also handily beats the old dual Intel Xeon E5-2680 that I am currentl
 The real surprises to me came with the 2019 Mac Pro and the Threadripper 3990X workstation.
 In both of those cases, I expected the M1 Max to loose, but the 2021 14-inch MacBook Pro came surprisingly close to the 2019 Mac Pro's performance in terms of wall time.
 Even more importantly as a predictor of future scalability, the M1 Max's efficiency as measured by core-seconds comes in at far far superior to both the Intel Xeon W-3245 and the AMD Threadripper 3900X.
-Imagning what a hypothetical future Apple Silicon iMac or Mac Pro with an even more scaled up M1 variant, or perhaps some kind of multi-M1 Max chiplet or multisocket solution, is extremely exciting!
+Imagining what a hypothetical future Apple Silicon iMac or Mac Pro with an even more scaled up M1 variant, or perhaps some kind of multi-M1 Max chiplet or multisocket solution, is extremely exciting!
 I think that with the upcoming Apple Silicon based large iMac and Mac Pro, Apple has a real shot at beating both Intel and AMD's highest end CPUs to win the absolute workstation performance crown.
 
 Of course, what makes the M1 Max's performance numbers possible is the M1 Max's energy efficiency; this kind of performance-per-watt is simply unparalleled in the desktop (meaning non-mobile, not desktop form factor) processor world.

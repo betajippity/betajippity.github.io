@@ -182,25 +182,25 @@ So, wall time can be thought of as a measure of total computation _power_, where
 |                                   | 1920x1080, 8 spp, PT
 | Processor:                        | Wall Time:  | Core-Seconds:     |
 | ---------------------------------:|:-----------:|:------------------|
-| Apple M1 Max (Plugged in):        | 127.143 s   | approx 1271.43 s  |
-| Apple M1 Max (Battery):           | 126.421 s   | approx 1264.21 s  |
-| Intel Core i7-9750H (Plugged in): | 288.089 s   | approx 3457.068 s |
-| Intel Core i7-9750H (Battery):    | 347.898 s   | approx 4174.776 s |
-| Intel Xeon W-3245:                | 106.332 s   | approx 3402.624 s |
-| Intel Xeon E5-2680 x2:            | 158.255 s   | approx 5064.16 s  |
-| AMD Threadripper 3990X:           | 38.887 s    | approx 4977.536 s |
+| Apple M1 Max (Plugged in):        | 127.143 s   | approx 1271.4 s  |
+| Apple M1 Max (Battery):           | 126.421 s   | approx 1264.2 s  |
+| Intel Core i7-9750H (Plugged in): | 288.089 s   | approx 3457.1 s |
+| Intel Core i7-9750H (Battery):    | 347.898 s   | approx 4174.8 s |
+| Intel Xeon W-3245:                | 106.332 s   | approx 3402.6 s |
+| Intel Xeon E5-2680 x2:            | 158.255 s   | approx 5064.2 s  |
+| AMD Threadripper 3990X:           | 38.887 s    | approx 4977.5 s |
 
 |                                   | Forest Rendering (Fern Camera)
 |                                   | 3840x2160, 8 spp, PT
 | Processor:                        | Wall Time:  | Core-Seconds:      |
 | ---------------------------------:|:-----------:|:-------------------|
-| Apple M1 Max (Plugged in):        | 478.247 s   | approx 4782.47 s   |
-| Apple M1 Max (Battery):           | 496.384 s   | approx 4963.84 s   |
-| Intel Core i7-9750H (Plugged in): | 1084.504 s  | approx 13014.048 s |
-| Intel Core i7-9750H (Battery):    | 1219.59 s   | approx 14635.08 s  |
-| Intel Xeon W-3245:                | 345.292 s   | approx 11049.344 s |
-| Intel Xeon E5-2680 x2:            | 576.279 s   | approx 18440.928 s |
-| AMD Threadripper 3990X:           | 108.2596 s  | approx 13857.229 s |
+| Apple M1 Max (Plugged in):        | 478.247 s   | approx 4782.5 s   |
+| Apple M1 Max (Battery):           | 496.384 s   | approx 4963.8 s   |
+| Intel Core i7-9750H (Plugged in): | 1084.504 s  | approx 13014.0 s |
+| Intel Core i7-9750H (Battery):    | 1219.59 s   | approx 14635.1 s  |
+| Intel Xeon W-3245:                | 345.292 s   | approx 11049.3 s |
+| Intel Xeon E5-2680 x2:            | 576.279 s   | approx 18440.9 s |
+| AMD Threadripper 3990X:           | 108.2596 s  | approx 13857.2 s |
 
 When rendering the main camera view, the 2021 14-inch MacBook Pro used on average about 7% of its battery charge, while the 2019 16-inch MacBook Pro used on average about 39% of its battery charge.
 When rendering the fern view, the 2021 14-inch MacBook Pro used on average about 19% of its battery charge, while the 2019 16-inch MacBook Pro used on average about 48% of its battery charge.
@@ -211,7 +211,7 @@ Seeing this kind of jump in a single hardware generation is unheard of in modern
 The M1 Max also handily beats the old dual Intel Xeon E5-2680 that I am currently using by a comfortable margin; for my personal workflow, this means that I can now do everything that I previously needed a large loud power-hungry workstation for on the 2021 14-inch MacBook Pro, and I can do everything _faster_ on the 2021 14-inch MacBook Pro too.
 
 The real surprises to me came with the 2019 Mac Pro and the Threadripper 3990X workstation.
-In both of those cases, I expected the M1 Max to loose, but the 2021 14-inch MacBook Pro came surprisingly close to the 2019 Mac Pro's performance in terms of wall time.
+In both of those cases, I expected the M1 Max to lose, but the 2021 14-inch MacBook Pro came surprisingly close to the 2019 Mac Pro's performance in terms of wall time.
 Even more importantly as a predictor of future scalability, the M1 Max's efficiency as measured by core-seconds comes in at far far superior to both the Intel Xeon W-3245 and the AMD Threadripper 3900X.
 Imagining what a hypothetical future Apple Silicon iMac or Mac Pro with an even more scaled up M1 variant, or perhaps some kind of multi-M1 Max chiplet or multisocket solution, is extremely exciting!
 I think that with the upcoming Apple Silicon based large iMac and Mac Pro, Apple has a real shot at beating both Intel and AMD's highest end CPUs to win the absolute workstation performance crown.

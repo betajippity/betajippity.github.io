@@ -52,7 +52,7 @@ There are a ton more really cool technical advancements that were made for Raya 
 One extremely important point I want to highlight is that, as cool as all of the tech that we develop at Disney Animation is, at the end of the day our tech and tools are only as good as the artists that use them every day to handcraft our films.
 Hyperion only renders amazing films because the artists using Hyperion are some of the best in the world; I count myself as super lucky to be able to work with my teammates and with our artists every day.
 At SIGGRAPH 2021, most of the talks about Raya and the Last Dragon are actually from our artists, not our engineers!
-Our artists had to come up with new crowd simulation techniques for handling the huge crowds seen in the movie [\[Nghiem 2021](https://doi.org/10.1145/3450623.3464650), [Luceño Ros et al. 2021\]](https://doi.org/10.1145/3450623.3464648), new cloth simulation techniques for all of the beautiful, super complex outfits worn by all of the characters [\[Kaur et al. 2021](https://doi.org/10.1145/3450623.3464660), [Kaur & Coetzee 2021\]](https://doi.org/10.1145/3450623.3464659), and even new effects techniques to simulate cooking delicious Southeast Asia-inspired food [[Wang & Mayeda 2021]](https://doi.org/10.1145/3450623.3464651).
+Our artists had to come up with new crowd simulation techniques for handling the huge crowds seen in the movie [\[Nghiem 2021](https://doi.org/10.1145/3450623.3464650), [Luceño Ros et al. 2021\]](https://doi.org/10.1145/3450623.3464648), new cloth simulation techniques for all of the beautiful, super complex outfits worn by all of the characters [\[Kaur et al. 2021](https://doi.org/10.1145/3450623.3464660), [Kaur & Coetzee 2021\]](https://doi.org/10.1145/3450623.3464659), and even new effects techniques to simulate cooking delicious Southeast Asia-inspired food [[Wang et al. 2021]](https://doi.org/10.1145/3450623.3464651).
 
 Finally, here are a bunch of stills from the movie, 100% rendered using Hyperion.
 Normally I post somewhere between 40 to 70 stills per film, but I had so many favorite images from Raya and the Last Dragon that for this post, there are considerably more.
@@ -363,4 +363,4 @@ Jacob Rice. 2021. [Weaving the Druun's Webbing](https://doi.org/10.1145/3450623.
 
 Thijs Vogels, Fabrice Rousselle, Brian McWilliams, Gerhard Röthlin, Alex Harvill, David Adler, Mark Meyer, and Jan Novák. 2018. [Denoising with Kernel Prediction and Asymmetric Loss Functions](https://doi.org/10.1145/3197517.3201388). _ACM Transactions on Graphics_. 37, 4 (2018), 124:1-124:15.
 
-Cong Wang and Dale Mayeda. 2021. [Cooking Southeast Asia-Inspired Soup in Animated Film](https://doi.org/10.1145/3450623.3464651). In _ACM SIGGRAPH 2021 Talks_. 35:1-35:2.
+Cong Wang, Dale Mayeda, Jacob Rice, Thom Whicks, and Benjamin Huang. 2021. [Cooking Southeast Asia-Inspired Soup in Animated Film](https://doi.org/10.1145/3450623.3464651). In _ACM SIGGRAPH 2021 Talks_. 35:1-35:2.

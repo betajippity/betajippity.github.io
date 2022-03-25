@@ -545,7 +545,7 @@ So, I decided to do a direct comparison in my test program, which required imple
 <div class="codecaption">Listing 8: Neon version of the compact Williams et al. 2005 implementation.</div>
 
 Even if you only know SSE and have never worked with Neon, you should already be able to tell broadly how the Neon implementation in Listing 8 works!
-Just from the name alone, `vmaxq_f32()` and `vminq_f32()` obviously correspond directly to ` _mm_max_ps()` and ` _mm_min_ps()` in the SSE implementation, and understanding how the ray data is being loaded into Neon's 128-bit registers using `vdupq_n_f32()` instead of `_mm_set1_ps()` should be relatively easy too.
+Just from the name alone, `vmaxq_f32()` and `vminq_f32()` obviously correspond directly to `_mm_max_ps()` and `_mm_min_ps()` in the SSE implementation, and understanding how the ray data is being loaded into Neon's 128-bit registers using `vdupq_n_f32()` instead of `_mm_set1_ps()` should be relatively easy too.
 However, because there is no fancy single-instruction shuffle intrinsic available in Neon, the way the ray data is loaded is potentially slightly less efficient.
 
 The largest area of difference between the Neon and SSE implementations is in the processing of the tMin and tMax results to produce the output `hits` vector.

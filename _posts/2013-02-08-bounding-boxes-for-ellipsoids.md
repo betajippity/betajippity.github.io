@@ -5,6 +5,8 @@ tags: [Coding, Math, Pathtracer]
 author: Yining Karl Li
 ---
 
+Update (2014): Tavian Barnes has written a [far better / more detailed post](https://tavianator.com/2014/ellipsoid_bounding_boxes.html) on this topic; instead of reading my post, I suggest you go read Tavian's post instead.
+
 Warning\: this post is going to be pretty math-heavy.
 
 Let's talk about spheres, or more generally, ellipsoids. Specifically, let's talk about calculating axis aligned bounding boxes for arbitrarily transformed ellipsoids, which is a bit of an interesting problem I recently stumbled upon while working on Takua Rev 3. I'm making this post because finding a solution took a lot of searching and I didn't find any single collected source of information on this problem, so I figured I'd post it for both my own reference and for anyone else who may find this useful.

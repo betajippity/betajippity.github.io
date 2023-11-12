@@ -18,7 +18,7 @@ Without a doubt, Hyperion, and by extension, our movies, would not be what they 
 Of course, we also collaborate closely with our sister rendering teams at [Pixar Animation Studios](https://www.pixar.com) and [Industrial Light & Magic](https://www.ilm.com) as well, and there are numerous examples where collaboration between all of these teams has advanced the state of the art in rendering for the whole industry.
 
 So without further ado, below are all of the papers that the Hyperion team has published or worked on or had involvement with over the years, either by ourselves or with our counterparts at Disney Research Studios, Pixar, ILM, and other research groups.
-If you've ever been curious to learn more about Disney's Hyperion Renderer, here are 41 publications with a combined 429 pages of material!
+If you've ever been curious to learn more about Disney's Hyperion Renderer, here are 43 publications with a combined 441 pages of material!
 For each paper, I'll link to a preprint version, link to the official publisher's version, and link any additional relevant resources for the paper.
 I'll also give the citation information, give a brief description, list the teams involved, and note how the paper is relevant to Hyperion.
 This post is meant to be a living document; I'll come back and update it down the line with future publications. Publications are listed in chronological order.

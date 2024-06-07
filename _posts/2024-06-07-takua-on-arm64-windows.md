@@ -158,34 +158,36 @@ In this case though, because this was all running in a virtual machine (with 6 a
 |                        | 1024x1024, PT
 | Test:                  | Wall Time: | Core-Seconds:    |
 | ----------------------:|:----------:|:-----------------|
-| Native arm64:          | 60.219 s   | approx 361.314 s |
-| Emulated x86-64:       | 202.242 s  | approx 1273.45 s |
+| Native arm64 (VM):     | 60.219 s   | approx 361.314 s |
+| Emulated x86-64 (VM):  | 202.242 s  | approx 1273.45 s |
 
 |                        | TEA CUP
 |                        | 1920x1080, VCM
 | Test:                  | Wall Time: | Core-Seconds:    |
 | ----------------------:|:----------:|:-----------------|
-| Native arm64:          | 244.37 s   | approx 1466.22 s |
-| Emulated x86-64:       | 681.539 s  | approx 4089.24 s |
+| Native arm64 (VM):     | 244.37 s   | approx 1466.22 s |
+| Emulated x86-64 (VM):  | 681.539 s  | approx 4089.24 s |
 
 |                        | BEDROOM
 |                        | 1920x1080, PT
 | Test:                  | Wall Time: | Core-Seconds:    |
 | ----------------------:|:----------:|:-----------------|
-| Native arm64:          | 530.261 s  | approx 3181.57 s |
-| Emulated x86-64:       | 1578.76 s  | approx 9472.57 s |
+| Native arm64 (VM):     | 530.261 s  | approx 3181.57 s |
+| Emulated x86-64 (VM):  | 1578.76 s  | approx 9472.57 s |
 
 |                        | SCANDINAVIAN ROOM
 |                        | 1920x1080, PT
 | Test:                  | Wall Time: | Core-Seconds:    |
 | ----------------------:|:----------:|:-----------------|
-| Native arm64:          | 993.075 s  | approx 5958.45 s |
-| Emulated x86-64:       | 1745.5 s   | approx 10473.0 s |
+| Native arm64 (VM):     | 993.075 s  | approx 5958.45 s |
+| Emulated x86-64 (VM):  | 1745.5 s   | approx 10473.0 s |
 
 The emulated results are... not great; for compute-heavy workloads like path tracing, x86-64 emulation on arm64 Windows 11 seems to to be around 1.7x to 3x slower than native arm64 code.
 These results are much slower compared with how Rosetta 2 performs, which generally sees only a 10-15% performance penalty over native arm64 when running Takua Renderer.
+However, a critical caveat has to be pointed out here: reportedly Windows 11's x86-64 emulation works worse in a VM on Apple Silicon than it does on native hardware because [Arm RCpc instructions](https://developer.arm.com/documentation/102336/0100/Load-Acquire-and-Store-Release-instructions) on Apple Silicon [are relatively slow](https://github.com/utmapp/UTM/issues/2366).
+For Rosetta 2 this behavior doesn't matter because Rosetta 2 uses TSO mode instead of RCpc instructions for emulating strong memory ordering, but since Windows on Arm does rely on RCpc for emulating strong memory ordering, this means that the results above are likely not fully representative of emulation performance on native Windows on Arm hardware.
 Nonetheless though, having any form of x86-64 emulation at all is an important part of making Windows on Arm viable for mainstream adoption, and I'm looking forward to see how much of an improvement the new Prism emulation system in Windows 11 24H2 brings.
-I'll update these results with the Prism emulator once 24H2 is released.
+I'll update these results with the Prism emulator once 24H2 is released, and I'll also update these results to show comparisons on real Windows on Arm hardware whenever I actually get some real hardware to try out.
 
 **Conclusion**
 
@@ -194,6 +196,8 @@ Apple's transition to arm64-based Apple Silicon already made the viability of de
 Having more competitors driving innovation ultimately is a good thing, and as new interesting Windows on Arm devices enter the market alongside Apple Silicon Macs, Takua Renderer is ready to go!
 
 **References**
+
+ARM Holdings. 2022. [Load-Acquire and Store-Release instructions](https://developer.arm.com/documentation/102336/0100/Load-Acquire-and-Store-Release-instructions). Retrieved June 7, 2024.
 
 Petr Beneš. 2018. [Wow64 Internals: Re-Discovering Heaven's Gate on ARM](https://wbenny.github.io/2018/11/04/wow64-internals.html). Retrieved June 5, 2024.
 

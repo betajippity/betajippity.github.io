@@ -101,7 +101,7 @@ cmake -G "Ninja" ../../ -DCMAKE_C_COMPILER="clang-cl" `
 ```
 
 To do the above, of course you will need both CMake and Ninja installed; fortunately both come with pre-built arm64 Windows binaries on their respective websites.
-You will also need to install the "C++ Clang Compiler for Windows" component in the Visual Studio Installed application if you haven't already.
+You will also need to install the "C++ Clang Compiler for Windows" component in the Visual Studio Installer application if you haven't already.
 
 Just building with clang is also the solution that [Blender eventually settled on for Windows on Arm](https://projects.blender.org/blender/blender/pulls/117036), although Blender's version of this solution is a bit more complex since Blender builds Embree using its own internal clang and LLVM build instead of just using the clang that ships with Visual Studio.
 

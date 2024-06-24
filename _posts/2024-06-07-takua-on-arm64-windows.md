@@ -132,7 +132,7 @@ In Rosetta 2, arm64 code that comes from translation uses a completely different
 Microsoft similarly uses a different ABI for translated arm64 code compared with native arm64 code; in Windows, translated arm64 code uses the arm64EC (EC for "Emulation Compatible") ABI.
 Here though we find the first major difference between the macOS and Windows 11 approaches.
 In Rosetta 2, the translated arm64 ABI is an internal implementation detail that is not exposed to users or developers whatsoever; by default there is no way to compile source code against the translated arm64 ABI in Xcode.
-In the Windows 11 system though, the arm64EC ABI is directly available to developers; Visual Studios 2022 supports compiling source code against either the native arm64 or the translation-focused arm64EC ABI.
+In the Windows 11 system though, the arm64EC ABI is directly available to developers; Visual Studio 2022 supports compiling source code against either the native arm64 or the translation-focused arm64EC ABI.
 Code built as arm64EC is capable of interoperating with emulated x86-64 code within the same process, the idea being that this approach allows developers to incrementally port applications to arm64 piece-by-piece while leaving other pieces as x86-64 [[Sweetgall et al. 2023]](https://learn.microsoft.com/en-us/windows/arm/arm64ec).
 This... is actually kind of wild if you think about it!
 

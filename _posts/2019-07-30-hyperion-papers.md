@@ -18,7 +18,7 @@ Without a doubt, Hyperion, and by extension, our movies, would not be what they 
 Of course, we also collaborate closely with our sister rendering teams at [Pixar Animation Studios](https://www.pixar.com) and [Industrial Light & Magic](https://www.ilm.com) as well, and there are numerous examples where collaboration between all of these teams has advanced the state of the art in rendering for the whole industry.
 
 So without further ado, below are all of the papers that the Hyperion team has published or worked on or had involvement with over the years, either by ourselves or with our counterparts at Disney Research Studios, Pixar, ILM, and other research groups.
-If you've ever been curious to learn more about Disney's Hyperion Renderer, here are 43 publications with a combined 441 pages of material!
+If you've ever been curious to learn more about Disney's Hyperion Renderer, here are 45 publications with a combined 462 pages of material!
 For each paper, I'll link to a preprint version, link to the official publisher's version, and link any additional relevant resources for the paper.
 I'll also give the citation information, give a brief description, list the teams involved, and note how the paper is relevant to Hyperion.
 This post is meant to be a living document; I'll come back and update it down the line with future publications. Publications are listed in chronological order.
@@ -421,7 +421,7 @@ This post is meant to be a living document; I'll come back and update it down th
 
 42. **Progressive Null-Tracking for Volumetric Rendering**
 
-    [Zackary Misso](https://www.linkedin.com/in/zackary-misso/), [Yining Karl Li](https://www.yiningkarlli.com), [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/), [Daniel Teece](https://www.linkedin.com/in/daniel-teece-2650358/), and [Wojciech Jarosz](https://cs.dartmouth.edu/~wjarosz/index.html). Progressive Null Tracking for Volumetric Rendering. *SIGGRAPH '23: ACM SIGGRAPH 2023 Conference Proceedings*. Article 31, August 2023.
+    [Zackary Misso](https://www.linkedin.com/in/zackary-misso/), [Yining Karl Li](https://www.yiningkarlli.com), [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/), [Daniel Teece](https://www.linkedin.com/in/daniel-teece-2650358/), and [Wojciech Jarosz](https://cs.dartmouth.edu/~wjarosz/index.html). Progressive Null Tracking for Volumetric Rendering. *SIGGRAPH '23: ACM SIGGRAPH 2023 Conference Proceedings*, August 2023.
 
     * [Preprint Version](https://drive.google.com/file/d/11YsHMnJvUhINBpTabGFi48-j69A47Iw_/view?usp=sharing)
     * [Official Publisher's Version](http://doi.org/10.1145/3588432.3591557)
@@ -437,6 +437,26 @@ This post is meant to be a living document; I'll come back and update it down th
     * [Official Publisher's Version](https://doi.org/10.1145/3587421.3595424)
 
     Internal project from Disney Animation. This paper describes the unusual challenges encountered when developing the unique shading and look for the Splat character from *Strange World*.
+
+44. **Cache Points for Production-Scale Occlusion-Aware Many-Lights Sampling and Volumetric Scattering**
+
+    [Yining Karl Li](https://www.yiningkarlli.com), [Charlotte Zhu](https://www.linkedin.com/in/charizarrd), [Gregory Nichols](http://www.gregnichols.org/), [Peter Kutz](http://www.peterkutz.com/), [Wei-Feng Wayne Huang](http://rendering-memo.blogspot.com/), [David Adler](https://www.linkedin.com/in/david-adler-5ab7b21/s), [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/), and [Daniel Teece](https://www.linkedin.com/in/daniel-teece-2650358/). Cache Points for Production-Scale Occlusion-Aware Many-Lights Sampling and Volumetric Scattering. *DigiPro '24: Proceedings of the Digital Production Symposium 2024*, July 2024.
+
+    * [Preprint Version](https://drive.google.com/file/d/1oPTKFbx52H44-98og0-f0XKfQQxhyy3d/view?usp=share_link)
+    * [Official Publisher's Version](http://doi.org/10.1145/3665320.3670993)
+    * [Project Page](https://www.yiningkarlli.com/projects/cachepoints.html)
+
+    Internal project from Disney Animation. This paper describes Hyperion's unique many-lights importance sampling system. Used on every project rendered using Hyperion to date, this paper contains deep implementation details and notes from a decade of production experience.
+
+45. **Dynamic Screen Space Textures for Coherent Stylization**
+
+    [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/), [Brian Green](https://www.linkedin.com/in/brian-green-9b54956/), and [Daniel Teece](https://www.linkedin.com/in/daniel-teece-2650358/). Dynamic Screen Space Textures for Coherent Stylization. In  *ACM SIGGRAPH 2024 Talks*, July 2024.
+
+    * [Preprint Version](https://drive.google.com/file/d/1JyhFpy3D-EX6i5IG_o7FNx6Fx0To0qYU/view?usp=share_link)
+    * [Official Publisher's Version](https://doi.org/10.1145/3641233.3664321)
+
+    Internal project from Disney Animation. This paper describes a novel new dynamic screen space texturing system that makes up a key part of the stylized watercolor look of *Wish*.
+
 
 [![Figure 2: Hyperion logo, modeled by Disney Animation artist Chuck Tappan and rendered in Disney's Hyperion Renderer.]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)
 

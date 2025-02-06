@@ -7,7 +7,7 @@ author: Yining Karl Li
 Every year at SIGGRAPH (and sometimes at other points in the year), members of the Hyperion team inevitably get asked if there is any publicly available information about [Disney's Hyperion Renderer](https://www.disneyanimation.com/technology/hyperion/).
 The answer is: yes, there is actually a lot of publicly available information!
 
-[![Figure 1: Previews of the first page of every Hyperion-related publication from Disney Animation, Disney Research Studios, and other research partners.]({{site.url}}/content/images/2019/Jul/FirstPagesv5_prev.png)]({{site.url}}/content/images/2019/Jul/FirstPagesv5.png)
+[![Figure 1: Previews of the first page of every Hyperion-related publication from Disney Animation, Disney Research Studios, and other research partners.]({{site.url}}/content/images/2019/Jul/FirstPagesv6_prev.png)]({{site.url}}/content/images/2019/Jul/FirstPagesv6.png)
 
 One amazing aspect of working at Walt Disney Animation Studios is the huge amount of support and encouragement we get from our managers and the wider studio for publishing and sharing our work with the wider academic world and industry.
 As part of this sharing, the Hyperion team has had the opportunity to publish a number of papers over the years detailing various interesting techniques used in the renderer.
@@ -18,7 +18,7 @@ Without a doubt, Hyperion, and by extension, our movies, would not be what they 
 Of course, we also collaborate closely with our sister rendering teams at [Pixar Animation Studios](https://www.pixar.com) and [Industrial Light & Magic](https://www.ilm.com) as well, and there are numerous examples where collaboration between all of these teams has advanced the state of the art in rendering for the whole industry.
 
 So without further ado, below are all of the papers that the Hyperion team has published or worked on or had involvement with over the years, either by ourselves or with our counterparts at Disney Research Studios, Pixar, ILM, and other research groups.
-If you've ever been curious to learn more about Disney's Hyperion Renderer, here are 45 publications with a combined 462 pages of material!
+If you've ever been curious to learn more about Disney's Hyperion Renderer, here are 49 publications with a combined 517 pages of material!
 For each paper, I'll link to a preprint version, link to the official publisher's version, and link any additional relevant resources for the paper.
 I'll also give the citation information, give a brief description, list the teams involved, and note how the paper is relevant to Hyperion.
 This post is meant to be a living document; I'll come back and update it down the line with future publications. Publications are listed in chronological order.
@@ -152,7 +152,6 @@ This post is meant to be a living document; I'll come back and update it down th
 14. **Subdivision Next-Event Estimation for Path-Traced Subsurface Scattering**
 
     [David Koerner](https://www.linkedin.com/in/david-koerner-41233611), [Jan Novák](http://drz.disneyresearch.com/~jnovak/), [Peter Kutz](https://www.linkedin.com/in/peterkutz/), [Ralf Habel](https://www.linkedin.com/in/ralf-habel-6a74bb2/), and [Wojciech Jarosz](https://cs.dartmouth.edu/~wjarosz/). Subdivision Next-Event Estimation for Path-Traced Subsurface Scattering. In *Proceedings of EGSR 2016, Experimental Ideas & Implementations*, June 2016.
-    2016-06-24,
 
     * [Preprint Version](https://drive.google.com/open?id=1iMwNqPr-l-_xTViWqxXYIuP8S_he7t8k)
     * [Official Publisher's Version](https://doi.org/10.2312/sre.20161214)
@@ -207,7 +206,7 @@ This post is meant to be a living document; I'll come back and update it down th
     * [Official Publisher's Version](https://doi.org/10.1145/3072959.3073708)
     * [Project Page](http://drz.disneyresearch.com/~jnovak/publications/KPCN/index.html)
 
-    External joint project between University of California Santa Barbara, Disney Research Studios, ETH Zürich, and Pixar, developed as part of the larger effort to develop a successor to Hyperion's first generation denoiser. This paper describes a supervised learning approach for denoising filter kernels using deep convolutional neural networks. This technique is the basis of the modern Disney-Research-developed second generation deep-learning denoiser in use by the rendering teams at Pixar and ILM, and by the Hyperion iteam at Disney Animation.
+    External joint project between University of California Santa Barbara, Disney Research Studios, ETH Zürich, and Pixar, with project support from Disney Animation. Developed as part of the larger effort to develop a successor to Hyperion's first generation denoiser. This paper describes a supervised learning approach for denoising filter kernels using deep convolutional neural networks. This technique is the basis of the modern Disney-Research-developed second generation deep-learning denoiser in use by the rendering teams at Pixar and ILM, and by the Hyperion iteam at Disney Animation.
 
 20. **Production Volume Rendering**
 
@@ -400,7 +399,17 @@ This post is meant to be a living document; I'll come back and update it down th
 
     Joint project between École Polytechnique Fédérale de Lausanne (EPFL) and Disney Animation. This paper descibes the new multiple-scattering sheen model used in the Disney Principled BSDF starting with the production of *Strange World*.
 
-40. **"Encanto" - Let's Talk About Bruno's Visions**
+40. **Deep Adaptive Sampling and Reconstruction Using Analytic Distributions**
+
+    [Farnood Salehi](https://studios.disneyresearch.com/people/farnood-salehi/), [Marco Manzi](https://studios.disneyresearch.com/people/marco-manzi/), [Gerhard Rothlin](https://studios.disneyresearch.com/people/gerhard-rothlin/), [Romann Weber](https://studios.disneyresearch.com/people/romann-weber/), [Christopher Schroers](https://studios.disneyresearch.com/people/christopher-schroers/), and [Marios Papas](https://studios.disneyresearch.com/people/marios-papas/). Deep Adaptive Sampling and Reconstruction Using Analytic Distributions. *ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia 2022)*, 41(6), December 2022.
+
+    * [Preprint Version](https://drive.google.com/file/d/1kp19occ4yyOO9w1ky661sSzBeosn_7dn/view?usp=share_link)
+    * [Official Publisher's Version](https://doi.org/10.1145/3550454.3555515)
+    * [Project Page](https://studios.disneyresearch.com/2022/11/30/deep-adaptive-sampling-and-reconstruction-using-analytic-distributions/)
+
+    External project from Disney Research Studios, with project support from Disney Animation. This paper extends Disney's deep learning denoising technology to also drive adaptive sampling during the rendering process. Part of a larger joint research project between Disney Research Studios, Disney Animation, Pixar, and Industrial Light & Magic on denoising techniques.
+
+41. **"Encanto" - Let's Talk About Bruno's Visions**
 
     [Corey Butler](https://www.linkedin.com/in/corey-butler-96aa492/), [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/), [Wei-Feng Wayne Huang](http://rendering-memo.blogspot.com/), [Yining Karl Li](https://www.yiningkarlli.com), and [Benjamin Huang](https://www.linkedin.com/in/benjamin-min-huang-94b3011/). "Encanto" - Let's Talk About Bruno's Visions. In  *ACM SIGGRAPH 2022 Talks*, August 2022.
 
@@ -410,7 +419,7 @@ This post is meant to be a living document; I'll come back and update it down th
 
     Internal project from Disney Animation. This paper describes the process of creating the holographic prophecy shards from *Encanto*, including a new teleportation shader in Hyperion that was developed specifically to support this effect.
 
-41. **Fracture-Aware Tessellation of Subdivision Surfaces**
+42. **Fracture-Aware Tessellation of Subdivision Surfaces**
 
     [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/) and [Francisco Rodriguez](https://www.linkedin.com/in/fjrodriguez/). Fracture-Aware Tessellation of Subdivision Surfaces. In  *ACM SIGGRAPH 2022 Talks*, August 2022.
 
@@ -419,7 +428,17 @@ This post is meant to be a living document; I'll come back and update it down th
 
     Internal project from Disney Animation. This paper describes a new tessellation algorithm for fractured subdivision surfaces, used as part of Disney Animation's destruction FX pipeline and implemented in Hypeprion. First used in production on *Encanto*.
 
-42. **Progressive Null-Tracking for Volumetric Rendering**
+43. **Deep Compositional Denoising on Frame Sequences**
+
+    [Xianyao Zhang](https://studios.disneyresearch.com/people/xianyao-zhang/), [Gerhard Rothlin](https://studios.disneyresearch.com/people/gerhard-rothlin/), [Marco Manzi](https://studios.disneyresearch.com/people/marco-manzi/), [Markus Gross](https://studios.disneyresearch.com/people/markus-gross/), and [Marios Papas](https://studios.disneyresearch.com/people/marios-papas). Deep Compositional Denoising on Frame Sequences. In *EGSR 2023: Proceedings of the 34th Eurographics Symposium on Rendering*, June 2023.
+
+    * [Preprint Version](https://drive.google.com/file/d/1vpmrfkyNQm3eChyCnJSGinhPyOVZSH5s/view?usp=share_link)
+    * [Official Publisher's Version](https://doi.org/10.2312/sr.20231142)
+    * [Project Page](https://studios.disneyresearch.com/2023/06/26/deep-compositional-denoising-on-frame-sequence)
+
+    External project from Disney Research Studios, with project support from Disney Animation. This paper unifies previously separate approaches used in Disney's deep learning denoising system for single-frame compositional denoising and multi-frame non-compositional denoising. Part of a larger joint research project between Disney Research Studios, Disney Animation, Pixar, and Industrial Light & Magic on denoising techniques.
+
+44. **Progressive Null-Tracking for Volumetric Rendering**
 
     [Zackary Misso](https://www.linkedin.com/in/zackary-misso/), [Yining Karl Li](https://www.yiningkarlli.com), [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/), [Daniel Teece](https://www.linkedin.com/in/daniel-teece-2650358/), and [Wojciech Jarosz](https://cs.dartmouth.edu/~wjarosz/index.html). Progressive Null Tracking for Volumetric Rendering. *SIGGRAPH '23: ACM SIGGRAPH 2023 Conference Proceedings*, August 2023.
 
@@ -429,7 +448,7 @@ This post is meant to be a living document; I'll come back and update it down th
 
     Joint project between Dartmouth College and Disney Animation. This paper describes a new method to progressively learn bounding majorants when using null-tracking techniques to perform unbiased rendering of general heterogeneous volumes with unknown bounding majorants.
 
-43. **Splat: Developing a 'Strange' Shader**
+45. **Splat: Developing a 'Strange' Shader**
 
     [Kendall Litaker](https://www.linkedin.com/in/klitaker/), [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/), [Dan Lipson](https://www.linkedin.com/in/dan-lipson-2ab84916b/), and [Mason Khoo](https://www.linkedin.com/in/mason-khoo-3b490562/). Splat: Developing a 'Strange' Shader. In  *ACM SIGGRAPH 2023 Talks*, August 2023.
 
@@ -438,7 +457,17 @@ This post is meant to be a living document; I'll come back and update it down th
 
     Internal project from Disney Animation. This paper describes the unusual challenges encountered when developing the unique shading and look for the Splat character from *Strange World*.
 
-44. **Cache Points for Production-Scale Occlusion-Aware Many-Lights Sampling and Volumetric Scattering**
+46. **Neural Denoising for Deep-Z Monte Carlo Renderings**
+
+    [Xianyao Zhang](https://studios.disneyresearch.com/people/xianyao-zhang/), [Gerhard Rothlin](https://studios.disneyresearch.com/people/gerhard-rothlin/), [Shilin Zhu](https://www.shilinzhupixar.com), [Tunç Ozan Aydin](https://studios.disneyresearch.com/people/tunc-aydin/), [Farnood Salehi](https://studios.disneyresearch.com/people/farnood-salehi/), [Markus Gross](https://studios.disneyresearch.com/people/markus-gross/), [Marios Papas](https://studios.disneyresearch.com/people/marios-papas/). Neural Denoising for Deep-Z Monte Carlo Renderings. *Computer Graphics Forum (Proceedings of Eurographics 2024)*, 43(2), April 2024.
+
+    * [Preprint Version](https://drive.google.com/file/d/1nGILmgOtGC-n6ftwvz_x2DCWKE92NBSa/view?usp=share_link)
+    * [Official Publisher's Version](http://doi.org/10.1111/cgf.15050)
+    * [Project Page](https://studios.disneyresearch.com/2024/06/18/neural-denoising-for-deep-z-monte-carlo-renderings/)
+
+    External joint project between Disney Research Studios and Pixar, with project support from Disney Animation. This paper describes an extension to Disney's deep learning denoising technology to add support for deep-Z images and deep compositing workflows. Part of a larger joint research project between Disney Research Studios, Disney Animation, Pixar, and Industrial Light & Magic on denoising techniques.
+
+47. **Cache Points for Production-Scale Occlusion-Aware Many-Lights Sampling and Volumetric Scattering**
 
     [Yining Karl Li](https://www.yiningkarlli.com), [Charlotte Zhu](https://www.linkedin.com/in/charizarrd), [Gregory Nichols](http://www.gregnichols.org/), [Peter Kutz](http://www.peterkutz.com/), [Wei-Feng Wayne Huang](http://rendering-memo.blogspot.com/), [David Adler](https://www.linkedin.com/in/david-adler-5ab7b21/s), [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/), and [Daniel Teece](https://www.linkedin.com/in/daniel-teece-2650358/). Cache Points for Production-Scale Occlusion-Aware Many-Lights Sampling and Volumetric Scattering. *DigiPro '24: Proceedings of the Digital Production Symposium 2024*, July 2024.
 
@@ -448,7 +477,7 @@ This post is meant to be a living document; I'll come back and update it down th
 
     Internal project from Disney Animation. This paper describes Hyperion's unique many-lights importance sampling system. Used on every project rendered using Hyperion to date, this paper contains deep implementation details and notes from a decade of production experience.
 
-45. **Dynamic Screen Space Textures for Coherent Stylization**
+48. **Dynamic Screen Space Textures for Coherent Stylization**
 
     [Brent Burley](https://www.linkedin.com/in/brent-burley-56972557/), [Brian Green](https://www.linkedin.com/in/brian-green-9b54956/), and [Daniel Teece](https://www.linkedin.com/in/daniel-teece-2650358/). Dynamic Screen Space Textures for Coherent Stylization. In  *ACM SIGGRAPH 2024 Talks*, July 2024.
 
@@ -456,6 +485,16 @@ This post is meant to be a living document; I'll come back and update it down th
     * [Official Publisher's Version](https://doi.org/10.1145/3641233.3664321)
 
     Internal project from Disney Animation. This paper describes a novel new dynamic screen space texturing system that makes up a key part of the stylized watercolor look of *Wish*.
+
+49. **Volume Scattering Probability Guiding**
+
+    [Kehan Xu](https://kehanxuuu.github.io), [Sebastian Herholz](https://www.intel.com/content/www/us/en/developer/articles/community/rendering-researchers-sebastian-herholz.html), [Marco Manzi](https://studios.disneyresearch.com/people/marco-manzi/), [Marios Papas](https://studios.disneyresearch.com/people/marios-papas/), and [Markus Gross](https://studios.disneyresearch.com/people/markus-gross/). Volume Scattering Probability Guiding. *ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia 2024)*, 43(6), December 2024.
+
+    * [Preprint Version](https://drive.google.com/file/d/11Fqs6eu1UWXbuByODvDPRIdUX1Ms2uvk/view?usp=share_link)
+    * [Official Publisher's Version](https://doi.org/10.1145/3687982)
+    * [Project Page](https://kehanxuuu.github.io/vspg-website/)
+
+    External joint project between Disney Research Studios and Intel, with project support from Disney Animation. This paper describes an improvement to volume path guiding that enables direct control over volume scattering probability. Part of a larger joint research project between Disney Research Studios, Disney Animation, Pixar, and Industrial Light & Magic on path guiding techniques.
 
 
 [![Figure 2: Hyperion logo, modeled by Disney Animation artist Chuck Tappan and rendered in Disney's Hyperion Renderer.]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)
@@ -486,13 +525,13 @@ If anything in this post has caught your interest, keep an eye out for open posi
 
 Finally, here is a list of all publicly released and announced projects to date made using Disney's Hyperion Renderer:
 
-**Feature Films**: [Big Hero 6](https://www.disneyplus.com/movies/big-hero-6/4AozFbXy3sPw) (2014), [Zootopia](https://www.disneyplus.com/movies/zootopia/1QOxldhm1sKg) (2016), [Moana](https://www.disneyplus.com/movies/moana/70GoJHflgHH9) (2016), [Ralph Breaks the Internet](https://www.disneyplus.com/movies/ralph-breaks-the-internet/33T1xWWWLhFR) (2018), [Frozen 2](https://www.disneyplus.com/movies/frozen-2/28vdy71kJrjb) (2019), [Raya and the Last Dragon](https://www.disneyplus.com/movies/raya-and-the-last-dragon/6dyengbx3iYK) (2021), [Encanto](https://www.disneyplus.com/movies/encanto/33q7DY1rtHQH) (2021), [Strange World](https://www.disneyplus.com/movies/strange-world/1OVzv6hnhOFm) (2022), [Wish](https://movies.disney.com/wish) (2023)
+**Feature Films**: [Big Hero 6](https://www.disneyplus.com/movies/big-hero-6/4AozFbXy3sPw) (2014), [Zootopia](https://www.disneyplus.com/movies/zootopia/1QOxldhm1sKg) (2016), [Moana](https://www.disneyplus.com/movies/moana/70GoJHflgHH9) (2016), [Ralph Breaks the Internet](https://www.disneyplus.com/movies/ralph-breaks-the-internet/33T1xWWWLhFR) (2018), [Frozen 2](https://www.disneyplus.com/movies/frozen-2/28vdy71kJrjb) (2019), [Raya and the Last Dragon](https://www.disneyplus.com/movies/raya-and-the-last-dragon/6dyengbx3iYK) (2021), [Encanto](https://www.disneyplus.com/movies/encanto/33q7DY1rtHQH) (2021), [Strange World](https://www.disneyplus.com/movies/strange-world/1OVzv6hnhOFm) (2022), [Wish](https://www.disneyplus.com/movies/wish/2DhMv5u72nYs) (2023), [Moana 2](https://www.disneyanimation.com/films/) (2024)
 
 **Shorts and Featurettes**: [Feast](https://www.disneyplus.com/movies/feast/3LXsUWltFatX) (2014), [Frozen Fever](https://www.disneyplus.com/movies/frozen-fever/5xsCGQz3eJRq) (2015), [Inner Workings](https://www.disneyplus.com/movies/inner-workings/2am4tRzFOOXl) (2016), [Gone Fishing](https://www.imdb.com/title/tt6467284/) (2017), [Olaf's Frozen Adventure](https://www.disneyplus.com/movies/olafs-frozen-adventure/5zrFDkAANpLi) (2017), [Myth: A Frozen Tale](https://www.disneyplus.com/movies/myth-a-frozen-tale/1N00Fn9eajzi)<sup>1</sup> (2019), [Once Upon a Snowman](https://www.disneyplus.com/movies/once-upon-a-snowman/2tBSdZv6bB4L) (2020), [Us Again](https://www.disneyplus.com/movies/us-again/3KPeVueXrxck) (2021), [Far From the Tree](https://www.disneyplus.com/movies/far-from-the-tree/4LKsV18kWS9G) (2021), [Once Upon A Studio](https://www.disneyplus.com/movies/once-upon-a-studio/2lskBMjkAn3w) (2023)
 
 **Animated Series**: [At Home With Olaf](https://www.youtube.com/playlist?list=PLxnVeUnlga-Eg3hSTyV2GXjiJYdjQl2nt) (2020), [Olaf Presents](https://www.disneyplus.com/series/olaf-presents/6nKDva3ZVCvC) (2021), [Baymax!](https://www.disneyplus.com/series/baymax/1D141qnxDHLI) (2022), [Zootopia+](https://www.disneyplus.com/series/zootopia/2CB7CKG729Ou) (2022)
 
-**Short Circuit Shorts**: [Exchange Student](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Just a Thought](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Jing Hua](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Elephant in the Room](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Puddles](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Lightning in a Bottle](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Zenith](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Drop](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Fetch](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Downtown](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Hair-Jitsu](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [The Race](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Lucky Toupée](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Cycles](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V)<sup>2</sup> (2020), [A Kite's Tale](https://twitter.com/disneyanimation/status/1149743115130920960?lang=en)<sup>2</sup> (2020), [Going Home](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2021), [Crosswalk](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2021), [Songs to Sing in the Dark](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2021), [No. 2 to Kettering](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2021)
+**Short Circuit Shorts**: [Exchange Student](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Just a Thought](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Jing Hua](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Elephant in the Room](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Puddles](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Lightning in a Bottle](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Zenith](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Drop](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Fetch](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Downtown](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Hair-Jitsu](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [The Race](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Lucky Toupée](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2020), [Cycles](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V)<sup>2</sup> (2020), [A Kite's Tale](https://twitter.com/disneyanimation/status/1149743115130920960?lang=en)<sup>2</sup> (2020), [Going Home](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2021), [Crosswalk](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2021), [Songs to Sing in the Dark](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2021), [No. 2 to Kettering](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2021), [Reflect](https://www.disneyplus.com/series/walt-disney-animation-studios-short-circuit-experimental-films/3S2DLVtMPA7V) (2022)
 
 **Intern Shorts**: [Ventana](https://ohmy.disney.com/insider/2017/10/19/you-must-watch-this-beautiful-short-created-by-walt-disney-animation-interns/) (2017), [Voilà](https://ohmy.disney.com/news/2018/12/05/voila-walt-disney-animation-studios-interns/) (2018), [Maestro](https://ohmy.disney.com/movies/2019/09/19/watch-maestro-a-beautiful-short-from-this-years-walt-disney-animation-studios-interns/) (2019), [June Bug](https://twitter.com/DisneyAnimJobs/status/1448007879257067520) (2021)
 

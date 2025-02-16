@@ -31,6 +31,11 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'berkeley-mono';
+    src: url('https://www.yiningkarlli.com/includes/fonts/BerkeleyMono-Regular.woff2') format('woff2');
+}
+
 /* Apply these base styles to all icons */
 .icon-ghost, .icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook {
     font-family: 'icons';
@@ -236,7 +241,7 @@ mark {
 
 code, tt {
     padding: 1px 3px;
-    font-family: Inconsolata, monospace, sans-serif;
+    font-family: berkeley-mono, monospace, sans-serif;
     font-size: 0.85em;
     /* white-space: pre; */
     border: 1px solid #E3EDF3;
@@ -251,7 +256,7 @@ pre {
     border: 1px solid #E3EDF3;
     width: 100%;
     padding: 10px;
-    font-family: Inconsolata, monospace, sans-serif;
+    font-family: berkeley-mono, monospace, sans-serif;
     font-size: 0.9em;
     white-space: pre;
     overflow: auto;

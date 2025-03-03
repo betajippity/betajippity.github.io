@@ -550,7 +550,7 @@ main.content {
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
     position: absolute;
-    top:3px;
+    top:4px;
     font-size: 60px;
     display: inline;
     font-weight: 500;
@@ -560,7 +560,7 @@ main.content {
 
 .blog-author {
     position: absolute;
-    top:60px;
+    top:61px;
     left: 92px;
     font-size: 30px;
     display: inline;
@@ -574,7 +574,7 @@ main.content {
     font-weight: 300;
     text-align: right ;
     right: 0px;
-    top:69px;
+    top:70px;
     position: absolute;
 }
 

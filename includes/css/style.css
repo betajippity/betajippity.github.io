@@ -364,7 +364,7 @@ table.plain {
    1. Utilities - These things get used a lot
    ========================================================================== */
 
-/* Hides shit */
+/* Hides stuff */
 .hidden {
     text-indent: -9999px;
     visibility: hidden;
@@ -1123,7 +1123,7 @@ main.content {
         font-size: 1em;
         font-weight: 300;
         text-align: center ;
-        right: 37.5%;
+        right: 27%;
         top:82px;
     }
 }
@@ -1232,5 +1232,5 @@ main.content {
 
 /* ==========================================================================
    End of file. Media queries should be the last thing here. Do not add stuff
-   below this point, or it will probably fuck everything up.
+   below this point, or it will probably mess everything up.
    ========================================================================== */

@@ -147,14 +147,24 @@ h6 {
 }
 
 a {
-    color: #4183C4;
-/*    color: #FF0000;*/
+    color: red;
     text-decoration: none;
 }
-
+a:link {
+    color: red;
+    text-decoration: none;
+}
+a:visited {
+    color: red;
+    text-decoration: none;
+}
 a:hover {
-    /*text-decoration: underline;*/
-    color: #ff0000;
+    color: grey;
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+    color: grey;
 }
 
 h1 a, h2 a, h3 a,
@@ -501,19 +511,19 @@ a.nav:active {
 }
 
 .figcaption a:link {
-    color: #4183C4;;
+    color: red;
 }
 
 .figcaption a:hover {
-    color: #ff0000;;
+    color: grey;
 }
 
 .figcaption a:visited {
-    color: #4183C4;;
+    color: red;
 }
 
 .figcaption a:active {
-    color: #ff0000;;
+    color: grey;
 }
 
 .codecaption {
@@ -528,19 +538,19 @@ a.nav:active {
 }
 
 .codecaption a:link {
-    color: #4183C4;;
+    color: red;
 }
 
 .codecaption a:hover {
-    color: #ff0000;;
+    color: grey;
 }
 
 .codecaption a:visited {
-    color: #4183C4;;
+    color: red;
 }
 
 .codecaption a:active {
-    color: #ff0000;;
+    color: grey;
 }
 
 main.content {

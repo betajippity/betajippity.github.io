@@ -111,8 +111,6 @@ h4, h5, h6 {
 h1 {
     font-size: 3rem;
     line-height: 1.2em;
-    /*letter-spacing: -2px;*/
-    text-indent: -3px;
     font-weight: 900;
     font-family: 'futura-pt', sans-serif;
 }
@@ -120,8 +118,6 @@ h1 {
 h2 {
     font-size: 2.1rem;
     line-height: 1.2em;
-    /*letter-spacing: -1px;*/
-    text-indent: -2px;
     font-weight: 400;
     font-family: 'futura-pt', sans-serif;
 }
@@ -569,7 +565,7 @@ a.nav:active {
 }
 
 main.content {
-    margin-top: -2em;
+    margin-top: -2.68em;
 }
 
 /* The details of your blog. Defined in ghost/settings/ */
@@ -586,7 +582,7 @@ main.content {
 .blog-author {
     position: absolute;
     top:61px;
-    left: 92px;
+    left: 95px;
     font-size: 30px;
     display: inline;
     font-weight: 500;
@@ -665,20 +661,23 @@ main.content {
 }
 */
 .post-title {
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
+    /* font-size: 28px; */
+	color: #4b4b4b;
+	font: 28px "futura-pt";	
     margin:0 0 0rem 0;
     min-width: 300px;
 }
 
 .post-excerpt p {
-    margin: 1.6rem 0 0 0;
+    margin: 0rem 0 0 0;
     font-size: 0.9em;
     line-height: 1.6em;
 }
 
 .post-meta {
     display: inline-block;
-    margin: 0 0 5px 0;
+    margin: 0 0 0px 0;
     font-size: 1.3rem;
     color: #999999;
 }

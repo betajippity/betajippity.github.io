@@ -214,7 +214,7 @@ I had a lot of fun taking care of all of the tiny details that are part of the s
 The dripping wet rain effect is discussed later in this post.
 
 <div class='embed-container'><iframe src="https://player.vimeo.com/video/433151006?loop=1" frameborder="0">Shipshape Art Challenge Ship Turntable</iframe></div>
-<div class="figcaption">Figure 16: Turntable of the ship showing both dry and wet variants.</div>
+<div class="figcaption"><span>Figure 16: Turntable of the ship showing both dry and wet variants.</span></div>
 
 **Shading and Texturing the Robots**
 
@@ -284,7 +284,7 @@ In the turntable, only the yellow robot has both a wet and dry variant, since al
 The green sports fan robot does have a variant with a wet right arm though, since in the final image the green sports fan robot's right arm is extended beyond the umbrella to wave at the incoming ship.
 
 <div class='embed-container'><iframe src="https://player.vimeo.com/video/433151137?loop=1" frameborder="0">Shipshape Art Challenge Robots Turntable</iframe></div>
-<div class="figcaption">Figure 24: Turntable of the robots, with all 12 robot variants.</div>
+<div class="figcaption"><span>Figure 24: Turntable of the robots, with all 12 robot variants.</span></div>
 
 **The Wet Shader**
 
@@ -356,22 +356,22 @@ The ship renders are from the same camera angles as in Figures 13, 14, and 15. d
 
 <div class='embed-container'>
 <iframe src="/content/images/2020/Jul/shipshape/comparisons/wideship_wetdrycompare_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
-<div class="figcaption">Figure 29: Wide view of the ship with (left) and without (right) the wet shader applied. For a full screen comparison, <a href="/content/images/2020/Jul/shipshape/comparisons/wideship_wetdrycompare.html">click here.</a></div>
+<div class="figcaption"><span>Figure 29: Wide view of the ship with (left) and without (right) the wet shader applied. For a full screen comparison, <a href="/content/images/2020/Jul/shipshape/comparisons/wideship_wetdrycompare.html">click here.</a></span></div>
 <p>
 
 <div class='embed-container'>
 <iframe src="/content/images/2020/Jul/shipshape/comparisons/backship_wetdrycompare_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
-<div class="figcaption">Figure 30: Back view of the ship with (left) and without (right) the wet shader applied. For a full screen comparison, <a href="/content/images/2020/Jul/shipshape/comparisons/backship_wetdrycompare.html">click here.</a></div>
+<div class="figcaption"><span>Figure 30: Back view of the ship with (left) and without (right) the wet shader applied. For a full screen comparison, <a href="/content/images/2020/Jul/shipshape/comparisons/backship_wetdrycompare.html">click here.</a></span></div>
 <p>
 
 <div class='embed-container'>
 <iframe src="/content/images/2020/Jul/shipshape/comparisons/sideship_wetdrycompare_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
-<div class="figcaption">Figure 31: Side view of the ship with (left) and without (right) the wet shader applied. For a full screen comparison, <a href="/content/images/2020/Jul/shipshape/comparisons/sideship_wetdrycompare.html">click here.</a></div>
+<div class="figcaption"><span>Figure 31: Side view of the ship with (left) and without (right) the wet shader applied. For a full screen comparison, <a href="/content/images/2020/Jul/shipshape/comparisons/sideship_wetdrycompare.html">click here.</a></span></div>
 <p>
 
 <div class='embed-container'>
 <iframe src="/content/images/2020/Jul/shipshape/comparisons/robot_wetdrycompare_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
-<div class="figcaption">Figure 32: Main yellow robot with (left) and without (right) the wet shader applied. For a full screen comparison, <a href="/content/images/2020/Jul/shipshape/comparisons/robot_wetdrycompare.html">click here.</a></div>
+<div class="figcaption"><span>Figure 32: Main yellow robot with (left) and without (right) the wet shader applied. For a full screen comparison, <a href="/content/images/2020/Jul/shipshape/comparisons/robot_wetdrycompare.html">click here.</a></span></div>
 
 <div markdown="1">
 
@@ -411,7 +411,7 @@ Here's a lookdev test render of the suitcase, with and without the wet effect ap
 
 <div class='embed-container'>
 <iframe src="/content/images/2020/Jul/shipshape/comparisons/suitcase_wetdrycompare_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
-<div class="figcaption">Figure 35: Suitcase with (left) and without (right) the wet shader applied. For a full screen comparison, <a href="/content/images/2020/Jul/shipshape/comparisons/suitcase_wetdrycompare.html">click here.</a></div>
+<div class="figcaption"><span>Figure 35: Suitcase with (left) and without (right) the wet shader applied. For a full screen comparison, <a href="/content/images/2020/Jul/shipshape/comparisons/suitcase_wetdrycompare.html">click here.</a></span></div>
 
 <div markdown="1">
 
@@ -586,7 +586,7 @@ I started this project mostly as an excuse to just have fun, but along the way I
 Here is a progression video I put together from all of the test and in-progress renders that I made throughout this entire project:
 
 <div class='embed-container'><iframe src="https://player.vimeo.com/video/433150588" frameborder="0">Shipshape Art Challenge Progression Reel</iframe></div>
-<div class="figcaption">Figure 53: Progression reel made from test and in-progress renders leading up to my final image.</div>
+<div class="figcaption"><span>Figure 53: Progression reel made from test and in-progress renders leading up to my final image.</span></div>
 
 My wife, Harmony Li, deserves an enormous amount of thanks on this project.
 First off, the final concept I went with is just as much her idea as it is mine, and throughout the entire project she provided valuable critiques and suggestions and direction.

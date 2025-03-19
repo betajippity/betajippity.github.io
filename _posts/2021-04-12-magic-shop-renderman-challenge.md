@@ -117,7 +117,7 @@ The end result instantly looked vastly better, as seen in this comparison of bef
 
 <div class='embed-container'>
 <iframe src="/content/images/2021/Apr/magicshop/comparisons/shirt_fuzznofuzzcompare_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
-<div class="figcaption">Figure 5: Shirt before (left) and after (right) XGen fuzz. For a full screen comparison, <a href="/content/images/2021/Apr/magicshop/comparisons/shirt_fuzznofuzzcompare.html">click here.</a></div>
+<div class="figcaption"><span>Figure 5: Shirt before (left) and after (right) XGen fuzz. For a full screen comparison, <a href="/content/images/2021/Apr/magicshop/comparisons/shirt_fuzznofuzzcompare.html">click here.</a></span></div>
 
 Putting fuzz geometry on the shirt actually worked well enough that I proceeded to do the same for the character's shorts and socks as well.
 For the socks especially having actual fuzz geometry really helped sell the overall look.
@@ -130,7 +130,7 @@ This effect doesn't happen when using only the fuzz lobe of PxrSurface!
 
 <div class='embed-container-square'>
 <iframe src="/content/images/2021/Apr/magicshop/comparisons/character_backlightcompare_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
-<div class="figcaption">Figure 6: Character backlit without and with fuzz. The rim lighting effect is created entirely by backlighting scattering through XGen fuzz on the character and the outfit. For a full screen comparison, <a href="/content/images/2021/Apr/magicshop/comparisons/character_backlightcompare.html">click here.</a> Click <a href="/content/images/2021/Apr/magicshop/character.003.jpg">here</a> and <a href="/content/images/2021/Apr/magicshop/character.004.jpg">here</a> to see the full 4K renders by themselves.</div>
+<div class="figcaption"><span>Figure 6: Character backlit without and with fuzz. The rim lighting effect is created entirely by backlighting scattering through XGen fuzz on the character and the outfit. For a full screen comparison, <a href="/content/images/2021/Apr/magicshop/comparisons/character_backlightcompare.html">click here.</a> Click <a href="/content/images/2021/Apr/magicshop/character.003.jpg">here</a> and <a href="/content/images/2021/Apr/magicshop/character.004.jpg">here</a> to see the full 4K renders by themselves.</span></div>
 
 I used SeExpr expressions instead of using XGen's guides/splines workflow to control all of the fuzz; the reason for using expressions was because I only needed some basic noise and overall orientation controls for the fuzz instead of detailed specific grooming.
 Of course, adding geometric fuzz to all of a character's skin and clothing does increase memory usage and render times, but not by as much as one might expect!
@@ -442,7 +442,7 @@ Note how the overall lighting is actually not too different, but there are many 
 
 <div class='embed-container'>
 <iframe src="/content/images/2021/Apr/magicshop/comparisons/beforeafterlighting_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
-<div class="figcaption">Figure 43: Before (left) and after (right) final lighting. For a full screen comparison, <a href="/content/images/2021/Apr/magicshop/comparisons/beforeafterlighting.html">click here.</a></div>
+<div class="figcaption"><span>Figure 43: Before (left) and after (right) final lighting. For a full screen comparison, <a href="/content/images/2021/Apr/magicshop/comparisons/beforeafterlighting.html">click here.</a></span></div>
 
 To help shape the lighting a bit more, I added a basic atmospheric volume pass.
 Unlike in previous RenderMan Art Challenges where I used fancy VDBs and whatnot to create complex atmospherics and volumes, for this scene I just used a simple homogeneous volume box.
@@ -474,7 +474,7 @@ At the end of the day, stuff like art simply requires practice to get better at,
 Here is a progression video I put together from all of the test and in-progress renders that I made throughout this entire project:
 
 <div class='embed-container'><iframe src="https://player.vimeo.com/video/486289496" frameborder="0">Magic Shop Art Challenge Progression Reel</iframe></div>
-<div class="figcaption">Figure 48: Progression reel made from test and in-progress renders leading up to my final image.</div>
+<div class="figcaption"><span>Figure 48: Progression reel made from test and in-progress renders leading up to my final image.</span></div>
 
 As usual with these art projects, I owe an enormous debt of gratitude to my wife, Harmony Li, both for giving invaluable feedback and suggestions (she has a much better eye than I do!), and also for putting up with me going off on another wild time-consuming art adventure.
 Also, as always, Leif Pederson from Pixar's RenderMan group provided lots of invaluable feedback, notes, and encouragement, as did everyone else in the RenderMan Art Challenge community.

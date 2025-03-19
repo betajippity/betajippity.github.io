@@ -86,7 +86,7 @@ body {
     font-weight: 300;
     font-size: 1.5rem;
     line-height: 1.3em;
-    color: #666666;
+    color: #555555;
 }
 
 ::-moz-selection {
@@ -198,7 +198,7 @@ blockquote {
     margin: 1.6em 0;
     padding: 0 0 0 1.6em;
     border-left: #888 0.2em solid;
-    color: #666666;
+    color: #555555;
     font-family: "proxima-nova", sans-serif;
     font-style: italic;
 }
@@ -502,12 +502,20 @@ a.nav:active {
 
 /* For handling custom image captions generated from figures.js*/
 .figcaption {
-    color: #666666;
-    max-width: 700px;
+    color: #555555;
+    padding-left: 15px;
+    padding-right: 15px;
     text-align: center;
     display: block;
     margin: 5px auto;
     font-size: 1.35rem;
+}
+
+.figcaption span {
+    display: inline-block;
+    /* Set this element to inline-block */
+    text-align: left;
+    /* Set text align to left */
 }
 
 .figcaption a:link {
@@ -527,14 +535,21 @@ a.nav:active {
 }
 
 .codecaption {
-    color: #666666;
-    max-width: 700px;
+    color: #555555;
+    padding-left: 15px;
+    padding-right: 15px;
     text-align: center;
     display: block;
     margin: 5px auto;
     font-size: 1.35rem;
     margin-top: -1em;
-    margin-bottom: -0.5em;
+}
+
+.codecaption span {
+    display: inline-block;
+    /* Set this element to inline-block */
+    text-align: left;
+    /* Set text align to left */
 }
 
 .codecaption a:link {
@@ -878,7 +893,7 @@ main.content {
     border-top: #EEEEEE 1px solid;
     font-size: 1.3rem;
     line-height: 1.7em;
-    color: #777777;
+    color: #555555;
     text-align: center;
 }
 

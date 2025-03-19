@@ -155,7 +155,7 @@ To make an actually executable binary though, I had to wrap the example `addAtom
         return 0;
     }
 
-<div class="codecaption">Listing 1: Example <code class="language-plaintext highlighter-rouge">addAtomicFloat()</code> implementation and a very simple <code class="language-plaintext highlighter-rouge">main()</code> function to make a executable program. The <code class="language-plaintext highlighter-rouge">addAtomicFloat()</code> implementation is the same one from <a href="https://blog.yiningkarlli.com/2021/05/porting-takua-to-arm-pt1.html#listing2">Listing 2 in my previous "Porting Takua Renderer to 64-bit ARM- Part 1</a>" post.</div>
+<div class="codecaption"><span>Listing 1: Example <code class="language-plaintext highlighter-rouge">addAtomicFloat()</code> implementation and a very simple <code class="language-plaintext highlighter-rouge">main()</code> function to make a executable program. The <code class="language-plaintext highlighter-rouge">addAtomicFloat()</code> implementation is the same one from <a href="https://blog.yiningkarlli.com/2021/05/porting-takua-to-arm-pt1.html#listing2">Listing 2 in my previous "Porting Takua Renderer to 64-bit ARM- Part 1</a>" post.</span></div>
 
 Modern versions of macOS's Xcode Command Line Tools helpfully come with both otool and with [LLVM's version of objdump](https://llvm.org/docs/CommandGuide/llvm-objdump.html), both of which can be used to disassembly Mach-O binaries.
 For this exploration, I used otool to disassemble arm64 binaries and objdump to disassembly x86-64 binaries.
@@ -195,7 +195,7 @@ For readability, I have also replaced the offset for the `jne` instruction with 
             ret                                    # return control to previous stack frame address
             nop
 
-<div class="codecaption">Listing 2: The <code class="language-plaintext highlighter-rouge">addAtomicFloat()</code> function from Listing 1 compiled to x86-64 using <code class="language-plaintext highligher-rouge">clang++ -O3</code> and disassembled using <code class="language-plaintext highligher-rouge">objdump -disassemble -x86-asm-syntax=intel</code>, with some minor tweaks for formatting and readability. My annotations are also included as comments.</div>
+<div class="codecaption"><span>Listing 2: The <code class="language-plaintext highlighter-rouge">addAtomicFloat()</code> function from Listing 1 compiled to x86-64 using <code class="language-plaintext highligher-rouge">clang++ -O3</code> and disassembled using <code class="language-plaintext highligher-rouge">objdump -disassemble -x86-asm-syntax=intel</code>, with some minor tweaks for formatting and readability. My annotations are also included as comments.</span></div>
 
 If we compare the above code with <a href="https://blog.yiningkarlli.com/2021/05/porting-takua-to-arm-pt1.html#listing5">Listing 5 in my previous post</a>, we can see that the above code matches what we got from Clang in Godbolt Compiler Explorer.
 The only difference is the stack pointer pushing and popping code that happens in the beginning and end to make this function usable in a larger program; the core functionality in lines 8 through 18 of the above code matches the output from Clang in Godbolt Compiler Explorer exactly.
@@ -225,7 +225,7 @@ I disassembled the arm64 binary using `otool -Vt`; here's the relevant `addAtomi
             mov.16b   v0, v1            // return f0 value from ldar
             ret
 
-<div class="codecaption">Listing 3: The <code class="language-plaintext highlighter-rouge">addAtomicFloat()</code> function from Listing 1 compiled to arm64 using <code class="language-plaintext highligher-rouge">clang++ -O3</code> and disassembled using <code class="language-plaintext highligher-rouge">otool -Vt</code>, with some minor tweaks for formatting and readability. <br>My annotations are also included as comments.</div>
+<div class="codecaption"><span>Listing 3: The <code class="language-plaintext highlighter-rouge">addAtomicFloat()</code> function from Listing 1 compiled to arm64 using <code class="language-plaintext highligher-rouge">clang++ -O3</code> and disassembled using <code class="language-plaintext highligher-rouge">otool -Vt</code>, with some minor tweaks for formatting and readability. <br>My annotations are also included as comments.</span></div>
 
 Note the use of the ARMv8.1-A `casal` instruction.
 Apple's version of Clang defaults to using ARMv8.1-A instructions when compiling for macOS because the M1 chip implements ARMv8.4-A, and since the M1 chip is the first arm64 processor that macOS supports, that means macOS can safely assume a more advanced minimum target instruction set.
@@ -271,7 +271,7 @@ In my annotations, I'll use `x` for both `x` and `w` registers, and I'll use `v`
     .LBB0_2
             bl       0x4310                   // branch (with link) to address 0x4310
 
-<div class="codecaption">Listing 4: The x86-64 assembly from Listing 2 translated to arm64 by Rosetta 2's ahead-of-time translator. Disassembled using <code class="language-plaintext highligher-rouge">otool -Vt</code>, with some minor tweaks for formatting and readability. My annotations are also included as comments.</div>
+<div class="codecaption"><span>Listing 4: The x86-64 assembly from Listing 2 translated to arm64 by Rosetta 2's ahead-of-time translator. Disassembled using <code class="language-plaintext highligher-rouge">otool -Vt</code>, with some minor tweaks for formatting and readability. My annotations are also included as comments.</span></div>
 
 In some ways, we can see similarities between the Rosetta 2 arm64 assembly in Listing 4 and the natively compiled arm64 assembly in Listing 3, but there are also a lot of things in the Rosetta 2 arm64 assembly that look very different from the natively compiled arm64 assembly.
 The core functionality in lines 9 through 21 of Listing 4 bear a strong resemblance to the core functionality in lines 5 through 19 of of Listing 3; both versions use a `fadd`, followed by a `casal` instruction to implement the atomic comparison, then follow with a `cmp` to compare the expected and actual outcomes, and then have some logic about whether or not to jump back to the top of the loop.
@@ -423,7 +423,7 @@ Remember, to use this program, you must have compiled and installed the TSOEnabl
         std::cout << sharedValue << std::endl;
     }
 
-<div class="codecaption">Listing 5: Jeff Preshing's weakly ordered atomic integer test program, modified to support using the M1 processor's hardware TSO mode.</div>
+<div class="codecaption"><span>Listing 5: Jeff Preshing's weakly ordered atomic integer test program, modified to support using the M1 processor's hardware TSO mode.</span></div>
 
 Running my test program indicated that the kernel extension was working properly!
 In the screenshot below, I check that the Mac I'm running on has an arm64 processor, then I compile the test program and check that the output is a native arm64 binary, and then I run the test program four times each with and without hardware TSO mode enabled.
@@ -459,7 +459,7 @@ For the sake of completeness, here is how to check if a process is running under
         return -1;
     }
 
-<div class="codecaption">Listing 6: Example code from Apple on how to check if the current process is running through Rosetta 2.</div>
+<div class="codecaption"><span>Listing 6: Example code from Apple on how to check if the current process is running through Rosetta 2.</span></div>
 
 In Figure 5, I build the test program from Listing 5 as an x86-64 binary, with the Rosetta 2 detection function from Listing 6 added in.
 I then check that the system architecture is arm64 and that the compiled program is x86-64, and run the test program with TSO disabled from inside of Rosetta 2.

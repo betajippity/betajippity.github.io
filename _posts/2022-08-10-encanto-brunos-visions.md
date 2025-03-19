@@ -60,7 +60,8 @@ Bruno's visions in Encanto are every bit a case where the artistic vision challe
     <source src="{{site.url}}/content/images/2022/Aug/encanto-brunos-visions/visions_loop.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
-<div class="figcaption">A short GIF showing two examples of the final effect. For many more examples, go <a href="https://www.disneyplus.com/movies/encanto/33q7DY1rtHQH">watch Encanto on Disney+</a>!</div>
+<div class="figcaption"><span>A short GIF showing two examples of the final effect. For many more examples, go <a href="https://www.disneyplus.com/movies/encanto/33q7DY1rtHQH">watch Encanto on Disney+</a>!</span></div>
+
 
 **References**
 

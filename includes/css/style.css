@@ -609,7 +609,6 @@ main.content {
 }
 
 .blog-title-inner {
-
     position: relative;
     width: 80%;
     max-width: 900px;
@@ -639,6 +638,31 @@ main.content {
     border-bottom: #EEEEEE 1px solid;
     word-break: break-word;
     hyphens: auto;
+}
+
+.post:last-child {
+    border-bottom: #EEEEEE 0px solid;
+}
+
+.nav-rss {
+    font-family: 'icons';
+    font-size: 18px;
+    padding-left: 5px;
+    vertical-align: 1px;
+}
+
+.nav-rss:before {
+    content: "\e001";
+}
+
+.nav-rss-footer {
+    font-family: 'icons';
+    font-size: 14px;
+    padding-left: 3px;
+}
+
+.nav-rss-footer:before {
+    content: "\e001";
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
@@ -842,12 +866,12 @@ main.content {
     max-width: 700px;
     margin: 4rem auto;
     font-size: 1.3rem;
-    color: #999999;
+    color: #888888;
     text-align: center;
 }
 
 .pagination a {
-    color: #999999;
+    color: #888888;
 }
 
 /* Push the previous/next links out to the left/right */
@@ -855,10 +879,7 @@ main.content {
 .newer-posts {
     position: absolute;
     display: inline-block;
-    padding: 0 15px;
-    border: #EEEEEE 2px solid;
     text-decoration: none;
-    border-radius: 30px;
     transition: border ease 0.3s;
 }
 
@@ -868,7 +889,6 @@ main.content {
 
 .page-number {
     display: inline-block;
-    padding: 2px 0;
 }
 
 .newer-posts {
@@ -877,7 +897,7 @@ main.content {
 
 .older-posts:hover,
 .newer-posts:hover {
-    border-color: #999999;
+    color: #ff0000;
 }
 
 
@@ -886,24 +906,30 @@ main.content {
    ========================================================================== */
 
 .site-footer {
+    font-family: 'futura-pt', sans-serif;
     position: relative;
     margin: 2rem auto 0 auto;
-    padding: 4rem 0;
-    border-top: #EEEEEE 1px solid;
-    font-size: 1.3rem;
+    padding: 3rem 0;
+    font-size: 1.7rem;
     line-height: 1.7em;
-    color: #555555;
-    text-align: center;
+    color: #888888;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 900px;
 }
 
-/*.site-footer a {
-    color: #BBC7CC;
-    text-decoration: underline;
+.site-footer a {
+    color: #888888;
 }
 
 .site-footer a:hover {
-    color: #50585D;
-}*/
+    color: #FF0000;
+}
+
+.copyright {
+    text-transform: uppercase;
+}
 
 .poweredby .icon-ghost {
     font-weight: 700;
@@ -1120,6 +1146,7 @@ main.content {
         font-weight: 500;
         text-transform:uppercase;
         z-index: 1100 ;
+        right: 2%
     }
 
     .blog-author {
@@ -1129,7 +1156,7 @@ main.content {
         font-weight: 500;
         text-transform:uppercase;
         z-index: 1100 ;
-        left: 16%
+        left: 14%
     }
 
     .blog-nav {
@@ -1137,7 +1164,7 @@ main.content {
         font-size: 1em;
         font-weight: 300;
         text-align: center ;
-        right: 27%;
+        right: 18.5%;
         top:82px;
     }
 }

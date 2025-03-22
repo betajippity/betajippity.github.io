@@ -573,9 +573,9 @@ main.content {
 
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
+	font: 60px "futura-pt";
     position: absolute;
-    top:4px;
-    font-size: 60px;
+    top:1px;
     display: inline;
     font-weight: 500;
     text-transform:uppercase;
@@ -583,8 +583,9 @@ main.content {
 }
 
 .blog-author {
+	font: 30px "futura-pt";
     position: absolute;
-    top:61px;
+    top:60px;
     left: 95px;
     font-size: 30px;
     display: inline;
@@ -594,11 +595,11 @@ main.content {
 }
 
 .blog-nav {
-    font-size: 20px;
+	font: 20px "futura-pt";
     font-weight: 300;
     text-align: right ;
     right: 0px;
-    top:70px;
+    top:69px;
     position: absolute;
 }
 
@@ -1073,7 +1074,7 @@ main.content {
 
     .blog-title {
         position: absolute;
-        top:3px;
+        top:1px;
         font-size: 50px;
         display: inline;
         font-weight: 500;
@@ -1083,7 +1084,7 @@ main.content {
 
     .blog-author {
         position: absolute;
-        top: 50px;
+        top: 48px;
         left: 78px;
         font-size: 25px;
         display: inline;
@@ -1097,7 +1098,7 @@ main.content {
         font-weight: 300;
         text-align: right ;
         right: 0px;
-        top:58px;
+        top:57px;
         position: absolute;
     }
 }
@@ -1144,31 +1145,34 @@ main.content {
     .blog-title {
         margin: auto;
         position: relative;
-        font-size: 2.75em;
+        font-size: 40px;
         display: table;
         font-weight: 500;
+        top:1px;
         text-transform:uppercase;
         z-index: 1100 ;
-        right: 2%
+        right: 1.2%
     }
 
     .blog-author {
         margin: auto;
-        top: 45px;
-        font-size: 1.75em;
+        top: 43px;
+        font-size: 26px;
         font-weight: 500;
         text-transform:uppercase;
         z-index: 1100 ;
-        left: 14%
+        left: 15%
     }
 
     .blog-nav {
         margin: auto;
-        font-size: 1em;
+        position: relative;
+        font-size: 15px;
         font-weight: 300;
         text-align: center ;
-        right: 18.5%;
-        top:82px;
+        display: table;
+        top: 28px;
+        right: 2px;
     }
 }
 
@@ -1269,7 +1273,6 @@ main.content {
 
     .site-footer {
         margin-top: 6rem;
-        font-size: 1.1rem;
     }
 
 }

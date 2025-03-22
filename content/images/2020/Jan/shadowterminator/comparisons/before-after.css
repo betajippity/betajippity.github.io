@@ -75,3 +75,7 @@ SOFTWARE. */
     background: rgba(0,0,0,.6);
     border-radius: 0%;
 }
+
+body {
+    display: block;
+}

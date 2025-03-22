@@ -76,7 +76,7 @@
 html {
     height: 100%;
     max-height: 100%;
-    font-size: 62.5%;
+    /* font-size: 62.5%; */
 }
 
 body {
@@ -84,8 +84,8 @@ body {
     max-height: 100%;
     font-family: "proxima-nova", sans-serif;
     font-weight: 300;
-    font-size: 1.5rem;
-    line-height: 1.3em;
+    font-size: 1rem;
+    line-height: 1.35em;
     color: #555555;
     display: flex;
     flex-direction: column;
@@ -111,36 +111,36 @@ h4, h5, h6 {
 }
 
 h1 {
-    font-size: 3rem;
-    line-height: 1.2em;
+    font-size: 1.875rem;
+    line-height: 0.75em;
     font-weight: 900;
     font-family: 'futura-pt', sans-serif;
 }
 
 h2 {
-    font-size: 2.1rem;
-    line-height: 1.2em;
+    font-size: 1.3rem;
+    line-height: 0.75em;
     font-weight: 400;
     font-family: 'futura-pt', sans-serif;
 }
 
 h3 {
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-weight: 400;
 }
 
 h4 {
-    font-size: 1.4rem;
+    font-size: 0.875rem;
     font-weight: 400;
 }
 
 h5 {
-    font-size: 1.2rem;
+    font-size: 0.75rem;
     font-weight: 400;
 }
 
 h6 {
-    font-size: 1.1rem;
+    font-size: 0.6875rem;
     font-weight: 400;
 }
 
@@ -506,7 +506,7 @@ a.nav:active {
     text-align: center;
     display: block;
     margin: 5px auto;
-    font-size: 1.35rem;
+    font-size: 0.9rem;
 }
 
 .figcaption span {
@@ -539,7 +539,7 @@ a.nav:active {
     text-align: center;
     display: block;
     margin: 5px auto;
-    font-size: 1.35rem;
+    font-size: 0.9rem;
     margin-top: -1em;
 }
 
@@ -567,7 +567,7 @@ a.nav:active {
 }
 
 main.content {
-    margin-top: -5.35em;
+    margin-top: -8.75em;
     flex: 1;
 }
 
@@ -706,7 +706,7 @@ main.content {
 .post-meta {
     display: inline-block;
     margin: 0 0 0px 0;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     color: #999999;
 }
 
@@ -849,7 +849,7 @@ main.content {
 .archive time{
         display: inline-block;
     margin: 0 0 5px 0;
-    font-size: 1.3rem;
+    font-size: 0.815rem;
     color: #999999;
 }
 
@@ -869,7 +869,7 @@ main.content {
     width: 80%;
     max-width: 700px;
     margin: 4rem auto;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #888888;
     text-align: center;
 }

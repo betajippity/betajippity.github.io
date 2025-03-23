@@ -1,4 +1,16 @@
 /* ==========================================================================
+   Einheitsgrafik Theme for blog.yiningkarlli.com
+   Jekyll Version
+   by Yining Karl Li
+
+   Lineage:
+   The Jekyll version of Einheitsgrafik is an extensively reworked version
+   of my blog's older codeandvisuals Jekyll theme, which was ported from a
+   previous Ghost version of codeandvisuals, which was a heavily modified
+   version of N-Coded, which was a fork of Casper.
+   ========================================================================== */
+
+/* ==========================================================================
    Table of Contents
    ========================================================================== */
 
@@ -669,28 +681,7 @@ main.content {
     content: "\e001";
 }
 
-/* Add a little circle in the middle of the border-bottom on our .post
-   just for the lolz and stylepoints. */
-/*.post:after {
-    display: block;
-    content: "";
-    width: 7px;
-    height: 7px;
-    border: #E7EEF2 1px solid;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    margin-left: -5px;
-    background: #fff;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-    box-shadow: #fff 0 0 0 5px;
-}
-*/
 .post-title {
-    /* font-size: 2.5rem; */
-    /* font-size: 28px; */
 	color: #4b4b4b;
 	font: 28px "futura-pt";	
     margin:0 0 0rem 0;
@@ -1198,36 +1189,7 @@ main.content {
         width:auto;
         margin-left: 16px;
         margin-right: 16px;
-        /*font-size: 0.8em;
-        line-height: 1.6em;*/
     }
-
-    /*#site-head {
-        padding: 10% 0;
-    }
-
-    .blog-title {
-        font-size: 3rem;
-    }
-
-    .blog-description {
-        font-size: 1.5rem;
-    }
-
-
-    h1, h2 {
-        font-size: 3rem;
-        line-height: 1.1em;
-        letter-spacing: -1px;
-    }
-
-    h3 {
-        font-size: 2.8rem;
-    }
-
-    h4 {
-        font-size: 2.3rem;
-    }*/
 
     .post-template .post {
         padding-bottom: 0;
@@ -1236,10 +1198,6 @@ main.content {
     .post-template .post-header {
         padding: 30px 0;
     }
-
-    /*.post-meta {
-        font-size: 1.3rem;
-    }*/
 
     .post-footer {
         padding: 2rem 0;

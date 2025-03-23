@@ -11,6 +11,8 @@ Going forward, I'll be embedding lossy compressed JPG images in blog posts, but 
 
 ---
 
-**Addendum 2016-04-08**: Now that I am doing some renders in 4K resolution (3840x2160), it's time for an addendum to this policy.
+## Addendum 2016-04-08
+
+Now that I am doing some renders in 4K resolution (3840x2160), it's time for an addendum to this policy.
 I won't be uploading full resolution lossless PNGs for 4K images, due to the overwhelming file size (>30MB for a single image, which means a post with just a handful of 4K images can easily add up to hundreds of MB).
 Instead, for 4K renders, I will embed a downsampled 1080P JPG image in the post, and link through to a 4K JPG compressed to balance image quality and file size.

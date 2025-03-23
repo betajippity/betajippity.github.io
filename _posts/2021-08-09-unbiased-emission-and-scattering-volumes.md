@@ -61,7 +61,7 @@ I owe Wayne a huge debt of gratitude for letting me be a small part of this proj
 <iframe src="/content/images/2021/Aug/unbiased-emission-and-scattering-volumes/comparisons/beforeaftercomparison_crop_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>A frame from Raya and the Last Dragon without our techniques (left), and with both our scattering and emission sampling applied (right). Both images are rendered using 32 spp per volume pass; surface passes are denoised and composited with non-denoised volume passes to isolate noise from volumes. A video version of this comparison is included in our talk's supplementary materials. For a larger still comparison, <a href="/content/images/2021/Aug/unbiased-emission-and-scattering-volumes/comparisons/beforeaftercomparison_crop.html">click here.</a></span></div>
 
-**References**
+## References
 
 Marc Bryant, Ryan DeYoung, Wei-Feng Wayne Huang, Joe Longson, and Noel Villegas. 2021. [The Atmosphere of Raya and the Last Dragon](https://doi.org/10.1145/3450623.3464676). In _ACM SIGGRAPH 2021 Talks_. 51:1-51:2.
 

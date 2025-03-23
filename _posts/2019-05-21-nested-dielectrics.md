@@ -21,7 +21,7 @@ Conversely, Figure 1 shows a correct liquid-glass interface without a bright rin
 
 [![Figure 2: The same scene as in Figure 1, rendered using Takua's old interface tracking system. A number of bizarre physically inaccurate problems are present.]({{site.url}}/content/images/2019/May/preview/nested_ice_old.0.jpg)]({{site.url}}/content/images/2019/May/nested_ice_old.0.png)
 
-**Problems with only Interface Tracking**
+## Problems with only Interface Tracking
 
 So what exactly is wrong with using only interface tracking without priorities?
 First, let's quickly summarize how my old interface tracking implementation worked.
@@ -98,7 +98,7 @@ One solution that immediately comes to mind is to simply consider whatever surfa
 This produces an inconsistent view of the world across different rays.
 Instead, a better solution is provided by priority-based nested dielectrics [[Schmidt and Budge 2002]](https://www.tandfonline.com/doi/abs/10.1080/10867651.2002.10487555).
 
-**Priority-Based Nested Dielectrics**
+## Priority-Based Nested Dielectrics
 
 Priority-based nested dielectrics work by assigning priority values to geometry, with the priority values determining which piece of geometry "wins" when a ray is in a region of space where multiple pieces of geometry overlap.
 A priority value is just a single number assigned as an attribute to a piece of geometry or to a shader; the convention established by the paper is that lower numbers indicate higher priority.
@@ -237,7 +237,7 @@ To render them correctly, I applied a shader with glossy refraction to the crack
 
 [![Figure 8: A different camera angle of the scene from Figure 7. The scene is from Benedikt Bitterli's rendering resources page.]({{site.url}}/content/images/2019/May/preview/waterpour.cam1.0.jpg)]({{site.url}}/content/images/2019/May/waterpour.cam1.0.png)
 
-**References**
+## References
 
 Benedikt Bitterli. 2016. [Rendering Resources](https://benedikt-bitterli.me/resources/). Retrieved from [https://benedikt-bitterli.me/resources/](https://benedikt-bitterli.me/resources/).
 
@@ -245,7 +245,9 @@ Jan Novák, Andrew Selle and Wojciech Jarosz. 2014. [Residual Ratio Tracking for
 
 Charles M. Schmidt and Brian Budge. 2002. [Simple Nested Dielectrics in Ray Traced Images](https://www.tandfonline.com/doi/abs/10.1080/10867651.2002.10487555). _Journal of Graphics Tools_. 7, 2 (2002), 1–8.
 
-**Some Blog Update Notes**
+---
+
+## Some Blog Update Notes
 
 For the past few years, my blog posts covering personal work have trended towards gignormous epic articles tackling huge subjects published only once or twice a year, such as with the [bidirectional mipmapping post](https://blog.yiningkarlli.com/2018/10/bidirectional-mipmap.html) and its promised but still unfinished part 2.
 Unfortunately, I'm not the fastest writer when working on huge posts, since writing those posts often involves significant learning and multiple iterations of implementation and testing on my part.

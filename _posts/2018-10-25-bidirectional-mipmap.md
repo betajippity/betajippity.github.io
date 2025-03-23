@@ -18,7 +18,7 @@ The scene I'll use as an example in this post is a custom recreation of a forest
 
 [![Figure 1: A forest scene in the morning, rendered using Takua Renderer. 6 GB of textures on disk accessed using a 1 GB in-memory texture cache.]({{site.url}}/content/images/2018/Oct/preview/forest.cam0.0.jpg)]({{site.url}}/content/images/2018/Oct/forest.cam0.0.jpg)
 
-**Intro: Texture Caches and Mipmaps**
+## Intro: Texture Caches and Mipmaps
 
 Texture caching is typically coupled with some form of a tiled, mipmapped [[Williams 1983]](https://dl.acm.org/citation.cfm?id=801126) texture system; the texture cache holds specific tiles of an image that were accessed, as opposed to an entire texture.
 These tiles are typically lazy-loaded on demand into a cache [[Peachey 1990]](https://graphics.pixar.com/library/TOD/), which means the renderer only needs to pay the memory storage cost for only parts of a texture that the renderer actually accesses.
@@ -54,7 +54,7 @@ Interestingly, the Moonray team at Dreamworks Animation arrived at more or less 
 As a result, the number of samples required to resolve geometric aliasing should be more than enough to also resolve any texture aliasing.
 The Moonray team found that this approach works well enough to be their default mode in production.
 
-**Mipmap Level Selection and Ray Differentials**
+## Mipmap Level Selection and Ray Differentials
 
 The trickiest part of using mipmapped textures is figuring out what mipmap level to sample at any given point.
 Since the goal is to find a mipmap level with a frequency detail as close to the texture sampling rate as possible, we need to have a sense of what the texture sampling rate at a given point in space relative to the camera will be.
@@ -221,7 +221,7 @@ Hyperion [[Burley et al. 2018]](https://dl.acm.org/citation.cfm?id=3182159) uses
 
 A brief side note: being able to calculate the differential for surface normals with respect to screen space is useful for bump mapping, among other things, and the calculation is directly analogous to the pseudocode above for calculateDifferentialSurfaceForTriangle() and calculateScreenSpaceDifferential(), just with surface normals substituted in for surface positions.
 
-**Ray Differentials and Path Tracing**
+## Ray Differentials and Path Tracing
 
 We now know how to calculate filter footprints using ray differentials for camera rays, which is great, but what about secondary rays?
 Without ray differentials for secondary rays, path tracing texture access behavior degrades severely, since secondary rays have to fall back to point sampling textures at the lowest mip level.
@@ -263,7 +263,7 @@ Weta's Manuka has a unified roughness estimation system built into the shading s
 Generally, roughness driven heuristics seem to work reasonably well in production, and the actual heuristics don't actually have to be too complicated!
 In an experimental branch of PBRT, Matt Pharr found that a simple heuristic that uses a ray differential covering roughly 1/25th of the hemisphere for diffuse events and 1/100th of the hemisphere for glossy events generally worked reasonably well [[Pharr 2017]](https://www.pbrt.org/texcache.pdf).
 
-**Ray Differentials and Bidirectional Techniques**
+## Ray Differentials and Bidirectional Techniques
 
 So far everything we've discussed has been for unidirectional path tracing that starts from the camera.
 What about ray differentials and mip level selection for paths starting from a light, and by extension, for bidirectional path tracing techniques?
@@ -283,7 +283,7 @@ Currently, only a handful of production renderers have extensive support for bid
 Unfortunately, this means bidirectional techniques must rely on point sampling the lowest mip level, which defeats the whole point of mipmapping and destroys texture caching performance.
 The Manuka team alludes to using ray differentials for photon map gather widths in VCM and notes that these ray differentials are implemented as part of their manifold next event estimation system [[Fascione et al. 2018]](https://dl.acm.org/citation.cfm?id=3182161), but there isn't enough detail in their paper to be able to figure out how this actually works.
 
-**Camera-Based Mipmap Level Selection**
+## Camera-Based Mipmap Level Selection
 
 Takua has implementations of standard bidirectional path tracing, progressive photon mapping, and VCM, and I wanted mipmapping to work with all integrator types in Takua.
 I'm interested in using Takua to render scenes with very high complexity levels using advanced (often bidirectional) light transport algorithms, but reaching production levels of shading complexity without a mipmapped texture cache simply is not possible without crazy amounts of memory (where crazy is defined as in the range of dozens to hundreds of GB of textures or more).
@@ -339,7 +339,7 @@ As a result, Takua is able to sidestep the light path ray differential problem i
 There are some particular implementation details that are slightly complicated by Takua having support for multiple uv sets per mesh, but I'll write about multiple uv sets in a later post.
 Also, there is one notable failure scenario, which I'll discuss more in the results section.
 
-**Results**
+## Results
 
 So how well does camera-based mipmap level selection work compared to a more standard approach based on path differentials or ray widths from the incident ray?
 Typically in a production renderer, mipmaps work in conjunction with tiled textures, where tiles are a fixed size (unless a tile is in a mipmap level with a total resolution smaller than the tile resolution).
@@ -415,7 +415,7 @@ While Takua currently gets by with just point sampling, filtering becomes much m
 In an upcoming post, I'm aiming to write about how Takua's texture caching system works in conjunction with the mipmapping system described in this post.
 As mentioned earlier, I'm also planning a (hopefully) short-ish post about supporting multiple uv sets, and how that impacts a mipmapping and texture caching system.
 
-**Additional Renders**
+## Additional Renders
 
 Finally, since this has been a very text-heavy post, here are some bonus renders of the same forest scene under different lighting conditions.
 When I was setting up this scene for Takua, I tried a number of different lighting conditions and settled on the one in Figure 1 for the main render, but some of the alternatives were interesting too.
@@ -429,7 +429,7 @@ In a future post, I'll show a bunch of interesting renders of this scene from di
 
 [![Figure 9: The forest at sunset.]({{site.url}}/content/images/2018/Oct/preview/forest_sunset.0.jpg)]({{site.url}}/content/images/2018/Oct/forest_sunset.0.jpg)
 
-**References**
+## References
 
 John Amanatides. 1984. [Ray Tracing with Cones](https://dl.acm.org/citation.cfm?id=808589). _Computer Graphics (Proceedings of SIGGRAPH)_ 18, 3 (1984), 129-135.
 

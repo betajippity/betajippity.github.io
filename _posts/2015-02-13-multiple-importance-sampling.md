@@ -45,7 +45,9 @@ Later on, we'll discuss MIS beyond bidirectional pathtracing. In fact, MIS is th
 
 ---
 
-**Addendum 2018-01-12**: A reader noticed some brightness inconsistencies in the original versions of Figures 2 and 3, which came from bugs in Takua's light sampling code without MIS at the time.
+## Addendum 2018-01-12
+
+A reader noticed some brightness inconsistencies in the original versions of Figures 2 and 3, which came from bugs in Takua's light sampling code without MIS at the time.
 I have replaced the original versions of Figures 1, 2, 3, and 4 with new, correct versions rendered using the current version of Takua as of the time of writing for this addendum.
 
 Because of how much noise there is in Figures 2 and 3, seeing that they converge to the reference image might be slightly harder.

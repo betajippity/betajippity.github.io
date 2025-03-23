@@ -18,7 +18,7 @@ In the second part, I'll write about porting to arm64-based Apple Silicon Macs a
 
 <div id="motivation"></div>
 
-**Motivation**
+## Motivation
 
 So first, a bit of a preamble: why port to arm64 at all?
 Today, basically most, if not all, of the animation/VFX industry renders on x86-64 machines (and a vast majority of those machines are likely running Linux), so pretty much all contemporary production rendering development happens on x86-64.
@@ -52,7 +52,7 @@ With Apple's in-progress shift to arm64-based Apple Silicon Macs, we may already
 I can't speak for any animation or VFX studio in particular; everything I have written here is purely personal opinion and personal conjecture, but I'd like to be ready in the event that a move to arm64 becomes something we have to face as an industry, and what better way is there to prepare than to try with my own hobby renderer first!
 Also, for several years now I've thought that Apple eventually moving Macs to arm64 was obvious given the progress the A-series Apple chips were making, and since macOS is my primary personal daily use platform, I figured I'd have to port Takua to arm64 eventually anyway.
 
-**Porting to arm64 Linux**
+## Porting to arm64 Linux
 
 [![Figure 1: Takua Renderer running on arm64 Fedora 32, on a Raspberry Pi 4B.]({{site.url}}/content/images/2021/May/takua-on-arm-pt1/takua_fedora_arm64.jpg)]({{site.url}}/content/images/2021/May/takua-on-arm-pt1/takua_fedora_arm64.jpg)
 
@@ -87,7 +87,7 @@ However, getting code to _build_ is a completely different question from getting
 The first test renders I did with Takua on arm64 Fedora looked fine to my eye, but when I diff'd them against reference images rendered on x86-64, I found some subtle differences; the source of these differences took me a good amount of digging to understand!
 Chasing this problem down led down some interesting rabbit holes exploring important differences between x86-64 and arm64 that need to be considered when porting code between the two platforms; just because code is written in portable C++ does not necessarily mean that it is always actually as portable as one might think!
 
-**Floating Point Consistency (or lack thereof) on Different Systems**
+## Floating Point Consistency (or lack thereof) on Different Systems
 
 Takua has two different types of image comparison based regression tests: the first type of test renders out to high samples-per-pixel numbers and does comparisons with near-converged images, while the second type of test renders out and does comparisons using a single sample-per-pixel.
 The reason for these two different types of tests is because of how difficult getting floating point calculations to match across different compilers / platforms / processors is.
@@ -213,7 +213,7 @@ Eventually maybe I'll get around to putting more work into trying to get Takua R
 Floating point calculations accounted for most of the differences I was finding when comparing renders on x86-64 versus renders on arm64, but only most.
 The remaining source of differences turned out... to be an actual bug!
 
-**Weak Memory Ordering in arm64 and Atomic Bugs in Takua**
+## Weak Memory Ordering in arm64 and Atomic Bugs in Takua
 
 Multithreaded programming with atomics and locks has a reputation for being one of the relatively more challenging skills for programmers to master, and for good reason.
 Since different processor architectures often have different semantics and guarantees and rules around multithreading-related things like memory reordering, porting between different architectures is often a great way to expose subtle multithreading bugs.
@@ -382,7 +382,7 @@ The takeaway is that when writing multithreaded code that needs to be portable a
 Atomic code often can be written more sloppily on x86-64 than on arm64 and still have a good chance of working, whereas arm64's weak memory model means there's much less room for being sloppy.
 If you want a good way to smoke out potential bugs in your lock-free atomic code, porting to arm64 is a good way to find out!
 
-**A Deep Dive on x86-64 versus arm64 Through the Lens of Compiling `std::atomic::compare_exchange_weak()`**
+## A Deep Dive on x86-64 versus arm64 Through the Lens of Compiling `std::atomic::compare_exchange_weak()`
 
 While I was looking for the source of the memory reordering bug, I found a separate interesting bug in Takua's atomic framebuffer... or at least, I thought it was a bug.
 The thing I found turned out to not be a bug at all in the end, but at the time I thought that there was a bug in the form of a race condition in an atomic compare-and-exchange loop.
@@ -825,7 +825,7 @@ The `-moutline-atomics` flag tells the compiler to generate a runtime helper fun
 This runtime check is cached to make subsequent calls to the helper function faster.
 Using this flag means that if a future Raspberry Pi 5 or something comes out hopefully with support for something newer than ARMv8.0-A, Takua should be able to automatically take advantage of faster single-instruction atomics without me having to reconfigure Takua's builds per processor.
 
-**Performance Testing**
+## Performance Testing
 
 So, now that I have Takua up and running on arm64 on Linux, how does it actually perform?
 Here are some comparisons, although there are some important caveats.
@@ -927,7 +927,7 @@ The even wilder thing is: the M1 is likely the slowest desktop arm64 chip that A
 Intel and (especially) AMD aren't sitting still in the x86-64 space either though.
 The next few years are going to be very interesting; no matter what happens, on x86-64 or on arm64, Takua Renderer is now ready to be there!
 
-**Conclusion to Part 1**
+## Conclusion to Part 1
 
 Through the process of porting to arm64 on Linux, I learned a lot about the arm64 architecture and how it differs from x86-64, and I also found a couple of good reminders about topics like memory ordering and how floating point works.
 Originally I thought that my post on porting Takua to arm64 would be a nice, short, and fast to write, but instead here we are some 17,000 words later and I have not even gotten to porting Takua to arm64 on macOS and Apple Silicon yet!
@@ -935,7 +935,7 @@ So, I think we will stop here for now and save the rest for an upcoming Part 2.
 In Part 2, I'll write about the process to port to arm64, about how to create Universal Binaries, and examine Apple's Rosetta 2 system for running x86-64 binaries on arm64.
 Also, in Part 2 we'll examine how Embree works on arm64 and compare arm64's NEON vector extensions with x86-64's SSE vector extensions, and we'll finish with some additional miscellaneous differences between x86-64 and arm64 that need to be considered when writing C++ code for both architectures.
 
-**Acknowledgements**
+## Acknowledgements
 
 Thanks so much to [Mark Lee](http://rgba32.blogspot.com) and [Wei-Feng Wayne Huang](http://rendering-memo.blogspot.com) for puzzling through some of the `std::compare_exchange_weak()` stuff with me.
 Thanks a ton to [Josh Filstrup](https://twitter.com/superfunc) for proofreading and giving feedback and suggestions on this post pre-release!
@@ -943,7 +943,7 @@ Josh was the one who told me about the [Herbie](https://herbie.uwplse.org) tool 
 Also Josh pointed out SuperH as an example of a variable width RISC architecture, which of course he would because he knows all there is to know about the Sega Dreamcast.
 Finally, thanks to my wife, [Harmony Li](http://harmonymli.com), for being patient with me while I wrote up this monster of a blog post and for also puzzling through some of the technical details with me.
 
-**References**
+## References
 
 Pontus Andersson, Jim Nilsson, Tomas Akenine-Möller, Magnus Oskarsson, Kalle Åström, and Mark D. Fairchild. 2020. [FLIP: A Difference Evaluator for Alternating Images](https://doi.org/10.1145/3406183). _ACM Transactions on Graphics_. 3, 2 (2020), 15:1-15:23.
 

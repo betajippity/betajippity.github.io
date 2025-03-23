@@ -28,7 +28,7 @@ Noting the specific versions used here is important since Microsoft is still act
 
 [![Figure 1: Takua Renderer running on arm64 Windows 11, in a virtual machine on an Apple Silicon Mac.]({{site.url}}/content/images/2024/Jun/takua-on-arm64-windows/takua_windows11_arm64.jpg)]({{site.url}}/content/images/2024/Jun/takua-on-arm64-windows/takua_windows11_arm64.jpg)
 
-**OpenGL on arm64 Windows 11**
+## OpenGL on arm64 Windows 11
 
 Takua has two user interface systems: a macOS-specific UI written using a combination of [Dear Imgui](https://github.com/ocornut/imgui), Metal, and AppKit, and a cross-platform UI written using a combination of Dear Imgui, OpenGL, and GLFW.
 On macOS, OpenGL is provided by the operating system itself as part of the standard system frameworks.
@@ -68,7 +68,7 @@ With this fix, Takua's UI now fully works on arm64 Windows 11 and displays rende
 
 [![Figure 2: The left window shows Takua running using glEnable(GL_FRAMEBUFFER_SRGB) and not displaying the render correctly, while the right window shows Takua running using sRGB emulation in the fragment shader.]({{site.url}}/content/images/2024/Jun/takua-on-arm64-windows/srgb_comparison.jpg)]({{site.url}}/content/images/2024/Jun/takua-on-arm64-windows/srgb_comparison.jpg)
 
-**Building Embree on arm64 Windows 11**
+## Building Embree on arm64 Windows 11
 
 Takua has a moderately sized dependency base, and getting all of the dependency base compiled during my ports to arm64 Linux and arm64 macOS was a very large part of the overall effort since arm64 support across the board was still in an early stage in the graphics field three years ago.
 However, now that libraries such as Embree and OpenEXR and even TBB have been building and running on arm64 for years now, I was expecting that getting Takua's full dependency base brought up on Windows on Arm would be straightforward.
@@ -110,7 +110,7 @@ On arm64 macOS and Linux this works just fine; the ISPC project provides prebuil
 However, on arm64 Windows 11, even though the x86-64 emulation system ran the x86-64 build of ISPC just fine standalone, trying to run it as part of the Embree build didn't work for me despite me trying a variety of ways to get it to work.
 I'm not sure if this works with a native arm64 build of ISPC; building ISPC is a sufficiently involved process that I decided it was out of scope for this project. 
 
-**Running x86-64 code on arm64 Windows 11**
+## Running x86-64 code on arm64 Windows 11
 
 Much like how Apple provides Rosetta 2 for running x86-64 applications on arm64 macOS, Microsoft provides a translation layer for running x86 and x86-64 applications on arm64 Windows 11.
 In my [post on porting to arm64 macOS](https://blog.yiningkarlli.com/2021/07/porting-takua-to-arm-pt2.html#rosetta2), I included a lengthy section discussing and performance testing Rosetta 2.
@@ -189,13 +189,13 @@ For Rosetta 2 this behavior doesn't matter because Rosetta 2 uses TSO mode inste
 Nonetheless though, having any form of x86-64 emulation at all is an important part of making Windows on Arm viable for mainstream adoption, and I'm looking forward to see how much of an improvement the new Prism emulation system in Windows 11 24H2 brings.
 I'll update these results with the Prism emulator once 24H2 is released, and I'll also update these results to show comparisons on real Windows on Arm hardware whenever I actually get some real hardware to try out.
 
-**Conclusion**
+## Conclusion
 
 I don't think that x86-64 is going away any time soon, but at the same time, the era of mainstream desktop arm64 adoption is here to stay.
 Apple's transition to arm64-based Apple Silicon already made the viability of desktop arm64 unquestionable, and now that Windows on Arm is finally ready for the mainstream as well, I think we will now be living in a multi-architecture world in the desktop computing space for a long time.
 Having more competitors driving innovation ultimately is a good thing, and as new interesting Windows on Arm devices enter the market alongside Apple Silicon Macs, Takua Renderer is ready to go!
 
-**References**
+## References
 
 ARM Holdings. 2022. [Load-Acquire and Store-Release instructions](https://developer.arm.com/documentation/102336/0100/Load-Acquire-and-Store-Release-instructions). Retrieved June 7, 2024.
 

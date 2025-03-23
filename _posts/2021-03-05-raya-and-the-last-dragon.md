@@ -325,7 +325,7 @@ Also, one more thing: in theaters (and also on Disney+ starting in the summer), 
 Us Again is one of my favorite shorts Disney Animation has ever made; it's a joyous, visually stunning celebration of life and dance and music.
 I'll probably dedicate a separate post to Us Again once it's out on Disney+.
 
-**References**
+## References
 
 Brent Burley, David Adler, Matt Jen-Yuan Chiang, Hank Driskill, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2018. [The Design and Evolution of Disney’s Hyperion Renderer](https://dl.acm.org/citation.cfm?id=3182159). _ACM Transactions on Graphics_. 37, 3 (2018), 33:1-33:22.
 

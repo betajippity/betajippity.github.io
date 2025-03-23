@@ -62,7 +62,7 @@ A recording of the presentation is available on both my project page for the pap
 I am very grateful to Dayna Meltzer, Munira Tayabji, and Nick Cannon at Disney Animation for granting permission and making it possible for us to share the presentation recording publicly.
 The presentation is a bit on the long side (30 minutes), but hopefully is a useful and interesting watch!
 
-**References**
+## References
 
 Benedikt Bitterli, Chris Wyman, Matt Pharr, Peter Shirley, Aaron Lefohn, and Wojciech Jarosz. 2020. [Spatiotemporal Reservoir Sampling for Real-Time Ray Tracing with Dynamic Direct Lighting](https://doi.org/10.1145/3386569.3392481). _ACM Transactions on Graphics_. 39, 4 (2020), 148:1-148:17.
 

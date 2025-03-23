@@ -539,7 +539,7 @@ Finally, here is a list of all publicly released and announced projects to date 
 
 ---
 
-**Footnotes**
+## Footnotes
 
 <div id="2019-07-30-hyperion-papers-footnote-1">
 <sup>1</sup> VR project running on Unreal Engine, with shading and textures baked out of Disney's Hyperion Renderer.

@@ -116,7 +116,7 @@ Here is a credits frame with my name! I wasn't actually expecting to get a credi
 
 All images in this post are courtesy of and the property of Walt Disney Animation Studios.
 
-**References**
+## References
 
 Carsten Benthin, Sven Woop, Ingo Wald, and Attila T. Áfra. 2017. [Improved Two-Level BVHs using Partial Re-Braiding](https://doi.org/10.1145/3105762.3105776). In _HPG ‘17 (Proceedings of High Performance Graphics)_. 7:1-7:8.
 

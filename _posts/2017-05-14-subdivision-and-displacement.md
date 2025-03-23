@@ -126,7 +126,7 @@ In closing, I rendered a few more shaderballs using various displacement maps fr
 
 [![Figure 8: A compacted sand sphere and a stone sphere. Unfortunately, there is some noticeable texture stretching on the compacted sand sphere where crack removal occured.]({{site.url}}/content/images/2017/May/preview/shaderspheres_1.jpg)]({{site.url}}/content/images/2017/May/shaderspheres_1.jpg)
 
-**References**
+## References
 
 Edwin E. Catmull and James H. Clark. 1978. [Recursively Generated B-spline Surfaces on Arbitrary Topological Meshes](https://www.sciencedirect.com/science/article/abs/pii/0010448578901100). _Computer-Aided Design_. 10, 6 (1978), 350-355.
 

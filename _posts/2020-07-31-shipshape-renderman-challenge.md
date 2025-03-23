@@ -21,7 +21,7 @@ To my enormous surprise, this time around my entry [won first place in the conte
 
 [![Figure 1: My entry to Pixar's RenderMan Shipshape Art Challenge, titled "Oh Good, The Bus is Here". Click for 4K version. Base ship, robot, and sextant models are from Pixar; all shading, lighting, additional modeling, and environments are mine. Ship concept by Ian McQue. Robot concept by Ruslan Safarov. Models by Cheyenne Chapel, Aliya Chen, Damian Kwiatkowski, Alyssa Minko, Anthony Muscarella, and Miguel Zozaya © Disney / Pixar - RenderMan "Shipshape" Art Challenge.]({{site.url}}/content/images/2020/Jul/shipshape/preview/shipshape_full.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/shipshape_full_4k.jpg)
 
-**Initial Explorations**
+## Initial Explorations
 
 For this competition, Pixar provided five models: a futuristic scifi ship based on an Ian McQue concept, a robot based on a Ruslan Safarov concept, an old wooden boat, a butterfly, and a sextant.
 The fact that one of the models was based on an Ian McQue concept was enough to draw me in; I've been a big fan of Ian McQue's work for many years now!
@@ -52,7 +52,7 @@ I wasn't ever super happy with the "River Explorer" concept; I think the overall
 Several other contestants wound up also going for similar top-down-ish views, which made me worry about getting lost in a crowd of similar-looking images.
 After a week of trying to get the "River Explorer" concept to work better, I started to play with some completely different ideas; I figured that this early in the process, a better idea was worth more than a week's worth of sunk time.
 
-**Layout and Framing**
+## Layout and Framing
 
 I had started UV unwrapping the ship already, and whilst tumbling around the ship unwrapping all of the components one-by-one, I got to see a lot more of the ship and a lot more interesting angles, and I suddenly came up with a completely different idea for my entry.
 The idea that popped into my head was to have a bunch of the little robots waiting to board one of the flying ships at a quay or something of the sort.
@@ -89,7 +89,7 @@ Zoom in if you want to see all of the rivets and bolts and stuff on the dock:
 
 [![Figure 8: AO render of my layout going into shading and lighting. Check out all of the crazy detail on the dock that I modeled!]({{site.url}}/content/images/2020/Jul/shipshape/progress_032.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/progress_032.jpg)
 
-**UV Unwrapping**
+## UV Unwrapping
 
 UV unwrapping the ship took a ton of time.
 For the last challenge, I relied on a combination of manual UV unwrapping by hand in Maya and using [Houdini's Auto UV SOP](https://www.sidefx.com/tutorials/houdini-game-dev-tools-auto-uvs/), but I found that the Auto UV SOP didn't work as well on this challenge due to the ship and robot having a lot of strange geometry with really complex topology.
@@ -121,7 +121,7 @@ Here's the checkerboard test applied to my final UVs for the robot:
 
 [![Figure 10: Checkerboard test for my UV unwrapping of the robot.]({{site.url}}/content/images/2020/Jul/shipshape/robot_uvs.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/robot_uvs.jpg)
 
-**Texturing the Ship**
+## Texturing the Ship
 
 After trying out Substance Painter for the previous RenderMan Art Challenge and getting fairly good results, I went with Substance Painter again on this project.
 The overall texturing workflow I used on this project was actually a lot simpler compared with the workflow I used for the previous Art Challenge.
@@ -160,7 +160,7 @@ In some other cases, I added new edgeloops to the existing models just so I coul
 
 [![Figure 12: Masking in the metal section of the ship's thrusters by following existing edgeloops using Substance Painter's Polygon Fill tool.]({{site.url}}/content/images/2020/Jul/shipshape/preview/substance_uvmask.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/substance_uvmask.png)
 
-**Shading the Ship**
+## Shading the Ship
 
 For the previous Art Challenge, I used a combination of PxrDisney and PxrSurface shaders; this time around, in order to get a better understanding of how PxrSurface works, I opted to go all-in on using PxrSurface for everything in the scene.
 Also, for the rain streaks effect (discussed later in this post), I needed some features that are available in the extended Disney Bsdf model [[Burley 2015]](https://doi.org/10.1145/2776880.2787670) and in PxrSurface [[Hery and Ling 2017]](http://graphics.pixar.com/library/PxrMaterialsCourse2017/index.html), but RenderMan 23 only implements the base Disney Brdf [[Burley 2012]](https://doi.org/10.1145/2343483.2343493) without the extended Bsdf features; this basically meant I had to use PxrSuface.
@@ -216,7 +216,7 @@ The dripping wet rain effect is discussed later in this post.
 <div class='embed-container'><iframe src="https://player.vimeo.com/video/433151006?loop=1" frameborder="0">Shipshape Art Challenge Ship Turntable</iframe></div>
 <div class="figcaption"><span>Figure 16: Turntable of the ship showing both dry and wet variants.</span></div>
 
-**Shading and Texturing the Robots**
+## Shading and Texturing the Robots
 
 For the robots, I used the same Substance Painter based texturing workflow and the same PxrSurface based shading workflow that I used for the ship.
 However, since the robot has far fewer components than the ship, I was able to bring all of the robot's UDIM tiles into Substance Painter at once.
@@ -286,7 +286,7 @@ The green sports fan robot does have a variant with a wet right arm though, sinc
 <div class='embed-container'><iframe src="https://player.vimeo.com/video/433151137?loop=1" frameborder="0">Shipshape Art Challenge Robots Turntable</iframe></div>
 <div class="figcaption"><span>Figure 24: Turntable of the robots, with all 12 robot variants.</span></div>
 
-**The Wet Shader**
+## The Wet Shader
 
 Going into the shading process, the single problem that worried me the most was how I was going to make everything in the rain look wet.
 Having a good wet look is extremely important for selling the overall look of a rainy scene.
@@ -372,10 +372,11 @@ The ship renders are from the same camera angles as in Figures 13, 14, and 15. d
 <div class='embed-container'>
 <iframe src="/content/images/2020/Jul/shipshape/comparisons/robot_wetdrycompare_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 32: Main yellow robot with (left) and without (right) the wet shader applied. For a full screen comparison, <a href="/content/images/2020/Jul/shipshape/comparisons/robot_wetdrycompare.html">click here.</a></span></div>
+<p>
 
 <div markdown="1">
 
-**Additional Props and Set Elements**
+## Additional Props and Set Elements
 
 In addition to texturing and shading the flying scifi ship and robot models, I had to create from scratch several other elements to help support the story in the scene.
 By far the single largest new element that had to be created was the entire dock structure that the robots stand on top of.
@@ -441,7 +442,7 @@ There are also a few small areas where you can see visible texture stretching at
 
 [![Figure 37: Quick n' dirty lookdev test of the sextant. Model is by Aliyah Chen and was provided by Pixar as one of the contest's base models.]({{site.url}}/content/images/2020/Jul/shipshape/preview/sextant.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/sextant.jpg)
 
-**Rain FX**
+## Rain FX
 
 Having a good wet surface look was one half of getting my scene to look convincingly rainy; the other major problem to solve was making the rain itself!
 My initial, extremely naive plan was to simulate all of the rainfall as one enormous FLIP sim in Houdini.
@@ -490,7 +491,7 @@ Here's a 2K crop from my final image showing the "hero" droplets and all of the 
 
 [![Figure 41: 2K crop showing "hero" droplets and rain streaks.]({{site.url}}/content/images/2020/Jul/shipshape/preview/raindrops_crop.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/raindrops_crop.jpg)
 
-**Lighting and Compositing**
+## Lighting and Compositing
 
 Lighting this scene proved to be very interesting and very different from what I did for the previous challenge!
 Looking back, I think I actually may have "overlit" the scene in the previous challenge; I tend to prefer a slightly more naturalistic look, but while in the thick of lighting, it's easy to get carried away and push things far beyond the point of looking naturalistic.
@@ -577,7 +578,7 @@ Figure 51 shows what all of the lighting, comp, and color grading looks like app
 
 [![Figure 52: Final image. Click for 4K version.]({{site.url}}/content/images/2020/Jul/shipshape/preview/shipshape_full.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/shipshape_full_4k.jpg)
 
-**Conclusion**
+## Conclusion
 
 On a whole, I'm happy with how this project turned out!
 I think a lot of what I did on this project represents a decent evolution over and applies a lot of lessons learned on the previous RenderMan Art Challenge.
@@ -604,7 +605,7 @@ After the contest wrapped up, I went back and made a daylight version out of cur
 
 [![Figure 54: Bonus image: daylight version. Click for 4K version.]({{site.url}}/content/images/2020/Jul/shipshape/preview/daylight_comp.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/daylight_comp_4k.jpg)
 
-**References**
+## References
 
 Petr Beckmann and André Spizzichino. 1963. [The Scattering of Electromagnetic Waves from Rough Surfaces](https://us.artechhouse.com/The-Scattering-of-Electromagnetic-Waves-from-Rough-Surfaces-P257.aspx). New York: Pergamon.
 

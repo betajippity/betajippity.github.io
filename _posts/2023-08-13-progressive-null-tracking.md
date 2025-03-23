@@ -53,7 +53,7 @@ If you happen to be interested in this problem, please feel free to reach out to
 
 Getting to work with Zack and Wojciech on this project was an honor and a blast; I count myself as very lucky that working at Disney Animation continues to allow me to meet and work with rendering folks from across our field!
 
-**References**
+## References
 
 Brent Burley, David Adler, Matt Jen-Yuan Chiang, Hank Driskill, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2018. [The Design and Evolution of Disney’s Hyperion Renderer](https://doi.org/10.1145/3182159). _ACM Transactions on Graphics_. 37, 3 (2018), 33:1-33:22.
 

@@ -23,7 +23,7 @@ Therefore, knowing how these four renderers work and what vocabulary is associat
 All of the above is the mindset I went into this project with, so this post is meant to be something of a breakdown of what I did, along with some thoughts and observations made along the way.
 This was a really fun exercise, and I learned a lot!
 
-**Layout and Framing**
+## Layout and Framing
 
 For this art challenge, Pixar [supplied a base model](https://renderman.pixar.com/woodville-pup-asset) without any sort texturing or shading or lighting or anything else.
 The model is by Alex Shilt, based on a concept by Vasylina Holod.
@@ -52,7 +52,7 @@ Second, I felt that this angle would allow me to limit how expansive of an envir
 I decided around this point to put the treehouse in a big mountainous mixed coniferous forest, with the reasoning being that tree trunks as large as the ones in the treehouse could only come from huge redwood trees, which only grow in mountainous coniferous forests.
 With this camera angle, I could make the background environment a single mountainside covered in trees and not have to build a wider vista.
 
-**UVs and Geometry**
+## UVs and Geometry
 
 The next step that I took was to try to shade the main tree trunks, since the scale of the tree trunks worried me the most about the entire project.
 Before I could get to texturing and shading though, I first had to UV-map the tree trunks, and I quickly discovered that before I could even UV-map the tree trunks, I would have to retopologize the meshes themselves, since the tree trunk meshes came with some really messy topology that was basically un-UV-able.
@@ -81,7 +81,7 @@ I vastly prefer being able to paint Ptex instead of having to UV-unwrap and lay 
 
 [![Figure 9: Example of one of the cabins run through Houdini's Auto UV SOP. The cabin is on the left; the output UVs are on the right.]({{site.url}}/content/images/2019/Nov/woodville/houdini-auto-uv.jpg)]({{site.url}}/content/images/2019/Nov/woodville/houdini-auto-uv.jpg)
 
-**Texturing in Substance Painter and Shading**
+## Texturing in Substance Painter and Shading
 
 In Substance Painter, the general workflow I used was to start with multiple triplanar projections of (heavily edited) Quixel Megascans surfaces masked and oriented to different sections of a surface, and then paint on top.
 Through this process, I was able to get bark to flow with the curves of each log and whatnot.
@@ -127,7 +127,7 @@ With everything shaded and the geometric modifications in place, here is how eve
 
 [![Figure 12: In-progress test render with initial fully shaded treehouse, along with geoemtric modifications. Click for 4K version.]({{site.url}}/content/images/2019/Nov/woodville/preview/progress085.jpg)]({{site.url}}/content/images/2019/Nov/woodville/progress085_4k.jpg)
 
-**Set Dressing the Treehouse**
+## Set Dressing the Treehouse
 
 The next major step was adding some story elements.
 I wanted the treehouse to feel lived in, like the treehouse is just somebody's house (a very unusual house, but a house nonetheless).
@@ -152,7 +152,7 @@ Many of the furniture, plant and prop models are highly modified, kitbashed, re-
 
 [![Figure 14: In-progress test render closeup crop of the glass round cabin and the upper smaller cabin, with furniture and plants and props.]({{site.url}}/content/images/2019/Nov/woodville/preview/progress096_crop2.jpg)]({{site.url}}/content/images/2019/Nov/woodville/progress096_crop2.jpg)
 
-**Building the Background Forest**
+## Building the Background Forest
 
 The last step before final lighting was to build a more proper background forest, as a replacement for the temporary forest I had used up until this point for blocking purposes.
 For this step, I relied heavily on Maya's MASH toolset, which I found to provide a great combination of power and ease-of-use; for use cases involving tons of instanced geometry, I certainly found it much easier than Maya's older Xgen toolset.
@@ -186,7 +186,7 @@ I made the mist by just having a Maya Volume Noise node plug into the density fi
 
 [![Figure 18: In-progress test render of the background forest with an initial version of mist and fog.]({{site.url}}/content/images/2019/Nov/woodville/preview/forest_progress051.jpg)]({{site.url}}/content/images/2019/Nov/woodville/forest_progress051.jpg)
 
-**Lighting and Compositing**
+## Lighting and Compositing
 
 At this point, I think the entire image together was starting to look pretty good, although, without any final shot lighting, the overall vibe felt more like a spread out of an issue of National Geographic than a more cinematic still out of a film.
 Normally my instinct is to go with a more naturalistic look, but since part of the objective for this project was to learn to use RenderMan's lighting toolset for more cinematic applications, I wanted to push the overall look of the image beyond this point:
@@ -238,7 +238,7 @@ Figure 25 shows what all of the lighting, comp, and color grading looks like app
 
 [![Figure 26: Final image. Click for 4K version.]({{site.url}}/content/images/2019/Nov/woodville/preview/woodville_full.jpg)]({{site.url}}/content/images/2019/Nov/woodville/woodville_full_4k.jpg)
 
-**Conclusion**
+## Conclusion
 
 Overall, I had a lot of fun on this project, and I learned an enormous amount!
 This project was probably the most complex and difficult art project I've ever done.

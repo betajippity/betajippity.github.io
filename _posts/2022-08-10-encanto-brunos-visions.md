@@ -63,7 +63,7 @@ Bruno's visions in Encanto are every bit a case where the artistic vision challe
 <div class="figcaption"><span>A short GIF showing two examples of the final effect. For many more examples, go <a href="https://www.disneyplus.com/movies/encanto/33q7DY1rtHQH">watch Encanto on Disney+</a>!</span></div>
 
 
-**References**
+## References
 
 Brent Burley, David Adler, Matt Jen-Yuan Chiang, Hank Driskill, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2018. [The Design and Evolution of Disney’s Hyperion Renderer](https://doi.org/10.1145/3182159). _ACM Transactions on Graphics_. 37, 3 (2018), 33:1-33:22.
 

@@ -14,8 +14,8 @@ To support Brent's section of the course, the entire Hyperion team worked togeth
 
 Here is the abstract for the course notes:
 
-*Path tracing at Walt Disney Animation Studios began with the Hyperion renderer, first used in production on Big Hero 6. Hyperion is a custom, modern path tracer using a unique architecture designed to efficiently handle complexity, while also providing artistic controllability and efficiency.
-The concept of physically based shading at Disney Animation predates the Hyperion renderer. Our history with physically based shading significantly influenced the development of Hyperion, and since then, the development of Hyperion has in turn influenced our philosophy towards physically based shading.*
+> Path tracing at Walt Disney Animation Studios began with the Hyperion renderer, first used in production on Big Hero 6. Hyperion is a custom, modern path tracer using a unique architecture designed to efficiently handle complexity, while also providing artistic controllability and efficiency.
+> The concept of physically based shading at Disney Animation predates the Hyperion renderer. Our history with physically based shading significantly influenced the development of Hyperion, and since then, the development of Hyperion has in turn influenced our philosophy towards physically based shading.
 
 The course notes and related materials can be found at:
 

@@ -14,7 +14,7 @@ Matt and I played more of an advisory or consulting role on this project, mostly
 
 Here is the paper abstract:
 
-_We present two new distance-sampling methods for production volume path tracing. We extend the null-collision integral formulation to efficiently gather heterogeneous volumetric emission, achieving higher-quality results. Additionally, we propose a tabulation-based approach to importance sample volumetric in-scattering through a spatial guiding data structure. Our methods improve the sampling efficiency for scenarios where low-order heterogeneous scattering dominates, which tends to cause high variance renderings with existing null-collision methods._
+> We present two new distance-sampling methods for production volume path tracing. We extend the null-collision integral formulation to efficiently gather heterogeneous volumetric emission, achieving higher-quality results. Additionally, we propose a tabulation-based approach to importance sample volumetric in-scattering through a spatial guiding data structure. Our methods improve the sampling efficiency for scenarios where low-order heterogeneous scattering dominates, which tends to cause high variance renderings with existing null-collision methods.
 
 The paper and related materials can be found at:
 

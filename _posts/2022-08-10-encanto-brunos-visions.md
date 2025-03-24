@@ -15,7 +15,7 @@ This project was a lot of fun to be a part of and in my opinion really demonstra
 
 Here is the paper abstract:
 
-_In Walt Disney Animation Studios’ "Encanto", Mirabel discovers the remnants of her Uncle Bruno’s mysterious visions of the future. Developing the look and lighting for the emerald shards required close collaboration between our Visual Development, Look Development, Lighting, and Technology departments to create a holographic effect. With an innovative new teleporting holographic shader, we were able to bring a unique and unusual effect to the screen._
+> In Walt Disney Animation Studios’ "Encanto", Mirabel discovers the remnants of her Uncle Bruno’s mysterious visions of the future. Developing the look and lighting for the emerald shards required close collaboration between our Visual Development, Look Development, Lighting, and Technology departments to create a holographic effect. With an innovative new teleporting holographic shader, we were able to bring a unique and unusual effect to the screen.
 
 The paper and related materials can be found at:
 

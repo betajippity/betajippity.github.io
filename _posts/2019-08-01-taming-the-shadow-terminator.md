@@ -17,9 +17,7 @@ I think this is a great example of how having multiple rendering teams in the fi
 
 Here is the paper abstract:
 
-_A longstanding problem with the use of shading normals is the discontinuity introduced into the cosine falloff where part of the hemisphere around the shading normal falls below the geometric surface.
-Our solution is to add a geometrically derived shadowing function that adds minimal additional shadowing while falling smoothly to zero at the terminator.
-Our shadowing function is simple, robust, efficient and production proven._
+> A longstanding problem with the use of shading normals is the discontinuity introduced into the cosine falloff where part of the hemisphere around the shading normal falls below the geometric surface. Our solution is to add a geometrically derived shadowing function that adds minimal additional shadowing while falling smoothly to zero at the terminator. Our shadowing function is simple, robust, efficient and production proven.
 
 The paper and related materials can be found at:
 

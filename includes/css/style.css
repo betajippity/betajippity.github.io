@@ -170,7 +170,7 @@ a:visited {
 }
 a:hover {
     color: grey;
-    text-decoration: none;
+    text-decoration: underline;
 }
 a:active {
     text-decoration: none;
@@ -486,6 +486,7 @@ a.nav:visited {
 }
 a.nav:hover {
     color: red;
+    text-decoration: underline;
 }
 a.nav:active {
     color: red;
@@ -534,6 +535,7 @@ a.nav:active {
 
 .figcaption a:hover {
     color: grey;
+    text-decoration: underline;
 }
 
 .figcaption a:visited {
@@ -568,6 +570,7 @@ a.nav:active {
 
 .codecaption a:hover {
     color: grey;
+    text-decoration: underline;
 }
 
 .codecaption a:visited {
@@ -920,24 +923,11 @@ main.content {
 
 .site-footer a:hover {
     color: #FF0000;
+    text-decoration: underline;
 }
 
 .copyright {
     text-transform: uppercase;
-}
-
-.poweredby .icon-ghost {
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.poweredby .icon-ghost:hover {
-    text-decoration: none;
-}
-
-.poweredby .icon-ghost:before {
-    font-size: 1rem;
-    margin-right: 0.2em;
 }
 
 /* The subscribe icon on the footer */

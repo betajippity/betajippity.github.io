@@ -96,7 +96,7 @@ At one point we also remembered that brute force path-traced subsurface scatteri
 
 For our video for the SIGGRAPH 2017 Fast Forward, we were able to get a lot of help from a number of artists. Alex and Henrik and a number of other artists significantly expanded and improved the cloudscape scene, and we also rendered out several more color explosion variants. The final fast forward video contains work from Alex Nijmeh, Henrik Falt, Jesse Erickson, Thom Wickes, Michael Kaschalk, Dale Mayeda, Ben Frost, Marc Bryant, John Kosnik, Mir Ali, Vijoy Gaddipati, and Dimitre Berberov. The awesome title effect was thought up by and created by Henrik. The final video is a bit noisy since we were severely constrained on available renderfarm resources (we were basically squeezing our renders in between actual production renders), but I think the end result is still really great:
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/229503895' frameborder='0'>Spectral and Decomposition Tracking for Rendering Homogeneous Volumes- SIGGRAPH 2017 Fast Forward Video</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/229503895' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">Spectral and Decomposition Tracking for Rendering Homogeneous Volumes- SIGGRAPH 2017 Fast Forward Video</iframe></div>
 
 Here are a couple of cool stills from the fast forward video:
 

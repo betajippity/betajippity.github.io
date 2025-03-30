@@ -9,7 +9,7 @@ Earlier this week my mom gave my roommates and me a ginormous sack of apples, so
 
 So I had an apple sitting on my desk, and I had Maya open, and I was a little bit bored, so... I made some apples in Maya!
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/21169670' frameborder='0'>Falling Apples</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/21169670' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">Falling Apples</iframe></div>
 
 Over the past few months I've developed a bit of an... odd... workflow for texturing/shading irregularly shaped objects (apples... muddy boots... hermit crabs...). I start with modeling and whatnot in Maya, as usual:
 

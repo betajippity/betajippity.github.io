@@ -46,7 +46,7 @@ Again, if you, the reader, knows of this idea from a pre-existing place, please 
 
 Since this has been a very text heavy post, I'll close with some pictures of a KD-tree representing the scene from the [Takua-RT post](http://blog.yiningkarlli.com/2012/09/takuaavohkii-render.html). They don't really have much to do with the traverse method presented in this post, but they are KD-tree related!
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/53735317' frameborder='0'>"Orbital" KD-Tree</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/53735317' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">"Orbital" KD-Tree</iframe></div>
 
 Vimeo's compression really does not like thin narrow lines, so here are some stills:
 

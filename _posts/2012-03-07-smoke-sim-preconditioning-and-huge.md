@@ -11,7 +11,7 @@ The key reason for implementing the preconditioner is simple: speed. With a fast
 
 In previous years, the CIS563 smoke simulator framework usually hit a performance cliff at grids beyond around 50x50x50, but last year [Peter Kutz](http://peterkutz.com/) managed to push his smoke simulator to 90x90x36 by implementing a sparse A-Matrix structure, as opposed to storing every single data point, including empty ones, for the grid. This year's smoke simulation framework was updated to include some of Peter's improvements, and so Joe reckons that we should be able to push our smoke simulation grids pretty far. I've been scaling up starting from 10x10x10, and now I'm at 100x100x50:
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/38057955' frameborder='0'>Smoke Simulator 100x100x50 Test</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/38057955' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">Smoke Simulator 100x100x50 Test</iframe></div>
 
 This simulation took about 24 hours to run on a 2008 MacBook Pro with a 2.8 Ghz Core 2 Duo, but that is actually pretty good for fluid simulation! According to my rather un-scientific estimates, the simulation would take about 4 or 5 days without the preconditioner, and even longer without the sparse A-Matrix. I bet I can still push this further, and I'm starting to think about multithreading the simulation with [OpenMP](http://openmp.org/wp/) to get even more performance and even larger grids. We shall see.
 

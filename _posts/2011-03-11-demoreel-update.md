@@ -7,7 +7,7 @@ author: Yining Karl Li
 
 So... after interviewing with Paul Kanyuk from Pixar, I've decided to update my reel a bit...
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/20909195' frameborder='0'>Demoreel Spring 2011 v2.1</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/20909195' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">Demoreel Spring 2011 v2.1</iframe></div>
 
 [Breakdown is here (PDF)](http://yiningkarlli.com/demoreel/spring2011/spring2011breakdown.pdf).
 

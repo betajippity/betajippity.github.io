@@ -9,7 +9,7 @@ As part of Takua Render's new pathtracing core, I've implemented a system allowi
 
 Here's a video showing a scene rendered in Takua Render with uniform and then stratified sampling. The video also shows a side-by-side comparison in its last third.
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/61209575' frameborder='0'>Takua Render Sampler Methods Comparison</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/61209575' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">Takua Render Sampler Methods Comparison</iframe></div>
 
 In the renders in the above video, stratified sampling is being used to choose new ray directions from diffuse surface bounces; instead of choosing a random point over the entire cosine-weighted hemisphere at an intersection point, the renderer first chooses a strata with the same steradian as all other strata, and then chooses a random sample within that solid angle. The strata is chosen sequentially for primary bounces, and then chosen randomly for all secondary bounces to maintain unbiased sampling over the whole render. As a result of the sequential strata selection for primary bounces, images rendered in Takua Render will not converged to an unbiased solution until N iterations have elapsed, where N is the number of strata the probability region is divided into. The number of strata can be set by the user as a value in the scene description which is then squared to get the total strata number. So, if a user specifies a strata level of 16, then the probability region will be divided into 256 strata and a unbiased result will not be reached until 256 or more samples per pixel have been taken.
 

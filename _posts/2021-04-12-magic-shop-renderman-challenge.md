@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Magic Shop RenderMan Art Challenge
+title: "RenderMan Art Challenge: Magic Shop"
 tags: [Art]
 author: Yining Karl Li
 ---
@@ -473,7 +473,7 @@ At the end of the day, stuff like art simply requires practice to get better at,
 
 Here is a progression video I put together from all of the test and in-progress renders that I made throughout this entire project:
 
-<div class='embed-container'><iframe src="https://player.vimeo.com/video/486289496" frameborder="0">Magic Shop Art Challenge Progression Reel</iframe></div>
+<div class='embed-container'><iframe src="https://player.vimeo.com/video/486289496" frameborder="0" allow="fullscreen; picture-in-picture; encrypted-media">Magic Shop Art Challenge Progression Reel</iframe></div>
 <div class="figcaption"><span>Figure 48: Progression reel made from test and in-progress renders leading up to my final image.</span></div>
 
 As usual with these art projects, I owe an enormous debt of gratitude to my wife, Harmony Li, both for giving invaluable feedback and suggestions (she has a much better eye than I do!), and also for putting up with me going off on another wild time-consuming art adventure.

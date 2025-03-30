@@ -11,4 +11,4 @@ I'm starting to get the hang of lighting things and whatnot, although I still do
 
 Some glasses and strawberries and grapes on a table:
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/12256221' frameborder='0'>A Table With Some Stuff</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/12256221' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">A Table With Some Stuff</iframe></div>

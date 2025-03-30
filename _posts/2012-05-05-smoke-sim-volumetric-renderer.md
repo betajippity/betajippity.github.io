@@ -10,7 +10,7 @@ Something I've had on my list of things to do for a few weeks now is mashing up 
 
 Now I can cross that off of my list! Here is a 100x100x100 grid smoke simulation rendered out with pseudo Monte-Carlo black body lighting (described in my volumetric renderer post):
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/41543438' frameborder='0'>Smoke Simulator Pseudo-Blackbody Test</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/41543438' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">Smoke Simulator Pseudo-Blackbody Test</iframe></div>
 
 The actual approach I took to integrating the two was to simply pipeline them instead of actually merging the codebases. I added a small extension to the smoke simulator that lets it output the smoke grid to the same voxel file format that the volumetric renderer reads in, and then wrote a small Python script that just iterates over all voxel files in a folder and calls the volumetric renderer over and over again.
 

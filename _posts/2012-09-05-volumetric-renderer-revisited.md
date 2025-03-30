@@ -7,7 +7,7 @@ author: Yining Karl Li
 
 I've been meaning to add animation support to my [volume renderer](http://blog.yiningkarlli.com/2011/10/a-volumetric-renderer-for-rendering-volumes.html) for demoreel purposes for a while now, so I did that this week! Here's a rotating cloud animation: 
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/53634239' frameborder='0'>Animated Cloud Render Test</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/53634239' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">Animated Cloud Render Test</iframe></div>
 
 ...and of course, a still or two:
 
@@ -21,7 +21,7 @@ Instead of just rotating the camera around the cloud, I wanted for the cloud its
 
 Also, since my pseudo-blackbody trick was originally intended to simulate the appearance of a fireball, I tried creating an animation of a fireball by just scaling a sphere:
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/53714601' frameborder='0'>Animated Pseudo-Blackbody Test</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/53714601' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">Animated Pseudo-Blackbody Test</iframe></div>
 
 ...and as usual again, stills:
 

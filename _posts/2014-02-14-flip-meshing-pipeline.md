@@ -11,7 +11,7 @@ Two years ago, when my friend [Dan Knowlton](http://www.danknowlton.com/) and I 
 
 This time around, I've tried to build a new meshing/rendering pipeline that resolves those problems. My new meshing/rendering pipeline produces stable, detailed meshes that fit correctly into solid boundaries, all with minimal or no flickering. The following video is the same "dambreak" test from my previous test, but fully meshed and rendered using Vray:
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/87050516' frameborder='0'>PIC/FLIP Simulator Dam Break Test- Final Render</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/87050516' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">PIC/FLIP Simulator Dam Break Test- Final Render</iframe></div>
 
 One of the main issues with the old meshing approach was that marching cubes was run directly on the same level set we were using for the simulation, which meant that the resolution of the final mesh was effectively bound to the resolution of the fluid. In a pure semi-Lagrangian simulator, this coupling makes sense, however, in a PIC/FLIP simulator, the resolution of the simulator is dependent on the particle count and not the projection step grid resolution. This property means that even on a simulation with a grid size of 128x64x64, extremely high resolution meshes should be possible if there are enough particles, as long as a level set was constructed directly from the particles completely independently of the projection step grid dimensions.
 

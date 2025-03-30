@@ -9,7 +9,7 @@ Over the past month or so, I've been writing a brand new fluid simulator from sc
 
 I've named my simulator "Ariel", since I like Disney movies and the name seemed appropriate for a project related to water. Here's what a "dambreak" type simulation looks like:
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/87331839' frameborder='0'>PIC/FLIP Simulator Dam Break Test- Ariel View</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/87331839' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">PIC/FLIP Simulator Dam Break Test- Ariel View</iframe></div>
 
 That "dambreak" test was run with approximately a million particles, with a 128x64x64 grid for the projection step.
 
@@ -27,7 +27,7 @@ My simulator uses OpenVDB's mesh-to-levelset toolkit for constructing the initia
 
 Here's a video of another test scene, this time patterned after a "waterfall" type scenario. This test was done earlier in the development process, so it doesn't have the wireframe outlines of the solid boundaries:
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/88078336' frameborder='0'>PIC/FLIP Simulator Waterfall Test- Ariel View</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/88078336' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">PIC/FLIP Simulator Waterfall Test- Ariel View</iframe></div>
 
 In the above videos and stills, blue indicates higher density/lower velocity, white indicate lower density/higher velocity.
 

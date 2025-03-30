@@ -15,4 +15,4 @@ I'm still missing the actual preconditioner, so for now I'm only testing the sim
 
 Here is a test on a 100x100 2D grid!
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/37842004' frameborder='0'>Smoke Simulator 100x100x1 Test</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/37842004' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">Smoke Simulator 100x100x1 Test</iframe></div>

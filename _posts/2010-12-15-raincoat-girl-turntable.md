@@ -17,6 +17,6 @@ I wound up cheating on the subsurface scatter for the skin. I couldn't get it to
 
 Turntable!
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/17840556' frameborder='0'>Raincoat Girl</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/17840556' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">Raincoat Girl</iframe></div>
 
 I'll post more stills later, but now I really need to study for that Finance final that I've been avoiding... I also have to make an environment for my character to go in to, and I still have that final project for 3D modeling to finish (I haven't even started...).

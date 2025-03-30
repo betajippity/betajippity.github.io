@@ -7,7 +7,7 @@ author: Yining Karl Li
 
 Look! I finally cut together a demoreel!
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/20205051' frameborder='0'>Demoreel Spring 2011 v1.2</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/20205051' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">Demoreel Spring 2011 v1.2</iframe></div>
 
 I'm getting interviewed by PIXAR! Actually, Pixar gets a slightly different version of my reel. The Pixar version simply has no music... they're not very big fans of music in demoreels, apparently. 
 

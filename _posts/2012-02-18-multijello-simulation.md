@@ -15,4 +15,4 @@ Of course, a natural extension of mesh support is jello-on-jello interaction, wh
 
 Here's a video showcasing some things my jello simulator can do:
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/37098929' frameborder='0'>Experiments in Jello Simulation</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/37098929' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">Experiments in Jello Simulation</iframe></div>

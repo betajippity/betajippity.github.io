@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Woodville RenderMan Art Challenge
+title: "RenderMan Art Challenge: Woodville"
 tags: [Art]
 author: Yining Karl Li
 ---
@@ -247,7 +247,7 @@ I won't grumble as much about having to support rods in production rendering now
 
 Here is a neat progression video I put together from all of the test and in-progress renders that I saved throughout this entire project:
 
-<div class='embed-container'><iframe src="https://player.vimeo.com/video/376059761" frameborder="0">Woodville Art Challenge Progression</iframe></div>
+<div class='embed-container'><iframe src="https://player.vimeo.com/video/376059761" frameborder="0" allow="fullscreen; picture-in-picture; encrypted-media">Woodville Art Challenge Progression</iframe></div>
 
 I owe several people an enormous debt of thanks on this project.
 My wife, Harmony Li, deserves all of my gratitude for her patience with me during this project, and also for being my art director and overall sanity checker.

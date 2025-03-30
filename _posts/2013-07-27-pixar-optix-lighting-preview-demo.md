@@ -9,7 +9,7 @@ For the past two months or so, I've been working at Pixar Animation Studio as a 
 
 The demo was done by our project's lead, Danny Nahmias, and got an overwhelmingly positive reception. Check out the recording here:
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/71150839' frameborder='0'>Using NVIDIA® OptiX™ for Lighting Preview in a Katana-Based Production Pipeline</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/71150839' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">Using NVIDIA® OptiX™ for Lighting Preview in a Katana-Based Production Pipeline</iframe></div>
 
 FXGuide also did a podcast about our demo! Check it out [here](http://www.fxguide.com/fxpodcasts/fxpodcast-258-siggraph-2013-final-report/).
 

@@ -13,4 +13,4 @@ The clock face is noticeably pixelated; I'm not entirely sure why that is. For s
 
 A little breakdown video of the compositing that went into the clock:
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/16631563' frameborder='0'>Clock Rendering/Compositing Breakdown</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/16631563' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">Clock Rendering/Compositing Breakdown</iframe></div>

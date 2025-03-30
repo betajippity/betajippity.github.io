@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Shipshape RenderMan Art Challenge
+title: "RenderMan Art Challenge: Shipshape"
 tags: [Art]
 author: Yining Karl Li
 ---
@@ -213,7 +213,7 @@ Here's a turntable video of the ship, showcasing all of the texturing and shadin
 I had a lot of fun taking care of all of the tiny details that are part of the ship, even though many of them aren't actually visible in my final image.
 The dripping wet rain effect is discussed later in this post.
 
-<div class='embed-container'><iframe src="https://player.vimeo.com/video/433151006?loop=1" frameborder="0">Shipshape Art Challenge Ship Turntable</iframe></div>
+<div class='embed-container'><iframe src="https://player.vimeo.com/video/433151006?loop=1" frameborder="0" allow="fullscreen; picture-in-picture; encrypted-media">Shipshape Art Challenge Ship Turntable</iframe></div>
 <div class="figcaption"><span>Figure 16: Turntable of the ship showing both dry and wet variants.</span></div>
 
 ## Shading and Texturing the Robots
@@ -283,7 +283,7 @@ Here is a turntable showcasing all 12 robot variants.
 In the turntable, only the yellow robot has both a wet and dry variant, since all of the other robots in the scene remembered their umbrellas and were therefore able to stay dry.
 The green sports fan robot does have a variant with a wet right arm though, since in the final image the green sports fan robot's right arm is extended beyond the umbrella to wave at the incoming ship.
 
-<div class='embed-container'><iframe src="https://player.vimeo.com/video/433151137?loop=1" frameborder="0">Shipshape Art Challenge Robots Turntable</iframe></div>
+<div class='embed-container'><iframe src="https://player.vimeo.com/video/433151137?loop=1" frameborder="0" allow="fullscreen; picture-in-picture; encrypted-media">Shipshape Art Challenge Robots Turntable</iframe></div>
 <div class="figcaption"><span>Figure 24: Turntable of the robots, with all 12 robot variants.</span></div>
 
 ## The Wet Shader
@@ -586,7 +586,7 @@ I started this project mostly as an excuse to just have fun, but along the way I
 
 Here is a progression video I put together from all of the test and in-progress renders that I made throughout this entire project:
 
-<div class='embed-container'><iframe src="https://player.vimeo.com/video/433150588" frameborder="0">Shipshape Art Challenge Progression Reel</iframe></div>
+<div class='embed-container'><iframe src="https://player.vimeo.com/video/433150588" frameborder="0" allow="fullscreen; picture-in-picture; encrypted-media">Shipshape Art Challenge Progression Reel</iframe></div>
 <div class="figcaption"><span>Figure 53: Progression reel made from test and in-progress renders leading up to my final image.</span></div>
 
 My wife, Harmony Li, deserves an enormous amount of thanks on this project.

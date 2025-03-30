@@ -12,7 +12,7 @@ There is a slight change in the tech involved too- I've upgraded my jello simula
 
 This video is making use of my Vray white-backdrop studio setup! The pitcher was just a quick 5 minute model, nothing terribly interesting there.
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/41545296' frameborder='0'>Fun with Jello</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/41545296' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">Fun with Jello</iframe></div>
 
 ...and of course, some stills:
 

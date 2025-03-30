@@ -13,7 +13,7 @@ Instead of building a full Maya plugin like my good friend [Dan Knowlton did](ht
 
 I think beng able to integrate my coding projects into artistic projects is very important, since at the end of the day, the main point of computer graphics is to be able to produce a good looking image. As such, I thought putting some jello into my kitchen scene would be fun, so here is the result, rendered out with Vray (some day I want to replace Vray with my own renderer though!):
 
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/37534077' frameborder='0'>Jello Test</iframe></div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/37534077' frameborder='0' allow="fullscreen; picture-in-picture; encrypted-media">Jello Test</iframe></div>
 
 The rendering process I'm using isn't perfect yet... the fact that the jello cubes are being simulated with relatively few vertices is extremely apparent in the above video, as can be seen in how angular the edges of the jello become when it wiggles. At the moment, I can think of two possible fixes: one, simple run the simulation with a higher vertex count, or two, render the jello as a subdivision surface with creased edges. Since the second option should in theory allow for better looking renders without impacting simulation time, I think I will try the subdivision method forst.
 

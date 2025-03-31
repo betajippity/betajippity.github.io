@@ -13,6 +13,8 @@ The story took time to really get right, the technology side of things saw many 
 Just as production was getting into the swing of things last year, the Covid-19 pandemic forced the physical studio building to temporarily shut down, and the studio's systems/infrastructure teams had to scramble and go to heroic lengths to get production back up and running again from around 400 different homes.
 As a result, Raya and the Last Dragon is the first Disney Animation film made entirely from our homes instead of from the famous "hat building".
 
+[![]({{site.url}}/content/images/2021/Mar/raya/RAYA_007.jpg)]({{site.url}}/content/images/2021/Mar/raya/RAYA_007.jpg)
+
 In the end though, all of the trials and tribulations this production saw were more than worthwhile; Raya and the Last Dragon is the most beautiful film we've ever made, and the movie has a message and story about trust that is deeply relevant for the present time.
 The Druun as a concept and villain in Raya and the Last Dragon actually long predate the Covid-19 pandemic; they've been a part of every version of the movie going back years, but the Druun's role in the movie's plot meant that the onset of the pandemic suddenly lent extra weight to this movie's core message.
 Also, as someone of Asian descent, I'm so so proud that Raya and the Last Dragon's basis is found in diverse Southeast Asian cultures.
@@ -64,8 +66,6 @@ Of course, the stills here are just a few of my favorites, and represent just a 
 If you like what you see here, I'd strongly encourage seeing the film on Disney+ or on Blu-Ray; whichever way, I suggest watching on the biggest screen you have available to you!
 
 To try to help avoid spoilers, the stills below are presented in no particular order; however, if you want to avoid spoilers entirely, then please go watch the movie first and then come back here to be able to appreciate each still on its own!
-
-[![]({{site.url}}/content/images/2021/Mar/raya/RAYA_007.jpg)]({{site.url}}/content/images/2021/Mar/raya/RAYA_007.jpg)
 
 [![]({{site.url}}/content/images/2021/Mar/raya/RAYA_001.jpg)]({{site.url}}/content/images/2021/Mar/raya/RAYA_001.jpg)
 

@@ -11,6 +11,8 @@ I think this is the first time a Disney Animation short/featurette has accompani
 Olaf's Frozen Adventure is a fun little holiday story set in the world of Frozen, and I had the privilege of getting to play a small role in making Olaf's Frozen Adventure!
 I got an official credit as part of a handful of engineers that did some specific, interesting technology development for Olaf's Frozen Adventure.
 
+[![]({{site.url}}/content/images/2017/Nov/preview/LOAF_01.jpg)]({{site.url}}/content/images/2017/Nov/LOAF_01.png)
+
 Olaf's Frozen Adventure is really really funny; because Olaf is the main character, the entire story takes on much more of a self-aware, at times somewhat absurdist tone.
 The featurette also has a bunch of new songs- there are six new songs in total, which is somehow pretty close to the original film's count of eight songs, but in a third of the runtime.
 Olaf's Frozen Adventure was originally announced as a TV special, but the wider Walt Disney Company was so happy with the result that they decided to give Olaf's Frozen Adventure a theatrical release instead!
@@ -55,8 +57,6 @@ The initial results looked great; I'm not sure if this approach wound up being u
 
 As usual with Disney Animation projects I get to work on, here are some stills in no particular order, from the film.
 Even though Olaf's Frozen Adventure was originally meant for TV, the whole studio still put the same level of effort into it that goes into full theatrical features, and I think it shows!
-
-[![]({{site.url}}/content/images/2017/Nov/preview/LOAF_01.jpg)]({{site.url}}/content/images/2017/Nov/LOAF_01.png)
 
 [![]({{site.url}}/content/images/2017/Nov/preview/LOAF_02.jpg)]({{site.url}}/content/images/2017/Nov/LOAF_02.png)
 

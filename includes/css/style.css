@@ -906,7 +906,7 @@ main.content {
 .site-footer {
     font-family: 'futura-pt', sans-serif;
     position: relative;
-    margin: 20px auto 0 auto;
+    margin: -2.5em auto 0 auto;
     padding: 30px 0;
     font-size: 17px;
     line-height: 20px;
@@ -1218,11 +1218,6 @@ main.content {
     .page-number {
         display: block;
     }
-
-    .site-footer {
-        margin-top: 6rem;
-    }
-
 }
 
 /* ==========================================================================

@@ -44,7 +44,7 @@ For Maya 2012 64-bit:
 
 8. Sidenote: installing Python 2.6.x sets your default OSX Python to 2.6.x, but if you want to go back to 2.7.x, just edit your `~/.bash_profile` and remove these lines: 
 
-	`PATH="/Library/Frameworks/Python.framework/Versions/2.6/bin:${PATH}" 
+	`PATH="/Library/Frameworks/Python.framework/Versions/2.6/bin:<span>$</span>{PATH}" 
 	export PATH `
 
 ....and you should be done! In Maya, you should be able to just use import numpy and you'll be good to go! 

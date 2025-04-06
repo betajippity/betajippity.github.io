@@ -19,12 +19,18 @@
         <link rel="shortcut icon" href="/includes/ico/favicon.png">
 
         <link rel="stylesheet" href="https://use.typekit.net/yap3ink.css">
-        <script>
-            MathJax = {
-                messageStyle: "none"
-            };
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+            extensions: ["tex2jax.js"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: true
+            },
+            "CommonHTML": { linebreaks: { automatic: true } }
+            });
         </script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML' type='text/javascript'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML' type='text/javascript'></script>
 
     </head>
     <body class="{{page.page-template}}">

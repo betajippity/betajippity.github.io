@@ -13,7 +13,7 @@ But have you ever accidentally cd'd a file? "cd /stuff/blah.txt" makes no sense 
 
 Enter the 'go' command!
 
-Add this bit of code to your .bashrc file and replace $EDITOR with the CLI text editor of your choice:
+Add this bit of code to your .bashrc file and replace <span>$</span>EDITOR with the CLI text editor of your choice:
 
     go()
     {

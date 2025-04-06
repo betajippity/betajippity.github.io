@@ -715,8 +715,8 @@ Running the native arm64 build, the M1 processor is _4 times more energy efficie
 The M1's maximum TDP is only a third of the Intel Core i7-9750H's maximum TDP, but the actual final energy utilization is a quarter because the M1's faster performance means that the M1 runs for much less time than the Intel Core i7-9750H.
 In other words, running native code, the M1 is both faster _and_ more energy efficient than the Intel Core i7-9750H.
 This result wouldn't be impressive if the comparison was between the M1 and some low-end, power-optimized ultra-portable Intel chip, but that's not what the comparison is with.
-The comparison is with the Intel Core i7-9750H, which is a high-end, 45 W maximum TDP part that MSRPs for $395.
-In comparison, the M1 is estimated to cost about $50, and the entire M1 Mac Mini only has a 39 W TDP total at maximum load; the M1 itself is reported to have a 15 W maximum TDP.
+The comparison is with the Intel Core i7-9750H, which is a high-end, 45 W maximum TDP part that MSRPs for <span>$</span>395.
+In comparison, the M1 is estimated to cost about <span>$</span>50, and the entire M1 Mac Mini only has a 39 W TDP total at maximum load; the M1 itself is reported to have a 15 W maximum TDP.
 Where the comparison between the M1 and the Intel Core i7-9750H gets even more impressive is when looking at the M1's energy utilization running x86-64 code under Rosetta 2: the M1 is _still_ about 3 times more energy efficient than the Intel Core i7-9750H to do the same work.
 Put another way, the M1 is an arm64 processor that can run emulated x86-64 code _faster than a modern native x86-64 processor that cost 5x more and uses 3x more energy can_.
 

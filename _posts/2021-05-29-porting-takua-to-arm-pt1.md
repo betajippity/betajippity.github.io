@@ -916,10 +916,10 @@ We can get the total energy used for each render by multiplying the wall clock r
 
 From the numbers above, we can see that even though the Raspberry Pi 4B is a lot slower than the dual-Xeon workstation in wall clock time, the Raspberry Pi 4B absolutely crushes both the 2015 MacBook Air and the dual-Xeon workstation in terms of energy efficiency.
 To render the same image, the Raspberry Pi 4B used between approximately 3.5x to 5.5x _less_ energy overall than the dual-Xeon workstation, and used between approximately 2.3x to 3.8x less energy than the 2015 MacBook Air.
-It's also worth noting that the 2015 MacBook Air cost $899 when it first launched (and the processor had a recommended price from Intel of $315), and the dual-Xeon workstation cost... I don't actually know.
+It's also worth noting that the 2015 MacBook Air cost <span>$</span>899 when it first launched (and the processor had a recommended price from Intel of <span>$</span>315), and the dual-Xeon workstation cost... I don't actually know.
 I bought the dual-Xeon workstation used for a pittance when my employer retired it, so I don't know how much it actually cost new.
-But, I do know that the processors in the dual-Xeon had a recommended price from Intel of $1723... _each_, for a total of $3446 when they were new.
-In comparison, the Raspberry Pi 4B with 4 GB of RAM costs about $55 for the entire computer, and the processor cost... well, the actual price for most ARM processors is not ever publicly disclosed, but since a baseline Raspberry Pi 4B costs only $35, the processor can't have cost more than a few dollars at most, possibly even under a dollar.
+But, I do know that the processors in the dual-Xeon had a recommended price from Intel of <span>$</span>1723... _each_, for a total of <span>$</span>3446 when they were new.
+In comparison, the Raspberry Pi 4B with 4 GB of RAM costs about <span>$</span>55 for the entire computer, and the processor cost... well, the actual price for most ARM processors is not ever publicly disclosed, but since a baseline Raspberry Pi 4B costs only <span>$</span>35, the processor can't have cost more than a few dollars at most, possibly even under a dollar.
 
 I think the main takeaway from these performance comparisons is that even back with 2015 technology, even though most arm64 processors were slower in absolute terms compared to their x86-64 counterparts, the single-threaded performance was already shockingly close, and arm64 energy usage per compute unit and price already were leaving x86-64 in the dust.
 Fast forward to the present day in 2021, where we have seen Apple's arm64-based M1 chip take the absolute performance crown in its category from all x86-64 competitors, at both a lower energy utilization level and a lower price.

@@ -1218,6 +1218,12 @@ main.content {
     .page-number {
         display: block;
     }
+
+    .site-footer {
+        width: auto;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
 }
 
 /* ==========================================================================

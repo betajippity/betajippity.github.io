@@ -53,7 +53,7 @@ However, I immediately noticed that everything in the UI looked wrong; specifica
 
 The problem turned out to be that the Windows OpenGL/OpenCL/Vulkan compatability pack doesn't seem to correctly implement `GL_FRAMEBUFFER_SRGB`; calling `glEnable(GL_FRAMEBUFFER_SRGB)` did not have any impact on the actual color space that the framebuffer rendered with.
 To work around this problem, I simply added software sRGB emulation to the output fragment shader and added some code to detect if `GL_FRAMEBUFFER_SRGB` was working or not and if not, fall back to the fragment shader's implementation.
-Implementing the sRGB transform is extremely easy and is something that every graphics program inevitably ends up doing a bunch of times throughout one's career:
+Implementing the sRGB transform is extremely easy and is something that every graphics programmer inevitably ends up doing a bunch of times throughout one's career:
 
 ```
 float sRGB(float x) {

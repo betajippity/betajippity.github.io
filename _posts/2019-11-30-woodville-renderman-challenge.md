@@ -146,7 +146,7 @@ Since my scene is set in the morning, I figured maybe it's late in the morning a
 To help sell the idea that it's a lazy fishing morning, I added a fishing hat on one of the chairs and put a pitcher of ice tea and some glasses on the table.
 I also added a clothesline with some hanging drying laundry, along with a bunch of potted and hanging plants, just to add a bit more of that lived-in feel.
 For the plants and several of the furniture pieces that I knew I would want to tweak later, I built in controls to their shading graphs using PxrColorCorrect nodes to allow me to adjust hue and saturation later.
-Many of the furniture, plant and prop models are highly modified, kitbashed, re-textured versions of assets from Evermotion and CGAxis, although some of them (notable the Eames Lounge Chair) are entirely my own.
+Many of the furniture, plant and prop models are highly modified, kitbashed, re-textured versions of assets from Evermotion and CGAxis, although some of them (notably the Eames Lounge Chair) are entirely my own.
 
 [![Figure 13: In-progress test render closeup crop of the lower main cabin, with furniture and plants and props.]({{site.url}}/content/images/2019/Nov/woodville/preview/progress096_crop1.jpg)]({{site.url}}/content/images/2019/Nov/woodville/progress096_crop1.jpg)
 

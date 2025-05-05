@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ship Wet/Dry Comparison, Wide View</title>
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+        <link rel="stylesheet" href="/includes/css/style.css?v=144.0.0">
+        <link rel="stylesheet" href="https://use.typekit.net/yap3ink.css">
+    </head>
+        
+    <body>
+        <link type="text/css" href="before-after.css" rel="stylesheet">
+
+        <div class="ba-slider" style="max-width:3840px; margin: auto;">
+            <img src="../viewport_supportgeo.webp">
+            <div class="resize">
+                <img src="../viewport_supportgeo_highres.webp">
+            </div>
+            <span class="handle"></span>
+        </div>
+
+        <div class="figcaption"><span>Figure 15: Full-resolution geometry that I wanted moss on (left) versus the decimated version of that geometry used as base geometry for XGen Geometry Instancer (right).</span></div>
+
+        <script type="text/javascript" src="/includes/js/jquery.min.js"></script>
+        <!-- <script type="text/javascript" src="before-after.min.js"></script> -->
+        <!-- CDN link if you prefer to use this one -->
+        <script type="text/javascript" src="before-after.js"></script>
+        <script type="text/javascript">
+            $('.ba-slider').beforeAfter();
+        </script>
+    </body>
+
+</html>

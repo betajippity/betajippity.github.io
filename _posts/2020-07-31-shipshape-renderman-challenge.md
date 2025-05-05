@@ -163,7 +163,7 @@ In some other cases, I added new edgeloops to the existing models just so I coul
 ## Shading the Ship
 
 For the previous Art Challenge, I used a combination of PxrDisney and PxrSurface shaders; this time around, in order to get a better understanding of how PxrSurface works, I opted to go all-in on using PxrSurface for everything in the scene.
-Also, for the rain streaks effect (discussed later in this post), I needed some features that are available in the extended Disney Bsdf model [[Burley 2015]](https://doi.org/10.1145/2776880.2787670) and in PxrSurface [[Hery and Ling 2017]](http://graphics.pixar.com/library/PxrMaterialsCourse2017/index.html), but RenderMan 23 only implements the base Disney Brdf [[Burley 2012]](https://doi.org/10.1145/2343483.2343493) without the extended Bsdf features; this basically meant I had to use PxrSuface.
+Also, for the rain streaks effect (discussed later in this post), I needed some features that are available in the extended Disney Bsdf model [[Burley 2015]](https://doi.org/10.1145/2776880.2787670) and in PxrSurface [[Hery et al. 2017]](http://graphics.pixar.com/library/PxrMaterialsCourse2017/index.html), but RenderMan 23 only implements the base Disney Brdf [[Burley 2012]](https://doi.org/10.1145/2343483.2343493) without the extended Bsdf features; this basically meant I had to use PxrSuface.
 
 One of the biggest differences I had to adjust to was how metallic color is controlled in PxrSurface.
 The Disney Bsdf drives the diffuse color and metallic color using the same base color parameter and shifts energy between the diffuse/spec and metallic lobes using a "metallic" parameter, but PxrSurface separates the diffuse and metallic colors entirely.
@@ -621,13 +621,13 @@ Johannes Hanika, Marc Droske, and Luca Fascione. 2015. [Manifold Next Event Esti
 
 Eric Heitz and Fabrice Neyret. 2018. [High-Performance By-Example Noise using a Histogram-Preserving Blending Operator](https://dl.acm.org/doi/10.1145/3233304). _Proceedings of the ACM on Computer Graphics and Interactive Techniques_. 1, 2 (2018), 31:1-31:25.
 
-Christophe Hery and Junyi Ling. 2017. [Pixar's Foundation for Materials: PxrSurface and PxrMarschnerHair](http://graphics.pixar.com/library/PxrMaterialsCourse2017/index.html). In [_ACM SIGGRAPH 2017 Course Notes: Physically Based Shading in Theory and Practice_](https://blog.selfshadow.com/publications/s2017-shading-course/).
+Christophe Hery, Ryusuke Villemin, and Junyi Ling. 2017. [Pixar's Foundation for Materials: PxrSurface and PxrMarschnerHair](http://graphics.pixar.com/library/PxrMaterialsCourse2017/index.html). In [_ACM SIGGRAPH 2017 Course Notes: Physically Based Shading in Theory and Practice_](https://blog.selfshadow.com/publications/s2017-shading-course/).
 
 Christophe Hery, Ryusuke Villemin, and Florian Hecht. 2016. [Towards Bidirectional Path Tracing at Pixar](http://graphics.pixar.com/library/BiDir/). In [_ACM SIGGRAPH 2016 Course Notes: Physically Based Shading in Theory and Practice_](https://blog.selfshadow.com/publications/s2016-shading-course/).
 
 Julian Fong, Magnus Wrenninge, Christopher Kulla, and Ralf Habel. 2017. [Production Volume Rendering](https://doi.org/10.1145/3084873.3084907). In _ACM SIGGRAPH 2017 Courses_.
 
-Iliyan Georgiev, Jamie Portsmouth, Zap Andersson, Adrien Herubel, Alan King, Shinji Ogaki, Frederic Servant. 2019. [Autodesk Standard Surface](https://autodesk.github.io/standard-surface/). Autodesk white paper.
+Iliyan Georgiev, Jamie Portsmouth, Zap Andersson, Adrien Herubel, Alan King, Shinji Ogaki, Frederic Servant. 2019. [Autodesk Standard Surface](https://autodesk.github.io/standard-surface/). _Autodesk white paper_.
 
 Ole Gulbrandsen. 2014. [Artistic Friendly Metallic Fresnel](http://jcgt.org/published/0003/04/03/). _Journal of Computer Graphics Techniques_. 3, 4 (2014), 64-72.
 

@@ -26,7 +26,9 @@
     <!-- CDN link if you prefer to use this one -->
     <script type="text/javascript" src="before-after.js"></script>
     <script type="text/javascript">
-        $('.ba-slider').beforeAfter();
+        window.onload = function () {
+            $('.ba-slider').beforeAfter();
+        };
     </script>
 </body>
 

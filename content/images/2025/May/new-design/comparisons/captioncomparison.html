@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Old vs New Captions Comparison</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <link rel="stylesheet" href="/includes/css/style.css?v=144.0.0">
+    <link rel="stylesheet" href="https://use.typekit.net/yap3ink.css">
+</head>
+
+<body>
+    <link type="text/css" href="before-after.css" rel="stylesheet">
+
+    <div class="ba-slider" style="max-width:3840px; margin: auto;">
+        <img src="../caption_new.jpg">
+        <div class="resize">
+            <img src="../caption_old.jpg">
+        </div>
+        <span class="handle"></span>
+    </div>
+
+    <div class="figcaption"><span>Figure 3: Image caption, before (left) and after (right) applying the new unified theme. Before, captions were always center aligned, whereas now, captions are center aligned if they fit on one line but automatically become left aligned if they spill onto more than one line.</span></div>
+
+    <script type="text/javascript" src="/includes/js/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="before-after.min.js"></script> -->
+    <!-- CDN link if you prefer to use this one -->
+    <script type="text/javascript" src="before-after.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            $('.ba-slider').beforeAfter();
+        };
+    </script>
+</body>
+
+</html>

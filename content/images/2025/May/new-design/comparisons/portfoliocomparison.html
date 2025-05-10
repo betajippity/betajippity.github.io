@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Old vs New Main Site Home Page Design Comparison</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <link rel="stylesheet" href="/includes/css/style.css?v=144.0.0">
+    <link rel="stylesheet" href="https://use.typekit.net/yap3ink.css">
+</head>
+
+<body>
+    <link type="text/css" href="before-after.css" rel="stylesheet">
+
+    <div class="ba-slider" style="max-width:3840px; margin: auto;">
+        <img src="../portfolio_new.jpg">
+        <div class="resize">
+            <img src="../portfolio_old.jpg">
+        </div>
+        <span class="handle"></span>
+    </div>
+
+    <div class="figcaption"><span>Figure 1: Main site home page, before (left) and after (right) applying the new unified theme.</span></div>
+
+    <script type="text/javascript" src="/includes/js/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="before-after.min.js"></script> -->
+    <!-- CDN link if you prefer to use this one -->
+    <script type="text/javascript" src="before-after.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            $('.ba-slider').beforeAfter();
+        };
+    </script>
+</body>
+
+</html>

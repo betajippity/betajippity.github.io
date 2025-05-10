@@ -25,8 +25,9 @@ The blog has been powered by Jekyll ever since.
 As a bonus, moving to a static site generator made everything both way faster and way easier.
 Meanwhile, the portfolio part of the site has always been a completely custom thing because the portfolio site has a lot of specific custom layouts and I always found that building those layouts by hand was easier and simpler than trying to hammer some pre-existing framework into the shape I wanted.
 Over time I stripped away more and more of the underlying CMS until I realized I didn't need one at all, at which point I gutted the entire CMS and made the portfolio site just a bunch of hand-written HTML files with a simple script to apply the site's theming to every page before uploading to my web server.
+This dual-stack setup has stuck for a long time now because at least for me it allows me to run a blog and personal website with a minimal amount of fuss; the goal is to [spend far more time actually writing posts than mucking around with the site's underlying tech stack](https://rakhim.org/honestly-undefined/19/).
 
-The net result of these two different evolutionary paths is that while I have always aimed to make the blog and portfolio sites look similar, they've always looked kind of different from each other, sometimes in strange ways.
+However, one unfortunate net result of these two different evolutionary paths is that while I have always aimed to make the blog and portfolio sites look similar, they've always looked kind of different from each other, sometimes in strange ways.
 The blog and portfolio have always had different header bars and navigation menus, even if the overall style of the header was similar.
 Both parts of the site always used the same typefaces, but in different places for different things, with completely inconsistent letter spacing, sizing, line heights, and more.
 Captions have always worked differently between the two parts of the site as well.

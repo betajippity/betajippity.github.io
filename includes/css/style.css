@@ -171,6 +171,7 @@ a:visited {
 a:hover {
     color: grey;
     text-decoration: underline;
+    text-decoration-skip-ink: auto;
 }
 a:active {
     text-decoration: none;
@@ -503,6 +504,7 @@ a.nav:visited {
 a.nav:hover {
     color: red;
     text-decoration: underline;
+    text-decoration-skip-ink: auto;
 }
 a.nav:active {
     color: red;
@@ -552,6 +554,7 @@ a.nav:active {
 .figcaption a:hover {
     color: grey;
     text-decoration: underline;
+    text-decoration-skip-ink: auto;
 }
 
 .figcaption a:visited {
@@ -587,6 +590,7 @@ a.nav:active {
 .codecaption a:hover {
     color: grey;
     text-decoration: underline;
+    text-decoration-skip-ink: auto;
 }
 
 .codecaption a:visited {
@@ -727,6 +731,7 @@ main.content {
 
 .post-meta a:hover {
     text-decoration: underline;
+    text-decoration-skip-ink: auto;
 }
 
 .user-meta {
@@ -940,6 +945,7 @@ main.content {
 .site-footer a:hover {
     color: #FF0000;
     text-decoration: underline;
+    text-decoration-skip-ink: auto;
 }
 
 .copyright {

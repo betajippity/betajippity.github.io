@@ -439,7 +439,7 @@ Here's some additional commentary for each of the photos, presented in the same 
 7. My then-girlfriend now-wife shooting a video project when we were in university. This was in Penn's Singh Center for Nanotechnology building.
 8. A worker hanging a chandelier in Shanghai's 1933 Laoyangfang complex. This place used to be a municipal slaughterhouse but now contains creative spaces.
 9. The Los Angeles skyline, as seen from the Stough Canyon trail above Burbank. The tiny dot in the center of the frame is actually a plane on landing approach to LAX.
-10. My friend Alex stopping to take in the waves as a storm approached the eastern coast of Taiwan.
+10. My friend Alex stopping to take in the waves as a storm was approaching the eastern coast of Taiwan.
 11. Looking past the Roy O. Disney building towards the Team Disney headquarters building on Disney's Burbank studio lot.
 12. A past SIGGRAPH party somewhere in the fashion district in downtown Los Angeles.
 

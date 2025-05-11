@@ -270,7 +270,7 @@ Overall I think compared with the hot air balloon idea, the cabin does a much be
 Much like in the [Shipshape Art Challenge project](https://blog.yiningkarlli.com/2020/07/shipshape-renderman-challenge.html), I used PxrSurface exclusively as the shading model for everything in this project.
 However, for the cabin, using PxrSurface became kind of cumbersome because the shader parameterization that Evermotion assets come with doesn't match up directly with PxrSurface's parameterization.
 Specifically, Evermotion assets typically come with Vray, Corona, or generic "PBR" materials.
-Corona and generic "PBR" materials are the easiest to adapt to other renderers because they both follow the roughness/metallic/basecolor workflow that was originally introduced by the Disney BRDF [[Burley 2012]](https://doi.org/10.1145/2343483.2343493) and has since become the de-facto norm across many popular and widely-used physically based shading systems [\[Karis 2013](https://blog.selfshadow.com/publications/s2013-shading-course/karis/s2013_pbs_epic_notes_v2.pdf), [Kulla and Estevez 2017](https://blog.selfshadow.com/publications/s2017-shading-course/imageworks/s2017_pbs_imageworks_slides_v2.pdf), [Georgiev et al. 2019](https://autodesk.github.io/standard-surface/), [Häussler et al. 2020](https://dassaultsystemes-technology.github.io/EnterprisePBRShadingModel/), [Noguer et al. 2021](https://substance3d.adobe.com/documentation/s3d/asm-specifications-225969597.html), [Stockner 2022](https://conference.blender.org/2022/presentations/1407/), [Andersson et al. 2024\]](https://academysoftwarefoundation.github.io/OpenPBR/)<sup>[1](#2020-12-28-footnote-1)</sup>.
+Corona and generic "PBR" materials are the easiest to adapt to other renderers because they both follow the roughness/metallic/basecolor workflow that was originally introduced by the Disney BRDF [[Burley 2012]](https://doi.org/10.1145/2343483.2343493) and has since become the de-facto norm across many popular and widely-used physically based shading systems [\[Karis 2013](https://blog.selfshadow.com/publications/s2013-shading-course/karis/s2013_pbs_epic_notes_v2.pdf), [Kulla and Estevez 2017](https://blog.selfshadow.com/publications/s2017-shading-course/imageworks/s2017_pbs_imageworks_slides_v2.pdf), [Georgiev et al. 2019](https://autodesk.github.io/standard-surface/), [Häussler et al. 2020](https://dassaultsystemes-technology.github.io/EnterprisePBRShadingModel/), [Noguer et al. 2021](https://substance3d.adobe.com/documentation/s3d/asm-specifications-225969597.html), [Stockner 2022](https://conference.blender.org/2022/presentations/1407/), [Andersson et al. 2024\]](https://academysoftwarefoundation.github.io/OpenPBR/)<sup id="2020-12-28-footnote-1-backlink">[1](#2020-12-28-footnote-1)</sup>.
 PxrSurface, however, notably does not follow the roughness/metallic/basecolor parameterization [[Hery et al. 2017]](http://graphics.pixar.com/library/PxrMaterialsCourse2017/index.html); roughness is the same in PxrSurface as in pretty much every other modern physical shading model, but instead of metallic, PxrSurface uses a combination of face color, edge color, and fresnel exponent to control how metallic a material looks.
 In order to convert metallic/basecolor maps into something PxrSurface could use, the approach I took was:
 
@@ -283,7 +283,7 @@ In order to convert metallic/basecolor maps into something PxrSurface could use,
 When creating textures from scratch using Substance Painter, as I did for the Shipshape project, PxrSurface's parameterization isn't an issue because Substance Painter has built in export templates to save out textures in PxrSurface's expected parameterization even though Substance Painter uses a standard metallic/basecolor workflow.
 When bringing in existing metallic/basecolor textures though, the above conversion has to be done within the material's node network.
 I had to wire up a small node subnetwork to do this for every single Evermotion material that had metallic, which got really old really quickly.
-At least as of RenderMan 23 (the current version while I was working on this project), RenderMan doesn't have any utility node to do this conversion from metallic/basecolor to PxrSurface's diffuse/specular face/specular edge color paramterization<sup>[2](#2020-12-28-footnote-2)</sup>; such a node would be really helpful!
+At least as of RenderMan 23 (the current version while I was working on this project), RenderMan doesn't have any utility node to do this conversion from metallic/basecolor to PxrSurface's diffuse/specular face/specular edge color paramterization<sup id="2020-12-28-footnote-2-backlink">[2](#2020-12-28-footnote-2)</sup>; such a node would be really helpful!
 Alternatively, a full implementation of the Disney BSDF [[Burley 2015]](https://doi.org/10.1145/2776880.2787670) (as opposed to the reduced-paramter Disney BRDF that is already available) would be useful too since a full implementation of the Disney BSDF would both be able to accept roughness/metallic/basecolor parameterized inputs and provide the full range of abilities that a production-quality shading model needs.
 
 ## Mist and Atmospherics
@@ -426,10 +426,9 @@ Walt Disney Animation Studios. 2011. [SeExpr](https://wdas.github.io/SeExpr/).
 
 ## Footnotes
 
-<div id="2020-12-28-footnote-1">
-<sup>1</sup> Additional post-2020 references added in update to post in May 2025..
-</div>
-<p>
-<div id="2020-12-28-footnote-2">
-<sup>2</sup> As of RenderMan 24, released in 2021, RenderMan does now have a <a href="https://rmanwiki-26.pixar.com/space/REN26/19661673/PxrMetallicWorkflow">PxrMetallicWorkflow node</a> that converts metallic/basecolor inputs into the diffuse/specular face/specular edge color inputs that PxrSurface expects. RenderMan 24 also includes a <a href="https://rmanwiki-24.pixar.com/space/REN24/21759038/PxrDisneyBsdf">new implementation of the full version of the Disney BSDF</a>.
-</div>
+<sup id="2020-12-28-footnote-1">1</sup> Additional post-2020 references added in update to post in May 2025.
+<a href="#2020-12-28-footnote-1-backlink">↩</a>
+<p></p>
+<sup id="2020-12-28-footnote-2">2</sup> As of RenderMan 24, released in 2021, RenderMan does now have a <a href="https://rmanwiki-26.pixar.com/space/REN26/19661673/PxrMetallicWorkflow">PxrMetallicWorkflow node</a> that converts metallic/basecolor inputs into the diffuse/specular face/specular edge color inputs that PxrSurface expects. RenderMan 24 also includes a <a href="https://rmanwiki-24.pixar.com/space/REN24/21759038/PxrDisneyBsdf">new implementation of the full version of the Disney BSDF</a>.
+<a href="#2020-12-28-footnote-2-backlink">↩</a>
+

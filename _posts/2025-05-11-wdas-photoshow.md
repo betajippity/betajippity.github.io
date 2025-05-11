@@ -145,7 +145,7 @@ There isn't really a coherent theme; these are just photos I've taken that I lik
 Some are travel photos, some are of my family, and others are just interesting moments that I noticed.
 I won't go into my photography and editing process and whatnot here; I'll save that for a future post.
 
-I color grade my photos for both SDR and HDR; if you are using a device/browser that supports HDR<sup>[1](#2025-05-11-photoshow-footnote-1)</sup> , give the "Enable HDR" toggle below a try!
+I color grade my photos for both SDR and HDR; if you are using a device/browser that supports HDR<sup id="2025-05-11-photoshow-footnote-1-backlink">[1](#2025-05-11-photoshow-footnote-1)</sup> , give the "Enable HDR" toggle below a try!
 If your device/browser doesn't support HDR for this site, a warning message will be displayed below; if there's no warning message, then that means your device/browser supports HDR for this site and the HDR toggle will work correctly for you.
 
 I wrote a small artist's statement for the show:
@@ -537,9 +537,7 @@ The opening had a great turnout; thanks to everyone that came by!
 
 ## Footnotes
 
-<div id="2025-05-11-photoshow-footnote-1">
-</div>
-<sup>1</sup> At time of posting, this post's HDR mode makes use of browser HDR video support to display HDR pictures as single-frame HDR videos, since no browser has HDR image support enabled by default yet. The following devices/browsers are known to support HDR videos by default:
+<sup id="2025-05-11-photoshow-footnote-1">1</sup> At time of posting, this post's HDR mode makes use of browser HDR video support to display HDR pictures as single-frame HDR videos, since no browser has HDR image support enabled by default yet. The following devices/browsers are known to support HDR videos by default:
 
 * Safari on iOS 14 or newer, running on the iPhone 12 generation or newer, and on iPhone 11 Pro.
 * Safari on iPadOS 14 or newer, running on the 12 inch iPad Pros with M1 or M2 chip, and on all iPad Pros with M4 chip or newer.
@@ -547,4 +545,5 @@ The opening had a great turnout; thanks to everyone that came by!
 * Chrome 87 or newer, or Edge 87 or newer, on Windows 10 or newer, running on any PC with a compatible DisplayHDR-1000 or higher display (examples: any monitor on [this list](https://www.displayninja.com/hdr-monitor-list/)). You may also need to adjust HDR settings in Windows.
 * Chrome 87 or newer on Android 14 or newer, running on devices with an Android Ultra HDR compatible display (examples: Google Pixel 8 generation or newer, Samsung Galaxy S21 generation or newer, OnePlus 12 or newer, and various others).
 
-On Apple devices without HDR-capable displays, iOS and macOS's [EDR system may still allow HDR imagery to look correct under specific circumstances](https://prolost.com/blog/edr).
+On Apple devices without HDR-capable displays, iOS and macOS's [EDR system may still allow HDR imagery to look correct](https://prolost.com/blog/edr) under specific circumstances.
+<a href="#2025-05-11-photoshow-footnote-1-backlink">↩</a>

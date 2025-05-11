@@ -24,7 +24,7 @@
    0. Includes - Ground zero
    ========================================================================== */
 
-@import url(normalize.css);
+@import url(normalize.css?v=145.0.0);
 
 
 /* ==========================================================================
@@ -408,6 +408,16 @@ video {
     height: 0; overflow: hidden; 
     max-width: 100%; 
     height: auto; 
+    margin: 0 auto;
+}
+
+video::-webkit-media-controls {
+    opacity: 0;
+}
+
+.video-background::-webkit-media-controls-panel,
+.video-background::-webkit-media-controls-start-playback-button {
+    display: none !important;
 }
 
 .embed-container { 

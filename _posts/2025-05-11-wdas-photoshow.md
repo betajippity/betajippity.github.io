@@ -173,9 +173,9 @@ Here are my photos from the show, presented in no particular order:
 </div>
 </p>
 
-<p>
+<p id="photo2">
 <div class="sdr">
-    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-02.jpg"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-02.jpg" /></a>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-02.html"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-02.jpg" /></a>
     <div class="figcaption">
         <span>
             Los Angeles, California | Nikon Z8 | Smena Lomo T-43 40mm ƒ/4 | Display Mode: SDR
@@ -183,9 +183,11 @@ Here are my photos from the show, presented in no particular order:
     </div>
 </div>
 <div class="hdr" style="display: none">
-    <video autoplay muted loop playsinline>
-        <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-02.mp4" type="video/mp4">
-    </video>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-02.html">
+        <video autoplay muted loop playsinline>
+            <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-02.mp4" type="video/mp4">
+        </video>
+    </a>
     <div class="figcaption">
         <span>
             Los Angeles, California | Nikon Z8 | Smena Lomo T-43 40mm ƒ/4 | Display Mode: HDR
@@ -194,9 +196,9 @@ Here are my photos from the show, presented in no particular order:
 </div>
 </p>
 
-<p>
+<p id="photo1">
 <div class="sdr">
-    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-01.jpg"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-01.jpg" /></a>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-01.html"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-01.jpg" /></a>
     <div class="figcaption">
         <span>
             Denver, Colorado | Nikon Z8 | Zeiss Planar T* 50mm ƒ/1.4 C/Y | Display Mode: SDR
@@ -204,9 +206,11 @@ Here are my photos from the show, presented in no particular order:
     </div>
 </div>
 <div class="hdr" style="display: none">
-    <video autoplay muted loop playsinline>
-        <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-01.mp4" type="video/mp4">
-    </video>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-01.html">
+        <video autoplay muted loop playsinline>
+            <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-01.mp4" type="video/mp4">
+        </video>
+    </a>
     <div class="figcaption">
         <span>
             Denver, Colorado | Nikon Z8 | Zeiss Planar T* 50mm ƒ/1.4 C/Y | Display Mode: HDR
@@ -215,9 +219,9 @@ Here are my photos from the show, presented in no particular order:
 </div>
 </p>
 
-<p>
+<p id="photo3">
 <div class="sdr">
-    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-03.jpg"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-03.jpg" style="max-width: 66%" /></a>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-03.html"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-03.jpg" style="max-width: 66%" /></a>
     <div class="figcaption" style="max-width: 66%">
         <span>
             Mammoth, California | iPhone 14 Pro | Telephoto Lens 77mm ƒ/2.8 | Display Mode: SDR
@@ -225,9 +229,11 @@ Here are my photos from the show, presented in no particular order:
     </div>
 </div>
 <div class="hdr" style="display: none">
-    <video autoplay muted loop playsinline  style="max-width: 66%" >
-        <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-03.mp4" type="video/mp4">
-    </video>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-03.html">
+        <video autoplay muted loop playsinline  style="max-width: 66%" >
+            <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-03.mp4" type="video/mp4">
+        </video>
+    </a>
     <div class="figcaption" style="max-width: 66%">
         <span>
             Mammoth, California | iPhone 14 Pro | Telephoto Lens 77mm ƒ/2.8 | Display Mode: HDR
@@ -236,9 +242,9 @@ Here are my photos from the show, presented in no particular order:
 </div>
 </p>
 
-<p>
+<p id="photo4">
 <div class="sdr">
-    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-04.jpg"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-04.jpg"/></a>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-04.html"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-04.jpg"/></a>
     <div class="figcaption">
         <span>
             Burbank, California | Nikon Z8 | Zeiss Kipronar 105mm ƒ/1.9 | Display Mode: SDR
@@ -246,9 +252,11 @@ Here are my photos from the show, presented in no particular order:
     </div>
 </div>
 <div class="hdr" style="display: none">
-    <video autoplay muted loop playsinline>
-        <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-04.mp4" type="video/mp4">
-    </video>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-04.html">
+        <video autoplay muted loop playsinline>
+            <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-04.mp4" type="video/mp4">
+        </video>
+    </a>
     <div class="figcaption">
         <span>
             Burbank, California | Nikon Z8 | Zeiss Kipronar 105mm ƒ/1.9 | Display Mode: HDR
@@ -257,9 +265,9 @@ Here are my photos from the show, presented in no particular order:
 </div>
 </p>
 
-<p>
+<p id="photo5">
 <div class="sdr">
-    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-05.jpg"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-05.jpg"/></a>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-05.html"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-05.jpg"/></a>
     <div class="figcaption">
         <span>
             Shanghai, China | Nikon Z8 | Nikon Nikkor Z 24-120mm ƒ/4 S | Display Mode: SDR
@@ -267,9 +275,11 @@ Here are my photos from the show, presented in no particular order:
     </div>
 </div>
 <div class="hdr" style="display: none">
-    <video autoplay muted loop playsinline>
-        <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-05.mp4" type="video/mp4">
-    </video>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-05.html">
+        <video autoplay muted loop playsinline>
+            <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-05.mp4" type="video/mp4">
+        </video>
+    </a>
     <div class="figcaption">
         <span>
             Shanghai, China | Nikon Z8 | Nikon Nikkor Z 24-120mm ƒ/4 S | Display Mode: HDR
@@ -278,9 +288,9 @@ Here are my photos from the show, presented in no particular order:
 </div>
 </p>
 
-<p>
+<p id="photo7">
 <div class="sdr">
-    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-07.jpg"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-07.jpg"/></a>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-07.html"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-07.jpg"/></a>
     <div class="figcaption">
         <span>
             Burbank, California | Nikon Z8 | Asahi Pentax Super-Takumar 50mm ƒ/1.4 | Display Mode: SDR
@@ -288,9 +298,11 @@ Here are my photos from the show, presented in no particular order:
     </div>
 </div>
 <div class="hdr" style="display: none">
-    <video autoplay muted loop playsinline>
-        <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-07.mp4" type="video/mp4">
-    </video>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-07.html">
+        <video autoplay muted loop playsinline>
+            <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-07.mp4" type="video/mp4">
+        </video>
+    </a>
     <div class="figcaption">
         <span>
             Burbank, California | Nikon Z8 | Asahi Pentax Super-Takumar 50mm ƒ/1.4 | Display Mode: HDR
@@ -299,9 +311,9 @@ Here are my photos from the show, presented in no particular order:
 </div>
 </p>
 
-<p>
+<p id="photo8">
 <div class="sdr">
-    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-08.jpg"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-08.jpg" style="max-width: 66%" /></a>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-08.html"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-08.jpg" style="max-width: 66%" /></a>
     <div class="figcaption" style="max-width: 66%">
         <span>
             Philadelphia, Pennsylvania | iPhone 5s | Main Lens 29mm ƒ/2.2 | Display Mode: SDR
@@ -309,9 +321,11 @@ Here are my photos from the show, presented in no particular order:
     </div>
 </div>
 <div class="hdr" style="display: none">
-    <video autoplay muted loop playsinline  style="max-width: 66%" >
-        <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-08.mp4" type="video/mp4">
-    </video>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-08.html">
+        <video autoplay muted loop playsinline  style="max-width: 66%" >
+            <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-08.mp4" type="video/mp4">
+        </video>
+    </a>
     <div class="figcaption" style="max-width: 66%">
         <span>
             Philadelphia, Pennsylvania | iPhone 5s | Main Lens 29mm ƒ/2.2 | Display Mode: HDR
@@ -320,9 +334,9 @@ Here are my photos from the show, presented in no particular order:
 </div>
 </p>
 
-<p>
+<p id="photo6">
 <div class="sdr">
-    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-06.jpg"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-06.jpg"/></a>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-06.html"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-06.jpg"/></a>
     <div class="figcaption">
         <span>
             Shanghai, China | Nikon D5100 | Nikon AF-S DX NIkkor 18-55mm ƒ/3.5-5.6 | Display Mode: SDR
@@ -330,9 +344,11 @@ Here are my photos from the show, presented in no particular order:
     </div>
 </div>
 <div class="hdr" style="display: none">
-    <video autoplay muted loop playsinline>
-        <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-06.mp4" type="video/mp4">
-    </video>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-06.html">
+        <video autoplay muted loop playsinline>
+            <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-06.mp4" type="video/mp4">
+        </video>
+    </a>
     <div class="figcaption">
         <span>
             Shanghai, China | Nikon D5100 | Nikon AF-S DX NIkkor 18-55mm ƒ/3.5-5.6 | Display Mode: HDR
@@ -341,9 +357,9 @@ Here are my photos from the show, presented in no particular order:
 </div>
 </p>
 
-<p>
+<p id="photo9">
 <div class="sdr">
-    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-09.jpg"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-09.jpg"/></a>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-09.html"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-09.jpg"/></a>
     <div class="figcaption">
         <span>
             Burbank, California | Nikon Z8 | Nikon Nikkor Z 24-120mm ƒ/4 S | Display Mode: SDR
@@ -351,9 +367,11 @@ Here are my photos from the show, presented in no particular order:
     </div>
 </div>
 <div class="hdr" style="display: none">
-    <video autoplay muted loop playsinline>
-        <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-09.mp4" type="video/mp4">
-    </video>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-09.html">
+        <video autoplay muted loop playsinline>
+            <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-09.mp4" type="video/mp4">
+        </video>
+    </a>
     <div class="figcaption">
         <span>
             Burbank, California | Nikon Z8 | Nikon Nikkor Z 24-120mm ƒ/4 S | Display Mode: HDR
@@ -365,9 +383,9 @@ Here are my photos from the show, presented in no particular order:
 Additionally, there were a few photos that I had originally picked out for the show but didn't make the cut in the end due to limited wall space.
 I thought I'd include them here as well:
 
-<p>
+<p id="photo11">
 <div class="sdr">
-    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-11.jpg"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-11.jpg" style="max-width: 66%" /></a>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-11.html"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-11.jpg" style="max-width: 66%" /></a>
     <div class="figcaption" style="max-width: 66%">
         <span>
             Hualien, Taiwan | Nikon Z8 | Nikon Nikkor Z 24-120mm ƒ/4 S | Display Mode: SDR
@@ -375,9 +393,11 @@ I thought I'd include them here as well:
     </div>
 </div>
 <div class="hdr" style="display: none">
-    <video autoplay muted loop playsinline  style="max-width: 66%" >
-        <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-11.mp4" type="video/mp4">
-    </video>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-11.html">
+        <video autoplay muted loop playsinline  style="max-width: 66%" >
+            <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-11.mp4" type="video/mp4">
+        </video>
+    </a>
     <div class="figcaption" style="max-width: 66%">
         <span>
             Hualien, Taiwan | Nikon Z8 | Nikon Nikkor Z 24-120mm ƒ/4 S | Display Mode: HDR
@@ -386,9 +406,9 @@ I thought I'd include them here as well:
 </div>
 </p>
 
-<p>
+<p id="photo12">
 <div class="sdr">
-    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-12.jpg"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-12.jpg" style="max-width: 66%" /></a>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-12.html"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-12.jpg" style="max-width: 66%" /></a>
     <div class="figcaption" style="max-width: 66%">
         <span>
             Burbank, California | Fujifilm X-M1 | Fujifilm Fujinon XF 27mm ƒ/2.8 | Display Mode: SDR
@@ -396,9 +416,11 @@ I thought I'd include them here as well:
     </div>
 </div>
 <div class="hdr" style="display: none">
-    <video autoplay muted loop playsinline  style="max-width: 66%" >
-        <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-12.mp4" type="video/mp4">
-    </video>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-12.html">
+        <video autoplay muted loop playsinline  style="max-width: 66%" >
+            <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-12.mp4" type="video/mp4">
+        </video>
+    </a>
     <div class="figcaption" style="max-width: 66%">
         <span>
             Burbank, California | Fujifilm X-M1 | Fujifilm Fujinon XF 27mm ƒ/2.8 | Display Mode: HDR
@@ -407,9 +429,9 @@ I thought I'd include them here as well:
 </div>
 </p>
 
-<p>
+<p id="photo10">
 <div class="sdr">
-    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-10.jpg"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-10.jpg" /></a>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-10.html"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-10.jpg" /></a>
     <div class="figcaption" >
         <span>
             Los Angeles, California | iPhone 5s | Main Lens 29mm ƒ/2.2 | Display Mode: SDR
@@ -417,9 +439,11 @@ I thought I'd include them here as well:
     </div>
 </div>
 <div class="hdr" style="display: none">
-    <video autoplay muted loop playsinline>
-        <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-10.mp4" type="video/mp4">
-    </video>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-10.html">
+        <video autoplay muted loop playsinline>
+            <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/wdas-photoshow-10.mp4" type="video/mp4">
+        </video>
+    </a>
     <div class="figcaption">
         <span>
             Los Angeles, California | iPhone 5s | Main Lens 29mm ƒ/2.2 | Display Mode: HDR
@@ -447,9 +471,9 @@ Finally, here's a few snapshots of what the show looks like, towards the end of 
 The opening had a great turnout; thanks to everyone that came by!
 
 
-<p>
+<p id="show2">
 <div class="sdr">
-    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-02.jpg"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-02.jpg" style="max-width: 66%" /></a>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-02.html"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-02.jpg" style="max-width: 66%" /></a>
     <div class="figcaption" style="max-width: 66%">
         <span>
             Justin's awesome logo for the show. | Display Mode: SDR
@@ -457,9 +481,11 @@ The opening had a great turnout; thanks to everyone that came by!
     </div>
 </div>
 <div class="hdr" style="display: none">
-    <video autoplay muted loop playsinline  style="max-width: 66%" >
-        <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-02.mp4" type="video/mp4">
-    </video>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-02.html">
+        <video autoplay muted loop playsinline  style="max-width: 66%" >
+            <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-02.mp4" type="video/mp4">
+        </video>
+    </a>
     <div class="figcaption" style="max-width: 66%">
         <span>
             Justin's awesome logo for the show. | Display Mode: HDR
@@ -468,40 +494,44 @@ The opening had a great turnout; thanks to everyone that came by!
 </div>
 </p>
 
-<p>
+<p id="show3">
 <div class="sdr">
-    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-03.jpg"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-03.jpg"/></a>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-03.html"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-03.jpg"/></a>
     <div class="figcaption">
         <span>
-            Crowds dying down towards the end of the show's opeining. | Display Mode: SDR
+            Crowds dying down towards the end of the show's opening. | Display Mode: SDR
         </span>
     </div>
 </div>
 <div class="hdr" style="display: none">
-    <video autoplay muted loop playsinline>
-        <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-03.mp4" type="video/mp4">
-    </video>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-03.html">
+        <video autoplay muted loop playsinline>
+            <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-03.mp4" type="video/mp4">
+        </video>
+    </a>
     <div class="figcaption">
         <span>
-            Crowds dying down towards the end of the show's opeining. | Display Mode: HDR
+            Crowds dying down towards the end of the show's opening. | Display Mode: HDR
         </span>
     </div>
 </div>
 </p>
 
-<p>
+<p id="show1">
 <div class="sdr">
-    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-01.jpg"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-01.jpg" style="max-width: 66%" /></a>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-01.html"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-01.jpg" style="max-width: 66%" /></a>
     <div class="figcaption" style="max-width: 66%">
         <span>
             The gallery hallway looking in the other direction. | Display Mode: SDR
         </span>
     </div>
 </div>
-<div class="hdr" style="display: none">
-    <video autoplay muted loop playsinline  style="max-width: 66%" >
-        <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-01.mp4" type="video/mp4">
-    </video>
+<div class="hdr" style="display: none">\
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-01.html">
+        <video autoplay muted loop playsinline  style="max-width: 66%" >
+            <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-01.mp4" type="video/mp4">
+        </video>
+    </a>
     <div class="figcaption" style="max-width: 66%">
         <span>
             The gallery hallway looking in the other direction. | Display Mode: HDR
@@ -511,9 +541,9 @@ The opening had a great turnout; thanks to everyone that came by!
 </p>
 
 
-<p>
+<p id="show4">
 <div class="sdr">
-    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-04.jpg"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-04.jpg"/></a>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-04.html"><img src="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-04.jpg"/></a>
     <div class="figcaption">
         <span>
             My pieces framed and on the wall. | Display Mode: SDR
@@ -521,9 +551,11 @@ The opening had a great turnout; thanks to everyone that came by!
     </div>
 </div>
 <div class="hdr" style="display: none">
-    <video autoplay muted loop playsinline>
-        <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-04.mp4" type="video/mp4">
-    </video>
+    <a href="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-04.html">
+        <video autoplay muted loop playsinline>
+            <source src="{{site.url}}/content/images/2025/May/wdas-photoshow/show-opening-04.mp4" type="video/mp4">
+        </video>
+    </a>
     <div class="figcaption">
         <span>
             My pieces framed and on the wall. | Display Mode: HDR

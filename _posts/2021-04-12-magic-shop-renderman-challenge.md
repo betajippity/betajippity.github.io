@@ -115,7 +115,7 @@ The fuzz fibers are shaded using PxrMarschnerHair and colored to match the fabri
 I didn't actually go as crazy as replacing the entire cloth surface mesh with woven curves; I didn't have nearly enough time to write all of the custom software that would require, but fuzzy curves on top of the cloth surface mesh is a more-than-good-enough solution for the distance that I was going to have the camera at from the character.
 The end result instantly looked vastly better, as seen in this comparison of before and after adding fuzz fibers:
 
-<div class='embed-container'>
+<div class='embed-container' id="shirt_fuzznofuzzcompare">
 <iframe src="/content/images/2021/Apr/magicshop/comparisons/shirt_fuzznofuzzcompare_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 5: Shirt before (left) and after (right) XGen fuzz. For a full screen comparison, <a href="/content/images/2021/Apr/magicshop/comparisons/shirt_fuzznofuzzcompare.html">click here.</a></span></div>
 
@@ -128,7 +128,7 @@ Here is a comparison of my final character texturing/shading/look, backlit witho
 The lighting setup is exactly the same between the two renders; the only difference is the presence of fuzz causing the rim effect.
 This effect doesn't happen when using only the fuzz lobe of PxrSurface!
 
-<div class='embed-container-square'>
+<div class='embed-container-square' id="character_backlightcompare">
 <iframe src="/content/images/2021/Apr/magicshop/comparisons/character_backlightcompare_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 6: Character backlit without and with fuzz. The rim lighting effect is created entirely by backlighting scattering through XGen fuzz on the character and the outfit. For a full screen comparison, <a href="/content/images/2021/Apr/magicshop/comparisons/character_backlightcompare.html">click here.</a> Click <a href="/content/images/2021/Apr/magicshop/character.003.jpg">here</a> and <a href="/content/images/2021/Apr/magicshop/character.004.jpg">here</a> to see the full 4K renders by themselves.</span></div>
 
@@ -440,7 +440,7 @@ In previous RenderMan Art Challenges, I broke out lights into several different 
 Here is a comparison of the final beauty pass with the initial putting-everything-together render from Figure 40.
 Note how the overall lighting is actually not too different, but there are many small adjustments and tweaks:
 
-<div class='embed-container'>
+<div class='embed-container' id="beforeafterlighting">
 <iframe src="/content/images/2021/Apr/magicshop/comparisons/beforeafterlighting_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 43: Before (left) and after (right) final lighting. For a full screen comparison, <a href="/content/images/2021/Apr/magicshop/comparisons/beforeafterlighting.html">click here.</a></span></div>
 

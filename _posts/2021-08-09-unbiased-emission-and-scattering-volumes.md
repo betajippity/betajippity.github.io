@@ -57,7 +57,7 @@ For anyone interested in the technique post-SIGGRAPH 2021, hopefully we'll be ab
 Wayne's excellent implementations of the above techniques proved to be an enormous win for both rendering efficiency and artist workflows on Raya and the Last Dragon; I personally think we would have had enormous difficulties in hitting the lighting art direction on Raya and the Last Dragon if it weren't for Wayne's work.
 I owe Wayne a huge debt of gratitude for letting me be a small part of this project; the discussions were very fun, seeing it all come together was very exciting, and helping put the techniques down on paper for the SIGGRAPH talk was an excellent exercise in figuring out how to communicate cutting edge research clearly.
 
-<div class='embed-container-cinema'>
+<div class='embed-container-cinema' id="beforeaftercomparison_crop">
 <iframe src="/content/images/2021/Aug/unbiased-emission-and-scattering-volumes/comparisons/beforeaftercomparison_crop_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>A frame from Raya and the Last Dragon without our techniques (left), and with both our scattering and emission sampling applied (right). Both images are rendered using 32 spp per volume pass; surface passes are denoised and composited with non-denoised volume passes to isolate noise from volumes. A video version of this comparison is included in our talk's supplementary materials. For a larger still comparison, <a href="/content/images/2021/Aug/unbiased-emission-and-scattering-volumes/comparisons/beforeaftercomparison_crop.html">click here.</a></span></div>
 

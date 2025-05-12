@@ -162,7 +162,7 @@ This scene is the iced tea scene I originally created for my [Nested Dielectrics
 Here is a comparison of a single sample-per-pixel render using bidirectional path tracing on a dual-socket Xeon E5-2680 x86-64 system versus on a Raspberry Pi 4B with a Cortex-A72 based arm64 processor.
 The scene actually appears somewhat noisier than it normally would be coming out of Takua renderer because for this demonstration, I disabled low-discrepancy sampling and had the renderer fall back to purely random [PCG-based](https://www.pcg-random.org/index.html) sample sequences, with the goal of trying to produce more noticeable noise differences:
 
-<div class='embed-container'>
+<div class='embed-container' id="noisecomparison">
 <iframe src="/content/images/2021/May/takua-on-arm-pt1/comparisons/noisecomparison_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 2: A single-spp render demonstrating noise pattern differences between x86-64 (left) versus arm64 (right). Differences are most noticeable on rim of the cup, especially on the left near the handle. For a full screen comparison, <a href="/content/images/2021/May/takua-on-arm-pt1/comparisons/noisecomparison.html">click here.</a></span></div>
 
@@ -170,7 +170,7 @@ The noise differences are actually relatively minimal!
 The most noticeable noise differences are on the rim of the cup; note the left of the rim near the handle.
 Since the noise differences can be fairly difficult to see in the full render on a small screen, here is a 2x zoomed-in crop:
 
-<div class='embed-container'>
+<div class='embed-container' id="noisecomparison_crop">
 <iframe src="/content/images/2021/May/takua-on-arm-pt1/comparisons/noisecomparison_crop_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 3: A zoomed-in crop of Figure 2 showing noise pattern differences between x86-64 (left) versus arm64 (right). For a full screen comparison, <a href="/content/images/2021/May/takua-on-arm-pt1/comparisons/noisecomparison_crop.html">click here.</a></span></div>
 
@@ -192,7 +192,7 @@ For paths that go through the glass tea cup, the path lengths can be very long, 
 As the path lengths get longer, the floating point calculation differences at each bounce accumulate until the entire path begins to diverge significantly between the x86-64 and arm64 versions of the render.
 Fortunately, these differences basically eventually "integrate out" thanks to the magic of Monte Carlo integration; by the time the renders are near converged, the x86-64 and arm64 results are basically perceptually indistinguishable from each other:
 
-<div class='embed-container'>
+<div class='embed-container' id="noisecomparison_nearconverged">
 <iframe src="/content/images/2021/May/takua-on-arm-pt1/comparisons/noisecomparison_nearconverged_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 5: The same cup scene from Figure 1, but now much closer to convergence (2048 spp), rendered using x86-64 (left) and arm64 (right). Note how differences between the x86-64 and arm64 renders are now basically imperceptible to the eye; these are in fact two different images! For a full screen comparison, <a href="/content/images/2021/May/takua-on-arm-pt1/comparisons/noisecomparison_nearconverged.html">click here.</a></span></div>
 
@@ -202,7 +202,7 @@ So, to confirm that there are in fact differences, I've also included below a ve
 Much like in the single spp renders in Figure 1, the areas of greatest difference are in the areas where the path lengths are the longest, which in this scene are areas where paths refract through the glass cup, the tea, and the ice cubes.
 Just, the differences between individual paths for the same sample across x86-64 and arm64 become tiny to the point of insignificance once averaged across 2048 samples-per-pixel:
 
-<div class='embed-container'>
+<div class='embed-container' id="noisecomparison_diff_nearconverged">
 <iframe src="/content/images/2021/May/takua-on-arm-pt1/comparisons/noisecomparison_diff_nearconverged_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 6: Left: Absolute difference between the x86-64 and arm64 renders from Figure 2. Right: Since the absolute difference image basically looks completely black to the eye, I've also included a version of the absolute difference exposed up 10 stops (made 1024 times brighter) to make the differences more visible. For a full screen comparison, <a href="/content/images/2021/May/takua-on-arm-pt1/comparisons/noisecomparison_diff_nearconverged.html">click here.</a></span></div>
 

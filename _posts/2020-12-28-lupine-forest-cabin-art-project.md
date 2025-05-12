@@ -107,7 +107,7 @@ Here is a comparison of what the scene looked like at this point with vertical r
 
 </div>
 
-<div class='embed-container'>
+<div class='embed-container' id="cliffs_compare">
 <iframe src="/content/images/2020/Dec/lupineforestcabin/comparisons/cliffs_compare_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 9: Blocking in lupine flowers and carving out a footpath through the grass and flowers, with vertical rock formations (left) versus sloping rock formations (right). For a full screen comparison, <a href="/content/images/2020/Dec/lupineforestcabin/comparisons/cliffs_compare.html">click here.</a></span></div>
 <p>
@@ -170,7 +170,7 @@ Note that the decimated XGen base geometry obviously isn't visible in the final 
 
 </div>
 
-<div class='embed-container'>
+<div class='embed-container' id="supportgeo_compare">
 <iframe src="/content/images/2020/Dec/lupineforestcabin/comparisons/supportgeo_compare_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 15: Full-resolution geometry that I wanted moss on (left) versus the decimated version used as base geometry for XGen Geometry Instancer (right). For a full screen comparison, <a href="/content/images/2020/Dec/lupineforestcabin/comparisons/supportgeo_compare.html">click here.</a></span></div>
 <p>
@@ -216,7 +216,7 @@ Here's a comparison of what the final viewport looks like with only non-instance
 
 </div>
 
-<div class='embed-container'>
+<div class='embed-container' id="viewport_compare">
 <iframe src="/content/images/2020/Dec/lupineforestcabin/comparisons/viewport_compare_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 20: Final viewport with only non-instanced geometry (left) and with every single XGen instance drawn as a blue bounding box on top (right). For a full screen comparison, <a href="/content/images/2020/Dec/lupineforestcabin/comparisons/viewport_compare.html">click here.</a></span></div>
 <p>

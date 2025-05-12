@@ -37,7 +37,7 @@ Before breaking things down, here's some before and afters:
 
 </div>
 
-<div class='embed-container-tall'>
+<div class='embed-container-tall' id="portfoliocomparison">
 <iframe src="/content/images/2025/May/new-design/comparisons/portfoliocomparison_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 1: Main site home page, before (left) and after (right) applying the new unified theme. For a full screen comparison, <a href="/content/images/2025/May/new-design/comparisons/portfoliocomparison.html">click here.</a></span></div>
 <p>
@@ -46,7 +46,7 @@ Before breaking things down, here's some before and afters:
 
 </div>
 
-<div class='embed-container-tall'>
+<div class='embed-container-tall' id="blogcomparison">
 <iframe src="/content/images/2025/May/new-design/comparisons/blogcomparison_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 2: Blog front page, before (left) and after (right) applying the new unified theme. For a full screen comparison, <a href="/content/images/2025/May/new-design/comparisons/blogcomparison.html">click here.</a></span></div>
 <p>
@@ -74,7 +74,7 @@ Here's the list of what went into the new unified design:
 
 </div>
 
-<div class='embed-container-tall'>
+<div class='embed-container-tall' id="captioncomparison">
 <iframe src="/content/images/2025/May/new-design/comparisons/captioncomparison_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 3: Image caption, before (left) and after (right) applying the new unified theme. Before, captions were always center aligned, whereas now, captions are center aligned if they fit on one line but automatically become left aligned if they spill onto more than one line. For a full screen comparison, <a href="/content/images/2025/May/new-design/comparisons/captioncomparison.html">click here.</a></span></div>
 <p>

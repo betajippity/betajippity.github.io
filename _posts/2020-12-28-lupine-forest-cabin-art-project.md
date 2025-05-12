@@ -427,8 +427,8 @@ Walt Disney Animation Studios. 2011. [SeExpr](https://wdas.github.io/SeExpr/).
 ## Footnotes
 
 <sup id="2020-12-28-footnote-1">1</sup> Additional post-2020 references added in update to post in May 2025.
-<a href="#2020-12-28-footnote-1-backlink">↩</a>
+<a href="#2020-12-28-footnote-1-backlink"><span class="material-symbols-outlined">keyboard_return</span></a>
 <p></p>
 <sup id="2020-12-28-footnote-2">2</sup> As of RenderMan 24, released in 2021, RenderMan does now have a <a href="https://rmanwiki-26.pixar.com/space/REN26/19661673/PxrMetallicWorkflow">PxrMetallicWorkflow node</a> that converts metallic/basecolor inputs into the diffuse/specular face/specular edge color inputs that PxrSurface expects. RenderMan 24 also includes a <a href="https://rmanwiki-24.pixar.com/space/REN24/21759038/PxrDisneyBsdf">new implementation of the full version of the Disney BSDF</a>.
-<a href="#2020-12-28-footnote-2-backlink">↩</a>
+<a href="#2020-12-28-footnote-2-backlink"><span class="material-symbols-outlined">keyboard_return</span></a>
 

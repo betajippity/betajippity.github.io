@@ -546,4 +546,4 @@ The opening had a great turnout; thanks to everyone that came by!
 * Chrome 87 or newer on Android 14 or newer, running on devices with an Android Ultra HDR compatible display (examples: Google Pixel 8 generation or newer, Samsung Galaxy S21 generation or newer, OnePlus 12 or newer, and various others).
 
 On Apple devices without HDR-capable displays, iOS and macOS's [EDR system may still allow HDR imagery to look correct](https://prolost.com/blog/edr) under specific circumstances.
-<a href="#2025-05-11-photoshow-footnote-1-backlink">↩</a>
+<a href="#2025-05-11-photoshow-footnote-1-backlink"><span class="material-symbols-outlined">keyboard_return</span></a>

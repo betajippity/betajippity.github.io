@@ -40,11 +40,7 @@ Before breaking things down, here's some before and afters:
 <div class='embed-container-tall' id="portfoliocomparison">
 <iframe src="/content/images/2025/May/new-design/comparisons/portfoliocomparison_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 1: Main site home page, before (left) and after (right) applying the new unified theme. For a full screen comparison, <a href="/content/images/2025/May/new-design/comparisons/portfoliocomparison.html">click here.</a></span></div>
-<p>
-
-<div markdown="1">
-
-</div>
+<p></p>
 
 <div class='embed-container-tall' id="blogcomparison">
 <iframe src="/content/images/2025/May/new-design/comparisons/blogcomparison_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>

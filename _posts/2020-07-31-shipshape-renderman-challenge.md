@@ -354,25 +354,25 @@ The ship renders are from the same camera angles as in Figures 13, 14, and 15. d
 
 </div>
 
-<div class='embed-container'>
+<div class='embed-container' id="wideship_wetdrycompare">
 <iframe src="/content/images/2020/Jul/shipshape/comparisons/wideship_wetdrycompare_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 29: Wide view of the ship with (left) and without (right) the wet shader applied. For a full screen comparison, <a href="/content/images/2020/Jul/shipshape/comparisons/wideship_wetdrycompare.html">click here.</a></span></div>
-<p>
+<p></p>
 
-<div class='embed-container'>
+<div class='embed-container' id="backship_wetdrycompare">
 <iframe src="/content/images/2020/Jul/shipshape/comparisons/backship_wetdrycompare_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 30: Back view of the ship with (left) and without (right) the wet shader applied. For a full screen comparison, <a href="/content/images/2020/Jul/shipshape/comparisons/backship_wetdrycompare.html">click here.</a></span></div>
-<p>
+<p></p>
 
-<div class='embed-container'>
+<div class='embed-container' id="sideship_wetdrycompare">
 <iframe src="/content/images/2020/Jul/shipshape/comparisons/sideship_wetdrycompare_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 31: Side view of the ship with (left) and without (right) the wet shader applied. For a full screen comparison, <a href="/content/images/2020/Jul/shipshape/comparisons/sideship_wetdrycompare.html">click here.</a></span></div>
-<p>
+<p></p>
 
-<div class='embed-container'>
+<div class='embed-container' id="robot_wetdrycompare">
 <iframe src="/content/images/2020/Jul/shipshape/comparisons/robot_wetdrycompare_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 32: Main yellow robot with (left) and without (right) the wet shader applied. For a full screen comparison, <a href="/content/images/2020/Jul/shipshape/comparisons/robot_wetdrycompare.html">click here.</a></span></div>
-<p>
+<p></p>
 
 <div markdown="1">
 
@@ -410,7 +410,7 @@ Here's a lookdev test render of the suitcase, with and without the wet effect ap
 
 </div>
 
-<div class='embed-container'>
+<div class='embed-container' id="suitcase_wetdrycompare">
 <iframe src="/content/images/2020/Jul/shipshape/comparisons/suitcase_wetdrycompare_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 35: Suitcase with (left) and without (right) the wet shader applied. For a full screen comparison, <a href="/content/images/2020/Jul/shipshape/comparisons/suitcase_wetdrycompare.html">click here.</a></span></div>
 

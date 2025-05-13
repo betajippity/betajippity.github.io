@@ -23,15 +23,15 @@ Below are some interactive comparisons between renders using Chiang 2019, Esteve
 
 </div>
 
-<div class='embed-container'>
+<div class='embed-container' id="bedroom_chiang_nofix">
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/bedroom_chiang_nofix_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 2: The bedroom scene rendered in Takua Renderer using Chiang 2019 (left) and no harsh shadow terminator fix (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bedroom_chiang_nofix.html">click here.</a></span></div>
-<p>
-<div class='embed-container'>
+<p></p>
+<div class='embed-container' id="bedroom_chiang_estevez">
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/bedroom_chiang_estevez_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 3: The bedroom scene rendered in Takua Renderer using Chiang 2019 (left) and Estevez 2019 (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bedroom_chiang_estevez.html">click here.</a></span></div>
-<p>
-<div class='embed-container'>
+<p></p>
+<div class='embed-container' id="bedroom_diffuse_nofix">
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/bedroom_diffuse_nofix_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 4: The bedroom scene rendered in Takua Renderer using no normal mapping (left) and normal mapping with no harsh shadow terminator fix (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bedroom_diffuse_nofix.html">click here.</a></span></div>
 
@@ -48,15 +48,15 @@ Seeing how everything plays out in this type of a lighting setup is useful, sinc
 
 </div>
 
-<div class='embed-container'>
+<div class='embed-container' id="bed_chiang_nofix">
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/bed_chiang_nofix_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 5: The bed in a studio lighting setup, rendered in Takua Renderer using Chiang 2019 (left) and no harsh shadow terminator fix (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bed_chiang_nofix.html">click here.</a></span></div>
-<p>
-<div class='embed-container'>
+<p></p>
+<div class='embed-container' id="bed_chiang_estevez">
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/bed_chiang_estevez_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 6: The bed in a studio lighting setup, rendered in Takua Renderer using Chiang 2019 (left) and Estevez 2019 (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bed_chiang_estevez.html">click here.</a></span></div>
-<p>
-<div class='embed-container'>
+<p></p>
+<div class='embed-container' id="bed_diffuse_nofix">
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/bed_diffuse_nofix_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 7: The bed in a studio lighting setup, rendered in Takua Renderer using no normal mapping (left) and normal mapping with no harsh shadow terminator fix (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bed_diffuse_nofix.html">click here.</a></span></div>
 
@@ -78,15 +78,15 @@ Here are comparisons of the same studio lighting setup from above, but cropped i
 
 </div>
 
-<div class='embed-container'>
+<div class='embed-container' id="bed_crop_chiang_nofix">
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/bed_crop_chiang_nofix_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 8: Crop of the studio lighting setup render from earlier, using Chiang 2019 (left) and no harsh shadow terminator fix (right). For a larger comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bed_crop_chiang_nofix.html">click here.</a></span></div>
-<p>
-<div class='embed-container'>
+<p></p>
+<div class='embed-container' id="bed_crop_chiang_estevez">
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/bed_crop_chiang_estevez_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 9: Crop of the studio lighting setup render from earlier, using Chiang 2019 (left) and Estevez 2019 (right). For a larger comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bed_crop_chiang_estevez.html">click here.</a></span></div>
-<p>
-<div class='embed-container'>
+<p></p>
+<div class='embed-container' id="bed_crop_diffuse_nofix">
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/bed_crop_diffuse_nofix_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 10: Crop of the studio lighting setup render from earlier, using no normal mapping (left) and normal mapping with no harsh shadow terminator fix (right). For a larger comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/bed_crop_diffuse_nofix.html">click here.</a></span></div>
 
@@ -98,15 +98,15 @@ In the comparisons below, the differences are most noticeable in the folds and o
 
 </div>
 
-<div class='embed-container'>
+<div class='embed-container' id="singlelight_chiang_nofix">
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_chiang_nofix_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 11: The bed lit with a single very bright light, rendered in Takua Renderer using Chiang 2019 (left) and no harsh shadow terminator fix (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_chiang_nofix.html">click here.</a></span></div>
-<p>
-<div class='embed-container'>
+<p></p>
+<div class='embed-container' id="singlelight_chiang_estevez">
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_chiang_estevez_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 12: The bed lit with a single very bright light, rendered in Takua Renderer using Chiang 2019 (left) and Estevez 2019 (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_chiang_estevez.html">click here.</a></span></div>
-<p>
-<div class='embed-container'>
+<p></p>
+<div class='embed-container' id="singlelight_diffuse_nofix">
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_diffuse_nofix_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 13: The bed lit with a single very bright light, rendered in Takua Renderer using no normal mapping (left) and normal mapping with no harsh shadow terminator fix (right). For a full screen comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_diffuse_nofix.html">click here.</a></span></div>
 
@@ -124,15 +124,15 @@ In these crops, the glancing light angles make the shadow terminators more appar
 
 </div>
 
-<div class='embed-container'>
+<div class='embed-container' id="singlelight_crop_chiang_nofix">
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_crop_chiang_nofix_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 14: Crop of the single light render from earlier, using Chiang 2019 (left) and no harsh shadow terminator fix (right). For a larger comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_crop_chiang_nofix.html">click here.</a></span></div>
-<p>
-<div class='embed-container'>
+<p></p>
+<div class='embed-container' id="singlelight_crop_chiang_esteve">
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_crop_chiang_estevez_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 15: Crop of the single light render from earlier, using Chiang 2019 (left) and Estevez 2019 (right). For a larger comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_crop_chiang_estevez.html">click here.</a></span></div>
-<p>
-<div class='embed-container'>
+<p></p>
+<div class='embed-container' id="singlelight_crop_diffuse_nofix">
 <iframe src="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_crop_diffuse_nofix_embed.html" frameborder="0" border="0" scrolling="no"></iframe></div>
 <div class="figcaption"><span>Figure 16: Crop of the single light render from earlier, using no normal mapping (left) and normal mapping with no harsh shadow terminator fix (right). For a larger comparison, <a href="/content/images/2020/Jan/shadowterminator/comparisons/singlelight_crop_diffuse_nofix.html">click here.</a></span></div>
 

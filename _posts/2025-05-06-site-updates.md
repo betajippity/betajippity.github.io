@@ -86,6 +86,7 @@ Here's the list of what went into the new unified design:
 * All analytics and tracking code has been completely removed from both halves of the site.
 * The "About" section of the site has been reorganized with several informational [slash pages](https://slashpages.net). Navigation between the various subpages of the About section is integrated into the page headings.
 * The "Projects" section of the site used to just be one giant list of projects; this list is now reorganized into subpages for easier navigation, and navigation is also integrated into the Project section's page headings.
+* Footnotes and full screen image comparison pages now include backlinks to where they were linked to from main body text.
 
 Two big influences on how I've approached building and designing my site over the past few years have been [Tom Macwright's site](https://macwright.com) and [Craig Mod's site](https://craigmod.com/about/).
 From Tom Macwright's site, I love the [ultra-brutalist](https://macwright.com/2021/06/11/the-theme) and [super lightweight](https://macwright.com/2016/05/03/the-featherweight-website) design, and I also like his site navigation, choice of sections, and [slash pages](https://slashpages.net).

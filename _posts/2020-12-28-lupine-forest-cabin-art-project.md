@@ -378,6 +378,7 @@ At the same time though, in my opinion, Maya's version of XGen isn't nearly as e
 At the end of the (metaphorical) day, I had a lot of fun making this piece!
 The process was much more experimental and aimless compared with working on RenderMan Art Challenge pieces, which was a nice change of pace for an art project.
 I learned a bunch of techniques that I'm sure I'll make use of again in the future, and I got in more practice, which is ultimately the most important part of getting better at anything.
+I'm really happy that I've more or less figured out a reliable way of making good trees now, given [how much time](https://blog.yiningkarlli.com/2011/03/autumn-tree.html) [I spent a long time ago](https://blog.yiningkarlli.com/2011/03/vray-tree.html) [trying to figure out](https://blog.yiningkarlli.com/2012/08/more-experiments-with-trees.html) [how to make decent trees](https://blog.yiningkarlli.com/2013/11/throwback-holiday-card-2011.html).
 
 Finally, here is a progression video I put together from all of the test and in-progress renders that I made throughout this entire project:
 

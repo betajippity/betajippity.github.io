@@ -63,15 +63,15 @@ Luca Fascione, Johannes Hanika, Mark Leone, Marc Droske, Jorge Schwarzhaupt, Tom
 
 Julian Fong, Magnus Wrenninge, Christopher Kulla, and Ralf Habel. 2017. [Production Volume Rendering](http://graphics.pixar.com/library/ProductionVolumeRendering). In _ACM SIGGRAPH 2021 Courses_. 2:1-2:97.
 
-Manuel Gamito. [Path Tracing the Framestorian Way](https://doi.org/10.1145/3214834.3214864). In _SIGGRAPH 2018 Course Notes: Path Tracing in Production_. 52-61.
+Manuel Gamito. 2018. [Path Tracing the Framestorian Way](https://doi.org/10.1145/3214834.3214864). In _SIGGRAPH 2018 Course Notes: Path Tracing in Production_. 52-61.
 
-Sebastian Herholz, Yangyang Zhao, Oskar Elek, Derek Nowrouzezahrai, Hendrik P A Lensch, and Jaroslav Křivánek. [Volume Path Guiding Based on Zero-Variance Random Walk Theory](https://dl.acm.org/citation.cfm?id=3230635). _ACM Transactions on Graphics_. 38, 3 (2019), 24:1-24:19.
+Sebastian Herholz, Yangyang Zhao, Oskar Elek, Derek Nowrouzezahrai, Hendrik P A Lensch, and Jaroslav Křivánek. 2019. [Volume Path Guiding Based on Zero-Variance Random Walk Theory](https://dl.acm.org/citation.cfm?id=3230635). _ACM Transactions on Graphics_. 38, 3 (2019), 24:1-24:19.
 
 Wei-Feng Wayne Huang, Peter Kutz, Yining Karl Li, and Matt Jen-Yuan Chiang. 2021. [Unbiased Emission and Scattering Importance Sampling For Heterogeneous Volumes](https://dl.acm.org/doi/10.1145/3450623.3464644). In _ACM SIGGRAPH 2021 Talks_. 3:1-3:2.
 
 Peter Kutz, Ralf Habel, Yining Karl Li, and Jan Novák. 2017. [Spectral and Decomposition Tracking for Rendering Heterogeneous Volumes](https://doi.org/10.1145/3072959.3073665). _ACM Transactions on Graphics_. 36, 4 (2017), 111:1-111:16.
 
-Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, and Ren Ng. [NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis](https://doi.org/10.1007/978-3-030-58452-8_24). In _ECCV 2020: Proceedings of the 16th European Conference on Computer Vision_. 405-421.
+Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, and Ren Ng. 2020. [NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis](https://doi.org/10.1007/978-3-030-58452-8_24). In _ECCV 2020: Proceedings of the 16th European Conference on Computer Vision_. 405-421.
 
 Bailey Miller, Iliyan Georgiev, and Wojciech Jarosz. 2019. [A Null-Scattering Path Integral Formulation of Light Transport](https://doi.org/10.1145/3306346.3323025). _ACM Transactions on Graphics_. 38, 4 (@019), 44:1-44:13.
 
@@ -79,7 +79,7 @@ Jan Novák, Iliyan Georgiev, Johannes Hanika, and Wojciech Jarosz. 2018. [Monte 
 
 Jan Novák, Andrew Selle and Wojciech Jarosz. 2014. [Residual Ratio Tracking for Estimating Attenuation in Participating Media](https://dl.acm.org/citation.cfm?id=2661292). _ACM Transactions on Graphics_. 33, 6 (2014), 179:1-179:11.
 
-Towaki Takikawa, Shunsuke Saito, James Tompkin, Vincent Sitzmann, Srinath Sridhar, Or Litany, and Alex Yu. [Neural Fields for Visual Computing](https://doi.org/10.1145/3587423.3595477). In _ACM SIGGRAPH 2023 Courses_. 10:1-10:227.
+Towaki Takikawa, Shunsuke Saito, James Tompkin, Vincent Sitzmann, Srinath Sridhar, Or Litany, and Alex Yu. 2023. [Neural Fields for Visual Computing](https://doi.org/10.1145/3587423.3595477). In _ACM SIGGRAPH 2023 Courses_. 10:1-10:227.
 
 Ryusuke Villemin and Christophe Hery. 2013. [Practical Illumination from Flames](http://jcgt.org/published/0002/02/10/). _Journal of Computer Graphics Techniques_. 2, 2 (2013), 142-155.
 

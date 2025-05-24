@@ -10,7 +10,7 @@ Porting to arm64 proved to be a major effort (see Parts [1](https://blog.yiningk
 As a result, for the past few years I have been routinely building and running Takua Renderer on arm64 Linux and macOS, in addition to building and runninng on x86-64 Linux/Mac/Windows.
 Even though I take somewhat of a Mac-first approach for personal projects since I daily drive macOS, I make a point of maintaining robust cross-platform support for Takua Renderer for reasons I wrote about in the [first part of this series](https://blog.yiningkarlli.com/2021/05/porting-takua-to-arm-pt1.html#motivation).
 
-Up unti recently though, my supported platforms list for Takua Renderer notably did not include Windows on Arm.
+Up until recently though, my supported platforms list for Takua Renderer notably did not include Windows on Arm.
 There are two main reasons why I never ported Takua Renderer to build and run on Windows on Arm.
 The first reason is that Microsoft's own support for Windows on Arm has up until recently been in a fairly nascent state.
 Windows RT added Arm support in 2012 but only for 32-bit processors, and Windows 10 added arm64 support in 2016 but lacked a lot of native applications and developer support; notably, Visual Studio didn't gain native arm64 support until late in 2022.

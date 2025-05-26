@@ -163,7 +163,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 400;
 }
 
@@ -813,6 +813,39 @@ main.content {
     line-height: 1.5em;
 }
 
+.tableofcontents {
+    padding-top: 5px;
+    float: left;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.tableofcontents-column3 {
+    float: left;
+    width: 33.33%;
+}
+
+.tableofcontents-column2 {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.tableofcontents-row:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.tableofcontents-content {
+
+    max-width: fit-content;
+    text-align: left;
+    float: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 /* ==========================================================================
    1. Single Post - When you click on an individual post
    ========================================================================== */
@@ -1140,8 +1173,24 @@ main.content {
         top:57px;
         position: absolute;
     }
-}
 
+    .tableofcontents-column2 {
+        float: left;
+        width: 100%;
+    }
+
+    .tableofcontents-column3 {
+        float: left;
+        width: 100%;
+    }
+
+    .tableofcontents-content {
+        text-align: left;
+        float: center;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
 
 /* ==========================================================================
    1. Media Queries - Smaller than 600px
@@ -1212,6 +1261,11 @@ main.content {
         display: table;
         top: 28px;
         right: 2px;
+    }
+
+    .tableofcontents-content {
+        margin-left: 0%;
+        margin-right: 0%;
     }
 }
 

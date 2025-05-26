@@ -5,6 +5,37 @@ tags: [Art]
 author: Yining Karl Li
 ---
 
+<p></p>
+## Table of Contents
+
+<div class="tableofcontents">
+    <div class="tableofcontents-row">
+        <div class="tableofcontents-column3">
+            <div class="tableofcontents-content">
+                1. <a href="/2019/11/woodville-renderman-challenge.html#2019-11-30-introduction">Introduction</a><br>
+                2. <a href="/2019/11/woodville-renderman-challenge.html#2019-11-30-layout-and-framing">Layout and Framing</a><br>
+                3. <a href="/2019/11/woodville-renderman-challenge.html#2019-11-30-uvs-and-geometry">UVs and Geometry</a><br>
+            </div>
+        </div>
+        <div class="tableofcontents-column3">
+            <div class="tableofcontents-content">
+                4. <a href="/2019/11/woodville-renderman-challenge.html#2019-11-30-texturing-and-shading">Texturing and Shading</a><br>
+                5. <a href="/2019/11/woodville-renderman-challenge.html#2019-11-30-set-dressing">Set Dressing the Treehouse</a><br>
+                6. <a href="/2019/11/woodville-renderman-challenge.html#2019-11-30-building-the-background-forest">Building the Background Forest</a><br>
+            </div>
+        </div>
+        <div class="tableofcontents-column3">
+            <div class="tableofcontents-content">
+                7. <a href="/2019/11/woodville-renderman-challenge.html#2019-11-30-lighting-and-compositing">Lighting and Compositing</a><br>
+                8. <a href="/2019/11/woodville-renderman-challenge.html#2019-11-30-conclusion">Conclusion</a><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="2019-11-30-introduction"></div>
+## Introduction
+
 Every once in a while, I make a [point of spending some significant personal time](https://blog.yiningkarlli.com/2016/07/minecraft-in-renderman-ris.html) working on a personal project that uses tools outside of the stuff I'm used to working on day-to-day (Disney's Hyperion renderer professionally, Takua Renderer as a hobby).
 A few times each year, Pixar's RenderMan group holds an art challenge contest where Pixar provides a un-shaded un-uv'd base model and contestants are responsible for layout, texturing, shading, lighting, additional modeling of supporting elements and surrounding environment, and producing a final image.
 I thought the [most recent RenderMan art challenge, "Woodville"](https://renderman.pixar.com/news/renderman-woodville-art-challenge), would make a great excuse for playing with RenderMan 22 for Maya; here's the final image I came up with:
@@ -23,6 +54,7 @@ Therefore, knowing how these four renderers work and what vocabulary is associat
 All of the above is the mindset I went into this project with, so this post is meant to be something of a breakdown of what I did, along with some thoughts and observations made along the way.
 This was a really fun exercise, and I learned a lot!
 
+<div id="2019-11-30-layout-and-framing"></div>
 ## Layout and Framing
 
 For this art challenge, Pixar [supplied a base model](https://renderman.pixar.com/woodville-pup-asset) without any sort texturing or shading or lighting or anything else.
@@ -52,6 +84,7 @@ Second, I felt that this angle would allow me to limit how expansive of an envir
 I decided around this point to put the treehouse in a big mountainous mixed coniferous forest, with the reasoning being that tree trunks as large as the ones in the treehouse could only come from huge redwood trees, which only grow in mountainous coniferous forests.
 With this camera angle, I could make the background environment a single mountainside covered in trees and not have to build a wider vista.
 
+<div id="2019-11-30-uvs-and-geometry"></div>
 ## UVs and Geometry
 
 The next step that I took was to try to shade the main tree trunks, since the scale of the tree trunks worried me the most about the entire project.
@@ -81,6 +114,7 @@ I vastly prefer being able to paint Ptex instead of having to UV-unwrap and lay 
 
 [![Figure 9: Example of one of the cabins run through Houdini's Auto UV SOP. The cabin is on the left; the output UVs are on the right.]({{site.url}}/content/images/2019/Nov/woodville/houdini-auto-uv.jpg)]({{site.url}}/content/images/2019/Nov/woodville/houdini-auto-uv.jpg)
 
+<div id="2019-11-30-texturing-and-shading"></div>
 ## Texturing in Substance Painter and Shading
 
 In Substance Painter, the general workflow I used was to start with multiple triplanar projections of (heavily edited) Quixel Megascans surfaces masked and oriented to different sections of a surface, and then paint on top.
@@ -127,6 +161,7 @@ With everything shaded and the geometric modifications in place, here is how eve
 
 [![Figure 12: In-progress test render with initial fully shaded treehouse, along with geoemtric modifications. Click for 4K version.]({{site.url}}/content/images/2019/Nov/woodville/preview/progress085.jpg)]({{site.url}}/content/images/2019/Nov/woodville/progress085_4k.jpg)
 
+<div id="2019-11-30-set-dressing"></div>
 ## Set Dressing the Treehouse
 
 The next major step was adding some story elements.
@@ -152,6 +187,7 @@ Many of the furniture, plant and prop models are highly modified, kitbashed, re-
 
 [![Figure 14: In-progress test render closeup crop of the glass round cabin and the upper smaller cabin, with furniture and plants and props.]({{site.url}}/content/images/2019/Nov/woodville/preview/progress096_crop2.jpg)]({{site.url}}/content/images/2019/Nov/woodville/progress096_crop2.jpg)
 
+<div id="2019-11-30-building-the-background-forest"></div>
 ## Building the Background Forest
 
 The last step before final lighting was to build a more proper background forest, as a replacement for the temporary forest I had used up until this point for blocking purposes.
@@ -186,6 +222,7 @@ I made the mist by just having a Maya Volume Noise node plug into the density fi
 
 [![Figure 18: In-progress test render of the background forest with an initial version of mist and fog.]({{site.url}}/content/images/2019/Nov/woodville/preview/forest_progress051.jpg)]({{site.url}}/content/images/2019/Nov/woodville/forest_progress051.jpg)
 
+<div id="2019-11-30-lighting-and-compositing"></div>
 ## Lighting and Compositing
 
 At this point, I think the entire image together was starting to look pretty good, although, without any final shot lighting, the overall vibe felt more like a spread out of an issue of National Geographic than a more cinematic still out of a film.
@@ -238,6 +275,7 @@ Figure 25 shows what all of the lighting, comp, and color grading looks like app
 
 [![Figure 26: Final image. Click for 4K version.]({{site.url}}/content/images/2019/Nov/woodville/preview/woodville_full.jpg)]({{site.url}}/content/images/2019/Nov/woodville/woodville_full_4k.jpg)
 
+<div id="2019-11-30-conclusion"></div>
 ## Conclusion
 
 Overall, I had a lot of fun on this project, and I learned an enormous amount!

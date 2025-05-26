@@ -7,6 +7,35 @@ author: Yining Karl Li
 
 <div markdown="1">
 
+<p></p>
+## Table of Contents
+
+<div class="tableofcontents">
+    <div class="tableofcontents-row">
+        <div class="tableofcontents-column2">
+            <div class="tableofcontents-content">
+                1. <a href="/2021/04/magic-shop-renderman-challenge.html#2021-04-12-introduction">Introduction</a><br>
+                2. <a href="/2021/04/magic-shop-renderman-challenge.html#2021-04-12-character-explorations">Character Explorations</a><br>
+                3. <a href="/2021/04/magic-shop-renderman-challenge.html#2021-04-12-skin-shading-and-subsurface-scattering">Skin Shading and Subsurface Scattering</a><br>
+                4. <a href="/2021/04/magic-shop-renderman-challenge.html#2021-04-12-clothes-and-fuzz">Clothes and Fuzz</a><br>
+                5. <a href="/2021/04/magic-shop-renderman-challenge.html#2021-04-12-layout-and-framing">Layout, Framing, and Building the Shop</a><br>
+            </div>
+        </div>
+        <div class="tableofcontents-column2">
+            <div class="tableofcontents-content">
+                6. <a href="/2021/04/magic-shop-renderman-challenge.html#2021-04-12-so-many-props">So Many Props!</a><br>
+                7. <a href="/2021/04/magic-shop-renderman-challenge.html#2021-04-12-signs-and-records-and-books">Signs and Records and Books</a><br>
+                8. <a href="/2021/04/magic-shop-renderman-challenge.html#2021-04-12-putting-everything-together">Putting Everything Together</a><br>
+                9. <a href="/2021/04/magic-shop-renderman-challenge.html#2021-04-12-conclusion">Conclusion</a><br>
+                10. <a href="/2021/04/magic-shop-renderman-challenge.html#2021-04-12-references">References</a><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="2021-04-12-introduction"></div>
+## Introduction
+
 Last fall, I participated in my third Pixar's RenderMan Art Challenge, "Magic Shop"! 
 I wasn't initially planning on participating this time around due to not having as much free time on my hands, but after taking a look at the provided assets for this challenge, I figured that it looked fun and that I could learn some new things, so why not?
 Admittedly participating in this challenge is why some technical content I had planned for this blog in the fall wound up being delayed, but in exchange, here's another writeup of some fun CG art things I learned along the way!
@@ -17,6 +46,7 @@ Considering that I my time spent on this project was far more limited than on pr
 
 [![Figure 1: My entry to Pixar's RenderMan Magic Shop Art Challenge, titled "Books are Magic". Click for 4K version. Mathilda model by Xiong Lin and rig by Leon Sooi. Pixar models by Eman Abdul-Razzaq, Grace Chang, Ethan Crossno, Siobhán Ensley, Derrick Forkel, Felege Gebru, Damian Kwiatkowski, Jeremy Paton, Leif Pedersen, Kylie Wijsmuller, and Miguel Zozaya © Disney / Pixar - RenderMan "Magic Shop" Art Challenge.]({{site.url}}/content/images/2021/Apr/magicshop/preview/magicshop_full.jpg)]({{site.url}}/content/images/2021/Apr/magicshop/magicshop_full_4k.jpg)
 
+<div id="2021-04-12-character-explorations"></div>
 ## Character Explorations
 
 I originally wasn't planning on entering this challenge, but I downloaded the base assets anyway because I was curious about playing with the rigged character a bit.
@@ -59,6 +89,7 @@ The Chiang model uses a color re-parameterization that allows for the final rend
 
 [![Figure 4: More progressed iteration of a custom hair groom for the character, with final glasses.]({{site.url}}/content/images/2021/Apr/magicshop/preview/hair_test.006.jpg)]({{site.url}}/content/images/2021/Apr/magicshop/hair_test.006.jpg)
 
+<div id="2021-04-12-skin-shading-and-subsurface-scattering"></div>
 ## Skin Shading and Subsurface Scattering
 
 For shading the character's skin, the approach I took was to use the rig's default textures as a starting point, modify heavily to get the textures that I actually wanted, and then use the modified textures to author new materials using PxrSurface.
@@ -88,6 +119,7 @@ In order to compensate for energy loss and produce a more plausible result, para
 However, applying these same parameters to an accurate brute-force path tracing model that already models subsurface scattering in thin areas correctly results in overly bright thin areas, hence the gummier look.
 Since I started with the supplied skin textures for the character model, and the original skin shader for the character model was authored for a different renderer that used diffusion-based subsurface scattering, the adjustments I had to make where specifically to fight this overly glow-y gummy look in path-traced mode when using parameters authored for diffusion.
 
+<div id="2021-04-12-clothes-and-fuzz"></div>
 ## Clothes and Fuzz
 
 For the character's clothes and shoes, I wanted to keep the outfit geometry to save time, but I also wanted to completely re-texture and re-shade the outfit to give it my own look.
@@ -146,6 +178,7 @@ Here are a few closeup test renders of all of the fuzz:
 
 [![Figure 8: Closeup test render of fuzz on the shirt and peach fuzz on the character's skin.]({{site.url}}/content/images/2021/Apr/magicshop/preview/fuzzcloseup.jpg)]({{site.url}}/content/images/2021/Apr/magicshop/fuzzcloseup.png)
 
+<div id="2021-04-12-layout-and-framing"></div>
 ## Layout, Framing, and Building the Shop
 
 After completing all of the grooming and re-shading work on the character, I finally reached a point where I felt confident enough in being able to make an okay looking character that I was willing to fully commit into entering this RenderMan Art Challenge.
@@ -208,6 +241,7 @@ Putting it all together, here's what the shading for the room structure looks li
 The actual materials in my final image are not nearly as diffuse looking as everything looks in the above test render; my lookdev test setup's lighting setup is relatively diffuse/soft, which I guess didn't really serve as a great predictor for how things looked in my actual scene since the lighting in my actual scene landed somewhere super strongly backlit.
 Also, note how all of the places where different walls meet each other and where the walls meet the floor are super janky; I didn't bother putting much effort in there since I knew that those areas were either going to be outside of the final frame or were going to be hidden behind props and furniture.
 
+<div id="2021-04-12-so-many-props"></div>
 ## So Many Props!
 
 With the character and room completed, all that was left to do for texturing and shading was just lots and lots of props.
@@ -331,6 +365,7 @@ In the final image, you can't actually see the Senecom logo though, but again at
 
 [![Figure 29: Phone handset, made from red plastic.]({{site.url}}/content/images/2021/Apr/magicshop/preview/phone_receiver.jpg)]({{site.url}}/content/images/2021/Apr/magicshop/phone_receiver.jpg)
 
+<div id="2021-04-12-signs-and-records-and-books"></div>
 ## Signs and Records and Books
 
 While I was looking up reference for bookstores with shading books in mind, I came across an image of a sign reading "Books are Magic" from a bookstore in Brooklyn with that name.
@@ -406,6 +441,7 @@ There is also, of course, a book about Seneca, and there's a book referencing Mi
 The green book titled "The Compleat Atlas of the House and Immediate Environs" is a reference to Garth Nix's "Keys to the Kingdom" series, which my brother and I loved when we were growing up and had a significant influence on how the type of kind-of-a-science magic I like in fantasy settings.
 Also, of course, as is obligatory since I am a rendering engineer, there is a copy of [Physically Based Rendering 3rd Edition](http://www.pbr-book.org) hidden somewhere in the final scene; see if you can spot it!
 
+<div id="2021-04-12-putting-everything-together"></div>
 ## Putting Everything Together
 
 At this point, with all extra modeling completed and everything textured and shaded, the time came for final touches and lighting!
@@ -463,6 +499,7 @@ Figure 46 shows what all of the lighting, comp, and color grading looks like app
 
 [![Figure 47: Final image. Click for 4K version.]({{site.url}}/content/images/2021/Apr/magicshop/preview/magicshop_full.jpg)]({{site.url}}/content/images/2021/Apr/magicshop/magicshop_full_4k.jpg)
 
+<div id="2021-04-12-conclusion"></div>
 ## Conclusion
 
 Despite having much less free time to work on this RenderMan Art Challenge, and despite not having really intended to even enter the contest initially, I think things turned out okay!
@@ -486,6 +523,7 @@ I was pleasantly surprised that everything held up well from a different angle!
 
 [![Figure 49: Bonus image: alternate camera angle. Click for 4K version.]({{site.url}}/content/images/2021/Apr/magicshop/preview/altangle.jpg)]({{site.url}}/content/images/2021/Apr/magicshop/altangle_4k.jpg)
 
+<div id="2021-04-12-references"></div>
 ## References
 
 Carlos Allaga, Carlos Castillo, Diego Gutierrez, Miguel A. Otaduy, Jorge López-Moreno, and Adrian Jarabo. 2017. [An Appearance Model for Textile Fibers](https://doi.org/10.1111/cgf.13222). _Computer Graphics Forum_. 36, 4 (2017), 35-45.

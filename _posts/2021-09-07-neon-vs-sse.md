@@ -5,6 +5,41 @@ tags: [Coding, Renderer]
 author: Yining Karl Li
 ---
 
+<p></p>
+## Table of Contents
+
+<div class="tableofcontents">
+    <div class="tableofcontents-row">
+        <div class="tableofcontents-column3">
+            <div class="tableofcontents-content">
+                1. <a href="/2021/09/neon-vs-sse.html#2021-09-07-introduction">Introduction</a><br>
+                2. <a href="/2021/09/neon-vs-sse.html#2021-09-07-4-wide-ray-aabb-intersection">4-Wide Ray Bounding Box Intersection</a><br>
+                3. <a href="/2021/09/neon-vs-sse.html#2021-09-07-test-program-setup">Test Program Setup</a><br>
+                4. <a href="/2021/09/neon-vs-sse.html#2021-09-07-introduction-sse-neon-structs">Shared SSE/Neon Structs</a><br>
+            </div>
+        </div>
+        <div class="tableofcontents-column3">
+            <div class="tableofcontents-content">
+                5. <a href="/2021/09/neon-vs-sse.html#2021-09-07-scalar-implementations">Scalar Implementations</a><br>
+                6. <a href="/2021/09/neon-vs-sse.html#2021-09-07-sse-implementation">SSE Implementation</a><br>
+                7. <a href="/2021/09/neon-vs-sse.html#2021-09-07-neon-implementation">Neon Implementation</a><br>
+                8. <a href="/2021/09/neon-vs-sse.html#2021-09-07-autovector-implementation">Auto-Vectorized Implementation</a><br>
+            </div>
+        </div>
+        <div class="tableofcontents-column3">
+            <div class="tableofcontents-content">
+                9. <a href="/2021/09/neon-vs-sse.html#2021-09-07-ispc-implementation">ISPC Implementation</a><br>
+                10. <a href="/2021/09/neon-vs-sse.html#2021-09-07-results">Final Results and Conclusions </a><br>
+                11. <a href="/2021/09/neon-vs-sse.html#2021-09-07-addenda">Addenda</a><br>
+                12. <a href="/2021/09/neon-vs-sse.html#2021-09-07-references">References</a><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="2021-09-07-introduction"></div>
+## Introduction
+
 I recently wrote a big two-part series about a ton of things that I learned throughout the process of porting my hobby renderer, Takua Renderer, to 64-bit ARM.
 In the [second part](https://blog.yiningkarlli.com/2021/07/porting-takua-to-arm-pt2.html), one of the topics I covered was how the Embree ray tracing kernels library gained arm64 support by utilizing the sse2neon project to emulate x86-64 SSE2 SIMD instructions using arm64's Neon SIMD instructions.
 In the second part of the series, I had originally planned on diving much deeper into comparing writing vectorized code using SSE intrinsics versus using Neon intrinsics versus other approaches, but the comparison write-up became so large that I wound up leaving it out of the original post with the intention of making the comparison into its own standalone post.
@@ -28,6 +63,7 @@ On x86-64, I'll compare implementations using SSE intrinsics, using auto-vectori
 On arm64, I'll compare implementations using Neon intrinsics, using SSE intrinsics emulated on arm64 using sse2neon, using auto-vectorization, and using ISPC emitting Neon assembly.
 I'll also evaluate how each approach does in balancing portability, ease-of-use, and performance.
 
+<div id="2021-09-07-4-wide-ray-aabb-intersection"></div>
 ## 4-wide Ray Bounding Box Intersection
 
 For my comparisons, I wanted to use a small but practical real-world example.
@@ -72,6 +108,7 @@ Since the most common splitting factor in production CPU cases in a 4-wide split
 To start off, we need an efficient intersection test between a single ray and a single axis-aligned bounding box.
 I'll be using the commonly utilized solution by Williams et al. [[2005]](https://doi.org/10.1080/2151237X.2005.10129188); improved techniques with better precision [[Ize 2013]](http://jcgt.org/published/0002/02/02/) and more generalized flexibility [[Majercik 2018]](http://jcgt.org/published/0007/03/04/) do exist, but I'll stick with the original Williams approach in this post to keep things simple. 
 
+<div id="2021-09-07-test-program-setup"></div>
 ## Test Program Setup
 
 Everything in this post is implemented in a small test program that I have [put in an open Github repository](https://github.com/betajippity/sseneoncompare), licensed under the Apache-2.0 License.
@@ -89,12 +126,13 @@ Ideally I would have liked to set up the project to compile directly to a Univer
 However, on both the x86-64 and arm64 systems, I used the same operating system and compilers.
 For all of the results in this post, I'm running on macOS 11.5.2 and I'm compiling using Apple Clang v12.0.5 (which comes with Xcode 12.5.1) for C++ code and ISPC v1.16.1 for ISPC code.
 
-For the rest of the post, I'll include results for each implementation in the section discussing that implementation, and then include all results together in a [results section](#results) at the end.
+For the rest of the post, I'll include results for each implementation in the section discussing that implementation, and then include all results together in a [results section](#2021-09-07-results) at the end.
 All results were generated by running on a 2019 16 inch MacBook Pro with a Intel Core i7-9750H CPU for x86-64, and on a 2020 M1 Mac Mini for arm64 and Rosetta 2.
 All results were generated by running the test program with 100000 runs per implementation, and I averaged results across 5 runs of the test program after throwing out the highest and lowest result for each implementation to discard outliers.
 The timings reported for each implementation are the average across 100000 runs.
 
-## Defining structs usable with both SSE and Neon
+<div id="2021-09-07-introduction-sse-neon-structs"></div>
+## Defining Structs Usable with Both SSE and Neon
 
 Before we dive into the ray-box intersection implementations, I need to introduce and describe the handful of simple structs that the test program uses.
 The most widely used struct in the test program is `FVec4`, which defines a 4-dimensional float vector by simply wrapping around four floats.
@@ -175,6 +213,7 @@ The second bounding box struct is `BBox4`, which stores four axis-aligned boundi
 `BBox4` internally uses `FVec4`s in a union with two different arrays of regular floats to allow for vectorized operation and individual access to each component of each corner of each box.
 The internal layout of `BBox4` is not as simple as just storing four `BBox` structs; I'll discuss how the internal layout of `BBox4` works a little bit later in this post.
 
+<div id="2021-09-07-scalar-implementations"></div>
 ## Williams et al. 2005 Ray-Box Intersection Test: Scalar Implementations
 
 Now that we have all of the data structures that we'll need, we can dive into the actual implementations.
@@ -301,6 +340,7 @@ Looking at the [compiled x86-64 assembly](https://godbolt.org/#z:OYLghAFBqd5QCxA
 
 For all of the results in the rest of the post, the compact scalar implementation's timings are used as the baseline that everything else is compared against, since all of the following implementations are derived from the compact scalar implementation.
 
+<div id="2021-09-07-sse-implementation"></div>
 ## SSE Implementation
 
 The first vectorized implementation we'll look at is using SSE on x86-64 processors.
@@ -463,6 +503,7 @@ Otherwise, a greater-than-4x speedup should not be possible if both implementati
 I did not expect that to be the case!
 Unfortunately, while we can speculate, only Apple's developers can say for sure what Rosetta 2 is doing internally that produces this result.
 
+<div id="2021-09-07-neon-implementation"></div>
 ## Neon Implementation
 
 The second vectorized implementation we'll look at is using Neon on arm64 processors.
@@ -584,6 +625,7 @@ Even though the Rosetta 2 result is definitively slower than the native arm64 re
 Rosetta 2 usually can be expected to perform somewhere in the neighborhood of 50% to 80% of native performance for compute-heavy code, and the Rosetta 2 performance for the compact scalar implementation lines up with this expectation.
 However, the Rosetta 2 performance for the vectorized version lends further credence to the theory from the previous section that Rosetta 2 somehow is better able to translate vectorized code than scalar code.
 
+<div id="2021-09-07-autovector-implementation"></div>
 ## Auto-vectorized Implementation
 
 The unfortunate thing about writing vectorized programs using vector intrinsics is that... vector intrinsics can be hard to use!
@@ -691,6 +733,7 @@ However, that isn't to say that auto-vectorization is completely useless- we sti
 I think that auto-vectorization is definitely better than nothing, and when it does work, it works well.
 But, I also think that auto-vectorization is not a magic bullet perfect solution to writing vectorized code, and when hand-vectorizing is an option, a well-written hand-vectorized implementation has a strong chance of outperforming auto-vectorization.
 
+<div id="2021-09-07-ispc-implementation"></div>
 ## ISPC Implementation
 
 Another option exists for writing portable vectorized code without having to directly use vector intrinsics: [ISPC](https://ispc.github.io/), which stands for "Intel SPMD Program Compiler".
@@ -811,7 +854,7 @@ Of course, ISPC isn't 100% fool-proof magic; care still needs to be taken in wri
 However, these types of considerations are just part of writing vectorized code in general and are not specific to ISPC, and furthermore, these types of considerations should be familiar territory for anyone with experience writing GPU code as well.
 I think that's a general strength of ISPC: writing vector CPU code using ISPC feels a lot like writing GPU code, and that's by design!
 
-<div id="results"></div>
+<div id="2021-09-07-results"></div>
 
 ## Final Results and Conclusions
 
@@ -873,6 +916,7 @@ Again, I have put all of the code in this post in [an open Github repository](ht
 
 ---
 
+<div id="2021-09-07-addenda"></div>
 ## Addendum 2022-09-07
 
 After I published this post, [Romain Guy](https://twitter.com/romainguy) wrote in with a suggestion to use `-ffast-math` to improve the auto-vectorization results.
@@ -883,6 +927,7 @@ Romain previously presented [a talk in 2019](https://www.youtube.com/watch?v=Lcq
 
 ---
 
+<div id="2021-09-07-references"></div>
 ## References
 
 Mike Acton. 2014. [Data-Oriented Design and C++](https://www.youtube.com/watch?v=rX0ItVEVjHc). In _CppCon 2014_.

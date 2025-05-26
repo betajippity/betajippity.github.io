@@ -7,6 +7,42 @@ author: Yining Karl Li
 
 <div markdown="1">
 
+<p></p>
+## Table of Contents
+
+<div class="tableofcontents">
+    <div class="tableofcontents-row">
+        <div class="tableofcontents-column3">
+            <div class="tableofcontents-content">
+                1. <a href="/2020/07/shipshape-renderman-challenge.html#2020-07-31-introduction">Introduction</a><br>
+                2. <a href="/2020/07/shipshape-renderman-challenge.html#2020-07-31-initial-explorations">Initial Explorations</a><br>
+                3. <a href="/2020/07/shipshape-renderman-challenge.html#2020-07-31-layout-and-framing">Layout and Framing</a><br>
+                4. <a href="/2020/07/shipshape-renderman-challenge.html#2020-07-31-uv-unwrapping">UV Unwrapping</a><br>
+                5. <a href="/2020/07/shipshape-renderman-challenge.html#2020-07-31-texturing-the-ship">Texturing the Ship</a><br>
+            </div>
+        </div>
+        <div class="tableofcontents-column3">
+            <div class="tableofcontents-content">
+                6. <a href="/2020/07/shipshape-renderman-challenge.html#2020-07-31-shading-the-ship">Shading the Ship</a><br>
+                7. <a href="/2020/07/shipshape-renderman-challenge.html#2020-07-31-shading-and-texturing-the-robots">Shading and Texturing the Robots</a><br>
+                8. <a href="/2020/07/shipshape-renderman-challenge.html#2020-07-31-the-wet-shader">The Wet Shader</a><br>
+                9. <a href="/2020/07/shipshape-renderman-challenge.html#2020-07-31-additional-props-and-elements">Additional Props and Elements</a><br>
+                10. <a href="/2020/07/shipshape-renderman-challenge.html#2020-07-31-rain-fx">Rain FX</a><br>
+            </div>
+        </div>
+        <div class="tableofcontents-column3">
+            <div class="tableofcontents-content">
+                11. <a href="/2020/07/shipshape-renderman-challenge.html#2020-07-31-lighting-and-compositing">Lighting and Compositing</a><br>
+                12. <a href="/2020/07/shipshape-renderman-challenge.html#2020-07-31-conclusion">Conclusion</a><br>
+                13. <a href="/2020/07/shipshape-renderman-challenge.html#2020-07-31-references">References</a><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="2020-07-31-introduction"></div>
+## Introduction
+
 Last year, I [participated in one of Pixar's RenderMan Art Challenges](https://blog.yiningkarlli.com/2019/11/woodville-renderman-challenge.html) as a way to learn more about modern RenderMan [[Christensen et al. 2018]](https://dl.acm.org/citation.cfm?id=3182162) and as a way to get some exposure to tools outside of my normal day-to-day toolset (Disney's Hyperion Renderer professionally, Takua Renderer as a hobby and learning exercise).
 I had a lot of fun, and wound up doing better in the "Woodville" art challenge contest than I expected to!
 Recently, I entered another one of [Pixar's RenderMan Art Challenges, "Shipshape"](https://renderman.pixar.com/news/renderman-shipshape-art-challenge).
@@ -21,6 +57,7 @@ To my enormous surprise, this time around my entry [won first place in the conte
 
 [![Figure 1: My entry to Pixar's RenderMan Shipshape Art Challenge, titled "Oh Good, The Bus is Here". Click for 4K version. Base ship, robot, and sextant models are from Pixar; all shading, lighting, additional modeling, and environments are mine. Ship concept by Ian McQue. Robot concept by Ruslan Safarov. Models by Cheyenne Chapel, Aliya Chen, Damian Kwiatkowski, Alyssa Minko, Anthony Muscarella, and Miguel Zozaya © Disney / Pixar - RenderMan "Shipshape" Art Challenge.]({{site.url}}/content/images/2020/Jul/shipshape/preview/shipshape_full.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/shipshape_full_4k.jpg)
 
+<div id="2020-07-31-initial-explorations"></div>
 ## Initial Explorations
 
 For this competition, Pixar provided five models: a futuristic scifi ship based on an Ian McQue concept, a robot based on a Ruslan Safarov concept, an old wooden boat, a butterfly, and a sextant.
@@ -52,6 +89,7 @@ I wasn't ever super happy with the "River Explorer" concept; I think the overall
 Several other contestants wound up also going for similar top-down-ish views, which made me worry about getting lost in a crowd of similar-looking images.
 After a week of trying to get the "River Explorer" concept to work better, I started to play with some completely different ideas; I figured that this early in the process, a better idea was worth more than a week's worth of sunk time.
 
+<div id="2020-07-31-layout-and-framing"></div>
 ## Layout and Framing
 
 I had started UV unwrapping the ship already, and whilst tumbling around the ship unwrapping all of the components one-by-one, I got to see a lot more of the ship and a lot more interesting angles, and I suddenly came up with a completely different idea for my entry.
@@ -89,6 +127,7 @@ Zoom in if you want to see all of the rivets and bolts and stuff on the dock:
 
 [![Figure 8: AO render of my layout going into shading and lighting. Check out all of the crazy detail on the dock that I modeled!]({{site.url}}/content/images/2020/Jul/shipshape/progress_032.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/progress_032.jpg)
 
+<div id="2020-07-31-uv-unwrapping"></div>
 ## UV Unwrapping
 
 UV unwrapping the ship took a ton of time.
@@ -121,6 +160,7 @@ Here's the checkerboard test applied to my final UVs for the robot:
 
 [![Figure 10: Checkerboard test for my UV unwrapping of the robot.]({{site.url}}/content/images/2020/Jul/shipshape/robot_uvs.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/robot_uvs.jpg)
 
+<div id="2020-07-31-texturing-the-ship"></div>
 ## Texturing the Ship
 
 After trying out Substance Painter for the previous RenderMan Art Challenge and getting fairly good results, I went with Substance Painter again on this project.
@@ -160,6 +200,7 @@ In some other cases, I added new edgeloops to the existing models just so I coul
 
 [![Figure 12: Masking in the metal section of the ship's thrusters by following existing edgeloops using Substance Painter's Polygon Fill tool.]({{site.url}}/content/images/2020/Jul/shipshape/preview/substance_uvmask.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/substance_uvmask.png)
 
+<div id="2020-07-31-shading-the-ship"></div>
 ## Shading the Ship
 
 For the previous Art Challenge, I used a combination of PxrDisney and PxrSurface shaders; this time around, in order to get a better understanding of how PxrSurface works, I opted to go all-in on using PxrSurface for everything in the scene.
@@ -216,6 +257,7 @@ The dripping wet rain effect is discussed later in this post.
 <div class='embed-container'><iframe src="https://player.vimeo.com/video/433151006?loop=1" frameborder="0" allow="fullscreen; picture-in-picture; encrypted-media">Shipshape Art Challenge Ship Turntable</iframe></div>
 <div class="figcaption"><span>Figure 16: Turntable of the ship showing both dry and wet variants.</span></div>
 
+<div id="2020-07-31-shading-and-texturing-the-robots"></div>
 ## Shading and Texturing the Robots
 
 For the robots, I used the same Substance Painter based texturing workflow and the same PxrSurface based shading workflow that I used for the ship.
@@ -286,6 +328,7 @@ The green sports fan robot does have a variant with a wet right arm though, sinc
 <div class='embed-container'><iframe src="https://player.vimeo.com/video/433151137?loop=1" frameborder="0" allow="fullscreen; picture-in-picture; encrypted-media">Shipshape Art Challenge Robots Turntable</iframe></div>
 <div class="figcaption"><span>Figure 24: Turntable of the robots, with all 12 robot variants.</span></div>
 
+<div id="2020-07-31-the-wet-shader"></div>
 ## The Wet Shader
 
 Going into the shading process, the single problem that worried me the most was how I was going to make everything in the rain look wet.
@@ -376,6 +419,7 @@ The ship renders are from the same camera angles as in Figures 13, 14, and 15. d
 
 <div markdown="1">
 
+<div id="2020-07-31-additional-props-and-elements"></div>
 ## Additional Props and Set Elements
 
 In addition to texturing and shading the flying scifi ship and robot models, I had to create from scratch several other elements to help support the story in the scene.
@@ -442,6 +486,7 @@ There are also a few small areas where you can see visible texture stretching at
 
 [![Figure 37: Quick n' dirty lookdev test of the sextant. Model is by Aliyah Chen and was provided by Pixar as one of the contest's base models.]({{site.url}}/content/images/2020/Jul/shipshape/preview/sextant.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/sextant.jpg)
 
+<div id="2020-07-31-rain-fx"></div>
 ## Rain FX
 
 Having a good wet surface look was one half of getting my scene to look convincingly rainy; the other major problem to solve was making the rain itself!
@@ -491,6 +536,7 @@ Here's a 2K crop from my final image showing the "hero" droplets and all of the 
 
 [![Figure 41: 2K crop showing "hero" droplets and rain streaks.]({{site.url}}/content/images/2020/Jul/shipshape/preview/raindrops_crop.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/raindrops_crop.jpg)
 
+<div id="2020-07-31-lighting-and-compositing"></div>
 ## Lighting and Compositing
 
 Lighting this scene proved to be very interesting and very different from what I did for the previous challenge!
@@ -578,6 +624,7 @@ Figure 51 shows what all of the lighting, comp, and color grading looks like app
 
 [![Figure 52: Final image. Click for 4K version.]({{site.url}}/content/images/2020/Jul/shipshape/preview/shipshape_full.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/shipshape_full_4k.jpg)
 
+<div id="2020-07-31-conclusion"></div>
 ## Conclusion
 
 On a whole, I'm happy with how this project turned out!
@@ -605,6 +652,7 @@ After the contest wrapped up, I went back and made a daylight version out of cur
 
 [![Figure 54: Bonus image: daylight version. Click for 4K version.]({{site.url}}/content/images/2020/Jul/shipshape/preview/daylight_comp.jpg)]({{site.url}}/content/images/2020/Jul/shipshape/daylight_comp_4k.jpg)
 
+<div id="2020-07-31-references"></div>
 ## References
 
 Petr Beckmann and André Spizzichino. 1963. [The Scattering of Electromagnetic Waves from Rough Surfaces](https://us.artechhouse.com/The-Scattering-of-Electromagnetic-Waves-from-Rough-Surfaces-P257.aspx). New York: Pergamon.

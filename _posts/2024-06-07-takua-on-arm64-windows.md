@@ -3,12 +3,37 @@ layout: post
 title: Porting Takua Renderer to Windows on Arm
 tags: [Coding, Renderer]
 author: Yining Karl Li
----
+--- 
+
+<p></p>
+## Table of Contents
+
+<div class="tableofcontents">
+     <div class="tableofcontents-row">
+        <div class="tableofcontents-column2">
+            <div class="tableofcontents-content">
+                1. <a href="/2024/06/takua-on-arm64-windows.html#2024-06-07-takua-on-arm64-win-intro">Introduction</a><br>
+                2. <a href="/2024/06/takua-on-arm64-windows.html#2024-06-07-opengl-on-arm64-win11">OpenGL on arm64 Windows 11</a><br>
+                3. <a href="/2024/06/takua-on-arm64-windows.html#2024-06-07-build-embree-on-arm64-win">Building Embree on arm64 Windows 11</a><br>
+            </div>
+        </div>
+        <div class="tableofcontents-column2">
+            <div class="tableofcontents-content">
+            4. <a href="/2024/06/takua-on-arm64-windows.html#2024-06-07-x64-code-on-arm64-win">Running x86-64 code on arm64 Windows 11</a><br>
+            5. <a href="/2024/06/takua-on-arm64-windows.html#2024-06-07-conclusion">Conclusion</a><br>
+            6. <a href="/2024/06/takua-on-arm64-windows.html#2024-06-07-references">References</a><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="2024-06-07-takua-on-arm64-win-intro"></div>
+## Introduction
 
 A few years ago I ported Takua Renderer to build and run on arm64 systems.
 Porting to arm64 proved to be a major effort (see Parts [1](https://blog.yiningkarlli.com/2021/05/porting-takua-to-arm-pt1.html), [2](https://blog.yiningkarlli.com/2021/07/porting-takua-to-arm-pt2.html), [3](https://blog.yiningkarlli.com/2021/09/neon-vs-sse.html), and [4](https://blog.yiningkarlli.com/2021/10/takua-on-m1-max.html)) which wound up paying off in spades; I learned a lot, found and fixed various longstanding platform-specific bugs in the renderer, and wound up being perfectly timed for Apple transitioning the Mac to arm64-based Apple Silicon.
 As a result, for the past few years I have been routinely building and running Takua Renderer on arm64 Linux and macOS, in addition to building and runninng on x86-64 Linux/Mac/Windows.
-Even though I take somewhat of a Mac-first approach for personal projects since I daily drive macOS, I make a point of maintaining robust cross-platform support for Takua Renderer for reasons I wrote about in the [first part of this series](https://blog.yiningkarlli.com/2021/05/porting-takua-to-arm-pt1.html#motivation).
+Even though I take somewhat of a Mac-first approach for personal projects since I daily drive macOS, I make a point of maintaining robust cross-platform support for Takua Renderer for reasons I wrote about in the [first part of this series](/2021/05/porting-takua-to-arm-pt1.html#2021-05-29-motivation).
 
 Up until recently though, my supported platforms list for Takua Renderer notably did not include Windows on Arm.
 There are two main reasons why I never ported Takua Renderer to build and run on Windows on Arm.
@@ -28,6 +53,7 @@ Noting the specific versions used here is important since Microsoft is still act
 
 [![Figure 1: Takua Renderer running on arm64 Windows 11, in a virtual machine on an Apple Silicon Mac.]({{site.url}}/content/images/2024/Jun/takua-on-arm64-windows/takua_windows11_arm64.jpg)]({{site.url}}/content/images/2024/Jun/takua-on-arm64-windows/takua_windows11_arm64.jpg)
 
+<div id="2024-06-07-opengl-on-arm64-win11"></div>
 ## OpenGL on arm64 Windows 11
 
 Takua has two user interface systems: a macOS-specific UI written using a combination of [Dear Imgui](https://github.com/ocornut/imgui), Metal, and AppKit, and a cross-platform UI written using a combination of Dear Imgui, OpenGL, and GLFW.
@@ -68,6 +94,7 @@ With this fix, Takua's UI now fully works on arm64 Windows 11 and displays rende
 
 [![Figure 2: The left window shows Takua running using glEnable(GL_FRAMEBUFFER_SRGB) and not displaying the render correctly, while the right window shows Takua running using sRGB emulation in the fragment shader.]({{site.url}}/content/images/2024/Jun/takua-on-arm64-windows/srgb_comparison.jpg)]({{site.url}}/content/images/2024/Jun/takua-on-arm64-windows/srgb_comparison.jpg)
 
+<div id="2024-06-07-build-embree-on-arm64-win"></div>
 ## Building Embree on arm64 Windows 11
 
 Takua has a moderately sized dependency base, and getting all of the dependency base compiled during my ports to arm64 Linux and arm64 macOS was a very large part of the overall effort since arm64 support across the board was still in an early stage in the graphics field three years ago.
@@ -110,10 +137,11 @@ On arm64 macOS and Linux this works just fine; the ISPC project provides prebuil
 However, on arm64 Windows 11, even though the x86-64 emulation system ran the x86-64 build of ISPC just fine standalone, trying to run it as part of the Embree build didn't work for me despite me trying a variety of ways to get it to work.
 I'm not sure if this works with a native arm64 build of ISPC; building ISPC is a sufficiently involved process that I decided it was out of scope for this project. 
 
+<div id="2024-06-07-x64-code-on-arm64-win"></div>
 ## Running x86-64 code on arm64 Windows 11
 
 Much like how Apple provides Rosetta 2 for running x86-64 applications on arm64 macOS, Microsoft provides a translation layer for running x86 and x86-64 applications on arm64 Windows 11.
-In my [post on porting to arm64 macOS](https://blog.yiningkarlli.com/2021/07/porting-takua-to-arm-pt2.html#rosetta2), I included a lengthy section discussing and performance testing Rosetta 2.
+In my [post on porting to arm64 macOS](/2021/07/porting-takua-to-arm-pt2.html#2021-07-31-rosetta2), I included a lengthy section discussing and performance testing Rosetta 2.
 This time around, I haven't looked as deeply into x86-64 emulation on arm64 Windows, but I did do some basic testing.
 Part of why I didn't go as deeply into this area on Windows is because I'm running arm64 Windows 11 in a virtual machine instead of on native hardware- the comparison won't be super fair anyway.
 Another part of why I didn't go in as deeply is because x86-64 emulation is something that continues to be in an active state of development on Windows; Windows 11 24H2 is supposed to introduce a new x86-64 emulation system called Prism that Microsoft promises to be much faster than the current system in 23H2 [[Mehdi 2024]](https://blogs.microsoft.com/blog/2024/05/20/introducing-copilot-pcs/).
@@ -148,10 +176,10 @@ One thing that Windows 11's emulation system does not seem to be able to do is m
 As I explored previously, Rosetta 2 gains a very significant performance boost from Apple Silicon's hardware-level support for emulating x86-64's strong memory ordering.
 However, since Microsoft cannot control and custom tailor the hardware that Windows 11 will be running on, arm64 Windows 11 can't make any guarantees about hardware-level TSO memory ordering support.
 I don't know if this situation is any different with the new Prism emulator running on the Snapdragon X Pro/Elite, but in the case of the current emulation framework, the lack of hardware TSO support is likely a huge problem for performance.
-In [my testing of Rosetta 2](https://blog.yiningkarlli.com/2021/07/porting-takua-to-arm-pt2.html#perftesting), I found that Takua typically ran about 10-15% slower as x86-64 under Rosetta 2 with TSO mode enabled (the default) compared with native arm64, but ran 40-50% slower as x86-64 under Rosetta 2 with TSO mode disabled compared with native arm64.
+In [my testing of Rosetta 2](/2021/07/porting-takua-to-arm-pt2.html#2021-07-31-perftesting), I found that Takua typically ran about 10-15% slower as x86-64 under Rosetta 2 with TSO mode enabled (the default) compared with native arm64, but ran 40-50% slower as x86-64 under Rosetta 2 with TSO mode disabled compared with native arm64.
 
 Below are some numbers comparing running Takua on arm64 Windows 11 as a native arm64 application versus as an emulated x86-64 application.
-The tests used are the same as the ones I used in my [Rosetta 2 tests](https://blog.yiningkarlli.com/2021/07/porting-takua-to-arm-pt2.html#perftesting), with the same settings as before.
+The tests used are the same as the ones I used in my [Rosetta 2 tests](/2021/07/porting-takua-to-arm-pt2.html#2021-07-31-perftesting), with the same settings as before.
 In this case though, because this was all running in a virtual machine (with 6 allocated cores) instead of directly on hardware, the absolute numbers are not as important as the relative difference between native and emulated modes:
 
 |                        | CORNELL BOX
@@ -189,12 +217,14 @@ For Rosetta 2 this behavior doesn't matter because Rosetta 2 uses TSO mode inste
 Nonetheless though, having any form of x86-64 emulation at all is an important part of making Windows on Arm viable for mainstream adoption, and I'm looking forward to see how much of an improvement the new Prism emulation system in Windows 11 24H2 brings.
 I'll update these results with the Prism emulator once 24H2 is released, and I'll also update these results to show comparisons on real Windows on Arm hardware whenever I actually get some real hardware to try out.
 
+<div id="2024-06-07-conclusion"></div>
 ## Conclusion
 
 I don't think that x86-64 is going away any time soon, but at the same time, the era of mainstream desktop arm64 adoption is here to stay.
 Apple's transition to arm64-based Apple Silicon already made the viability of desktop arm64 unquestionable, and now that Windows on Arm is finally ready for the mainstream as well, I think we will now be living in a multi-architecture world in the desktop computing space for a long time.
 Having more competitors driving innovation ultimately is a good thing, and as new interesting Windows on Arm devices enter the market alongside Apple Silicon Macs, Takua Renderer is ready to go!
 
+<div id="2024-06-07-references"></div>
 ## References
 
 ARM Holdings. 2022. [Load-Acquire and Store-Release instructions](https://developer.arm.com/documentation/102336/0100/Load-Acquire-and-Store-Release-instructions). Retrieved June 7, 2024.

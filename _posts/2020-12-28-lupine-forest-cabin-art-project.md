@@ -7,6 +7,39 @@ author: Yining Karl Li
 
 <div markdown="1">
 
+<p></p>
+## Table of Contents
+
+<div class="tableofcontents">
+    <div class="tableofcontents-row">
+        <div class="tableofcontents-column3">
+            <div class="tableofcontents-content">
+                1. <a href="/2020/12/lupine-forest-cabin-art-project.html#2020-12-28-introduction">Introduction</a><br>
+                2. <a href="/2020/12/lupine-forest-cabin-art-project.html#2020-12-28-initial-blocking">Initial Blocking</a><br>
+                3. <a href="/2020/12/lupine-forest-cabin-art-project.html#2020-12-28-forest-floor">Forest Floor</a><br>
+                4. <a href="/2020/12/lupine-forest-cabin-art-project.html#2020-12-28-making-moss">Making Moss</a><br>
+            </div>
+        </div>
+        <div class="tableofcontents-column3">
+            <div class="tableofcontents-content">
+                5. <a href="/2020/12/lupine-forest-cabin-art-project.html#2020-12-28-filling-out-the-clearing">Filling out the Clearing</a><br>
+                6. <a href="/2020/12/lupine-forest-cabin-art-project.html#2020-12-28-mist-and-atmospherics">Mist and Atmospherics</a><br>
+                7. <a href="/2020/12/lupine-forest-cabin-art-project.html#2020-12-28-final-lighting">Final Lighting</a><br>
+                8. <a href="/2020/12/lupine-forest-cabin-art-project.html#2020-12-28-conclusion">Conclusion</a><br>
+            </div>
+        </div>
+        <div class="tableofcontents-column3">
+            <div class="tableofcontents-content">
+                9. <a href="/2020/12/lupine-forest-cabin-art-project.html#2020-12-28-references">References</a><br>
+                10. <a href="/2020/12/lupine-forest-cabin-art-project.html#2020-12-28-footnotes">Footnotes</a><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="2020-12-28-introduction"></div>
+## Introduction
+
 I recently did a small personal art exercise to experiment with building out a detailed forest type of environment.
 I have worked with a detailed forest scene before, when I used one while I was [developing Takua Renderer's mipmapping and texture caching system](https://blog.yiningkarlli.com/2018/10/bidirectional-mipmap.html), but in that case I didn't actually _make_ the scene, I just took an off-the-shelf scene and ported it to Takua.
 I also made a forest for the background of [my Woodville RenderMan Art Challenge piece](https://blog.yiningkarlli.com/2019/11/woodville-renderman-challenge.html), but to be honest, I wasn't very happy with how that turned out.
@@ -22,6 +55,7 @@ Before I go into the details of how this project went, here's what the final res
 
 [![Figure 1: Final piece, daylight variant. Made for fun and as an environment building exercise. Click for 4K version.]({{site.url}}/content/images/2020/Dec/lupineforestcabin/preview/final_day.webp)]({{site.url}}/content/images/2020/Dec/lupineforestcabin/final_day.webp)
 
+<div id="2020-12-28-initial-blocking"></div>
 ## Initial Blocking
 
 I didn't really come into this project with much of a plan on what the final image would look like.
@@ -91,6 +125,7 @@ While nothing here is as close to the camera as in my lookdev tests, nonetheless
 
 [![Figure 8: Initial blocking for where the spruce trees should go, along with initial grass and rock formations.]({{site.url}}/content/images/2020/Dec/lupineforestcabin/preview/initial_trees.webp)]({{site.url}}/content/images/2020/Dec/lupineforestcabin/initial_trees.webp)
 
+<div id="2020-12-28-forest-floor"></div>
 ## Forest Floor
 
 At this stage, with conifer trees and large rock formations, the scene was starting to remind me of trips to Yosemite (even though technically Yosemite's conifers include pine, fir, and sequoia but notably _not_ spruce).
@@ -138,6 +173,7 @@ The nice thing about using instanced geometry instead of just adding decals to t
 
 [![Figure 12: Top-down detail view of the footpath debris, from the final version of the scene with mossy, volumes, etc.]({{site.url}}/content/images/2020/Dec/lupineforestcabin/preview/final_overcam.webp)]({{site.url}}/content/images/2020/Dec/lupineforestcabin/final_overcam.webp)
 
+<div id="2020-12-28-making-moss"></div>
 ## Making Moss
 
 In order to add a bit more detail to the scene, I wanted to add moss to some of the tree trunks and rock formations and stuff.
@@ -230,6 +266,7 @@ It's far from perfect; in order to really look convincing this close up, I think
 
 [![Figure 21: Alternate close-up view of one of the mossy tree trunks, from the final version of the scene.]({{site.url}}/content/images/2020/Dec/lupineforestcabin/preview/moss_closeup.webp)]({{site.url}}/content/images/2020/Dec/lupineforestcabin/moss_closeup.webp)
 
+<div id="2020-12-28-filling-out-the-clearing"></div>
 ## Filling out the Clearing
 
 To finish building the scene, I wanted to put something in the clearing that the footpath leads to.
@@ -286,6 +323,7 @@ I had to wire up a small node subnetwork to do this for every single Evermotion 
 At least as of RenderMan 23 (the current version while I was working on this project), RenderMan doesn't have any utility node to do this conversion from metallic/basecolor to PxrSurface's diffuse/specular face/specular edge color paramterization<sup id="2020-12-28-footnote-2-backlink">[2](#2020-12-28-footnote-2)</sup>; such a node would be really helpful!
 Alternatively, a full implementation of the Disney BSDF [[Burley 2015]](https://doi.org/10.1145/2776880.2787670) (as opposed to the reduced-paramter Disney BRDF that is already available) would be useful too since a full implementation of the Disney BSDF would both be able to accept roughness/metallic/basecolor parameterized inputs and provide the full range of abilities that a production-quality shading model needs.
 
+<div id="2020-12-28-mist-and-atmospherics"></div>
 ## Mist and Atmospherics
 
 With the surface geometry and shading for the scene complete, the last things to do were atmospherics and final lighting.
@@ -322,6 +360,7 @@ One thing that I think is kind of neat about looking at the composited volumes t
 
 The clouds in the background in the final render are just part of the skydome IBL; in the future I'm hoping to build background cloudscapes from scratch, but that'll have to be for a future art exercise.
 
+<div id="2020-12-28-final-lighting"></div>
 ## Final Lighting
 
 The final lighting setup for this scene was super simple; effectively the whole scene is lit by just a simple sun + skydome IBL setup.
@@ -366,7 +405,7 @@ Here's the overcast morning variant, followed by a 50% grey clay shaded version:
 
 [![Figure 35: Alternate morning overcast lighting, comp, and color grading applied to a 50% grey clay shaded version. Click for 4K version.]({{site.url}}/content/images/2020/Dec/lupineforestcabin/preview/final_cool_clay.webp)]({{site.url}}/content/images/2020/Dec/lupineforestcabin/final_cool_clay.webp)
 
-
+<div id="2020-12-28-conclusion"></div> 
 ## Conclusion
 
 I learned a lot from this project; the goal of the project was to figure out how to put together a detailed forest environment that holds up well at relatively close camera distances, and I think the end result accomplishes that well enough.
@@ -385,6 +424,7 @@ Finally, here is a progression video I put together from all of the test and in-
 <div class='embed-container'><iframe src="https://player.vimeo.com/video/1070518395" frameborder="0" allow="fullscreen; picture-in-picture; encrypted-media">Lupine Forest Cabin Progression Reel</iframe></div>
 <div class="figcaption"><span>Figure 36: Progression reel made from test and in-progress renders leading up to my final image.</span></div>
 
+<div id="2020-12-28-references"></div> 
 ## References
 
 Zap Andersson, Paul Edmondson, Julien Guertault, Adrien Herubel, Alan King, Peter Kutz, Andréa Machizaud, Jamie Portsmouth, Frédéric Servant, and Jonathan Stone. 2024. [OpenPBR Surface Specification](https://academysoftwarefoundation.github.io/OpenPBR/). _Academy Software Foundation white paper_.
@@ -425,6 +465,7 @@ Walt Disney Animation Studios. 2011. [SeExpr](https://wdas.github.io/SeExpr/).
 
 ---
 
+<div id="2020-12-28-footnotes"></div>
 ## Footnotes
 
 <sup id="2020-12-28-footnote-1">1</sup> Additional post-2020 references added in update to post in May 2025.

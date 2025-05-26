@@ -5,6 +5,34 @@ tags: [Coding, Renderer]
 author: Yining Karl Li
 ---
 
+<p></p>
+## Table of Contents
+
+<div class="tableofcontents">
+    <div class="tableofcontents-row">
+        <div class="tableofcontents-column2">
+            <div class="tableofcontents-content">
+                1. <a href="/2018/10/bidirectional-mipmap.html#2018-10-25-introduction">Introduction</a><br>
+                2. <a href="/2018/10/bidirectional-mipmap.html#2018-10-25-texture-caches-and-mipmaps">Texture Caches and Mipmaps</a><br>
+                3. <a href="/2018/10/bidirectional-mipmap.html#2018-10-25-mipmap-level-selection-and-ray-differentials">Mipmap Level Selection and Ray Differentials</a><br>
+                4. <a href="/2018/10/bidirectional-mipmap.html#2018-10-25-ray-differentials-and-path-tracing">Ray Differentials and Path Tracing</a><br>
+                5. <a href="/2018/10/bidirectional-mipmap.html#2018-10-25-ray-differentials-and-bidirectional">Ray Differentials and Bidirectional Techniques</a><br>
+            </div>
+        </div>
+        <div class="tableofcontents-column2">
+            <div class="tableofcontents-content">
+                6. <a href="/2018/10/bidirectional-mipmap.html#2018-10-25-camera-based-mipmap-level-selection">Camera-Based Mipmap Level Selection</a><br>
+                7. <a href="/2018/10/bidirectional-mipmap.html#2018-10-25-results">Results</a><br>
+                8. <a href="/2018/10/bidirectional-mipmap.html#2018-10-25-additional-renders">Additional Renders</a><br>
+                9. <a href="/2018/10/bidirectional-mipmap.html#2018-10-25-references">References</a><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="2018-10-25-introduction"></div>
+## Introduction
+
 One major feature that differentiates production-capable renderers from hobby or research renderers is a texture caching system.
 A well-implemented texture caching system is what allows a production renderer to render scenes with potentially many TBs of textures, but in a reasonable footprint that fits in a few dozen or a hundred-ish GB of RAM.
 Pretty much every production renderer today has a robust texture caching system; Arnold famously derives a significant amount of performance from an extremely efficient texture cache implementation, and Vray/Corona/Renderman/Hyperion/etc. all have their own, similarly efficient systems.
@@ -18,7 +46,8 @@ The scene I'll use as an example in this post is a custom recreation of a forest
 
 [![Figure 1: A forest scene in the morning, rendered using Takua Renderer. 6 GB of textures on disk accessed using a 1 GB in-memory texture cache.]({{site.url}}/content/images/2018/Oct/preview/forest.cam0.0.jpg)]({{site.url}}/content/images/2018/Oct/forest.cam0.0.jpg)
 
-## Intro: Texture Caches and Mipmaps
+<div id="2018-10-25-texture-caches-and-mipmaps"></div>
+## Texture Caches and Mipmaps
 
 Texture caching is typically coupled with some form of a tiled, mipmapped [[Williams 1983]](https://dl.acm.org/citation.cfm?id=801126) texture system; the texture cache holds specific tiles of an image that were accessed, as opposed to an entire texture.
 These tiles are typically lazy-loaded on demand into a cache [[Peachey 1990]](https://graphics.pixar.com/library/TOD/), which means the renderer only needs to pay the memory storage cost for only parts of a texture that the renderer actually accesses.
@@ -54,6 +83,7 @@ Interestingly, the Moonray team at Dreamworks Animation arrived at more or less 
 As a result, the number of samples required to resolve geometric aliasing should be more than enough to also resolve any texture aliasing.
 The Moonray team found that this approach works well enough to be their default mode in production.
 
+<div id="2018-10-25-mipmap-level-selection-and-ray-differentials"></div>
 ## Mipmap Level Selection and Ray Differentials
 
 The trickiest part of using mipmapped textures is figuring out what mipmap level to sample at any given point.
@@ -221,6 +251,7 @@ Hyperion [[Burley et al. 2018]](https://dl.acm.org/citation.cfm?id=3182159) uses
 
 A brief side note: being able to calculate the differential for surface normals with respect to screen space is useful for bump mapping, among other things, and the calculation is directly analogous to the pseudocode above for calculateDifferentialSurfaceForTriangle() and calculateScreenSpaceDifferential(), just with surface normals substituted in for surface positions.
 
+<div id="2018-10-25-ray-differentials-and-path-tracing"></div>
 ## Ray Differentials and Path Tracing
 
 We now know how to calculate filter footprints using ray differentials for camera rays, which is great, but what about secondary rays?
@@ -263,6 +294,7 @@ Weta's Manuka has a unified roughness estimation system built into the shading s
 Generally, roughness driven heuristics seem to work reasonably well in production, and the actual heuristics don't actually have to be too complicated!
 In an experimental branch of PBRT, Matt Pharr found that a simple heuristic that uses a ray differential covering roughly 1/25th of the hemisphere for diffuse events and 1/100th of the hemisphere for glossy events generally worked reasonably well [[Pharr 2017]](https://www.pbrt.org/texcache.pdf).
 
+<div id="2018-10-25-ray-differentials-and-bidirectional"></div>
 ## Ray Differentials and Bidirectional Techniques
 
 So far everything we've discussed has been for unidirectional path tracing that starts from the camera.
@@ -283,6 +315,7 @@ Currently, only a handful of production renderers have extensive support for bid
 Unfortunately, this means bidirectional techniques must rely on point sampling the lowest mip level, which defeats the whole point of mipmapping and destroys texture caching performance.
 The Manuka team alludes to using ray differentials for photon map gather widths in VCM and notes that these ray differentials are implemented as part of their manifold next event estimation system [[Fascione et al. 2018]](https://dl.acm.org/citation.cfm?id=3182161), but there isn't enough detail in their paper to be able to figure out how this actually works.
 
+<div id="2018-10-25-camera-based-mipmap-level-selection"></div>
 ## Camera-Based Mipmap Level Selection
 
 Takua has implementations of standard bidirectional path tracing, progressive photon mapping, and VCM, and I wanted mipmapping to work with all integrator types in Takua.
@@ -339,6 +372,7 @@ As a result, Takua is able to sidestep the light path ray differential problem i
 There are some particular implementation details that are slightly complicated by Takua having support for multiple uv sets per mesh, but I'll write about multiple uv sets in a later post.
 Also, there is one notable failure scenario, which I'll discuss more in the results section.
 
+<div id="2018-10-25-results"></div>
 ## Results
 
 So how well does camera-based mipmap level selection work compared to a more standard approach based on path differentials or ray widths from the incident ray?
@@ -415,6 +449,7 @@ While Takua currently gets by with just point sampling, filtering becomes much m
 In an upcoming post, I'm aiming to write about how Takua's texture caching system works in conjunction with the mipmapping system described in this post.
 As mentioned earlier, I'm also planning a (hopefully) short-ish post about supporting multiple uv sets, and how that impacts a mipmapping and texture caching system.
 
+<div id="2018-10-25-additional-renders"></div>
 ## Additional Renders
 
 Finally, since this has been a very text-heavy post, here are some bonus renders of the same forest scene under different lighting conditions.
@@ -429,6 +464,7 @@ In a future post, I'll show a bunch of interesting renders of this scene from di
 
 [![Figure 9: The forest at sunset.]({{site.url}}/content/images/2018/Oct/preview/forest_sunset.0.jpg)]({{site.url}}/content/images/2018/Oct/forest_sunset.0.jpg)
 
+<div id="2018-10-25-references"></div>
 ## References
 
 John Amanatides. 1984. [Ray Tracing with Cones](https://dl.acm.org/citation.cfm?id=808589). _Computer Graphics (Proceedings of SIGGRAPH)_ 18, 3 (1984), 129-135.

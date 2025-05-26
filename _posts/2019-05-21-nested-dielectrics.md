@@ -5,6 +5,29 @@ tags: [Coding, Renderer]
 author: Yining Karl Li
 ---
 
+<p></p>
+## Table of Contents
+
+<div class="tableofcontents">
+    <div class="tableofcontents-row">
+        <div class="tableofcontents-column2">
+            <div class="tableofcontents-content">
+                1. <a href="/2019/05/nested-dielectrics.html#introduction">Introduction</a><br>
+                2. <a href="/2019/05/nested-dielectrics.html#2019-05-21-problems-with-only-interface-tracking">Problems with only Interface Tracking</a><br>
+            </div>
+        </div>
+        <div class="tableofcontents-column2">
+            <div class="tableofcontents-content">
+                3. <a href="/2019/05/nested-dielectrics.html#2019-05-21-priority-based-nested-dielectrics">Priority-Based Nested Dielectrics</a><br>
+                4. <a href="/2019/05/nested-dielectrics.html#references">References</a><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="2019-05-21-introduction"></div>
+## Introduction
+
 A few years ago, I wrote [a post about attenuated transmission](https://blog.yiningkarlli.com/2015/06/attenuated-transmission.html) and what I called "deep attenuation" at the time- refraction and transmission through multiple mediums embedded inside of each other, a.k.a. what is usually called nested dielectrics.
 What I called "deep attenuation" in that post is, in its essence, just pure interface tracking using a stack.
 This post is meant as a revisit and update of that post; I'll talk about the problems with the ad-hoc pure interface tracking technique I came up with in that previous post and discuss the proper priority-based nested dielectric technique [[Schmidt and Budge 2002]](https://www.tandfonline.com/doi/abs/10.1080/10867651.2002.10487555) that Takua uses today.
@@ -21,6 +44,7 @@ Conversely, Figure 1 shows a correct liquid-glass interface without a bright rin
 
 [![Figure 2: The same scene as in Figure 1, rendered using Takua's old interface tracking system. A number of bizarre physically inaccurate problems are present.]({{site.url}}/content/images/2019/May/preview/nested_ice_old.0.jpg)]({{site.url}}/content/images/2019/May/nested_ice_old.0.png)
 
+<div id="2019-05-21-problems-with-only-interface-tracking"></div>
 ## Problems with only Interface Tracking
 
 So what exactly is wrong with using only interface tracking without priorities?
@@ -98,6 +122,7 @@ One solution that immediately comes to mind is to simply consider whatever surfa
 This produces an inconsistent view of the world across different rays.
 Instead, a better solution is provided by priority-based nested dielectrics [[Schmidt and Budge 2002]](https://www.tandfonline.com/doi/abs/10.1080/10867651.2002.10487555).
 
+<div id="2019-05-21-priority-based-nested-dielectrics"></div>
 ## Priority-Based Nested Dielectrics
 
 Priority-based nested dielectrics work by assigning priority values to geometry, with the priority values determining which piece of geometry "wins" when a ray is in a region of space where multiple pieces of geometry overlap.
@@ -237,6 +262,7 @@ To render them correctly, I applied a shader with glossy refraction to the crack
 
 [![Figure 8: A different camera angle of the scene from Figure 7. The scene is from Benedikt Bitterli's rendering resources page.]({{site.url}}/content/images/2019/May/preview/waterpour.cam1.0.jpg)]({{site.url}}/content/images/2019/May/waterpour.cam1.0.png)
 
+<div id="2019-05-21-references"></div>
 ## References
 
 Benedikt Bitterli. 2016. [Rendering Resources](https://benedikt-bitterli.me/resources/). Retrieved from [https://benedikt-bitterli.me/resources/](https://benedikt-bitterli.me/resources/).

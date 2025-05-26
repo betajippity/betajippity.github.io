@@ -5,9 +5,35 @@ tags: [Coding, Renderer]
 author: Yining Karl Li
 ---
 
+<p></p>
+## Table of Contents
+
+<div class="tableofcontents">
+    <div class="tableofcontents-row">
+        <div class="tableofcontents-column2">
+            <div class="tableofcontents-content">
+                1. <a href="/2021/10/takua-on-m1-max#2021-10-25-introduction">Introduction</a><br>
+                2. <a href="/2021/10/takua-on-m1-max#2021-10-25-disclaimers">Disclaimers</a><br>
+                3. <a href="/2021/10/takua-on-m1-max#2021-10-25-the-m1-max-chip">The M1 Max Chip</a><br>
+                4. <a href="/2021/10/takua-on-m1-max#2021-10-25-application-to-ray-tracing">Application to Ray Tracing</a><br>
+            </div>
+        </div>
+        <div class="tableofcontents-column2">
+            <div class="tableofcontents-content">
+                5. <a href="/2021/10/takua-on-m1-max#2021-10-25-results">Results</a><br>
+                6. <a href="/2021/10/takua-on-m1-max#2021-10-25-conclusion">Conclusion</a><br>
+                7. <a href="/2021/10/takua-on-m1-max#2021-10-25-bonus-images-and-acknowledgements">Bonus Images and Acknowledgements</a><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="2021-10-25-introduction"></div>
+## Introduction
+
 Over the past year, I ported my hobby renderer, Takua Renderer, to 64-bit ARM.
 I wrote up the entire process and everything I learned as a three-part blog post series covering topics ranging from assembly-level comparison between x86-64 and arm64, to deep dives into various aspects of Apple Silicon, to a comparison of x86-64's SSE and arm64's Neon vector instructions.
-In the intro to part 1 of my arm64 series, I wrote about my [motivation for exploring arm64](https://blog.yiningkarlli.com/2021/05/porting-takua-to-arm-pt1.html#motivation), and in the [conclusion to part 2](https://blog.yiningkarlli.com/2021/07/porting-takua-to-arm-pt2.html#conclusion) of my arm64 series, I wrote the following about the Apple M1 chip:
+In the intro to part 1 of my arm64 series, I wrote about my [motivation for exploring arm64](/2021/05/porting-takua-to-arm-pt1.html#2021-05-29-motivation), and in the [conclusion to part 2](/2021/07/porting-takua-to-arm-pt2.html#2021-07-31-conclusion) of my arm64 series, I wrote the following about the Apple M1 chip:
 
 > There’s really no way to understate what a colossal achievement Apple’s M1 processor is; compared with almost every modern x86-64 processor in its class, it achieves significantly more performance for much less cost and much less energy. The even more amazing thing to think about is that the M1 is Apple’s low end Mac processor and likely will be the slowest arm64 chip to ever power a shipping Mac; future Apple Silicon chips will only be even faster.
 
@@ -20,6 +46,8 @@ While the previous three parts dove deep into extremely technical details about 
 
 [![Figure 1: The new 2021 14-inch MacBook Pro with an Apple M1 Max chip, running Takua Renderer.]({{site.url}}/content/images/2021/Oct/takua-on-m1-max/preview/macbookpro14.jpg)]({{site.url}}/content/images/2021/Oct/takua-on-m1-max/macbookpro14.jpg)
 
+<div id="2021-10-25-disclaimers"></div>
+## Disclaimers
 
 Before we dive in, I want to get a few important details out of the way.
 First, this post is not really a product review or anything like that, and I will not be making any sort of endorsement or recommendation on what you should or should not buy; I'll just be writing about my experiences so far.
@@ -29,6 +57,9 @@ When Apple reached out to me, I received permission from Disney Animation to go 
 Finally, Apple is not paying me or giving me anything for this post; the 14-inch MacBook Pro I've been using for the past week is strictly a loaner unit that has to be returned to Apple at a later point.
 Similarly, Apple has no say over the contents of this post; Apple has not even seen any version of this post before publishing.
 What is here is only what I think!
+
+<div id="2021-10-25-the-m1-max-chip"></div>
+## The M1 Max Chip
 
 Now that a year has passed since the first Apple Silicon arm64 Macs were released, I do have my hobby renderer up and running on arm64 with everything working, but I've only rendered relatively small scenes so far on arm64 processors.
 The reason I've stuck to smaller scenes is because high-end workstation-class arm64 processors so far just have not existed; while large server-class arm64 processors with large core counts and tons of memory do exist, these server-class processors are mostly found in huge server farms and supercomputers and are not readily available for general use.
@@ -64,7 +95,7 @@ The M1 Max-based MacBook Pro is certainly not the first laptop to ever ship with
 However, this is where the M1 Max and M1 Pro's CPU performance comes into play: while previous laptops could support 64 GB of RAM and more, actually utilizing large amounts of RAM was difficult since previous laptop CPUs often couldn't keep up!
 Being able to fit a large data set into memory is one thing, but being able to run processing fast enough to actually make use of large data sets in a reasonable amount of time is the other half of the puzzle.
 My wife has a 2019 16-inch MacBook Pro with 32 GB of memory, which is _just_ enough to render my forest scene.
-However, as seen in [the benchmark results later in this post](#results), the 2019 16-inch MacBook Pro's Intel Core-i7 9750H CPU with 6 cores and 12 threads is over twice as slow as the M1 Max at rendering this scene _at best_, and can be even slower depending on thermals, power, and more.
+However, as seen in [the benchmark results later in this post](#2021-10-25-results), the 2019 16-inch MacBook Pro's Intel Core-i7 9750H CPU with 6 cores and 12 threads is over twice as slow as the M1 Max at rendering this scene _at best_, and can be even slower depending on thermals, power, and more.
 Rendering each of the images in this post took a few hours on the M1 Max, but on the Core-i7 9750H, the renders have to become overnight jobs with the 16-inch MacBook Pro's fans running at full speed.
 With only a week to write this post, a few hours per image versus an overnight job per image made the difference between having images ready for this post versus not having any interesting renders to show at all!
 
@@ -87,6 +118,9 @@ The M1 family's high-performance cores posses an out-of-order window that is aro
 Having a huge reordering buffer supports the M1 family's high-performance cores also having a high level of instruction-level parallelism enabled by extremely wide instruction execution and extremely wide instruction decoding.
 While wide instruction decoding is certainly possible on x86-64 and other architectures, scaling wide instruction-issue designs in a low power budget is generally accepted to be a very challenging chip design problem.
 The theory goes that arm64's fixed instruction length and relatively simple instructions make implementing extremely wide decoding and execution far more practical for Apple, compared with what Intel and AMD have to do in order to decode x86-64's variable length, often complex compound instructions.
+
+<div id="2021-10-25-application-to-ray-tracing"></div>
+## Application to Ray Tracing
 
 So what does any of the above have to do with ray tracing?
 One concrete application has to do with opacity mapping in a ray tracing renderer.
@@ -151,7 +185,8 @@ I wanted to compare plugged-in versus battery performance because of Apple's cla
 This claim is actually a huge deal; laptops traditionally have had to throttle down CPU performance when unplugged to conserve battery life, but the energy efficiency of Apple Silicon allows Apple to no longer have to do this on M1-family laptops.
 I wanted to verify this claim for myself!
 
-<div id="results"></div>
+<div id="2021-10-25-results"></div>
+## Results
 
 In the results below, I present three tests using the forest scene.
 The first test measures how long Takua Renderer takes to run subdivision, tessellation, and displacement, which has to happen before any pixels can actually be rendered.
@@ -253,6 +288,9 @@ The wider takeaway here though is that in order to give the M1 Max some real com
 For workloads that push the CPU to maximum utilization for sustained periods of time, such as production-quality path traced rendering, the M1 Max represents a fundamental shift in what is possible in a laptop form factor.
 Something even more exciting to think about is how the M1 Max really is the _middle_ tier Apple Silicon solution; presumably the large iMac and Mac Pro will push things into even more absurd territory.
 
+<div id="2021-10-25-conclusion"></div>
+## Conclusion
+
 So those are my initial thoughts on the Apple M1 Max chip and my initial experiences with getting my hobby renderer up and running on the 2021 14-inch MacBook Pro.
 I'm extremely impressed, and not just with the chip!
 This post mostly focused on the chip itself, but the rest of the 2021 MacBook Pro lineup is just as impressive.
@@ -272,6 +310,9 @@ Over the next year, I am undertaking a large-scale effort to port the entirety o
 Even though I've just gotten started on this project, I've already learned a lot of interesting things comparing CUDA and Metal compute; I'll have much more to say on the topic hopefully soon!
 
 Beyond the CPU and GPU and screen, there are still even more other nice features that the new MacBook Pros have for professional workflows like high-end rendering, but I'll skip going through them in this post since I'm sure they'll be thoroughly covered by all of the various actual tech reviewers out on the internet.
+
+<div id="2021-10-25-bonus-images-and-acknowledgements"></div>
+## Bonus Images and Acknowledgements
 
 To conclude for now, here are two more bonus images that I rendered on the M1 Max 14-inch MacBook Pro.
 I originally planned on just rendering the earlier three images in this post, but to my surprise, I found that I had enough time to do a few more!

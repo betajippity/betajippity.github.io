@@ -5,6 +5,36 @@ tags: [Coding, Renderer]
 author: Yining Karl Li
 ---
 
+<p></p>
+## Table of Contents
+
+<div class="tableofcontents">
+    <div class="tableofcontents-row">
+        <div class="tableofcontents-column2">
+            <div class="tableofcontents-content">
+                1. <a href="/2021/07/porting-takua-to-arm-pt2#2021-07-31-introduction">Introduction</a><br>
+                2. <a href="/2021/07/porting-takua-to-arm-pt2#2021-07-31-porting-to-arm64-macos">Porting to arm64 macOS</a><br>
+                3. <a href="/2021/07/porting-takua-to-arm-pt2#2021-07-31-universal-binaries">Universal Binaries</a><br>
+                4. <a href="/2021/07/porting-takua-to-arm-pt2#2021-07-31-rosetta2">Rosetta 2: Running x86-64 on Apple Silicon</a><br>
+                5. <a href="/2021/07/porting-takua-to-arm-pt2#2021-07-31-tso-memory-ordering">TSO Memory Ordering on the M1 Processor</a><br>
+                6. <a href="/2021/07/porting-takua-to-arm-pt2#2021-07-31-embree-on-arm64-using-sse2neon">Embree on arm64 using sse2neon</a><br>
+            </div>
+        </div>
+        <div class="tableofcontents-column2">
+            <div class="tableofcontents-content">
+                7. <a href="/2021/07/porting-takua-to-arm-pt2#2021-07-31-more-differences-in-arm64-vs-x86-64">(More) Differences in arm64 versus x86-64</a><br>
+                8. <a href="/2021/07/porting-takua-to-arm-pt2#2021-07-31-perftesting">(More) Performance Testing</a><br>
+                9. <a href="/2021/07/porting-takua-to-arm-pt2#2021-07-31-conclusion">Conclusion to Part 2</a><br>
+                10. <a href="/2021/07/porting-takua-to-arm-pt2#2021-07-31-acknowledgements">Acknowledgements</a><br>
+                11. <a href="/2021/07/porting-takua-to-arm-pt2#2021-07-31-references">References</a><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="2021-07-31-introduction"></div>
+## Introduction
+
 This post is the second half of my two-part series about how I ported my hobby renderer (Takua Renderer) to 64-bit ARM and what I learned from the process.
 In the [first part](https://blog.yiningkarlli.com/2021/05/porting-takua-to-arm-pt1.html), I wrote about my motivation for undertaking a port to arm64 in the first place and described the process I took to get Takua Renderer up and running on an arm64-based Raspberry Pi 4B.
 I also did a deep dive into several topics that I ran into along the way, which included floating point reproducibility across different processor architectures, a comparison of arm64 and x86-64's memory reordering models, and a comparison of how the same example atomic code compiles down to assembly in arm64 versus in x86-64.
@@ -16,6 +46,7 @@ In this post I'll look into how Embree, a codebase containing tons of x86-64 ass
 I will also use this exploration of Embree as a lens through which to compare x86-64's SSE vector extensions to arm64's Neon vector extensions.
 Finally, I'll wrap up with some additional important details to keep in mind when writing portable code between x86-64 and arm64, and I'll also provide some more performance comparisons featuring the Apple M1 processor.
 
+<div id="2021-07-31-porting-to-arm64-macos"></div>
 ## Porting to arm64 macOS
 
 [![Figure 1: Takua Renderer running on arm64 macOS 11, on an Apple Silicon Developer Transition Kit.]({{site.url}}/content/images/2021/Jul/takua-on-arm-pt2/takua_macos_arm64.jpg)]({{site.url}}/content/images/2021/Jul/takua-on-arm-pt2/takua_macos_arm64.jpg)
@@ -50,6 +81,7 @@ From the moment the DTK arrived on my doorstep, I only needed about five hours t
 Considering that at that point, outside of Apple nobody had done any work to get anything ready yet, I was very pleasantly surprised that I had everything up and working in just five hours!
 Figure 1 is a screenshot of Takua Renderer running on arm64 macOS Big Sur Beta 1 on the Apple Silicon DTK.
 
+<div id="2021-07-31-universal-binaries"></div>
 ## Universal Binaries
 
 The Mac has now had three processor architecture migrations in its history; the Mac line began in 1984 based on Motorola 68000 series processors, transitioned from the 68000 series to PowerPC in 1994, transitioned again from PowerPC to x86 (and eventually x86-64) in 2006, and is now in the process of transitioning from x86-64 to arm64.
@@ -97,8 +129,7 @@ Figure 3 shows creating a Universal Binary by combining separate x86-64 and arm6
 
 [![Figure 3: Examining the size of a Universal Binary created using the lipo tool versus the size of a Universal Binary built directly as a multi-architecture Mach-O.]({{site.url}}/content/images/2021/Jul/takua-on-arm-pt2/lipocomparison.png)]({{site.url}}/content/images/2021/Jul/takua-on-arm-pt2/lipocomparison.png)
 
-<div id="rosetta2"></div>
-
+<div id="2021-07-31-rosetta2"></div>
 ## Rosetta 2: Running x86-64 on Apple Silicon
 
 While getting Takua Renderer building and running as a native arm64 binary on Apple Silicon only took me about five hours, actually running Takua for the first time in _any_ form on Apple Silicon happened much faster!
@@ -326,8 +357,9 @@ Now that we have a better understanding of what Rosetta 2 is actually doing unde
 I compared Takua Renderer running as native arm64 code versus as x86-64 code running through Rosetta 2 on four different scenes, and generally running through Rosetta 2 yielded about 65% to 70% of the performance of running as native arm64 code.
 The results section at the end of this post contains the detailed numbers and data.
 Generally, I'm very impressed with this amount of performance for emulating x86-64 code on an arm64 processor, especially when considering that with high-performance code like Takua Renderer, Rosetta 2 has close to zero opportunities to provide additional performance by calling into native system frameworks.
-As can be seen in the [data in the results section](#perftesting), even more impressive is the fact that even running at 70% of native speed, x86-64 Takua Renderer running on the M1 chip through Rosetta 2 is often on-par with or _even faster_ than x86-64 Takua Renderer running natively on a contemporaneous current-generation 2019 16-inch MacBook Pro with a 6-core Intel Core i7-9750H processor!
+As can be seen in the [data in the results section](/2021/07/porting-takua-to-arm-pt2.html#2021-07-31-perftesting), even more impressive is the fact that even running at 70% of native speed, x86-64 Takua Renderer running on the M1 chip through Rosetta 2 is often on-par with or _even faster_ than x86-64 Takua Renderer running natively on a contemporaneous current-generation 2019 16-inch MacBook Pro with a 6-core Intel Core i7-9750H processor!
 
+<div id="2021-07-31-tso-memory-ordering"></div>
 ## TSO Memory Ordering on the M1 Processor
 
 As I covered extensively in my previous post, one major crucial architectural difference between arm64 and x86-64 is in memory ordering: arm64 is a weakly ordered architecture, whereas x86-64 is a strongly ordered architecture [[Preshing 2012]](https://preshing.com/20121019/this-is-why-they-call-it-a-weakly-ordered-cpu/).
@@ -476,7 +508,7 @@ As mentioned earlier, running a program written and compiled with weak memory or
 
 Speaking of the performance of hardware TSO mode, the last thing I tried was measuring the performance impact of enabling hardware TSO mode.
 I hacked enabling hardware TSO mode into the native arm64 version of Takua Renderer, with the idea being that by comparing the Rosetta 2, custom TSO-enabled native arm64, and default TSO-disabled native arm64 versions of Takua Renderer, I could get a better sense of exactly how much performance cost there is to running the M1 with TSO enabled, and how much of the performance cost of Rosetta 2 comes from less efficient translated arm64 code versus from TSO-enabled mode.
-The [results section at the end of this post](#perftesting) contains the exact numbers and data for the four scenes that I tested; the general trend I found was that native arm64 code with hardware TSO enabled ran about 10% to 15% slower than native arm64 code with hardware TSO disabled.
+The [results section at the end of this post](/2021/07/porting-takua-to-arm-pt2.html#2021-07-31-perftesting) contains the exact numbers and data for the four scenes that I tested; the general trend I found was that native arm64 code with hardware TSO enabled ran about 10% to 15% slower than native arm64 code with hardware TSO disabled.
 When comparing with Rosetta 2's overall performance, I think we can reasonably estimate that on the M1 chip, hardware TSO is responsible for somewhere between a third to a half of the performance discrepancy between Rosetta 2 and native weakly ordered arm64 code.
 
 Apple Silicon's hardware TSO mode is a fascinating example of Apple extending the base arm64 architecture and instruction set to accelerate application-specific needs.
@@ -485,6 +517,7 @@ For example, Apple Silicon contains an entire new, so far undocumented arm64 ISA
 This extension, called AMX (for Apple Matrix coprocessor), is separate but likely related to the "Neural Engine" hardware [[Engheim 2021]](https://medium.com/swlh/apples-m1-secret-coprocessor-6599492fc1e1) that ships on the M1 chip alongside the M1's arm64 processor and custom Apple-designed GPU.
 Recent open-source code releases from Apple [also hint at](https://mobile.twitter.com/_saagarjha/status/1398959235954745346) future Apple Silicon chips having dedicated built-in hardware for doing branch predicion around Objective C's objc_msgSend, which would considerably accelerate message passing in Cocoa apps.
 
+<div id="2021-07-31-embree-on-arm64-using-sse2neon"></div>
 ## Embree on arm64 using sse2neon
 
 As mentioned earlier, porting Takua and Takua's dependencies was relatively easy and straightforward and in large part worked basically out-of-the-box, because Takua and most of Takua's dependencies are written in vanilla C++.
@@ -558,6 +591,7 @@ Much like Embree-aarch64, the arm64 NEON backend for Embree v3.13.0 does not inc
 Brecht Van Lommel from the Blender project seems to have done [most of the work](https://github.com/embree/embree/pull/316) to upstream Embree-aarch64's changes, with additional work and additional optimizations from Sven Woop on the Intel Embree team.
 Interestingly and excitingly, [Apple also recently submitted a patch](https://github.com/embree/embree/pull/330) to the official Embree project that adds AVX2 support on arm64 by treating each 8-wide AVX value as a pair of 4-wide NEON values.
 
+<div id="2021-07-31-more-differences-in-arm64-vs-x86-64"></div>
 ## (More) Differences in arm64 versus x86-64
 
 In my previous post and in this post, I've covered a bunch of interesting differences and quirks that I ran into and had to take into account while porting from x86-64 to arm64.
@@ -572,8 +606,7 @@ However, in this small section, I thought I'd list a couple more small but inter
 For more details to look out for when porting x86-64 code to arm64 code on macOS specifically, Apple's developer documentation [has a whole article](https://developer.apple.com/documentation/apple-silicon/addressing-architectural-differences-in-your-macos-code) covering various things to consider.
 Another fantastic resource for diving into arm64 assembly is Howard Oakley's ["Code in ARM Assembly" series](https://eclecticlight.co/2021/07/27/code-in-arm-assembly-rounding-and-arithmetic/), which covers arm64 assembly programming on Apple Silicon in extensive detail (the bottom of each article in Howard Oakley's series contains a table of contents linking out to all of the previous articles in the series).
 
-<div id="perftesting"></div>
-
+<div id="2021-07-31-perftesting"></div>
 ## (More) Performance Testing
 
 In my previous post, I included performance testing results from my initial port to arm64 Linux, running on a Raspberry Pi 4B.
@@ -782,8 +815,7 @@ This drop in multithreading scaling efficiency is expected, since the Icestorm c
 The answer is that the Icestorm cores are roughly a quarter as performant as the high-performance Firestorm cores.
 However, according to Apple, the Icestorm cores only use a tenth of the energy that the Firestorm cores do; a 4x performance drop for a 10x drop in energy usage is very impressive.
 
-<div id="conclusion"></div>
-
+<div id="2021-07-31-conclusion"></div>
 ## Conclusion to Part 2
 
 There's really no way to understate what a colossal achievement Apple's M1 processor is; compared with almost every modern x86-64 processor in its class, it achieves significantly more performance for much less cost and much less energy.
@@ -799,6 +831,7 @@ We are currently in a very exciting period of enormous advances in modern proces
 For the end user, no matter who comes out on top and what happens, the end result is ultimately a win- faster chips using less energy for lower prices.
 Now that I have Takua Renderer fully working with parity on both x86-64 and arm64, I'm ready to take advantage of each new advancement!
 
+<div id="2021-07-31-acknowledgements"></div>
 ## Acknowledgements
 
 For both the last post and this post, I owe [Josh Filstrup](https://twitter.com/superfunc) an enormous debt of gratitude for proofreading, giving plenty of constructive and useful feedback and suggestions, and for being a great discussion partner over the past year on many of the topics covered in this miniseries.
@@ -806,6 +839,7 @@ Also an enormous thanks to my wife, [Harmony Li](http://harmonymli.com/), who wa
 Harmony also helped me brainstorm through various topics and provided many useful suggestions along the way.
 Finally, thanks to you, the reader, for sticking with me through these two giant blog posts!
 
+<div id="2021-07-31-references"></div>
 ## References
 
 Apple. 2020. [Addressing Architectural Differences in Your macOS Code](https://developer.apple.com/documentation/apple-silicon/addressing-architectural-differences-in-your-macos-code). Retrieved July 19, 2021.
@@ -867,96 +901,3 @@ Wikipedia. 2021. [SIMD](https://en.wikipedia.org/wiki/SIMD). Retrieved July 18, 
 Wikipedia. 2021. [Single Instruction, Multiple Threads](https://en.wikipedia.org/wiki/Single_instruction,_multiple_threads). Retrieved July 18, 2021.
 
 Wikipedia. 2021. [SPMD](https://en.wikipedia.org/wiki/SPMD). Retrieved July 18, 2021.
-
-<!--
-
-    ARM and Lock-Free Programming: 
-
-    https://randomascii.wordpress.com/2020/11/29/arm-and-lock-free-programming/
-
-    ARM64 trims negative unsigned numbers to zero:
-
-    https://github.com/Aloshi/dukglue/pull/27
-
-    Lockless Programming Considerations:
-
-    https://docs.microsoft.com/en-us/windows/win32/dxtecharts/lockless-programming?redirectedfrom=MSDN
-
-    x86 gcc defaults to signed-chars whilst ARM gcc defaults to unsigned-chars:
-
-    https://www.raspberrypi.org/forums/viewtopic.php?t=501
-    https://www.drdobbs.com/architecture-and-design/portability-the-arm-processor/184405435
-
-    Embree on ARM CFI
-
-    https://ingowald.blog/2018/07/15/cfi-embree-on-arm-power/
-
-    https://heyrick.eu/assembler/fpops.html
-
-    Reverse Engineering Rosetta 2:
-
-    https://ffri.github.io/ProjectChampollion/part1/
-
-    Apple AMX extensions to ARM:
-
-    https://gist.githubusercontent.com/dougallj/7a75a3be1ec69ca550e7c36dc75e0d6f/raw/60d491aeb70863363af1d4bdf4b8ade9be486af3/aarch64_amx.py
-
-    M1 Trickery:
-
-    https://news.ycombinator.com/item?id=25233554
-
-    TSOEnabler:
-
-    https://github.com/saagarjha/TSOEnabler
-
-    A15 hardware objc_msgSend branch predictor:
-
-    https://mobile.twitter.com/_saagarjha/status/1398959235954745346
-
-    MSR/MRS instructions (see TSO stuff):
-
-    https://stackoverflow.com/questions/56142728/what-is-the-expansion-of-the-msr-and-mrs-instructions-in-arm/56146442
-
-    ARM Registers Explained:
-
-    https://eclecticlight.co/2021/06/16/code-in-arm-assembly-registers-explained/
-    (comments: https://news.ycombinator.com/item?id=27526155)
-
-    Code in ARM Assembly: Working with Pointers:
-
-    https://eclecticlight.co/2021/06/21/code-in-arm-assembly-working-with-pointers/
-
-    Code in ARM Assembly: Controlling Flow:
-
-    https://eclecticlight.co/2021/06/23/code-in-arm-assembly-controlling-flow/
-
-    Writing ARM64 Code for Apple Platforms
-
-    https://developer.apple.com/documentation/xcode/writing-arm64-code-for-apple-platforms
-
-    HelloSilicon: ARM64 on Macs
-
-    https://github.com/below/HelloSilicon
-
-    NEON is the new black: fast JPEG optimization on ARM server
-
-    https://blog.cloudflare.com/neon-is-the-new-black/
-
-    actlr_el1 Register:
-
-    https://developer.arm.com/documentation/100442/0100/register-descriptions/aarch64-system-registers/actlr-el1--auxiliary-control-register--el1
-    https://gist.github.com/zhuowei/c712df9ce13d8eabf4c49968d6c6cb2b
-    https://news.ycombinator.com/item?id=25749874
-
-    arm64 + x86-64 on Windows 11:
-
-    https://blogs.windows.com/windowsdeveloper/2021/06/28/announcing-arm64ec-building-native-and-interoperable-apps-for-windows-11-on-arm/
-
-
-    https://fgiesen.wordpress.com/2016/04/03/sse-mind-the-gap/
-    https://github.com/p12tic/libsimdpp
-    https://pharr.org/matt/blog/2018/04/30/ispc-all
-    https://tomforsyth1000.github.io/blog.wiki.html#%5B%5BWhy%20didn%27t%20Larrabee%20fail%3F%5D%5D
-
-    Don't access __m128 directly: https://msdn.microsoft.com/en-us/library/ayeb3ayc.aspx
--->

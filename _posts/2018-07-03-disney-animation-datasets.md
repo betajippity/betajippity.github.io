@@ -93,7 +93,7 @@ Similarly, PBRT's lights and lighting model differ from Hyperion's, and Hyperion
 Another example of a major difference between the Hyperion renders and the PBRT renders is in the water, which Hyperion renders using photon mapping to get the caustics.
 The provided PBRT scenes use unidirectional pathtracing for everything including the water, hence the very different caustics.
 Similarly, the palm trees in the 'palmsCam' camera angle look very different between PBRT and Hyperion because Hyperion's lighting controls are very different from PBRT; Hyperion's lights include various artistic controls for custom shaping and whatnot, which aren't necessarily fully physical.
-Also, the palm leaves are modeled using curves, and the shading depends on varying colors and attributes along the length and width of the curve, which PBRT doesn't support yet (getting the palm leaves is actually the top priority for if more resources are freed up to improve the data set release).
+Also, the palm leaves are modeled using curves, and the shading depends on varying colors and attributes along the length and width of the curve, which PBRT doesn't support yet (getting the palm leaves converted to meshes is actually the top priority for if more resources are freed up to improve the data set release).
 These difference between renderers don't necessarily mean that one renderer is better than the other; they simply mean that the renderers are different.
 This will be true for any pair of renderers that one wants to compare.
 

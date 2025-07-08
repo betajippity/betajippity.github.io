@@ -64,12 +64,12 @@ The presentation is a bit on the long side (30 minutes), but hopefully is a usef
 
 ## References
 
-Benedikt Bitterli, Chris Wyman, Matt Pharr, Peter Shirley, Aaron Lefohn, and Wojciech Jarosz. 2020. [Spatiotemporal Reservoir Sampling for Real-Time Ray Tracing with Dynamic Direct Lighting](https://doi.org/10.1145/3386569.3392481). _ACM Transactions on Graphics_. 39, 4 (2020), 148:1-148:17.
+Benedikt Bitterli, Chris Wyman, Matt Pharr, Peter Shirley, Aaron Lefohn, and Wojciech Jarosz. 2020. [Spatiotemporal Reservoir Sampling for Real-Time Ray Tracing with Dynamic Direct Lighting](https://doi.org/10.1145/3386569.3392481). _ACM Transactions on Graphics (Proc. of SIGGRAPH)_ 39, 4 (Jul. 2020), Article 148.
 
-Alejandro Conty Estevez and Christopher Kulla. 2018. [Importance Sampling of Many Lights with Adaptive Tree Splitting](https://doi.org/10.1145/3233305). _Proc. of the ACM on Computer Graphics and Interactive Techniques (Proc. of HPG)_. 1, 2 (2018), 25:1-25:17.. 
+Alejandro Conty Estevez and Christopher Kulla. 2018. [Importance Sampling of Many Lights with Adaptive Tree Splitting](https://doi.org/10.1145/3233305). _Proc. of the ACM on Computer Graphics and Interactive Techniques (Proc. of High Performance Graphics)_ 1, 2 (Aug. 2018), Article 25. 
 
-Wei-Feng Wayne Huang, Peter Kutz, Yining Karl Li, and Matt Jen-Yuan Chiang. 2021. [Unbiased Emission and Scattering Importance Sampling for Heterogeneous Volumes](https://doi.org/10.1145/3450623.3464644). In _ACM SIGGRAPH 2021 Talks_. 3:1-3:2.
+Wei-Feng Wayne Huang, Peter Kutz, Yining Karl Li, and Matt Jen-Yuan Chiang. 2021. [Unbiased Emission and Scattering Importance Sampling for Heterogeneous Volumes](https://doi.org/10.1145/3450623.3464644). In _ACM SIGGRAPH 2021 Talks_. Article 3.
 
-Alexander Rath, Ömercan Yazici, and Philipp Slusallek. 2023. [Focus Path Guiding for Light Transport Simulation](https://doi.org/10.1145/3588432.3591543). In _ACM SIGGRAPH 2023 Conference Proceedings_. 30:1-30:10.
+Alexander Rath, Ömercan Yazici, and Philipp Slusallek. 2023. [Focus Path Guiding for Light Transport Simulation](https://doi.org/10.1145/3588432.3591543). In _ACM SIGGRAPH 2023 Conference Proceedings_. Article 30.
 
-Petr Vévoda, Ivo Kondapaneni, and Jaroslav Křivánek. 2018. [Bayesian Online Regression for Adaptive Direct Illumination Sampling](https://doi.org/10.1145/3197517.3201340). _ACM Transactions on Graphics_. 37, 4 (2018), 125:1-125:12.
+Petr Vévoda, Ivo Kondapaneni, and Jaroslav Křivánek. 2018. [Bayesian Online Regression for Adaptive Direct Illumination Sampling](https://doi.org/10.1145/3197517.3201340). _ACM Transactions on Graphics (Proc. of SIGGRAPH)_ 37, 4 (Aug. 2018), Article 125.

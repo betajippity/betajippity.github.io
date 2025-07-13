@@ -267,9 +267,9 @@ To render them correctly, I applied a shader with glossy refraction to the crack
 
 Benedikt Bitterli. 2016. [Rendering Resources](https://benedikt-bitterli.me/resources/). Retrieved from [https://benedikt-bitterli.me/resources/](https://benedikt-bitterli.me/resources/).
 
-Jan Novák, Andrew Selle and Wojciech Jarosz. 2014. [Residual Ratio Tracking for Estimating Attenuation in Participating Media](https://dl.acm.org/citation.cfm?id=2661292). _ACM Transactions on Graphics_. 33, 6 (2014), 179:1-179:11.
+Jan Novák, Andrew Selle and Wojciech Jarosz. 2014. [Residual Ratio Tracking for Estimating Attenuation in Participating Media](https://dl.acm.org/citation.cfm?id=2661292). _ACM Transactions on Graphics (Proc. of SIGGRAPH Asia)_ 33, 6 (Nov. 2014), Article 179.
 
-Charles M. Schmidt and Brian Budge. 2002. [Simple Nested Dielectrics in Ray Traced Images](https://www.tandfonline.com/doi/abs/10.1080/10867651.2002.10487555). _Journal of Graphics Tools_. 7, 2 (2002), 1–8.
+Charles M. Schmidt and Brian Budge. 2002. [Simple Nested Dielectrics in Ray Traced Images](https://www.tandfonline.com/doi/abs/10.1080/10867651.2002.10487555). _Journal of Graphics Tools_ 7, 2 (Jan. 2002), 1–8.
 
 ---
 

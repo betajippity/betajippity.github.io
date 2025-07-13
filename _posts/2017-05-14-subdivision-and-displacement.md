@@ -128,16 +128,16 @@ In closing, I rendered a few more shaderballs using various displacement maps fr
 
 ## References
 
-Edwin E. Catmull and James H. Clark. 1978. [Recursively Generated B-spline Surfaces on Arbitrary Topological Meshes](https://www.sciencedirect.com/science/article/abs/pii/0010448578901100). _Computer-Aided Design_. 10, 6 (1978), 350-355.
+Edwin E. Catmull and James H. Clark. 1978. [Recursively Generated B-spline Surfaces on Arbitrary Topological Meshes](https://www.sciencedirect.com/science/article/abs/pii/0010448578901100). _Computer-Aided Design_ 10, 6 (Nov. 1978), 350-355.
 
-Mark Halstead, Michael Kass, and Tony DeRose. 1993. [Efficient, Fair Interpolation using Catmull-Clark Surfaces](https://dl.acm.org/doi/10.1145/166117.166121). In _SIGGRAPH 1993: Proceedings of the 20th Annual Conference on Computer Graphics and Interactive Techniques_. 35-44.
+Mark Halstead, Michael Kass, and Tony DeRose. 1993. [Efficient, Fair Interpolation using Catmull-Clark Surfaces](https://dl.acm.org/doi/10.1145/166117.166121). In _Proc. of SIGGRAPH (SIGGRAPH 1993)_. 35-44.
 
-Johannes Hanika, Alexander Keller, and Hendrik P A Lensch. 2010. [Two-Level Ray Tracing with Reordering for Highly Complex Scenes](https://dl.acm.org/citation.cfm?id=1839241). In _GI 2010 (Proceedings of the 2010 Conference on Graphics Interfaces)_. 145-152.
+Johannes Hanika, Alexander Keller, and Hendrik P A Lensch. 2010. [Two-Level Ray Tracing with Reordering for Highly Complex Scenes](https://dl.acm.org/citation.cfm?id=1839241). In _Proc. of Graphics Interfaces (GI 2010)_. 145-152.
 
 Takahiro Harada. 2015. [Rendering Vector Displacement Mapped Surfaces in a GPU Ray Tracer](https://www.crcpress.com/GPU-Pro-6-Advanced-Rendering-Techniques/Engel/p/book/9781482264616). In _GPU Pro 6_. 459-474.
 
-Matthias Nießner, Charles Loop, Mark Meyer, and Tony DeRose. 2012. [Feature Adaptive GPU Rendering of Catmull-Clark Subdivision Surfaces](https://dl.acm.org/doi/10.1145/2077341.2077347). _ACM Transactions on Graphics_. 31, 1 (2012), 6:1-6:11.
+Matthias Nießner, Charles Loop, Mark Meyer, and Tony DeRose. 2012. [Feature Adaptive GPU Rendering of Catmull-Clark Subdivision Surfaces](https://dl.acm.org/doi/10.1145/2077341.2077347). _ACM Transactions on Graphics_ 31, 1 (Jan. 2012), Article 6.
 
-Matt Pharr and Pat Hanrahan. 1996. [Geometry Caching for Ray-Tracing Displacement Maps](http://graphics.stanford.edu/papers/displace/). In _Rendering Techniques 1996 (Proceedings of the 7th Eurographics Workshop on Rendering)_. 31-40.
+Matt Pharr and Pat Hanrahan. 1996. [Geometry Caching for Ray-Tracing Displacement Maps](http://graphics.stanford.edu/papers/displace/). In _Proc. of Eurographics Workshop on Rendering (Rendering Techniques 1996)_. 31-40.
 
-Brian Smits, Peter Shirley, and Michael M. Stark. 2000. [Direct Ray Tracing of Displacement Mapped Triangles](https://doi.org/10.1007/978-3-7091-6303-0_28). In _Rendering Techniques 2000 (Proceedings of the 11th Eurographics Workshop on Rendering)_. 307-318.
+Brian Smits, Peter Shirley, and Michael M. Stark. 2000. [Direct Ray Tracing of Displacement Mapped Triangles](https://doi.org/10.1007/978-3-7091-6303-0_28).  In _Proc. of Eurographics Workshop on Rendering (Rendering Techniques 2000)_. 307-318.

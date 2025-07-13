@@ -118,28 +118,28 @@ All images in this post are courtesy of and the property of Walt Disney Animatio
 
 ## References
 
-Carsten Benthin, Sven Woop, Ingo Wald, and Attila T. Áfra. 2017. [Improved Two-Level BVHs using Partial Re-Braiding](https://doi.org/10.1145/3105762.3105776). In _HPG ‘17 (Proceedings of High Performance Graphics)_. 7:1-7:8.
+Carsten Benthin, Sven Woop, Ingo Wald, and Attila T. Áfra. 2017. [Improved Two-Level BVHs using Partial Re-Braiding](https://doi.org/10.1145/3105762.3105776). In _Proc. of High Performance Graphics (HPG 2017)_. Article 7.
 
 Brent Burley. [Physically Based Shading at Disney](https://doi.org/10.1145/2343483.2343493). 2012. In _ACM SIGGRAPH 2012 Course Notes: [Practical Physically-Based Shading in Film and Game Production](https://blog.selfshadow.com/publications/s2012-shading-course/)_.
 
 Brent Burley. [Extending the Disney BRDF to a BSDF with Integrated Subsurface Scattering](https://doi.org/10.1145/2776880.2787670). 2015. In _ACM SIGGRAPH 2015 Course Notes: [Physically Based Shading in Theory and Practice](https://blog.selfshadow.com/publications/s2015-shading-course)_.
 
-Brent Burley, David Adler, Matt Jen-Yuan Chiang, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2017. [Recent Advances in Disney's Hyperion Renderer](https://www.yiningkarlli.com/projects/ptcourse2017.html). _[Path Tracing in Production Part 1](http://dx.doi.org/10.1145/3084873.3084904), ACM SIGGRAPH 2017 Course Notes_.
+Brent Burley, David Adler, Matt Jen-Yuan Chiang, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2017. [Recent Advances in Disney's Hyperion Renderer](https://www.yiningkarlli.com/projects/ptcourse2017.html). In _ACM SIGGRAPH 2017 Course Notes: [Path Tracing in Production Part 1](http://dx.doi.org/10.1145/3084873.3084904)_
 
-Brent Burley and Dylan Lacewell. 2008. [Ptex: Per-face Texture Mapping for Production Rendering](https://doi.org/10.1111/j.1467-8659.2008.01253.x). _Computer Graphics Forum_. 27, 4 (2008), 1155-1164.
+Brent Burley and Dylan Lacewell. 2008. [Ptex: Per-face Texture Mapping for Production Rendering](https://doi.org/10.1111/j.1467-8659.2008.01253.x). _Computer Graphics Forum (Proc. of Eurographics Symposium on Rendering)_ 27, 4 (Jun. 2008), 1155-1164.
 
-Matt Jen-Yuan Chiang, Benedikt Bitterli, Chuck Tappan, and Brent Burley. 2016. [A Practical and Controllable Hair and Fur Model for Production Path Tracing](https://doi.org/10.1111/cgf.12830). _Computer Graphics Forum_. 35, 2 (2016), 275-283.
+Matt Jen-Yuan Chiang, Benedikt Bitterli, Chuck Tappan, and Brent Burley. 2016. [A Practical and Controllable Hair and Fur Model for Production Path Tracing](https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.12830). _Computer Graphics Forum (Proc. of Eurographics)_ 35, 2 (May 2016), 275-283.
 
-Matt Jen-Yuan Chiang, Peter Kutz, and Brent Burley. 2016. [Practical and Controllable Subsurface Scattering for Production Path Tracing](https://doi.org/10.1145/2897839.2927433). In _ACM SIGGRAPH 2016 Talks_. 49:1-49:2.
+Matt Jen-Yuan Chiang, Peter Kutz, and Brent Burley. 2016. [Practical and Controllable Subsurface Scattering for Production Path Tracing](https://doi.org/10.1145/2897839.2927433). In _ACM SIGGRAPH 2016 Talks_. Article 49.
 
-Christian Eisenacher, Gregory Nichols, Andrew Selle, and Brent Burley. 2013. [Sorted Deferred Shading for Production Path Tracing](https://doi.org/10.1111/cgf.12158). _Computer Graphics Forum_. 32, 4 (2013), 125-132.
+Christian Eisenacher, Gregory Nichols, Andrew Selle, and Brent Burley. 2013. [Sorted Deferred Shading for Production Path Tracing](https://doi.org/10.1111/cgf.12158). _Computer Graphics Forum (Proc. of Eurographics Symposium on Rendering)_ 32, 4 (Jul. 2013), 125-132.
 
-Julian Fong, Magnus Wrenninge, Christopher Kulla, and Ralf Habel. 2017. [Production Volume Rendering](https://doi.org/10.1145/3084873.3084907). In _ACM SIGGRAPH 2017 Courses_.
+Julian Fong, Magnus Wrenninge, Christopher Kulla, and Ralf Habel. 2017. [Production Volume Rendering](https://doi.org/10.1145/3084873.3084907). In _ACM SIGGRAPH 2017 Courses_. Article 2.
 
-Peter Kutz, Ralf Habel, Yining Karl Li, and Jan Novák. 2017. [Spectral and Decomposition Tracking for Rendering Heterogeneous Volumes](https://doi.org/10.1145/3072959.3073665). _ACM Transactions on Graphics_. 36, 4 (2017), 111:1-111:16.
+Peter Kutz, Ralf Habel, Yining Karl Li, and Jan Novák. 2017. [Spectral and Decomposition Tracking for Rendering Heterogeneous Volumes](https://doi.org/10.1145/3072959.3073665). _ACM Transactions on Graphics (Proc. of SIGGRAPH)_ 36, 4 (Aug. 2017), Article 111.
 
-Jan Novák, Andrew Selle, and Wojciech Jarosz. 2014. [Residual Ratio Tracking for Estimating Attenuation in Participating Media](https://doi.org/10.1145/2661229.2661292). _ACM Transactions on Graphics_. 33, 6 (2014), 179:1-179:11.
+Jan Novák, Andrew Selle and Wojciech Jarosz. 2014. [Residual Ratio Tracking for Estimating Attenuation in Participating Media](https://dl.acm.org/citation.cfm?id=2661292). _ACM Transactions on Graphics (Proc. of SIGGRAPH Asia)_ 33, 6 (Nov. 2014), Article 179.
 
-Sean Palmer, Jonathan Garcia, Sara Drakeley, Patrick Kelly, and Ralf Habel. 2017. [The Ocean and Water Pipeline of Disney’s Moana](https://doi.org/10.1145/3084363.3085067). In _ACM SIGGRAPH 2017 Talks_. 29:1-29:2.
+Sean Palmer, Jonathan Garcia, Sara Drakeley, Patrick Kelly, and Ralf Habel. 2017. [The Ocean and Water Pipeline of Disney’s Moana](https://doi.org/10.1145/3084363.3085067). In _ACM SIGGRAPH 2017 Talks_. Article 29.
 
-Josh Staub, Alessandro Jacomini, Dan Lund. 2018. [The Handiwork Behind "Olaf's Frozen Adventure"](https://doi.org/10.1145/3214745.3214817). In _ACM SIGGRAPH 2018 Talks_. 26:1-26:2.
+Josh Staub, Alessandro Jacomini, Dan Lund. 2018. [The Handiwork Behind "Olaf's Frozen Adventure"](https://doi.org/10.1145/3214745.3214817). In _ACM SIGGRAPH 2018 Talks_. Article 26.

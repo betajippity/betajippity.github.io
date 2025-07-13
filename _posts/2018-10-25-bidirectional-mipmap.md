@@ -467,49 +467,49 @@ In a future post, I'll show a bunch of interesting renders of this scene from di
 <div id="2018-10-25-references"></div>
 ## References
 
-John Amanatides. 1984. [Ray Tracing with Cones](https://dl.acm.org/citation.cfm?id=808589). _Computer Graphics (Proceedings of SIGGRAPH)_ 18, 3 (1984), 129-135.
+John Amanatides. 1984. [Ray Tracing with Cones](https://dl.acm.org/citation.cfm?id=808589). _ACM SIGGRAPH Computer Graphics (Proc. of SIGGRAPH)_ 18, 3 (Jul. 1984), 129-135.
 
-Laurent Belcour, Cyril Soler, Kartic Subr, Nicolas Holzschuch, and Frédo Durand. 2013. [5D Covariance Tracing for Efficient Defocus and Motion Blur](https://dl.acm.org/citation.cfm?id=2487239). _ACM Transactions on Graphics_. 32, 3 (2013), 31:1–31:18.
+Laurent Belcour, Cyril Soler, Kartic Subr, Nicolas Holzschuch, and Frédo Durand. 2013. [5D Covariance Tracing for Efficient Defocus and Motion Blur](https://dl.acm.org/citation.cfm?id=2487239). _ACM Transactions on Graphics_ 32, 3 (Jun. 2013), Article 31.
 
-Laurent Belcour, Ling-Qi Yan, Ravi Ramamoorthi, and Derek Nowrouzezahrai. 2017. [Antialiasing Complex Global Illumination Effects in Path-Space](https://dl.acm.org/citation.cfm?id=2990495). _ACM Transactions on Graphics_. 36, 1 (2017), 9:1–9:13.
+Laurent Belcour, Ling-Qi Yan, Ravi Ramamoorthi, and Derek Nowrouzezahrai. 2017. [Antialiasing Complex Global Illumination Effects in Path-Space](https://dl.acm.org/citation.cfm?id=2990495). _ACM Transactions on Graphics_ 36, 1 (Jan. 2017), Article 9.
 
-Brent Burley, David Adler, Matt Jen-Yuan Chiang, Hank Driskill, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2018. [The Design and Evolution of Disney's Hyperion Renderer](https://dl.acm.org/citation.cfm?id=3182159). _ACM Transactions on Graphics_. 37, 3 (2018), 33:1-33:22.
+Brent Burley, David Adler, Matt Jen-Yuan Chiang, Hank Driskill, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2018. [The Design and Evolution of Disney's Hyperion Renderer](https://dl.acm.org/citation.cfm?id=3182159). _ACM Transactions on Graphics_ 37, 3 (Jul. 2018), Article 33.
 
-Per Christensen, Julian Fong, Jonathan Shade, Wayne Wooten, Brenden Schubert, Andrew Kensler, Stephen Friedman, Charlie Kilpatrick, Cliff Ramshaw, Marc Bannister, Brenton Rayner, Jonathan Brouillat, and Max Liani. 2018. [RenderMan: An Advanced Path-Tracing Architeture for Movie Rendering](https://dl.acm.org/citation.cfm?id=3182162). _ACM Transactions on Graphics_. 37, 3 (2018), 30:1–30:21.
+Per Christensen, Julian Fong, Jonathan Shade, Wayne Wooten, Brenden Schubert, Andrew Kensler, Stephen Friedman, Charlie Kilpatrick, Cliff Ramshaw, Marc Bannister, Brenton Rayner, Jonathan Brouillat, and Max Liani. 2018. [RenderMan: An Advanced Path-Tracing Architeture for Movie Rendering](https://dl.acm.org/citation.cfm?id=3182162). _ACM Transactions on Graphics_ 37, 3 (Jul. 2018), Article 30.
 
-Per Christensen, David M. Laur, Julian Fong, Wayne Wooten, and Dana Batali. 2003. [Ray Differentials and Multiresolution Geometry Caching for Distribution Ray Tracing in Complex Scenes](https://diglib.eg.org/handle/10.2312/8776). _Computer Graphics Forum_. 22, 3 (2003), 543-552.
+Per Christensen, David M. Laur, Julian Fong, Wayne Wooten, and Dana Batali. 2003. [Ray Differentials and Multiresolution Geometry Caching for Distribution Ray Tracing in Complex Scenes](https://diglib.eg.org/handle/10.2312/8776). _Computer Graphics Forum (Proc. of Eurographics)_ 22, 3 (Sep. 2003), 543-552.
 
-Robert L. Cook, Loren Carpenter, and Edwin Catmull. 1987. [The Reyes Image Rendering Architecture](https://dl.acm.org/citation.cfm?id=37414). _Computer Graphics (Proceedings of SIGGRAPH)_ 21, 4 (1987), 95-102.
+Robert L. Cook, Loren Carpenter, and Edwin Catmull. 1987. [The Reyes Image Rendering Architecture](https://dl.acm.org/doi/10.1145/37402.37414). _ACM SIGGRAPH Computer Graphics (Proc. of SIGGRAPH)_ 21, 4 (Jul. 1987), 95-102.
 
-Frédo Durand, Nicolas Holzchuch, Cyril Soler, Eric Chan, and François X Sillion. 2005. [A Frequency Analysis of Light Transport](https://dl.acm.org/citation.cfm?id=1073320). _ACM Transactions on Graphics_. 24, 3 (2005), 1115-1126.
+Frédo Durand, Nicolas Holzchuch, Cyril Soler, Eric Chan, and François X Sillion. 2005. [A Frequency Analysis of Light Transport](https://dl.acm.org/citation.cfm?id=1073320). _ACM Transactions on Graphics (Proc. of SIGGRAPH)_ 24, 3 (Aug. 2005), 1115-1126.
 
-Luca Fascione, Johannes Hanika, Mark Leone, Marc Droske, Jorge Schwarzhaupt, Tomáš Davidovič, Andrea Weidlich and Johannes Meng. 2018. [Manuka: A Batch-Shading Architecture for Spectral Path Tracing in Movie Production](https://dl.acm.org/citation.cfm?id=3182161). _ACM Transactions on Graphics_. 37, 3 (2018), 31:1–31:18.
+Luca Fascione, Johannes Hanika, Mark Leone, Marc Droske, Jorge Schwarzhaupt, Tomáš Davidovič, Andrea Weidlich and Johannes Meng. 2018. [Manuka: A Batch-Shading Architecture for Spectral Path Tracing in Movie Production](https://dl.acm.org/citation.cfm?id=3182161). _ACM Transactions on Graphics_ 37, 3 (Jul. 2018), Article 31.
 
-Iliyan Georgiev, Thiago Ize, Mike Farnsworth, Ramón Montoya-Vozmediano, Alan King, Brecht van Lommel, Angel Jimenez, Oscar Anson, Shinji Ogaki, Eric Johnston, Adrien Herubel, Declan Russell, Frédéric Servant, and Marcos Fajardo. 2018. [Arnold: A Brute-Force Production Path Tracer](https://dl.acm.org/citation.cfm?id=3182160). _ACM Transactions on Graphics_. 37, 3 (2018), 32:1-32:12.
+Iliyan Georgiev, Thiago Ize, Mike Farnsworth, Ramón Montoya-Vozmediano, Alan King, Brecht van Lommel, Angel Jimenez, Oscar Anson, Shinji Ogaki, Eric Johnston, Adrien Herubel, Declan Russell, Frédéric Servant, and Marcos Fajardo. 2018. [Arnold: A Brute-Force Production Path Tracer](https://dl.acm.org/citation.cfm?id=3182160). _ACM Transactions on Graphics_ 37, 3 (Jul. 2018), Article 32.
 
-Larry Gritz and James K. Hahn. 1996. [BMRT: A Global Illumination Implementation of the RenderMan Standard](https://www.tandfonline.com/doi/abs/10.1080/10867651.1996.10487462). _Journal of Graphics Tools_. 3, 1 (1996), 29-47.
+Larry Gritz and James K. Hahn. 1996. [BMRT: A Global Illumination Implementation of the RenderMan Standard](https://doi.org/10.1080/10867651.1996.10487462). _Journal of Graphics Tools_ 1, 3 (Jul. 1996), 29-47.
 
-Paul S. Heckbert and Pat Hanrahan. 1984. [Beam Tracing Polygonal Objects](https://dl.acm.org/citation.cfm?id=808588). _Computer Graphics (Proceedings of SIGGRAPH)_ 18, 3 (1984), 119-127.
+Paul S. Heckbert and Pat Hanrahan. 1984. [Beam Tracing Polygonal Objects](https://dl.acm.org/citation.cfm?id=808588). _ACM SIGGRAPH Computer Graphics (Proc. of SIGGRAPH)_ 18, 3 (Jul. 1984), 119-127.
 
-Homan Igehy. 1999. [Tracing Ray Differentials](https://graphics.stanford.edu/papers/trd/). In _SIGGRAPH '99 (Proceedings of the 26th Annual Conference on Computer Graphics and Interactive Techniques)_. 179–186.
+Homan Igehy. 1999. [Tracing Ray Differentials](https://graphics.stanford.edu/papers/trd/). In _Proc. of SIGGRAPH (SIGGRAPH 1999)_. 179–186.
 
 Wenzel Jakob. 2010. [_Mitsuba Renderer_](http://www.mitsuba-renderer.org/).
 
-Christopher Kulla, Alejandro Conty, Clifford Stein, and Larry Gritz. 2018. [Sony Pictures Imageworks Arnold](https://dl.acm.org/citation.cfm?id=3180495). _ACM Transactions on Graphics_. 37, 3 (2018), 29:1-29:18.
+Christopher Kulla, Alejandro Conty, Clifford Stein, and Larry Gritz. 2018. [Sony Pictures Imageworks Arnold](https://dl.acm.org/citation.cfm?id=3180495). _ACM Transactions on Graphics_ 37, 3 (Jul. 2018), Article 29.
 
-Mark Lee, Brian Green, Feng Xie, and Eric Tabellion. 2017. [Vectorized Production Path Tracing](https://dl.acm.org/citation.cfm?doid=3105762.3105768). In _HPG '17 (Proceedings of High Performance Graphics)_. 10:1-10:11.
+Mark Lee, Brian Green, Feng Xie, and Eric Tabellion. 2017. [Vectorized Production Path Tracing](https://dl.acm.org/citation.cfm?doid=3105762.3105768). In _Proc. of High Performance Graphics (HPG 2017)_. Article 10.
 
-Darwyn Peachey. 1990. [_Texture on Demand_](https://graphics.pixar.com/library/TOD/). Technical Report 217. Pixar Animation Studios.
+Darwyn Peachey. 1990. [_Texture on Demand_](https://graphics.pixar.com/library/TOD/). _Pixar Technical Report 217_.
 
 Matt Pharr, Wenzel Jakob, and Greg Humphreys. 2016. [_Physically Based Rendering:
 From Theory to Implementation_](http://www.pbr-book.org), 3rd ed. Morgan Kaufmann.
 
 Matt Pharr. 2017. [_The Implementation of a Scalable Texture Cache_](https://www.pbrt.org/texcache.pdf). Physically Based Rendering Supplemental Material. 
 
-Dan Piponi. 2004. [Automatic Differentiation, C++ Templates and Photogrammetry](https://www.tandfonline.com/doi/abs/10.1080/10867651.2004.10504901). _Journal of Graphics Tools_. 9, 4 (2004), 41-55.
+Dan Piponi. 2004. [Automatic Differentiation, C++ Templates and Photogrammetry](https://www.tandfonline.com/doi/abs/10.1080/10867651.2004.10504901). _Journal of Graphics Tools_ 9, 4 (Sep. 2004), 41-55.
 
-Mikio Shinya, Tokiichiro Takahashi, and Seiichiro Naito. 1987. [Principles and Applications of Pencil Tracing](https://dl.acm.org/citation.cfm?id=37408). _Computer Graphics (Proceedings of SIGGRAPH)_ 21, 4 (1987), 45-54.
+Mikio Shinya, Tokiichiro Takahashi, and Seiichiro Naito. 1987. [Principles and Applications of Pencil Tracing](https://dl.acm.org/citation.cfm?id=37408). _ACM SIGGRAPH Computer Graphics (Proc. of SIGGRAPH)_ 21, 4 (Jul. 1987), 45-54.
 
-Frank Suykens and Yves. D. Willems. 2001. [Path Differentials and Applications](http://graphics.cs.kuleuven.be/publications/PATHDIFF/). In _Rendering Techniques 2001 (Proceedings of the 12th Eurographics Workshop on Rendering)_. 257–268.
+Frank Suykens and Yves. D. Willems. 2001. [Path Differentials and Applications](http://graphics.cs.kuleuven.be/publications/PATHDIFF/). In _Proc. of Eurographics Workshop on Rendering (Rendering Techniques 2001)_. 257–268.
 
-Lance Williams. 1983. [Pyramidal Parametrics](https://dl.acm.org/citation.cfm?id=801126). _Computer Graphics (Proceedings of SIGGRAPH)_ 12, 3 (1983), 1-11.
+Lance Williams. 1983. [Pyramidal Parametrics](https://dl.acm.org/citation.cfm?id=801126). _ACM SIGGRAPH Computer Graphics (Proc. of SIGGRAPH)_ 12, 3 (Jul. 1983), 1-11.

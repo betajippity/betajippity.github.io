@@ -655,32 +655,32 @@ After the contest wrapped up, I went back and made a daylight version out of cur
 <div id="2020-07-31-references"></div>
 ## References
 
-Petr Beckmann and André Spizzichino. 1963. [The Scattering of Electromagnetic Waves from Rough Surfaces](https://us.artechhouse.com/The-Scattering-of-Electromagnetic-Waves-from-Rough-Surfaces-P257.aspx). New York: Pergamon.
+Petr Beckmann and André Spizzichino. 1963. [The Scattering of Electromagnetic Waves from Rough Surfaces](https://us.artechhouse.com/The-Scattering-of-Electromagnetic-Waves-from-Rough-Surfaces-P257.aspx).
 
 Brent Burley. 2012. [Physically Based Shading at Disney](https://doi.org/10.1145/2343483.2343493). In [_ACM SIGGRAPH 2012 Course Notes: Practical Physically-Based Shading in Film and Game Production_](https://blog.selfshadow.com/publications/s2012-shading-course/).
 
 Brent Burley. 2015. [Extending the Disney BRDF to a BSDF with Integrated Subsurface Scattering](https://doi.org/10.1145/2776880.2787670). In [_ACM SIGGRAPH 2015 Course Notes: Physically Based Shading in Theory and Practice_](https://blog.selfshadow.com/publications/s2015-shading-course).
 
-Brent Burley. 2019. [On Histogram-Preserving Blending for Randomized Texture Tiling](http://jcgt.org/published/0008/04/02/). _Journal of Computer Graphics Techniques_. 8, 4 (2019), 31-53.
+Brent Burley. 2019. [On Histogram-Preserving Blending for Randomized Texture Tiling](https://www.jcgt.org/published/0008/04/02/). _Journal of Computer Graphics Techniques_ 8, 4 (Nov. 2019), 31-53.
 
-Per Christensen, Julian Fong, Jonathan Shade, Wayne Wooten, Brenden Schubert, Andrew Kensler, Stephen Friedman, Charlie Kilpatrick, Cliff Ramshaw, Marc Bannister, Brenton Rayner, Jonathan Brouillat, and Max Liani. 2018. [RenderMan: An Advanced Path-Tracing Architecture for Movie Rendering](https://dl.acm.org/citation.cfm?id=3182162). _ACM Transactions on Graphics_. 37, 3 (2018), 30:1–30:21.
+Per Christensen, Julian Fong, Jonathan Shade, Wayne Wooten, Brenden Schubert, Andrew Kensler, Stephen Friedman, Charlie Kilpatrick, Cliff Ramshaw, Marc Bannister, Brenton Rayner, Jonathan Brouillat, and Max Liani. 2018. [RenderMan: An Advanced Path-Tracing Architeture for Movie Rendering](https://dl.acm.org/citation.cfm?id=3182162). _ACM Transactions on Graphics_ 37, 3 (Jul. 2018), Article 30.
 
-Johannes Hanika, Marc Droske, and Luca Fascione. 2015. [Manifold Next Event Estimation](http://dx.doi.org/10.1111/cgf.12681). _Computer Graphics Forum_. 34, 4 (2015), 87-97.
+Johannes Hanika, Marc Droske, and Luca Fascione. 2015. [Manifold Next Event Estimation](http://dx.doi.org/10.1111/cgf.12681). _Computer Graphics Forum (Proc. of Eurographics Symposium on Rendering)_ 34, 4 (Jun. 2015), 87-97.
 
-Eric Heitz and Fabrice Neyret. 2018. [High-Performance By-Example Noise using a Histogram-Preserving Blending Operator](https://dl.acm.org/doi/10.1145/3233304). _Proceedings of the ACM on Computer Graphics and Interactive Techniques_. 1, 2 (2018), 31:1-31:25.
+Eric Heitz and Fabrice Neyret. 2018. [High-Performance By-Example Noise using a Histogram-Preserving Blending Operator](https://dl.acm.org/doi/10.1145/3233304). _Proceedings of the ACM on Computer Graphics and Interactive Techniques (Proc. of High Performance Graphics)_ 1, 2 (Aug. 2018), Article 31.
 
 Christophe Hery, Ryusuke Villemin, and Junyi Ling. 2017. [Pixar's Foundation for Materials: PxrSurface and PxrMarschnerHair](http://graphics.pixar.com/library/PxrMaterialsCourse2017/index.html). In [_ACM SIGGRAPH 2017 Course Notes: Physically Based Shading in Theory and Practice_](https://blog.selfshadow.com/publications/s2017-shading-course/).
 
 Christophe Hery, Ryusuke Villemin, and Florian Hecht. 2016. [Towards Bidirectional Path Tracing at Pixar](http://graphics.pixar.com/library/BiDir/). In [_ACM SIGGRAPH 2016 Course Notes: Physically Based Shading in Theory and Practice_](https://blog.selfshadow.com/publications/s2016-shading-course/).
 
-Julian Fong, Magnus Wrenninge, Christopher Kulla, and Ralf Habel. 2017. [Production Volume Rendering](https://doi.org/10.1145/3084873.3084907). In _ACM SIGGRAPH 2017 Courses_.
+Julian Fong, Magnus Wrenninge, Christopher Kulla, and Ralf Habel. 2017. [Production Volume Rendering](https://doi.org/10.1145/3084873.3084907). In _ACM SIGGRAPH 2017 Courses_. Article 2.
 
 Iliyan Georgiev, Jamie Portsmouth, Zap Andersson, Adrien Herubel, Alan King, Shinji Ogaki, Frederic Servant. 2019. [Autodesk Standard Surface](https://autodesk.github.io/standard-surface/). _Autodesk white paper_.
 
-Ole Gulbrandsen. 2014. [Artistic Friendly Metallic Fresnel](http://jcgt.org/published/0003/04/03/). _Journal of Computer Graphics Techniques_. 3, 4 (2014), 64-72.
+Ole Gulbrandsen. 2014. [Artistic Friendly Metallic Fresnel](http://jcgt.org/published/0003/04/03/). _Journal of Computer Graphics Techniques_ 3, 4 (Dec. 2014), 64-72.
 
-Christopher Kulla and Marcos Fajardo. 2012. [Important Sampling Techniques for Path Tracing in Participating Media](http://dx.doi.org/10.1111/j.1467-8659.2012.03148.x). _Computer Graphics Forum_. 31, 4 (2012), 1519-1528.
+Christopher Kulla and Marcos Fajardo. 2012. [Important Sampling Techniques for Path Tracing in Participating Media](http://dx.doi.org/10.1111/j.1467-8659.2012.03148.x). _Computer Graphics Forum (Proc. of Eurographics Symposium on Rendering)_ 31, 4 (Jun. 2012), 1519-1528.
 
-Bruce Walter, Steve Marschner, Hongsong Li, and Kenneth E. Torrance. 2007. [Microfacet Models for Refraction through Rough Surfaces](http://dx.doi.org/10.2312/EGWR/EGSR07/195-206). In _Rendering Techniques 2007 (Proceedings of the 18th Eurographics Symposium on Rendering)_, 195-206.
+Bruce Walter, Steve Marschner, Hongsong Li, and Kenneth E. Torrance. 2007. [Microfacet Models for Refraction through Rough Surfaces](http://dx.doi.org/10.2312/EGWR/EGSR07/195-206). In _Proc. of Eurographics Symposium on Rendering (Rendering Techniques 2007)_, 195-206.
 
 </div>

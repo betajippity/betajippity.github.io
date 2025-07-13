@@ -882,7 +882,7 @@ OSDev. 2018. [System V ABI](https://wiki.osdev.org/System_V_ABI). Retrieved June
 
 Matt Pharr. 2018. [The Story of ISPC](https://pharr.org/matt/blog/2018/04/30/ispc-all). In _Matt Pharr's Blog_. Retrieved July 18, 2021.
 
-Matt Pharr and William R. Mark. 2012. [ispc: A SPMD compiler for high-performance CPU programming](https://doi.org/10.1109/InPar.2012.6339601). In _2012 Innovative Parallel Computing (InPar)_.
+Matt Pharr and William R. Mark. 2012. [ispc: A SPMD compiler for high-performance CPU programming](https://doi.org/10.1109/InPar.2012.6339601). In _Proc. of nnovative Parallel Computing (InPar 2012)_. 184-196.
 
 Jeff Preshing. 2012. [This Is Why They Call It a Weakly-Ordered CPU](https://preshing.com/20121019/this-is-why-they-call-it-a-weakly-ordered-cpu/). In _Preshing on Programming_. Retrieved March 20, 2021.
 
@@ -892,7 +892,7 @@ Threedots. 2021. [Arm CPUs with Sequential Consistency](https://threedots.ovh/bl
 
 Ingo Wald. 2018. [Cfl: Embree on ARM/Power/...?](https://ingowald.blog/2018/07/15/cfi-embree-on-arm-power/). In _Ingo Wald's Blog_. Retrieved July 18, 2021.
 
-Amy Williams, Steve Barrus, R. Keith Morley, and Peter Shirley. 2005. [An Efficient and Robust Ray-Box Intersection Algorithm](https://doi.org/10.1080/2151237X.2005.10129188).  _Journal of Graphics Tools_. 10, 1 (2005), 49-54.
+Amy Williams, Steve Barrus, Keith Morley, and Peter Shirley. 2005. [An Efficient and Robust Ray-Box Intersection Algorithm](https://doi.org/10.1080/2151237X.2005.10129188). _Journal of Graphics Tools) 10, 1 (Jan. 2005), 49-54.
 
 Wikipedia. 2021. [Endianess](https://en.wikipedia.org/wiki/Endianness). Retrieved July 19, 2021.
 

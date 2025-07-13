@@ -433,19 +433,19 @@ Autodesk. 2020. [XGen Geometry Instancer](https://help.autodesk.com/view/MAYAUL/
 
 Autodesk. 2020. [XGen Interactive Grooming](https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=GUID-496603B0-F929-45CD-B607-1CFCD3283DBE). _Autodesk Maya 2020 User Documentation_.
 
-Brent Burley and Dylan Lacewell. 2008. [Ptex: Per-face Texture Mapping for Production Rendering](https://doi.org/10.1111/j.1467-8659.2008.01253.x). *Computer Graphics Forum (Proceedings of Eurographics Symposium on Rendering 2008)*, 27, 4 (2008), 1155-1164.
+Brent Burley and Dylan Lacewell. 2008. [Ptex: Per-face Texture Mapping for Production Rendering](https://doi.org/10.1111/j.1467-8659.2008.01253.x). _Computer Graphics Forum (Proc. of Eurographics Symposium on Rendering)_ 27, 4 (Jun. 2008), 1155-1164.
 
 Brent Burley. 2012. [Physically Based Shading at Disney](https://doi.org/10.1145/2343483.2343493). In [_ACM SIGGRAPH 2012 Course Notes: Practical Physically-Based Shading in Film and Game Production_](https://blog.selfshadow.com/publications/s2012-shading-course/).
 
 Brent Burley. 2015. [Extending the Disney BRDF to a BSDF with Integrated Subsurface Scattering](https://doi.org/10.1145/2776880.2787670). In [_ACM SIGGRAPH 2015 Course Notes: Physically Based Shading in Theory and Practice_](https://blog.selfshadow.com/publications/s2015-shading-course).
 
-Brent Burley. 2019. [On Histogram-Preserving Blending for Randomized Texture Tiling](http://jcgt.org/published/0008/04/02/). _Journal of Computer Graphics Techniques_. 8, 4 (2019), 31-53.
+Brent Burley. 2019. [On Histogram-Preserving Blending for Randomized Texture Tiling](https://www.jcgt.org/published/0008/04/02/). _Journal of Computer Graphics Techniques_ 8, 4 (Nov. 2019), 31-53.
 
 Iliyan Georgiev, Jamie Portsmouth, Zap Andersson, Adrien Herubel, Alan King, Shinji Ogaki, Frederic Servant. 2019. [Autodesk Standard Surface](https://autodesk.github.io/standard-surface/). _Autodesk white paper_.
 
 Tobias Häussler, Holger Dammertz, and Bastian Sdorra. 2020. [Enterprise PBR Shading Model](https://dassaultsystemes-technology.github.io/EnterprisePBRShadingModel/). _Dassault Systèmes white paper_.
 
-Eric Heitz and Fabrice Neyret. 2018. [High-Performance By-Example Noise using a Histogram-Preserving Blending Operator](https://dl.acm.org/doi/10.1145/3233304). _Proceedings of the ACM on Computer Graphics and Interactive Techniques_. 1, 2 (2018), 31:1-31:25.
+Eric Heitz and Fabrice Neyret. 2018. [High-Performance By-Example Noise using a Histogram-Preserving Blending Operator](https://dl.acm.org/doi/10.1145/3233304). _Proceedings of the ACM on Computer Graphics and Interactive Techniques (Proc. of High Performance Graphics)_ 1, 2 (Aug. 2018), Article 31.
 
 Christophe Hery, Ryusuke Villemin, and Junyi Ling. 2017. [Pixar's Foundation for Materials: PxrSurface and PxrMarschnerHair](http://graphics.pixar.com/library/PxrMaterialsCourse2017/index.html). In [_ACM SIGGRAPH 2017 Course Notes: Physically Based Shading in Theory and Practice_](https://blog.selfshadow.com/publications/s2017-shading-course/).
 
@@ -455,7 +455,7 @@ Christopher Kulla and Alejandro Conty Estevez. 2017. [Revisiting Physically Base
 
 Jeremie Noguer, Paul Edmondson, Michael Bond, and Peter Kutz. 2021. [Adobe Standard Material Specification](https://substance3d.adobe.com/documentation/s3d/asm-specifications-225969597.html). _Adobe white paper_.
 
-Lukas Stockner. [The new Principled BSDF Model in Cycles](https://conference.blender.org/2022/presentations/1407/). 2022. In [_BCON 2022: Blender Conference 2022_](https://conference.blender.org/2022/).
+Lukas Stockner. 2022. [The new Principled BSDF Model in Cycles](https://conference.blender.org/2022/presentations/1407/). In [_BCON 2022: Blender Conference 2022_](https://conference.blender.org/2022/).
 
 Thomas V. Thompson, Ernest J. Petti, and Chuck Tappan. 2003. [XGen: Arbitrary Primitive Generator](https://dl.acm.org/doi/10.1145/965400.965411). In _ACM SIGGRAPH 2003 Sketches & Applications_.
 

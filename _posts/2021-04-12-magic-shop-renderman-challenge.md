@@ -526,29 +526,29 @@ I was pleasantly surprised that everything held up well from a different angle!
 <div id="2021-04-12-references"></div>
 ## References
 
-Carlos Allaga, Carlos Castillo, Diego Gutierrez, Miguel A. Otaduy, Jorge López-Moreno, and Adrian Jarabo. 2017. [An Appearance Model for Textile Fibers](https://doi.org/10.1111/cgf.13222). _Computer Graphics Forum_. 36, 4 (2017), 35-45.
+Carlos Allaga, Carlos Castillo, Diego Gutierrez, Miguel A. Otaduy, Jorge López-Moreno, and Adrian Jarabo. 2017. [An Appearance Model for Textile Fibers](https://doi.org/10.1111/cgf.13222). _Computer Graphics Forum (Proc. of Eurographics Symposium on Rendering)_ 36, 4 (Jun. 2017), 35-45.
 
-Brent Burley and Dylan Lacewell. 2008. [Ptex: Per-face Texture Mapping for Production Rendering](https://doi.org/10.1111/j.1467-8659.2008.01253.x). _Computer Graphics Forum_. 27, 4 (2008), 1155-1164.
+Brent Burley and Dylan Lacewell. 2008. [Ptex: Per-face Texture Mapping for Production Rendering](https://doi.org/10.1111/j.1467-8659.2008.01253.x). _Computer Graphics Forum (Proc. of Eurographics Symposium on Rendering)_ 27, 4 (Jun. 2008), 1155-1164.
 
 Brent Burley. 2015. [Extending the Disney BRDF to a BSDF with Integrated Subsurface Scattering](https://doi.org/10.1145/2776880.2787670). In [_ACM SIGGRAPH 2015 Course Notes: Physically Based Shading in Theory and Practice_](https://blog.selfshadow.com/publications/s2015-shading-course).
 
 Brent Burley, David Adler, Matt Jen-Yuan Chiang, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2017. [Recent Advances in Disney’s Hyperion Renderer](https://www.yiningkarlli.com/projects/ptcourse2017.html). In [_ACM SIGGRAPH 2017 Course Notes: Path Tracing in Production Part 1_](http://dx.doi.org/10.1145/3084873.3084904), 26-34.
 
-Matt Jen-Yuan Chiang, Benedikt Bitterli, Chuck Tappan, and Brent Burley. 2016. [A Practical and Controllable Hair and Fur Model for Production Path Tracing](https://doi.org/10.1111/cgf.12830). _Computer Graphics Forum_. 35, 2 (2016), 275-283.
+Matt Jen-Yuan Chiang, Benedikt Bitterli, Chuck Tappan, and Brent Burley. 2016. [A Practical and Controllable Hair and Fur Model for Production Path Tracing](https://doi.org/10.1111/cgf.12830). _Computer Graphics Forum (Proc. of Eurographics)_ 35, 2 (May 2016), 275-283.
 
-Matt Jen-Yuan Chiang, Peter Kutz, and Brent Burley. 2016. [Practical and Controllable Subsurface Scattering for Production Path Tracing](https://dl.acm.org/doi/10.1145/2897839.2927433). In _ACM SIGGRAPH 2016 Talks_, 49:1-49:2.
+Matt Jen-Yuan Chiang, Peter Kutz, and Brent Burley. 2016. [Practical and Controllable Subsurface Scattering for Production Path Tracing](https://dl.acm.org/doi/10.1145/2897839.2927433). In _ACM SIGGRAPH 2016 Talks_. Article 49.
 
-Philip Child. 2012. [Ill-Loom-inating Brave's Handmade Fabric](https://drive.google.com/file/d/1bNSwpPusRmRmGfPwe11tjtloCP96WN1P/view?usp=sharing). In _ACM SIGGRAPH 2012, Talks_.
+Philip Child. 2012. [Ill-Loom-inating Brave's Handmade Fabric](https://drive.google.com/file/d/1bNSwpPusRmRmGfPwe11tjtloCP96WN1P/view?usp=sharing). In _ACM SIGGRAPH 2012 Talks_.
 
 Per H. Christensen and Brent Burley. 2015. [Approximate Reflectance Profiles for Efficient Subsurface Scattering](https://graphics.pixar.com/library/ApproxBSSRDF). _Pixar Technical Memo #15-04_.
 
-Trent Crow, Michael Kilgore, and Junyi Ling. 2018. [Dressed for Saving the Day: Finer Details for Garment Shading on Incredibles 2](https://dl.acm.org/citation.cfm?id=3214787). In _ACM SIGGRAPH 2018 Talks_, 6:1-6:2.
+Trent Crow, Michael Kilgore, and Junyi Ling. 2018. [Dressed for Saving the Day: Finer Details for Garment Shading on Incredibles 2](https://dl.acm.org/citation.cfm?id=3214787). In _ACM SIGGRAPH 2018 Talks_. Article 6.
 
-Priyamvad Deshmukh, Feng Xie, and Eric Tabellion. 2017. [DreamWorks Fabric Shading Model: From Artist Friendly to Physically Plausible](https://dl.acm.org/citation.cfm?id=3085024). In _ACM SIGGRAPH 2017 Talks_. 38:1-38:2.
+Priyamvad Deshmukh, Feng Xie, and Eric Tabellion. 2017. [DreamWorks Fabric Shading Model: From Artist Friendly to Physically Plausible](https://dl.acm.org/citation.cfm?id=3085024). In _ACM SIGGRAPH 2017 Talks_. Article 38.
 
 Eugene d'Eon. 2012. [A Better Dipole](http://www.eugenedeon.com/project/a-better-dipole/). [_http://www.eugenedeon.com/project/a-better-dipole/_](http://www.eugenedeon.com/project/a-better-dipole/)
 
-Eugene d’Eon, Guillaume Francois, Martin Hill, Joe Letteri, and Jean-Marie Aubry. 2011. [An Energy-Conserving Hair Reflectance Model](https://doi.org/10.1111/j.1467-8659.2011.01976.x). _Computer Graphics Forum_. 30, 4 (2011), 1181-1187.
+Eugene d’Eon, Guillaume Francois, Martin Hill, Joe Letteri, and Jean-Marie Aubry. 2011. [An Energy-Conserving Hair Reflectance Model](https://doi.org/10.1111/j.1467-8659.2011.01976.x). _Computer Graphics Forum (Proc. of Eurographics Symposium on Rendering)_ 30, 4 (Jun. 2011), 1181-1187.
 
 Christophe Hery. 2003. [Implementing a Skin BSSRDF](https://graphics.pixar.com/library/RMan2003/). In _ACM SIGGRAPH 2003 Course Notes: RenderMan, Theory and Practice_. 73-88.
 
@@ -556,23 +556,23 @@ Christophe Hery. 2012. [Texture Mapping for the Better Dipole Model](https://gra
 
 Christophe Hery and Junyi Ling. 2017. [Pixar's Foundation for Materials: PxrSurface and PxrMarschnerHair](http://graphics.pixar.com/library/PxrMaterialsCourse2017/index.html). In [_ACM SIGGRAPH 2017 Course Notes: Physically Based Shading in Theory and Practice_](https://blog.selfshadow.com/publications/s2017-shading-course/).
 
-Jonathan Hoffman, Matt Kuruc, Junyi Ling, Alex Marino, George Nguyen, and Sasha Ouellet. 2020. [Hypertextural Garments on Pixar's _Soul_](http://graphics.pixar.com/library/CurveCloth/). In _ACM SIGGRAPH 2020 Talks_. 75:1-75:2.
+Jonathan Hoffman, Matt Kuruc, Junyi Ling, Alex Marino, George Nguyen, and Sasha Ouellet. 2020. [Hypertextural Garments on Pixar's _Soul_](http://graphics.pixar.com/library/CurveCloth/). In _ACM SIGGRAPH 2020 Talks_. Article 75.
 
-Henrik Wann Jensen, Steve Marschner, Marc Levoy, and Pat Hanrahan. 2001. [A Practical Model for Subsurface Light Transport](https://dl.acm.org/doi/10.1145/383259.383319) In _Proceedings of SIGGRAPH 2001_. 511-518.
+Henrik Wann Jensen, Steve Marschner, Marc Levoy, and Pat Hanrahan. 2001. [A Practical Model for Subsurface Light Transport](https://dl.acm.org/doi/10.1145/383259.383319) In _Proc. of SIGGRAPH (SIGGRAPH 2001)_. 511-518.
 
-Ying Liu, Jared Wright, and Alexander Alvarado. 2020. [Making Beautiful Embroidery for "Frozen 2"](https://dl.acm.org/doi/10.1145/3388767.3407360). In _ACM SIGGRAPH 2020 Talks_, 73:1-73:2.
+Ying Liu, Jared Wright, and Alexander Alvarado. 2020. [Making Beautiful Embroidery for "Frozen 2"](https://dl.acm.org/doi/10.1145/3388767.3407360). In _ACM SIGGRAPH 2020 Talks_. Article 73.
 
-Steve Marschner, Henrik Wann Jensen, Mike Cammarano, Steve Worley, and Pat Hanrahan. 2003. [Light Scattering from Human Hair Fibers](https://doi.org/10.1145/882262.882345). _ACM Transactions on Graphics_. 22, 3 (2003), 780-791.
+Steve Marschner, Henrik Wann Jensen, Mike Cammarano, Steve Worley, and Pat Hanrahan. 2003. [Light Scattering from Human Hair Fibers](https://doi.org/10.1145/882262.882345). _ACM Transactions on Graphics (Proc. of SIGGRAPH)_ 22, 3 (Jul. 2003), 780-791.
 
-Zahra Montazeri, Søren B. Gammelmark, Shuang Zhao, and Henrik Wann Jensen. 2020. [A Practical Ply-Based Appearance Model of Woven](https://doi.org/10.1145/3414685.3417777). _ACM Transactions on Graphics_. 39, 6 (2020), 251:1-251:13.
+Zahra Montazeri, Søren B. Gammelmark, Shuang Zhao, and Henrik Wann Jensen. 2020. [A Practical Ply-Based Appearance Model of Woven](https://doi.org/10.1145/3414685.3417777). _ACM Transactions on Graphics (Proc. of SIGGRAPH Asia)_ 39, 6 (Dec. 2020), Article 251.
 
-Sean Palmer and Kendall Litaker. 2016. [Artist Friendly Level-of-Detail in a Fur-Filled World](https://dl.acm.org/citation.cfm?id=2927466). In _ACM SIGGRAPH 2016 Talks_. 32:1-32:2.
+Sean Palmer and Kendall Litaker. 2016. [Artist Friendly Level-of-Detail in a Fur-Filled World](https://dl.acm.org/citation.cfm?id=2927466). In _ACM SIGGRAPH 2016 Talks_. Article 32.
 
 Leonid Pekelis, Christophe Hery, Ryusuke Villemin, and Junyi Ling. 2015. [A Data-Driven Light Scattering Model for Hair](https://graphics.pixar.com/library/DataDrivenHairScattering/). _Pixar Technical Memo #15-02_.
 
-Kai Schröder, Reinhard Klein, and Arno Zinke. 2011. [A Volumetric Approach to Predictive Rendering of Fabrics](https://doi.org/10.1111/j.1467-8659.2011.01987.x). _Computer Graphics Forum_. 30, 4 (2011), 1277-1286.
+Kai Schröder, Reinhard Klein, and Arno Zinke. 2011. [A Volumetric Approach to Predictive Rendering of Fabrics](https://doi.org/10.1111/j.1467-8659.2011.01987.x). _Computer Graphics Forum (Proc. of Eurographics Symposium on Rendering)_ 30, 4 (Jun. 2011), 1277-1286.
 
-Brian Smith, Roman Fedetov, Sang N. Le, Matthias Frei, Alex Latyshev, Luke Emrose, and Jean Pascal leBlanc. 2018. [Simulating Woven Fabrics with Weave](https://dl.acm.org/citation.cfm?id=3214781). In _ACM SIGGRAPH 2018 Talks_. 12:1-12:2.
+Brian Smith, Roman Fedetov, Sang N. Le, Matthias Frei, Alex Latyshev, Luke Emrose, and Jean Pascal leBlanc. 2018. [Simulating Woven Fabrics with Weave](https://dl.acm.org/citation.cfm?id=3214781). In _ACM SIGGRAPH 2018 Talks_. Article 12.
 
 Thomas V. Thompson, Ernest J. Petti, and Chuck Tappan. 2003. [XGen: Arbitrary Primitive Generator](https://dl.acm.org/doi/10.1145/965400.965411). In _ACM SIGGRAPH 2003 Sketches and Applications_.
 
@@ -580,8 +580,8 @@ Walt Disney Animation Studios. 2011. [SeExpr](https://wdas.github.io/SeExpr/).
 
 Magnus Wrenninge, Ryusuke Villemin, and Christophe Hery. 2017. [Path Traced Subsurface Scattering using Anisotropic Phase Functions and Non-Exponential Free Flighs](https://graphics.pixar.com/library/PathTracedSubsurface/). _Pixar Technical Memo #17-07_.
 
-Shuang Zhao, Wenzel Jakob, Steve Marschner, and Kavita Bala. 2012. [Structure-Aware Synthesis for Predictive Woven Fabric Appearance](https://doi.org/10.1145/2185520.2185571). _ACM Transactions on Graphics_. 31, 4 (2012), 75:1-75:10.
+Shuang Zhao, Wenzel Jakob, Steve Marschner, and Kavita Bala. 2012. [Structure-Aware Synthesis for Predictive Woven Fabric Appearance](https://doi.org/10.1145/2185520.2185571). _ACM Transactions on Graphics (Proc. of SIGGRAPH)_ 31, 4 (Aug. 2012), Article 75.
 
-Shuang Zhao, Fujun Luan, and Kavita Bala. 2016. [Fitting Procedural Yarn Models for Realistic Cloth Rendering](https://doi.org/10.1145/2897824.2925932). _ACM Transactions on Graphics_. 35, 4 (2016), 51:1-51:11.
+Shuang Zhao, Fujun Luan, and Kavita Bala. 2016. [Fitting Procedural Yarn Models for Realistic Cloth Rendering](https://doi.org/10.1145/2897824.2925932). _ACM Transactions on Graphics (Proc. of SIGGRAPH)_ 35, 4 (Jul. 2016), Article 51.
 
 </div>

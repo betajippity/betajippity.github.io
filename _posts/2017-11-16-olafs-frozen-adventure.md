@@ -120,9 +120,9 @@ All images in this post are courtesy of and the property of Walt Disney Animatio
 
 Carsten Benthin, Sven Woop, Ingo Wald, and Attila T. Áfra. 2017. [Improved Two-Level BVHs using Partial Re-Braiding](https://doi.org/10.1145/3105762.3105776). In _Proc. of High Performance Graphics (HPG 2017)_. Article 7.
 
-Brent Burley. [Physically Based Shading at Disney](https://doi.org/10.1145/2343483.2343493). 2012. In _ACM SIGGRAPH 2012 Course Notes: [Practical Physically-Based Shading in Film and Game Production](https://blog.selfshadow.com/publications/s2012-shading-course/)_.
+Brent Burley. 2012. [Physically Based Shading at Disney](https://doi.org/10.1145/2343483.2343493). In _ACM SIGGRAPH 2012 Course Notes: [Practical Physically-Based Shading in Film and Game Production](https://blog.selfshadow.com/publications/s2012-shading-course/)_.
 
-Brent Burley. [Extending the Disney BRDF to a BSDF with Integrated Subsurface Scattering](https://doi.org/10.1145/2776880.2787670). 2015. In _ACM SIGGRAPH 2015 Course Notes: [Physically Based Shading in Theory and Practice](https://blog.selfshadow.com/publications/s2015-shading-course)_.
+Brent Burley. 2015. [Extending the Disney BRDF to a BSDF with Integrated Subsurface Scattering](https://doi.org/10.1145/2776880.2787670). In _ACM SIGGRAPH 2015 Course Notes: [Physically Based Shading in Theory and Practice](https://blog.selfshadow.com/publications/s2015-shading-course)_.
 
 Brent Burley, David Adler, Matt Jen-Yuan Chiang, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2017. [Recent Advances in Disney's Hyperion Renderer](https://www.yiningkarlli.com/projects/ptcourse2017.html). In _ACM SIGGRAPH 2017 Course Notes: [Path Tracing in Production Part 1](http://dx.doi.org/10.1145/3084873.3084904)_
 

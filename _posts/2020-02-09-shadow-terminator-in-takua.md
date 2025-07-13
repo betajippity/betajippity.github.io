@@ -201,11 +201,11 @@ If you want the details for how these two techniques are derived and why they wo
 
 ## References
 
-Matt Jen-Yuan Chiang, Yining Karl Li, and Brent Burley. 2019. [Taming the Shadow Terminator](https://dl.acm.org/citation.cfm?doid=3306307.3328172). In _ACM SIGGRAPH 2019 Talks_. 71:1–71:2.
+Matt Jen-Yuan Chiang, Yining Karl Li, and Brent Burley. 2019. [Taming the Shadow Terminator](https://dl.acm.org/citation.cfm?doid=3306307.3328172). In _ACM SIGGRAPH 2019 Talks_. Article 71.
 
 Alejandro Conty Estevez, Pascal Lecocq, and Clifford Stein. 2019. [A Microfacet-Based Shadowing Function to Solve the Bump Terminator Problem](https://link.springer.com/chapter/10.1007/978-1-4842-4427-2_12). _Ray Tracing Gems_ (2019), 149-158.
 
-Eric Veach. 1996. [Non-Symmetric Scattering in Light Transport Algorithms](https://graphics.stanford.edu/papers/non-symmetric/). In _Rendering Techniques 1996 (Proceedings of the 7th Eurographics Workshop on Rendering)_. 82-91.
+Eric Veach. 1996. [Non-Symmetric Scattering in Light Transport Algorithms](https://graphics.stanford.edu/papers/non-symmetric/). In _Proc. of Eurographics Workshop on Rendering (Rendering Techniques 1996)_. 82-91.
 
 ## Errata
 

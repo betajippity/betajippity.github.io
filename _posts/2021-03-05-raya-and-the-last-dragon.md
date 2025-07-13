@@ -327,40 +327,40 @@ I'll probably dedicate a separate post to Us Again once it's out on Disney+.
 
 ## References
 
-Brent Burley, David Adler, Matt Jen-Yuan Chiang, Hank Driskill, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2018. [The Design and Evolution of Disney’s Hyperion Renderer](https://dl.acm.org/citation.cfm?id=3182159). _ACM Transactions on Graphics_. 37, 3 (2018), 33:1-33:22.
+Brent Burley, David Adler, Matt Jen-Yuan Chiang, Hank Driskill, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2018. [The Design and Evolution of Disney's Hyperion Renderer](https://dl.acm.org/citation.cfm?id=3182159). _ACM Transactions on Graphics_ 37, 3 (Jul. 2018), Article 33.
 
-Marc Bryant, Ryan DeYoung, Wei-Feng Wayne Huang, Joe Longson, and Noel Villegas. 2021. [The Atmosphere of Raya and the Last Dragon](https://doi.org/10.1145/3450623.3464676). In _ACM SIGGRAPH 2021 Talks_. 51:1-51:2.
+Marc Bryant, Ryan DeYoung, Wei-Feng Wayne Huang, Joe Longson, and Noel Villegas. 2021. [The Atmosphere of Raya and the Last Dragon](https://doi.org/10.1145/3450623.3464676). In _ACM SIGGRAPH 2021 Talks_. Article 51:1-51:2.
 
-Matt Jen-Yuan Chiang, Benedikt Bitterli, Chuck Tappan, and Brent Burley. 2016. [A Practical and Controllable Hair and Fur Model for Production Path Tracing](https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.12830). _Computer Graphics Forum_. 35, 2 (2016), 275-283.
+Matt Jen-Yuan Chiang, Benedikt Bitterli, Chuck Tappan, and Brent Burley. 2016. [A Practical and Controllable Hair and Fur Model for Production Path Tracing](https://doi.org/10.1111/cgf.12830). _Computer Graphics Forum (Proc. of Eurographics)_ 35, 2 (May 2016), 275-283.
 
-Matt Jen-Yuan Chiang, Peter Kutz, and Brent Burley. 2016. [Practical and Controllable Subsurface Scattering for Production Path Tracing](https://doi.org/10.1145/2897839.2927433). In _ACM SIGGRAPH 2016 Talks_. 49:1-49:2.
+Matt Jen-Yuan Chiang, Peter Kutz, and Brent Burley. 2016. [Practical and Controllable Subsurface Scattering for Production Path Tracing](https://dl.acm.org/doi/10.1145/2897839.2927433). In _ACM SIGGRAPH 2016 Talks_. Article 49.
 
-Petrik Clarberg, Wojciech Jarosz, Tomas Akenine-Möller, and Henrik Wann Jensen. 2005. [Wavelet Importance Sampling: Efficiently Evaluating Products of Complex Functions](https://dl.acm.org/doi/10.1145/1073204.1073328). _ACM Transactions on Graphics_. 24, 3 (2005), 1166-1175.
+Petrik Clarberg, Wojciech Jarosz, Tomas Akenine-Möller, and Henrik Wann Jensen. 2005. [Wavelet Importance Sampling: Efficiently Evaluating Products of Complex Functions](https://dl.acm.org/doi/10.1145/1073204.1073328). _ACM Transactions on Graphics (Proc. of SIGGRAPH)_ 24, 3 (Aug. 2005), 1166-1175.
 
-Henrik Dahlberg, David Adler, and Jeremy Newlin. 2019. [Machine-Learning Denoising in Feature Film Production](https://dl.acm.org/citation.cfm?id=3328150). In _ACM SIGGRAPH 2019 Talks_. 21:1-21:2.
+Henrik Dahlberg, David Adler, and Jeremy Newlin. 2019. [Machine-Learning Denoising in Feature Film Production](https://dl.acm.org/citation.cfm?id=3328150). In _ACM SIGGRAPH 2019 Talks_. Article 21.
 
-Julian Fong, Magnus Wrenninge, Christopher Kulla, and Ralf Habel. 2017. [Production Volume Rendering](https://doi.org/10.1145/3084873.3084907). In _ACM SIGGRAPH 2017 Courses_.
+Julian Fong, Magnus Wrenninge, Christopher Kulla, and Ralf Habel. 2017. [Production Volume Rendering](https://doi.org/10.1145/3084873.3084907). In _ACM SIGGRAPH 2017 Courses_. Article 2.
 
-Wei-Feng Wayne Huang, Peter Kutz, Yining Karl Li, and Matt Jen-Yuan Chiang. 2021. [Unbiased Emission and Scattering Importance Sampling for Heterogeneous Volumes](https://doi.org/10.1145/3450623.3464644). In _ACM SIGGRAPH 2021 Talks_. 3:1-3:2.
+Wei-Feng Wayne Huang, Peter Kutz, Yining Karl Li, and Matt Jen-Yuan Chiang. 2021. [Unbiased Emission and Scattering Importance Sampling for Heterogeneous Volumes](https://doi.org/10.1145/3450623.3464644). In _ACM SIGGRAPH 2021 Talks_. Article 3.
 
-Avneet Kaur and Johann Francois Coetzee. 2021. [Wrapped Clothing on Disney’s Raya and the Last Dragon](https://doi.org/10.1145/3450623.3464659). In _ACM SIGGRAPH 2021 Talks_. 28:1-28:2.
+Avneet Kaur and Johann Francois Coetzee. 2021. [Wrapped Clothing on Disney’s Raya and the Last Dragon](https://doi.org/10.1145/3450623.3464659). In _ACM SIGGRAPH 2021 Talks_. Article 28.
 
-Avneet Kaur, Erik Eulen, and Johann Francois Coetzee. 2021. [Creating Diversity and Variety in the People of Kumandra for Disney's Raya and the Last Dragon](https://doi.org/10.1145/3450623.3464660). In _ACM SIGGRAPH 2021 Talks_. 58:1-58:2.
+Avneet Kaur, Erik Eulen, and Johann Francois Coetzee. 2021. [Creating Diversity and Variety in the People of Kumandra for Disney's Raya and the Last Dragon](https://doi.org/10.1145/3450623.3464660). In _ACM SIGGRAPH 2021 Talks_. Article 58.
 
-Peter Kutz, Ralf Habel, Yining Karl Li, and Jan Novák. 2017. [Spectral and Decomposition Tracking for Rendering Heterogeneous Volumes](https://doi.org/10.1145/3072959.3073665). _ACM Transactions on Graphics_. 36, 4 (2017), 111:1-111:16.
+Peter Kutz, Ralf Habel, Yining Karl Li, and Jan Novák. 2017. [Spectral and Decomposition Tracking for Rendering Heterogeneous Volumes](https://doi.org/10.1145/3072959.3073665). _ACM Transactions on Graphics (Proc. of SIGGRAPH)_ 36, 4 (Aug. 2017), Article 111.
 
-Alberto Luceño Ros, Kristin Chow, Jack Geckler, Norman Moses Joseph, and Nicolas Nghiem. 2021. [Populating the World of Kumandra: Animation at Scale for Disney's Raya and the Last Dragon](https://doi.org/10.1145/3450623.3464648). In _ACM SIGGRAPH 2021 Talks_. 39:1-39:2.
+Alberto Luceño Ros, Kristin Chow, Jack Geckler, Norman Moses Joseph, and Nicolas Nghiem. 2021. [Populating the World of Kumandra: Animation at Scale for Disney's Raya and the Last Dragon](https://doi.org/10.1145/3450623.3464648). In _ACM SIGGRAPH 2021 Talks_. Article 39.
 
-Mike Navarro and Jacob Rice. 2021. [Stylizing Volumes with Neural Networks](https://doi.org/10.1145/3450623.3464652). In _ACM SIGGRAPH 2021 Talks_. 54:1-54:2.
+Mike Navarro and Jacob Rice. 2021. [Stylizing Volumes with Neural Networks](https://doi.org/10.1145/3450623.3464652). In _ACM SIGGRAPH 2021 Talks_. Article 54.
 
-Jennifer Newfield and Josh Staub. 2020. [How Short Circuit Experiments: Experimental Filmmaking at Walt Disney Animation Studios](https://dl.acm.org/doi/10.1145/3388767.3409267). In _ACM SIGGRAPH 2020 Talks_. 72:1-72:2.
+Jennifer Newfield and Josh Staub. 2020. [How Short Circuit Experiments: Experimental Filmmaking at Walt Disney Animation Studios](https://dl.acm.org/doi/10.1145/3388767.3409267). In _ACM SIGGRAPH 2020 Talks_. Article 72.
 
-Nicolas Nghiem. 2021. [Mathematical Tricks for Scalable and Appealing Crowds in Walt Disney Animation Studios' Raya and the Last Dragon](https://doi.org/10.1145/3450623.3464650). In _ACM SIGGRAPH 2021 Talks_. 38:1-38:2.
+Nicolas Nghiem. 2021. [Mathematical Tricks for Scalable and Appealing Crowds in Walt Disney Animation Studios' Raya and the Last Dragon](https://doi.org/10.1145/3450623.3464650). In _ACM SIGGRAPH 2021 Talks_. Article 38.
 
-Sean Palmer, Jonathan Garcia, Sara Drakeley, Patrick Kelly, and Ralf Habel. 2017. [The Ocean and Water Pipeline of Disney’s Moana](https://dl.acm.org/citation.cfm?id=3085067). In _ACM SIGGRAPH 2017 Talks_. 29:1-29:2.
+Sean Palmer, Jonathan Garcia, Sara Drakeley, Patrick Kelly, and Ralf Habel. 2017. [The Ocean and Water Pipeline of Disney’s Moana](https://dl.acm.org/citation.cfm?id=3085067). In _ACM SIGGRAPH 2017 Talks_. Article 29.
 
-Jacob Rice. 2021. [Weaving the Druun's Webbing](https://doi.org/10.1145/3450623.3464647). In _ACM SIGGRAPH 2021 Talks_. 32:1-32:2.
+Jacob Rice. 2021. [Weaving the Druun's Webbing](https://doi.org/10.1145/3450623.3464647). In _ACM SIGGRAPH 2021 Talks_. Article 32.
 
-Thijs Vogels, Fabrice Rousselle, Brian McWilliams, Gerhard Röthlin, Alex Harvill, David Adler, Mark Meyer, and Jan Novák. 2018. [Denoising with Kernel Prediction and Asymmetric Loss Functions](https://doi.org/10.1145/3197517.3201388). _ACM Transactions on Graphics_. 37, 4 (2018), 124:1-124:15.
+Thijs Vogels, Fabrice Rousselle, Brian McWilliams, Gerhard Röthlin, Alex Harvill, David Adler, Mark Meyer, and Jan Novák. 2018. [Denoising with Kernel Prediction and Asymmetric Loss Functions](https://doi.org/10.1145/3197517.3201388). _ACM Transactions on Graphics (Proc. of SIGGRAPH)_ 37, 4 (Aug. 2018), Article 124.
 
-Cong Wang, Dale Mayeda, Jacob Rice, Thom Whicks, and Benjamin Huang. 2021. [Cooking Southeast Asia-Inspired Soup in Animated Film](https://doi.org/10.1145/3450623.3464651). In _ACM SIGGRAPH 2021 Talks_. 35:1-35:2.
+Cong Wang, Dale Mayeda, Jacob Rice, Thom Whicks, and Benjamin Huang. 2021. [Cooking Southeast Asia-Inspired Soup in Animated Film](https://doi.org/10.1145/3450623.3464651). In _ACM SIGGRAPH 2021 Talks_. Article 35.

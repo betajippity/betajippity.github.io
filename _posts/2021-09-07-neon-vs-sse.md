@@ -940,11 +940,11 @@ ARM Holdings. 2021. [Helium Programmer's Guide](https://developer.arm.com/archit
 
 ARM Holdings. 2021. [SVE and SVE2 Programmer's Guide](https://developer.arm.com/architectures/instruction-sets/simd-isas/sve/sve-programmers-guide). Retrieved September 5, 2021.
 
-Holger Dammertz, Johannes Hanika, and Alexander Keller. 2008. [Shallow Bounding Volume Hierarchies for Fast SIMD Ray Tracing of Incoherent Rays](https://doi.org/10.1111/j.1467-8659.2008.01261.x). _Computer Graphics Forum_. 27, 4 (2008), 1225-1234.
+Holger Dammertz, Johannes Hanika, and Alexander Keller. 2008. [Shallow Bounding Volume Hierarchies for Fast SIMD Ray Tracing of Incoherent Rays](https://doi.org/10.1111/j.1467-8659.2008.01261.x). _Computer Graphics Forum (Proc. of Eurographics Symposium on Rendering_ 27, 4 (Jun. 2008), 1225-1234.
 
-Manfred Ernst and Günther Greiner. 2008. [Multi Bounding Volume Hierarchies](https://doi.org/10.1109/RT.2008.4634618). In _RT 2008: Proceedings of the 2008 IEEE Symposium on Interactive Ray Tracing_. 35-40.
+Manfred Ernst and Günther Greiner. 2008. [Multi Bounding Volume Hierarchies](https://doi.org/10.1109/RT.2008.4634618). In _Proc. of IEEE Symposium on Interactive Ray Tracing (RT 2008)_. 35-40.
 
-Luca Fascione, Johannes Hanika, Mark Leone, Marc Droske, Jorge Schwarzhaupt, Tomáš Davidovič, Andrea Weidlich, and Johannes Meng. 2018. [Manuka: A Batch-Shading Architecture for Spectral Path Tracing in Movie Production](https://doi.org/10.1145/3182161). _ACM Transactions on Graphics_. 37, 3 (2018), 31:1-31:18.
+Luca Fascione, Johannes Hanika, Mark Leone, Marc Droske, Jorge Schwarzhaupt, Tomáš Davidovič, Andrea Weidlich and Johannes Meng. 2018. [Manuka: A Batch-Shading Architecture for Spectral Path Tracing in Movie Production](https://dl.acm.org/citation.cfm?id=3182161). _ACM Transactions on Graphics_ 37, 3 (Jul. 2018), Article 31.
 
 Romain Guy and Mathias Agopian. 2019. [High Performance (Graphics) Programming](https://www.youtube.com/watch?v=Lcq_fzet9Iw). In _Android Dev Summit '19_. Retrieved September 7, 2021.
 
@@ -952,9 +952,9 @@ Intel Corporation. 2021. [Intel Intrinsics Guide](https://software.intel.com/sit
 
 Intel Corporation. 2021. [Intel ISPC User's Guide](https://ispc.github.io/ispc.html). Retrieved August 30, 2021.
 
-Thiago Ize. 2013. [Robust BVH Ray Traversal](http://jcgt.org/published/0002/02/02/). _Journal of Computer Graphics Techniques_. 2, 2 (2013), 12-27.
+Thiago Ize. 2013. [Robust BVH Ray Traversal](http://jcgt.org/published/0002/02/02/). _Journal of Computer Graphics Techniques_ 2, 2 (Jul. 2013), 12-27.
 
-Tero Karras and Timo Aila. 2013. [Fast Parallel Construction of High-Quality Bounding Volume Hierarchies](https://doi.org/10.1145/2492045.2492055). In _HPG 2013: Proceedings of the 5th Conference on High-Performance Graphics_. 89-88.
+Tero Karras and Timo Aila. 2013. [Fast Parallel Construction of High-Quality Bounding Volume Hierarchies](https://doi.org/10.1145/2492045.2492055). In _Proc. of High Performance Graphics (HPG 2013)_. 89-88.
 
 Vlad Krasnov. 2017. [On the dangers of Intel's frequency scaling](https://blog.cloudflare.com/on-the-dangers-of-intels-frequency-scaling/). In _Cloudflare Blog_. Retrieved August 30, 2021.
 
@@ -962,13 +962,13 @@ Vlad Krasnov. 2018. [NEON is the new black: fast JPEG optimization on ARM server
 
 Geoff Langdale and Daniel Lemire. 2019. [Parsing Gigabytes of JSON per Second](https://doi.org/10.1007/s00778-019-00578-5). _The VLDB Journal_. 28 (2019), 941-960.
 
-Mark Lee, Brian Green, Feng Xie, and Eric Tabellion. 2017. [Vectorized Production Path Tracing](https://dl.acm.org/citation.cfm?doid=3105762.3105768). In _HPG 2017: Proceedings of the 9th Conference on High-Performance Graphics)_. 10:1-10:11.
+Mark Lee, Brian Green, Feng Xie, and Eric Tabellion. 2017. [Vectorized Production Path Tracing](https://dl.acm.org/citation.cfm?doid=3105762.3105768). In _Proc. of High Performance Graphics (HPG 2017)_. Article 10.
 
-Max Liani and Alex M. Wells. 2020. [Supercharging Pixar's RenderMan XPU with Intel AVX-512](https://www.youtube.com/watch?v=-WqrP50nvN4). In _ACM SIGGRAPH 2020: Exhibitor Sessions_.
+Max Liani and Alex M. Wells. 2020. [Supercharging Pixar's RenderMan XPU with Intel AVX-512](https://www.youtube.com/watch?v=-WqrP50nvN4). In _ACM SIGGRAPH 2020 Exhibitor Sessions_.
 
-Alexander Majercik, Cyril Crassin, Peter Shirley, and Morgan McGuire. 2018. [A Ray-Box Intersection Algorithm and Efficient Dynamic Voxel Rendering](http://jcgt.org/published/0007/03/04/)
+Alexander Majercik, Cyril Crassin, Peter Shirley, and Morgan McGuire. 2018. [A Ray-Box Intersection Algorithm and Efficient Dynamic Voxel Rendering](http://jcgt.org/published/0007/03/04/). _Journal of Computer Graphics Techniques_ 7, 3 (Sep. 2018), 66-81.
 
-Daniel Meister, Shinji Ogaki, Carsten Benthin, Michael J. Doyle, Michael Guthe, and Jiri Bittner. 2021. [A Survey on Bounding Volume Hierarchies for Ray Tracing](https://doi.org/10.1111/cgf.142662). _Computer Graphics Forum_. 40, 2 (2021), 683-712.
+Daniel Meister, Shinji Ogaki, Carsten Benthin, Michael J. Doyle, Michael Guthe, and Jiri Bittner. 2021. [A Survey on Bounding Volume Hierarchies for Ray Tracing](https://doi.org/10.1111/cgf.142662). _Computer Graphics Forum (Proc. of Eurographics)_ 40, 2 (May 2021), 683-712.
 
 NVIDIA. 2021. [NVIDIA OptiX 7.3 Programming Guide](https://raytracing-docs.nvidia.com/optix7/guide/index.html). Retrieved August 30, 2021.
 
@@ -976,23 +976,23 @@ Howard Oakley. 2021. [Code in ARM Assembly: Lanes and loads in NEON](https://ecl
 
 Matt Pharr. 2018. [The Story of ISPC](https://pharr.org/matt/blog/2018/04/30/ispc-all). In _Matt Pharr's Blog_. Retrieved July 18, 2021.
 
-Matt Pharr and William R. Mark. 2012. [ispc: A SPMD compiler for high-performance CPU programming](https://doi.org/10.1109/InPar.2012.6339601). In _2012 Innovative Parallel Computing (InPar)_.
+Matt Pharr and William R. Mark. 2012. [ispc: A SPMD compiler for high-performance CPU programming](https://doi.org/10.1109/InPar.2012.6339601). In _Proc. of nnovative Parallel Computing (InPar 2012)_. 184-196.
 
-Martin Stich, Heiko Friedrich, and Andreas Dietrich. 2009. [Spatial Splits in Bounding Volume Hierarchies](https://doi.org/10.1145/1572769.1572771). In _HPG 2009: Proceedings of the 1st Conference on High-Performance Graphics_. 7-13.
+Martin Stich, Heiko Friedrich, and Andreas Dietrich. 2009. [Spatial Splits in Bounding Volume Hierarchies](https://doi.org/10.1145/1572769.1572771). In _Proc. of High Performance Graphics (HPG 2009)_. 7-13.
 
-John A. Tsakok. 2009. [Faster Incoherent Rays: Multi-BVH Ray Stream Tracing](https://doi.org/10.1145/1572769.1572793). In _HPG 2009: Proceedings of the 1st Conference on High-Performance Graphics_. 151-158.
+John A. Tsakok. 2009. [Faster Incoherent Rays: Multi-BVH Ray Stream Tracing](https://doi.org/10.1145/1572769.1572793). In _Proc. of High Performance Graphics (HPG 2009)_. 151-158.
 
 Nathan Vegdahl. 2017. [BVH4 Without SIMD](https://psychopath.io/post/2017_08_03_bvh4_without_simd). In _Psychopath Renderer_. Retrieved August 20, 2021.
 
-Ingo Wald, Carsten Benthin, and Solomon Boulos. 2008. [Getting Rid of Packets - Efficient SIMD Single-Ray Traversal using Multi-Branching BVHs](https://doi.org/10.1109/RT.2008.4634620). In _RT 2008: Proceedings of the 2008 IEEE Symposium on Interactive Ray Tracing_. 49-57.
+Ingo Wald, Carsten Benthin, and Solomon Boulos. 2008. [Getting Rid of Packets - Efficient SIMD Single-Ray Traversal using Multi-Branching BVHs](https://doi.org/10.1109/RT.2008.4634620). In _Proc. of IEEE Symposium on Interactive Ray Tracing (RT 2008)_. 49-57.
 
-Ingo Wald, Philipp Slusallek, Carsten Benthin, and Markus Wagner. 2001. [Interactive Rendering with Coherent Ray Tracing](https://doi.org/10.1111/1467-8659.00508). _Computer Graphics Forum_. 20, 3 (2001), 153-165.
+Ingo Wald, Philipp Slusallek, Carsten Benthin, and Markus Wagner. 2001. [Interactive Rendering with Coherent Ray Tracing](https://doi.org/10.1111/1467-8659.00508). _Computer Graphics Forum (Proc. of Eurographics_ 20, 3 (Sep. 2001), 153-165.
 
-Ingo Wald, Sven Woop, Carsten Benthin, Gregory S. Johnson, and Manfred Ernst. 2014. [Embree: A Kernel Framework for Efficient CPU Ray Tracing](https://doi.org/10.1145/2601097.2601199). _ACM Transactions on Graphics_. 33, 4 (2014), 143:1-143:8.
+Ingo Wald, Sven Woop, Carsten Benthin, Gregory S. Johnson, and Manfred Ernst. 2014. [Embree: A Kernel Framework for Efficient CPU Ray Tracing](https://doi.org/10.1145/2601097.2601199). _ACM Transactions on Graphics (Proc. of SIGGRAPH)_ 33, 4 (Jul. 2014), Article 143.
 
-Amy Williams, Steve Barrus, Keith Morley, and Peter Shirley. 2005. [An Efficient and Robust Ray-Box Intersection Algorithm](https://doi.org/10.1080/2151237X.2005.10129188). _Journal of Graphics Tools). 10, 1 (2005), 49-54.
+Amy Williams, Steve Barrus, Keith Morley, and Peter Shirley. 2005. [An Efficient and Robust Ray-Box Intersection Algorithm](https://doi.org/10.1080/2151237X.2005.10129188). _Journal of Graphics Tools) 10, 1 (Jan. 2005), 49-54.
 
-Henri Ylitie, Tero Karras, and Samuli Laine. 2017. [Efficient Incoherent Ray Traversal on GPUs Through Compressed Wide BVHs](https://doi.org/10.1145/3105762.3105773). In _HPG 2017: Proceedings of the 9th Conference on High-Performance Graphics_. 4:1-4:13.
+Henri Ylitie, Tero Karras, and Samuli Laine. 2017. [Efficient Incoherent Ray Traversal on GPUs Through Compressed Wide BVHs](https://doi.org/10.1145/3105762.3105773). In _Proc. of High Performance Graphics (HPG 2017)_. Article 4.
 
 Wikipedia. 2021. [Advanced Vector Extensions](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions). Retrieved September 5, 2021.
 

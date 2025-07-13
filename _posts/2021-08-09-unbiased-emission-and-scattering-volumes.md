@@ -63,18 +63,18 @@ I owe Wayne a huge debt of gratitude for letting me be a small part of this proj
 
 ## References
 
-Marc Bryant, Ryan DeYoung, Wei-Feng Wayne Huang, Joe Longson, and Noel Villegas. 2021. [The Atmosphere of Raya and the Last Dragon](https://doi.org/10.1145/3450623.3464676). In _ACM SIGGRAPH 2021 Talks_. 51:1-51:2.
+Marc Bryant, Ryan DeYoung, Wei-Feng Wayne Huang, Joe Longson, and Noel Villegas. 2021. [The Atmosphere of Raya and the Last Dragon](https://doi.org/10.1145/3450623.3464676). In _ACM SIGGRAPH 2021 Talks_. Article 51.
 
-Brent Burley, David Adler, Matt Jen-Yuan Chiang, Hank Driskill, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2018. [The Design and Evolution of Disney’s Hyperion Renderer](https://doi.org/10.1145/3182159). _ACM Transactions on Graphics_. 37, 3 (2018), 33:1-33:22.
+Brent Burley, David Adler, Matt Jen-Yuan Chiang, Hank Driskill, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2018. [The Design and Evolution of Disney's Hyperion Renderer](https://doi.org/10.1145/3182159). _ACM Transactions on Graphics_ 37, 3 (Jul. 2018), Article 33.
 
-Julian Fong, Magnus Wrenninge, Christopher Kulla, and Ralf Habel. 2017. [Production Volume Rendering](http://graphics.pixar.com/library/ProductionVolumeRendering). In _ACM SIGGRAPH 2021 Courses_. 2:1-2:97.
+Julian Fong, Magnus Wrenninge, Christopher Kulla, and Ralf Habel. 2017. [Production Volume Rendering](http://graphics.pixar.com/library/ProductionVolumeRendering). In _ACM SIGGRAPH 2017 Courses_. Article 2.
 
-Peter Kutz, Ralf Habel, Yining Karl Li, and Jan Novák. 2017. [Spectral and Decomposition Tracking for Rendering Heterogeneous Volumes](https://doi.org/10.1145/3072959.3073665). _ACM Transactions on Graphics_. 36, 4 (2017), 111:1-111:16.
+Peter Kutz, Ralf Habel, Yining Karl Li, and Jan Novák. 2017. [Spectral and Decomposition Tracking for Rendering Heterogeneous Volumes](https://doi.org/10.1145/3072959.3073665). _ACM Transactions on Graphics (Proc. of SIGGRAPH)_ 36, 4 (Aug. 2017), Article 111.
 
-Bailey Miller, Iliyan Georgiev, and Wojciech Jarosz. 2019. [A Null-Scattering Path Integral Formulation of Light Transport](https://dl.acm.org/doi/10.1145/3306346.3323025). _ACM Transactions on Graphics_. 38, 4 (2019). 44:1-44:13.
+Bailey Miller, Iliyan Georgiev, and Wojciech Jarosz. 2019. [A Null-Scattering Path Integral Formulation of Light Transport](https://doi.org/10.1145/3306346.3323025). _ACM Transactions on Graphics (Proc. of SIGGRAPH)_ 38, 4 (Jul. 2019), Article 44.
 
-Jan Novák, Andrew Selle and Wojciech Jarosz. 2014. [Residual Ratio Tracking for Estimating Attenuation in Participating Media](https://dl.acm.org/citation.cfm?id=2661292). _ACM Transactions on Graphics_. 33, 6 (2014), 179:1-179:11.
+Jan Novák, Andrew Selle and Wojciech Jarosz. 2014. [Residual Ratio Tracking for Estimating Attenuation in Participating Media](https://dl.acm.org/citation.cfm?id=2661292). _ACM Transactions on Graphics (Proc. of SIGGRAPH Asia)_ 33, 6 (Nov. 2014), Article 179.
 
-Ryusuke Villemin and Christophe Hery. 2013. [Practical Illumination from Flames](http://jcgt.org/published/0002/02/10/). _Journal of Computer Graphics Techniques_. 2, 2 (2013), 142-155.
+Ryusuke Villemin and Christophe Hery. 2013. [Practical Illumination from Flames](http://jcgt.org/published/0002/02/10/). _Journal of Computer Graphics Techniques_ 2, 2 (Dec. 2013), 142-155.
 
-Ryusuke Villemin, Magnus Wrenninge, and Julian Fong. 2018. [Efficient Unbiased Rendering of Thin Participating Media](http://jcgt.org/published/0007/03/03/). _Journal of Computer Graphics Techniques_. 7, 3 (2018), 50-65.
+Ryusuke Villemin, Magnus Wrenninge, and Julian Fong. 2018. [Efficient Unbiased Rendering of Thin Participating Media](http://jcgt.org/published/0007/03/03/). _Journal of Computer Graphics Techniques_ 7, 3 (Sep. 2018), 50-65.

@@ -981,7 +981,7 @@ Finally, thanks to my wife, [Harmony Li](http://harmonymli.com), for being patie
 <div id="2021-05-29-references"></div>
 ## References
 
-Pontus Andersson, Jim Nilsson, Tomas Akenine-Möller, Magnus Oskarsson, Kalle Åström, and Mark D. Fairchild. 2020. [FLIP: A Difference Evaluator for Alternating Images](https://doi.org/10.1145/3406183). _ACM Transactions on Graphics_. 3, 2 (2020), 15:1-15:23.
+Pontus Andersson, Jim Nilsson, Tomas Akenine-Möller, Magnus Oskarsson, Kalle Åström, and Mark D. Fairchild. 2020. [FLIP: A Difference Evaluator for Alternating Images](https://doi.org/10.1145/3406183). _Proc. of the ACM on Computer Graphics and Interactive Techniques (Proc. of High Performance Graphics)_ 3, 2 (Jul. 2020), Article 15.
 
 ARM Holdings. 2016. [Cortex-A57 Software Optimization Guide](https://developer.arm.com/documentation/uan0015/b/). Retrieved May 12, 2021.
 
@@ -1003,7 +1003,7 @@ Bruce Dawson. 2020. [ARM and Lock-Free Programming](https://randomascii.wordpres
 
 Glenn Fiedler. 2008. [Floating Point Determinism](https://gafferongames.com/post/floating_point_determinism/). In _Gaffer on Games_. Retrieved April 20, 2021.
 
-David Goldbery. 1991. [What Every Computer Scientist Should Know About Floating-Point Arithmetic](https://doi.org/10.1145/103162.103163). _ACM Computing Surveys_. 32, 1 (1991), 5-48.
+David Goldbery. 1991. [What Every Computer Scientist Should Know About Floating-Point Arithmetic](https://doi.org/10.1145/103162.103163). _ACM Computing Surveys_ 32, 1 (Mar. 1991), 5-48.
 
 Martin Geupel. 2018. [Bucket and Progressive Rendering](https://www.racoon-artworks.de/cgbasics/bucket_progressive.php). In _CG Basics_. Retrieved May 12, 2021.
 
@@ -1013,7 +1013,7 @@ Yossi Kreinin. 2008. [Consistency: How to Defeat the Purpose of IEEE Floating Po
 
 Günter Obiltschnig. 2006. [Cross-Platform Issues with Floating-Point Arithmetics in C++](https://www.appinf.com/download/FPIssues.pdf). In _ACCU Conference 2006_.
 
-David A. Patterson and David R. Ditzel. 1980. [The Case for the Reduced Instruction Set Computer](https://doi.org/10.1145/641914.641917). _ACM SIGARCH Computer Architecture News_. 8, 6 (1980), 25-33.
+David A. Patterson and David R. Ditzel. 1980. [The Case for the Reduced Instruction Set Computer](https://doi.org/10.1145/641914.641917). _ACM SIGARCH Computer Architecture News_ 8, 6 (Oct. 1980), 25-33.
 
 Jeff Preshing. 2012. [Memory Reordering Caught in the Act](https://preshing.com/20120515/memory-reordering-caught-in-the-act/). In _Preshing on Programming_. Retrieved March 20, 2021.
 
@@ -1035,7 +1035,7 @@ Michael E. Thomadakis. 2011. [The Architecture of the Nehalem Processor and Neha
 
 Kyrylo Tkachov. 2020. [Making the Most of the Arm Architecture with GCC 10](https://community.arm.com/developer/tools-software/tools/b/tools-software-ides-blog/posts/making-the-most-of-the-arm-architecture-in-GCC-10). In _ARM Tools, Software, and IDEs Blog_. Retrieved May 14, 2021.
 
-Vincent M. Weaver and Sally A. McKee. 2009. [Code Density Concerns for New Architectures](https://doi.org/10.1109/ICCD.2009.5413117). In _2009 IEEE International Conference on Computer Design_. 459-464.
+Vincent M. Weaver and Sally A. McKee. 2009. [Code Density Concerns for New Architectures](https://doi.org/10.1109/ICCD.2009.5413117). In _Proc. of IEEE International Conference on Computer Design (ICCD 2009)_. 459-464.
 
 WikiBooks. 2021. [Microprocessor Design: Instruction Decoder](https://en.wikibooks.org/wiki/Microprocessor_Design/Instruction_Decoder). Retrieved May 12, 2021.
 

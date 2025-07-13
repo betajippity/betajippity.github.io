@@ -55,34 +55,34 @@ Getting to work with Zack and Wojciech on this project was an honor and a blast;
 
 ## References
 
-Brent Burley, David Adler, Matt Jen-Yuan Chiang, Hank Driskill, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2018. [The Design and Evolution of Disney’s Hyperion Renderer](https://doi.org/10.1145/3182159). _ACM Transactions on Graphics_. 37, 3 (2018), 33:1-33:22.
+Brent Burley, David Adler, Matt Jen-Yuan Chiang, Hank Driskill, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2018. [The Design and Evolution of Disney's Hyperion Renderer](https://dl.acm.org/citation.cfm?id=3182159). _ACM Transactions on Graphics_ 37, 3 (Jul. 2018), Article 33.
 
-Per H. Christensen, Julian Fong, Jonathan Shade, Wayne L Wooten, Brenden Schubert, Andrew Kensler, Stephen Friedman, Charlie Kilpatrick, Cliff Ramshaw, Marc Bannister, Brenton Rayner, Jonathan Brouillat, and Max Liani. 2018. [RenderMan: An Advanced Path Tracing Architecture for Movie Rendering](https://dl.acm.org/citation.cfm?id=3182162). _ACM Transactions on Graphics_. 37, 3 (2018), 30:1-30:21.
+Per Christensen, Julian Fong, Jonathan Shade, Wayne Wooten, Brenden Schubert, Andrew Kensler, Stephen Friedman, Charlie Kilpatrick, Cliff Ramshaw, Marc Bannister, Brenton Rayner, Jonathan Brouillat, and Max Liani. 2018. [RenderMan: An Advanced Path-Tracing Architeture for Movie Rendering](https://dl.acm.org/citation.cfm?id=3182162). _ACM Transactions on Graphics_ 37, 3 (Jul. 2018), Article 30.
 
-Luca Fascione, Johannes Hanika, Mark Leone, Marc Droske, Jorge Schwarzhaupt, Tomáš Davidovič, Andrea Weidlich, and Johannes Meng. 2018. [Manuka: A Batch-Shading Architecture for Spectral Path Tracing in Movie Production](https://dl.acm.org/citation.cfm?id=3182161). _ACM Transactions on Graphics_. 37, 3 (2018), 31:1-31:18.
+Luca Fascione, Johannes Hanika, Mark Leone, Marc Droske, Jorge Schwarzhaupt, Tomáš Davidovič, Andrea Weidlich and Johannes Meng. 2018. [Manuka: A Batch-Shading Architecture for Spectral Path Tracing in Movie Production](https://dl.acm.org/citation.cfm?id=3182161). _ACM Transactions on Graphics_ 37, 3 (Jul. 2018), Article 31.
 
-Julian Fong, Magnus Wrenninge, Christopher Kulla, and Ralf Habel. 2017. [Production Volume Rendering](http://graphics.pixar.com/library/ProductionVolumeRendering). In _ACM SIGGRAPH 2021 Courses_. 2:1-2:97.
+Julian Fong, Magnus Wrenninge, Christopher Kulla, and Ralf Habel. 2017. [Production Volume Rendering](https://doi.org/10.1145/3084873.3084907). In _ACM SIGGRAPH 2017 Courses_. Article 2.
 
-Manuel Gamito. 2018. [Path Tracing the Framestorian Way](https://doi.org/10.1145/3214834.3214864). In _SIGGRAPH 2018 Course Notes: Path Tracing in Production_. 52-61.
+Manuel Gamito. 2018. [Path Tracing the Framestorian Way](https://doi.org/10.1145/3214834.3214864). In _ACM SIGGRAPH 2018 Course Notes: Path Tracing in Production_. 52-61.
 
-Sebastian Herholz, Yangyang Zhao, Oskar Elek, Derek Nowrouzezahrai, Hendrik P A Lensch, and Jaroslav Křivánek. 2019. [Volume Path Guiding Based on Zero-Variance Random Walk Theory](https://dl.acm.org/citation.cfm?id=3230635). _ACM Transactions on Graphics_. 38, 3 (2019), 24:1-24:19.
+Sebastian Herholz, Yangyang Zhao, Oskar Elek, Derek Nowrouzezahrai, Hendrik P A Lensch, and Jaroslav Křivánek. 2019. [Volume Path Guiding Based on Zero-Variance Random Walk Theory](https://dl.acm.org/citation.cfm?id=3230635). _ACM Transactions on Graphics_ 38, 3 (Jun. 2019), Article 25.
 
-Wei-Feng Wayne Huang, Peter Kutz, Yining Karl Li, and Matt Jen-Yuan Chiang. 2021. [Unbiased Emission and Scattering Importance Sampling For Heterogeneous Volumes](https://dl.acm.org/doi/10.1145/3450623.3464644). In _ACM SIGGRAPH 2021 Talks_. 3:1-3:2.
+Wei-Feng Wayne Huang, Peter Kutz, Yining Karl Li, and Matt Jen-Yuan Chiang. 2021. [Unbiased Emission and Scattering Importance Sampling For Heterogeneous Volumes](https://dl.acm.org/doi/10.1145/3450623.3464644). In _ACM SIGGRAPH 2021 Talks_. Article 3.
 
-Peter Kutz, Ralf Habel, Yining Karl Li, and Jan Novák. 2017. [Spectral and Decomposition Tracking for Rendering Heterogeneous Volumes](https://doi.org/10.1145/3072959.3073665). _ACM Transactions on Graphics_. 36, 4 (2017), 111:1-111:16.
+Peter Kutz, Ralf Habel, Yining Karl Li, and Jan Novák. 2017. [Spectral and Decomposition Tracking for Rendering Heterogeneous Volumes](https://doi.org/10.1145/3072959.3073665). _ACM Transactions on Graphics (Proc. of SIGGRAPH)_ 36, 4 (Aug. 2017), Article 111.
 
-Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, and Ren Ng. 2020. [NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis](https://doi.org/10.1007/978-3-030-58452-8_24). In _ECCV 2020: Proceedings of the 16th European Conference on Computer Vision_. 405-421.
+Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, and Ren Ng. 2020. [NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis](https://doi.org/10.1007/978-3-030-58452-8_24). In _Proc. of European Conference on Computer Vision (ECCV 2020)_. 405-421.
 
-Bailey Miller, Iliyan Georgiev, and Wojciech Jarosz. 2019. [A Null-Scattering Path Integral Formulation of Light Transport](https://doi.org/10.1145/3306346.3323025). _ACM Transactions on Graphics_. 38, 4 (@019), 44:1-44:13.
+Bailey Miller, Iliyan Georgiev, and Wojciech Jarosz. 2019. [A Null-Scattering Path Integral Formulation of Light Transport](https://doi.org/10.1145/3306346.3323025). _ACM Transactions on Graphics (Proc. of SIGGRAPH)_ 38, 4 (Jul. 2019), Article 44.
 
-Jan Novák, Iliyan Georgiev, Johannes Hanika, and Wojciech Jarosz. 2018. [Monte Carlo Methods for Volumetric Light Transport Simulation](https://doi.org/10.1111/cgf.13383). _Computer Graphics Forum_. 37, 2 (2018), 551-576.
+Jan Novák, Iliyan Georgiev, Johannes Hanika, and Wojciech Jarosz. 2018. [Monte Carlo Methods for Volumetric Light Transport Simulation](https://doi.org/10.1111/cgf.13383). _Computer Graphics Forum (Proc. of Eurographics)_ 37, 2 (May 2018), 551-576.
 
-Jan Novák, Andrew Selle and Wojciech Jarosz. 2014. [Residual Ratio Tracking for Estimating Attenuation in Participating Media](https://dl.acm.org/citation.cfm?id=2661292). _ACM Transactions on Graphics_. 33, 6 (2014), 179:1-179:11.
+Jan Novák, Andrew Selle and Wojciech Jarosz. 2014. [Residual Ratio Tracking for Estimating Attenuation in Participating Media](https://dl.acm.org/citation.cfm?id=2661292). _ACM Transactions on Graphics (Proc. of SIGGRAPH Asia)_ 33, 6 (Nov. 2014), Article 179.
 
-Towaki Takikawa, Shunsuke Saito, James Tompkin, Vincent Sitzmann, Srinath Sridhar, Or Litany, and Alex Yu. 2023. [Neural Fields for Visual Computing](https://doi.org/10.1145/3587423.3595477). In _ACM SIGGRAPH 2023 Courses_. 10:1-10:227.
+Towaki Takikawa, Shunsuke Saito, James Tompkin, Vincent Sitzmann, Srinath Sridhar, Or Litany, and Alex Yu. 2023. [Neural Fields for Visual Computing](https://doi.org/10.1145/3587423.3595477). In _ACM SIGGRAPH 2023 Courses_. Article 10.
 
-Ryusuke Villemin and Christophe Hery. 2013. [Practical Illumination from Flames](http://jcgt.org/published/0002/02/10/). _Journal of Computer Graphics Techniques_. 2, 2 (2013), 142-155.
+Ryusuke Villemin and Christophe Hery. 2013. [Practical Illumination from Flames](http://jcgt.org/published/0002/02/10/). _Journal of Computer Graphics Techniques_ 2, 2 (Dec. 2013), 142-155.
 
-Ryusuke Villemin, Magnus Wrenninge, and Julian Fong. 2018. [Efficient Unbiased Rendering of Thin Participating Media](http://graphics.pixar.com/library/ThinMediaRendering/). _Journal of Computer Graphics Techniques_. 7, 3 (2018), 50-65.
+Ryusuke Villemin, Magnus Wrenninge, and Julian Fong. 2018. [Efficient Unbiased Rendering of Thin Participating Media](http://graphics.pixar.com/library/ThinMediaRendering/). _Journal of Computer Graphics Techniques_ 7, 3 (Sep. 2018), 50-65.
 
 E. R. Woodcock, T. Murphy, P. J. Hemmings, and T. C. Longworth. 1965. [Techniques used in the GEM code for Monte Carlo neutronics calculations in reactors and other systems of complex geometry](https://www.yiningkarlli.com/projects/specdecomptracking/references/Woodcock1965.pdf). In _Applications of Computing Methods to Reactor Problems_. Argonne National Laboratory.

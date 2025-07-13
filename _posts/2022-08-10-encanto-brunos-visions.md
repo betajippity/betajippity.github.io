@@ -65,13 +65,13 @@ Bruno's visions in Encanto are every bit a case where the artistic vision challe
 
 ## References
 
-Brent Burley, David Adler, Matt Jen-Yuan Chiang, Hank Driskill, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2018. [The Design and Evolution of Disney’s Hyperion Renderer](https://doi.org/10.1145/3182159). _ACM Transactions on Graphics_. 37, 3 (2018), 33:1-33:22.
+Brent Burley, David Adler, Matt Jen-Yuan Chiang, Hank Driskill, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2018. [The Design and Evolution of Disney's Hyperion Renderer](https://dl.acm.org/citation.cfm?id=3182159). _ACM Transactions on Graphics_ 37, 3 (Jul. 2018), Article 33.
 
-Brent Burley and Francisco Rodriguez. 2022. [Fracture-Aware Tessellation of Subdivision Surfaces](https://dl.acm.org/doi/10.1145/3532836.3536262). In _ACM SIGGRAPH 2022 Talks_. 10:1-10:2.
+Brent Burley and Francisco Rodriguez. 2022. [Fracture-Aware Tessellation of Subdivision Surfaces](https://dl.acm.org/doi/10.1145/3532836.3536262). In _ACM SIGGRAPH 2022 Talks_. Article 10.
 
-Patrick Coleman, Darwyn Peachey, Tom Nettleship, Ryusuke Villemin, and Tobin Jones. 2018. [Into the Voyd: Teleportation of Light Transport in _Incredibles 2_](https://dl.acm.org/doi/10.1145/3233085.3233092). In _DigiPro '18: Proceedings of the 8th Annual Digital Production Symposium_. 12:1-12:4.
+Patrick Coleman, Darwyn Peachey, Tom Nettleship, Ryusuke Villemin, and Tobin Jones. 2018. [Into the Voyd: Teleportation of Light Transport in _Incredibles 2_](https://dl.acm.org/doi/10.1145/3233085.3233092). In _Proc. of Digital Production Symposium (DigiPro 2018)_. Article 12.
 
-Berthold K. P. Horn, Hugh M. Hilden, and Shahriar Negahdaripour. 1988. [Close-Form Solution of Absolute Orientation using Orthonormal Matrices](https://doi.org/10.1364/JOSAA.5.001127). _Journal of the Optical Society of America A_. 5, 7 (July 1988), 1127–1135. 
+Berthold K. P. Horn, Hugh M. Hilden, and Shahriar Negahdaripour. 1988. [Close-Form Solution of Absolute Orientation using Orthonormal Matrices](https://doi.org/10.1364/JOSAA.5.001127). _Journal of the Optical Society of America A_ 5, 7 (Jul. 1988), 1127–1135. 
 
-Norman Moses Joseph, Brett Achorn, Sean D. Jenkins, and Hank Driskill. [Visualizing Building Interiors Using Virtual Windows](https://dl.acm.org/doi/abs/10.1145/2669024.2669029). In _ACM SIGGRAPH Asia 2014 Technical Briefs_. 18:1-18:4.
+Norman Moses Joseph, Brett Achorn, Sean D. Jenkins, and Hank Driskill. [Visualizing Building Interiors Using Virtual Windows](https://dl.acm.org/doi/abs/10.1145/2669024.2669029). In _ACM SIGGRAPH Asia 2014 Technical Briefs_. Article 18.
 

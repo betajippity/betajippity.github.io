@@ -546,6 +546,8 @@ Finally, here is a list of all publicly released and announced projects to date 
 
 **Filmmaker Co-op Shorts**: [Weeds](https://www.imdb.com/title/tt7592274/) (2017), [Forevergreen](https://www.forevergreenfilm.com/) (2025)
 
+**Disney Parks Rides<sup id="2019-07-30-hyperion-papers-footnote-3-backlink">[3](#2019-07-30-hyperion-papers-footnote-3)</sup>**: [Zootopia: Hot Pursuit](https://www.shanghaidisneyresort.com/en/attractions/zootopia-hot-pursuit/) (Shanghai Disneyland, 2023), [Peter Pan's Never Land Adventure](https://www.tokyodisneyresort.jp/en/tds/attraction/detail/257/) (Tokyo DisneySea, 2024), [Zootopia: Better Zoogether!](https://disneyparksblog.com/disney-experiences/youre-invited-disney-parks-unveils-future-projects-surprises-at-destination-d23/) (Disney's Animal Kingdom, 2025)
+
 ---
 
 ## Footnotes
@@ -555,3 +557,6 @@ Finally, here is a list of all publicly released and announced projects to date 
 <p></p>
 <sup id="2019-07-30-hyperion-papers-footnote-2">2</sup> VR project running on Unity, with shading and textures baked out of Disney's Hyperion Renderer.
 <a href="#2019-07-30-hyperion-papers-footnote-2-backlink"><span class="material-symbols-outlined">keyboard_return</span></a>
+<p></p>
+<sup id="2019-07-30-hyperion-papers-footnote-3">3</sup> CG animation provided by Disney Animation, incorporated into park rides built by Walt Disney Imagineering.
+<a href="#2019-07-30-hyperion-papers-footnote-3-backlink"><span class="material-symbols-outlined">keyboard_return</span></a>

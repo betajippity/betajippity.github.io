@@ -24,7 +24,7 @@ The paper and related materials can be found at:
 * [Project Page (Author’s Version and Presentation Slides)](https://www.yiningkarlli.com/projects/shadowterminator.html)
 * [Official Print Version (ACM Library)](https://dl.acm.org/doi/10.1145/3306307.3328172)
 
-Matt Chiang presented the paper at SIGGRAPH 2019 in Log Angeles as part of the "Lucy in the Sky with Diamonds - Processing Visuals" Talks session.
+Matt Chiang presented the paper at SIGGRAPH 2019 in Los Angeles as part of the "Lucy in the Sky with Diamonds - Processing Visuals" Talks session.
 A pdf version of the presentation slides, along with presenter notes, are available on my project page for the paper.
 I'd also recommend getting the author's version of the short paper instead of the official version as well, since the author's version includes some typo fixes made after the official version was published.
 

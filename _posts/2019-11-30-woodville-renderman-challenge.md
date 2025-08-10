@@ -128,7 +128,7 @@ One of the unfortunate things about how I chose to UV-unwrap the tree trunks is 
 These artifacts arise from displacement values not interpolating smoothly across UV seams when texture filtering is in play; this problem can sometimes be avoided by very carefully hiding UV seams, but sometimes there is no way.
 The problem in my case is somewhat reduced by expanding displacement values beyond the boundaries of each UV shell in the displacement textures (most applications like Substance Painter can do this natively), but again, this doesn't completely solve the problem, since expanding values beyond boundaries can only go so far until you run into another nearby UV shell and since texture filtering widths can be variable.
 This problem is one of the major reasons why we use Ptex so heavily at Disney Animation; Ptex's robust cross-face filtering functionality sidesteps this problem entirely.
-I really wish Substance Painter could output Ptex!
+I really wish Substance Painter could output !
 
 For dialing in the colors of the base wood shaders, I created versions of the wood shader base color textures that looked like newer wood and older sun-bleached wood, and then I used a PxrBlend node in each wood shader to blend between the newer and older looking wood, along with procedural wear to make sure that the blend wasn't totally uniform.
 Across all of the various wood shaders in the scene, I tied all of the blend values to a single PxrToFloat node, so that I could control how aged all wood across the entire scene looks with a single value.

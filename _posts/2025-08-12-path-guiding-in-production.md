@@ -21,7 +21,8 @@ Here is the abstract:
 The paper and related materials can be found at:
 
 * [Project Page (Author’s Version and Demo Video)](https://www.yiningkarlli.com/projects/pathguidingcourse2025.html)
-* [Official Print Version (ACM Library) [To Appear]]()
+* [Official Course Website](https://sherholz.github.io/siggraph2025-path-guiding-course/)
+* [Official Print Version (ACM Library)](https://doi.org/10.1145/3721241.3733994)
 
 All of the technical details are in the paper and presentation (and with 80 pages of course notes, of which 36 pages is the Disney Animation / Disney Research\|Studios chapter, there are technical details for days!), so this blog post is just some personal thoughts on this project.
 

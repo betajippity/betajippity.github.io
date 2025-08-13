@@ -5,8 +5,8 @@ tags: [Hyperion, SIGGRAPH]
 author: Yining Karl Li
 ---
 
-This year at SIGGRAPH 2025, Sebastian Herholz from Intel organized a followup to 2019's Path Guiding in Production Course.
-This year's edition of the course includes presentations by Sebastian on Intel's Open Path Guiding library and on general advice for integrating path guiding techniques into a unidirectional path tracing renderer, a presentation by Martin Šik on how Chaos's Corona Renderer uses advanced photon guiding techniques in their caustics solver, and a presentation by Lea Reichardt and Marco Manzi on the work Disney Animation and Disney Research\|Studios have put into Hyperion's second-generation path guiding system for surfaces and volumes.
+This year at SIGGRAPH 2025, Sebastian Herholz from Intel organized a followup to 2019's Path Guiding in Production Course [[Vorba et al. 2019]](https://cgg.mff.cuni.cz/~jaroslav/papers/2019-path-guiding-course/index.htm).
+[This year's edition of the course](https://sherholz.github.io/siggraph2025-path-guiding-course/) includes presentations by Sebastian on Intel's [Open Path Guiding library](https://github.com/RenderKit/openpgl) and on general advice for integrating path guiding techniques into a unidirectional path tracing renderer, a presentation by Martin Šik on how Chaos's Corona Renderer uses advanced photon guiding techniques in their caustics solver, and a presentation by Lea Reichardt and Marco Manzi on the work Disney Animation and Disney Research\|Studios have put into Hyperion's second-generation path guiding system for surfaces and volumes.
 I strongly encourage checking out the whole course, but wanted to highlight Lea and Marco's presentation in particular; they put a ton of care and effort into what I think is a really cool and unique look into what it takes to bridge cutting edge research into a production rendering environment.
 The course notes were written by the four presenters above, in addition to Brian Green and myself from the Hyperion development team.
 
@@ -83,5 +83,7 @@ Thomas Müller. 2019. [Practical Path Guiding in Production](https://cgg.mff.cun
 Alexander Rath, Marco Manzi, Farnood Salehi, Sebastian Weiss, Tiziano Portenier, Saeed Hadadan, and Marios Papas. 2025. [Neural Resampling with Optimized Candidate Allocation](https://doi.org/10.2312/sr.20251181). In _Proc. of Eurographics Symposium on Rendering (EGSR 2025)_. Article 20251181.
 
 Lukas Ruppert, Sebastian Herholz, and Hendrik P. A. Lensch. 2020. [Robust Fitting of Parallax-Aware Mixtures for Path Guiding](https://doi.org/10.1145/3386569.3392421). _ACM Transactions on Graphics (Proc. of SIGGRAPH)_ 39, 4 (Aug 2020), Article 147.
+
+Jiří Vorba, Johannes Hanika, Sebastian Herholz, Thomas Müller, Jaroslav Křivánek, and Alexander Keller. 2019. [Path Guiding in Production](https://cgg.mff.cuni.cz/~jaroslav/papers/2019-path-guiding-course/index.htm). In _ACM SIGGRAPH 2019 Courses_. Article 18.
 
 Kehan Xu, Sebastian Herholz, Marco Manzi, Marios Papas, and Markus Gross. 2024. [Volume Scattering Probability Guiding](https://doi.org/10.1145/3687982). _ACM Transactions on Graphics (Proc. of SIGGRAPH Asia)_ 43, 6 (Nov. 2024), Article 184.

@@ -3,6 +3,7 @@ layout: post
 title: Rendering Minecraft in Renderman/RIS
 tags: [Art]
 author: Yining Karl Li
+notes: Updated October 02, 2016 with addenda
 ---
 
 The vast majority of my computer graphics time is spent developing renderers (Disney's Hyperion renderer as a professional, Takua Renderer as a hobbyist). However, I think having experience using renderers as an artist is an important part of knowing what to focus on as a renderer developer. I also think that knowing how a variety of different renderers work and how they are used is important; a lot of artists are used to using several different renderers, and each renderer has its own vocabulary and tried and true workflows and whatnot. Finally, there are a lot of really smart people working on all of the major production renderers out there, and seeing the cool things everyone is doing is fun and interesting! Because of all of these reasons, I like putting some time aside every once in a while to tinker with other renderers. I usually don't write about my art projects that much anymore, but this project was particularly fun and produced some nice looking images, so I thought I'd write it up. As usual, before we dive into the post, here is the final image I made, rendered using Pixar's Photorealistic Renderman 20 in RIS mode:

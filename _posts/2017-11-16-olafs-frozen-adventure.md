@@ -3,6 +3,7 @@ layout: post
 title: Olaf's Frozen Adventure
 tags: [Films]
 author: Yining Karl Li
+notes: Updated August 12, 2018 with SIGGRAPH 2018 content
 ---
 
 After an amazing 2016, [Walt Disney Animation Studios](http://www.disneyanimation.com/) is having a bit of a break year this year.

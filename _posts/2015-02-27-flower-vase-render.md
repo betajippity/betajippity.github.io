@@ -3,6 +3,7 @@ layout: post
 title: Flower Vase Renders
 tags: [Coding, Renderer]
 author: Yining Karl Li
+notes: Updated March 03, 2015 with addenda
 ---
 
 [![Rendered in Takua a0.5 using BDPT. Nearly a quarter of a billion triangles.]({{site.url}}/content/images/2015/Feb/preview/flowers.cam2.jpg)]({{site.url}}/content/images/2015/Feb/flowers.cam2.png)

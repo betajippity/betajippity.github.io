@@ -3,6 +3,7 @@ layout: post
 title: Raya and the Last Dragon
 tags: [Films]
 author: Yining Karl Li
+notes: Updated August 09, 2021 with SIGGRAPH 2021 content
 ---
 
 After a break in 2020, [Walt Disney Animation Studios](http://www.disneyanimation.com/) has two films lined up for release in 2021!

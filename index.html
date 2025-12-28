@@ -16,6 +16,11 @@ page-template: home-template
                     {% for tag in post.tags %} 
                         {{tag}}{% unless forloop.last %},{% endunless %}
                     {% endfor %}  
+                {% endif %}
+                {% if post.notes %}
+                    {% for note in post.notes %}
+                    <br> {{note}}{% unless forloop.last %},{% endunless %}
+                    {% endfor %}
                 {% endif %}</span>
             </header>
             <section class="post-content">

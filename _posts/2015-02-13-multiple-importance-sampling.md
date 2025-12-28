@@ -3,6 +3,7 @@ layout: post
 title: Multiple Importance Sampling
 tags: [Coding, Renderer]
 author: Yining Karl Li
+notes: Updated January 12, 2018 with addenda
 ---
 
 A key tool introduced by Veach as part of his bidirectional pathtracing formulation is multiple importance sampling (MIS). As discussed in my [previous post](), the entire purpose of rendering from a mathematical perspective is to solve the light transport equation, which in the case of all pathtracing type renderers means solving the path integral formulation of light transport. Since the path integral does not have a closed form solution in all but the simplest of scenes, we have to estimate the full integral using various sampling techniques in path space, hence unidirectional pathtracing and bidirectional pathtracing and metropolis based techniques, etc. As we saw with the light source in glass case and with SDS paths, often a single path sampling technique is not sufficient for capturing a good estimate of the path integral. Instead, a good estimate often requires a combination of a number of different path sampling techniques; MIS is a critical mechanism for combining multiple sampling techniques in a manner that reduces total variance. Without MIS, directly combining sampling techniques through averaging can often have the opposite effect and *increase* total variance.

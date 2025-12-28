@@ -3,6 +3,7 @@ layout: post
 title: Comparing SIMD on x86-64 and arm64
 tags: [Coding, Renderer]
 author: Yining Karl Li
+notes: Updated September 07, 2022 with addenda
 ---
 
 <p></p>

@@ -3,6 +3,7 @@ layout: post
 title: Hyperion Publications
 tags: [Hyperion]
 author: Yining Karl Li
+notes: Last updated August 15, 2025 with latest papers
 ---
 Every year at SIGGRAPH (and sometimes at other points in the year), members of the Hyperion team inevitably get asked if there is any publicly available information about [Disney's Hyperion Renderer](https://www.disneyanimation.com/technology/hyperion/).
 The answer is: yes, there is actually a lot of publicly available information!

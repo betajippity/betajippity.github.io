@@ -316,6 +316,35 @@ $(document).ready(function() {
 
     sidebarToc.append(mainList);
 
+    // Add pagination links at the bottom
+    var paginationNav = $('.pagination');
+    if (paginationNav.length > 0) {
+        var paginationDiv = $('<div class="sidebar-pagination"></div>');
+
+        var newerLink = paginationNav.find('.newer-posts');
+        var olderLink = paginationNav.find('.older-posts');
+
+        if (newerLink.length > 0) {
+            var newerText = newerLink.text().replace('Posts', '').trim();
+            var newerClone = $('<a class="sidebar-pagination-link"></a>')
+                .attr('href', newerLink.attr('href'))
+                .text(newerText);
+            paginationDiv.append(newerClone);
+        }
+
+        if (olderLink.length > 0) {
+            var olderText = olderLink.text().replace('Posts', '').trim();
+            var olderClone = $('<a class="sidebar-pagination-link"></a>')
+                .attr('href', olderLink.attr('href'))
+                .text(olderText);
+            paginationDiv.append(olderClone);
+        }
+
+        if (paginationDiv.children().length > 0) {
+            sidebarToc.append(paginationDiv);
+        }
+    }
+
     // Scrollspy: Track current post and current section
     var currentPost = null;
     var currentSection = null;

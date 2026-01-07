@@ -847,6 +847,91 @@ main.content {
     margin-left: auto;
 }
 
+/* Sidebar Table of Contents - only on wide screens */
+.sidebar-toc {
+    display: none; /* Hidden by default and on narrow screens */
+}
+
+@media only screen and (min-width: 1400px) {
+    /* Hide inline TOC when sidebar is visible */
+    .has-sidebar-toc .tableofcontents {
+        display: none;
+    }
+
+    /* Hide the "Table of Contents" heading that precedes the inline TOC */
+    .has-sidebar-toc h2:has(+ .tableofcontents) {
+        display: none;
+    }
+
+    /* Show sidebar only when manual TOC exists */
+    .has-sidebar-toc .sidebar-toc {
+        display: block;
+        position: fixed;
+        right: calc((100vw - 900px) / 2 - 255px); /* Position to right of content */
+        top: 200px; /* Aligned with first section heading */
+        width: 200px;
+        max-width: 200px;
+        max-height: calc(100vh - 220px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 15px 15px 5px 15px;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .sidebar-toc h3 {
+        margin-top: 0;
+        margin-bottom: 1em;
+        font-size: 1.15rem;
+        font-weight: 400;
+        font-family: 'futura-pt', sans-serif;
+        color: #888;
+    }
+
+    .sidebar-toc ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar-toc li {
+        margin: 8px 0;
+    }
+
+    .sidebar-toc a {
+        color: #888;
+        text-decoration: none;
+        display: block;
+        transition: color 0.2s ease;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding-left: 1.5em;
+        text-indent: -1.2em;
+    }
+
+    .sidebar-toc a:hover {
+        color: #000;
+    }
+
+    .sidebar-toc a.active {
+        color: red;
+        font-weight: 700;
+    }
+
+    /* Indent nested sections */
+    .sidebar-toc ul ul {
+        padding-left: 10px;
+        margin-top: 5px;
+    }
+
+    /* Visual separator */
+    .sidebar-toc {
+        border-left: 3px solid rgba(128, 128, 128, 0.2);
+        padding-left: 17px;
+    }
+}
+
 /* ==========================================================================
    1. Single Post - When you click on an individual post
    ========================================================================== */

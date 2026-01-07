@@ -79,6 +79,11 @@ for (var pl = pres.length, p = 0; p < pl; p++) {
 // Sidebar Table of Contents Generator and Scrollspy
 $(document).ready(function() {
 
+    // Only run on single-post pages
+    if ($('body').hasClass('home-template')) {
+        return; // Not a single post page
+    }
+
     // Check if post has a manual TOC
     var manualToc = $('.tableofcontents');
     if (manualToc.length === 0) {

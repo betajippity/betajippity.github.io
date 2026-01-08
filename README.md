@@ -1,5 +1,4 @@
 betajippity.github.io
 =====================
 
-Soon to be the new home of Code &amp; Visuals
-
+Karl's blog: [Code &amp; Visuals](https://blog.yiningkarlli.com).

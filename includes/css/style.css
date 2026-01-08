@@ -880,6 +880,48 @@ main.content {
         line-height: 1.6;
     }
 
+    /* Scroll indicator - gradient fade at top */
+    .has-sidebar-toc .sidebar-toc::before {
+        content: '';
+        position: sticky;
+        top: -15px;
+        left: -15px;
+        right: -15px;
+        height: 70px;
+        background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%);
+        pointer-events: none;
+        display: block;
+        margin-bottom: -70px;
+        z-index: 10;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+
+    .has-sidebar-toc .sidebar-toc.show-top-fade::before {
+        opacity: 1;
+    }
+
+    /* Scroll indicator - gradient fade at bottom */
+    .has-sidebar-toc .sidebar-toc::after {
+        content: '';
+        position: sticky;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        height: 50px;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+        pointer-events: none;
+        display: block;
+        margin-top: -50px;
+        z-index: 10;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+
+    .has-sidebar-toc .sidebar-toc.show-bottom-fade::after {
+        opacity: 1;
+    }
+
     .sidebar-toc h3 {
         margin-top: 0;
         margin-bottom: 1em;

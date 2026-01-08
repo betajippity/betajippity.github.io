@@ -129,6 +129,54 @@ $(document).ready(function() {
 
     sidebarToc.append(tocList);
 
+    // Function to update fade visibility based on scroll position
+    function updateFadeVisibility() {
+        var scrollTop = sidebarToc.scrollTop();
+        var scrollHeight = sidebarToc[0].scrollHeight;
+        var clientHeight = sidebarToc[0].clientHeight;
+
+        // Check if content is scrollable
+        if (scrollHeight <= clientHeight) {
+            // Content fits, no scrolling needed - hide both fades
+            sidebarToc.removeClass('show-top-fade show-bottom-fade');
+        } else {
+            // Show/hide top fade based on scroll position
+            if (scrollTop > 5) {
+                sidebarToc.addClass('show-top-fade');
+            } else {
+                sidebarToc.removeClass('show-top-fade');
+            }
+
+            // Show/hide bottom fade based on scroll position
+            if (scrollTop + clientHeight < scrollHeight - 5) {
+                sidebarToc.addClass('show-bottom-fade');
+            } else {
+                sidebarToc.removeClass('show-bottom-fade');
+            }
+        }
+    }
+
+    // Listen for scroll events on the sidebar
+    sidebarToc.on('scroll', updateFadeVisibility);
+
+    // Listen for clicks on the sidebar (for when TOC size changes)
+    sidebarToc.on('click', function() {
+        // Check multiple times to catch animation completion
+        setTimeout(updateFadeVisibility, 50);
+        setTimeout(updateFadeVisibility, 250);
+        setTimeout(updateFadeVisibility, 500);
+    });
+
+    // Initial checks with multiple delays to ensure DOM is fully rendered
+    setTimeout(updateFadeVisibility, 100);
+    setTimeout(updateFadeVisibility, 300);
+    setTimeout(updateFadeVisibility, 500);
+
+    // Also check after window resize
+    $(window).on('resize', function() {
+        updateFadeVisibility();
+    });
+
     // Scrollspy implementation
     var sections = [];
     var sidebarLinks = sidebarToc.find('a');
@@ -345,6 +393,54 @@ $(document).ready(function() {
         }
     }
 
+    // Function to update fade visibility based on scroll position
+    function updateFadeVisibility() {
+        var scrollTop = sidebarToc.scrollTop();
+        var scrollHeight = sidebarToc[0].scrollHeight;
+        var clientHeight = sidebarToc[0].clientHeight;
+
+        // Check if content is scrollable
+        if (scrollHeight <= clientHeight) {
+            // Content fits, no scrolling needed - hide both fades
+            sidebarToc.removeClass('show-top-fade show-bottom-fade');
+        } else {
+            // Show/hide top fade based on scroll position
+            if (scrollTop > 5) {
+                sidebarToc.addClass('show-top-fade');
+            } else {
+                sidebarToc.removeClass('show-top-fade');
+            }
+
+            // Show/hide bottom fade based on scroll position
+            if (scrollTop + clientHeight < scrollHeight - 5) {
+                sidebarToc.addClass('show-bottom-fade');
+            } else {
+                sidebarToc.removeClass('show-bottom-fade');
+            }
+        }
+    }
+
+    // Listen for scroll events on the sidebar
+    sidebarToc.on('scroll', updateFadeVisibility);
+
+    // Listen for clicks on the sidebar (for when TOC size changes)
+    sidebarToc.on('click', function() {
+        // Check multiple times to catch animation completion
+        setTimeout(updateFadeVisibility, 50);
+        setTimeout(updateFadeVisibility, 250);
+        setTimeout(updateFadeVisibility, 500);
+    });
+
+    // Initial checks with multiple delays to ensure DOM is fully rendered
+    setTimeout(updateFadeVisibility, 100);
+    setTimeout(updateFadeVisibility, 300);
+    setTimeout(updateFadeVisibility, 500);
+
+    // Also check after window resize
+    $(window).on('resize', function() {
+        updateFadeVisibility();
+    });
+
     // Scrollspy: Track current post and current section
     var currentPost = null;
     var currentSection = null;
@@ -376,7 +472,9 @@ $(document).ready(function() {
                 if (currentPost.tocList) {
                     // Clear any active section highlights before collapsing
                     currentPost.tocList.find('a').removeClass('active');
-                    currentPost.tocList.slideUp(200);
+                    currentPost.tocList.slideUp(200, function() {
+                        updateFadeVisibility(); // Update fades when collapse completes
+                    });
                 }
             }
 
@@ -390,7 +488,9 @@ $(document).ready(function() {
             if (newCurrentPost) {
                 newCurrentPost.sidebarItem.find('.post-title-link').addClass('active-post');
                 if (newCurrentPost.tocList) {
-                    newCurrentPost.tocList.slideDown(200);
+                    newCurrentPost.tocList.slideDown(200, function() {
+                        updateFadeVisibility(); // Update fades when expand completes
+                    });
                 }
             }
 

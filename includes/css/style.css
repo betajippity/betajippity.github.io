@@ -850,6 +850,7 @@ main.content {
 /* Sidebar Table of Contents - only on wide screens */
 .sidebar-toc {
     display: none; /* Hidden by default and on narrow screens */
+    font-family: 'futura-pt', sans-serif;
 }
 
 @media only screen and (min-width: 1400px) {
@@ -927,7 +928,6 @@ main.content {
         margin-bottom: 1em;
         font-size: 1.15rem;
         font-weight: 400;
-        font-family: 'futura-pt', sans-serif;
         color: #888;
     }
 

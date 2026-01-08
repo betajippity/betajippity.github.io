@@ -868,10 +868,11 @@ main.content {
         display: block;
         position: fixed;
         right: calc((100vw - 900px) / 2 - 255px); /* Position to right of content */
-        top: 200px; /* Aligned with first section heading */
+        top: 50%; /* Vertically center */
+        transform: translateY(-50%); /* Offset by half height to center */
         width: 200px;
         max-width: 200px;
-        max-height: calc(100vh - 220px);
+        max-height: calc(100vh - 260px); /* Viewport minus 2x banner height (130px * 2) */
         overflow-y: auto;
         overflow-x: hidden;
         padding: 15px 15px 5px 15px;

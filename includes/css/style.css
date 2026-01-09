@@ -212,7 +212,7 @@ h4 a, h5 a, h6 a {
 
 
 p, ul, ol {
-    margin: 1.6em 0;
+    margin: 1.2em 0;
 }
 
 ol ol, ul ul,
@@ -709,7 +709,7 @@ main.content {
     width:80%;
     max-width: 900px;
     margin: 4rem auto;
-    padding-bottom: 2rem;
+    padding-bottom: 2.4rem;
     border-bottom: #EEEEEE 1px solid;
     word-break: break-word;
     hyphens: auto;
@@ -1089,6 +1089,10 @@ main.content {
 /* Insert some mad padding up in the header for better spacing */
 .post-template .post-header {
     padding: 60px 0;
+}
+
+.post-content {
+    padding-top: 0.4em;
 }
 
 /* Keep large images within the bounds of the post-width */

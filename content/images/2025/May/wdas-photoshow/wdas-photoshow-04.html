@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://use.typekit.net/yap3ink.css">
 </head>
 
-<link rel="stylesheet" href="includes/hdr-switch.css">
+<link rel="stylesheet" href="includes/hdr-switch.css?v=2.0.0">
 <script type="text/javascript" src="/includes/js/jquery.min.js"></script>
-<script type="text/javascript" src="includes/hdr-switch.js"></script>
+<script type="text/javascript" src="includes/hdr-switch.js?v=2.0.0"></script>
 
 <body>
     <div class="sdr" style="display: block-">
@@ -24,19 +24,19 @@
 
     <div class="figcaption">
         <span>
-            <div class='hdr-switch'>
-                <a href="/2025/05/wdas-photoshow.html#photo4"><span
-                        class="material-symbols-outlined">keyboard_return</span></a>
-                Burbank, California | Nikon Z8 | Zeiss Kipronar 105mm ƒ/1.9 | Enable HDR: <label class="switch">
+            <a href="/2025/05/wdas-photoshow.html#photo4"><span
+                    class="material-symbols-outlined">keyboard_return</span></a>
+            Burbank, California | Nikon Z8 | Zeiss Kipronar 105mm ƒ/1.9 |
+                <div class='hdr-switch' style="display: none">
+                    Enable HDR: <label class="switch">
                     <input type="checkbox" class="hdr_toggle" name="hdr_toggle" value="1" onchange="toggleHDR()">
                     <span class="slider round"></span>
-                </label>
-            </div>
+                    </label>
+                </div>
+                <div class="hdr-disabled">
+                    HDR is not supported on this browser/display.
+                </div>
         </span>
-    
-        <div class="hdr-unsupported-warning" style="display: none">
-                Warning: Your device/display/browser are not reporting HDR support for this website. Enabling HDR below may produce unexpected results; sticking with SDR (HDR not enabled) is recommended for your current device/display/browser.
-        </div>
     </div>
 </body>
 

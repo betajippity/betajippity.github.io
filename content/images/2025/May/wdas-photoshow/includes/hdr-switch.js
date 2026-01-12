@@ -10,9 +10,13 @@ function toggleHDR() {
 
 function checkHDR() {
     if (window.matchMedia("(dynamic-range: high)").matches) {
-        $(".hdr-unsupported-warning").hide();
+        $(".hdr-switch").show();
+        $(".hdr-disabled").hide();
     } else {
-        $(".hdr-unsupported-warning").show();
+        $(".hdr-switch").hide();
+        $(".hdr-disabled").show();
+        $(".hdr").hide();
+        $(".sdr").show();
     }
 }
 

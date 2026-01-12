@@ -73,9 +73,14 @@ input:checked+.slider:before {
 
 .hdr-switch {
     color: #555555;
-    padding-left: 15px;
-    padding-right: 15px;
     text-align: center;
-    display: block;
+    display: inline;
+    margin: 5px auto;
+}
+
+.hdr-disabled {
+    text-align: center;
+    color: #999;
+    display: inline;
     margin: 5px auto;
 }

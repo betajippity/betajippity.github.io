@@ -71,13 +71,10 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.hdr-unsupported-warning {
-    color: #555555;
-    padding-left: 15px;
-    padding-right: 15px;
+.hdr-disabled {
     text-align: center;
+    color: #999;
     display: block;
-    width: 65%;
     margin: 5px auto;
 }
 
@@ -109,9 +106,13 @@ input:checked + .slider:before {
     function checkHDR()
     {
         if (window.matchMedia("(dynamic-range: high)").matches) {
-            $(".hdr-unsupported-warning").hide();
+            $(".hdr-switch").show();
+            $(".hdr-disabled").hide();
         } else {
-            $(".hdr-unsupported-warning").show();
+            $(".hdr-switch").hide();
+            $(".hdr-disabled").show();
+            $(".hdr").hide();
+            $(".sdr").show();
         }
     }
 
@@ -145,8 +146,21 @@ There isn't really a coherent theme; these are just photos I've taken that I lik
 Some are travel photos, some are of my family, and others are just interesting moments that I noticed.
 I won't go into my photography and editing process and whatnot here; I'll save that for a future post.
 
-I color grade my photos for both SDR and HDR; if you are using a device/browser that supports HDR<sup id="2025-05-11-photoshow-footnote-1-backlink">[1](#2025-05-11-photoshow-footnote-1)</sup> , give the "Enable HDR" toggle below a try!
-If your device/browser doesn't support HDR for this site, a warning message will be displayed below; if there's no warning message, then that means your device/browser supports HDR for this site and the HDR toggle will work correctly for you.
+I color grade my photos for both SDR and HDR; if you are using a device/browser that supports HDR<sup id="2025-05-11-photoshow-footnote-1-backlink">[1](#2025-05-11-photoshow-footnote-1)</sup> , a toggle will appear below giving the ability to enable HDR on this page.
+Give it a try!
+
+<div class="hdr-disabled">
+    HDR is not supported on this browser/display.
+</div>
+
+<p>
+<div class='hdr-switch' style="display: none">
+    Enable HDR: <label class="switch">
+    <input type="checkbox" class="hdr_toggle" name="hdr_toggle" value="1" onchange="toggleHDR()">
+    <span class="slider round"></span> 
+    </label>
+</div>
+</p>
 
 I wrote a small artist's statement for the show:
 
@@ -157,21 +171,6 @@ I wrote a small artist's statement for the show:
 > Thanks to Harmony for her patience every time I fumbled a lens in my backpack.
 
 Here are my photos from the show, presented in no particular order:
-
-<div class="hdr-unsupported-warning" style="display: none">
-    <p>
-    Warning: Your device/display/browser are not reporting HDR support for this website. Enabling HDR below may produce unexpected results; sticking with SDR (HDR not enabled) is recommended for your current device/display/browser.
-    </p>
-</div>
-
-<p>
-<div class='hdr-switch'>
-    Enable HDR: <label class="switch">
-    <input type="checkbox" class="hdr_toggle" name="hdr_toggle" value="1" onchange="toggleHDR()">
-    <span class="slider round"></span> 
-    </label>
-</div>
-</p>
 
 <p id="photo2">
 <div class="sdr">

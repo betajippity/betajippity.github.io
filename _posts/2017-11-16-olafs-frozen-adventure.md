@@ -6,6 +6,29 @@ author: Yining Karl Li
 notes: Updated August 12, 2018 with SIGGRAPH 2018 content
 ---
 
+<div style="display: none">
+<p></p>
+## Table of Contents
+
+<div class="tableofcontents">
+    <div class="tableofcontents-row">
+        <div class="tableofcontents-column3">
+            <div class="tableofcontents-content">
+                1. <a href="/2017/11/olafs-frozen-adventure.html#2017-11-16-work">Making Olaf's Frozen Adventure</a><br>
+                2. <a href="/2017/11/olafs-frozen-adventure.html#2017-11-16-frames">Frames from the Film</a><br>
+                3. <a href="/2017/11/olafs-frozen-adventure.html#2017-11-16-references">References</a><br>
+            </div>
+        </div>
+        <div class="tableofcontents-column3">
+        </div>
+        <div class="tableofcontents-column3">
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="2017-11-16-work"></div>
+
 After an amazing 2016, [Walt Disney Animation Studios](http://www.disneyanimation.com/) is having a bit of a break year this year.
 Disney Animation doesn't have a feature film this year; instead, we made a half-hour featurette called [Olaf's Frozen Adventure](https://www.disneyanimation.com/projects/olafsfrozenadventure), which will be released in front of Pixar's [Coco](https://www.pixar.com/feature-films/coco#coco-main) during Thanksgiving.
 I think this is the first time a Disney Animation short/featurette has accompanied a Pixar film.
@@ -55,6 +78,8 @@ Artists on Olaf's Frozen Adventure ran into some difficulties with rendering loo
 We realized that this problem is essentially identical to the problem of rendering white puffy clouds, which also have an appearance dominated by energy from high-order scattering.
 Since null-collision volume integration is specifically very efficient at handling high-order scattering, we gave the artists an early prototype version of Hyperion's new volume rendering system to experiment with rendering loose fluffy snow as a volume.
 The initial results looked great; I'm not sure if this approach wound up being used in the final film, but this experiment gave both us and the artists a lot of confidence in the new volume rendering system and provided valuable feedback.
+
+<div id="2017-11-16-frames"></div>
 
 As usual with Disney Animation projects I get to work on, here are some stills in no particular order, from the film.
 Even though Olaf's Frozen Adventure was originally meant for TV, the whole studio still put the same level of effort into it that goes into full theatrical features, and I think it shows!
@@ -117,6 +142,7 @@ Here is a credits frame with my name! I wasn't actually expecting to get a credi
 
 All images in this post are courtesy of and the property of Walt Disney Animation Studios.
 
+<div id="2017-11-16-references"></div>
 ## References
 
 Carsten Benthin, Sven Woop, Ingo Wald, and Attila T. Áfra. 2017. [Improved Two-Level BVHs using Partial Re-Braiding](https://doi.org/10.1145/3105762.3105776). In _Proc. of High Performance Graphics (HPG 2017)_. Article 7.

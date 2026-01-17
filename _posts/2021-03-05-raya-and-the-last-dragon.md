@@ -6,6 +6,29 @@ author: Yining Karl Li
 notes: Updated August 09, 2021 with SIGGRAPH 2021 content
 ---
 
+<div style="display: none">
+<p></p>
+## Table of Contents
+
+<div class="tableofcontents">
+    <div class="tableofcontents-row">
+        <div class="tableofcontents-column3">
+            <div class="tableofcontents-content">
+                1. <a href="/2021/03/raya-and-the-last-dragon.html#2021-03-05-work">Making Raya and the Last Dragon</a><br>
+                2. <a href="/2021/03/raya-and-the-last-dragon.html#2021-03-05-frames">Frames from the Film</a><br>
+                3. <a href="/2021/03/raya-and-the-last-dragon.html#2021-03-05-references">References</a><br>
+            </div>
+        </div>
+        <div class="tableofcontents-column3">
+        </div>
+        <div class="tableofcontents-column3">
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="2021-03-05-work"></div>
+
 After a break in 2020, [Walt Disney Animation Studios](http://www.disneyanimation.com/) has two films lined up for release in 2021!
 The first of these is [Raya and the Last Dragon](https://www.disneyanimation.com/films/), which is simultaneously out in theaters and available on [Disney+ Premiere Access](http://www.disneyplus.com/) on the day this post is being released.
 I've been working on Raya and the Last Dragon in some form or another since early 2018, and Raya and the Last Dragon is the first original film I've worked on at Disney Animation that I was able to witness from the very earliest idea all the way through to release; every other project I've worked on up until now was either based on a previous idea or began before I started at the studio.
@@ -57,12 +80,14 @@ Hyperion only renders amazing films because the artists using Hyperion are some 
 At SIGGRAPH 2021, most of the talks about Raya and the Last Dragon are actually from our artists, not our engineers!
 Our artists had to come up with new crowd simulation techniques for handling the huge crowds seen in the movie [\[Nghiem 2021](https://doi.org/10.1145/3450623.3464650), [Luceño Ros et al. 2021\]](https://doi.org/10.1145/3450623.3464648), new cloth simulation techniques for all of the beautiful, super complex outfits worn by all of the characters [\[Kaur et al. 2021](https://doi.org/10.1145/3450623.3464660), [Kaur & Coetzee 2021\]](https://doi.org/10.1145/3450623.3464659), and even new effects techniques to simulate cooking delicious Southeast Asia-inspired food [[Wang et al. 2021]](https://doi.org/10.1145/3450623.3464651).
 
+<div id="2021-03-05-frames"></div>
+
 Finally, here are a bunch of stills from the movie, 100% rendered using Hyperion.
 Normally I post somewhere between 40 to 70 stills per film, but I had so many favorite images from Raya and the Last Dragon that for this post, there are considerably more.
 You may notice what looks like noise in the stills below- it's not noise!
 The actual renders are super clean thanks to Wayne's volumes work and David Adler's continued work on our Disney-Research-tech-based deep learning denoising system [\[Dahlberg et al. 2019](https://dl.acm.org/citation.cfm?id=3328150), [Vogels et al. 2018\]](https://doi.org/10.1145/3197517.3201388), but the film's cinematography style called for adding film grain back in after rendering.
 
-I've pulled these from marketing materials, trailers, and Disney+; as usual, I'll try to update this post with higher quality stills once the film is out on Bluray.
+These frames are pulled from the Bluray.
 Of course, the stills here are just a few of my favorites, and represent just a tiny fraction of the incredible imagery in this film.
 If you like what you see here, I'd strongly encourage seeing the film on Disney+ or on Blu-Ray; whichever way, I suggest watching on the biggest screen you have available to you!
 
@@ -326,6 +351,7 @@ Also, one more thing: in theaters (and also on Disney+ starting in the summer), 
 Us Again is one of my favorite shorts Disney Animation has ever made; it's a joyous, visually stunning celebration of life and dance and music.
 I'll probably dedicate a separate post to Us Again once it's out on Disney+.
 
+<div id="2021-03-05-references"></div>
 ## References
 
 Brent Burley, David Adler, Matt Jen-Yuan Chiang, Hank Driskill, Ralf Habel, Patrick Kelly, Peter Kutz, Yining Karl Li, and Daniel Teece. 2018. [The Design and Evolution of Disney's Hyperion Renderer](https://dl.acm.org/citation.cfm?id=3182159). _ACM Transactions on Graphics_ 37, 3 (Jul. 2018), Article 33.

@@ -5,6 +5,31 @@ tags: [Hyperion]
 author: Yining Karl Li
 notes: Last updated August 15, 2025 with latest papers
 ---
+
+<p></p>
+## Table of Contents
+
+<div class="tableofcontents">
+    <div class="tableofcontents-row">
+        <div class="tableofcontents-column2">
+            <div class="tableofcontents-content">
+                1. <a href="/2019/07/hyperion-papers.html#2019-07-30-introduction">Introduction</a><br>
+                2. <a href="/2019/07/hyperion-papers.html#2019-07-30-publications">Publications</a><br>
+                3. <a href="/2019/07/hyperion-papers.html#2019-07-30-resources">Additional Resources</a><br>
+            </div>
+        </div>
+        <div class="tableofcontents-column2">
+            <div class="tableofcontents-content">
+                4. <a href="/2019/07/hyperion-papers.html#2019-07-30-contributors">Contributors</a><br>
+                5. <a href="/2019/07/hyperion-papers.html#2019-07-30-made-with-hyperion">Made with Hyperion</a><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="2019-07-30-introduction"></div>
+## Introduction
+
 Every year at SIGGRAPH (and sometimes at other points in the year), members of the Hyperion team inevitably get asked if there is any publicly available information about [Disney's Hyperion Renderer](https://www.disneyanimation.com/technology/hyperion/).
 The answer is: yes, there is actually a lot of publicly available information!
 
@@ -24,6 +49,9 @@ For each paper, I'll link to a preprint version, link to the official publisher'
 Please see publisher's version or project page links for any additional supplemental materials that go with each paper.
 I'll also give the citation information, give a brief description, list the teams involved, and note how the paper is relevant to Hyperion.
 This post is meant to be a living document; I'll come back and update it down the line with future publications. Publications are listed in chronological order.
+
+<div id="2019-07-30-publications"></div>
+## Publications
 
 1. **Ptex: Per-Face Texture Mapping for Production Rendering**
 
@@ -528,6 +556,9 @@ This post is meant to be a living document; I'll come back and update it down th
 
     Joint project from DisneyResearch\|Studios and Disney Animation. This paper describes how we've implemented Hyperion's second-generation path guiding system, and what we've learned from bridging cutting edge research into production usage.
 
+<div id="2019-07-30-resources"></div>
+## Additional Resources
+
 [![Figure 2: Hyperion logo, modeled by Disney Animation artist Chuck Tappan and rendered in Disney's Hyperion Renderer.]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)]({{site.url}}/content/images/2019/Jul/hyperion_logo.png)
 
 Again, this post is meant to be a living document; any new publications with involvement from the Hyperion team will be added here.
@@ -548,11 +579,17 @@ Also, interesting rendering papers are always being published in journals and at
 The major journals to check are [ACM Transactions on Graphics (TOG)](https://tog.acm.org), [Computer Graphics Forum (CGF)](https://www.eg.org/wp/eurographics-publications/cgf/), and the [Journal of Computer Graphics Techniques (JCGT)](http://www.jcgt.org); the major academic conferences where rendering stuff appears are SIGGRAPH, SIGGRAPH Asia, EGSR (Eurographics Symposium on Rendering), HPG (High Performance Graphics), MAM (Workshop on Material Appearance Modeling), EUROGRAPHICS, and i3D (ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games); another three industry conferences where interesting stuff often appears are DigiPro, GDC (Game Developers Conference) and GTC (Graphics Technology Conference).
 A complete listing of the contents for all of these conferences every year, along with links to preprints, is [compiled by Ke-Sen Huang](http://kesen.realtimerendering.com).
 
+<div id="2019-07-30-contributors"></div>
+## Contributors
+
 A large number of people have contributed directly to Hyperion's development since the beginning of the project, in a variety of capacities ranging from core developers to TDs and support staff and all the way to notable interns. In no particular order, including both present and past: Daniel Teece, Brent Burley, David Adler, Yining Karl Li, Mark Lee, Charlotte Zhu, Brian Green, Andrew Bauer, Lea Reichardt, Mackenzie Thompson, Wei-Feng Wayne Huang, Matt Jen-Yuan Chen, Joe Schutte, Andrew Gartner, Jennifer Yu, Peter Kutz, Ralf Habel, Patrick Kelly, Gregory Nichols, Andrew Selle, Christian Eisenacher, Jan Novák, Ben Spencer, Doug Lesan, Lisa Young, Tami Valdez, Andrew Fisher, Noah Kagan, Benedikt Bitterli, Thomas Müller, Tizian Zeltner, Zackary Misso, Magdalena Martinek, Mathijs Molenaar, Laura Lediav, Guillaume Loubet, David Koerner, Simon Kallweit, Gabor Liktor, Ulrich Muller, Norman Moses Joseph, Stella Cheng, Marc Cooper, Tal Lancaster, and Serge Sretschinsky.
 Over the years, our closest research partners at DisneyResearch\|Studios, Pixar Animation Studios, Industrial Light & Magic, and elsewhere have included (in no particular order): Marios Papas, Marco Manzi, Tiziano Portenier, Alexander Rath, Rajesh Sharma, Rasmus Tamstorf, Jan Novák, Gerhard Roethlin, Per Christensen, Julian Fong, Mark Meyer, André Mazzone, Wojciech Jarosz, Fabrice Rouselle, Christophe Hery, Ryusuke Villemin, and Magnus Wrenninge.
 Invaluable support from studio leadership over the years has been provided by (again, in no particular order): Nick Cannon, Munira Tayabji, Rebecca Bever, Bettina Martin, Laura Franek, Collin Larkins, Golriz Fanai, Rajesh Sharma, Chuck Tappan, Sean Jenkins, Darren Robinson, Alex Nijmeh, Hank Driskill, Kyle Odermatt, Adolph Lusinsky, Ernie Petti, Kelsey Hurley, Shweta Viswanathan, Tad Miller, Mark Hammel, Mohit Kallianpur, Brian Leach, Daniel Rice, Amol Sathe, Alessandro Jacomini, Josh Staub, Steve Goldberg, Scott Kersavage, Andy Hendrickson, Dan Candela, Ed Catmull, and many others.
 Of course, beyond this enormous list, there is an even more enormous list of countless artists, technical directors, production supervisors, and other technology development teams at Disney Animation who motivated Hyperion, participated in its development, and contributed to its success.
 If anything in this post has caught your interest, keep an eye out for open position listings on [DisneyAnimation.com](https://www.disneyanimation.com/careers); maybe these lists can one day include you!
+
+<div id="2019-07-30-made-with-hyperion"></div>
+## Made with Hyperion
 
 Finally, here is a list of all publicly released and announced projects to date made using Disney's Hyperion Renderer:
 
